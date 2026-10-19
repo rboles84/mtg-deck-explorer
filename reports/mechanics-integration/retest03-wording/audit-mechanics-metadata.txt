@@ -1,0 +1,46 @@
+{
+  "totals": {
+    "card_records": 38753,
+    "unique_oracle_ids": 38753,
+    "unique_keyword_labels": 891,
+    "empty_keyword_records": 20875,
+    "multi_face_records": 3219,
+    "candidate_rows": 331,
+    "distinct_candidate_labels": 312,
+    "observed_labels": 296,
+    "not_observed_labels": 16,
+    "observed_paper_commander_labels": 293,
+    "observed_beyond_existing_eight": 288
+  },
+  "tests": {
+    "raw_hash_checks": 5,
+    "full_scan_label_comparisons": 312,
+    "challenge_assertions": 13,
+    "metamorphic_assertions": 39,
+    "duplicate_printing_and_oracle_ids": "none; asserted",
+    "malformed_keyword_arrays": "none; asserted"
+  },
+  "endpoint_check": {
+    "cards": 305,
+    "mismatches": 0
+  },
+  "witness_count": 305,
+  "missing": [
+    "Abandon",
+    "Absorb",
+    "Best in show",
+    "Descend 4",
+    "Descend 8",
+    "Face a Villainous Choice",
+    "Gear up",
+    "Gotcha!",
+    "Harness",
+    "Planeswalk",
+    "Poisonous",
+    "Set in Motion",
+    "Space Sculptor",
+    "The Ring Tempts You",
+    "Visit",
+    "Vote"
+  ]
+}

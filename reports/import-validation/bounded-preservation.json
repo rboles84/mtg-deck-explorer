@@ -1,0 +1,15 @@
+{
+  "appSections": [
+    {
+      "section": "function renderArchive(",
+      "unchanged": true
+    },
+    {
+      "section": "function renderMechanics()",
+      "unchanged": true
+    }
+  ],
+  "styleFilesEdited": false,
+  "serverFileEdited": false,
+  "frozenInputsEdited": false
+}

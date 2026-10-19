@@ -1,0 +1,122 @@
+1 Academy Manufactor
+1 Adriana, Captain of the Guard
+1 Agent of the Iron Throne
+1 Akiri, Line-Slinger
+1 Anguished Unmaking
+1 Arcane Signet
+1 Arcbound Condor
+1 Arena of Glory
+1 Arid Mesa
+1 Aurelia, the Warleader
+1 Badlands
+1 Battlefield Forge
+1 Blood Crypt
+1 Bloodstained Mire
+1 Bojuka Bog
+1 Boros Charm
+1 Boros Signet
+1 Braids, Arisen Nightmare
+1 Breena, the Demagogue
+1 Caves of Koilos
+1 Command Tower
+1 Damn
+1 Dawn's Truce
+1 Deadly Rollick
+1 Deflecting Swat
+1 Depthshaker Titan
+1 Despark
+1 Enduring Courage
+1 Esper Sentinel
+1 Exotic Orchard
+1 Fathom Fleet Swordjack
+1 Fetid Heath
+1 Flawless Maneuver
+1 Frontline Medic
+1 Generous Gift
+1 Ghirapur AEther Grid
+1 Glaze Fiend
+1 Godless Shrine
+1 Graven Cairns
+1 Grim Hireling
+1 Guild Artisan
+1 Haunted Ridge
+1 Havengul Laboratory
+1 Ingenious Artillerist
+1 Inspiring Statuary
+1 Into the Pit
+1 Invasion of Gobakhan
+1 Inventors' Fair
+1 Iroas, God of Victory
+1 Isshin, Two Heavens as One
+1 Jeska's Will
+1 Knuckles the Echidna
+1 Krark-Clan Ironworks
+1 Lightning Greaves
+1 Lotho, Corrupt Shirriff
+1 Loyal Unicorn
+1 Luxury Suite
+1 Marionette Master
+1 Marsh Flats
+1 Mirkwood Bats
+1 Mondrak, Glory Dominus
+1 Mountain
+1 Orzhov Signet
+1 Path to Exile
+5 Plains
+1 Plateau
+1 Prismatic Vista
+1 Professional Face-Breaker
+1 Reckless Fireweaver
+1 Reconnaissance
+1 Rosie Cotton of South Lane
+1 Rugged Prairie
+1 Sacred Foundry
+1 Scrubland
+1 Selfless Spirit
+1 Sentinel Sarah Lyons
+1 Serra Ascendant
+1 Shattered Sanctum
+1 Skyhunter Strike Force
+1 Smothering Tithe
+1 Sol Ring
+1 Sophina, Spearsage Deserter
+1 Spectator Seating
+1 Sulfurous Springs
+1 Sundown Pass
+1 Swamp
+1 Swords to Plowshares
+1 Talisman of Conviction
+1 Talisman of Hierarchy
+1 Talisman of Indulgence
+1 Teferi's Protection
+1 Urza's Saga
+1 Vault of Champions
+1 Wear / Tear
+1 Weftstalker Ardent
+1 Wernog, Rider's Chaplain
+
+Sideboard:
+1 Blade Historian
+1 Boromir, Warden of the Tower
+1 Caparocti Sunborn
+1 Clever Concealment
+1 Cranial Plating
+1 Dolmen Gate
+1 Drana, Liberator of Malakir
+1 Farewell
+1 Grand Abolisher
+1 Hoarding Ogre
+1 Horn of the Mark
+1 Karlach, Fury of Avernus
+1 Lich-Knights' Conquest
+1 Ogre Battledriver
+1 Paladin Elizabeth Taggerdy
+1 Reprocess
+1 Rite of Oblivion
+1 Ruinous Ultimatum
+1 Seize the Spotlight
+1 Sontaran General
+1 Sunshot Militia
+1 Tamiyo's Journal
+1 Thopter Architect
+

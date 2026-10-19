@@ -1,0 +1,40 @@
+{
+  "baselineTests": {
+    "pass": 125,
+    "fail": 0,
+    "skipped": 0
+  },
+  "finalTests": {
+    "pass": 125,
+    "fail": 0,
+    "skipped": 0
+  },
+  "syntax": "node --check public/app.mjs: exit 0",
+  "preservationCheck": {
+    "exitCode": 0,
+    "protectedFilesUnchanged": 250
+  },
+  "additionalFilesUnchanged": 19,
+  "additionalFileSha256": {
+    "public/core.mjs": "929a8652edc8e11687f6da6196d187b23750d92467ea1ed9c22cbed06a2fd4d9",
+    "public/mechanics.mjs": "fe97cee41615efde2b6507bc57867cb165d7cab748a07f759fd70d984715ec6e",
+    "public/mechanics-vocabulary.mjs": "d657859e3da107e3631aeb486e9a96f13a58ca96b3137d3f374f4a3462d07fde",
+    "public/clipboard.mjs": "1468bbff45adf13ccc973121d1ac24597f25a20c27cb2b9a7d77f76a4a907a94",
+    "public/card-preview.mjs": "863130f05bceb026235a385cc8b12351be308256d636fafec4d3fc7ed3773c80",
+    "public/card-preview.css": "b629053a686a5864bbddf0098176c8142a71749023fc33a48d7e241b4a81dd2d",
+    "public/rules-ui.mjs": "91ae53be71048408dbb060b617a1c6986d4d6edb70753d4d78a52e968f113c2b",
+    "public/rules-data.json": "a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2",
+    "public/mechanic-rules.mjs": "ddb9bcc47591dd7b607d6adde26ca3e356bb8adbf68692f34c2ef89e047995a0",
+    "public/index.html": "f1a5c1af1323f66ae1e333a357114a196f49d7409db845d5e7d0bfe6d97e558d",
+    "public/refinement.css": "9a426f8064722fd285da8f1cf651c06c0a4dedc464615603bfcdfa6f1e7ebce3",
+    "lib/catalog.mjs": "3c6bfca6577f03c7ba6840b1922f35d5a3f9324c0a9636a0e70913e2df8bdbee",
+    "lib/scryfall.mjs": "36a0b16fb623a7af69ffc727cf5635d8f341f224609554b1b7ab522d5c091979",
+    "server.mjs": "c93381c5dbc23b854588d4e1820adbd6f6afec7bb8f5b34b02d78ca10c7e32ff",
+    "crosswalk.json": "fb8b7fa486db2bbf5793a961864e3c80f0f3ca629e4450fc3254d545f430ad27",
+    "C:/Users/obake/Downloads/manualTesting.xlsx": "ec88f4732b29d371eaf169db6fceb1201382d5d3923082eb1c9323eceb312a82",
+    "C:/Users/obake/Downloads/manualTesting_Retest01.xlsx": "167a9d5c3e5cf1f958bc541207ba19fde044d68bd4a800df6fa8557bbd94c3b1",
+    "C:/Users/obake/Downloads/manualTesting_Retest02.xlsx": "8db0e8d34a0c3afcbdad5edc22f8a1e5c5e7f8371c5ce2e843b03e2bb96ec5a2",
+    "C:/Users/obake/Downloads/manualTesting_Retest03.xlsx": "e38a008148ab7d4478b1122b468b810e9c0f128c9c10cde84e1601a914a58f3a"
+  },
+  "browser": "NOT TESTED: owner retest pending"
+}

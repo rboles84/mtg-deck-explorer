@@ -1,0 +1,49 @@
+{
+  "checkedOn": "2026-10-18",
+  "scope": "Read-only recon; not enabled in application. These are text/keyword research searches, not assertions of inherent ability or comprehensive detection.",
+  "receipts": [
+    {
+      "expression": "o:/\\babsorb [0-9X]+\\b/",
+      "query": "(f:commander id<=wubrg) (o:/\\babsorb [0-9X]+\\b/)",
+      "status": 200,
+      "total": 1,
+      "hasMore": false,
+      "examples": [
+        "Lymph Sliver"
+      ]
+    },
+    {
+      "expression": "o:/\\bPowerstone tokens?\\b/",
+      "query": "(f:commander id<=wubrg) (o:/\\bPowerstone tokens?\\b/)",
+      "status": 200,
+      "total": 32,
+      "hasMore": false,
+      "examples": [
+        "Arbalest Engineers",
+        "Argothian Opportunist"
+      ]
+    },
+    {
+      "expression": "(o:\"Clue\" or kw:\"Investigate\")",
+      "query": "(f:commander id<=wubrg) ((o:\"Clue\" or kw:\"Investigate\"))",
+      "status": 200,
+      "total": 170,
+      "hasMore": false,
+      "examples": [
+        "Academy Manufactor",
+        "Agent 13, Sharon Carter"
+      ]
+    },
+    {
+      "expression": "o:\"descended\"",
+      "query": "(f:commander id<=wubrg) (o:\"descended\")",
+      "status": 200,
+      "total": 12,
+      "hasMore": false,
+      "examples": [
+        "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift",
+        "Broodrage Mycoid"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "path": "public/app.mjs",
+    "beforeSha256": "803a95945ca8e515f7443d098abbbfd9766ff1b6080024f2dd7e2b4bdf24b256",
+    "afterSha256": "8207ff7c49c5ef4a36395d87d0dc7ad0259375daa9a44554acd7648d9044108e"
+  },
+  {
+    "path": "public/mechanic-rules.mjs",
+    "beforeSha256": "d85d559227ed6b0572c165bdd1b8c603e4ca7164a7c0278e9b8131d689e12d7a",
+    "afterSha256": "ddb9bcc47591dd7b607d6adde26ca3e356bb8adbf68692f34c2ef89e047995a0"
+  },
+  {
+    "path": "public/rules-ui.mjs",
+    "beforeSha256": "ca5e2f6855be44c063e2e848383c04b99b33e39b78e4a938f7c53047edc4aeca",
+    "afterSha256": "91ae53be71048408dbb060b617a1c6986d4d6edb70753d4d78a52e968f113c2b"
+  },
+  {
+    "path": "public/card-preview.mjs",
+    "beforeSha256": "dd04317b9cf641edb55d65126ceeaf7fac2f8d97323b6a2e0f78779598f1597b",
+    "afterSha256": "863130f05bceb026235a385cc8b12351be308256d636fafec4d3fc7ed3773c80"
+  },
+  {
+    "path": "public/refinement.css",
+    "beforeSha256": "ff80f34f43f4c2e301fc4e7cb90d90b5dcc634672f147b5de08589a51c6f8717",
+    "afterSha256": "9a426f8064722fd285da8f1cf651c06c0a4dedc464615603bfcdfa6f1e7ebce3"
+  },
+  {
+    "path": "public/card-preview.css",
+    "beforeSha256": "7d5a3900d927c54ab5fa89891fcb53da9657598fdfafeeba9d4e93981057e912",
+    "afterSha256": "b629053a686a5864bbddf0098176c8142a71749023fc33a48d7e241b4a81dd2d"
+  },
+  {
+    "path": "tests/mechanics-ui.test.mjs",
+    "beforeSha256": "07108e1fc98d1a23bcbbff8c5dfef6de28b618a75fd58891b397db77a0c9257d",
+    "afterSha256": "1cc4a8982765e76c9a3264fc379c62a5dd71178a646f21add9c5726e95ab2037"
+  },
+  {
+    "path": "README.md",
+    "beforeSha256": "e6258cb7ad016be9edea400b8e1875244452aeba0d50227abba65d6f29beaeed",
+    "afterSha256": "8810facb88a9f8eae16faf997e30904c03226f952413b0aeb16b1ad9c9689c59"
+  },
+  {
+    "path": "reports/mechanics-integration/IMPLEMENTATION_REPORT.md",
+    "beforeSha256": "ed2f723a77709759ba48caee6628791fcde22152dbf18584bb5e487c94987fd3",
+    "afterSha256": "ecc40114c172f60d52d52303e91a17ba55f4afd7dd312e24162b47139f4a17d6"
+  },
+  {
+    "path": "reports/mechanics-integration/retest02-fixes/card-layout-witnesses.json",
+    "beforeSha256": null,
+    "afterSha256": "a24182485836c95319833bb516f2fe4c03c7738badf1b6bf182a049b1a02bd1c"
+  }
+]

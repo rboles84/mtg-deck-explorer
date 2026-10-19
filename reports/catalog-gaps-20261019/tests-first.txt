@@ -1,0 +1,412 @@
+✔ all 18 supplied original files remain byte-identical to the pre-implementation audit (180.105ms)
+✔ keyword-flying-reported / keyword-flying-absent / atlas-flying-query (6.3261ms)
+✔ keyword-trample-reported / keyword-trample-absent / atlas-trample-query (1.738ms)
+✔ keyword-deathtouch-reported / keyword-deathtouch-absent / atlas-deathtouch-query (4.2206ms)
+✔ keyword-vigilance-reported / keyword-vigilance-absent / atlas-vigilance-query (1.444ms)
+✔ keyword-haste-reported / keyword-haste-absent / atlas-haste-query (3.8431ms)
+✔ keyword-menace-reported / keyword-menace-absent / atlas-menace-query (1.0943ms)
+✔ keyword-reach-reported / keyword-reach-absent / atlas-reach-query (1.091ms)
+✔ keyword-lifelink-reported / keyword-lifelink-absent / atlas-lifelink-query (1.0341ms)
+✔ whole deterministic product loop keeps search candidates out of immutable imported evidence (43.0392ms)
+✔ a malformed provider face is classified as a provider failure (0.6844ms)
+✔ shortlist excerpts retain original deck bytes and unmodified captured card objects (2.3181ms)
+✔ shortlist 1: Shorikai, Genesis Engine - Vehicles preserves quantities and explicit placement (5.9667ms)
+✔ shortlist 2: Dressed For Death | Teysa Karlov preserves quantities and explicit placement (2.5285ms)
+✔ shortlist 3: Brago, King Eternal preserves quantities and explicit placement (1.2853ms)
+✔ shortlist 4: Veyran, Voice of Duality preserves quantities and explicit placement (1.9348ms)
+✔ shortlist 5: Kadena, Slinking Sorcerer - Morph Tribal preserves quantities and explicit placement (2.2296ms)
+✔ shortlist 6: Esika, God of the Tree preserves quantities and explicit placement (2.5474ms)
+✔ shortlist 7: Aesi, Tyrant of Gyre Strait preserves quantities and explicit placement (1.5058ms)
+✔ shortlist 8: Atraxa, Praetors' Voice preserves quantities and explicit placement (1.1575ms)
+✔ shortlist 9: Grand Arbiter Augustin IV preserves quantities and explicit placement (2.23ms)
+✔ shortlist 10: Ramos, Dragon Engine preserves quantities and explicit placement (2.0241ms)
+✔ shortlist 11: Zhulodok, Void Gorger preserves quantities and explicit placement (1.3369ms)
+✔ shortlist 12: Rasputin Old-Border preserves quantities and explicit placement (1.1138ms)
+✔ shortlist 13: Chair Tribal preserves quantities and explicit placement (1.2555ms)
+✔ shortlist 14: Ladies Looking Left preserves quantities and explicit placement (0.9895ms)
+✔ shortlist 15: Coin Flip preserves quantities and explicit placement (1.068ms)
+✔ shortlist 16: Coin Flip preserves quantities and explicit placement (0.7334ms)
+✔ shortlist 17: Oops all copies preserves quantities and explicit placement (0.6783ms)
+✔ shortlist 18: Group "Hug" preserves quantities and explicit placement (0.9733ms)
+✔ shortlist 19: Oops all Pokemon preserves quantities and explicit placement (0.6049ms)
+✔ shortlist 20: Old School Self Sacrifice preserves quantities and explicit placement (0.666ms)
+✔ shortlist 21: Ahoy Mateys | Precon Upgrade | Budget Commander | Cut-Rate Commander preserves quantities and explicit placement (0.6769ms)
+✔ shortlist 22: Pantlaza, Sun-Favored - Precon Upgrade list (budget edition) preserves quantities and explicit placement (0.6162ms)
+✔ shortlist 23: Grand Larceny (Precon) (Budget Upgrade) preserves quantities and explicit placement (0.8213ms)
+✔ shortlist 24: Budget Elemental Precon Upgrade preserves quantities and explicit placement (0.7943ms)
+✔ shortlist 25: Calling All Angels preserves quantities and explicit placement (0.8302ms)
+✔ shortlist 26: Keen Engineering preserves quantities and explicit placement (0.3817ms)
+✔ shortlist 27: Wretched Ranks preserves quantities and explicit placement (0.6305ms)
+✔ shortlist 28: Dance of the Elements preserves quantities and explicit placement (0.6567ms)
+✔ source inclusion and named-board alternatives remain different; repeated quantities are not repaired (3.7321ms)
+✔ official corrected export changes only its three documented names and carries its commander (3.0602ms)
+✔ all four captured reversible printings accept their agreed face Oracle ID through the import pipeline (35.3325ms)
+✔ face identity is retained, but conflicting, missing, malformed or unrelated faces never establish a shared identity (0.7324ms)
+✔ ordinary and reversible Command Tower are one card for flavor evidence and verified edition changes (6.6844ms)
+✔ prepare cards share their exact printing image and keep both text parts without a flip control (0.8866ms)
+✔ captured Japanese, Phyrexian and French printings require exact identity without an English substitution (0.7555ms)
+✔ real mechanic witnesses retain reported labels, exclude extras and do not infer themes or commander roles (2.063ms)
+✔ manual add merges same printing quantity and keeps another printing of the same name separate (1.8037ms)
+✔ quantity, removal, clear and print-aware export preserve exact entries and imported deck immutability (3.641ms)
+✔ synthetic cards, invalid UUIDs, export newlines and hostile query IDs are rejected (0.2725ms)
+✔ session restore validates objects, strips unknown properties, discards duplicates and malformed entries (0.3653ms)
+✔ session storage uses its own key and falls back to memory when access is blocked (0.9905ms)
+✔ Commander import requires 100 physical cards including commanders and counts extras separately (5.2685ms)
+✔ invalid lines and appended garbage block import even with exactly 100 cards (1.8045ms)
+✔ plain parser preserves source lines, zero padding, suffix, tags, sections, bad rows and duplicate quantities (1.0461ms)
+✔ owner supplied fixture is parsed without changing original text or printing coordinates (8.848ms)
+✔ CSV supports all quoted columns, commas, escaped quotes and multiline original records (0.6231ms)
+✔ malformed CSV, invalid UUID and non-English coordinates remain visible unresolved rows (0.5404ms)
+✔ resolution joins reordered data, honors not-found, preserves source and accepts equivalent zero padding (1.3966ms)
+✔ UUID takes precedence but set, collector, supplied name and language conflicts are flagged (0.5878ms)
+✔ exact non-English UUID resolves only that language and printed name; analysis excludes it (1.986ms)
+✔ ambiguous coordinates and a wrong UUID are never treated as exact data (0.5376ms)
+✔ same Oracle card in two printings keeps absent flavor absent; faces remain separate (0.6264ms)
+✔ Commander identity comes only from explicit section or selection; pair union is provisional (1.0578ms)
+✔ colorless is an empty color identity, and excluded side sections cannot become commanders (0.2488ms)
+✔ literal analysis distinguishes word boundaries and records exact original spans and rules (17.9718ms)
+✔ analysis uses Unicode whole words, exact spans and deterministic alphabetic ties (1.1175ms)
+✔ physical copies and repeated editions do not supply distinct card identity or independent evidence (0.7559ms)
+✔ analysis separately counts raw hits, physical quantities, printings and distinct supporting cards (0.3745ms)
+✔ stopwords, sparse evidence and punctuation boundaries do not manufacture a theme (0.5609ms)
+✔ documented generic auxiliaries and quantifiers abstain without suppressing concrete literal evidence (0.5689ms)
+✔ mechanic detection is actual record keyword evidence with no face or inherent-possession inference (0.5398ms)
+✔ synthetic demonstration is explicitly identified, has mixed archive states and no real URLs (1.2454ms)
+✔ XSS-like text is preserved as literal source data and parser rejects oversized decks (2.3591ms)
+✔ exclusions use confirmed legality and identity for any imported mechanic, including both reasons (1.3273ms)
+✔ missing metadata, unknown identity and compatible cards do not invent exclusion reasons (2.6324ms)
+✔ contributor diagnostics exclude sideboards, other labels and unresolved rows, and deduplicate printings (0.1925ms)
+✔ 24-card pages traverse the full distinct result set, including provider boundaries and final partial page (35.8745ms)
+✔ arbitrary page jumps use at most two numeric provider requests and concurrent identical requests share the cache (42.4664ms)
+✔ defensive duplicate collapse uses Oracle or name and chooses the newest printing without moving other page positions (1.0591ms)
+✔ page bounds reject invalid values before provider work and empty search has no next page (1.2135ms)
+✔ postfilter and duplicate diagnostics describe only the requested UI page (2.2098ms)
+✔ only a valid first-page Scryfall no-match response becomes an empty discovery (2.5757ms)
+✔ a no-match 404 for a later provider page remains a pagination failure (5.0867ms)
+✔ changed provider totals cannot combine stale pages and clear cached search pages for a fresh retry (8.4744ms)
+✔ malformed pagination metadata cannot silently truncate the matching set (0.4014ms)
+✔ search calls honor the documented 500ms interval and cached pages do not repeat requests (503.0234ms)
+✔ HTTP pages retain context validation, reject client URLs and isolate commander/mechanic queries (83.6996ms)
+✔ a context that expires during a provider request cannot return stale discovery results (155.488ms)
+✔ preview imagery is constrained to supported sizes on the exact trusted HTTPS host (1.5885ms)
+✔ exact card and face images and attribution survive sanitization without changing printing identity (0.7707ms)
+✔ invalid optional image and attribution data does not invent or break an exact printing (0.2227ms)
+✔ copied pack fixtures retain their documented original bytes (3.8553ms)
+✔ native TappedOut CSV is blocked with TXT guidance: background-abdel-street-urchin.csv (5.0873ms)
+✔ native TappedOut CSV is blocked with TXT guidance: background-wilson-giants.csv (2.4714ms)
+✔ native TappedOut CSV is blocked with TXT guidance: companion-cecily-othelm-jegantha-side.csv (1.6379ms)
+✔ native TappedOut CSV is blocked with TXT guidance: companion-cecily-othelm-jegantha.csv (1.8589ms)
+✔ native TappedOut CSV is blocked with TXT guidance: doctors-companion-ten-rose.csv (1.5862ms)
+✔ native TappedOut CSV is blocked with TXT guidance: friends-forever-wernog-sophina.csv (2.4426ms)
+✔ native TappedOut CSV is blocked with TXT guidance: partner-thrasios-tymna.csv (1.7475ms)
+✔ native TappedOut CSV is blocked with TXT guidance: partner-with-pir-toothy.csv (1.7251ms)
+✔ TappedOut format detection ignores header order/case and leaves generic CSV supported (1.4374ms)
+✔ Board and snake_case printing columns never silently become main/name-only input (1.4007ms)
+✔ derived Spanish excerpt preserves exact identity, language and unspecified finish without relaxing deck size (4.0403ms)
+✔ name/set keys, validation and matching honor known hints, disclose unknown hints and preserve exact failures (20.7996ms)
+✔ split/alias fallback retains recognized set constraints and does not accept another set (2.0287ms)
+✔ parser and API share collector validation, reject excessive metadata/records early (4.1918ms)
+✔ file size/type checks precede reading, with a separate post-decode character check (0.434ms)
+✔ Retry-After preserves a full two-hour wait (seconds, simulated clock) (3.3763ms)
+✔ Retry-After preserves a full two-hour wait (date, simulated clock) (0.9938ms)
+✔ total alias work and aggregate response cache bytes are bounded (252.9679ms)
+✔ optional alias/provider failure preserves resolved main printing and authorizes discovery with its original context (92.6355ms)
+✔ successful extra resolution cannot replace a main edition or its discovery context (0.6464ms)
+✔ untouched hakbal export normalizes without losing metadata (8.9256ms)
+✔ untouched veyran export normalizes without losing metadata (2.8305ms)
+✔ untouched detailed export normalizes without losing metadata (1.1804ms)
+✔ untouched obeka-a export normalizes without losing metadata (1.4893ms)
+✔ untouched obeka-b export normalizes without losing metadata (1.1045ms)
+✔ obeka-a commander stays extra until explicitly confirmed (3.985ms)
+✔ obeka-b commander stays extra until explicitly confirmed (2.6583ms)
+✔ generated metadata order and newline variations preserve card meaning (2.1961ms)
+✔ explicit extra headings end ambiguous-placement review and card names cannot trigger CSV detection (0.9459ms)
+✔ malformed metadata, coordinates and quantities are not silently repaired (0.971ms)
+✔ name resolution enables automatic tagged commanders and tracks per-row printing provenance (5.577ms)
+✔ selected reference editions preserve source and re-resolution clears stale state and warnings (1.0864ms)
+✔ mixed server lookups have separate batches, keyed outcomes and no exact-coordinate fallback (7.9661ms)
+✔ split-face names resolve literally, unknown names stay unknown, and ambiguity is explicit (20.0954ms)
+✔ split-card transport uses an exact face alias and verifies the complete supplied name (3.7174ms)
+✔ alternate printed and flavor names resolve through verified exact search without losing provenance (5.7373ms)
+✔ exact alias fallback rejects unrelated search results and quotes names as literal data (3.6074ms)
+✔ HTTP name import returns keyed outcomes and authorizes commander identity from its cards (126.4762ms)
+✔ CSV quantities are decimal integers, and malformed headers are never ignored (4.6808ms)
+✔ commander rules respect explicit placements, comma tags and noDeck modifiers (1.3427ms)
+✔ two commander names cannot designate the same resolved Oracle identity (0.9669ms)
+✔ alternate-name edition changes use Oracle identity and preserve original names (1.0769ms)
+✔ literal name matching accepts typographic apostrophes and only verified split-face spellings (9.1112ms)
+✔ joined translated face names require complete provider metadata (0.5256ms)
+✔ exact alias lookup traverses 175 printings on fixed provider URLs (21.6175ms)
+✔ exact alias lookup traverses 176 printings on fixed provider URLs (5.6456ms)
+✔ exact alias lookup rejects changed total (3.3913ms)
+✔ exact alias lookup rejects duplicate printing (2.7272ms)
+✔ exact alias lookup rejects truncated page (2.285ms)
+✔ exact alias lookup rejects bad more (1.6043ms)
+✔ exact alias lookup rejects oversized total (0.4929ms)
+✔ pagination drift invalidates cached alias pages so an explicit retry can succeed (11.9789ms)
+✔ alias fallback cannot change a collection-resolved reference edition (1.1197ms)
+✔ ambiguous alias identities and missing Oracle identities are never silently combined (1.6072ms)
+✔ malformed identifier and provider ID types produce typed validation failures (0.723ms)
+✔ invalid provider collection data is not cached across an explicit retry (0.5931ms)
+✔ null provider payloads produce a provider error instead of an internal failure (4.2117ms)
+✔ invalid provider alias data is not cached across an explicit retry (0.9149ms)
+✔ an alias rate limit is reported and never automatically retried (0.9471ms)
+✔ HTTP alias import derives commander identity and rejects malformed IDs before provider work (108.2782ms)
+✔ Atlas 2.1 preserves every existing ID, untouched non-discovery rows, all Do-not-emit rows, and the historical census (73.7463ms)
+✔ 296 display mappings and 312 distinct candidate dispositions are exact, executable where intended, and evidence backed (24.7295ms)
+✔ retained live receipts prove positive and negative membership, native metadata samples and real dates/counts (503.085ms)
+✔ every mapping composes one commander baseline for all 32 identity subsets (55.0538ms)
+✖ all mapping IDs preserve exact-printing Clipboard provenance and export (2.937ms)
+✔ retained supplemental live evidence verifies exact witness existence and 21 Commander context cases (46.1791ms)
+✔ embedded baselines and OR branches compose safely; unknown filters, placeholders, tiers and drift fail closed (1.2122ms)
+✖ HTTP accepts all approved recipes without prefetch and rejects arbitrary queries, unknown labels and malformed bodies (348.9896ms)
+✔ the remaining-label pass covers exactly the 181 previous gaps; later additions and the scoped Jump correction are separate (13.5503ms)
+✔ new numbered-rule references match the pinned official source and retain their exact clauses (469.8213ms)
+✔ every added article or card reference has official-source evidence and no authored summary or quote (1.1286ms)
+✔ exactly the 20 approved labels have real, unmodified Scryfall positive and family-negative fixtures (15.1472ms)
+✖ all 20 approved queries have complete retained live results and exact Oracle-ID membership evidence (20.3452ms)
+✔ new references contain only exact official clauses and the verified Wizards Descend excerpt (388.905ms)
+✔ new registries fail closed for missing, broadened, duplicated, or unproven searches (25.3659ms)
+✔ Jump reference requires Cid as a contributing Oracle identity; Direct Current keeps Jump-start separately (0.5874ms)
+✔ unknown labels, text-only mechanics, spellings and absent data retain the existing conservative behavior (0.7852ms)
+✔ captured response hashes and exact printing fields survive the existing safe projection (21.609ms)
+✔ 296 observed labels are unique and exactly pinned to audit; all 16 failures excluded (2.5592ms)
+✔ exact lowercase comparison only; preserve spellings; unknown and failed candidates visible but unmapped (0.6312ms)
+✔ same Oracle ID deduplicates cards, retaining alternate printings, rows, quantities and exact flavor (1.1415ms)
+✔ missing and malformed arrays survive projection distinctly from empty metadata; partial imports remain explicit (0.4072ms)
+✔ actual provider witnesses never promote grants, references, reminder text, numeric thresholds or face possession (0.5862ms)
+✔ captured Cosmic → Dionus → Cosmic and repeat are deterministic; all current labels survive without network (123.3641ms)
+✖ retained pack fixtures cover all 142 labels with reviewed explanations and deliberate search dispositions (5.4086ms)
+✔ all explanatory mappings fail closed on a changed revision, changed clause, or unknown label (263.4907ms)
+✔ the original shortlist references retain their pinned official clauses and verified excerpts (1.6132ms)
+✔ the nine cleared labels require their named Gatherer card evidence, independent of the general rule (0.2672ms)
+✔ variants keep their specific rules rather than collapsing into a broader family (0.1783ms)
+✔ supplement retains exact provider classification without reclassifying the historical audit or inferring from text (0.6592ms)
+✔ all 16 new searches have retained live positive and negative Oracle-ID evidence (5.1559ms)
+✔ supplement cannot authorize unknown names, broad expressions, duplicate IDs or unvalidated searches (22.5994ms)
+✔ invalid deck totals and garbage block import without transport or replacing the loaded deck (37.1931ms)
+✔ TappedOut CSV paste blocks before transport and preserves the loaded deck (7.1648ms)
+✔ TappedOut CSV file blocks before transport and preserves the loaded deck (6.2273ms)
+✔ TappedOut CSV drop blocks before transport and preserves the loaded deck (6.2746ms)
+✔ valid import reports deck and extra quantities separately (17.6437ms)
+✔ unresolved or mismatched content stays prominently flagged and keeps import workbench open (9.7814ms)
+✔ old import success and finally cannot replace or clear newer pending import (7.2554ms)
+✔ old import failure and finally cannot replace or clear newer pending import (11.3431ms)
+✔ stale search success/finally after mechanic cannot affect newer results/loading (4.22ms)
+✔ stale search success/finally after commander cannot affect newer results/loading (6.6ms)
+✔ stale search success/finally after import cannot affect newer results/loading (10.6237ms)
+✔ stale search success/finally after same query cannot affect newer results/loading (4.946ms)
+✔ stale search success/finally after page cannot affect newer results/loading (4.4368ms)
+✔ stale search failure/finally after mechanic cannot affect newer results/loading (17.8866ms)
+✔ stale search failure/finally after commander cannot affect newer results/loading (5.6983ms)
+✔ stale search failure/finally after import cannot affect newer results/loading (5.5867ms)
+✔ stale search failure/finally after same query cannot affect newer results/loading (5.0619ms)
+✔ stale search failure/finally after page cannot affect newer results/loading (5.3594ms)
+✔ navigation while searching suppresses late navigation and focus; current cleanup still completes (3.3993ms)
+✔ new Review and multiword searches share ownership, zero results, page cache and error recovery (5.5435ms)
+✔ failed newest import preserves the loaded deck; old response cannot replace it (6.1696ms)
+✔ commander changes and mechanic reads use no transport and leave imported evidence intact (4.6967ms)
+✔ late AbortError cleanup in either request lane cannot clear its newer busy state (9.3418ms)
+✔ clear pasted text preserves the loaded deck, mechanic selection and provider context without transport (3.322ms)
+✔ clear is a no-op during a pending import and works after completion (5.5248ms)
+✔ hakbal actual import handler selects tagged commander and discloses editions (15.7434ms)
+✔ veyran actual import handler selects tagged commander and discloses editions (12.7349ms)
+✔ Obeka actual handler requires confirmation and rejects changed-draft confirmation (13.5733ms)
+✔ a newer invalid draft cancels ownership of an earlier pending import (5.6265ms)
+✔ changing one reference edition pins other editions and preserves original text (7.2312ms)
+✔ commander chooser rejects duplicate identities and invalid selection counts (4.194ms)
+✔ duplicate commander aliases block the actual import without replacing the loaded deck (3.949ms)
+✔ uppercase reference UUIDs work in the actual correction handler (4.1374ms)
+✔ editing a pending draft prevents stale commit and restores busy controls (3.7181ms)
+✔ editing a pending draft prevents stale error and restores busy controls (4.0185ms)
+✔ file selection and drop use local preview only, and supersede older imports and file reads (4.7535ms)
+✔ actual commander filter searches source aliases and canonical names with shared normalization (3.1892ms)
+✔ optional-extra failure commits complete required rows and keeps main context, while stale extra completion cannot commit (11.3849ms)
+✔ reference correction retains unknown-set provenance on other pinned rows (4.3794ms)
+✔ successful Devoid zero result explains confirmed colorless identity and links the unchanged exact query (38.018ms)
+✔ Underdog uses confirmed imported-card exclusions and results do not repeat the Find panel (21.3849ms)
+✖ all 332 searchable mechanics render accurate zero states, identities and symbols across all 32 color subsets (895.0616ms)
+✔ all mechanics diagnose imported contributors without confusing card and commander identities (391.7941ms)
+✔ every mechanic distinguishes an empty filtered page from zero matches and restores positive results (24.1843ms)
+✔ search coverage renders supported symbols and preserves unknown notation as readable text (4.9471ms)
+✔ official rule text renders mana symbols while preserving cross-reference links (6.922ms)
+✔ Devoid explanation requires a zero total and an explicit colorless response identity (4.7054ms)
+✔ failed searches for every mechanic show errors without a no-results explanation or automatic retry (615.2109ms)
+✔ failed pagination for every mechanic preserves the last page instead of showing an empty result (355.4618ms)
+✔ definition links resolve only exact reviewed headings at the pinned revision (5.2474ms)
+✔ main navigation exactly follows imported labels without a second mechanic list (3.4439ms)
+✔ rules, evidence disclosures and unknown labels work independently of search support (3.462ms)
+✖ one explanation precedes cards and raw evidence stays in one closed section below them (2.5339ms)
+✔ rendered deck replacement clears old selection and does not duplicate the long label list (8.0925ms)
+✔ missing catalog or rules cannot hide imported cards, and partial resolution stays disclosed (3.9337ms)
+✔ all 296 audited labels render and dispatch Find without rules or historical placement, with no prefetch (46.531ms)
+✔ detail viewer retains assumed versus supplied entry context for the same printing (1.957ms)
+✔ actual detail handler flips exact face art, rules and flavor together without mutating printing or save action (0.9138ms)
+✔ flipping to a missing face image keeps its text and never borrows the other face art (0.5548ms)
+✔ Food and flavor-word references require exact retained clauses and never certify keywords (65.7938ms)
+✔ all 142 shortlist labels render explanations; only the 126 general labels offer deliberate searches (42.1648ms)
+✔ the 20 new real-card fixtures display exact rules, official links and deliberate searches (7.7921ms)
+✔ Jump shows only its named Cid reference and never assigns it to Direct Current (3.8399ms)
+✔ verified Eternity Gate links its official card and keeps evidence without duplicate inline Oracle text (2.3942ms)
+✔ unverified source warnings remain visible if rules cannot load (2.111ms)
+✔ official Gatherer citations are clickable through the actual external-link guard (0.7086ms)
+✔ all 181 added references render official links with accurate scope and leave searches deliberate (28.6965ms)
+✔ contextual history precedes evidence; Surveil search is independent of historical placement (4.4685ms)
+✔ all available rule panels start collapsed and Food renders only its three requested clauses (14.9734ms)
+✔ retained Adventure, flip and split printings show both parts with one image and no turn control (2.9648ms)
+✔ modal DFC preserves real front/back rendering; unknown layouts do not invent a reverse side (0.8863ms)
+✔ preview helpers inspect frozen exact-printing data without adding presentation state (1.807ms)
+✔ a missing double-faced image never borrows the opposite face or a card-level image (0.1905ms)
+✔ a shared-image split layout can show its exact combined printing for either face (0.1957ms)
+✔ single-faced and image-absent printings retain usable face data (0.1655ms)
+✔ synthetic previews never expose even an otherwise valid provider image (0.1451ms)
+✔ preview image selection rejects unrelated printing and unsafe URL forms (0.2049ms)
+✔ preview placement fits within each viewport edge when its dimensions fit (0.3047ms)
+✔ preview placement leaves a roomy trigger unobscured and stays nonnegative in narrow views (0.1246ms)
+✔ local symbol fonts are served as usable fonts, including versioned CSS URLs and HEAD requests (175.6693ms)
+✔ image-enabled page policy keeps fonts and connections local and source files private (52.3618ms)
+✔ sixty saved printings remain reachable exactly once across five bounded pages (6.1812ms)
+✔ name, edition, and collector searches change the view while export retains every printing (1.5374ms)
+✔ filtered quantity edits and removals update only the selected printing and preserve the imported deck (5.9144ms)
+✔ removing the final page clamps the visible page without dropping earlier printings (1.8664ms)
+✔ searching a repeated card name keeps separate editions and quantities independently exportable (1.1637ms)
+✔ saving after browsing a filtered page restores the entire sixty-printing collection (1.7234ms)
+✔ rules data is reproducibly derived from the pinned official source without source edits (313.4912ms)
+✔ all numbered entries have exact source locations and the glossary is not misclassified as rules (83.072ms)
+✔ reviewed mechanic sections contain full official subrules and retained examples (0.3923ms)
+✔ frozen sources: 524 concrete entries plus 3 playtest indexes; classifications remain distinct (7.0845ms)
+✔ all Atlas tier/auto-execute counts and separate historical census are enforced (5.5729ms)
+✔ eight explicit crosswalks retain exact Atlas rows and Rosewater explanation and color ownership (0.5057ms)
+✔ reviewed keyword recipes use the original Commander identity ceiling after the user correction (11.1248ms)
+✔ bounded identifiers preserve suffixes, normalize duplicate keys, and require UUID for foreign printings (2.6306ms)
+✔ collection resolves 100 identifiers in sequential 75 + 25 batches, dedupes, tolerates reordering and not_found (15.9892ms)
+✔ mismatched returned UUID is excluded, same-Oracle editions retain distinct flavor, faces remain separate, absent text stays absent (1.0898ms)
+✔ provider failures and 429 are surfaced without retry; retry-after blocks subsequent requests (1.159ms)
+✔ minimum 120ms request spacing and small repeated-request cache (121.0663ms)
+✔ WU discovery includes mono-color and colorless cards, excludes outside colors and banned cards, and fetches one page (2.2821ms)
+✔ WUBRG discovery allows every color subset while colorless identity allows only colorless cards (1.1164ms)
+✔ HTTP context derives only selected commanders; caller identities/queries and IDs from another import are rejected (76.6048ms)
+✔ HTTP security: source files unreachable, local host/origin enforced, JSON and size bounds enforced (55.5362ms)
+✔ missing source catalog fails visibly while independent printing resolution remains available (4.906ms)
+✔ expired commander context requires a fresh import (24.8014ms)
+✔ mana token rendering covers actual costs and preserves unsupported syntax without HTML parsing (1.78ms)
+✔ every emitted mana glyph exists in the pinned CSS (4.3315ms)
+✔ set symbols use exact known set codes and preserve unknown codes without aliases (2.3276ms)
+ℹ tests 294
+ℹ suites 0
+ℹ pass 288
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3027.6158
+
+✖ failing tests:
+
+test at tests\mechanic-discovery.test.mjs:91:1
+✖ all mapping IDs preserve exact-printing Clipboard provenance and export (2.937ms)
+  TypeError: The selected card is missing valid exact-printing data.
+      at addClipboard (file:///C:/dev/mtg-deck-explorer/public/clipboard.mjs:26:21)
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanic-discovery.test.mjs:94:17)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at tests\mechanic-discovery.test.mjs:139:1
+✖ HTTP accepts all approved recipes without prefetch and rejects arbitrary queries, unknown labels and malformed bodies (348.9896ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  374 !== 332
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanic-discovery.test.mjs:159:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 374,
+    expected: 332,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\mechanic-variants.test.mjs:47:1
+✖ all 20 approved queries have complete retained live results and exact Oracle-ID membership evidence (20.3452ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  374 !== 332
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanic-variants.test.mjs:65:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 374,
+    expected: 332,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\mechanics-shortlist.test.mjs:27:1
+✖ retained pack fixtures cover all 142 labels with reviewed explanations and deliberate search dispositions (5.4086ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  374 !== 332
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanics-shortlist.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 374,
+    expected: 332,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\mechanics-ui.test.mjs:171:1
+✖ all 332 searchable mechanics render accurate zero states, identities and symbols across all 32 color subsets (895.0616ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  11968 !== 10624
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanics-ui.test.mjs:207:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 11968,
+    expected: 10624,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\mechanics-ui.test.mjs:372:1
+✖ one explanation precedes cards and raw evidence stays in one closed section below them (2.5339ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Your import determines which cards appear here\. Scryfall supplies their mechanic labels/. Input:
+  
+  '15 card labels reported by Scryfall · 100 cards in your imported main deck.64 of 64 imported entries have usable label data (100 of 100 copies). 0 unresolved entries. This list may not include every mechanic.Your import determines which cards appear here. Matches use Scryfall labels and reviewed Oracle wording. Open a mechanic to inspect its source.Browse this deck’s mechanics →'
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanics-ui.test.mjs:376:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '15 card labels reported by Scryfall · 100 cards in your imported main deck.64 of 64 imported entries have usable label data (100 of 100 copies). 0 unresolved entries. This list may not include every mechanic.Your import determines which cards appear here. Matches use Scryfall labels and reviewed Oracle wording. Open a mechanic to inspect its source.Browse this deck’s mechanics →',
+    expected: /Your import determines which cards appear here\. Scryfall supplies their mechanic labels/,
+    operator: 'match',
+    diff: 'simple'
+  }

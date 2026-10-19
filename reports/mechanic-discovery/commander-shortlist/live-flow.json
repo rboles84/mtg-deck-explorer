@@ -1,0 +1,318 @@
+{
+  "startedAt": "2026-10-18T22:43:25.306Z",
+  "requests": [
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "status": 200,
+      "file": "flow-response-1.json",
+      "sha256": "8613cebed66bf3d33ea504cd27a68900e76a50e1e30f50d0897d21c11ba647a5",
+      "checkedAt": "2026-10-18T22:43:25.629Z",
+      "returned": 1
+    },
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "status": 200,
+      "file": "flow-response-2.json",
+      "sha256": "9beb198c43d9159891d5cfa56e841e664758fba1389ed30c9e61ceaa0cd47d67",
+      "checkedAt": "2026-10-18T22:43:26.233Z",
+      "returned": 75
+    },
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "status": 200,
+      "file": "flow-response-3.json",
+      "sha256": "397b01534545766e3b584fac7cd41a07b236e81e3b4bcf84d2fdcd2f56c9603a",
+      "checkedAt": "2026-10-18T22:43:26.633Z",
+      "returned": 24
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Double%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-4.json",
+      "sha256": "581adfece2c8f4bd94910835e0960312bdb43ab43e3128d96bd197146326144a",
+      "checkedAt": "2026-10-18T22:43:27.756Z",
+      "total": 131,
+      "returned": 131
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Regenerate%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-5.json",
+      "sha256": "44683890a6ce53623ed436c3c075bc1d47835a9ad7cee931cd1b5a5c0b652a10",
+      "checkedAt": "2026-10-18T22:43:28.459Z",
+      "total": 271,
+      "returned": 175
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Triple%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-6.json",
+      "sha256": "d543172beb34cc56bc7d1fa76af49dfe29aa3263d9527ddd03add9edc8c22566",
+      "checkedAt": "2026-10-18T22:43:28.784Z",
+      "total": 5,
+      "returned": 5
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Partner+with%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-7.json",
+      "sha256": "162f902ca8ba5ce0f4557aa1a5b7ec8f2b5bc77740845723be579091c11e9cda",
+      "checkedAt": "2026-10-18T22:43:29.758Z",
+      "total": 52,
+      "returned": 52
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Choose+a+background%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-8.json",
+      "sha256": "60cee8228d93e9601c225e06976b2b191a977bccbdd91f13c13e410f716640ab",
+      "checkedAt": "2026-10-18T22:43:30.071Z",
+      "total": 32,
+      "returned": 32
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Megamorph%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-9.json",
+      "sha256": "04b2c74d74556ecebeea052a241ea28583b3893ebc55ec26de3126c1a9dbe521",
+      "checkedAt": "2026-10-18T22:43:30.916Z",
+      "total": 31,
+      "returned": 31
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Forestwalk%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-10.json",
+      "sha256": "31cac07581c0844e66f1cbffdb88590541917bcb88d0dcbe133241032de84f8f",
+      "checkedAt": "2026-10-18T22:43:31.170Z",
+      "total": 28,
+      "returned": 28
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Hexproof+from%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-11.json",
+      "sha256": "3941c9f1f8c05ccd5c01859f2be3e35ba2cbe47ea4b7f3ce9325a5a9d5bf0615",
+      "checkedAt": "2026-10-18T22:43:31.748Z",
+      "total": 13,
+      "returned": 13
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Islandwalk%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-12.json",
+      "sha256": "14885506c49a8ce6974ec92a565b779beb75af3ab8fb322fed04ac6021a754ca",
+      "checkedAt": "2026-10-18T22:43:32.238Z",
+      "total": 34,
+      "returned": 34
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Landcycling%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-13.json",
+      "sha256": "ed5ddc4b6ad4fca9b42387d94787f940b4c705da5cdac57c84b173228db45316",
+      "checkedAt": "2026-10-18T22:43:32.987Z",
+      "total": 91,
+      "returned": 91
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Plainscycling%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-14.json",
+      "sha256": "c2aa32db60e271f925a2203843da18e01febf713d7857c4228e9e8d6bc087fa0",
+      "checkedAt": "2026-10-18T22:43:33.461Z",
+      "total": 13,
+      "returned": 13
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Typecycling%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-15.json",
+      "sha256": "9b15aeeb202b154fa261e895b051a5909f3b9e401b20c7d610229818220951fb",
+      "checkedAt": "2026-10-18T22:43:34.228Z",
+      "total": 94,
+      "returned": 94
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Treasure%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-16.json",
+      "sha256": "e4ffadfa9d0d5818343f1762ffe23f413e3dcb747d4a602a72fbc1a99eb16781",
+      "checkedAt": "2026-10-18T22:43:36.041Z",
+      "total": 350,
+      "returned": 175
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Food%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-17.json",
+      "sha256": "1376985f2f9b4c4d16997df2ce78cd057b9ddb5f023807f2d1a356f02aadeb6a",
+      "checkedAt": "2026-10-18T22:43:37.634Z",
+      "total": 150,
+      "returned": 150
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Role+token%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-18.json",
+      "sha256": "7b7cf1fb81ff5fd6a61135e18e2dd93fb9f160a7a3e09d040286a7318d023f0e",
+      "checkedAt": "2026-10-18T22:43:38.224Z",
+      "total": 38,
+      "returned": 38
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Prepared%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "status": 200,
+      "file": "flow-response-19.json",
+      "sha256": "54ed5b354df151c4bde30015c150464189ebf975064aecc4fb2b8278ebc3156c",
+      "checkedAt": "2026-10-18T22:43:38.666Z",
+      "total": 72,
+      "returned": 72
+    }
+  ],
+  "searches": [
+    {
+      "label": "Double",
+      "query": "(f:commander id<=wubrg) (kw:\"Double\")",
+      "totalCards": 131,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Regenerate",
+      "query": "(f:commander id<=wubrg) (kw:\"Regenerate\")",
+      "totalCards": 271,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Triple",
+      "query": "(f:commander id<=wubrg) (kw:\"Triple\")",
+      "totalCards": 5,
+      "shown": 5,
+      "pass": true
+    },
+    {
+      "label": "Partner with",
+      "query": "(f:commander id<=wubrg) (kw:\"Partner with\")",
+      "totalCards": 52,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Choose a background",
+      "query": "(f:commander id<=wubrg) (kw:\"Choose a background\")",
+      "totalCards": 32,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Megamorph",
+      "query": "(f:commander id<=wubrg) (kw:\"Megamorph\")",
+      "totalCards": 31,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Forestwalk",
+      "query": "(f:commander id<=wubrg) (kw:\"Forestwalk\")",
+      "totalCards": 28,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Hexproof from",
+      "query": "(f:commander id<=wubrg) (kw:\"Hexproof from\")",
+      "totalCards": 13,
+      "shown": 13,
+      "pass": true
+    },
+    {
+      "label": "Islandwalk",
+      "query": "(f:commander id<=wubrg) (kw:\"Islandwalk\")",
+      "totalCards": 34,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Landcycling",
+      "query": "(f:commander id<=wubrg) (kw:\"Landcycling\")",
+      "totalCards": 91,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Plainscycling",
+      "query": "(f:commander id<=wubrg) (kw:\"Plainscycling\")",
+      "totalCards": 13,
+      "shown": 13,
+      "pass": true
+    },
+    {
+      "label": "Typecycling",
+      "query": "(f:commander id<=wubrg) (kw:\"Typecycling\")",
+      "totalCards": 94,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Treasure",
+      "query": "(f:commander id<=wubrg) (kw:\"Treasure\")",
+      "totalCards": 350,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Food",
+      "query": "(f:commander id<=wubrg) (kw:\"Food\")",
+      "totalCards": 150,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Role token",
+      "query": "(f:commander id<=wubrg) (kw:\"Role token\")",
+      "totalCards": 38,
+      "shown": 24,
+      "pass": true
+    },
+    {
+      "label": "Prepared",
+      "query": "(f:commander id<=wubrg) (kw:\"Prepared\")",
+      "totalCards": 72,
+      "shown": 24,
+      "pass": true
+    }
+  ],
+  "inputAdjustments": [
+    "Removed four research-note lines",
+    "Vraska ONE 326 is Phyrexian; used an English assumed reference printing through a name-only input"
+  ],
+  "import": {
+    "title": "Esika, God of the Tree",
+    "cards": 100,
+    "entries": 100,
+    "identity": {
+      "rowIds": [
+        "row-1"
+      ],
+      "colorIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "code": "WUBRG",
+      "label": "WUBRG",
+      "provisional": false,
+      "issues": [],
+      "offIdentityRowIds": [],
+      "nonLegalRowIds": []
+    }
+  },
+  "savedPrintings": 14,
+  "importUnchanged": true,
+  "completedAt": "2026-10-18T22:43:38.677Z",
+  "responseDirectory": "C:/Users/obake/.codex/visualizations/2026/10/18/01a150a8-12d2-74e1-8155-f5c6a29e7bc8/commander-mechanics"
+}

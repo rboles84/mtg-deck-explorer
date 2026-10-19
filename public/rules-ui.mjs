@@ -1,0 +1,57 @@
+import {manaSymbols} from './symbols.mjs';
+
+let activePreview=null, dismissTimer;
+const referenceActions=new WeakMap();
+let recoveryFrame;
+const el=(tag,text,className)=>{const result=document.createElement(tag);if(text!==undefined)result.textContent=text;if(className)result.className=className;return result;};
+export function closeRulePreview(){clearTimeout(dismissTimer);cancelAnimationFrame(recoveryFrame);if(activePreview){activePreview.trigger.removeAttribute('aria-describedby');activePreview.popup.remove();activePreview=null;}}
+function restoreKeyboardPreview(){
+  const focused=document.activeElement;
+  if(!referenceActions.has(focused))return;
+  recoveryFrame=requestAnimationFrame(()=>{const rect=focused.getBoundingClientRect();if(document.activeElement===focused&&focused.matches(':focus-visible')&&rect.bottom>0&&rect.top<innerHeight)referenceActions.get(focused).show();});
+}
+function sectionFor(data,number){return data?.sections?.[number]|| (data?.rules?.[number]?{title:'Rule '+number,paragraphs:[data.rules[number]]}:null);}
+export function ruleBody(data,number,{references=true,onOpen,clauseOnly=false}={}){
+  const section=clauseOnly?(data?.rules?.[number]?{paragraphs:[data.rules[number]]}:null):sectionFor(data,number),body=el('div',undefined,'rules-body');
+  if(!section){body.append(el('p','This rule is not available in the local rules reference.'));return body;}
+  for(const part of section.paragraphs){const p=el('p');p.append(el('strong',part.number+' '));
+    const text=part.text||'';let cursor=0;
+    if(references)for(const match of text.matchAll(/\b(?:rules?\s+)(\d{3}(?:\.\d+[a-z]?)?)/gi)){
+      const start=match.index+match[0].length-match[1].length,ref=match[1];
+      if(!sectionFor(data,ref))continue;
+      p.append(manaSymbols(text.slice(cursor,start)),ruleReference(data,ref,onOpen,ref));cursor=start+ref.length;
+    }
+    p.append(manaSymbols(text.slice(cursor)));body.append(p);
+  }
+  return body;
+}
+export function ruleReference(data,number,onOpen,label){
+  const trigger=el('button',label||`CR ${number} · Read rule`,'rule-reference');trigger.type='button';trigger.setAttribute('aria-haspopup','dialog');
+  let dismissed=false;
+  const show=()=>{
+    clearTimeout(dismissTimer);if(dismissed||activePreview?.trigger===trigger)return;closeRulePreview();
+    const section=sectionFor(data,number);if(!section)return;
+    const popup=el('div',undefined,'rule-popover');popup.id='rule-preview';popup.setAttribute('role','tooltip');
+    popup.append(el('strong',`${number}. ${section.title}`),ruleBody(data,number,{references:false}),el('small','Select the rule to keep it open.'));
+    (trigger.closest('dialog[open]')||document.body).append(popup);activePreview={trigger,popup};trigger.setAttribute('aria-describedby',popup.id);
+    const width=document.documentElement.clientWidth,height=window.innerHeight,rect=trigger.getBoundingClientRect();
+    popup.style.width=`${Math.min(440,width-32)}px`;popup.style.maxHeight=`${Math.max(100,height-32)}px`;
+    const size=popup.getBoundingClientRect();popup.style.left=`${Math.max(16,Math.min(rect.left,width-size.width-16))}px`;
+    popup.style.top=`${Math.max(16,Math.min(rect.bottom+10,height-size.height-16))}px`;
+    popup.addEventListener('pointerenter',()=>clearTimeout(dismissTimer));popup.addEventListener('pointerleave',()=>{dismissTimer=setTimeout(closeRulePreview,160);});
+  };
+  trigger.addEventListener('pointerenter',()=>{dismissed=false;show();});trigger.addEventListener('focus',()=>{dismissed=false;show();});
+  trigger.addEventListener('pointerleave',()=>{dismissTimer=setTimeout(()=>{if(document.activeElement!==trigger)closeRulePreview();},160);});trigger.addEventListener('blur',closeRulePreview);
+  trigger.addEventListener('keydown',event=>{if(event.key==='Escape'){dismissed=true;closeRulePreview();event.preventDefault();event.stopPropagation();}});
+  trigger.addEventListener('click',()=>{dismissed=true;closeRulePreview();onOpen?.(number);});
+  referenceActions.set(trigger,{show,dismiss:()=>{dismissed=true;closeRulePreview();}});
+  return trigger;
+}
+if(typeof document!=='undefined'){
+  document.addEventListener('scroll',event=>{if(!activePreview?.popup.contains(event.target)){closeRulePreview();restoreKeyboardPreview();}},true);
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&activePreview){referenceActions.get(activePreview.trigger)?.dismiss();event.preventDefault();event.stopPropagation();}
+    else if(!['Escape','Enter',' '].includes(event.key))restoreKeyboardPreview();
+  },true);
+  window.addEventListener('resize',closeRulePreview);
+}

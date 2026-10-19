@@ -1,0 +1,2855 @@
+{
+  "text": "1x Arachnogenesis (dsc) 169 [Protection]\n1x Araña, Heart of the Spider (spm) 123 [Draw]\n1x Arasta of the Endless Web (tdc) 244 [Tokens]\n1x Arcane Signet (msc) 192 [Ramp]\n1x Aunt May (msc) 768 [Lifegain]\n1x Beast Within (msc) 169 [Removal]\n1x Behold the Sinister Six! (spm) 51 [Recursion]\n1x Black Market Connections (msc) 155 [Draw]\n1x Chromatic Lantern (msc) 195 [Ramp]\n1x Coat of Arms (plst) DDS-58 [Anthem]\n1x Cosmic Spider-Man (spm) 127 [Commander{top}]\n1x Cultivate (msc) 172 [Ramp]\n1x Farseek (msc) 173 [Ramp]\n1x Fellwar Stone (msc) 285 [Ramp]\n6x Forest (msh) 296 [Land]\n1x Frontier Bivouac (ecc) 150 [Land]\n1x Gwen Stacy // Ghost-Spider (spm) 78 [Draw]\n1x Gwenom, Remorseless (spm) 56 [Draw]\n1x Hashep Oasis (m3c) 347 [Land]\n1x Impostor Syndrome (spm) 34 [Copy]\n1x Iron Spider, Stark Upgrade (spm) 166 [Counters]\n5x Island (msh) 290 [Land]\n1x Kapow! (spm) 103 [Removal]\n1x Kindred Discovery (msc) 150 [Draw]\n1x Kindred Dominance (msc) 156 [Removal]\n1x Madame Web, Clairvoyant (spm) 36 [Draw]\n1x Mary Jane Watson (spm) 134 [Draw]\n1x Maskwood Nexus (drc) 132 [Tokens]\n1x Miles Morales // Ultimate Spider-Man (spm) 108 [Counters]\n1x Mirrodin's Core (plst) DST-165 [Land]\n1x Morophon, the Boundless (m3c) 157 [Ramp]\n4x Mountain (msh) 294 [Land]\n1x Mystic Monastery (msc) 253 [Land]\n1x Nomad Outpost (fic) 409 [Land]\n1x Ominous Asylum (spm) 181 [Land]\n1x Opulent Palace (ecc) 157 [Land]\n1x Origin of Spider-Man (spm) 9 [Tokens]\n1x Oscorp Industries (spm) 182 [Land]\n1x Patchwork Banner (msc) 207 [Ramp]\n1x Peter Parker // Amazing Spider-Man (spm) 10 [Ramp]\n1x Peter Parker's Camera (spm) 171 [Copy]\n3x Plains (msh) 287 [Land]\n1x Pongify (tdc) 160 [Removal]\n1x Radioactive Spider (spm) 111 [Tutor]\n1x Raise the Palisade (msc) 278 [Removal]\n1x Realmwalker (ecc) 114 [Draw]\n1x Rent Is Due (spm) 11 [Draw]\n1x Romantic Rendezvous (spm) 86 [Draw]\n1x Sandsteppe Citadel (ecc) 164 [Land]\n1x Savage Mansion (spm) 183 [Land]\n1x Scarlet Spider, Ben Reilly (spm) 142 [Counters]\n1x Shelob, Child of Ungoliant (ltr) 230 [Tokens]\n1x Silk, Web Weaver (spm) 145 [Tokens]\n1x Sinister Hideout (spm) 184 [Land]\n1x Sol Ring (msc) 212 [Ramp]\n1x SP//dr, Piloted by Peni (spm) 147 [Draw]\n1x Spectacular Spider-Man (lmar) 2 [Protection]\n1x Spectacular Tactics (msc) 775 [Protection]\n1x Spider Manifestation (spm) 148 [Ramp]\n1x Spider-Bot (spm) 173 [Ramp]\n1x Spider-Gwen, Free Spirit (msc) 874 [Draw]\n1x Spider-Man 2099 (spm) 150 [Burn]\n1x Spider-Man India (spm) 151 [Counters]\n1x Spider-Man Noir (spm) 67 [Counters]\n1x Spider-Man, Brooklyn Visionary (spm) 115 [Ramp]\n1x Spider-Man, Web-Slinger (spm) 16 [Bounce]\n1x Spider-Punk (spm) 92 [Protection]\n1x Spider-Sense (spm) 46 [Removal]\n1x Spider-Suit (spm) 176 [Pump]\n1x Spider-UK (spm) 17 [Draw]\n1x Spider-Verse (spm) 93 [Copy]\n1x Spider-Woman, Stunning Savior (spm) 152 [Stax]\n1x Spinneret and Spiderling (spm) 94 [Draw]\n1x Suburban Sanctuary (spm) 185 [Land]\n1x Sun-Spider, Nimble Webber (spm) 154 [Tutor]\n1x Superior Spider-Man (spm) 155 [Copy]\n3x Swamp (msh) 291 [Land]\n1x The World Tree (khm) 275 [Land]\n1x Thwip! (msc) 780 [Pump]\n1x Vibrant Cityscape (tmc) 82 [Land]\n1x Web of Life and Destiny (spm) 122 [Draw]\n1x Web-Shooters (spm) 22 [Pump]\n1x Web-Warriors (spm) 159 [Counters]\n1x Winds of Change (por) 156 [Draw]\n",
+  "result": {
+    "cards": [
+      {
+        "object": "card",
+        "id": "f5f18431-64c0-4ae5-bdc1-1e953313f086",
+        "name": "Arachnogenesis",
+        "set": "dsc",
+        "collector_number": "169",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "b655bee5-52d3-467e-b16c-cfc2edf2b1a1",
+        "flavor_text": "Every movement is a summons—even your screams.",
+        "oracle_text": "Create X 1/2 green Spider creature tokens with reach, where X is the number of creatures attacking you. Prevent all combat damage that would be dealt this turn by non-Spider creatures.",
+        "type_line": "Instant",
+        "layout": "normal",
+        "mana_cost": "{2}{G}",
+        "released_at": "2024-09-27",
+        "set_name": "Duskmourn: House of Horror Commander",
+        "artist": "Johannes Voss",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/5/f5f18431-64c0-4ae5-bdc1-1e953313f086.jpg?1783909610",
+          "normal": "https://cards.scryfall.io/normal/front/f/5/f5f18431-64c0-4ae5-bdc1-1e953313f086.jpg?1783909610",
+          "large": "https://cards.scryfall.io/large/front/f/5/f5f18431-64c0-4ae5-bdc1-1e953313f086.jpg?1783909610"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/dsc/169/arachnogenesis?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8",
+        "name": "Araña, Heart of the Spider",
+        "set": "spm",
+        "collector_number": "123",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "a16037f2-a0f6-465d-8d6e-cec34b4a6320",
+        "oracle_text": "Whenever you attack, put a +1/+1 counter on target attacking creature.\nWhenever a modified creature you control deals combat damage to a player, exile the top card of your library. You may play that card this turn. (Equipment, Auras you control, and counters are modifications.)",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{1}{R}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Kevin Glint",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/b/0/b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8.jpg?1783905320",
+          "normal": "https://cards.scryfall.io/normal/front/b/0/b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8.jpg?1783905320",
+          "large": "https://cards.scryfall.io/large/front/b/0/b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8.jpg?1783905320"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/123/ara%C3%B1a-heart-of-the-spider?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "95a87b4e-f0ea-457c-9517-4acf313c4ca6",
+        "name": "Arasta of the Endless Web",
+        "set": "tdc",
+        "collector_number": "244",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [
+          "Reach"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "695eea46-1535-48c5-bbb6-0b8379e77bfc",
+        "flavor_text": "Her webs, spun from her own hair, reach from Nyx to the mortal world and even into the Underworld.",
+        "oracle_text": "Reach\nWhenever an opponent casts an instant or sorcery spell, create a 1/2 green Spider creature token with reach.",
+        "type_line": "Legendary Enchantment Creature — Spider",
+        "layout": "normal",
+        "mana_cost": "{2}{G}{G}",
+        "released_at": "2025-04-11",
+        "set_name": "Tarkir: Dragonstorm Commander",
+        "artist": "Sam Rowan",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/9/5/95a87b4e-f0ea-457c-9517-4acf313c4ca6.jpg?1783907053",
+          "normal": "https://cards.scryfall.io/normal/front/9/5/95a87b4e-f0ea-457c-9517-4acf313c4ca6.jpg?1783907053",
+          "large": "https://cards.scryfall.io/large/front/9/5/95a87b4e-f0ea-457c-9517-4acf313c4ca6.jpg?1783907053"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/tdc/244/arasta-of-the-endless-web?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "1bbc3ce9-f3df-41b4-b238-37319546c595",
+        "name": "Arcane Signet",
+        "set": "msc",
+        "collector_number": "192",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+        "flavor_text": "\"Thing Rings, do your thing.\"\n—Ms. Thing, Darla Deering",
+        "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{2}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Vilhelmas Banys",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/b/1bbc3ce9-f3df-41b4-b238-37319546c595.jpg?1783903222",
+          "normal": "https://cards.scryfall.io/normal/front/1/b/1bbc3ce9-f3df-41b4-b238-37319546c595.jpg?1783903222",
+          "large": "https://cards.scryfall.io/large/front/1/b/1bbc3ce9-f3df-41b4-b238-37319546c595.jpg?1783903222"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/192/arcane-signet?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "252c2564-c39d-476d-b7d0-43aee625fcaa",
+        "name": "Aunt May",
+        "set": "msc",
+        "collector_number": "768",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "bdb769b5-c861-4ec1-ad6b-e2a56ca05fd1",
+        "flavor_text": "\"I cooked your favorite breakfast, Petey—wheatcakes!\"",
+        "oracle_text": "Whenever another creature you control enters, you gain 1 life. If it's a Spider, put a +1/+1 counter on it.",
+        "type_line": "Legendary Creature — Human Citizen",
+        "layout": "normal",
+        "mana_cost": "{W}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Randy Gallegos",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/5/252c2564-c39d-476d-b7d0-43aee625fcaa.jpg?1783903023",
+          "normal": "https://cards.scryfall.io/normal/front/2/5/252c2564-c39d-476d-b7d0-43aee625fcaa.jpg?1783903023",
+          "large": "https://cards.scryfall.io/large/front/2/5/252c2564-c39d-476d-b7d0-43aee625fcaa.jpg?1783903023"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/768/aunt-may?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "400b43aa-c1d2-4435-b863-061f43889422",
+        "name": "Beast Within",
+        "set": "msc",
+        "collector_number": "169",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "7735eeba-693b-47e2-bd51-414379cf1016",
+        "flavor_text": "Raw vibranium is hazardous to any who touch it, causing irreversible mutations.",
+        "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+        "type_line": "Instant",
+        "layout": "normal",
+        "mana_cost": "{2}{G}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Thomas Chamberlain-Keen",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/0/400b43aa-c1d2-4435-b863-061f43889422.jpg?1783903232",
+          "normal": "https://cards.scryfall.io/normal/front/4/0/400b43aa-c1d2-4435-b863-061f43889422.jpg?1783903232",
+          "large": "https://cards.scryfall.io/large/front/4/0/400b43aa-c1d2-4435-b863-061f43889422.jpg?1783903232"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/169/beast-within?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "1919bfec-1906-4178-ad32-d4589842e563",
+        "name": "Behold the Sinister Six!",
+        "set": "spm",
+        "collector_number": "51",
+        "lang": "en",
+        "color_identity": [
+          "B"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "6fa27f8a-bade-460f-853a-abc1c05c946a",
+        "flavor_text": "\"Open your eyes to your nightmare, Spider-Man.\"\n—Doctor Octopus, Otto Octavius",
+        "oracle_text": "Return up to six target creature cards with different names from your graveyard to the battlefield.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{6}{B}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Nathaniel Himawan",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/9/1919bfec-1906-4178-ad32-d4589842e563.jpg?1783905348",
+          "normal": "https://cards.scryfall.io/normal/front/1/9/1919bfec-1906-4178-ad32-d4589842e563.jpg?1783905348",
+          "large": "https://cards.scryfall.io/large/front/1/9/1919bfec-1906-4178-ad32-d4589842e563.jpg?1783905348"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/51/behold-the-sinister-six!?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+        "name": "Black Market Connections",
+        "set": "msc",
+        "collector_number": "155",
+        "lang": "en",
+        "color_identity": [
+          "B"
+        ],
+        "keywords": [
+          "Hire a Mercenary",
+          "Treasure",
+          "Sell Contraband",
+          "Buy Information"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "d2664f28-49e1-46f8-a863-b217e961a57c",
+        "oracle_text": "At the beginning of your first main phase, choose one or more —\n• Sell Contraband — Create a Treasure token. You lose 1 life.\n• Buy Information — Draw a card. You lose 2 life.\n• Hire a Mercenary — Create a 3/2 colorless Shapeshifter creature token with changeling. You lose 3 life. (It is every creature type.)",
+        "type_line": "Enchantment",
+        "layout": "normal",
+        "mana_cost": "{2}{B}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Xabi Gaztelua",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/9/d/9d9ca869-e68a-4f53-9f52-85c714dac6f3.jpg?1783903238",
+          "normal": "https://cards.scryfall.io/normal/front/9/d/9d9ca869-e68a-4f53-9f52-85c714dac6f3.jpg?1783903238",
+          "large": "https://cards.scryfall.io/large/front/9/d/9d9ca869-e68a-4f53-9f52-85c714dac6f3.jpg?1783903238"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/155/black-market-connections?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "693da13a-49af-4f7e-b247-36b454fb31a0",
+        "name": "Chromatic Lantern",
+        "set": "msc",
+        "collector_number": "195",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "539f5396-d99a-417d-a84c-dff7930b5900",
+        "flavor_text": "After the thirteenth time Reed Richards overloaded the New York City electric grid, he built the Baxter Building its own power supply.",
+        "oracle_text": "Lands you control have \"{T}: Add one mana of any color.\"\n{T}: Add one mana of any color.",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{3}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Rytis Sabaliauskas",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/6/9/693da13a-49af-4f7e-b247-36b454fb31a0.jpg?1783903221",
+          "normal": "https://cards.scryfall.io/normal/front/6/9/693da13a-49af-4f7e-b247-36b454fb31a0.jpg?1783903221",
+          "large": "https://cards.scryfall.io/large/front/6/9/693da13a-49af-4f7e-b247-36b454fb31a0.jpg?1783903221"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/195/chromatic-lantern?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "aef2eb36-f20d-4d90-a556-de2ba09b2635",
+        "name": "Coat of Arms",
+        "set": "plst",
+        "collector_number": "DDS-58",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+        "flavor_text": "A banner for bonds of blood or belief.",
+        "oracle_text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{5}",
+        "released_at": "2019-11-07",
+        "set_name": "The List",
+        "artist": "Scott M. Fischer",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/e/aef2eb36-f20d-4d90-a556-de2ba09b2635.jpg?1783932283",
+          "normal": "https://cards.scryfall.io/normal/front/a/e/aef2eb36-f20d-4d90-a556-de2ba09b2635.jpg?1783932283",
+          "large": "https://cards.scryfall.io/large/front/a/e/aef2eb36-f20d-4d90-a556-de2ba09b2635.jpg?1783932283"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/plst/DDS-58/coat-of-arms?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "f82f4013-7308-4917-9042-19a5909f2134",
+        "name": "Cosmic Spider-Man",
+        "set": "spm",
+        "collector_number": "127",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U",
+          "B",
+          "R",
+          "G"
+        ],
+        "keywords": [
+          "Flying",
+          "Lifelink",
+          "First strike",
+          "Haste",
+          "Trample"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "0334a2f8-a74a-44c9-ba64-d9b7fabe160c",
+        "flavor_text": "The Enigma Force granted Peter the greatest power, and with it, the greatest responsibility.",
+        "oracle_text": "Flying, first strike, trample, lifelink, haste\nAt the beginning of combat on your turn, other Spiders you control gain flying, first strike, trample, lifelink, and haste until end of turn.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{W}{U}{B}{R}{G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Zoltan Boros",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/8/f82f4013-7308-4917-9042-19a5909f2134.jpg?1783905318",
+          "normal": "https://cards.scryfall.io/normal/front/f/8/f82f4013-7308-4917-9042-19a5909f2134.jpg?1783905318",
+          "large": "https://cards.scryfall.io/large/front/f/8/f82f4013-7308-4917-9042-19a5909f2134.jpg?1783905318"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/127/cosmic-spider-man?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "e60deb92-f7dd-4f4e-9036-e47dd586f985",
+        "name": "Cultivate",
+        "set": "msc",
+        "collector_number": "172",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "8b755881-a72d-4e21-a369-d2924eb4585a",
+        "flavor_text": "\"Don't get so caught up in the science that you forget to embrace the wonder in front of you.\"\n—Reed Richards, to Valeria Richards",
+        "oracle_text": "Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{2}{G}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Darius Zablockis",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/e/6/e60deb92-f7dd-4f4e-9036-e47dd586f985.jpg?1783903229",
+          "normal": "https://cards.scryfall.io/normal/front/e/6/e60deb92-f7dd-4f4e-9036-e47dd586f985.jpg?1783903229",
+          "large": "https://cards.scryfall.io/large/front/e/6/e60deb92-f7dd-4f4e-9036-e47dd586f985.jpg?1783903229"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/172/cultivate?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "c1aac0f5-1d01-4673-b8d3-878d9a1d423c",
+        "name": "Farseek",
+        "set": "msc",
+        "collector_number": "173",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "495e52e6-4c2b-4574-9474-eadbdcc8b4ac",
+        "flavor_text": "In the race to be first to the stars, four brave explorers undertook a dangerous journey aboard an experimental spaceship, the *Marvel-1*.",
+        "oracle_text": "Search your library for a Plains, Island, Swamp, or Mountain card, put it onto the battlefield tapped, then shuffle.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{1}{G}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Rimas Valeikis",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/c/1/c1aac0f5-1d01-4673-b8d3-878d9a1d423c.jpg?1783903231",
+          "normal": "https://cards.scryfall.io/normal/front/c/1/c1aac0f5-1d01-4673-b8d3-878d9a1d423c.jpg?1783903231",
+          "large": "https://cards.scryfall.io/large/front/c/1/c1aac0f5-1d01-4673-b8d3-878d9a1d423c.jpg?1783903231"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/173/farseek?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "1e24e2bc-b239-4f9a-85c0-5f272f58ed43",
+        "name": "Fellwar Stone",
+        "set": "msc",
+        "collector_number": "285",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+        "flavor_text": "S.H.I.E.L.D. keeps watch over the land, sea, and stars.",
+        "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{2}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Carlos Dattoli",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/e/1e24e2bc-b239-4f9a-85c0-5f272f58ed43.jpg?1783903186",
+          "normal": "https://cards.scryfall.io/normal/front/1/e/1e24e2bc-b239-4f9a-85c0-5f272f58ed43.jpg?1783903186",
+          "large": "https://cards.scryfall.io/large/front/1/e/1e24e2bc-b239-4f9a-85c0-5f272f58ed43.jpg?1783903186"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/285/fellwar-stone?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "c9d637ac-e0d3-4c62-9f00-08270f3c1e91",
+        "name": "Forest",
+        "set": "msh",
+        "collector_number": "296",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "oracle_text": "({T}: Add {G}.)",
+        "type_line": "Basic Land — Forest",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes",
+        "artist": "Rytis Sabaliauskas",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/c/9/c9d637ac-e0d3-4c62-9f00-08270f3c1e91.jpg?1783902875",
+          "normal": "https://cards.scryfall.io/normal/front/c/9/c9d637ac-e0d3-4c62-9f00-08270f3c1e91.jpg?1783902875",
+          "large": "https://cards.scryfall.io/large/front/c/9/c9d637ac-e0d3-4c62-9f00-08270f3c1e91.jpg?1783902875"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msh/296/forest?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "48810b27-0646-4ff9-9d4d-c6d09b2e0267",
+        "name": "Frontier Bivouac",
+        "set": "ecc",
+        "collector_number": "150",
+        "lang": "en",
+        "color_identity": [
+          "U",
+          "R",
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "e4cf6c2f-0f1e-4980-9ef9-e4eabcae42a9",
+        "flavor_text": "With a warm fire and a fresh catch, Temur hunters find respite in even the coldest climates.",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G}, {U}, or {R}.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-01-23",
+        "set_name": "Lorwyn Eclipsed Commander",
+        "artist": "Andrea Piparo",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/8/48810b27-0646-4ff9-9d4d-c6d09b2e0267.jpg?1783904530",
+          "normal": "https://cards.scryfall.io/normal/front/4/8/48810b27-0646-4ff9-9d4d-c6d09b2e0267.jpg?1783904530",
+          "large": "https://cards.scryfall.io/large/front/4/8/48810b27-0646-4ff9-9d4d-c6d09b2e0267.jpg?1783904530"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/ecc/150/frontier-bivouac?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+        "name": "Gwen Stacy // Ghost-Spider",
+        "set": "spm",
+        "collector_number": "78",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U",
+          "R"
+        ],
+        "keywords": [
+          "Flying",
+          "Vigilance",
+          "Transform",
+          "Haste"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "5f143d87-35fb-40e3-94ae-f85cfff9adb5",
+        "type_line": "Legendary Creature — Human Performer Hero // Legendary Creature — Spider Human Hero",
+        "layout": "modal_dfc",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Victor Adame Minguez",
+        "rarity": "mythic",
+        "keywords_status": "reported",
+        "card_faces": [
+          {
+            "name": "Gwen Stacy",
+            "flavor_text": "\"Spiders don't hold still given any other choice, and I have all the choices in the Multiverse!\"",
+            "oracle_text": "When Gwen Stacy enters, exile the top card of your library. You may play that card for as long as you control this creature.\n{2}{U}{R}{W}: Transform Gwen Stacy. Activate only as a sorcery.",
+            "type_line": "Legendary Creature — Human Performer Hero",
+            "mana_cost": "{1}{R}",
+            "artist": "Victor Adame Minguez",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/b/0/b0f1597f-1dc7-465e-8fcb-0afe61bcca46.jpg?1783905342",
+              "normal": "https://cards.scryfall.io/normal/front/b/0/b0f1597f-1dc7-465e-8fcb-0afe61bcca46.jpg?1783905342",
+              "large": "https://cards.scryfall.io/large/front/b/0/b0f1597f-1dc7-465e-8fcb-0afe61bcca46.jpg?1783905342"
+            }
+          },
+          {
+            "name": "Ghost-Spider",
+            "oracle_text": "Flying, vigilance, haste\nWhenever you play a land from exile or cast a spell from exile, put a +1/+1 counter on Ghost-Spider.\nRemove two counters from Ghost-Spider: Exile the top card of your library. You may play that card this turn.",
+            "type_line": "Legendary Creature — Spider Human Hero",
+            "mana_cost": "{2}{U}{R}{W}",
+            "artist": "Victor Adame Minguez",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/b/0/b0f1597f-1dc7-465e-8fcb-0afe61bcca46.jpg?1783905342",
+              "normal": "https://cards.scryfall.io/normal/back/b/0/b0f1597f-1dc7-465e-8fcb-0afe61bcca46.jpg?1783905342",
+              "large": "https://cards.scryfall.io/large/back/b/0/b0f1597f-1dc7-465e-8fcb-0afe61bcca46.jpg?1783905342"
+            }
+          }
+        ],
+        "scryfall_uri": "https://scryfall.com/card/spm/78/gwen-stacy-ghost-spider?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "46b6cc5d-7a37-4e8b-a1a5-9a573056610c",
+        "name": "Gwenom, Remorseless",
+        "set": "spm",
+        "collector_number": "56",
+        "lang": "en",
+        "color_identity": [
+          "B"
+        ],
+        "keywords": [
+          "Lifelink",
+          "Deathtouch"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "c48cf135-b280-4e9f-a9d9-225104870741",
+        "oracle_text": "Deathtouch, lifelink\nWhenever Gwenom attacks, until end of turn, you may look at the top card of your library any time and you may play cards from the top of your library. If you cast a spell this way, pay life equal to its mana value rather than pay its mana cost.",
+        "type_line": "Legendary Creature — Symbiote Spider Hero",
+        "layout": "normal",
+        "mana_cost": "{3}{B}{B}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Lordigan",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/6/46b6cc5d-7a37-4e8b-a1a5-9a573056610c.jpg?1783905344",
+          "normal": "https://cards.scryfall.io/normal/front/4/6/46b6cc5d-7a37-4e8b-a1a5-9a573056610c.jpg?1783905344",
+          "large": "https://cards.scryfall.io/large/front/4/6/46b6cc5d-7a37-4e8b-a1a5-9a573056610c.jpg?1783905344"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/56/gwenom-remorseless?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "1e8afbcf-c5a6-428c-8d91-a309821362b3",
+        "name": "Hashep Oasis",
+        "set": "m3c",
+        "collector_number": "347",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "eab70fff-6a9f-4f9f-89a2-b6910c199e46",
+        "oracle_text": "{T}: Add {C}.\n{T}, Pay 1 life: Add {G}.\n{1}{G}{G}, {T}, Sacrifice a Desert: Target creature gets +3/+3 until end of turn. Activate only as a sorcery.",
+        "type_line": "Land — Desert",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2024-06-14",
+        "set_name": "Modern Horizons 3 Commander",
+        "artist": "Jonas De Ro",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/e/1e8afbcf-c5a6-428c-8d91-a309821362b3.jpg?1783911333",
+          "normal": "https://cards.scryfall.io/normal/front/1/e/1e8afbcf-c5a6-428c-8d91-a309821362b3.jpg?1783911333",
+          "large": "https://cards.scryfall.io/large/front/1/e/1e8afbcf-c5a6-428c-8d91-a309821362b3.jpg?1783911333"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/m3c/347/hashep-oasis?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "08da9f92-0e25-4f39-aaa4-d8974af81a41",
+        "name": "Impostor Syndrome",
+        "set": "spm",
+        "collector_number": "34",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "7be47440-b627-411e-a28f-d5a92e5e2fb7",
+        "flavor_text": "\"I'm the real Spider-Man!\"\n\"No, *I'm* the real Spider-Man!\"",
+        "oracle_text": "Whenever a nontoken creature you control deals combat damage to a player, create a token that's a copy of it, except it isn't legendary.",
+        "type_line": "Enchantment",
+        "layout": "normal",
+        "mana_cost": "{4}{U}{U}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Javier Charro",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/0/8/08da9f92-0e25-4f39-aaa4-d8974af81a41.jpg?1783905354",
+          "normal": "https://cards.scryfall.io/normal/front/0/8/08da9f92-0e25-4f39-aaa4-d8974af81a41.jpg?1783905354",
+          "large": "https://cards.scryfall.io/large/front/0/8/08da9f92-0e25-4f39-aaa4-d8974af81a41.jpg?1783905354"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/34/impostor-syndrome?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "8da5f34e-7f40-406a-88d2-bb1e3ed25200",
+        "name": "Iron Spider, Stark Upgrade",
+        "set": "spm",
+        "collector_number": "166",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [
+          "Vigilance"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "e123fd7d-ace9-48a4-9510-eedcc837d8e8",
+        "flavor_text": "Peter appreciated the powerful new suit sent by Tony Stark, but he soon found it came with some strings attached.",
+        "oracle_text": "Vigilance\n{T}: Put a +1/+1 counter on each artifact creature and/or Vehicle you control.\n{2}, Remove two +1/+1 counters from among artifacts you control: Draw a card.",
+        "type_line": "Legendary Artifact Creature — Spider Hero",
+        "layout": "normal",
+        "mana_cost": "{3}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Kevin Glint",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/8/d/8da5f34e-7f40-406a-88d2-bb1e3ed25200.jpg?1783905305",
+          "normal": "https://cards.scryfall.io/normal/front/8/d/8da5f34e-7f40-406a-88d2-bb1e3ed25200.jpg?1783905305",
+          "large": "https://cards.scryfall.io/large/front/8/d/8da5f34e-7f40-406a-88d2-bb1e3ed25200.jpg?1783905305"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/166/iron-spider-stark-upgrade?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "02f76514-9e0d-4d74-a224-15a2d7b44ae1",
+        "name": "Island",
+        "set": "msh",
+        "collector_number": "290",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "oracle_text": "({T}: Add {U}.)",
+        "type_line": "Basic Land — Island",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes",
+        "artist": "Rytis Sabaliauskas",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/0/2/02f76514-9e0d-4d74-a224-15a2d7b44ae1.jpg?1783902875",
+          "normal": "https://cards.scryfall.io/normal/front/0/2/02f76514-9e0d-4d74-a224-15a2d7b44ae1.jpg?1783902875",
+          "large": "https://cards.scryfall.io/large/front/0/2/02f76514-9e0d-4d74-a224-15a2d7b44ae1.jpg?1783902875"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msh/290/island?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "cec575f6-43c9-41c6-a996-bb806bf82185",
+        "name": "Kapow!",
+        "set": "spm",
+        "collector_number": "103",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [
+          "Fight"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "d6eabbff-cc0c-4000-8feb-4826e1b6bc66",
+        "flavor_text": "\"People are in danger—I don't have time for your games!\"",
+        "oracle_text": "Put a +1/+1 counter on target creature you control. It fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{2}{G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Jessica Fong",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/c/e/cec575f6-43c9-41c6-a996-bb806bf82185.jpg?1783905326",
+          "normal": "https://cards.scryfall.io/normal/front/c/e/cec575f6-43c9-41c6-a996-bb806bf82185.jpg?1783905326",
+          "large": "https://cards.scryfall.io/large/front/c/e/cec575f6-43c9-41c6-a996-bb806bf82185.jpg?1783905326"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/103/kapow!?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "19bdedb2-768b-4adf-8193-917a10c8f729",
+        "name": "Kindred Discovery",
+        "set": "msc",
+        "collector_number": "150",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "005ee549-1bf5-478f-bc3f-3e791bd7eecf",
+        "flavor_text": "It is in the nature of a hero to inspire others.",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nWhenever a creature you control of the chosen type enters or attacks, draw a card.",
+        "type_line": "Enchantment",
+        "layout": "normal",
+        "mana_cost": "{3}{U}{U}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Stephanie Hans",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/9/19bdedb2-768b-4adf-8193-917a10c8f729.jpg?1783903239",
+          "normal": "https://cards.scryfall.io/normal/front/1/9/19bdedb2-768b-4adf-8193-917a10c8f729.jpg?1783903239",
+          "large": "https://cards.scryfall.io/large/front/1/9/19bdedb2-768b-4adf-8193-917a10c8f729.jpg?1783903239"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/150/kindred-discovery?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "f6cd7c08-f5d4-4bdc-a254-809d900b0fc3",
+        "name": "Kindred Dominance",
+        "set": "msc",
+        "collector_number": "156",
+        "lang": "en",
+        "color_identity": [
+          "B"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "ccaa44f2-96be-44e2-884f-c31baa3908d5",
+        "flavor_text": "When the screams subsided, only the dry slither of scales and the hiss of cold breath remained.",
+        "oracle_text": "Choose a creature type. Destroy all creatures that aren't of the chosen type.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{5}{B}{B}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Lordigan",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/6/f6cd7c08-f5d4-4bdc-a254-809d900b0fc3.jpg?1783903243",
+          "normal": "https://cards.scryfall.io/normal/front/f/6/f6cd7c08-f5d4-4bdc-a254-809d900b0fc3.jpg?1783903243",
+          "large": "https://cards.scryfall.io/large/front/f/6/f6cd7c08-f5d4-4bdc-a254-809d900b0fc3.jpg?1783903243"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/156/kindred-dominance?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "a16ca3fc-3cdf-4333-93e0-524afafe367b",
+        "name": "Madame Web, Clairvoyant",
+        "set": "spm",
+        "collector_number": "36",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [
+          "Mill"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "b1e0841d-b004-40f9-a644-aecb422f6ad5",
+        "oracle_text": "You may look at the top card of your library any time.\nYou may cast Spider spells and noncreature spells from the top of your library.\nWhenever you attack, you may mill a card. (You may put the top card of your library into your graveyard.)",
+        "type_line": "Legendary Creature — Mutant Advisor",
+        "layout": "normal",
+        "mana_cost": "{4}{U}{U}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Pavel Kolomeyets",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/1/a16ca3fc-3cdf-4333-93e0-524afafe367b.jpg?1783905353",
+          "normal": "https://cards.scryfall.io/normal/front/a/1/a16ca3fc-3cdf-4333-93e0-524afafe367b.jpg?1783905353",
+          "large": "https://cards.scryfall.io/large/front/a/1/a16ca3fc-3cdf-4333-93e0-524afafe367b.jpg?1783905353"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/36/madame-web-clairvoyant?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "178345f7-8ccd-4e47-80f4-5bd31bab6655",
+        "name": "Mary Jane Watson",
+        "set": "spm",
+        "collector_number": "134",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "6d44c87b-8945-4c39-b034-7690cf483992",
+        "flavor_text": "Charismatic and confident, Mary Jane was born for the limelight.",
+        "oracle_text": "Whenever a Spider you control enters, draw a card. This ability triggers only once each turn.",
+        "type_line": "Legendary Creature — Human Performer",
+        "layout": "normal",
+        "mana_cost": "{1}{G/W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Steve Argyle",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/7/178345f7-8ccd-4e47-80f4-5bd31bab6655.jpg?1783905316",
+          "normal": "https://cards.scryfall.io/normal/front/1/7/178345f7-8ccd-4e47-80f4-5bd31bab6655.jpg?1783905316",
+          "large": "https://cards.scryfall.io/large/front/1/7/178345f7-8ccd-4e47-80f4-5bd31bab6655.jpg?1783905316"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/134/mary-jane-watson?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "c6f2c543-9b01-4760-966a-f0609c24f53e",
+        "name": "Maskwood Nexus",
+        "set": "drc",
+        "collector_number": "132",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "9b2cdbed-c733-409b-b0e4-2c8960c25111",
+        "oracle_text": "Creatures you control are every creature type. The same is true for creature spells you control and creature cards you own that aren't on the battlefield.\n{3}, {T}: Create a 2/2 blue Shapeshifter creature token with changeling. (It is every creature type.)",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{4}",
+        "released_at": "2025-02-14",
+        "set_name": "Aetherdrift Commander",
+        "artist": "Jason A. Engle",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/c/6/c6f2c543-9b01-4760-966a-f0609c24f53e.jpg?1783907710",
+          "normal": "https://cards.scryfall.io/normal/front/c/6/c6f2c543-9b01-4760-966a-f0609c24f53e.jpg?1783907710",
+          "large": "https://cards.scryfall.io/large/front/c/6/c6f2c543-9b01-4760-966a-f0609c24f53e.jpg?1783907710"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/drc/132/maskwood-nexus?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+        "name": "Miles Morales // Ultimate Spider-Man",
+        "set": "spm",
+        "collector_number": "108",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "R",
+          "G"
+        ],
+        "keywords": [
+          "Camouflage",
+          "Transform",
+          "First strike",
+          "Haste",
+          "Double"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "be48c721-bdc6-4f2c-96d6-82d934b31615",
+        "type_line": "Legendary Creature — Human Citizen Hero // Legendary Creature — Spider Human Hero",
+        "layout": "modal_dfc",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "L.A. Draws",
+        "rarity": "mythic",
+        "keywords_status": "reported",
+        "card_faces": [
+          {
+            "name": "Miles Morales",
+            "flavor_text": "\"You can't call yourself Spider-Man without taking a leap of faith. It's a lot to live up to. But I'm creating an all-new legacy.\"",
+            "oracle_text": "When Miles Morales enters, put a +1/+1 counter on each of up to two target creatures.\n{3}{R}{G}{W}: Transform Miles Morales. Activate only as a sorcery.",
+            "type_line": "Legendary Creature — Human Citizen Hero",
+            "mana_cost": "{1}{G}",
+            "artist": "L.A. Draws",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/9/f/9f8b4d9b-208a-4673-a617-5e3edd069c33.jpg?1783905331",
+              "normal": "https://cards.scryfall.io/normal/front/9/f/9f8b4d9b-208a-4673-a617-5e3edd069c33.jpg?1783905331",
+              "large": "https://cards.scryfall.io/large/front/9/f/9f8b4d9b-208a-4673-a617-5e3edd069c33.jpg?1783905331"
+            }
+          },
+          {
+            "name": "Ultimate Spider-Man",
+            "oracle_text": "First strike, haste\nCamouflage — {2}: Put a +1/+1 counter on Ultimate Spider-Man. He gains hexproof and becomes colorless until end of turn.\nWhenever you attack, double the number of each kind of counter on each Spider and legendary creature you control.",
+            "type_line": "Legendary Creature — Spider Human Hero",
+            "mana_cost": "{3}{R}{G}{W}",
+            "artist": "L.A. Draws",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/9/f/9f8b4d9b-208a-4673-a617-5e3edd069c33.jpg?1783905331",
+              "normal": "https://cards.scryfall.io/normal/back/9/f/9f8b4d9b-208a-4673-a617-5e3edd069c33.jpg?1783905331",
+              "large": "https://cards.scryfall.io/large/back/9/f/9f8b4d9b-208a-4673-a617-5e3edd069c33.jpg?1783905331"
+            }
+          }
+        ],
+        "scryfall_uri": "https://scryfall.com/card/spm/108/miles-morales-ultimate-spider-man?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "20dafceb-2cc4-437a-9500-edfacbef4d3d",
+        "name": "Mirrodin's Core",
+        "set": "plst",
+        "collector_number": "DST-165",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "ea53adbe-3f9a-4847-87c7-723ac2789918",
+        "oracle_text": "{T}: Add {C}.\n{T}: Put a charge counter on this land.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2020-03-13",
+        "set_name": "The List",
+        "artist": "Greg Staples",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/0/20dafceb-2cc4-437a-9500-edfacbef4d3d.jpg?1783931258",
+          "normal": "https://cards.scryfall.io/normal/front/2/0/20dafceb-2cc4-437a-9500-edfacbef4d3d.jpg?1783931258",
+          "large": "https://cards.scryfall.io/large/front/2/0/20dafceb-2cc4-437a-9500-edfacbef4d3d.jpg?1783931258"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/plst/DST-165/mirrodins-core?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "33c2e889-d2e1-4197-ba97-81a2b8512746",
+        "name": "Morophon, the Boundless",
+        "set": "m3c",
+        "collector_number": "157",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U",
+          "B",
+          "R",
+          "G"
+        ],
+        "keywords": [
+          "Changeling"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "bf418a2f-e639-4e52-9cad-5a0713a1829b",
+        "oracle_text": "Changeling (This card is every creature type.)\nAs Morophon enters, choose a creature type.\nSpells of the chosen type you cast cost {W}{U}{B}{R}{G} less to cast. This effect reduces only the amount of colored mana you pay.\nOther creatures you control of the chosen type get +1/+1.",
+        "type_line": "Legendary Creature — Shapeshifter",
+        "layout": "normal",
+        "mana_cost": "{7}",
+        "released_at": "2024-06-14",
+        "set_name": "Modern Horizons 3 Commander",
+        "artist": "Victor Adame Minguez",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/3/3/33c2e889-d2e1-4197-ba97-81a2b8512746.jpg?1783911395",
+          "normal": "https://cards.scryfall.io/normal/front/3/3/33c2e889-d2e1-4197-ba97-81a2b8512746.jpg?1783911395",
+          "large": "https://cards.scryfall.io/large/front/3/3/33c2e889-d2e1-4197-ba97-81a2b8512746.jpg?1783911395"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/m3c/157/morophon-the-boundless?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "f7752159-06bd-4f6c-b3d2-c4c7616acfbb",
+        "name": "Mountain",
+        "set": "msh",
+        "collector_number": "294",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "oracle_text": "({T}: Add {R}.)",
+        "type_line": "Basic Land — Mountain",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes",
+        "artist": "Pace Wilder",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/7/f7752159-06bd-4f6c-b3d2-c4c7616acfbb.jpg?1783902876",
+          "normal": "https://cards.scryfall.io/normal/front/f/7/f7752159-06bd-4f6c-b3d2-c4c7616acfbb.jpg?1783902876",
+          "large": "https://cards.scryfall.io/large/front/f/7/f7752159-06bd-4f6c-b3d2-c4c7616acfbb.jpg?1783902876"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msh/294/mountain?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "bc23343a-3a01-4975-8430-17bf15fa639d",
+        "name": "Mystic Monastery",
+        "set": "msc",
+        "collector_number": "253",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U",
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "834b8f71-9a45-42ae-9e99-e749fa6fb45e",
+        "flavor_text": "\"It may not be the most extravagant or awe-inspiring House of the Deadly Hand of all time, but it's here and it's home.\"\n—Shang-Chi",
+        "oracle_text": "This land enters tapped.\n{T}: Add {U}, {R}, or {W}.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Arthur Yuan",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/b/c/bc23343a-3a01-4975-8430-17bf15fa639d.jpg?1783903198",
+          "normal": "https://cards.scryfall.io/normal/front/b/c/bc23343a-3a01-4975-8430-17bf15fa639d.jpg?1783903198",
+          "large": "https://cards.scryfall.io/large/front/b/c/bc23343a-3a01-4975-8430-17bf15fa639d.jpg?1783903198"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/253/mystic-monastery?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "790d5244-5042-4b84-b16d-be0f87d11fad",
+        "name": "Nomad Outpost",
+        "set": "fic",
+        "collector_number": "409",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "B",
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "4619de7e-3d6e-4c6b-8e6e-e24db324839d",
+        "flavor_text": "\"The Empire is snuffing out Returners wherever it finds them. We must find a way to strike back before it's too late...\"\n—Returner soldier",
+        "oracle_text": "This land enters tapped.\n{T}: Add {R}, {W}, or {B}.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2025-06-13",
+        "set_name": "Final Fantasy Commander",
+        "artist": "Pablo Mendoza",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/7/9/790d5244-5042-4b84-b16d-be0f87d11fad.jpg?1783906215",
+          "normal": "https://cards.scryfall.io/normal/front/7/9/790d5244-5042-4b84-b16d-be0f87d11fad.jpg?1783906215",
+          "large": "https://cards.scryfall.io/large/front/7/9/790d5244-5042-4b84-b16d-be0f87d11fad.jpg?1783906215"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/fic/409/nomad-outpost?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "4329f94a-9110-4f07-b4a6-f1ccae97ccc9",
+        "name": "Ominous Asylum",
+        "set": "spm",
+        "collector_number": "181",
+        "lang": "en",
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "keywords": [
+          "Surveil"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "676141c3-a433-4aba-86fb-729628f96dfa",
+        "flavor_text": "\"We believe each patient has their own unique path to healing.\"\n—Dr. Ashley Kafka, Ravencroft Institute",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.\n{4}, {T}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Pavel Kolomeyets",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/3/4329f94a-9110-4f07-b4a6-f1ccae97ccc9.jpg?1783905299",
+          "normal": "https://cards.scryfall.io/normal/front/4/3/4329f94a-9110-4f07-b4a6-f1ccae97ccc9.jpg?1783905299",
+          "large": "https://cards.scryfall.io/large/front/4/3/4329f94a-9110-4f07-b4a6-f1ccae97ccc9.jpg?1783905299"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/181/ominous-asylum?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "f0001153-dbcb-44e5-99be-2c186c9b10b0",
+        "name": "Opulent Palace",
+        "set": "ecc",
+        "collector_number": "157",
+        "lang": "en",
+        "color_identity": [
+          "U",
+          "B",
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f9e7e855-1e3b-42d3-91b0-64ba8b5b8982",
+        "flavor_text": "\"The people must know that the former seat of their oppression is cleansed. Throw open Qarsi's gates and let them see for themselves.\"\n—Kotis, the Fangkeeper",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B}, {G}, or {U}.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-01-23",
+        "set_name": "Lorwyn Eclipsed Commander",
+        "artist": "Sergey Glushakov",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/0/f0001153-dbcb-44e5-99be-2c186c9b10b0.jpg?1783904523",
+          "normal": "https://cards.scryfall.io/normal/front/f/0/f0001153-dbcb-44e5-99be-2c186c9b10b0.jpg?1783904523",
+          "large": "https://cards.scryfall.io/large/front/f/0/f0001153-dbcb-44e5-99be-2c186c9b10b0.jpg?1783904523"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/ecc/157/opulent-palace?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "a10a7da7-d9cb-495a-9c9f-205d355c390d",
+        "name": "Origin of Spider-Man",
+        "set": "spm",
+        "collector_number": "9",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "7fbe9056-190f-40a1-bee9-59ebd6f981f5",
+        "oracle_text": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Create a 2/1 green Spider creature token with reach.\nII — Put a +1/+1 counter on target creature you control. It becomes a legendary Spider Hero in addition to its other types.\nIII — Target creature you control gains double strike until end of turn.",
+        "type_line": "Enchantment — Saga",
+        "layout": "saga",
+        "mana_cost": "{1}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Bill Sienkiewicz",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/1/a10a7da7-d9cb-495a-9c9f-205d355c390d.jpg?1783905363",
+          "normal": "https://cards.scryfall.io/normal/front/a/1/a10a7da7-d9cb-495a-9c9f-205d355c390d.jpg?1783905363",
+          "large": "https://cards.scryfall.io/large/front/a/1/a10a7da7-d9cb-495a-9c9f-205d355c390d.jpg?1783905363"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/9/origin-of-spider-man?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "1e609d6e-9e37-45d2-87de-8c76675f7cec",
+        "name": "Oscorp Industries",
+        "set": "spm",
+        "collector_number": "182",
+        "lang": "en",
+        "color_identity": [
+          "U",
+          "B",
+          "R"
+        ],
+        "keywords": [
+          "Mayhem"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f432eb6a-f1bf-4ce7-b915-1488dccb4bb9",
+        "oracle_text": "This land enters tapped.\nWhen this land enters from a graveyard, you lose 2 life.\n{T}: Add {U}, {B}, or {R}.\nMayhem (You may play this card from your graveyard if you discarded it this turn. Timing rules still apply.)",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Bastien Grivet",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/1/e/1e609d6e-9e37-45d2-87de-8c76675f7cec.jpg?1783905299",
+          "normal": "https://cards.scryfall.io/normal/front/1/e/1e609d6e-9e37-45d2-87de-8c76675f7cec.jpg?1783905299",
+          "large": "https://cards.scryfall.io/large/front/1/e/1e609d6e-9e37-45d2-87de-8c76675f7cec.jpg?1783905299"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/182/oscorp-industries?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "537ea7e7-e8e8-4736-bdd9-1085f1a7c259",
+        "name": "Patchwork Banner",
+        "set": "msc",
+        "collector_number": "207",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "4fb00dbe-1f82-4ba6-b18c-97e816d10d3a",
+        "flavor_text": "The Hand is comprised of many ninja factions united under the banner of the Beast, an ancient demon who grants them dark, mystical strength.",
+        "oracle_text": "As this artifact enters, choose a creature type.\nCreatures you control of the chosen type get +1/+1.\n{T}: Add one mana of any color.",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{3}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Bartek Fedyczak",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/5/3/537ea7e7-e8e8-4736-bdd9-1085f1a7c259.jpg?1783903215",
+          "normal": "https://cards.scryfall.io/normal/front/5/3/537ea7e7-e8e8-4736-bdd9-1085f1a7c259.jpg?1783903215",
+          "large": "https://cards.scryfall.io/large/front/5/3/537ea7e7-e8e8-4736-bdd9-1085f1a7c259.jpg?1783903215"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/207/patchwork-banner?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+        "name": "Peter Parker // Amazing Spider-Man",
+        "set": "spm",
+        "collector_number": "10",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U",
+          "G"
+        ],
+        "keywords": [
+          "Reach",
+          "Vigilance",
+          "Transform"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f1b7488c-c675-42e9-818a-24a50347ec2c",
+        "type_line": "Legendary Creature — Human Scientist Hero // Legendary Creature — Spider Human Hero",
+        "layout": "modal_dfc",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Thanh Tuấn",
+        "rarity": "mythic",
+        "keywords_status": "reported",
+        "card_faces": [
+          {
+            "name": "Peter Parker",
+            "flavor_text": "\"This batch of web fluid will just have to wait!\"",
+            "oracle_text": "When Peter Parker enters, create a 2/1 green Spider creature token with reach.\n{1}{G}{W}{U}: Transform Peter Parker. Activate only as a sorcery.",
+            "type_line": "Legendary Creature — Human Scientist Hero",
+            "mana_cost": "{1}{W}",
+            "artist": "Thanh Tuấn",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/3/c/3ce33422-5dba-4a42-8375-dd8ccc692a7b.jpg?1783905367",
+              "normal": "https://cards.scryfall.io/normal/front/3/c/3ce33422-5dba-4a42-8375-dd8ccc692a7b.jpg?1783905367",
+              "large": "https://cards.scryfall.io/large/front/3/c/3ce33422-5dba-4a42-8375-dd8ccc692a7b.jpg?1783905367"
+            }
+          },
+          {
+            "name": "Amazing Spider-Man",
+            "flavor_text": "\"Time to swing into action!\"",
+            "oracle_text": "Vigilance, reach\nEach legendary spell you cast that's one or more colors has web-slinging {G}{W}{U}. (You may cast a spell for its web-slinging cost if you also return a tapped creature you control to its owner's hand.)",
+            "type_line": "Legendary Creature — Spider Human Hero",
+            "mana_cost": "{1}{G}{W}{U}",
+            "artist": "Thanh Tuấn",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/3/c/3ce33422-5dba-4a42-8375-dd8ccc692a7b.jpg?1783905367",
+              "normal": "https://cards.scryfall.io/normal/back/3/c/3ce33422-5dba-4a42-8375-dd8ccc692a7b.jpg?1783905367",
+              "large": "https://cards.scryfall.io/large/back/3/c/3ce33422-5dba-4a42-8375-dd8ccc692a7b.jpg?1783905367"
+            }
+          }
+        ],
+        "scryfall_uri": "https://scryfall.com/card/spm/10/peter-parker-amazing-spider-man?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "47875dff-c046-4cb0-b1e3-f926cbe25b59",
+        "name": "Peter Parker's Camera",
+        "set": "spm",
+        "collector_number": "171",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "10777360-c046-43e3-ab44-9d0b926fbbf8",
+        "flavor_text": "\"How does Parker get those close-ups?\"\n—J. Jonah Jameson",
+        "oracle_text": "This artifact enters with three film counters on it.\n{2}, {T}, Remove a film counter from this artifact: Copy target activated or triggered ability you control. You may choose new targets for the copy.",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{1}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Lixin Yin",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/7/47875dff-c046-4cb0-b1e3-f926cbe25b59.jpg?1783905303",
+          "normal": "https://cards.scryfall.io/normal/front/4/7/47875dff-c046-4cb0-b1e3-f926cbe25b59.jpg?1783905303",
+          "large": "https://cards.scryfall.io/large/front/4/7/47875dff-c046-4cb0-b1e3-f926cbe25b59.jpg?1783905303"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/171/peter-parkers-camera?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "5f029c91-f20b-4aa5-a7d9-dd6ddef1c877",
+        "name": "Plains",
+        "set": "msh",
+        "collector_number": "287",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "oracle_text": "({T}: Add {W}.)",
+        "type_line": "Basic Land — Plains",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes",
+        "artist": "Domenico Cava",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/5/f/5f029c91-f20b-4aa5-a7d9-dd6ddef1c877.jpg?1783902876",
+          "normal": "https://cards.scryfall.io/normal/front/5/f/5f029c91-f20b-4aa5-a7d9-dd6ddef1c877.jpg?1783902876",
+          "large": "https://cards.scryfall.io/large/front/5/f/5f029c91-f20b-4aa5-a7d9-dd6ddef1c877.jpg?1783902876"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msh/287/plains?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "4131fa63-5afc-4b63-a4b4-f47b4bced87f",
+        "name": "Pongify",
+        "set": "tdc",
+        "collector_number": "160",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "05849bd6-8f38-4031-be2b-e2aa03beb8cc",
+        "flavor_text": "Some spellcrafting mistakes go on to become spells of their own.",
+        "oracle_text": "Destroy target creature. It can't be regenerated. Its controller creates a 3/3 green Ape creature token.",
+        "type_line": "Instant",
+        "layout": "normal",
+        "mana_cost": "{U}",
+        "released_at": "2025-04-11",
+        "set_name": "Tarkir: Dragonstorm Commander",
+        "artist": "Heather Hudson",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/1/4131fa63-5afc-4b63-a4b4-f47b4bced87f.jpg?1783907100",
+          "normal": "https://cards.scryfall.io/normal/front/4/1/4131fa63-5afc-4b63-a4b4-f47b4bced87f.jpg?1783907100",
+          "large": "https://cards.scryfall.io/large/front/4/1/4131fa63-5afc-4b63-a4b4-f47b4bced87f.jpg?1783907100"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/tdc/160/pongify?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+        "name": "Radioactive Spider",
+        "set": "spm",
+        "collector_number": "111",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [
+          "Reach",
+          "Fateful Bite",
+          "Deathtouch"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f15bd5c0-99ff-42c6-8eed-48de6df81b61",
+        "flavor_text": "\"Ow! A spider! It bit me! But why is it glowing that way?\"\n—Peter Parker",
+        "oracle_text": "Reach, deathtouch\nFateful Bite — {2}, Sacrifice this creature: Search your library for a Spider Hero card, reveal it, put it into your hand, then shuffle. Activate only as a sorcery.",
+        "type_line": "Creature — Spider",
+        "layout": "normal",
+        "mana_cost": "{G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Pavel Kolomeyets",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/2/f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc.jpg?1783905323",
+          "normal": "https://cards.scryfall.io/normal/front/f/2/f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc.jpg?1783905323",
+          "large": "https://cards.scryfall.io/large/front/f/2/f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc.jpg?1783905323"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/111/radioactive-spider?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "ce9347e8-962f-4fc1-808f-b59ac751de13",
+        "name": "Raise the Palisade",
+        "set": "msc",
+        "collector_number": "278",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f55a3781-fe33-4301-9bb5-6a54b9c13c4f",
+        "flavor_text": "\"Did you not see the big 'No Soliciting' sign out front?\"\n—Iron Man, Tony Stark",
+        "oracle_text": "Choose a creature type. Return all creatures that aren't of the chosen type to their owners' hands.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{4}{U}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Arthur Yuan",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/c/e/ce9347e8-962f-4fc1-808f-b59ac751de13.jpg?1783903190",
+          "normal": "https://cards.scryfall.io/normal/front/c/e/ce9347e8-962f-4fc1-808f-b59ac751de13.jpg?1783903190",
+          "large": "https://cards.scryfall.io/large/front/c/e/ce9347e8-962f-4fc1-808f-b59ac751de13.jpg?1783903190"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/278/raise-the-palisade?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "52733829-27b7-40ec-a897-cabab35b3729",
+        "name": "Realmwalker",
+        "set": "ecc",
+        "collector_number": "114",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [
+          "Changeling"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "b81eaa2f-0554-41c6-bdf6-d1cb73b8f56f",
+        "oracle_text": "Changeling (This card is every creature type.)\nAs this creature enters, choose a creature type.\nYou may look at the top card of your library any time.\nYou may cast creature spells of the chosen type from the top of your library.",
+        "type_line": "Creature — Shapeshifter",
+        "layout": "normal",
+        "mana_cost": "{2}{G}",
+        "released_at": "2026-01-23",
+        "set_name": "Lorwyn Eclipsed Commander",
+        "artist": "Zack Stella",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/5/2/52733829-27b7-40ec-a897-cabab35b3729.jpg?1783904541",
+          "normal": "https://cards.scryfall.io/normal/front/5/2/52733829-27b7-40ec-a897-cabab35b3729.jpg?1783904541",
+          "large": "https://cards.scryfall.io/large/front/5/2/52733829-27b7-40ec-a897-cabab35b3729.jpg?1783904541"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/ecc/114/realmwalker?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "b3f8d221-081f-49f5-a501-07e5eb21a840",
+        "name": "Rent Is Due",
+        "set": "spm",
+        "collector_number": "11",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "3fe1530d-bcf2-440b-a905-5a2216daa7eb",
+        "flavor_text": "\"You're a month late again, Parker! Give me my money or you're out on the street!\"",
+        "oracle_text": "At the beginning of your end step, you may tap two untapped creatures and/or Treasures you control. If you do, draw a card. Otherwise, sacrifice this enchantment.",
+        "type_line": "Enchantment",
+        "layout": "normal",
+        "mana_cost": "{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Gal Or",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/b/3/b3f8d221-081f-49f5-a501-07e5eb21a840.jpg?1783905362",
+          "normal": "https://cards.scryfall.io/normal/front/b/3/b3f8d221-081f-49f5-a501-07e5eb21a840.jpg?1783905362",
+          "large": "https://cards.scryfall.io/large/front/b/3/b3f8d221-081f-49f5-a501-07e5eb21a840.jpg?1783905362"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/11/rent-is-due?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "38120361-153f-414e-8a45-f86bb2e35a17",
+        "name": "Romantic Rendezvous",
+        "set": "spm",
+        "collector_number": "86",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "8ca585b5-25c4-41cc-a0b9-dc66ae803d04",
+        "flavor_text": "\"Face it, tiger. You just hit the jackpot!\"\n—Mary Jane Watson",
+        "oracle_text": "Discard a card, then draw two cards.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{1}{R}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Nereida",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/3/8/38120361-153f-414e-8a45-f86bb2e35a17.jpg?1783905333",
+          "normal": "https://cards.scryfall.io/normal/front/3/8/38120361-153f-414e-8a45-f86bb2e35a17.jpg?1783905333",
+          "large": "https://cards.scryfall.io/large/front/3/8/38120361-153f-414e-8a45-f86bb2e35a17.jpg?1783905333"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/86/romantic-rendezvous?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "e7482def-e87e-4a7f-9c18-7859483b2a66",
+        "name": "Sandsteppe Citadel",
+        "set": "ecc",
+        "collector_number": "164",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "B",
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "544dbabd-cbfc-40da-a5ba-2fea9cddb453",
+        "flavor_text": "\"The most important part of a stronghold isn't its armaments or its walls. It's the reason people have to defend it.\"\n—Gvar Barzeel, krumar captain",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W}, {B}, or {G}.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-01-23",
+        "set_name": "Lorwyn Eclipsed Commander",
+        "artist": "Diego Gisbert",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/e/7/e7482def-e87e-4a7f-9c18-7859483b2a66.jpg?1783904520",
+          "normal": "https://cards.scryfall.io/normal/front/e/7/e7482def-e87e-4a7f-9c18-7859483b2a66.jpg?1783904520",
+          "large": "https://cards.scryfall.io/large/front/e/7/e7482def-e87e-4a7f-9c18-7859483b2a66.jpg?1783904520"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/ecc/164/sandsteppe-citadel?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "855f59a5-17a8-4aca-8a4d-f98111eba14c",
+        "name": "Savage Mansion",
+        "set": "spm",
+        "collector_number": "183",
+        "lang": "en",
+        "color_identity": [
+          "R",
+          "G"
+        ],
+        "keywords": [
+          "Surveil"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "1af15c1d-a41c-44cc-9614-d72694dd26e8",
+        "flavor_text": "Exotic trophies from victorious hunts adorn the walls of the Kravinoff estate.",
+        "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.\n{4}, {T}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "David Álvarez",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/8/5/855f59a5-17a8-4aca-8a4d-f98111eba14c.jpg?1783905298",
+          "normal": "https://cards.scryfall.io/normal/front/8/5/855f59a5-17a8-4aca-8a4d-f98111eba14c.jpg?1783905298",
+          "large": "https://cards.scryfall.io/large/front/8/5/855f59a5-17a8-4aca-8a4d-f98111eba14c.jpg?1783905298"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/183/savage-mansion?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+        "name": "Scarlet Spider, Ben Reilly",
+        "set": "spm",
+        "collector_number": "142",
+        "lang": "en",
+        "color_identity": [
+          "R",
+          "G"
+        ],
+        "keywords": [
+          "Trample",
+          "Web-slinging",
+          "Sensational Save"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "13ab2f3f-f65e-42b5-b743-39b30a4c4751",
+        "oracle_text": "Web-slinging {R}{G} (You may cast this spell for {R}{G} if you also return a tapped creature you control to its owner's hand.)\nTrample\nSensational Save — If Scarlet Spider was cast using web-slinging, he enters with X +1/+1 counters on him, where X is the mana value of the returned creature.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{1}{R}{G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Javier Charro",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/e/e/ee771581-f867-48d7-9ddb-897a1ffcdf0a.jpg?1783905313",
+          "normal": "https://cards.scryfall.io/normal/front/e/e/ee771581-f867-48d7-9ddb-897a1ffcdf0a.jpg?1783905313",
+          "large": "https://cards.scryfall.io/large/front/e/e/ee771581-f867-48d7-9ddb-897a1ffcdf0a.jpg?1783905313"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/142/scarlet-spider-ben-reilly?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+        "name": "Shelob, Child of Ungoliant",
+        "set": "ltr",
+        "collector_number": "230",
+        "lang": "en",
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "keywords": [
+          "Food",
+          "Ward",
+          "Deathtouch"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "8372115d-c963-4a41-8759-72f7f6a8935a",
+        "oracle_text": "Deathtouch, ward {2}\nOther Spiders you control have deathtouch and ward {2}.\nWhenever another creature dealt damage this turn by a Spider you controlled dies, create a token that's a copy of that creature, except it's a Food artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life,\" and it loses all other card types.",
+        "type_line": "Legendary Creature — Spider Demon",
+        "layout": "normal",
+        "mana_cost": "{4}{B}{G}",
+        "released_at": "2023-06-23",
+        "set_name": "The Lord of the Rings: Tales of Middle-earth",
+        "artist": "Lorenzo Mastroianni",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/1/a14c4b29-3363-45ce-9190-0f79e1a0ef7f.jpg?1783916243",
+          "normal": "https://cards.scryfall.io/normal/front/a/1/a14c4b29-3363-45ce-9190-0f79e1a0ef7f.jpg?1783916243",
+          "large": "https://cards.scryfall.io/large/front/a/1/a14c4b29-3363-45ce-9190-0f79e1a0ef7f.jpg?1783916243"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/ltr/230/shelob-child-of-ungoliant?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1",
+        "name": "Silk, Web Weaver",
+        "set": "spm",
+        "collector_number": "145",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "G"
+        ],
+        "keywords": [
+          "Web-slinging"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "50477dc8-9a2a-41eb-984d-c9e1e78e08a2",
+        "oracle_text": "Web-slinging {1}{G}{W} (You may cast this spell for {1}{G}{W} if you also return a tapped creature you control to its owner's hand.)\nWhenever you cast a creature spell, create a 1/1 green and white Human Citizen creature token.\n{3}{G}{W}: Creatures you control get +2/+2 and gain vigilance until end of turn.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{2}{G}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Carissa Susilo",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/5/8/588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1.jpg?1783905311",
+          "normal": "https://cards.scryfall.io/normal/front/5/8/588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1.jpg?1783905311",
+          "large": "https://cards.scryfall.io/large/front/5/8/588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1.jpg?1783905311"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/145/silk-web-weaver?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "23190d7e-5165-49bd-b307-bf81877d228d",
+        "name": "Sinister Hideout",
+        "set": "spm",
+        "collector_number": "184",
+        "lang": "en",
+        "color_identity": [
+          "U",
+          "B"
+        ],
+        "keywords": [
+          "Surveil"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "80f08b47-a237-4efd-8d86-dfe35a816b0e",
+        "flavor_text": "Under the sea it stands the hidden headquarters of the Master Planner and his band of strangely-garbed criminals.",
+        "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.\n{4}, {T}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Pavel Kolomeyets",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/3/23190d7e-5165-49bd-b307-bf81877d228d.jpg?1783905298",
+          "normal": "https://cards.scryfall.io/normal/front/2/3/23190d7e-5165-49bd-b307-bf81877d228d.jpg?1783905298",
+          "large": "https://cards.scryfall.io/large/front/2/3/23190d7e-5165-49bd-b307-bf81877d228d.jpg?1783905298"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/184/sinister-hideout?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "5bef0790-aa1b-4144-8391-338e59e86115",
+        "name": "Sol Ring",
+        "set": "msc",
+        "collector_number": "212",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "flavor_text": "\"Sometimes a hero has to let everyone know that he's there for them. Sometimes he has to say it with fire in the sky.\"\n—Human Torch, Johnny Storm",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "type_line": "Artifact",
+        "layout": "normal",
+        "mana_cost": "{1}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Pace Wilder",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/5/b/5bef0790-aa1b-4144-8391-338e59e86115.jpg?1783903214",
+          "normal": "https://cards.scryfall.io/normal/front/5/b/5bef0790-aa1b-4144-8391-338e59e86115.jpg?1783903214",
+          "large": "https://cards.scryfall.io/large/front/5/b/5bef0790-aa1b-4144-8391-338e59e86115.jpg?1783903214"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/212/sol-ring?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "c47c1d83-e76d-4939-9ed6-05a9e709dea1",
+        "name": "SP//dr, Piloted by Peni",
+        "set": "spm",
+        "collector_number": "147",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U"
+        ],
+        "keywords": [
+          "Vigilance"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "722ab6e4-a2e0-4aaa-a050-7b6436e22b40",
+        "oracle_text": "Vigilance\nWhen SP//dr enters, put a +1/+1 counter on target creature.\nWhenever a modified creature you control deals combat damage to a player, draw a card. (Equipment, Auras you control, and counters are modifications.)",
+        "type_line": "Legendary Artifact Creature — Spider Hero",
+        "layout": "normal",
+        "mana_cost": "{3}{W}{U}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Toni Infante",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/c/4/c47c1d83-e76d-4939-9ed6-05a9e709dea1.jpg?1783905311",
+          "normal": "https://cards.scryfall.io/normal/front/c/4/c47c1d83-e76d-4939-9ed6-05a9e709dea1.jpg?1783905311",
+          "large": "https://cards.scryfall.io/large/front/c/4/c47c1d83-e76d-4939-9ed6-05a9e709dea1.jpg?1783905311"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/147/spdr-piloted-by-peni?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "818a5c98-8740-43b1-a42a-6d2382138df8",
+        "name": "Spectacular Spider-Man",
+        "set": "lmar",
+        "collector_number": "2",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [
+          "Flash"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "eed5e0cc-8f88-4779-bf10-6a823c72df7f",
+        "oracle_text": "Flash\n{1}: Spectacular Spider-Man gains flying until end of turn.\n{1}, Sacrifice Spectacular Spider-Man: Creatures you control gain hexproof and indestructible until end of turn.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{1}{W}",
+        "released_at": "2025-09-30",
+        "set_name": "Marvel Legends Series Inserts",
+        "artist": "Alex Horley-Orlandelli",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/8/1/818a5c98-8740-43b1-a42a-6d2382138df8.jpg?1783905185",
+          "normal": "https://cards.scryfall.io/normal/front/8/1/818a5c98-8740-43b1-a42a-6d2382138df8.jpg?1783905185",
+          "large": "https://cards.scryfall.io/large/front/8/1/818a5c98-8740-43b1-a42a-6d2382138df8.jpg?1783905185"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/lmar/2/spectacular-spider-man?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "032cc89a-9824-437d-b7fb-02a7901a8299",
+        "name": "Spectacular Tactics",
+        "set": "msc",
+        "collector_number": "775",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "15948fdf-3f9e-4eed-b85b-c5a554ff0571",
+        "flavor_text": "\"Not bad, kid, but you've got a lot to learn.\"\n—Spider-Woman, Jessica Drew",
+        "oracle_text": "Choose one —\n• Put a +1/+1 counter on target creature you control. It gains hexproof until end of turn.\n• Destroy target creature with power 4 or greater.",
+        "type_line": "Instant",
+        "layout": "normal",
+        "mana_cost": "{1}{W}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Zoltan Boros",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/0/3/032cc89a-9824-437d-b7fb-02a7901a8299.jpg?1783903020",
+          "normal": "https://cards.scryfall.io/normal/front/0/3/032cc89a-9824-437d-b7fb-02a7901a8299.jpg?1783903020",
+          "large": "https://cards.scryfall.io/large/front/0/3/032cc89a-9824-437d-b7fb-02a7901a8299.jpg?1783903020"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/775/spectacular-tactics?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "99223677-b8a5-48f1-8009-e8475eada7db",
+        "name": "Spider Manifestation",
+        "set": "spm",
+        "collector_number": "148",
+        "lang": "en",
+        "color_identity": [
+          "R",
+          "G"
+        ],
+        "keywords": [
+          "Reach"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "8281f2b9-e81b-48da-812a-8713b2adf8ab",
+        "flavor_text": "Some spiders feed on *other* spiders.",
+        "oracle_text": "Reach\n{T}: Add {R} or {G}.\nWhenever you cast a spell with mana value 4 or greater, untap this creature.",
+        "type_line": "Creature — Spider Avatar",
+        "layout": "normal",
+        "mana_cost": "{1}{R/G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Helge C. Balzer",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/9/9/99223677-b8a5-48f1-8009-e8475eada7db.jpg?1783905310",
+          "normal": "https://cards.scryfall.io/normal/front/9/9/99223677-b8a5-48f1-8009-e8475eada7db.jpg?1783905310",
+          "large": "https://cards.scryfall.io/large/front/9/9/99223677-b8a5-48f1-8009-e8475eada7db.jpg?1783905310"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/148/spider-manifestation?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "24df824a-c1d6-4f09-b866-313b31fec5fb",
+        "name": "Spider-Bot",
+        "set": "spm",
+        "collector_number": "173",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [
+          "Reach"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "e4bb33b2-adde-4176-9274-7598b559aa6a",
+        "flavor_text": "\"Parker was a fool to waste his time on patrol. I'll have my spider-bots do it for me.\"\n—Superior Spider-Man, Otto Octavius",
+        "oracle_text": "Reach\nWhen this creature enters, you may search your library for a basic land card, reveal it, then shuffle and put that card on top.",
+        "type_line": "Artifact Creature — Spider Robot Scout",
+        "layout": "normal",
+        "mana_cost": "{2}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Carlos Dattoli",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/4/24df824a-c1d6-4f09-b866-313b31fec5fb.jpg?1783905301",
+          "normal": "https://cards.scryfall.io/normal/front/2/4/24df824a-c1d6-4f09-b866-313b31fec5fb.jpg?1783905301",
+          "large": "https://cards.scryfall.io/large/front/2/4/24df824a-c1d6-4f09-b866-313b31fec5fb.jpg?1783905301"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/173/spider-bot?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "3a9a0ec2-6f57-4218-a307-6e8d785a1693",
+        "name": "Spider-Gwen, Free Spirit",
+        "set": "msc",
+        "collector_number": "874",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [
+          "Reach"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "2648559d-1d96-47d2-a769-cfa2cbca2be5",
+        "flavor_text": "At the edge of the Spider-Verse, a Gwen Stacy becomes a hero.",
+        "oracle_text": "Reach\nWhenever Spider-Gwen becomes tapped, you may discard a card. If you do, draw a card.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{2}{R}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Lie Setiawan",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/3/a/3a9a0ec2-6f57-4218-a307-6e8d785a1693.jpg?1783902983",
+          "normal": "https://cards.scryfall.io/normal/front/3/a/3a9a0ec2-6f57-4218-a307-6e8d785a1693.jpg?1783902983",
+          "large": "https://cards.scryfall.io/large/front/3/a/3a9a0ec2-6f57-4218-a307-6e8d785a1693.jpg?1783902983"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/874/spider-gwen-free-spirit?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+        "name": "Spider-Man 2099",
+        "set": "spm",
+        "collector_number": "150",
+        "lang": "en",
+        "color_identity": [
+          "U",
+          "R"
+        ],
+        "keywords": [
+          "Vigilance",
+          "From the Future",
+          "Double strike"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "19845456-3d96-48a4-89fa-9b8e583774c9",
+        "oracle_text": "From the Future — You can't cast Spider-Man 2099 during your first, second, or third turns of the game.\nDouble strike, vigilance\nAt the beginning of your end step, if you've played a land or cast a spell this turn from anywhere other than your hand, Spider-Man 2099 deals damage equal to his power to any target.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{U}{R}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Toni Infante",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/a/2a72c7e7-34f5-4cb0-9959-35516e398e49.jpg?1791803585",
+          "normal": "https://cards.scryfall.io/normal/front/2/a/2a72c7e7-34f5-4cb0-9959-35516e398e49.jpg?1791803585",
+          "large": "https://cards.scryfall.io/large/front/2/a/2a72c7e7-34f5-4cb0-9959-35516e398e49.jpg?1791803585"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/150/spider-man-2099?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "65b8af30-559b-43a9-8526-62c28c378339",
+        "name": "Spider-Man India",
+        "set": "spm",
+        "collector_number": "151",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "G"
+        ],
+        "keywords": [
+          "Web-slinging",
+          "Pavitr's Sevā"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "8933297c-62f1-4df9-91b8-2d3481db77e5",
+        "flavor_text": "\"That's why I do what I do. For my people.\"",
+        "oracle_text": "Web-slinging {1}{G}{W} (You may cast this spell for {1}{G}{W} if you also return a tapped creature you control to its owner's hand.)\nPavitr's Sevā — Whenever you cast a creature spell, put a +1/+1 counter on target creature you control. It gains flying until end of turn.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{3}{G}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Lie Setiawan",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/6/5/65b8af30-559b-43a9-8526-62c28c378339.jpg?1783905310",
+          "normal": "https://cards.scryfall.io/normal/front/6/5/65b8af30-559b-43a9-8526-62c28c378339.jpg?1783905310",
+          "large": "https://cards.scryfall.io/large/front/6/5/65b8af30-559b-43a9-8526-62c28c378339.jpg?1783905310"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/151/spider-man-india?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "bc64366c-2691-48cd-bb4b-a4b088c6f16b",
+        "name": "Spider-Man Noir",
+        "set": "spm",
+        "collector_number": "67",
+        "lang": "en",
+        "color_identity": [
+          "B"
+        ],
+        "keywords": [
+          "Surveil",
+          "Menace"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "2efd6494-c5e1-41de-bc6e-8490ff046cd1",
+        "oracle_text": "Menace\nWhenever a creature you control attacks alone, put a +1/+1 counter on it. Then surveil X, where X is the number of counters on it. (Look at the top X cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{4}{B}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Xabi Gaztelua",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/b/c/bc64366c-2691-48cd-bb4b-a4b088c6f16b.jpg?1783905339",
+          "normal": "https://cards.scryfall.io/normal/front/b/c/bc64366c-2691-48cd-bb4b-a4b088c6f16b.jpg?1783905339",
+          "large": "https://cards.scryfall.io/large/front/b/c/bc64366c-2691-48cd-bb4b-a4b088c6f16b.jpg?1783905339"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/67/spider-man-noir?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "e19929bc-cbe1-4970-952d-8e9d0193ddce",
+        "name": "Spider-Man, Brooklyn Visionary",
+        "set": "spm",
+        "collector_number": "115",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [
+          "Web-slinging"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "2ca85872-9436-4515-af50-c13e59605627",
+        "flavor_text": "\"Nothing like a little crimefighting after class.\"",
+        "oracle_text": "Web-slinging {2}{G} (You may cast this spell for {2}{G} if you also return a tapped creature you control to its owner's hand.)\nWhen Spider-Man enters, search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{4}{G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Aniekan Udofia",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/e/1/e19929bc-cbe1-4970-952d-8e9d0193ddce.jpg?1783905323",
+          "normal": "https://cards.scryfall.io/normal/front/e/1/e19929bc-cbe1-4970-952d-8e9d0193ddce.jpg?1783905323",
+          "large": "https://cards.scryfall.io/large/front/e/1/e19929bc-cbe1-4970-952d-8e9d0193ddce.jpg?1783905323"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/115/spider-man-brooklyn-visionary?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "897418bc-df8c-4c97-b6bf-7c9133a8a577",
+        "name": "Spider-Man, Web-Slinger",
+        "set": "spm",
+        "collector_number": "16",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [
+          "Web-slinging"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "505231d8-714f-4c5b-a635-d1662bd18a78",
+        "flavor_text": "\"Nothing like a little crimefighting before class.\"",
+        "oracle_text": "Web-slinging {W} (You may cast this spell for {W} if you also return a tapped creature you control to its owner's hand.)",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{2}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Ryan Pancoast",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/8/9/897418bc-df8c-4c97-b6bf-7c9133a8a577.jpg?1783905360",
+          "normal": "https://cards.scryfall.io/normal/front/8/9/897418bc-df8c-4c97-b6bf-7c9133a8a577.jpg?1783905360",
+          "large": "https://cards.scryfall.io/large/front/8/9/897418bc-df8c-4c97-b6bf-7c9133a8a577.jpg?1783905360"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/16/spider-man-web-slinger?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "0bd41879-fcd4-4211-9b98-47e7cdba5399",
+        "name": "Spider-Punk",
+        "set": "spm",
+        "collector_number": "92",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [
+          "Riot"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "03bf7a90-78c1-4e83-8553-e22d85e49876",
+        "flavor_text": "\"Disrespect authority. Smash the system.\"",
+        "oracle_text": "Riot (This creature enters with your choice of a +1/+1 counter or haste.)\nOther Spiders you control have riot.\nSpells and abilities can't be countered.\nDamage can't be prevented.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{1}{R}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Forrest Imel",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/0/b/0bd41879-fcd4-4211-9b98-47e7cdba5399.jpg?1783905333",
+          "normal": "https://cards.scryfall.io/normal/front/0/b/0bd41879-fcd4-4211-9b98-47e7cdba5399.jpg?1783905333",
+          "large": "https://cards.scryfall.io/large/front/0/b/0bd41879-fcd4-4211-9b98-47e7cdba5399.jpg?1783905333"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/92/spider-punk?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "4499a25b-f4a5-4f2c-9ebd-bc68c7840b39",
+        "name": "Spider-Sense",
+        "set": "spm",
+        "collector_number": "46",
+        "lang": "en",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [
+          "Web-slinging"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "c4485bf9-e7ff-48b5-a983-02900939ee9d",
+        "flavor_text": "\"My spider-sense—it's tingling! Something behind me!\"",
+        "oracle_text": "Web-slinging {U} (You may cast this spell for {U} if you also return a tapped creature you control to its owner's hand.)\nCounter target instant spell, sorcery spell, or triggered ability.",
+        "type_line": "Instant",
+        "layout": "normal",
+        "mana_cost": "{1}{U}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Borja Pindado",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/4/4499a25b-f4a5-4f2c-9ebd-bc68c7840b39.jpg?1783905348",
+          "normal": "https://cards.scryfall.io/normal/front/4/4/4499a25b-f4a5-4f2c-9ebd-bc68c7840b39.jpg?1783905348",
+          "large": "https://cards.scryfall.io/large/front/4/4/4499a25b-f4a5-4f2c-9ebd-bc68c7840b39.jpg?1783905348"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/46/spider-sense?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "436527ec-5af4-4b6d-a5a0-d21fc466a625",
+        "name": "Spider-Suit",
+        "set": "spm",
+        "collector_number": "176",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [
+          "Equip"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "ba08b4cf-9a13-40fd-8522-9504d2ff1a19",
+        "flavor_text": "Nothing beats the classic look.",
+        "oracle_text": "Equipped creature gets +2/+2 and is a Spider Hero in addition to its other types.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",
+        "type_line": "Artifact — Equipment",
+        "layout": "normal",
+        "mana_cost": "{1}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Alex Horley-Orlandelli",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/3/436527ec-5af4-4b6d-a5a0-d21fc466a625.jpg?1783905301",
+          "normal": "https://cards.scryfall.io/normal/front/4/3/436527ec-5af4-4b6d-a5a0-d21fc466a625.jpg?1783905301",
+          "large": "https://cards.scryfall.io/large/front/4/3/436527ec-5af4-4b6d-a5a0-d21fc466a625.jpg?1783905301"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/176/spider-suit?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "6beb4548-1fab-4b9e-bf24-f7b9aadecc87",
+        "name": "Spider-UK",
+        "set": "spm",
+        "collector_number": "17",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [
+          "Web-slinging"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "ebf8d006-2997-431b-b4cb-9692741b45ca",
+        "flavor_text": "\"Spiders across the Multiverse are dying. I must keep them safe.\"",
+        "oracle_text": "Web-slinging {2}{W} (You may cast this spell for {2}{W} if you also return a tapped creature you control to its owner's hand.)\nAt the beginning of your end step, if two or more creatures entered the battlefield under your control this turn, you draw a card and gain 2 life.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{3}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Allen Morris",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/6/b/6beb4548-1fab-4b9e-bf24-f7b9aadecc87.jpg?1783905359",
+          "normal": "https://cards.scryfall.io/normal/front/6/b/6beb4548-1fab-4b9e-bf24-f7b9aadecc87.jpg?1783905359",
+          "large": "https://cards.scryfall.io/large/front/6/b/6beb4548-1fab-4b9e-bf24-f7b9aadecc87.jpg?1783905359"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/17/spider-uk?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "f8779eb2-1210-430d-8d42-3077053441ee",
+        "name": "Spider-Verse",
+        "set": "spm",
+        "collector_number": "93",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "7ef7d902-1f05-40b3-8997-dec197b0b678",
+        "flavor_text": "Every Spider ever...and then some!",
+        "oracle_text": "The \"legend rule\" doesn't apply to Spiders you control.\nWhenever you cast a spell from anywhere other than your hand, you may copy it. If you do, you may choose new targets for the copy. If the copy is a permanent spell, it gains haste. Do this only once each turn.",
+        "type_line": "Enchantment",
+        "layout": "normal",
+        "mana_cost": "{3}{R}{R}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Alexander Gering",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/f/8/f8779eb2-1210-430d-8d42-3077053441ee.jpg?1783905331",
+          "normal": "https://cards.scryfall.io/normal/front/f/8/f8779eb2-1210-430d-8d42-3077053441ee.jpg?1783905331",
+          "large": "https://cards.scryfall.io/large/front/f/8/f8779eb2-1210-430d-8d42-3077053441ee.jpg?1783905331"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/93/spider-verse?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "bc9b2a76-3cce-4fd0-a4ef-932747cb11b2",
+        "name": "Spider-Woman, Stunning Savior",
+        "set": "spm",
+        "collector_number": "152",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U"
+        ],
+        "keywords": [
+          "Flying",
+          "Venom Blast"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "be2b9c6d-4ecb-49ec-b276-4aa93c5dfc00",
+        "flavor_text": "To know her is to fear her.",
+        "oracle_text": "Flying\nVenom Blast — Artifacts and creatures your opponents control enter tapped.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{1}{W/U}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Justyna Dura",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/b/c/bc9b2a76-3cce-4fd0-a4ef-932747cb11b2.jpg?1783905310",
+          "normal": "https://cards.scryfall.io/normal/front/b/c/bc9b2a76-3cce-4fd0-a4ef-932747cb11b2.jpg?1783905310",
+          "large": "https://cards.scryfall.io/large/front/b/c/bc9b2a76-3cce-4fd0-a4ef-932747cb11b2.jpg?1783905310"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/152/spider-woman-stunning-savior?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "a27834b7-e763-48ac-845e-ed49f2fa6c6d",
+        "name": "Spinneret and Spiderling",
+        "set": "spm",
+        "collector_number": "94",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "daca1d5e-349d-4e8a-abc7-427dab43fb0c",
+        "oracle_text": "Whenever you attack with two or more Spiders, put a +1/+1 counter on Spinneret and Spiderling.\nWhenever Spinneret and Spiderling deals 4 or more damage, exile the top card of your library. Until the end of your next turn, you may play that card.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{R}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Le Vuong",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/2/a27834b7-e763-48ac-845e-ed49f2fa6c6d.jpg?1783905332",
+          "normal": "https://cards.scryfall.io/normal/front/a/2/a27834b7-e763-48ac-845e-ed49f2fa6c6d.jpg?1783905332",
+          "large": "https://cards.scryfall.io/large/front/a/2/a27834b7-e763-48ac-845e-ed49f2fa6c6d.jpg?1783905332"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/94/spinneret-and-spiderling?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "467df77a-a99c-4cfd-9af4-502eaa2eb2e3",
+        "name": "Suburban Sanctuary",
+        "set": "spm",
+        "collector_number": "185",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "G"
+        ],
+        "keywords": [
+          "Surveil"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "6ef30340-a26d-49aa-bc86-0b8aa5252f87",
+        "flavor_text": "\"You are always welcome here, Peter.\"\n—Aunt May",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.\n{4}, {T}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "David Frasheski",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/4/6/467df77a-a99c-4cfd-9af4-502eaa2eb2e3.jpg?1783905297",
+          "normal": "https://cards.scryfall.io/normal/front/4/6/467df77a-a99c-4cfd-9af4-502eaa2eb2e3.jpg?1783905297",
+          "large": "https://cards.scryfall.io/large/front/4/6/467df77a-a99c-4cfd-9af4-502eaa2eb2e3.jpg?1783905297"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/185/suburban-sanctuary?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "2b54d4a5-634f-4ae3-b592-0dc527f60d56",
+        "name": "Sun-Spider, Nimble Webber",
+        "set": "spm",
+        "collector_number": "154",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "2d961997-4f5f-4ce2-b062-11411147e2f7",
+        "flavor_text": "Breaking expectations and enjoying it.",
+        "oracle_text": "During your turn, Sun-Spider has flying.\nWhen Sun-Spider enters, search your library for an Aura or Equipment card, reveal it, put it into your hand, then shuffle.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{3}{W/U}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Justyna Dura",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/b/2b54d4a5-634f-4ae3-b592-0dc527f60d56.jpg?1783905310",
+          "normal": "https://cards.scryfall.io/normal/front/2/b/2b54d4a5-634f-4ae3-b592-0dc527f60d56.jpg?1783905310",
+          "large": "https://cards.scryfall.io/large/front/2/b/2b54d4a5-634f-4ae3-b592-0dc527f60d56.jpg?1783905310"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/154/sun-spider-nimble-webber?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "ad4adc3e-ec41-4406-8ff2-59ba8067cf4e",
+        "name": "Superior Spider-Man",
+        "set": "spm",
+        "collector_number": "155",
+        "lang": "en",
+        "color_identity": [
+          "U",
+          "B"
+        ],
+        "keywords": [
+          "Mind Swap"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "636cc915-9d1b-4ffe-9e74-795b78663911",
+        "flavor_text": "\"I will be Spider-Man. With my unparalleled genius, I shall become the *Superior* Spider-Man.\"\n—Otto Octavius",
+        "oracle_text": "Mind Swap — You may have Superior Spider-Man enter as a copy of any creature card in a graveyard, except his name is Superior Spider-Man and he's a 4/4 Spider Human Hero in addition to his other types. When you do, exile that card.",
+        "type_line": "Legendary Creature — Spider Human Hero",
+        "layout": "normal",
+        "mana_cost": "{2}{U}{B}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Carlos Dattoli",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/d/ad4adc3e-ec41-4406-8ff2-59ba8067cf4e.jpg?1783905308",
+          "normal": "https://cards.scryfall.io/normal/front/a/d/ad4adc3e-ec41-4406-8ff2-59ba8067cf4e.jpg?1783905308",
+          "large": "https://cards.scryfall.io/large/front/a/d/ad4adc3e-ec41-4406-8ff2-59ba8067cf4e.jpg?1783905308"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/155/superior-spider-man?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "74414c62-4b68-4e1b-9241-feff3231b9ee",
+        "name": "Swamp",
+        "set": "msh",
+        "collector_number": "291",
+        "lang": "en",
+        "color_identity": [
+          "B"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "oracle_text": "({T}: Add {B}.)",
+        "type_line": "Basic Land — Swamp",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes",
+        "artist": "Eugene Maslovski",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/7/4/74414c62-4b68-4e1b-9241-feff3231b9ee.jpg?1783902875",
+          "normal": "https://cards.scryfall.io/normal/front/7/4/74414c62-4b68-4e1b-9241-feff3231b9ee.jpg?1783902875",
+          "large": "https://cards.scryfall.io/large/front/7/4/74414c62-4b68-4e1b-9241-feff3231b9ee.jpg?1783902875"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msh/291/swamp?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "a70cb6d9-3955-4064-917b-11dec26440c5",
+        "name": "The World Tree",
+        "set": "khm",
+        "collector_number": "275",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "U",
+          "B",
+          "R",
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "3437d504-bf62-4c27-b15f-f6330182ff7e",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nAs long as you control six or more lands, lands you control have \"{T}: Add one mana of any color.\"\n{W}{W}{U}{U}{B}{B}{R}{R}{G}{G}, {T}, Sacrifice this land: Search your library for any number of God cards, put them onto the battlefield, then shuffle.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2021-02-05",
+        "set_name": "Kaldheim",
+        "artist": "Anastasia Ovchinnikova",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/7/a70cb6d9-3955-4064-917b-11dec26440c5.jpg?1783928169",
+          "normal": "https://cards.scryfall.io/normal/front/a/7/a70cb6d9-3955-4064-917b-11dec26440c5.jpg?1783928169",
+          "large": "https://cards.scryfall.io/large/front/a/7/a70cb6d9-3955-4064-917b-11dec26440c5.jpg?1783928169"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/khm/275/the-world-tree?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "2e2b27e0-aaa7-426e-8c0b-283cb9f969eb",
+        "name": "Thwip!",
+        "set": "msc",
+        "collector_number": "780",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f7d11254-b48a-4016-a035-c0d6642fdfae",
+        "flavor_text": "\"Yes! This is what being Spider-Man is all about! Swinging through the sky—a New York sky—patrolling the city. Every moment a chance to make a difference. To fight the good fight.\"",
+        "oracle_text": "Target creature gets +2/+2 and gains flying until end of turn. If it's a Spider, you gain 2 life.",
+        "type_line": "Instant",
+        "layout": "normal",
+        "mana_cost": "{W}",
+        "released_at": "2026-06-26",
+        "set_name": "Marvel Super Heroes Commander",
+        "artist": "Lordigan",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/2/e/2e2b27e0-aaa7-426e-8c0b-283cb9f969eb.jpg?1783903018",
+          "normal": "https://cards.scryfall.io/normal/front/2/e/2e2b27e0-aaa7-426e-8c0b-283cb9f969eb.jpg?1783903018",
+          "large": "https://cards.scryfall.io/large/front/2/e/2e2b27e0-aaa7-426e-8c0b-283cb9f969eb.jpg?1783903018"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/msc/780/thwip!?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2",
+        "name": "Vibrant Cityscape",
+        "set": "tmc",
+        "collector_number": "82",
+        "lang": "en",
+        "color_identity": [],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "6a7f3e1f-6798-4644-b64c-7765f81f0938",
+        "flavor_text": "\"Where do you want to go? Jungle level? Ice level? Lava level? They have all the classics!\"\n—Donatello",
+        "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+        "type_line": "Land",
+        "layout": "normal",
+        "mana_cost": "",
+        "released_at": "2026-03-06",
+        "set_name": "Teenage Mutant Ninja Turtles Eternal",
+        "artist": "Matteo Bassini",
+        "rarity": "common",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/b/5/b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2.jpg?1783904145",
+          "normal": "https://cards.scryfall.io/normal/front/b/5/b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2.jpg?1783904145",
+          "large": "https://cards.scryfall.io/large/front/b/5/b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2.jpg?1783904145"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/tmc/82/vibrant-cityscape?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b",
+        "name": "Web of Life and Destiny",
+        "set": "spm",
+        "collector_number": "122",
+        "lang": "en",
+        "color_identity": [
+          "G"
+        ],
+        "keywords": [
+          "Convoke"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "33d556c5-1bb4-49bb-88c2-627311eb8c9b",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nAt the beginning of combat on your turn, look at the top five cards of your library. You may put a creature card from among them onto the battlefield. Put the rest on the bottom of your library in a random order.",
+        "type_line": "Enchantment",
+        "layout": "normal",
+        "mana_cost": "{6}{G}{G}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Jonas De Ro",
+        "rarity": "mythic",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/3/b/3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b.jpg?1783905321",
+          "normal": "https://cards.scryfall.io/normal/front/3/b/3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b.jpg?1783905321",
+          "large": "https://cards.scryfall.io/large/front/3/b/3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b.jpg?1783905321"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/122/web-of-life-and-destiny?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "a0ca1108-6d99-4dc2-96ab-7728d65b0c06",
+        "name": "Web-Shooters",
+        "set": "spm",
+        "collector_number": "22",
+        "lang": "en",
+        "color_identity": [
+          "W"
+        ],
+        "keywords": [
+          "Equip"
+        ],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "ec528198-a38a-4ef7-9804-78a25c94ecc1",
+        "flavor_text": "\"A spider needs a web! This little device should just do the trick. I'll fasten one to each arm—it'll operate by the slightest pressure of any finger.\"",
+        "oracle_text": "Equipped creature gets +1/+1 and has reach and \"Whenever this creature attacks, tap target creature an opponent controls.\"\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+        "type_line": "Artifact — Equipment",
+        "layout": "normal",
+        "mana_cost": "{1}{W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Javier Charro",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/a/0/a0ca1108-6d99-4dc2-96ab-7728d65b0c06.jpg?1783905358",
+          "normal": "https://cards.scryfall.io/normal/front/a/0/a0ca1108-6d99-4dc2-96ab-7728d65b0c06.jpg?1783905358",
+          "large": "https://cards.scryfall.io/large/front/a/0/a0ca1108-6d99-4dc2-96ab-7728d65b0c06.jpg?1783905358"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/22/web-shooters?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "741f5373-b51a-421a-9a74-326f0575c99b",
+        "name": "Web-Warriors",
+        "set": "spm",
+        "collector_number": "159",
+        "lang": "en",
+        "color_identity": [
+          "W",
+          "G"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "3b23e4f8-882d-4cce-9b61-171ae2cc3a18",
+        "flavor_text": "Together, this group of amazing friends joined forces to mend the severed skeins across time and space.",
+        "oracle_text": "When this creature enters, put a +1/+1 counter on each other creature you control.",
+        "type_line": "Creature — Spider Hero",
+        "layout": "normal",
+        "mana_cost": "{4}{G/W}",
+        "released_at": "2025-09-26",
+        "set_name": "Marvel's Spider-Man",
+        "artist": "Thanh Tuấn",
+        "rarity": "uncommon",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/7/4/741f5373-b51a-421a-9a74-326f0575c99b.jpg?1783905306",
+          "normal": "https://cards.scryfall.io/normal/front/7/4/741f5373-b51a-421a-9a74-326f0575c99b.jpg?1783905306",
+          "large": "https://cards.scryfall.io/large/front/7/4/741f5373-b51a-421a-9a74-326f0575c99b.jpg?1783905306"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/spm/159/web-warriors?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "735b8aec-62d4-46db-9a68-a6c69cb6fd98",
+        "name": "Winds of Change",
+        "set": "por",
+        "collector_number": "156",
+        "lang": "en",
+        "color_identity": [
+          "R"
+        ],
+        "keywords": [],
+        "legalities": {
+          "commander": "legal"
+        },
+        "oracle_id": "f525cf10-e24c-4c46-9a13-6f8579d09d50",
+        "oracle_text": "Each player shuffles the cards from their hand into their library, then draws that many cards.",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "mana_cost": "{R}",
+        "released_at": "1997-05-01",
+        "set_name": "Portal",
+        "artist": "Adam Rex",
+        "rarity": "rare",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/7/3/735b8aec-62d4-46db-9a68-a6c69cb6fd98.jpg?1783946810",
+          "normal": "https://cards.scryfall.io/normal/front/7/3/735b8aec-62d4-46db-9a68-a6c69cb6fd98.jpg?1783946810",
+          "large": "https://cards.scryfall.io/large/front/7/3/735b8aec-62d4-46db-9a68-a6c69cb6fd98.jpg?1783946810"
+        },
+        "keywords_status": "reported",
+        "scryfall_uri": "https://scryfall.com/card/por/156/winds-of-change?utm_source=api"
+      }
+    ],
+    "notFound": [],
+    "warnings": []
+  }
+}

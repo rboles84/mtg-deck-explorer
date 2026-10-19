@@ -1,0 +1,135 @@
+{
+  "checkedAt": "2026-10-18T14:29:11.174Z",
+  "source": "Commander\n1 Godzilla, King of the Monsters\nDeck\n1 Thassa’s Oracle\n1 Fire / Ice\n1 Fire/Ice\n1 Black Panther's Claws\n1 Exclusive Nightclub\n1 Spectral Restitching\n93 Forest",
+  "counts": {
+    "entries": 8,
+    "quantity": 100,
+    "playableEntries": 8,
+    "playableQuantity": 100,
+    "excludedEntries": 0,
+    "excludedQuantity": 0,
+    "resolvedEntries": 8,
+    "unresolvedEntries": 0,
+    "ambiguousEntries": 0,
+    "printingUnknownEntries": 0,
+    "assumedEntries": 8,
+    "suppliedEntries": 0,
+    "chosenEntries": 0,
+    "distinctPrintings": 7,
+    "flavorAbsentEntries": 6,
+    "exactPassages": 0
+  },
+  "commander": {
+    "rowIds": [
+      "row-1"
+    ],
+    "colorIdentity": [
+      "R",
+      "G"
+    ],
+    "code": "RG",
+    "label": "RG",
+    "provisional": false,
+    "issues": [],
+    "offIdentityRowIds": [
+      "row-2",
+      "row-3",
+      "row-4",
+      "row-6",
+      "row-7"
+    ],
+    "nonLegalRowIds": []
+  },
+  "rows": [
+    {
+      "importedName": "Godzilla, King of the Monsters",
+      "canonicalName": "Zilortha, Strength Incarnate",
+      "printingId": "9a0639a0-c898-4a07-975c-a02bdd53175b",
+      "oracleId": "2dba8d8d-891e-482e-8014-879f701d0619",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Thassa’s Oracle",
+      "canonicalName": "Thassa's Oracle",
+      "printingId": "726e8b29-13e9-4138-b6a9-d2a0d8188d1c",
+      "oracleId": "1de1b591-a73f-4974-b507-8c63e07a0868",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Fire / Ice",
+      "canonicalName": "Fire // Ice",
+      "printingId": "18303862-4726-4136-814f-157aa7006579",
+      "oracleId": "ae92942b-919c-4ea9-b693-85fcef765d5a",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Fire/Ice",
+      "canonicalName": "Fire // Ice",
+      "printingId": "18303862-4726-4136-814f-157aa7006579",
+      "oracleId": "ae92942b-919c-4ea9-b693-85fcef765d5a",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Black Panther's Claws",
+      "canonicalName": "Hammer of Nazahn",
+      "printingId": "5684e177-12b5-4dea-905c-856088d717bc",
+      "oracleId": "e3955573-3db5-490e-903e-65e0172a9202",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Exclusive Nightclub",
+      "canonicalName": "Oscorp Industries",
+      "printingId": "cb962bcf-5d63-49b1-a383-068e53bb4db5",
+      "oracleId": "f432eb6a-f1bf-4ce7-b915-1488dccb4bb9",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Spectral Restitching",
+      "canonicalName": "Hide on the Ceiling",
+      "printingId": "168b8831-6aab-4545-9ba7-d4f2af9920ff",
+      "oracleId": "376fa374-ead1-4728-ab8b-aca230b72031",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    },
+    {
+      "importedName": "Forest",
+      "canonicalName": "Forest",
+      "printingId": "2e781bfd-f8cb-4d20-b977-4359f3a21311",
+      "oracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "printingProvenance": {
+        "kind": "assumed",
+        "policy": "scryfall-collection-reference-v1"
+      }
+    }
+  ],
+  "correction": {
+    "importedName": "Black Panther's Claws",
+    "oracleId": "e3955573-3db5-490e-903e-65e0172a9202",
+    "originalPrinting": "5684e177-12b5-4dea-905c-856088d717bc",
+    "selectedPrinting": "e77a8ac1-f40d-423e-a0b3-0a8e236a6c1e",
+    "provenance": {
+      "kind": "user-selected"
+    }
+  },
+  "problems": []
+}

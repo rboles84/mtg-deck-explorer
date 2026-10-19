@@ -1,0 +1,342 @@
+# Dynamic mechanics — owner-review candidate
+
+## Latest revision: source placement follow-up — 2026-10-17
+
+**Scoped retest: PASS (owner confirmed). Code: PASS. Automated: PASS (125/125, previously run). Browser: PASS — owner-reported for this source-placement retest; no agent browser run.** The owner's two refreshed screenshots confirmed the earlier wording was loaded, but showed a duplicated explanation and raw evidence interrupting the reading flow. This section supersedes the previous wording retest.
+
+Kept the explanation above the contributing cards and removed the repeated “Why this appears” sentence from every tile. Consolidated mechanic-level and per-printing evidence into one closed **Source record details** section immediately below the card grid. Each record retains its card name, printing metadata, exact keyword occurrences, Oracle/printing IDs and import-row references. Quantity, imported line and exact-printing link remain on each card. The separate deck-wide diagnostic disclosure is now labeled **Import record details**. Evidence, unmapped status and label limitations are retained; only presentation changed.
+
+Blast radius: **low**, limited to `public/app.mjs` mechanics rendering, its existing test in `tests/mechanics-ui.test.mjs`, and this report. Search, import, Clipboard, shared card viewer, exact-printing resolution and frozen sources are unchanged. No new rules, searches or source mappings. Gate 0 remains **RESEARCH_PARTIAL**. No applicable AGENTS.md found; no Git repository is present, so before copies and an [incremental diff](retest03-source-placement/candidate.diff) record the change.
+
+Baseline **125/125 PASS** and final **125/125 PASS**, zero failures/skips ([baseline](retest03-source-placement/tests-baseline.txt), [final](retest03-source-placement/tests-final.txt)). The updated renderer check covers a single explanation, evidence after the grid, one closed disclosure, retained exact-printing links/IDs, and per-card evidence grouping for Food and Crew; no search is triggered. App syntax check passed. Preservation check confirms **250 protected files unchanged**; hashes also confirm **19 additional app/workbook files unchanged**, including search/server, Clipboard and printing/viewer logic. [Verification and hashes](retest03-source-placement/verification.json). Source versions/hashes remain those recorded below. No browser/headless run, live Scryfall call, download, server restart or deployment. Confidence: **9/10 for scoped code behavior; owner visual acceptance received**.
+
+**Owner retest passed:** The owner confirmed “Looks good now” and requested this retest be marked passed. This closes the focused Dionus → Food check for the single explanation above the card and the collapsed source records below it. No further changes are requested. Only this report was updated for acceptance; no application edits or additional tests/checks were performed. The linked diff/hash receipts describe the implementation before this acceptance-only report update. Historical limitations and the RESEARCH_PARTIAL enrichment assessment remain unchanged.
+
+---
+
+## Previous revision: approved Retest03 wording fix — 2026-10-17
+
+**Exit: PARTIAL. Code: PASS. Automated: PASS (125/125). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** Reviewed all four completed Retest03 tabs, notes and its one embedded screenshot: rules disclosure marked Issue for source jargon, with its other behavior reported fine; Eternity Gate, single-sided parts and shared viewer smoke check marked Passed. This revision addresses only that wording issue. Previous browser results remain owner-reported evidence.
+
+`public/app.mjs` now explains that the import determines included cards, Scryfall supplies reported labels, and the dated rules explain terms. Each contributing card says why it appears, with quantity, imported lines and its existing exact-printing link visible. Raw source fields, relationship, audit status and IDs remain unchanged inside closed **Technical evidence** disclosures at deck, mechanic and card level. The explanatory rules footer uses plain wording. Demo wording identifies sample data. Unmapped labels remain visibly distinguished; no new certification, semantic relationship, rule mapping or search was added.
+
+Blast radius is **low: mechanics presentation only**. `tests/mechanics-ui.test.mjs` adds one renderer check for the visible explanation, hidden raw evidence, exact imported printing link and zero searches. This report is the third changed file; README is unchanged. [Incremental diff](retest03-wording/candidate.diff), [changed-file hashes](retest03-wording/changed-files.json) and before copies record the candidate. No applicable AGENTS.md was found; this directory remains outside Git. Gate 0 stays **RESEARCH_PARTIAL**, with no research adapter.
+
+Actual verification:
+
+- Baseline **124/124**, final **125/125**, zero failures/skips: [baseline](retest03-wording/tests-baseline.txt), [final](retest03-wording/tests-final.txt). Full suite includes existing Clipboard/session/export, exact-printing, stale-response and eight-search-boundary checks. HTTP tests used permitted localhost access.
+- `node --check public/app.mjs` passed. Offline metadata audit, coverage, vocabulary and preservation checks all exited 0. No build step exists.
+- **250 protected files unchanged**, including frozen inputs, fixtures, references, metadata audit and retained responses, research Git files and source snapshots. **19 additional files unchanged**, including search/server/transport, mechanics logic/vocabulary, Clipboard, shared viewer, rule links/data, layout assets and all four testing workbooks. [Verification receipt](retest03-wording/verification.json).
+- No browser/headless run, live provider call, source download, server restart, push or deployment. This patch does not establish browser layout acceptance. Confidence **9/10 for the scoped presentation change**, pending owner review.
+
+Sources remain the September 25, 2026 rules (SHA-256 `8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca`), rules-data (`a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2`), and unchanged October 17 audit vocabulary (296 observed / 16 failed candidates). The exact file hashes in the verification receipt govern; this revision changes no source data or evidence claims.
+
+**Only owner retest:** Refresh, open **Food** in the Dionus deck, and check that Cache Grab's explanation clearly distinguishes your imported card from Scryfall's Food label. Quantity, imported line and exact-printing link should be visible; raw fields/IDs should appear only after opening **Technical evidence**. No repeat of the three passed Retest03 areas is requested. Stop at this owner-review candidate.
+
+---
+
+## Previous revision: approved three-fix Retest02 follow-up — 2026-10-17
+
+**Exit: PARTIAL. Code: PASS. Automated: PASS (124/124). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** No browser/headless run, live Scryfall request, server restart, source regeneration, push or deployment was performed. This section supersedes earlier presentation descriptions below.
+
+Reviewed all nine tabs and nine screenshots in the completed Retest02 workbook: five Passed and four Issue. The owner then approved only rule disclosures, removal of duplicate Eternity Gate text, and correct multipart-card controls. Searching for more cards for every mechanic remains a separate request; the eight-search boundary is unchanged. Gate 0 remains **RESEARCH_PARTIAL**, with no Claude adapter. No applicable AGENTS.md was found; this app directory still has no Git repository. Before copies and the incremental diff preserve the review candidate.
+
+### What changed and exposure
+
+| Paths | Change / blast radius |
+|---|---|
+| `public/app.mjs`, `public/refinement.css` | All available mechanic rules start inside a closed native details/summary disclosure. Removed the extra Oracle-text block below Eternity Gate's evidence tile and its styling; the existing card dialog remains the place to read full card text. Local presentation exposure. |
+| `public/rules-ui.mjs`, `public/mechanic-rules.mjs` | Added an explicit clause-only rendering option for explanatory references. Food now displays only 111.10b, 111.10 and 205.3g; it no longer expands all 23 paragraphs of the 111.10 section or duplicates Food's own clause. Existing keyword definitions and deeper cross-reference previews/dialogs retain their default section behavior. Updated Eternity Gate wording to point to the card dialog. |
+| `public/card-preview.mjs`, `public/card-preview.css` | Layout-aware turn control. Transform, modal DFC, double-faced token, reversible-card and art-series layouts may switch supplied faces. Adventure, split and same-side flip cards display both named text parts alongside one exact-printing image. Unknown multipart layouts expose text without claiming a reverse side. Hover hints now say parts versus switchable faces appropriately. Medium exposure: the shared viewer used by archive, mechanics, commander, discovery and Clipboard. Image URL validation/selection, printing identity and save callback remain intact. |
+| `tests/mechanics-ui.test.mjs`, `README.md` | Tests now execute the real rule-body renderer rather than approximating its section selection. Updated documentation and focused disclosure/layout regressions. |
+
+Eight application/test/documentation paths plus this report changed. [Incremental diff](retest02-fixes/candidate.diff), [hash manifest](retest02-fixes/changed-files.json), and `retest02-fixes/before/` record the exact candidate. Four compact retained card witnesses support offline tests in [card-layout-witnesses.json](retest02-fixes/card-layout-witnesses.json); they are not served runtime data or a new source corpus.
+
+### Actual verification
+
+- Baseline **121/121 PASS**; final **124/124 PASS**, zero failures/skips. [Baseline output](retest02-fixes/tests-baseline.txt), [final output](retest02-fixes/tests-final.txt). HTTP tests ran with permitted localhost access.
+- The actual renderer is checked for closed disclosures across available explanations in both retained decks, exactly three Food clauses without unrelated token subrules, retained rule links, and no duplicate inline Oracle text. Search-boundary and no-automatic-search checks still pass.
+- Retained layout witnesses: Beorn / Till and Tend (HOB 118, adventure); Budoka Pupil / Ichiga (BOK 122, flip); Fire / Ice (DMR 215, split); Bala Ged Recovery / Sanctuary (ZNR 180, modal DFC). Tests check one image plus both verbatim text/flavor parts for same-side layouts, absence of a false turn control, unchanged frozen card objects, and save callback receiving the exact printing ID. The Budoka witness is a different printing from the owner's PRM screenshot; this is not a browser verification of that pictured edition.
+- Existing Gwen tests still verify front/back art, rules, flavor, accessible next-face label, focus, save identity and missing-back-art abstention. Added unknown-layout/no-image cases retain all text without inventing a physical reverse. Existing full-suite checks preserve Clipboard quantities/session/export, exact printing resolution, discovery identity/pagination and stale-request protections.
+- Syntax checks passed for app, card-preview, rule UI and explanation modules. No build step exists.
+- Offline audit, coverage, vocabulary and protected-file checks all exited **0**. **250 protected files unchanged**, including inputs/fixtures/references, retained coverage/audit responses, research Git files and original snapshots. **14 additional app/reference/testing-workbook files unchanged**: [verification](retest02-fixes/verification.json). All three earlier testing workbooks are untouched.
+
+Source rules remain September 25, 2026: SHA-256 `8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca`; rules-data `a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2`. The four test witnesses were read from the unchanged October 17 compressed Oracle snapshot, SHA-256 `f278ae30bc51657e8e7fcb897984fafe0df0c93ed511160fe60429bbb0e29a71`, verified before extraction. No download occurred. Earlier source hashes and the 296 observed / 16 unobserved audit boundary remain applicable. Provider labels still assert only provider_reports.
+
+Retained Cosmic and Dionus capture accounting remains covered by the unchanged integration tests (84/64 resolved entries, 100 copies each, 35/15 labels). No fresh-import counts or new same-provider witness claims are made.
+
+### Minimal owner retest
+
+[manualTesting_Retest03.xlsx](C:/Users/obake/Downloads/manualTesting_Retest03.xlsx) contains only four tabs, each with an initial Not tested status, editable notes and screenshot space. All four workbook previews were visually inspected; saved tab text, dropdowns, blank notes and unprotected sheets were checked. This validates the workbook, not the app's browser behavior.
+
+1. **Rules:** Food and Crew start collapsed; expand/collapse them. Food has only its three intended clauses. Open one cross-reference and check the collapsed panel once at narrow width.
+2. **Eternity Gate:** no duplicate inline card text; opening Necron Monolith still shows its full exact-printing details.
+3. **Single-sided parts:** Beorn and Budoka show both named parts with one image and no turn-over control.
+4. **Shared viewer:** Gwen still flips correctly by pointer/keyboard, closes and restores focus; sample narrow width. Save once from a discovery dialog and confirm printing/quantity in Clipboard.
+
+No repeat of deck-switching, the search matrix, complete export or session-reload testing is requested. Their owner-reported passes remain historical acceptance evidence, supplemented by the full automated suite. Native disclosure interaction, actual layout, loaded images and focus behavior for this revised UI remain owner checks. Confidence is **9/10 for the scoped code behavior; visual acceptance pending** (engineering judgment). Stop at this owner-review candidate.
+
+---
+
+## Previous revision: approved Retest01 fixes — 2026-10-17
+
+**Exit: PARTIAL. Code: PASS. Automated: PASS (121/121). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** No browser or headless run, live search, source download, server restart, deployment, merge or push was performed. This section supersedes earlier UI descriptions below; historical results remain identified as historical.
+
+The owner approved this bounded patch after review of all eight tabs, notes and 14 screenshots in `C:/Users/obake/Downloads/manualTesting_Retest01.xlsx`: five tabs Passed, three Issue. The original and completed workbooks were not edited. The completed workbook hash is retained in [preservation receipts](retest01-fixes/preserved-before.json). Gate 0 remains **RESEARCH_PARTIAL**; no Claude adapter or semantic detector was added. No applicable AGENTS.md was found in the named application/ancestor locations. `git status` confirms this directory is not a Git repository; before copies and an incremental diff record the candidate instead.
+
+### Changes and blast radius
+
+| Files | Change and exposure |
+|---|---|
+| `public/app.mjs`, `public/index.html`, `public/refinement.css` | Removed the separate eight-item discovery selector. The single imported-deck selector controls rules, available dated color history, contributing cards, and then the supported search action. An absent deck label cannot open a discovery context. Labels without a reviewed mapping explain that search/history are unavailable. Medium exposure: mechanics rendering, layout and focus; existing import/state/search handlers unchanged. |
+| `public/mechanic-rules.mjs` | Added two explicit explanatory mappings, separate from the existing 28 keyword-definition links. Food uses CR 111.10b, 111.10 and 205.3g; Eternity Gate uses the general flavor-word rule 207.2d. The retained date, source hash and exact clauses must match or the explanation abstains. No vocabulary promotion, Oracle parsing, new search or card-relation inference. |
+| `public/app.mjs`, `public/refinement.css` | Eternity Gate also shows the full Oracle text supplied by each contributing resolved printing, preserving newlines. It does not extract or hardcode an attack clause. Multi-face inputs display each supplied face's text without assigning the provider label to a face. Missing rules retain the existing fallback. |
+| `public/card-preview.css` | Moved the 44 px flip button from 12 px below the top to 15% of the art frame height, retaining its right offset, focus treatment and existing behavior. Small CSS change, but shared-dialog exposure across all entry points. Visual clearance remains an owner check. |
+| `tests/mechanics-ui.test.mjs`, `README.md` | Updated renderer expectations and documentation; added three focused regression tests. |
+
+Seven application/test/documentation paths plus this report changed. [Actual incremental diff](retest01-fixes/candidate.diff), [changed-file hashes](retest01-fixes/changed-files.json), and `retest01-fixes/before/` preserve the reviewed scope. Archived tests use `.before` suffixes and are not runnable test copies.
+
+Search authorization remains exactly Flying, Trample, Deathtouch, Vigilance, Haste, Menace, Reach and Lifelink. These actions are now reachable through a matching imported-deck label. Surveil's rules definition grants no discovery permission. The crosswalk, catalog, server, provider transport, identity ceiling, pagination and query recipes are unchanged. Reading/indexing starts no searches.
+
+### Observed verification and source evidence
+
+- Baseline: **118/118 PASS** ([output](retest01-fixes/tests-baseline.txt)). An initial restricted run could not connect to localhost HTTP test servers (EACCES); the permitted loopback rerun passed before edits.
+- Final: **121/121 PASS**, zero failures/skips ([output](retest01-fixes/tests-final.txt)). This includes the actual renderer/detail-handler tests and existing exact-printing, quantity, Clipboard/session/export, stale-response and search-boundary suites.
+- New checks exercise exact explanatory clauses and changed/missing revision rejection; Food remaining unmapped; full Necron Monolith text and changed resolved text; multi-face text without label attribution; history/evidence/search order; no automatic search; no Surveil search; and an absent label unable to create a search context. DOM-boundary tests do not establish actual browser layout or native interaction behavior.
+- `node --check` passed for app and explanation modules. No build step exists.
+- Offline metadata audit, coverage matrix and vocabulary `--check` commands: **exit 0**. Still 296 observed labels, 16 failed direct candidates; 305 retained same-provider witnesses with zero compared-field mismatches. No regeneration/downloads. Those witness checks are not independent rules validation.
+- Preservation: **250 protected files unchanged**, including frozen app inputs/fixtures/references, coverage/audit/retained responses, research repository/Git bytes and source snapshots. **13 additional app/reference/workbook files unchanged**, including import/index/vocabulary, Clipboard, card-preview JavaScript, rules data/UI, server/provider/catalog and crosswalk. [Receipt](retest01-fixes/verification.json).
+
+Definitions use the retained official September 25, 2026 rules, not a claim about the latest release. Source SHA-256: `8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca`; rules-data SHA-256: `a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2`. Earlier source manifest/hash tables remain applicable.
+
+Captured Dionus remains 64 resolved entries / 100 copies / 15 reported labels, with Food on Cache Grab (BLB 167; Oracle ID `06ccec61-27d2-4079-80b5-29ebd3a980ee`) and Eternity Gate on Necron Monolith (40K 161; Oracle ID `20932bca-52be-4288-9c7d-4154650c5ec9`), each one distinct card / one copy. Both terms remain outside the pinned audited vocabulary. The displayed Monolith text comes from the resolved card, including Flying, indestructible, its attack ability and Crew 4. It is not a generated summary or stronger relationship claim. Cosmic remains 84 resolved entries / 100 copies / 35 labels. These are retained-response results; the owner's retest independently reported 35 and 15 labels, not new agent live captures.
+
+Confidence: **9/10 in the scoped behavior backed by tests; visual acceptance pending** (engineering judgment, not a statistical estimate). Remaining risk is layout/readability, flip-button clearance and native focus behavior. Previously passed owner checks are preserved feedback, not automatic approval of this changed revision. No semantic-completeness or all-mechanics search claim is made.
+
+### Browser retest checklist — owner
+
+Use the running app at `http://127.0.0.1:4173/` and refresh to load the candidate. Record PASS, ISSUE or NOT TESTED; keep existing Clipboard entries. Browser/device/date: ______
+
+| # | Check | Expected | Result / notes |
+|---|---|---|---|
+| 1 | Mechanics navigation | Only the deck-derived selector remains; no separate eight-item “Find other cards” list. Choose several labels and return to the selector. | |
+| 2 | Contextual history/search | Select Trample (or another supported in-deck label). Its dated 2021 history is before contributing cards; its search action is below them. Search still uses the selected commander's colors and paginates normally. | |
+| 3 | Unsupported search | Select Surveil in Cosmic. Its rules remain readable, but it has no search button or invented color history. No search starts merely by selecting a mechanic. | |
+| 4 | Food | Select Food in Dionus. See the standard token rule, creating-effect qualification and artifact-subtype explanation; Cache Grab still opens its exact printing. Food remains an additional/unmapped provider label. | |
+| 5 | Eternity Gate | Select it in Dionus. See the flavor-word explanation and Necron Monolith's full current Oracle text. Compare it with the card detail view; line breaks and wording should agree. | |
+| 6 | Flip control | Open Gwen Stacy / Ghost-Spider. Flip both directions: button clears mana/title on both faces; art, rules and flavor remain correct. Check click, keyboard activation, Escape and return focus. | |
+| 7 | Deck switching | Cosmic → Dionus → Cosmic. No stale cards/mechanics/selections; Dionus has no Deathtouch unless a current resolved card reports it. Retained captures have 35 / 15 / 35 labels. | |
+| 8 | Clipboard/exact printing smoke check | Keep existing entries. Save one test printing, edit its quantity and export; verify set, collector number and quantity. Switch decks/reload and confirm persistence. | |
+| 9 | Narrow layout | At approximately 390 px wide, repeat selector, Food/Eternity Gate and both-face checks. No clipped controls/text, horizontal overflow, or stuck dialogs. | |
+
+For an issue, return the item number, deck/card, steps, expected/actual result and screenshot. Browser version is optional. No additional agent browser checks or follow-on changes are started without owner direction.
+
+---
+
+## Previous revision: approved owner-feedback fixes — 2026-10-17
+
+**Exit: PARTIAL. Code: PASS. Automated: PASS (118/118). Browser: NOT TESTED for this revision / pending owner verification.** This section supersedes earlier candidate descriptions below. The earlier pointer-hover PASS remains historical evidence; it is not a fresh browser sign-off for the changed card dialog. No browser, headless browser, live search or new deck capture was run for this revision. No merge, push or deployment.
+
+The owner approved the scoped plan after review of all eight tabs, notes and 25 screenshots in `C:/Users/obake/Downloads/manualTesting.xlsx`. Their six Failed, one Blocked and one Passed worksheet statuses are preserved as feedback, not silently converted into acceptance. Gate 0 remains **RESEARCH_PARTIAL**: no Claude membership/relationship enrichment or adapter was added. No applicable AGENTS.md was found in the named app/ancestor locations. Deck Explorer still has no Git repository, so before copies and a separate incremental diff preserve the candidate history.
+
+### What changed and exposure
+
+| Files | Approved change and blast radius |
+|---|---|
+| `public/app.mjs`, `public/index.html`, `public/refinement.css` | Compact deck summary and one deck-derived mechanic chooser; collapsible at narrow widths, bounded scrolling, closes and focuses the detail heading after selection. The eight optional external searches are under a separate closed “Find other cards” disclosure. Technical evidence is retained under “Source details.” Clear pasted text preserves the loaded deck/selection/Clipboard and is disabled during pending imports. Commander wording explains discovery colors versus unchanged deck evidence. Medium exposure: mechanics selection, focus and responsive layout; low exposure: input control. |
+| `public/mechanic-rules.mjs` (new) | 28 explicit label-to-rule-section links, checked against exact headings and the retained rules revision. All audited labels in both captured owner decks have links. Unknown/unlinked labels stay visible with a definition-unavailable message. This is a general definition lookup, not a card detector or search authorization. Medium exposure: showing the correct dated rule, controlled by revision/title guards. |
+| `public/card-preview.mjs`, `public/card-preview.css` | A 44 px circular next-face button replaces the two face buttons in the detail dialog. The accessible label names the next face; current face position/name remain visible. Existing face rendering keeps art, Oracle text and flavor together. Medium exposure: shared dialogs opened from commander, archive, mechanics, discovery and Clipboard surfaces. Hover event code and printing/image selection helpers are unchanged. |
+| `tests/mechanics-state.test.mjs`, `tests/mechanics-ui.test.mjs` (new) | Two clear-input state tests plus seven focused rendering/rule/face tests. |
+| `README.md` | Current UI behavior, definition limits and input-clear behavior. |
+
+Nine application/test/documentation paths: [incremental hashes](owner-feedback/changed-files.json), [actual incremental diff](owner-feedback/candidate.diff), and `owner-feedback/before/`. Supporting report receipts are separate. The archival test copy uses a `.before` suffix so Node cannot discover it as a runnable test.
+
+The mechanics index, 296-label vocabulary, importer, exact image URL selection, Clipboard module/storage, crosswalk, server and provider transport are unchanged. No new endpoint, search recipe, API call, semantic parser, AI call or dependency was added. The eight existing searches retain their identity subset constraint, pagination and printing-aware saves. Definitions do not promote unmapped labels or establish possession, grants, references, parameters or face ownership. Source revision, card evidence, dated color placements and external search permissions remain separate.
+
+### Observed verification
+
+- Baseline full automated suite: **109/109 PASS** before edits.
+- Final `node --test --test-reporter=spec`: **118/118 PASS**, zero failures/skips. [Full output](owner-feedback/tests-final.txt).
+- New tests execute the actual mechanics renderer, selection handlers and detail-dialog/face-art code with a small DOM boundary. They verify the 15-label Dionus chooser excludes Deathtouch while the eight separate external choices remain, mobile selection closes the chooser and focuses the heading, desktop chooser stays open, Cosmic → Dionus → Cosmic/reimport updates rendered labels, clear is blocked during an import, missing catalog/rules preserve cards, partial imports disclose gaps, and technical fields remain in disclosures.
+- Rule tests require the pinned date/hash and exact title, check all 28 links against retained rule paragraphs, cover all audited terms in both owner captures, and reject altered revisions, changed titles, unknown labels, parameters and punctuation variants.
+- Actual dialog-handler tests flip the captured Gwen Stacy / Ghost-Spider printing in both directions, checking image URLs, Oracle text, flavor, next-face accessible labels, retained focus and unchanged frozen card bytes. The save action remains available while the original printing identity stays unchanged; a missing reverse image retains reverse rules and never borrows front art. These DOM-boundary tests do **not** verify browser layout, native keyboard events, pointer hit targets or image loading.
+- Existing tests continue to cover exact printings/flavor, quantities, Clipboard/export/session behavior, governed discovery, partial metadata, and out-of-order import/search success/error/cleanup.
+- Offline audit, coverage and vocabulary `--check` commands completed successfully. The audit remains 38,753 Oracle cards, 296 observed/16 failed exact candidates and 305 retained same-provider witnesses with zero compared-field mismatches. No downloads or source regeneration.
+- Preservation check: **250 protected files unchanged**, including frozen inputs, fixtures, references, coverage/audit/retained responses, research Git files and original source snapshots. An additional **10 app/reference files unchanged** receipt covers core/index/vocabulary, Clipboard, provider/catalog/server, crosswalk and rules bytes. [Additional baseline](owner-feedback/preserved-app-before.json).
+- Syntax checks passed for the edited app and card-preview modules and new definition module. No build step exists. One initial full run discovered the archival test copy; renaming that receipt fixed test discovery. A test-harness source-marker typo was also corrected. Final results above include all fixes.
+
+### Concrete results and limits
+
+Dionus's captured deck still has 64 resolved entries / 100 copies / 15 reported labels. Crew is 16 distinct cards / 16 copies; Station 3/3; Mill 4/4; Equip 2/2. Deathtouch is absent from its deck chooser. Cosmic remains 84 resolved entries / 100 copies / 35 labels. These are retained-response results, not new live counts.
+
+Crew (702.122), Station (702.184), Mill (701.17), Equip (702.6) and all other audited labels in these two captures now have links to existing rules sections. Food, Eternity Gate and other unlinked labels remain visible with an explicit fallback. The 28 links are bounded coverage, not definitions for every one of the 296 audited labels. Rules are dated September 25, 2026; current card text remains available in the printing viewer. No generated descriptions or new Claude records are used.
+
+Rule source SHA-256: `8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca`. The unchanged rules-data file SHA-256 is `a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2`. All new file hashes and the feedback workbook fingerprint are in [verification receipts](owner-feedback/verification.json) and the incremental manifest. Earlier source fingerprints below still apply.
+
+Confidence: **9/10 in the scoped behavior backed by automated tests; 8/10 overall pending owner browser review**. These are engineering judgments, not statistical measurements. Remaining exposure is the visual chooser, its scroll/focus behavior under sticky navigation, and the circular control in the shared card dialog. Browser checks below remain pending; the historical screenshot set does not verify this revised UI.
+
+### Owner browser checklist for this revision
+
+Use the actual app at `http://127.0.0.1:4173/`. Reload once to load the changed files. Keep existing Clipboard entries. Mark PASS / ISSUE / NOT TESTED and add notes. Fresh provider counts can differ from the retained captures; record the actual result.
+
+| Check | Expected behavior | Result / notes |
+|---|---|---|
+| Clear pasted text | Paste a draft, then Clear pasted text. Input empties and receives focus. Loaded deck, selected mechanic and Clipboard stay intact. During a pending import, Clear is disabled. | |
+| Deck switching | Cosmic → Dionus → Cosmic and repeat an import. The single chooser follows the new deck, clears the old selection and does not retain old cards/commander selections. | |
+| Dionus navigation | Crew, Station, Mill and Equip are in “Explore this deck”; Deathtouch is absent. The top summary is compact. “Find other cards” is closed initially and explicitly separate. | |
+| Rules and evidence | Crew/Station/Mill/Equip show dated rules and their imported cards. Source details expand to show exact evidence. Food/Eternity Gate remain visible with a clear definition fallback. | |
+| Circular face control | Open Gwen Stacy / Ghost-Spider. Use the round arrow both directions and by keyboard. Art, face label, rules and flavor change together; printing stays the same. Close normally and with Escape. | |
+| Commander and discovery | Switch Cosmic/Gwen. Imported labels stay unchanged. Run an existing optional search: displayed colors/results follow the commander, pagination works, and selecting a deck mechanic alone does not run a search. | |
+| Clipboard preservation | Save from a result and from its dialog, edit quantity, switch decks and reload. Existing entries/printing/quantity survive and complete export includes them. | |
+| Narrow layout | At roughly 390 px, the summary is compact and chooser collapsible. Every label is reachable; selecting one closes the chooser and brings the heading into view. Flip control, dialogs, Back and Clipboard remain usable. | |
+
+Overall: ACCEPT / ISSUES FOUND / NOT FINISHED: ______
+
+For issues, send the row, deck/card, steps and actual result; attach a screenshot if useful. No browser-version requirement. Stop at owner review; no subsequent task is authorized.
+
+---
+
+## Original integration record — historical
+
+2026-10-17. **Exit: PARTIAL. Code: PASS. Automated: PASS. Browser: PARTIAL.** The dynamic provider-label layer works. Optional Claude enrichment was omitted. Pointer-hover QA passed. Remaining browser verification and acceptance are handed to the owner at their request; no further agent checks are planned. No scoped regression was observed. No merge, push, deployment, new endpoint, framework, API service or semantic parser was added.
+
+## Gate 0: RESEARCH_PARTIAL
+
+No applicable AGENTS.md or separate Deck Explorer admission gate was found in the named locations. The existing proposal was read; its grant-parser expansion and outside-path design research were superseded by this request. Deck Explorer has no Git repository: original edited-file bytes were saved before editing, with a reviewable diff and hashes. Nothing was reset. The research repository was clean before and after at `058a002f7b76da172ddbd8eefaa11b00709696df`.
+
+The existing importer already preserved keywords, Oracle ID, current Oracle/face text, exact printing UUID, images and flavor. Its relevant deficiency was collapsing missing/malformed keywords into an indistinguishable empty array. The projection now retains a `keywords_status` marker without adding calls.
+
+Read Claude's README, PLAN, compendium handoff, index coverage, actual record schema/manifest and records. Inspected Crew, Station, Mill, Flying, Haste and Daybound/Nightbound, including Tavern Ruffian // Tavern Smasher. **No Equip identity or keyword-membership record was found in the 341 generated records**, including identity/name and membership searches.
+
+Those records supply aggregate membership counts and examples with Oracle IDs. Their `relations` are mechanic-to-mechanic crosswalks, not reviewed per-card possession/grant/reference evidence with current clause, beneficiary, duration and card-content fingerprint. Generated `Verified` does not demonstrate the planned Phase 1 owner acceptance; all 51 Candidate text patterns remain unapproved. Crew's example has Crew 6 while its aggregate reminder says Crew 1; Station's example uses 3+ while its aggregate reminder uses 8+; Mill's example is Greater Mossdog's Dredge reminder. These cannot be reused as generic definitions or semantic detectors.
+
+Six inspected example texts match October 14; their compared fields also match October 17. **No Claude record was reused and no research adapter was created.** Safe metadata-only delivery proceeded.
+
+## Candidate changes
+
+| Files | Change |
+|---|---|
+| `public/mechanics.mjs` | Pure per-import index; exact lowercase comparison; original spellings/array offsets; Oracle deduplication; printing, row and quantity evidence; explicit partial/missing coverage. |
+| `public/mechanics-vocabulary.mjs` | 68,210-byte derived vocabulary with 296 unique observed labels and pinned hashes. No corpus, definitions or membership database. |
+| `public/app.mjs`, `public/index.html` | Dynamic in-deck list and existing card controls; eight manual searches explicitly separated; atomic deck/index replacement; selection reset and stale-request guards. |
+| `lib/scryfall.mjs`, `public/request-owner.mjs` | Metadata availability marker; small independent request-ownership lanes guarding success, error and cleanup. |
+| `tests/mechanics-integration.test.mjs`, `tests/mechanics-state.test.mjs` | 23 focused tests described below. |
+| Four `scripts/*mechanics*.mjs` additions; `README.md` | Vocabulary export, capture, integrity/receipt checks and current boundaries. |
+
+Exact added/modified paths and hashes: [changed-files.json](changed-files.json). Actual candidate diff: [candidate.diff](candidate.diff). Original edited files: `before/`. Application CSS, preview helpers, rules, crosswalk, Clipboard module and server endpoints were unchanged. The old eight-crosswalk detector remains an unused legacy export; the runtime display uses the new index.
+
+The index returns `{vocabularyVersion,auditSha256,coverage,terms}`. Terms retain original labels, audited status, cautious classification, `relationship: provider_reports`, `sourceField: keywords[]`, grouped cards and physical copies. Every member retains all import rows, printing IDs, quantities and exact array offsets; face attribution is always null. Missing Oracle IDs fall back to printing identity with a disclosed limitation. Indexing never fetches or mutates input data. Existing main-deck eligibility is retained; excluded side entries do not contribute, and the UI names that denominator. The runtime makes no AI/ML/LLM calls. Unknown terms remain visible; all 16 failed candidates remain uncertified. Plot, Start Your Engines! and Parade! retain both disagreeing classifications under neutral wording. Landfall is an ability word; Mill is a keyword action.
+
+## Actual owner-deck results
+
+Captured at `2026-10-17T20:36:29.902Z`, through three existing bounded collection requests: Cosmic 75+9, Dionus 64. No corpus was reacquired. Original paths and checksums are in [decks/manifest.json](decks/manifest.json):
+
+- Cosmic: `fixtures/cosmicspiderman.txt`, SHA-256 `0c960f066df52bd00471404c02cb7ffcbf87b18cd4185bb51516e9b74d63abc7`.
+- Dionus: exact `C:/Users/obake/Downloads/carelf.txt`, SHA-256 `1ac03f916f5eb1f68be0e55a04b51ea2cfc5aeb123da169758750f133c675d65`.
+
+| Deck | Input / resolved entries | Copies | Reported labels | Audited / unmapped | Exact flavor passages |
+|---|---:|---:|---:|---:|---:|
+| Cosmic Spider-Man | 84 / 84 | 100 | 35 | 22 / 13 | 58 |
+| Dionus | 64 / 64 | 100 | 15 | 13 / 2 | 40 |
+
+All entries had usable keyword metadata; Cosmic had 45 empty arrays and Dionus 37. Counts were derived from actual responses, not historical assertions. All 148 resolved printing records' keywords, Oracle text and face-name/text projections matched both October 14 and October 17 Oracle snapshots by Oracle ID. This is bounded same-provider consistency, not independent CR verification. Exact-printing flavor and supported image URLs were verified against the retained collection responses, not borrowed from Oracle snapshots.
+
+Dionus counts below are **distinct Oracle cards / physical copies**:
+
+| Label | Cards / copies | Label | Cards / copies |
+|---|---:|---|---:|
+| Adapt | 2 / 2 | Crew | 16 / 16 |
+| Equip | 2 / 2 | Eternity Gate (unmapped) | 1 / 1 |
+| Evolve | 1 / 1 | Flying | 9 / 9 |
+| Food (unmapped) | 1 / 1 | Indestructible | 1 / 1 |
+| Menace | 1 / 1 | Mill | 4 / 4 |
+| Proliferate | 1 / 1 | Station | 3 / 3 |
+| Trample | 3 / 3 | Vigilance | 2 / 2 |
+| Ward | 1 / 1 | Deathtouch | No reported contribution |
+
+Deathtouch is absent from Dionus's in-deck index. Crew includes Adventurer's Airship (FIN 252). Station includes Dawnsire (EOE 238), Extinguisher Battleship (EOE 242) and Pinnacle Kill-Ship (EOE 244). Cosmic Equip includes Spider-Suit (SPM 176) and Web-Shooters (SPM 22); Transform includes its three imported transform cards. Cosmic's 13 unmapped terms, including Food and Treasure, remain visible. Full memberships, row/offset evidence and revision comparisons: [verification.json](verification.json).
+
+## Validation observed
+
+| Check | Result |
+|---|---|
+| Baseline full suite | **86/86 PASS** before editing. Initial sandbox attempt had eight localhost EACCES failures; authorized loopback rerun passed. |
+| Final `node --test --test-reporter=spec` | **109/109 PASS**, no skips: [tests-final.txt](tests-final.txt). |
+| `audit-mechanics-metadata.mjs --check` | Exit 0 before/after; 38,753 Oracle records, 296/312 observed labels, 305 retained witnesses with zero compared-field mismatches. |
+| `build-mechanics-coverage.mjs --check` | Exit 0 before/after; master 296 direct / 112 rule / 116 exception + 3 pointers; Color Pie 19 / 180 / 17. 743 overlapping source rows, not unique mechanics. |
+| Vocabulary `--check` | Exit 0, exact reproducible export of the retained audit. |
+| Protected-byte check | **250 files unchanged**, including the entire named research repo and Git files, source snapshots, inputs, fixtures, references and coverage/audit/retained responses. Original 18-file acceptance check passes. |
+| Build/runtime | No build step or dependencies. Syntax check passed; existing Node server serves the application on 127.0.0.1:4173. |
+
+Seven data tests cover capture hashes/exact fields, all 296 labels and 16 exclusions, case/exact matching, category disagreements, unknown terms, missing/malformed/empty arrays, partial resolution, repeated quantities/alternate printings, same-response reimport and Cosmic → Dionus → Cosmic. Actual retained Greaves, Boots, Gaea's Gift, Hurricane, Nightmare, Akawalli and Lymph Sliver witnesses establish explicit semantic abstention, including reminder text and thresholds. Multi-face evidence remains card-level. Indexing/reading tests prohibit transport.
+
+Sixteen state tests execute the **actual application handlers** in a VM, with rendering and transport stubbed at their boundaries. Controlled deferred promises exercise stale success/failure/AbortError/finally across imports, mechanics, commanders, same-query searches, pagination and navigation. These are not claimed as browser-injected transport tests. Existing tests preserve bounded collection behavior, eight governed searches, id<= subsets, pagination/dedup, printing/flavor, symbols, rules, Clipboard session state and complete multi-page export.
+
+## Browser evidence and remaining limits
+
+Used the real ChatGPT in-app browser at requested **1440×900 and 390×844**. Client widths were 1425 and 375 due to scrollbars; no horizontal overflow was observed. The browser-control surface did not expose its Chromium build/version or navigator user agent. In the scoped follow-up, opening `chrome://version/` was explicitly rejected by the browser security URL policy (only HTTP/HTTPS allowed). The attempted exact Chromium engine/version check was **BLOCKED**, not passed. This historical tooling limitation is recorded for transparency; remaining browser verification is now owner-owned, and supplying a version is not a prerequisite for the owner checklist below. No alternate surface, raw browser command, or indirect workaround was attempted.
+
+Observed desktop and narrow deck switching, correct commander reset and 100-copy accounting, cleared mechanic selection, unchanged index after commander deselection, existing card image/name dialogs, Gwen Stacy front flavor and Ghost-Spider reverse rules/image, keyboard focus preview and Escape, mana/set symbols, and mechanics → archive → browser Back restoration. Live green Flying discovery showed 24 cards on page 1 and seven on page 8 (175 total), retaining id<=g, unique=cards and prefer:newest. Both Save surfaces worked; saving kept the dialog open. Clipboard survived imports and reload, with quantity edited to three and export `3 Adventurer's Airship (FIN) 252`. No warning/error entries were returned by browser log checks. QA entries remain in the newly created test tab; no user Clipboard was cleared.
+
+**NOT TESTED separately:** external browser engines, screen reader, browser-injected response delays, OS clipboard paste. Pointer-hover passed in the follow-up below; remaining browser verification is handed to the owner. WUBRG subset behavior and multi-page Clipboard export passed automated tests; the live discovery sample was green Flying. These limits and omitted optional enrichment keep overall status PARTIAL.
+
+Screenshots: [desktop evidence](final-equip-desktop.jpg), [narrow Station evidence](dionus-station-narrow.jpg), [narrow index](cosmic-narrow-list.jpg), [multi-face dialog](cosmic-multiface-desktop.jpg), [narrow dialog](cosmic-narrow-dialog.jpg), [Clipboard/export](clipboard-narrow.jpg), [baseline](baseline-desktop.jpg). Immediate transition captures may show the existing image-loading placeholder; the evidence screenshots show loaded exact-printing art.
+
+## Scoped browser follow-up
+
+**Pointer-hover: PASS. Remaining browser verification: OWNER HANDOFF / PENDING OWNER RESULTS. Browser QA remains PARTIAL until the owner reports their results; no additional agent browser or headless checks are requested.** Only this report and new QA evidence files changed in this pass. All 13 application/test/support files match the final candidate hashes, and all 250 protected files still match the pre-edit manifest. The existing 109/109 automated result remains valid for those unchanged files; tests were not needlessly rerun.
+
+At 1440×900 in the existing imported Dionus session, native pointer movement was exercised using the documented drag-and-release input from a non-card button onto a card name. The tool has no dedicated hover primitive. After release, DOM evidence showed the actual card button matching `:hover`, while keyboard focus remained on Clipboard or the separate Reach discovery button. This distinguishes the observed previews from the earlier focus-only check. No synthetic DOM events, browser code injection, application edits, new import, or discovery search was used.
+
+- Pinnacle Kill-Ship displayed its EOE 244 image and current Oracle text, with zero open dialogs and focus on `clipboard-open`.
+- Moving the pointer away hid the preview.
+- Dawnsire, Sunstar Dreadnought displayed its EOE 238 image and current Oracle text, while focus stayed on Reach and the selected mechanic remained Station.
+- Escape hid the second preview. Clipboard stayed at three copies; no card dialog opened. Browser warning/error log read returned no entries.
+
+The Chromium version-page request was rejected by browser policy before version evidence could be obtained. This is a tooling/security limitation, not an observed app defect. The owner subsequently took over browser verification and explicitly requested no more checks. No version was invented, and no further version evidence is requested. The original research decision remains RESEARCH_PARTIAL and no optional enrichment was added.
+
+Machine-readable observations and exact image URLs: [browser-closure.json](browser-closure.json). Actual pointer-driven preview: [pointer-hover-desktop.jpg](pointer-hover-desktop.jpg).
+
+**Plain-language interpretation:** this change is a label sorter with receipts: Scryfall says a deck card reports Station, so the app lists Station and shows that card. It does not understand or judge the deck. The blast radius is the mechanics list/evidence view, keyword-availability projection, and shared import/discovery request cleanup. Printing/flavor rendering and Clipboard code were not changed, although those adjacent flows were regression-tested. Confidence is high in deterministic provider-label display and tested preservation, bounded by provider accuracy, incomplete provider labels and pending owner browser acceptance. It is not a claim of complete rules detection.
+
+## Owner browser checklist — notes to return
+
+Documentation-only handoff: pointer-hover is already PASS and does not need repeating. No tests, browser checks, headless runs or source changes were performed for this report update. Prior results above remain historical observations.
+
+Use the running Deck Explorer at `http://127.0.0.1:4173/`, not the coverage report. Use your Cosmic Spider-Man and Dionus imports. For each item, write PASS, ISSUE or NOT TESTED and add notes. Counts below describe the retained captures; if a fresh import differs, record what you see rather than assuming a defect.
+
+Browser/device (if known): ______  Date: ______
+
+| Check | What to look for | Result / notes |
+|---|---|---|
+| 1. Deck switching | Import Cosmic → Dionus → Cosmic, then repeat the same import. Each deck replaces the previous cards and mechanics; old commander and mechanic selections do not carry over. Retained captures: 100 copies each, Cosmic 84 resolved entries / 35 labels, Dionus 64 / 15. | |
+| 2. Dionus mechanics | Crew, Station, Mill and Equip appear in the in-deck list. Deathtouch does not appear there unless a current resolved card reports it. It may still appear among separate manual discovery options. | |
+| 3. Evidence | Select a mechanic. Its contributing imported cards and counts appear, with “Reported by Scryfall” and keywords[] provenance. Unmapped terms are visibly distinguished. A card-level label is not presented as proof of a grant or a particular face. | |
+| 4. Card details | Open an evidence card: correct printing/art, rules and flavor where present. Try Gwen Stacy / Ghost-Spider face controls. Close with Escape and the normal close control. Pointer-hover is already passed; no repeat required. | |
+| 5. Commander | Change or deselect the commander. Color/discovery constraints update as appropriate, while the unchanged imported deck retains the same mechanic evidence. | |
+| 6. Manual discovery | Run an existing manual discovery option and move between pages. Results and loading state remain sensible. Simply viewing in-deck mechanics does not launch discovery. | |
+| 7. Clipboard/export | Save a test card, change its quantity, switch decks and reload. The saved printing and quantity persist; complete export contains them. Keep any existing saved entries. | |
+| 8. Narrow layout/navigation | Try a narrow phone-sized window (about 390 px). Read the mechanics list, open/close a card, navigate between views and use Back. Look for clipped controls, horizontal overflow or stuck dialogs. | |
+
+Overall: ACCEPT / ISSUES FOUND / NOT FINISHED: ______
+
+For an issue, include: checklist number; deck/card/mechanic; steps; expected result; actual result; screenshot if useful. Browser version is optional. Send the filled checklist back for review; no further work starts automatically.
+
+## Source versions and rebuild
+
+All exact pre-edit hashes: [protected-before.json](protected-before.json). Key source fingerprints:
+
+| Source | SHA-256 |
+|---|---|
+| October 14 Oracle snapshot | `f20614a1be5f3e99c92a2dd8f7a39a78eadd7be06f4d5f95b4e2dfede82236a9` |
+| October 17 Oracle snapshot | `f278ae30bc51657e8e7fcb897984fafe0df0c93ed511160fe60429bbb0e29a71` |
+| October 17 metadata audit | `690d89ce69ad07c8f66f4df25d82aa978ae2aa90353c7d36e8f514e6fb8e5461` |
+| October 17 snapshot manifest | `a959e796d60be47ddb04d53a7da138b2a0f4bdc824875c5425deec538698715a` |
+| Claude record-v0 JSONL | `1f368ea982fa5f1f184c05d029f6a0a8427c7ca1876a2ffa7747409e5ad0ea0e` |
+| Claude record schema | `b4e0f703aa7b167b44caa0022fb5671549aaba7783b6ede17a18226f524a5bda` |
+
+Full paths and further manifest/matrix/capture hashes are in `verification.json`. Claude's cards are October 14; its printing/ruling sources are October 16; definitions use CR September 25; dated color tiers remain Rosewater 2021.
+
+`node scripts/build-mechanics-vocabulary.mjs` rebuilds only the compact export from the retained audit; `--check` writes nothing. `summarize-mechanics-integration.mjs` computes offline receipts. `check-mechanics-preservation.mjs` compares the pre-edit manifest. The explicit capture script refuses to overwrite existing captures and is never invoked by runtime/tests.
+
+Stop here for owner acceptance. Provider labels do not prove inherent abilities, grants, references, parameters, face ownership, full recall, strategy or historical color placement. Empty metadata is not absence of mechanics. No follow-on task is authorized or started.

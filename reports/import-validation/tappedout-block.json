@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-18",
+  "change": "Recognized TappedOut CSV imports are blocked in the shared local parser with TXT/alternative-export guidance; no set translation or printing substitution.",
+  "offlineVerification": {
+    "command": "node --test",
+    "passed": 209,
+    "failed": 0,
+    "log": "tappedout-block-tests.txt",
+    "coverage": [
+      "All eight original TappedOut CSV fixtures are rejected; fixture byte/hash checks pass.",
+      "All eight matching TXT fixtures remain parseable without invented commander roles.",
+      "Reordered/case-normalized headers still detect the blocked format; generic CSV and Helvault remain supported.",
+      "Actual paste, file and drop handlers reject before provider transport and preserve loaded deck, context and mechanic selection.",
+      "CSV renamed to .txt remains blocked by content detection."
+    ]
+  },
+  "browserVerification": {
+    "url": "http://127.0.0.1:4174/",
+    "input": "Synthetic 100-Forest TappedOut-shaped CSV; built-in synthetic demo loaded beforehand.",
+    "observed": "The preview and Import action show the block and TXT guidance; the existing synthetic deck remains visible and the workbench remains open.",
+    "screenshot": "tappedout-block-browser.png",
+    "session": "Isolated temporary tab; existing user tab untouched."
+  },
+  "liveScryfallVerification": "Not run for this change: rejection happens locally before provider requests. Earlier live reports describe behavior before this format block.",
+  "limitation": "Detection uses the recognized Board/Printing/Commander header combination. Arbitrarily transformed exports cannot be attributed to TappedOut reliably."
+}

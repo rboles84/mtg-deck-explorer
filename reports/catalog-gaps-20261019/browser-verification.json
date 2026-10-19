@@ -1,0 +1,19 @@
+{
+  "reviewedOn": "2026-10-19",
+  "origin": "http://127.0.0.1:4179",
+  "isolation": "Temporary review server and browser tab; primary app port and its stored user data were not used.",
+  "method": "Real browser interactions against the final local implementation; public card data resolved through the existing import and search paths.",
+  "checks": [
+    {"name": "First import", "result": "pass", "evidence": "100 cards in six entries; Othelm, Sigardian Outcast, Lymph Sliver, Virulent Sliver, Counterspell, The Soul Stone and Forest resolved. Existing WG color-identity warnings remained."},
+    {"name": "Absorb detection and rule reference", "result": "pass", "evidence": "Lymph Sliver appeared under Absorb; exact source slice absorb 1 at oracle_text offset 26; numbered CR 702.64a, b and c displayed.", "screenshot": "browser-absorb.png"},
+    {"name": "Poisonous search", "result": "pass", "evidence": "Manual Commander WG search returned Virulent Sliver; the outside-identity black card was excluded."},
+    {"name": "Printing and Clipboard preservation", "result": "pass", "evidence": "Inspected SLD 659Φ discovery printing, saved one copy, observed Save another copy and 1 copy in Clipboard while the dialog remained open. Imported TSR 246 printing remained unchanged. Escape closed the dialog and restored focus to Inspect discovery card."},
+    {"name": "Friends forever reference", "result": "pass", "evidence": "Friends forever and Partner remained separate labels; Friends forever displayed the current CR 702.124i clause."},
+    {"name": "Second import", "result": "pass", "evidence": "100 cards in five entries; Othelm, Sigardian Outcast, Seven of Nine, Borg Queen, Perfection Manifest, Etali, Primal Garden and Forest resolved. Actualize, Assimilate and Face a dilemma appeared."},
+    {"name": "Unverified official definition stays explicit", "result": "pass", "evidence": "Actualize showed CARD LABEL · OFFICIAL SOURCE UNVERIFIED and a Scryfall card example link to Etali, Primal Garden. No general official definition was supplied.", "screenshot": "browser-actualize.png"},
+    {"name": "Zero results do not widen the search", "result": "pass", "evidence": "Manual Actualize search retained Commander WG restrictions and returned No compatible Actualize cards found; the imported exclusion was explained."},
+    {"name": "Published Star Trek reference", "result": "pass", "evidence": "Face a dilemma showed Seven of Nine and an expanded Wizards reference linking Collecting Magic: The Gathering® | Star Trek™: A First Look, section The Mechanics of Magic: The Gathering | Star Trek.", "screenshot": "browser-star-trek.png"},
+    {"name": "Browser console", "result": "pass", "evidence": "Final query for warning/error messages returned an empty array.", "messages": []}
+  ],
+  "limits": "Browser checks are representative interaction checks. All 42 detection/search cases, 373-name reconciliation, all 32 commander-color subsets and source integrity are covered separately by retained automated verification; this is not a claim that every interaction or future card was manually tested."
+}

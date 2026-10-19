@@ -1,0 +1,121 @@
+--- before/public/app.mjs
++++ after/public/app.mjs
+@@ -294,7 +294,7 @@
+     detected.append(node('p',`${found.length} card labels reported by ${importedDeck.synthetic?'the demo':'Scryfall'} · ${c.copies} cards in your imported main deck.`, 'mechanics-summary'));
+     detected.append(node('p',`${c.reportedEntries} of ${c.entries} imported entries have usable label data (${c.reportedCopies} of ${c.copies} copies). ${c.entries-c.resolvedEntries} unresolved entries. This list may not include every mechanic.`, 'fine'));
+     detected.append(node('p',importedDeck.synthetic?'These sample cards and labels come from the demo.':'Your import determines which cards appear here. Scryfall supplies their mechanic labels; the linked rules explain those terms.','fine'));
+-    const coverage=append(node('details',undefined,'technical-details'),node('summary','Technical evidence'));
++    const coverage=append(node('details',undefined,'technical-details'),node('summary','Import record details'));
+     coverage.append(node('p',`${c.resolvedEntries} resolved entries; ${c.missingEntries} missing and ${c.malformedEntries} malformed keyword arrays; ${c.emptyEntries} empty arrays. Empty or unreported labels do not mean a card has no mechanics. Distinct cards are counted by Oracle identity; copies count imported quantities.${c.missingOracleEntries?` ${c.missingOracleEntries} entries lack Oracle IDs and are counted by printing instead.`:''}`, 'fine'));
+     detected.append(coverage);
+   }
+@@ -327,10 +327,9 @@
+     deckCards.append(node('p',importedDeck.synthetic?'Demo labels · invented sample cards':'Reported by Scryfall','source-chip'));
+     deckCards.append(node('p',importedDeck.synthetic?'These sample cards carry this label in the demo.':'These cards are in your imported deck, and Scryfall lists this label for them. Open a card to read its rules; the label alone does not explain what the card does or which face uses it.','fine'));
+     if(!item.audited)deckCards.append(node('p','Additional Scryfall label · not yet matched to our reviewed list.','fine'));
+-    const source=append(node('details',undefined,'technical-details'),node('summary','Technical evidence'));
++    const source=append(node('details',undefined,'technical-details'),node('summary','Source record details'));
+     source.append(node('p',`Source field: keywords[]. Relationship: provider_reports. No possession, grant, reference, parameter or face attribution is inferred. ${item.audited?`Exact label observed in the ${mechanicIndex.vocabularyVersion} audit; this verifies vocabulary, not complete rules detection.`:'Unmapped term; not certified by the pinned vocabulary.'}`,'fine'));
+     if(item.classification?.category==='other provider-reported term')source.append(node('p',`Classification retained without harmonizing: source ${item.classification.sourceCategories.join(', ')||'unclassified'}; provider catalog ${item.classification.providerCategories.join(', ')||'unlisted'}.`,'fine'));
+-    deckCards.append(source);
+     const grid=node('div',undefined,'deck-card-grid');
+     const printingRows=new Map();
+     for(const member of item.cards)for(const row of member.rows){if(!printingRows.has(row.printingId))printingRows.set(row.printingId,[]);printingRows.get(row.printingId).push(row);}
+@@ -339,16 +338,15 @@
+       const tile=node('article',undefined,'visual-card');append(tile,cardVisual(card,{synthetic:importedDeck.synthetic}),cardHeading(card,undefined,importedDeck.synthetic),printingMeta(card));
+       const copies=rows.reduce((n,r)=>n+r.quantity,0);
+       tile.append(node('p',`${copies} ${copies===1?'copy':'copies'} in your deck`,'fine'));
+-      tile.append(node('p',importedDeck.synthetic?`Why this appears: ${card.name} is a sample card with the demo label ${item.label}.`:`Why this appears: ${card.name} is in your imported deck. Scryfall lists ${item.label} for this card.`,'fine'));
+       tile.append(node('p',`Imported lines: ${rows.map(r=>r.lineNumber).join(', ')}`,'fine'));
+       if(card.scryfall_uri)tile.append(externalLink('Exact printing on Scryfall ↗',card.scryfall_uri));
+-      const proof=append(node('details',undefined,'technical-details'),node('summary','Technical evidence'));
++      const proof=append(node('section'),node('h4',card.name),printingMeta(card));
+       for(const row of rows)for(const occurrence of row.occurrences)proof.append(node('p',`keywords[${occurrence.index}] = ${JSON.stringify(occurrence.spelling)}`,'mono'));
+       append(proof,node('p',`Oracle ID: ${card.oracle_id||'unavailable'} · Printing ID: ${id}`,'mono'),node('p',`Import rows: ${rows.map(r=>r.rowId).join(', ')}. Metadata applies to the whole card; no face attribution.`, 'fine'));
+-      tile.append(proof);
++      source.append(proof);
+       grid.append(tile);
+     }
+-    deckCards.append(grid);
++    deckCards.append(grid,source);
+   }else deckCards.append(node('p','This optional search looks for other cards. It does not add a mechanic to your deck’s list. Scryfall labels may be incomplete.','fine'));
+   if(!record){
+     context.append(deckCards,node('p',catalog?'No reviewed discovery search or historical color placement is linked to this label.':'External searches and historical color placements are unavailable. You can still inspect your imported cards.','fine'));
+--- before/tests/mechanics-ui.test.mjs
++++ after/tests/mechanics-ui.test.mjs
+@@ -124,29 +124,45 @@
+   assert.ok(!h.$('mechanic-list').textContent.includes('Deathtouch'));
+ });
+ 
+-test('plain source explanations keep raw evidence collapsed and expose the exact imported printing link',()=>{
++test('one explanation precedes cards and raw evidence stays in one closed section below them',()=>{
+   const h=renderHarness();h.ui.choose('food');
+   const context=h.$('mechanic-context'),summary=h.$('detected-list');
+   const plainText=n=>n.className.split(' ').includes('technical-details')?'':(n.text||'')+n.children.map(plainText).join('');
+   assert.match(plainText(summary),/Your import determines which cards appear here\. Scryfall supplies their mechanic labels/);
+-  assert.match(plainText(context),/Why this appears: Cache Grab is in your imported deck\. Scryfall lists Food for this card\./);
++  assert.equal(plainText(context).split('These cards are in your imported deck, and Scryfall lists this label for them.').length-1,1);
++  assert.doesNotMatch(context.textContent,/Why this appears:/);
+   assert.match(plainText(context),/Additional Scryfall label/);
+   for(const root of [summary,context]){
+     assert.doesNotMatch(plainText(root),/keywords\[|provider_reports|Oracle ID:|Printing ID:|pinned vocabulary|audit status/);
+     const panels=root.querySelectorAll('.technical-details');assert.ok(panels.length);
+-    for(const panel of panels){assert.equal(panel.open,false);assert.equal(panel.querySelector('summary').textContent,'Technical evidence');}
+-  }
++    for(const panel of panels){assert.equal(panel.open,false);assert.equal(panel.querySelector('summary').textContent,root===summary?'Import record details':'Source record details');}
++  }
++  const evidence=context.querySelector('.technical-details'),cards=context.querySelector('.mechanic-deck-cards'),grid=context.querySelector('.deck-card-grid');
++  assert.equal(context.querySelectorAll('.technical-details').length,1);
++  assert.equal(cards.children.at(-1),evidence);
++  assert.equal(cards.children.at(-2),grid);
+   const sourceDeck=deck('dionus');
+   for(const tile of context.querySelectorAll('.visual-card')){
+     const link=tile.querySelector('a');assert.ok(link);
+     const rows=sourceDeck.rows.filter(r=>r.card?.scryfall_uri===link.getAttribute('href'));assert.ok(rows.length);
+     assert.equal(link.parent,tile);
+     assert.match(plainText(tile),new RegExp(`Imported lines: ${rows.map(r=>r.lineNumber).join(', ')}`));
+-    assert.match(tile.querySelector('.technical-details').textContent,/keywords\[/);
+-    assert.ok(tile.querySelector('.technical-details').textContent.includes(rows[0].card.id));
++    assert.equal(tile.querySelector('.technical-details'),null);
++    assert.match(evidence.textContent,/keywords\[/);
++    assert.ok(evidence.textContent.includes(rows[0].card.id));
+   }
+   assert.match(context.textContent,/Relationship: provider_reports/);
+   assert.match(context.textContent,/not certified by the pinned vocabulary/);
++  h.ui.choose('crew');
++  const crewEvidence=h.$('mechanic-context').querySelector('.technical-details');
++  assert.equal(h.$('mechanic-context').querySelectorAll('.technical-details').length,1);
++  const crewCards=h.$('mechanic-context').querySelectorAll('.visual-card');assert.ok(crewCards.length>1);
++  for(const tile of crewCards){
++    assert.equal(tile.querySelector('.technical-details'),null);
++    const row=sourceDeck.rows.find(r=>r.card?.scryfall_uri===tile.querySelector('a').getAttribute('href'));
++    const proof=crewEvidence.querySelectorAll('section').find(s=>s.textContent.includes(row.card.id));
++    assert.ok(proof);assert.equal(proof.querySelector('h4').textContent,row.card.name);
++  }
+   assert.equal(h.searches.length,0);
+ });
+ 
+--- before/reports/mechanics-integration/IMPLEMENTATION_REPORT.md
++++ after/reports/mechanics-integration/IMPLEMENTATION_REPORT.md
+@@ -1,6 +1,20 @@
+ # Dynamic mechanics — owner-review candidate
+ 
+-## Latest revision: approved Retest03 wording fix — 2026-10-17
++## Latest revision: source placement follow-up — 2026-10-17
++
++**Exit: PARTIAL. Code: PASS. Automated: PASS (125/125). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** The owner's two refreshed screenshots confirmed the earlier wording was loaded, but showed a duplicated explanation and raw evidence interrupting the reading flow. This section supersedes the previous wording retest.
++
++Kept the explanation above the contributing cards and removed the repeated “Why this appears” sentence from every tile. Consolidated mechanic-level and per-printing evidence into one closed **Source record details** section immediately below the card grid. Each record retains its card name, printing metadata, exact keyword occurrences, Oracle/printing IDs and import-row references. Quantity, imported line and exact-printing link remain on each card. The separate deck-wide diagnostic disclosure is now labeled **Import record details**. Evidence, unmapped status and label limitations are retained; only presentation changed.
++
++Blast radius: **low**, limited to `public/app.mjs` mechanics rendering, its existing test in `tests/mechanics-ui.test.mjs`, and this report. Search, import, Clipboard, shared card viewer, exact-printing resolution and frozen sources are unchanged. No new rules, searches or source mappings. Gate 0 remains **RESEARCH_PARTIAL**. No applicable AGENTS.md found; no Git repository is present, so before copies and an [incremental diff](retest03-source-placement/candidate.diff) record the change.
++
++Baseline **125/125 PASS** and final **125/125 PASS**, zero failures/skips ([baseline](retest03-source-placement/tests-baseline.txt), [final](retest03-source-placement/tests-final.txt)). The updated renderer check covers a single explanation, evidence after the grid, one closed disclosure, retained exact-printing links/IDs, and per-card evidence grouping for Food and Crew; no search is triggered. App syntax check passed. Preservation check confirms **250 protected files unchanged**; hashes also confirm **19 additional app/workbook files unchanged**, including search/server, Clipboard and printing/viewer logic. [Verification and hashes](retest03-source-placement/verification.json). Source versions/hashes remain those recorded below. No browser/headless run, live Scryfall call, download, server restart or deployment. Confidence: **9/10 for scoped code behavior; visual acceptance pending**.
++
++**Only owner retest:** Ctrl+F5, then Dionus → Food. Confirm the explanation appears once above the card, no explanation or raw evidence appears inside its tile, and **Source record details** is closed below the card list (expand it to see the retained records). No other retesting requested.
++
++---
++
++## Previous revision: approved Retest03 wording fix — 2026-10-17
+ 
+ **Exit: PARTIAL. Code: PASS. Automated: PASS (125/125). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** Reviewed all four completed Retest03 tabs, notes and its one embedded screenshot: rules disclosure marked Issue for source jargon, with its other behavior reported fine; Eternity Gate, single-sided parts and shared viewer smoke check marked Passed. This revision addresses only that wording issue. Previous browser results remain owner-reported evidence.
+ 

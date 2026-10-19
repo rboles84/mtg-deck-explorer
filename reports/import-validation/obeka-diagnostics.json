@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-18T14:02:12.780Z",
+  "checks": [
+    {
+      "operation": "collection",
+      "status": 200,
+      "not_found": [
+        {
+          "name": "Black Panther's Claws"
+        },
+        {
+          "name": "Exclusive Nightclub"
+        },
+        {
+          "name": "Spectral Restitching"
+        }
+      ],
+      "cards": []
+    },
+    {
+      "operation": "exact-name",
+      "requested": "Black Panther's Claws",
+      "status": 200,
+      "card": {
+        "id": "e1aae864-cad1-48b2-bb33-8c2dbb53f5ec",
+        "name": "Hammer of Nazahn",
+        "flavor_name": "Black Panther's Claws",
+        "oracle_id": "e3955573-3db5-490e-903e-65e0172a9202",
+        "set": "msc",
+        "collector_number": "286",
+        "lang": "en",
+        "scryfall_uri": "https://scryfall.com/card/msc/286/hammer-of-nazahn?utm_source=api"
+      }
+    },
+    {
+      "operation": "exact-name",
+      "requested": "Exclusive Nightclub",
+      "status": 404,
+      "details": "No cards found matching “Exclusive Nightclub”"
+    },
+    {
+      "operation": "exact-name",
+      "requested": "Spectral Restitching",
+      "status": 404,
+      "details": "No cards found matching “Spectral Restitching”"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-19T01:31:16.261Z",
+  "browser": "ChatGPT in-app browser",
+  "site": "http://127.0.0.1:58149/",
+  "mixedDeck": "Commander\n1 Kenrith, the Returned King\n\nDeck\n1 Arlinn, the Pack's Hope\n1 Everflowing Chalice\n1 Basking Capybara\n1 Shoreline Ranger\n1 Rose Tyler\n1 Cid, Freeflier Pilot\n1 Direct Current\n92 Island",
+  "directCurrentOnlyDeck": "Commander\n1 Kenrith, the Returned King\n\nDeck\n1 Arlinn, the Pack's Hope\n1 Everflowing Chalice\n1 Basking Capybara\n1 Shoreline Ranger\n1 Rose Tyler\n1 Direct Current\n93 Island",
+  "checks": {
+    "imports": [
+      "100 cards; 9/9 resolved; 0 unresolved",
+      "100 cards without Cid; 8/8 resolved; 0 unresolved"
+    ],
+    "rules": [
+      "Multikicker: 702.33c–e and 601.2b cross-reference preview",
+      "Descend: official threshold excerpt and general ability-word rule 207.2c",
+      "Doctor's companion: 702.124m–n",
+      "Jump-start: 702.133a"
+    ],
+    "liveSearches": {
+      "Multikicker": 19,
+      "Descend": 17,
+      "Jump-start": 12
+    },
+    "jump": [
+      "Mixed deck: Cid-only scope explicitly shown; both contributing cards visible; no generic Jump search",
+      "Direct Current-only: no Cid citation; card stays available; Jump-start rules/search work"
+    ],
+    "links": [
+      "Pinned Wizards Comprehensive Rules TXT opened",
+      "Ixalan article opened; Descend threshold section verified",
+      "FINAL FANTASY release notes opened; named Cid paragraph read in rendered DOM",
+      "Open on Scryfall link opened; exact Jump-start query and 12 results matched the app"
+    ],
+    "cardViewer": "Comet Storm opened with image, current Oracle text and mana symbols; closed successfully; Clipboard remained empty"
+  },
+  "sourcePageObservation": "Wizards raw TXT page displayed garbled punctuation in this browser. App-rendered rule text and article/card references displayed correctly. No wider browser investigation performed."
+}

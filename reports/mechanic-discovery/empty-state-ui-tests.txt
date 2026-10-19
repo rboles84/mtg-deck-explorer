@@ -1,0 +1,57 @@
+✔ exclusions use confirmed legality and identity for any imported mechanic, including both reasons (1.4574ms)
+✔ missing metadata, unknown identity and compatible cards do not invent exclusion reasons (0.2164ms)
+✔ contributor diagnostics exclude sideboards, other labels and unresolved rows, and deduplicate printings (0.1708ms)
+✔ successful Devoid zero result explains confirmed colorless identity and links the unchanged exact query (8.0966ms)
+✔ Underdog uses confirmed imported-card exclusions and results do not repeat the Find panel (13.5504ms)
+✔ every mapped mechanic has a clear zero state without inventing an exclusion when no evidence exists (8.5759ms)
+✖ search coverage renders supported symbols and preserves unknown notation as readable text (3.5205ms)
+✔ official rule text renders mana symbols while preserving cross-reference links (9.6321ms)
+✔ Devoid explanation requires a zero total and an explicit colorless response identity (6.9123ms)
+✔ failed Devoid searches show errors without the no-results explanation or an automatic retry (2.6529ms)
+✔ failed Devoid pagination preserves the last page and shows an error, not an empty result (1.3954ms)
+✔ definition links resolve only exact reviewed headings at the pinned revision (4.4546ms)
+✔ main navigation exactly follows imported labels without a second mechanic list (4.1536ms)
+✔ rules, evidence disclosures and unknown labels work independently of search support (5.9867ms)
+✔ one explanation precedes cards and raw evidence stays in one closed section below them (7.7705ms)
+✔ rendered deck replacement clears old selection and does not duplicate the long label list (11.35ms)
+✔ missing catalog or rules cannot hide imported cards, and partial resolution stays disclosed (5.1373ms)
+✔ all 296 audited labels render and dispatch Find without rules or historical placement, with no prefetch (59.4809ms)
+✔ detail viewer retains assumed versus supplied entry context for the same printing (2.6765ms)
+✔ actual detail handler flips exact face art, rules and flavor together without mutating printing or save action (1.1667ms)
+✔ flipping to a missing face image keeps its text and never borrows the other face art (0.7828ms)
+✔ Food and flavor-word references require exact retained clauses and never certify keywords (77.3646ms)
+✔ Eternity Gate keeps evidence cards and source status without duplicate inline Oracle text (2.9646ms)
+✔ contextual history precedes evidence; Surveil search is independent of historical placement (5.789ms)
+✔ all available rule panels start collapsed and Food renders only its three requested clauses (19.146ms)
+✔ retained Adventure, flip and split printings show both parts with one image and no turn control (4.565ms)
+✔ modal DFC preserves real front/back rendering; unknown layouts do not invent a reverse side (3.1353ms)
+✔ mana token rendering covers actual costs and preserves unsupported syntax without HTML parsing (1.7262ms)
+✔ every emitted mana glyph exists in the pinned CSS (4.286ms)
+✔ set symbols use exact known set codes and preserve unknown codes without aliases (1.9684ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 29
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 432.5789
+
+✖ failing tests:
+
+test at tests\mechanics-ui.test.mjs:166:1
+✖ search coverage renders supported symbols and preserves unknown notation as readable text (3.5205ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  22 !== 21
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/mechanics-ui.test.mjs:171:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 22,
+    expected: 21,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,754 @@
+--- before/public/app.mjs
++++ public/app.mjs
+@@ -311,12 +311,12 @@
+   context.querySelector('h2').tabIndex=-1;context.querySelector('h2').dataset.mechanicFocus='context-title';
+   const ruleNumber=mechanicRule(rulesData,item.label);
+   const explanation=mechanicExplanation(rulesData,item.label);
+-  if(ruleNumber){const rules=node('section',undefined,'rules-card');
+-    append(rules,append(node('div',undefined,'rules-heading'),node('h3','How it works')),ruleBody(rulesData,ruleNumber,{onOpen:showRule}),node('p','Comprehensive Rules · September 25, 2026. These explain the mechanic; open each card for its specific rules.','fine'));context.append(rules);
++  if(ruleNumber){const rules=node('details',undefined,'rules-card');
++    append(rules,node('summary','Read rules · '+item.label),ruleBody(rulesData,ruleNumber,{onOpen:showRule}),node('p','Comprehensive Rules · September 25, 2026. These explain the mechanic; open each card for its specific rules.','fine'));context.append(rules);
+   }else if(explanation){
+-    const rules=node('section',undefined,'rules-card');
+-    append(rules,node('h3',explanation.title),node('p',explanation.summary));
+-    for(const number of explanation.rules)rules.append(ruleBody(rulesData,number,{onOpen:showRule}));
++    const rules=node('details',undefined,'rules-card');
++    append(rules,node('summary',explanation.title+' · Read rules'),node('p',explanation.summary));
++    for(const number of explanation.rules)rules.append(ruleBody(rulesData,number,{onOpen:showRule,clauseOnly:true}));
+     rules.append(node('p','Comprehensive Rules · September 25, 2026. Explanatory references only; provider-label audit status is unchanged.','fine'));
+     context.append(rules);
+   }else context.append(node('p','No linked explanation is available in this rules reference. Open a card below to read its rules.','fine'));
+@@ -344,17 +344,6 @@
+       append(proof,node('p',`Oracle ID: ${card.oracle_id||'unavailable'} · Printing ID: ${id}`,'mono'),node('p',`Import rows: ${rows.map(r=>r.rowId).join(', ')}. Metadata applies to the whole card; no face attribution.`, 'fine'));
+       if(card.scryfall_uri)proof.append(externalLink('Exact printing on Scryfall ↗',card.scryfall_uri));
+       tile.append(proof);
+-      if(explanation?.showCardText){
+-        const text=node('section',undefined,'mechanic-card-text');
+-        text.append(node('h4','Current Oracle text · Scryfall'));
+-        const faces=card.card_faces?.length?card.card_faces:[card];
+-        for(const face of faces){
+-          if(faces.length>1)text.append(node('h5',face.name));
+-          text.append(node('p',face.oracle_text||'Oracle text unavailable.','mechanic-oracle-text'));
+-        }
+-        text.append(node('p','Full card text, not an extracted or inferred relationship.','fine'));
+-        tile.append(text);
+-      }
+       grid.append(tile);
+     }
+     deckCards.append(grid);
+--- before/public/mechanic-rules.mjs
++++ public/mechanic-rules.mjs
+@@ -37,8 +37,8 @@
+     rules:['111.10b','111.10','205.3g'],
+   }:key==='eternity gate'?{
+     title:'Eternity Gate: a flavor word',
+-    summary:'Eternity Gate labels a card-specific ability; it has no independent rules meaning. Read the contributing card’s full Oracle text below. This reference explains flavor words, not a separate Eternity Gate keyword rule.',
+-    rules:['207.2d'], showCardText:true,
++    summary:'Eternity Gate labels a card-specific ability; it has no independent rules meaning. Open a contributing card to read its Oracle text. This reference explains flavor words, not a separate Eternity Gate keyword rule.',
++    rules:['207.2d'],
+   }:null;
+   return explanation?.rules.every(number=>data.rules?.[number]?.text===EXPLANATORY_RULES[number])?explanation:null;
+ }
+--- before/public/rules-ui.mjs
++++ public/rules-ui.mjs
+@@ -9,8 +9,8 @@
+   recoveryFrame=requestAnimationFrame(()=>{const rect=focused.getBoundingClientRect();if(document.activeElement===focused&&focused.matches(':focus-visible')&&rect.bottom>0&&rect.top<innerHeight)referenceActions.get(focused).show();});
+ }
+ function sectionFor(data,number){return data?.sections?.[number]|| (data?.rules?.[number]?{title:'Rule '+number,paragraphs:[data.rules[number]]}:null);}
+-export function ruleBody(data,number,{references=true,onOpen}={}){
+-  const section=sectionFor(data,number),body=el('div',undefined,'rules-body');
++export function ruleBody(data,number,{references=true,onOpen,clauseOnly=false}={}){
++  const section=clauseOnly?(data?.rules?.[number]?{paragraphs:[data.rules[number]]}:null):sectionFor(data,number),body=el('div',undefined,'rules-body');
+   if(!section){body.append(el('p','This rule is not available in the local rules reference.'));return body;}
+   for(const part of section.paragraphs){const p=el('p');p.append(el('strong',part.number+' '));
+     const text=part.text||'';let cursor=0;
+--- before/public/card-preview.mjs
++++ public/card-preview.mjs
+@@ -3,6 +3,7 @@
+ const CARD_IMAGE_PATH = /^\/(normal|small|large)\/(front|back)\/[a-f0-9]\/[a-f0-9]\/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\.(jpg|png|webp)$/i;
+ const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
+ const SHARED_IMAGE_LAYOUTS = new Set(['split', 'flip', 'adventure']);
++const SEPARATE_SIDE_LAYOUTS = new Set(['transform', 'modal_dfc', 'double_faced_token', 'reversible_card', 'art_series']);
+ const FRAME_COLORS = Object.freeze({W: '#d6caa0', U: '#7faabd', B: '#a699b5', R: '#c98b75', G: '#9bb68d'});
+ const triggerCards = new WeakMap();
+ let installed = false, preview, detailDialog, detailBody, detailTitle;
+@@ -14,6 +15,11 @@
+ /** The original objects remain untouched, including deeply frozen imported cards. */
+ export function getCardFaces(card) {
+   return Array.isArray(card?.card_faces) && card.card_faces.length ? card.card_faces : [card || {}];
++}
++
++/** Multiple provider parts alone do not establish a physical reverse side. */
++export function hasSeparateCardSides(card) {
++  return getCardFaces(card).length > 1 && SEPARATE_SIDE_LAYOUTS.has(card?.layout);
+ }
+ 
+ /** Use only this printing's supplied art. Missing DFC faces never borrow another face. */
+@@ -210,7 +216,7 @@
+   if (face.type_line || card.type_line) copy.append(element('p', 'card-preview-type', face.type_line || card.type_line));
+   copy.append(element('span', 'card-preview-rules-label', synthetic ? 'Authored sample rules' : 'Current Oracle text'));
+   copy.append(symbolText(face.oracle_text || card.oracle_text || 'Rules text is not available for this printing.', 'card-preview-rules'));
+-  if (getCardFaces(card).length > 1) copy.append(element('span', 'card-preview-face-note', `${getCardFaces(card).length} faces · inspect to switch`));
++  if (getCardFaces(card).length > 1) copy.append(element('span', 'card-preview-face-note', hasSeparateCardSides(card)?`${getCardFaces(card).length} faces · inspect to switch`:`${getCardFaces(card).length} parts · inspect to read`));
+   copy.append(element('span', 'card-preview-hint', 'Click or press Enter to inspect'));
+   preview.replaceChildren(cardArt(card, 0, synthetic, true), copy);
+   applyColorFrame(preview, card);
+@@ -371,26 +377,35 @@
+   const copy = element('div', 'card-details-copy');
+   const faceContent = element('div', 'card-face-content');
+   faceContent.setAttribute('aria-live', 'polite'); faceContent.setAttribute('aria-atomic', 'true');
++  const separateSides = hasSeparateCardSides(card);
+   let selectedFace = 0, flipButton;
+-  const showFace = index => {
+-    selectedFace = index;
+-    const face = faces[index];
+-    artHost.replaceChildren(cardArt(card, index, synthetic));
+-    faceContent.replaceChildren();
+-    if (faces.length > 1) faceContent.append(element('p', 'card-face-position', `Face ${index + 1} of ${faces.length}`), element('h3', 'card-face-name', face.name || `Face ${index + 1}`));
+-    if (face.mana_cost || (!card.card_faces && card.mana_cost)) faceContent.append(symbolText(face.mana_cost || card.mana_cost, 'card-details-mana'));
+-    if (face.type_line || card.type_line) faceContent.append(element('p', 'card-details-type', face.type_line || card.type_line));
+-    faceContent.append(element('p', 'card-details-rules-label', synthetic ? 'Authored sample rules' : 'Current Oracle text'));
+-    faceContent.append(symbolText(face.oracle_text || (!card.card_faces && card.oracle_text) || 'Rules text is not available for this face.', 'card-details-oracle'));
++  const renderPart = (face, index) => {
++    const part = element('section', 'card-details-part');
++    if (faces.length > 1) {
++      if (separateSides) part.append(element('p', 'card-face-position', `Face ${index + 1} of ${faces.length}`));
++      part.append(element('h3', 'card-face-name', face.name || `Part ${index + 1}`));
++    }
++    if (face.mana_cost || (!card.card_faces && card.mana_cost)) part.append(symbolText(face.mana_cost || card.mana_cost, 'card-details-mana'));
++    if (face.type_line || card.type_line) part.append(element('p', 'card-details-type', face.type_line || card.type_line));
++    part.append(element('p', 'card-details-rules-label', synthetic ? 'Authored sample rules' : 'Current Oracle text'));
++    part.append(symbolText(face.oracle_text || (!card.card_faces && card.oracle_text) || 'Rules text is not available for this face.', 'card-details-oracle'));
+     const stats = [];
+     if (face.power != null && face.toughness != null) stats.push(`${face.power} / ${face.toughness}`);
+     if (face.loyalty != null) stats.push(`Loyalty ${face.loyalty}`);
+     if (face.defense != null) stats.push(`Defense ${face.defense}`);
+-    if (stats.length) faceContent.append(element('p', 'card-details-stats', stats.join(' · ')));
++    if (stats.length) part.append(element('p', 'card-details-stats', stats.join(' · ')));
+     const flavor = face.flavor_text || (!card.card_faces && card.flavor_text);
+-    faceContent.append(element('blockquote', 'card-details-flavor', flavor || 'This face has no supplied flavor text.'));
++    part.append(element('blockquote', 'card-details-flavor', flavor || 'This face has no supplied flavor text.'));
+     const artist = face.artist || card.artist;
+-    if (artist) faceContent.append(element('p', 'card-details-artist', `Illustrated by ${artist}`));
++    if (artist) part.append(element('p', 'card-details-artist', `Illustrated by ${artist}`));
++    return part;
++  };
++  const showFace = index => {
++    selectedFace = index;
++    artHost.replaceChildren(cardArt(card, index, synthetic));
++    faceContent.replaceChildren();
++    if (separateSides) faceContent.append(renderPart(faces[index], index));
++    else faces.forEach((face, partIndex) => faceContent.append(renderPart(face, partIndex)));
+     if (flipButton) {
+       const next = faces[(index + 1) % faces.length];
+       flipButton.setAttribute('aria-label', `Show ${next.name || 'next face'}`);
+@@ -398,7 +413,7 @@
+     }
+   };
+   artFrame.append(artHost); artColumn.append(artFrame);
+-  if (faces.length > 1) {
++  if (separateSides) {
+     flipButton = element('button', 'card-face-flip', '↻');
+     flipButton.type = 'button';
+     flipButton.addEventListener('click', () => showFace((selectedFace + 1) % faces.length));
+--- before/public/refinement.css
++++ public/refinement.css
+@@ -667,6 +667,7 @@
+   .card-visual, .visual-card .save-card, .rule-popover { animation: none; transition: none; }
+ }
+ 
+-.mechanic-card-text{text-align:left;margin-top:16px}
+-.mechanic-card-text h4{margin:0 0 8px}
+-.mechanic-oracle-text{white-space:pre-wrap;overflow-wrap:anywhere}
++
++.rules-card > summary{cursor:pointer;min-height:44px;align-content:center;color:#f4eedf;font:20px/1.5 var(--serif)}
++.rules-card > summary:focus-visible{outline:2px solid var(--card-accent);outline-offset:4px}
++.rules-card:not([open]){padding-top:8px;padding-bottom:8px}
+--- before/public/card-preview.css
++++ public/card-preview.css
+@@ -90,3 +90,5 @@
+ @media(max-width:640px){.card-details-dialog{width:calc(100vw - 20px);max-width:calc(100vw - 20px);max-height:calc(100dvh - 20px);border-radius:10px}.card-details-header{padding:18px;gap:16px}.card-details-header h2{font-size:26px}.card-details-body{grid-template-columns:1fr;gap:24px;padding:20px}.card-details-art-column{width:min(100%,310px);margin:auto}.card-details-oracle{font-size:15px}.card-details-flavor{font-size:19px}.card-hover-preview{grid-template-columns:104px minmax(0,1fr);gap:12px;padding:13px;width:min(360px,calc(100vw - 24px))}.card-preview-name{font-size:18px}.card-preview-rules{-webkit-line-clamp:5}.card-preview-type{font-size:11px}.card-preview-kicker{font-size:9px}.card-art-compact .card-art-placeholder>span:last-child{display:none}}
+ @media(prefers-reduced-motion:no-preference){.card-trigger{transition:color .15s,text-decoration-color .15s}.card-details-dialog[open]{animation:card-dialog-enter .16s ease-out}.card-art-image{transition:opacity .12s}@keyframes card-dialog-enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}}
+ @media(prefers-reduced-motion:reduce){.card-details-dialog[open],.card-hover-preview,.card-art-image,.card-trigger{animation:none!important;transition:none!important}}
++
++.card-details-part + .card-details-part{margin-top:24px;padding-top:24px;border-top:1px solid var(--card-line)}
+--- before/tests/mechanics-ui.test.mjs
++++ tests/mechanics-ui.test.mjs
+@@ -4,13 +4,15 @@
+ import vm from 'node:vm';
+ import {fileURLToPath} from 'node:url';
+ import {loadCatalog} from '../lib/catalog.mjs';
++import {safeCard} from '../lib/scryfall.mjs';
+ import {indexMechanics, keywordKey} from '../public/mechanics.mjs';
+ import {parseDeck, resolveDeck, deepFreeze} from '../public/core.mjs';
+ import {mechanicRule, mechanicExplanation, MECHANIC_RULE_LINKS, RULES_REVISION} from '../public/mechanic-rules.mjs';
+-import {getCardFaces, getCardImageUrl} from '../public/card-preview.mjs';
++import {getCardFaces, getCardImageUrl, hasSeparateCardSides} from '../public/card-preview.mjs';
+ 
+ const read=path=>fs.readFileSync(new URL(path,import.meta.url),'utf8');
+ const appSource=read('../public/app.mjs'),previewSource=read('../public/card-preview.mjs');
++const rulesSource=read('../public/rules-ui.mjs');
+ const rules=JSON.parse(read('../public/rules-data.json'));
+ const catalog=await loadCatalog(fileURLToPath(new URL('..',import.meta.url)));
+ const captures=Object.fromEntries(['cosmic','dionus'].map(name=>[name,JSON.parse(read(`../reports/mechanics-integration/decks/${name}.json`))]));
+@@ -51,9 +53,12 @@
+     narrowMechanics:{matches:narrow},
+     cardVisual:card=>d.document.createTextNode(card.name),cardHeading:card=>d.document.createTextNode(card.name),printingMeta:card=>d.document.createTextNode(`${card.set}/${card.collector_number}`),
+     externalLink:label=>d.document.createTextNode(label),identitySymbols:()=>d.document.createTextNode('colors'),
+-    ruleBody:(data,n)=>{calls.push(n);return d.document.createTextNode((data.sections[n]?.paragraphs||[data.rules[n]]).map(p=>p.text).join('\n'));},
++    el:(tag,text,cls)=>{const n=d.document.createElement(tag);if(text!==undefined)n.textContent=text;n.className=cls||'';return n;},
++    ruleReference:(data,n)=>{const b=d.document.createElement('button');b.className='rule-reference';b.textContent=n;return b;},
+     showRule(){},runDiscovery(record){searches.push(record.atlas_row_id);},queryBox:record=>{const n=d.document.createElement('div');n.className='query-box';n.textContent=`Find ${record.master_name} cards`;return n;},buildVisibleQuery:()=>'',
+   });
++  vm.runInContext(`${slice(rulesSource,'function sectionFor','export function ruleReference').replace('export function ruleBody','function ruleBody')}\nglobalThis.actualRuleBody=ruleBody;`,ctx);
++  ctx.ruleBody=(data,n,options)=>{calls.push(n);return ctx.actualRuleBody(data,n,options);};
+   vm.runInContext(`
+     ${slice(appSource,'const node =','const colors =')}
+     let importedDeck=initial,mechanicIndex=indexMechanics(initial),selectedMechanicId=null,rulesData=rules;
+@@ -149,7 +154,7 @@
+   const d=dom(),body=d.$('body'),title=d.$('title'),dialog=d.$('dialog');
+   const close=d.document.createElement('button');close.className='card-details-close';dialog.append(close);
+   const element=(tag,cls,text)=>{const n=d.document.createElement(tag);n.className=cls||'';if(text!==undefined)n.textContent=text;return n;};
+-  const ctx=vm.createContext({...d,element,getCardFaces,getCardImageUrl,URL,
++  const ctx=vm.createContext({...d,element,getCardFaces,getCardImageUrl,hasSeparateCardSides,URL,
+     installCardPreviews(){},ensureDialog(){},suppress(){},closeCardPreview(){},applyColorFrame(){},
+     symbolText:(text,cls)=>element('p',cls,text),printingLabel:c=>`${c.set} ${c.collector_number}`,setSymbol:()=>element('span'),identitySymbols:()=>element('span'),safePrintingLink:()=>null,
+     cardSaveAction:action=>{const b=element('button','save','Save');b.addEventListener('click',action.onSave);return b;},
+@@ -214,25 +219,18 @@
+   assert.equal(h.searches.length,0);
+ });
+ 
+-test('Eternity Gate shows full resolved Oracle text without extracting an ability or asserting a relationship',()=>{
+-  const h=renderHarness(),card=captures.dionus.result.cards.find(c=>c.name==='Necron Monolith');
+-  h.ui.choose('eternity gate');
+-  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text').textContent,card.oracle_text);
+-  assert.match(h.$('mechanic-context').textContent,/no independent rules meaning/);
+-  assert.match(h.$('mechanic-context').textContent,/Relationship: provider_reports/);
++test('Eternity Gate keeps evidence cards and source status without duplicate inline Oracle text',()=>{
++  const h=renderHarness();h.ui.choose('eternity gate');
++  const context=h.$('mechanic-context');
++  assert.equal(context.querySelector('.mechanic-oracle-text'),null);
++  assert.equal(context.querySelector('.mechanic-card-text'),null);
++  assert.match(context.textContent,/Necron Monolith/);
++  assert.match(context.textContent,/Open a contributing card/);
++  assert.match(context.textContent,/Relationship: provider_reports/);
+   assert.ok(h.calls.includes('207.2d'));
+-  const modified=structuredClone(captures.dionus.result.cards);
+-  const current=modified.find(c=>c.id===card.id);
+-  current.oracle_text='Revised text: do not reuse a pinned attack clause.';
+-  h.ui.replace(resolveDeck(parseDeck(captures.dionus.text),modified,[]));h.ui.choose('eternity gate');
+-  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text').textContent,current.oracle_text);
+-  current.card_faces=[{name:'Front',oracle_text:'First face current text.'},{name:'Back',oracle_text:'Second face current text.'}];
+-  h.ui.replace(resolveDeck(parseDeck(captures.dionus.text),modified,[]));h.ui.choose('eternity gate');
+-  assert.deepEqual(h.$('mechanic-context').querySelectorAll('.mechanic-oracle-text').map(n=>n.textContent),current.card_faces.map(f=>f.oracle_text));
+-  assert.match(h.$('mechanic-context').textContent,/no face attribution/);
++  assert.equal(context.querySelector('.rules-card').open,false);
+   h.ui.setSources(catalog,null);
+-  assert.match(h.$('mechanic-context').textContent,/No linked explanation/);
+-  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text'),null);
++  assert.match(context.textContent,/No linked explanation/);
+   assert.equal(h.searches.length,0);
+ });
+ 
+@@ -255,3 +253,62 @@
+   h.ui.choose('deathtouch');h.ui.replace(deck('dionus'));h.ui.choose('deathtouch');
+   assert.match(context.textContent,/Choose a mechanic/);assert.equal(context.querySelector('.query-box'),null);
+ });
++
++
++test('all available rule panels start collapsed and Food renders only its three requested clauses',()=>{
++  const h=renderHarness();
++  for(const [name,capture] of Object.entries(captures)){
++    h.ui.replace(deck(name));
++    for(const term of indexMechanics(deck(name)).terms){
++      h.ui.choose(term.key);
++      const panel=h.$('mechanic-context').querySelector('.rules-card');
++      if(!panel)continue;
++      assert.equal(panel.tagName,'details');assert.equal(panel.open,false);
++      assert.equal(panel.children[0].tagName,'summary');
++      assert.ok(panel.querySelectorAll('.rules-body').length);
++    }
++  }
++  h.ui.replace(deck('dionus'));h.ui.choose('food');
++  const panel=h.$('mechanic-context').querySelector('.rules-card');
++  const paragraphs=panel.querySelectorAll('.rules-body').flatMap(n=>n.querySelectorAll('p'));
++  assert.deepEqual(paragraphs.map(p=>p.querySelector('strong').textContent),['111.10b ','111.10 ','205.3g ']);
++  assert.doesNotMatch(panel.textContent,/111\.10[aacdefghijkmnpqrstuvwx] /);
++  assert.equal((panel.textContent.match(/111\.10b /g)||[]).length,1);
++  assert.ok(panel.querySelectorAll('.rule-reference').length>0);
++  assert.equal(h.searches.length,0);
++});
++
++test('retained Adventure, flip and split printings show both parts with one image and no turn control',()=>{
++  const witnesses=JSON.parse(read('../reports/mechanics-integration/retest02-fixes/card-layout-witnesses.json'));
++  for(const raw of witnesses.cards.filter(c=>['adventure','flip','split'].includes(c.layout))){
++    const card=deepFreeze(safeCard(raw)),before=JSON.stringify(card),h=detailHarness();let saved;
++    h.open(card,null,{saveAction:{onSave(){saved=card.id;}}});
++    assert.equal(hasSeparateCardSides(card),false);
++    assert.equal(h.body.querySelector('.card-face-flip'),null);
++    assert.equal(h.body.querySelector('.card-face-position'),null);
++    assert.equal(h.body.querySelectorAll('img').length,1);
++    assert.equal(h.body.querySelector('img').src,getCardImageUrl(card,0));
++    assert.deepEqual(h.body.querySelectorAll('.card-face-name').map(n=>n.textContent),card.card_faces.map(f=>f.name));
++    assert.deepEqual(h.body.querySelectorAll('.card-details-oracle').map(n=>n.textContent),card.card_faces.map(f=>f.oracle_text));
++    assert.deepEqual(h.body.querySelectorAll('.card-details-flavor').map(n=>n.textContent),card.card_faces.map(f=>f.flavor_text||'This face has no supplied flavor text.'));
++    h.body.querySelector('.save').click();assert.equal(saved,card.id);assert.equal(h.dialog.open,true);
++    assert.equal(JSON.stringify(card),before);
++  }
++});
++
++test('modal DFC preserves real front/back rendering; unknown layouts do not invent a reverse side',()=>{
++  const raw=JSON.parse(read('../reports/mechanics-integration/retest02-fixes/card-layout-witnesses.json')).cards.find(c=>c.layout==='modal_dfc');
++  const card=deepFreeze(safeCard(raw)),h=detailHarness();h.open(card,null);
++  assert.equal(hasSeparateCardSides(card),true);
++  h.body.querySelector('.card-face-flip').click();
++  assert.equal(h.body.querySelector('img').src,getCardImageUrl(card,1));
++  assert.equal(h.body.querySelector('.card-details-oracle').textContent,card.card_faces[1].oracle_text);
++  const unknown=deepFreeze({...card,layout:'unrecognized'});h.open(unknown,null);
++  assert.equal(h.body.querySelector('.card-face-flip'),null);
++  assert.equal(h.body.querySelectorAll('.card-details-oracle').length,2);
++  const noImage=structuredClone(raw);delete noImage.image_uris;
++  noImage.layout='adventure';noImage.card_faces.forEach(f=>delete f.image_uris);
++  h.open(deepFreeze(safeCard(noImage)),null);
++  assert.equal(h.body.querySelector('img'),null);
++  assert.equal(h.body.querySelectorAll('.card-details-oracle').length,2);
++});
+--- before/README.md
++++ README.md
+@@ -62,7 +62,7 @@
+ 
+ The selected commander's actual card image is visible above the reading views. Color identity is shown with mana symbols without repeating a WUBRG label or presenting mana cost as identity. Search the commander chooser, select imported entries, and apply the selection; filtering the chooser retains selections. The Import, Read, Understand, Explore, Collect and Export controls navigate the existing session. Changing views, using browser Back/Forward, and returning to the masthead preserve the deck and reading filters.
+ 
+-Hover or keyboard-focus a card name for an exact-printing preview; click, tap or press Enter for its detail dialog. Multi-face detail dialogs have a circular face button over the art, below the printed title/mana strip, with an accessible next-face name and a visible current-face label. Switching updates the exact face art, rules and flavor together. Escape dismisses the preview or dialog, and dialogs return focus to their opener. Mana/cost symbols use locally bundled Mana; exact available set symbols use Keyrune. Unknown symbols remain readable text. Printing UUIDs are available inside contextual details rather than repeated in the reading flow.
++Hover or keyboard-focus a card name for an exact-printing preview; click, tap or press Enter for its detail dialog. Known double-faced layouts have a circular face button over the art, below the printed title/mana strip, with an accessible next-face name and a visible current-face label. Switching updates the exact face art, rules and flavor together. Adventure, split and same-side flip cards show one exact-printing image and both named text parts together, without a turn-over control. Unrecognized multipart layouts also expose their text without asserting a reverse side. Escape dismisses the preview or dialog, and dialogs return focus to their opener. Mana/cost symbols use locally bundled Mana; exact available set symbols use Keyrune. Unknown symbols remain readable text. Printing UUIDs are available inside contextual details rather than repeated in the reading flow.
+ 
+ Archive rows place edition details beside the exact flavor passages, stacking them on narrow screens. Mana costs are omitted from this reading view. Repeated-language evidence retains the dark reading dialog, with set symbols, the actual passages and highlighted matching words. Plain-language explanations lead; contextual printing details retain the exact coordinates and identifiers for inspection.
+ 
+@@ -84,7 +84,7 @@
+ 
+ Discovery requests `unique=cards` with `prefer:newest`, showing one result per distinct card using the provider's preferred newest matching printing. Results are presented in logical pages of **24 cards**, with Previous, Next and a direct page selector above and below the grid. All matching pages can be browsed; the server fetches only the provider page or pages needed for the requested view. Each candidate is checked for identity subset and reported Commander legality. Provider counts and skipped results are disclosed. An empty result is not silently broadened. A compatible search candidate is not a recommendation or a guarantee that a complete deck is legal.
+ 
+-The compact deck summary leads to one deck-derived mechanic chooser. On narrow screens it is collapsible and closes after selection; all labels remain reachable in a bounded scrolling list. Each label shows contributing exact printings, with technical fields and audit details under “Source details.” Definitions are independent of discovery permission: `public/mechanic-rules.mjs` links 28 explicitly checked labels to unchanged local September 25 rules sections, requiring the pinned revision and an exact section-title match. These explain the general mechanic, not any particular card relationship. Missing definitions remain explicit; no text parser, source regeneration or new search recipe is introduced. Rule cross-references retain their hover previews and dialogs. Food has explicit explanatory links to retained CR 111.10b, 111.10 and 205.3g; Eternity Gate links to the flavor-word rule 207.2d and displays full current Oracle text from contributing imported cards. These two links require the pinned revision and exact retained clauses; they do not promote either provider term into the audited vocabulary. Historical color placement, where reviewed, appears in a disclosure before the contributing cards for the selected mechanic; its supported search action follows the cards. Discovery presents a compact image grid with **Save** below each card. Opening a result's detail dialog also offers **Save to Clipboard**; saving keeps the dialog open, reports the saved quantity and updates the grid's saved indicator. Browsing, opening or switching result pages never collects cards automatically.
++The compact deck summary leads to one deck-derived mechanic chooser. On narrow screens it is collapsible and closes after selection; all labels remain reachable in a bounded scrolling list. Each label shows contributing exact printings, with technical fields and audit details under “Source details.” Definitions are independent of discovery permission: `public/mechanic-rules.mjs` links 28 explicitly checked labels to unchanged local September 25 rules sections, requiring the pinned revision and an exact section-title match. These explain the general mechanic, not any particular card relationship. Missing definitions remain explicit; no text parser, source regeneration or new search recipe is introduced. Rule cross-references retain their hover previews and dialogs. Food has explicit explanatory links to retained CR 111.10b, 111.10 and 205.3g; Eternity Gate links to the flavor-word rule 207.2d; its Oracle text stays in the existing card detail viewer instead of repeating below its evidence tile. Rule panels start collapsed and can be opened with their summary. Explanatory links render only the requested numbered clauses, so Food does not expand unrelated token subrules; deeper cross-references retain their existing previews/dialogs. These two links require the pinned revision and exact retained clauses; they do not promote either provider term into the audited vocabulary. Historical color placement, where reviewed, appears in a disclosure before the contributing cards for the selected mechanic; its supported search action follows the cards. Discovery presents a compact image grid with **Save** below each card. Opening a result's detail dialog also offers **Save to Clipboard**; saving keeps the dialog open, reports the saved quantity and updates the grid's saved indicator. Browsing, opening or switching result pages never collects cards automatically.
+ 
+ The read-only source package stays frozen:
+ 
+--- before/reports/mechanics-integration/IMPLEMENTATION_REPORT.md
++++ reports/mechanics-integration/IMPLEMENTATION_REPORT.md
+@@ -1,6 +1,49 @@
+ # Dynamic mechanics — owner-review candidate
+ 
+-## Latest revision: approved Retest01 fixes — 2026-10-17
++## Latest revision: approved three-fix Retest02 follow-up — 2026-10-17
++
++**Exit: PARTIAL. Code: PASS. Automated: PASS (124/124). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** No browser/headless run, live Scryfall request, server restart, source regeneration, push or deployment was performed. This section supersedes earlier presentation descriptions below.
++
++Reviewed all nine tabs and nine screenshots in the completed Retest02 workbook: five Passed and four Issue. The owner then approved only rule disclosures, removal of duplicate Eternity Gate text, and correct multipart-card controls. Searching for more cards for every mechanic remains a separate request; the eight-search boundary is unchanged. Gate 0 remains **RESEARCH_PARTIAL**, with no Claude adapter. No applicable AGENTS.md was found; this app directory still has no Git repository. Before copies and the incremental diff preserve the review candidate.
++
++### What changed and exposure
++
++| Paths | Change / blast radius |
++|---|---|
++| `public/app.mjs`, `public/refinement.css` | All available mechanic rules start inside a closed native details/summary disclosure. Removed the extra Oracle-text block below Eternity Gate's evidence tile and its styling; the existing card dialog remains the place to read full card text. Local presentation exposure. |
++| `public/rules-ui.mjs`, `public/mechanic-rules.mjs` | Added an explicit clause-only rendering option for explanatory references. Food now displays only 111.10b, 111.10 and 205.3g; it no longer expands all 23 paragraphs of the 111.10 section or duplicates Food's own clause. Existing keyword definitions and deeper cross-reference previews/dialogs retain their default section behavior. Updated Eternity Gate wording to point to the card dialog. |
++| `public/card-preview.mjs`, `public/card-preview.css` | Layout-aware turn control. Transform, modal DFC, double-faced token, reversible-card and art-series layouts may switch supplied faces. Adventure, split and same-side flip cards display both named text parts alongside one exact-printing image. Unknown multipart layouts expose text without claiming a reverse side. Hover hints now say parts versus switchable faces appropriately. Medium exposure: the shared viewer used by archive, mechanics, commander, discovery and Clipboard. Image URL validation/selection, printing identity and save callback remain intact. |
++| `tests/mechanics-ui.test.mjs`, `README.md` | Tests now execute the real rule-body renderer rather than approximating its section selection. Updated documentation and focused disclosure/layout regressions. |
++
++Eight application/test/documentation paths plus this report changed. [Incremental diff](retest02-fixes/candidate.diff), [hash manifest](retest02-fixes/changed-files.json), and `retest02-fixes/before/` record the exact candidate. Four compact retained card witnesses support offline tests in [card-layout-witnesses.json](retest02-fixes/card-layout-witnesses.json); they are not served runtime data or a new source corpus.
++
++### Actual verification
++
++- Baseline **121/121 PASS**; final **124/124 PASS**, zero failures/skips. [Baseline output](retest02-fixes/tests-baseline.txt), [final output](retest02-fixes/tests-final.txt). HTTP tests ran with permitted localhost access.
++- The actual renderer is checked for closed disclosures across available explanations in both retained decks, exactly three Food clauses without unrelated token subrules, retained rule links, and no duplicate inline Oracle text. Search-boundary and no-automatic-search checks still pass.
++- Retained layout witnesses: Beorn / Till and Tend (HOB 118, adventure); Budoka Pupil / Ichiga (BOK 122, flip); Fire / Ice (DMR 215, split); Bala Ged Recovery / Sanctuary (ZNR 180, modal DFC). Tests check one image plus both verbatim text/flavor parts for same-side layouts, absence of a false turn control, unchanged frozen card objects, and save callback receiving the exact printing ID. The Budoka witness is a different printing from the owner's PRM screenshot; this is not a browser verification of that pictured edition.
++- Existing Gwen tests still verify front/back art, rules, flavor, accessible next-face label, focus, save identity and missing-back-art abstention. Added unknown-layout/no-image cases retain all text without inventing a physical reverse. Existing full-suite checks preserve Clipboard quantities/session/export, exact printing resolution, discovery identity/pagination and stale-request protections.
++- Syntax checks passed for app, card-preview, rule UI and explanation modules. No build step exists.
++- Offline audit, coverage, vocabulary and protected-file checks all exited **0**. **250 protected files unchanged**, including inputs/fixtures/references, retained coverage/audit responses, research Git files and original snapshots. **14 additional app/reference/testing-workbook files unchanged**: [verification](retest02-fixes/verification.json). All three earlier testing workbooks are untouched.
++
++Source rules remain September 25, 2026: SHA-256 `8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca`; rules-data `a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2`. The four test witnesses were read from the unchanged October 17 compressed Oracle snapshot, SHA-256 `f278ae30bc51657e8e7fcb897984fafe0df0c93ed511160fe60429bbb0e29a71`, verified before extraction. No download occurred. Earlier source hashes and the 296 observed / 16 unobserved audit boundary remain applicable. Provider labels still assert only provider_reports.
++
++Retained Cosmic and Dionus capture accounting remains covered by the unchanged integration tests (84/64 resolved entries, 100 copies each, 35/15 labels). No fresh-import counts or new same-provider witness claims are made.
++
++### Minimal owner retest
++
++[manualTesting_Retest03.xlsx](C:/Users/obake/Downloads/manualTesting_Retest03.xlsx) contains only four tabs, each with an initial Not tested status, editable notes and screenshot space. All four workbook previews were visually inspected; saved tab text, dropdowns, blank notes and unprotected sheets were checked. This validates the workbook, not the app's browser behavior.
++
++1. **Rules:** Food and Crew start collapsed; expand/collapse them. Food has only its three intended clauses. Open one cross-reference and check the collapsed panel once at narrow width.
++2. **Eternity Gate:** no duplicate inline card text; opening Necron Monolith still shows its full exact-printing details.
++3. **Single-sided parts:** Beorn and Budoka show both named parts with one image and no turn-over control.
++4. **Shared viewer:** Gwen still flips correctly by pointer/keyboard, closes and restores focus; sample narrow width. Save once from a discovery dialog and confirm printing/quantity in Clipboard.
++
++No repeat of deck-switching, the search matrix, complete export or session-reload testing is requested. Their owner-reported passes remain historical acceptance evidence, supplemented by the full automated suite. Native disclosure interaction, actual layout, loaded images and focus behavior for this revised UI remain owner checks. Confidence is **9/10 for the scoped code behavior; visual acceptance pending** (engineering judgment). Stop at this owner-review candidate.
++
++---
++
++## Previous revision: approved Retest01 fixes — 2026-10-17
+ 
+ **Exit: PARTIAL. Code: PASS. Automated: PASS (121/121). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** No browser or headless run, live search, source download, server restart, deployment, merge or push was performed. This section supersedes earlier UI descriptions below; historical results remain identified as historical.
+ 
+--- /dev/null
++++ reports/mechanics-integration/retest02-fixes/card-layout-witnesses.json
+@@ -0,0 +1,363 @@
++{
++  "source": "reports\\mechanics-coverage\\snapshots\\20261017090158\\oracle-cards.jsonl.gz",
++  "sha256": "f278ae30bc51657e8e7fcb897984fafe0df0c93ed511160fe60429bbb0e29a71",
++  "cards": [
++    {
++      "object": "card",
++      "id": "804589b7-3ef9-473d-97cc-c61a2d41f70d",
++      "oracle_id": "288da486-393c-4995-ad02-c5093a71970d",
++      "name": "Beorn, Reluctant Host // Till and Tend",
++      "layout": "adventure",
++      "card_faces": [
++        {
++          "object": "card_face",
++          "name": "Beorn, Reluctant Host",
++          "mana_cost": "{4}{G}",
++          "type_line": "Legendary Creature — Human Bear Shapeshifter",
++          "oracle_text": "Trample",
++          "power": "5",
++          "toughness": "5",
++          "flavor_text": "He never invited people into his house if he could help it. Now he had got fifteen strangers sitting in his porch!",
++          "artist": "Javier Charro",
++          "artist_id": "8fd2d5fa-3b94-4e48-9cec-9d148acc8180",
++          "illustration_id": "72278333-ebd7-4f78-b92d-e96fe9b11dd2"
++        },
++        {
++          "object": "card_face",
++          "name": "Till and Tend",
++          "mana_cost": "{1}{G}",
++          "type_line": "Sorcery — Adventure",
++          "oracle_text": "You may play an additional land this turn. (Then exile this card. You may cast the creature later from exile.)",
++          "artist": "Javier Charro",
++          "artist_id": "8fd2d5fa-3b94-4e48-9cec-9d148acc8180"
++        }
++      ],
++      "image_uris": {
++        "small": "https://cards.scryfall.io/small/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
++        "normal": "https://cards.scryfall.io/normal/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
++        "large": "https://cards.scryfall.io/large/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
++        "png": "https://cards.scryfall.io/png/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.png?1785323267",
++        "art_crop": "https://cards.scryfall.io/art_crop/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
++        "border_crop": "https://cards.scryfall.io/border_crop/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
++        "thumb": "https://cards.scryfall.io/thumb/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.webp?1785323267",
++        "grid": "https://cards.scryfall.io/grid/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.webp?1785323267",
++        "display": "https://cards.scryfall.io/display/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.webp?1785323267",
++        "art": "https://cards.scryfall.io/art/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.webp?1785323267",
++        "crop": "https://cards.scryfall.io/crop/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.webp?1785323267",
++        "jpeg": "https://cards.scryfall.io/normal/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267"
++      },
++      "color_identity": [
++        "G"
++      ],
++      "set": "hob",
++      "collector_number": "118",
++      "lang": "en",
++      "keywords": [
++        "Trample"
++      ],
++      "legalities": {
++        "standard": "legal",
++        "future": "legal",
++        "historic": "legal",
++        "timeless": "legal",
++        "gladiator": "legal",
++        "pioneer": "legal",
++        "modern": "legal",
++        "legacy": "legal",
++        "pauper": "legal",
++        "vintage": "legal",
++        "penny": "legal",
++        "commander": "legal",
++        "oathbreaker": "legal",
++        "standardbrawl": "legal",
++        "brawl": "legal",
++        "competitivebrawl": "legal",
++        "alchemy": "not_legal",
++        "paupercommander": "legal",
++        "duel": "legal",
++        "oldschool": "not_legal",
++        "premodern": "not_legal",
++        "predh": "not_legal",
++        "tlr": "not_legal"
++      },
++      "flavor_text": "He never invited people into his house if he could help it. Now he had got fifteen strangers sitting in his porch!",
++      "mana_cost": "{4}{G} // {1}{G}",
++      "type_line": "Legendary Creature — Human Bear Shapeshifter // Sorcery — Adventure",
++      "artist": "Javier Charro",
++      "set_name": "The Hobbit",
++      "released_at": "2026-08-14",
++      "rarity": "common",
++      "scryfall_uri": "https://scryfall.com/card/hob/118/beorn-reluctant-host-till-and-tend?utm_source=api"
++    },
++    {
++      "object": "card",
++      "id": "73636ca0-2309-4bb3-9300-8bd0c0bb5b31",
++      "oracle_id": "6f571092-7244-4223-aa14-f5133cc000d8",
++      "name": "Budoka Pupil // Ichiga, Who Topples Oaks",
++      "layout": "flip",
++      "card_faces": [
++        {
++          "object": "card_face",
++          "name": "Budoka Pupil",
++          "mana_cost": "{1}{G}{G}",
++          "type_line": "Creature — Human Monk",
++          "oracle_text": "Whenever you cast a Spirit or Arcane spell, you may put a ki counter on this creature.\nAt the beginning of the end step, if there are two or more ki counters on this creature, you may flip it.",
++          "power": "2",
++          "toughness": "2",
++          "artist": "Shishizaru",
++          "artist_id": "f993a598-f922-49c8-bb03-6beb3b780b0d",
++          "illustration_id": "60d8946f-634c-4f16-b3c9-2c558fa49e67"
++        },
++        {
++          "object": "card_face",
++          "name": "Ichiga, Who Topples Oaks",
++          "mana_cost": "",
++          "type_line": "Legendary Creature — Spirit",
++          "oracle_text": "Trample\nRemove a ki counter from Ichiga: Target creature gets +2/+2 until end of turn.",
++          "power": "4",
++          "toughness": "3",
++          "artist": "Shishizaru",
++          "artist_id": "f993a598-f922-49c8-bb03-6beb3b780b0d"
++        }
++      ],
++      "image_uris": {
++        "small": "https://cards.scryfall.io/small/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.jpg?1783944186",
++        "normal": "https://cards.scryfall.io/normal/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.jpg?1783944186",
++        "large": "https://cards.scryfall.io/large/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.jpg?1783944186",
++        "png": "https://cards.scryfall.io/png/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.png?1783944186",
++        "art_crop": "https://cards.scryfall.io/art_crop/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.jpg?1783944186",
++        "border_crop": "https://cards.scryfall.io/border_crop/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.jpg?1783944186",
++        "thumb": "https://cards.scryfall.io/thumb/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.webp?1783944186",
++        "grid": "https://cards.scryfall.io/grid/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.webp?1783944186",
++        "display": "https://cards.scryfall.io/display/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.webp?1783944186",
++        "art": "https://cards.scryfall.io/art/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.webp?1783944186",
++        "crop": "https://cards.scryfall.io/crop/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.webp?1783944186",
++        "jpeg": "https://cards.scryfall.io/normal/front/7/3/73636ca0-2309-4bb3-9300-8bd0c0bb5b31.jpg?1783944186"
++      },
++      "color_identity": [
++        "G"
++      ],
++      "set": "bok",
++      "collector_number": "122",
++      "lang": "en",
++      "keywords": [
++        "Trample"
++      ],
++      "legalities": {
++        "standard": "not_legal",
++        "future": "not_legal",
++        "historic": "not_legal",
++        "timeless": "not_legal",
++        "gladiator": "not_legal",
++        "pioneer": "not_legal",
++        "modern": "legal",
++        "legacy": "legal",
++        "pauper": "not_legal",
++        "vintage": "legal",
++        "penny": "legal",
++        "commander": "legal",
++        "oathbreaker": "legal",
++        "standardbrawl": "not_legal",
++        "brawl": "not_legal",
++        "competitivebrawl": "not_legal",
++        "alchemy": "not_legal",
++        "paupercommander": "not_legal",
++        "duel": "legal",
++        "oldschool": "not_legal",
++        "premodern": "not_legal",
++        "predh": "legal",
++        "tlr": "legal"
++      },
++      "mana_cost": "{1}{G}{G}",
++      "type_line": "Creature — Human Monk // Legendary Creature — Spirit",
++      "artist": "Shishizaru",
++      "set_name": "Betrayers of Kamigawa",
++      "released_at": "2005-02-04",
++      "rarity": "uncommon",
++      "scryfall_uri": "https://scryfall.com/card/bok/122/budoka-pupil-ichiga-who-topples-oaks?utm_source=api"
++    },
++    {
++      "object": "card",
++      "id": "18303862-4726-4136-814f-157aa7006579",
++      "oracle_id": "ae92942b-919c-4ea9-b693-85fcef765d5a",
++      "name": "Fire // Ice",
++      "layout": "split",
++      "card_faces": [
++        {
++          "object": "card_face",
++          "name": "Fire",
++          "mana_cost": "{1}{R}",
++          "type_line": "Instant",
++          "oracle_text": "Fire deals 2 damage divided as you choose among one or two targets.",
++          "artist": "David Martin",
++          "artist_id": "996ad764-4ae0-4952-8bb5-5a75c9d68275",
++          "illustration_id": "c890cb20-7e04-4ad0-96a6-8854cd409c14"
++        },
++        {
++          "object": "card_face",
++          "name": "Ice",
++          "mana_cost": "{1}{U}",
++          "type_line": "Instant",
++          "oracle_text": "Tap target permanent.\nDraw a card.",
++          "artist": "Franz Vohwinkel",
++          "artist_id": "3a243c17-3baa-4b53-9599-645311cd7d3d"
++        }
++      ],
++      "image_uris": {
++        "small": "https://cards.scryfall.io/small/front/1/8/18303862-4726-4136-814f-157aa7006579.jpg?1783918420",
++        "normal": "https://cards.scryfall.io/normal/front/1/8/18303862-4726-4136-814f-157aa7006579.jpg?1783918420",
++        "large": "https://cards.scryfall.io/large/front/1/8/18303862-4726-4136-814f-157aa7006579.jpg?1783918420",
++        "png": "https://cards.scryfall.io/png/front/1/8/18303862-4726-4136-814f-157aa7006579.png?1783918420",
++        "art_crop": "https://cards.scryfall.io/art_crop/front/1/8/18303862-4726-4136-814f-157aa7006579.jpg?1783918420",
++        "border_crop": "https://cards.scryfall.io/border_crop/front/1/8/18303862-4726-4136-814f-157aa7006579.jpg?1783918420",
++        "thumb": "https://cards.scryfall.io/thumb/front/1/8/18303862-4726-4136-814f-157aa7006579.webp?1783918420",
++        "grid": "https://cards.scryfall.io/grid/front/1/8/18303862-4726-4136-814f-157aa7006579.webp?1783918420",
++        "display": "https://cards.scryfall.io/display/front/1/8/18303862-4726-4136-814f-157aa7006579.webp?1783918420",
++        "art": "https://cards.scryfall.io/art/front/1/8/18303862-4726-4136-814f-157aa7006579.webp?1783918420",
++        "crop": "https://cards.scryfall.io/crop/front/1/8/18303862-4726-4136-814f-157aa7006579.webp?1783918420",
++        "jpeg": "https://cards.scryfall.io/normal/front/1/8/18303862-4726-4136-814f-157aa7006579.jpg?1783918420"
++      },
++      "color_identity": [
++        "R",
++        "U"
++      ],
++      "set": "dmr",
++      "collector_number": "215",
++      "lang": "en",
++      "keywords": [],
++      "legalities": {
++        "standard": "not_legal",
++        "future": "not_legal",
++        "historic": "not_legal",
++        "timeless": "not_legal",
++        "gladiator": "not_legal",
++        "pioneer": "not_legal",
++        "modern": "legal",
++        "legacy": "legal",
++        "pauper": "legal",
++        "vintage": "legal",
++        "penny": "not_legal",
++        "commander": "legal",
++        "oathbreaker": "legal",
++        "standardbrawl": "not_legal",
++        "brawl": "not_legal",
++        "competitivebrawl": "not_legal",
++        "alchemy": "not_legal",
++        "paupercommander": "legal",
++        "duel": "legal",
++        "oldschool": "not_legal",
++        "premodern": "legal",
++        "predh": "legal",
++        "tlr": "legal"
++      },
++      "mana_cost": "{1}{R} // {1}{U}",
++      "type_line": "Instant // Instant",
++      "artist": "David Martin & Franz Vohwinkel",
++      "set_name": "Dominaria Remastered",
++      "released_at": "2023-01-13",
++      "rarity": "uncommon",
++      "scryfall_uri": "https://scryfall.com/card/dmr/215/fire-ice?utm_source=api"
++    },
++    {
++      "object": "card",
++      "id": "c5cb3052-358d-44a7-8cfd-cd31b236494a",
++      "oracle_id": "d2075f58-b0e9-4e85-b7e6-0523a27a1d5b",
++      "name": "Bala Ged Recovery // Bala Ged Sanctuary",
++      "layout": "modal_dfc",
++      "card_faces": [
++        {
++          "object": "card_face",
++          "name": "Bala Ged Recovery",
++          "mana_cost": "{2}{G}",
++          "type_line": "Sorcery",
++          "oracle_text": "Return target card from your graveyard to your hand.",
++          "colors": [
++            "G"
++          ],
++          "flavor_text": "\"Always have a backup plan.\"\n—Doral, Bala Ged guide",
++          "artist": "Lucas Staniec",
++          "artist_id": "b4344292-387b-4aa0-8225-13f1fbe77808",
++          "illustration_id": "367b96a4-1778-4fed-8d5d-136cee6a44dd",
++          "image_uris": {
++            "small": "https://cards.scryfall.io/small/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "normal": "https://cards.scryfall.io/normal/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "large": "https://cards.scryfall.io/large/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "png": "https://cards.scryfall.io/png/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.png?1783929347",
++            "art_crop": "https://cards.scryfall.io/art_crop/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "border_crop": "https://cards.scryfall.io/border_crop/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "thumb": "https://cards.scryfall.io/thumb/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "grid": "https://cards.scryfall.io/grid/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "display": "https://cards.scryfall.io/display/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "art": "https://cards.scryfall.io/art/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "crop": "https://cards.scryfall.io/crop/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "jpeg": "https://cards.scryfall.io/normal/front/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347"
++          }
++        },
++        {
++          "object": "card_face",
++          "name": "Bala Ged Sanctuary",
++          "mana_cost": "",
++          "type_line": "Land",
++          "oracle_text": "This land enters tapped.\n{T}: Add {G}.",
++          "colors": [],
++          "flavor_text": "\"I know it's around here somewhere.\"\n—Doral, Bala Ged guide",
++          "artist": "Lucas Staniec",
++          "artist_id": "b4344292-387b-4aa0-8225-13f1fbe77808",
++          "illustration_id": "e3acc691-4dd2-4638-93ef-0d00e6a186fd",
++          "image_uris": {
++            "small": "https://cards.scryfall.io/small/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "normal": "https://cards.scryfall.io/normal/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "large": "https://cards.scryfall.io/large/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "png": "https://cards.scryfall.io/png/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.png?1783929347",
++            "art_crop": "https://cards.scryfall.io/art_crop/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "border_crop": "https://cards.scryfall.io/border_crop/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347",
++            "thumb": "https://cards.scryfall.io/thumb/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "grid": "https://cards.scryfall.io/grid/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "display": "https://cards.scryfall.io/display/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "art": "https://cards.scryfall.io/art/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "crop": "https://cards.scryfall.io/crop/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.webp?1783929347",
++            "jpeg": "https://cards.scryfall.io/normal/back/c/5/c5cb3052-358d-44a7-8cfd-cd31b236494a.jpg?1783929347"
++          }
++        }
++      ],
++      "color_identity": [
++        "G"
++      ],
++      "set": "znr",
++      "collector_number": "180",
++      "lang": "en",
++      "keywords": [],
++      "legalities": {
++        "standard": "not_legal",
++        "future": "not_legal",
++        "historic": "legal",
++        "timeless": "legal",
++        "gladiator": "legal",
++        "pioneer": "legal",
++        "modern": "legal",
++        "legacy": "legal",
++        "pauper": "not_legal",
++        "vintage": "legal",
++        "penny": "not_legal",
++        "commander": "legal",
++        "oathbreaker": "legal",
++        "standardbrawl": "not_legal",
++        "brawl": "legal",
++        "competitivebrawl": "legal",
++        "alchemy": "not_legal",
++        "paupercommander": "not_legal",
++        "duel": "legal",
++        "oldschool": "not_legal",
++        "premodern": "not_legal",
++        "predh": "not_legal",
++        "tlr": "legal"
++      },
++      "type_line": "Sorcery // Land",
++      "artist": "Lucas Staniec",
++      "set_name": "Zendikar Rising",
++      "released_at": "2020-09-25",
++      "rarity": "uncommon",
++      "scryfall_uri": "https://scryfall.com/card/znr/180/bala-ged-recovery-bala-ged-sanctuary?utm_source=api"
++    }
++  ]
++}

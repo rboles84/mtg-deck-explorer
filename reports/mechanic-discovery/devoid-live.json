@@ -1,0 +1,291 @@
+{
+  "startedAt": "2026-10-18T20:42:17.875Z",
+  "requests": [
+    {
+      "url": "https://api.scryfall.com/cards/search?q=f%3Acommander+id%3C%3Dc+kw%3Adevoid&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 404,
+      "file": "devoid-responses/88ef50e6fa2806dda8291d4bb4582585e6a3f0020ef394cb20fdf0b23108cbff.json",
+      "sha256": "88ef50e6fa2806dda8291d4bb4582585e6a3f0020ef394cb20fdf0b23108cbff",
+      "bytes": 209,
+      "checkedAt": "2026-10-18T20:42:18.236Z",
+      "date": "Sun, 18 Oct 2026 20:42:17 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=f%3Acommander+id%3C%3Dg+kw%3Adevoid&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/a10e594dd529d2d6b5314c0194870d7022c0c557dfb3c51b680e57cb0637800e.json",
+      "sha256": "a10e594dd529d2d6b5314c0194870d7022c0c557dfb3c51b680e57cb0637800e",
+      "bytes": 122148,
+      "checkedAt": "2026-10-18T20:42:18.913Z",
+      "date": "Sun, 18 Oct 2026 20:42:18 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=f%3Acommander+id%3C%3Du+kw%3Adevoid&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/601fc42e698e04cb7932e2f0707c86cdca54554db5b49205d09b46b9d4c7b39b.json",
+      "sha256": "601fc42e698e04cb7932e2f0707c86cdca54554db5b49205d09b46b9d4c7b39b",
+      "bytes": 180705,
+      "checkedAt": "2026-10-18T20:42:19.438Z",
+      "date": "Sun, 18 Oct 2026 20:42:18 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=f%3Acommander+c%3Ac+kw%3Adevoid&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/e4dedc33b69b13f7181d4af4ae3f8bc03bdcc525bee998675fa4645268a5cbb9.json",
+      "sha256": "e4dedc33b69b13f7181d4af4ae3f8bc03bdcc525bee998675fa4645268a5cbb9",
+      "bytes": 703355,
+      "checkedAt": "2026-10-18T20:42:20.297Z",
+      "date": "Sun, 18 Oct 2026 20:42:19 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=f%3Acommander+id%3C%3Dc&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/598bdf0e502113c79c0ff6759fde817c21291f6c834f6560c1dcaf8b754f9516.json",
+      "sha256": "598bdf0e502113c79c0ff6759fde817c21291f6c834f6560c1dcaf8b754f9516",
+      "bytes": 910107,
+      "checkedAt": "2026-10-18T20:42:21.120Z",
+      "date": "Sun, 18 Oct 2026 20:42:20 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dc%29+%21%22Thought-Knot+Seer%22&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/502a15b284fef67c415c044b51d3b0442a2af22bc4616f1852baf24c5768e2ec.json",
+      "sha256": "502a15b284fef67c415c044b51d3b0442a2af22bc4616f1852baf24c5768e2ec",
+      "bytes": 5174,
+      "checkedAt": "2026-10-18T20:42:21.330Z",
+      "date": "Sun, 18 Oct 2026 20:42:20 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "method": "POST",
+      "requestBody": {
+        "identifiers": [
+          {
+            "name": "Kozilek, the Great Distortion"
+          },
+          {
+            "name": "Goreclaw, Terror of Qal Sisma"
+          },
+          {
+            "name": "Adric, Mathematical Genius"
+          },
+          {
+            "name": "Kenrith, the Returned King"
+          }
+        ]
+      },
+      "status": 200,
+      "file": "devoid-responses/ed9a70fe8c2721e568955b2fcb91baa70043aad4548c33d08e37d6d27fb814c6.json",
+      "sha256": "ed9a70fe8c2721e568955b2fcb91baa70043aad4548c33d08e37d6d27fb814c6",
+      "bytes": 21240,
+      "checkedAt": "2026-10-18T20:42:21.794Z",
+      "date": "Sun, 18 Oct 2026 20:42:21 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dc%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 404,
+      "file": "devoid-responses/88ef50e6fa2806dda8291d4bb4582585e6a3f0020ef394cb20fdf0b23108cbff.json",
+      "sha256": "88ef50e6fa2806dda8291d4bb4582585e6a3f0020ef394cb20fdf0b23108cbff",
+      "bytes": 209,
+      "checkedAt": "2026-10-18T20:42:22.263Z",
+      "date": "Sun, 18 Oct 2026 20:42:21 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dg%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/56c7b2b612c7703d96926cdfa8ab685e1e4eaed165f27d2d62db77f137cdc821.json",
+      "sha256": "56c7b2b612c7703d96926cdfa8ab685e1e4eaed165f27d2d62db77f137cdc821",
+      "bytes": 120208,
+      "checkedAt": "2026-10-18T20:42:23.109Z",
+      "date": "Sun, 18 Oct 2026 20:42:22 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Du%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/19a89bd2e7c951989b20b45c0c9d2e6bd8166410eb3bf998821af955f6e6b938.json",
+      "sha256": "19a89bd2e7c951989b20b45c0c9d2e6bd8166410eb3bf998821af955f6e6b938",
+      "bytes": 179153,
+      "checkedAt": "2026-10-18T20:42:23.792Z",
+      "date": "Sun, 18 Oct 2026 20:42:23 GMT"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc&include_extras=false&page=1",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "file": "devoid-responses/fbab70ec8b13f02dd2148e78dace989f76e74662faeed38fd3fab73018659995.json",
+      "sha256": "fbab70ec8b13f02dd2148e78dace989f76e74662faeed38fd3fab73018659995",
+      "bytes": 695367,
+      "checkedAt": "2026-10-18T20:42:24.491Z",
+      "date": "Sun, 18 Oct 2026 20:42:24 GMT"
+    }
+  ],
+  "queries": [
+    {
+      "query": "f:commander id<=c kw:devoid",
+      "status": 404,
+      "totalCards": 0,
+      "witness": null,
+      "pass": true
+    },
+    {
+      "query": "f:commander id<=g kw:devoid",
+      "status": 200,
+      "totalCards": 22,
+      "witness": {
+        "name": "Eyeless Watcher",
+        "id": "4d949d0e-baf7-4573-bb15-7e30e3e9b202",
+        "oracleId": "ba047b0b-d451-4566-8656-00b00611de8c",
+        "colors": [],
+        "colorIdentity": [
+          "G"
+        ],
+        "manaCost": "{3}{G}",
+        "keywords": [
+          "Devoid"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "query": "f:commander id<=u kw:devoid",
+      "status": 200,
+      "totalCards": 34,
+      "witness": {
+        "name": "Eldrazi Skyspawner",
+        "id": "9c9c1a10-446e-492a-95cc-a459dc6c08a0",
+        "oracleId": "b5661289-a03c-40fc-a1e4-f602adb56f81",
+        "colors": [],
+        "colorIdentity": [
+          "U"
+        ],
+        "manaCost": "{2}{U}",
+        "keywords": [
+          "Flying",
+          "Devoid"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "query": "f:commander c:c kw:devoid",
+      "status": 200,
+      "totalCards": 132,
+      "witness": {
+        "name": "Eyeless Watcher",
+        "id": "4d949d0e-baf7-4573-bb15-7e30e3e9b202",
+        "oracleId": "ba047b0b-d451-4566-8656-00b00611de8c",
+        "colors": [],
+        "colorIdentity": [
+          "G"
+        ],
+        "manaCost": "{3}{G}",
+        "keywords": [
+          "Devoid"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "query": "f:commander id<=c",
+      "status": 200,
+      "totalCards": 2751,
+      "witness": {
+        "name": "Thought-Knot Seer",
+        "id": "bffc360e-db41-48f3-9365-680d55046e04",
+        "oracleId": "cef7396d-2168-4282-bf38-670ca9eebd91",
+        "colors": [],
+        "colorIdentity": [],
+        "manaCost": "{3}{C}",
+        "keywords": []
+      },
+      "pass": true
+    }
+  ],
+  "commanderCases": [
+    {
+      "commander": "Kozilek, the Great Distortion",
+      "commanderId": "c41554e7-2a07-4cc7-b01b-44deed08e588",
+      "importedIdentity": [],
+      "responseIdentity": [],
+      "query": "(f:commander id<=c) (kw:Devoid)",
+      "providerQuery": "(f:commander id<=c) (kw:Devoid) prefer:newest",
+      "scryfallUrl": "https://scryfall.com/search?q=%28f%3Acommander+id%3C%3Dc%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc",
+      "totalCards": 0,
+      "pass": true
+    },
+    {
+      "commander": "Goreclaw, Terror of Qal Sisma",
+      "commanderId": "ee47f23a-3ba9-4615-b170-c89d8ab99d78",
+      "importedIdentity": [
+        "G"
+      ],
+      "responseIdentity": [
+        "G"
+      ],
+      "query": "(f:commander id<=g) (kw:Devoid)",
+      "providerQuery": "(f:commander id<=g) (kw:Devoid) prefer:newest",
+      "scryfallUrl": "https://scryfall.com/search?q=%28f%3Acommander+id%3C%3Dg%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc",
+      "totalCards": 22,
+      "pass": true
+    },
+    {
+      "commander": "Adric, Mathematical Genius",
+      "commanderId": "1f290a17-699e-420d-8322-3e28300a0d2e",
+      "importedIdentity": [
+        "U"
+      ],
+      "responseIdentity": [
+        "U"
+      ],
+      "query": "(f:commander id<=u) (kw:Devoid)",
+      "providerQuery": "(f:commander id<=u) (kw:Devoid) prefer:newest",
+      "scryfallUrl": "https://scryfall.com/search?q=%28f%3Acommander+id%3C%3Du%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc",
+      "totalCards": 34,
+      "pass": true
+    },
+    {
+      "commander": "Kenrith, the Returned King",
+      "commanderId": "0e259db1-14db-4314-998c-6a076a28d8cb",
+      "importedIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "responseIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "query": "(f:commander id<=wubrg) (kw:Devoid)",
+      "providerQuery": "(f:commander id<=wubrg) (kw:Devoid) prefer:newest",
+      "scryfallUrl": "https://scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3ADevoid%29+prefer%3Anewest&unique=cards&order=name&dir=asc",
+      "totalCards": 132,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "completedAt": "2026-10-18T20:42:24.502Z"
+}

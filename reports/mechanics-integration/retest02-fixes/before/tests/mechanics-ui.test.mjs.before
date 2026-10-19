@@ -1,0 +1,257 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+import {loadCatalog} from '../lib/catalog.mjs';
+import {indexMechanics, keywordKey} from '../public/mechanics.mjs';
+import {parseDeck, resolveDeck, deepFreeze} from '../public/core.mjs';
+import {mechanicRule, mechanicExplanation, MECHANIC_RULE_LINKS, RULES_REVISION} from '../public/mechanic-rules.mjs';
+import {getCardFaces, getCardImageUrl} from '../public/card-preview.mjs';
+
+const read=path=>fs.readFileSync(new URL(path,import.meta.url),'utf8');
+const appSource=read('../public/app.mjs'),previewSource=read('../public/card-preview.mjs');
+const rules=JSON.parse(read('../public/rules-data.json'));
+const catalog=await loadCatalog(fileURLToPath(new URL('..',import.meta.url)));
+const captures=Object.fromEntries(['cosmic','dionus'].map(name=>[name,JSON.parse(read(`../reports/mechanics-integration/decks/${name}.json`))]));
+const deck=name=>{const c=captures[name];return resolveDeck(parseDeck(c.text),c.result.cards,c.result.notFound);};
+function slice(source,start,end){const a=source.indexOf(start),b=source.indexOf(end,a);assert.ok(a>=0&&b>a,`source markers: ${start}`);return source.slice(a,b);}
+
+// A small DOM boundary for actual rendering/interaction code; no layout or browser claims.
+function dom(){
+  const roots=new Map();
+  const document={activeElement:null};
+  class Element {
+    constructor(tag){this.tagName=tag;this.children=[];this.dataset={};this.attributes={};this.events={};this.open=false;this.hidden=false;this.className='';this.style={setProperty(){}};this.classList={add(){}};}
+    set textContent(v){this.text=String(v);this.children=[];}
+    get textContent(){return (this.text||'')+this.children.map(n=>n.textContent).join('');}
+    append(...nodes){for(let n of nodes){if(typeof n==='string')n=document.createTextNode(n);this.children.push(n);n.parent=this;}}
+    replaceChildren(...nodes){this.text='';this.children=[];this.append(...nodes);}
+    setAttribute(k,v){this.attributes[k]=String(v);}
+    getAttribute(k){return this.attributes[k]??null;}
+    addEventListener(k,fn){this.events[k]=fn;}
+    click(){if(!this.disabled){this.focus();this.events.click?.();}}
+    focus(){document.activeElement=this;}
+    scrollIntoView(){this.scrolled=true;}
+    closest(){return null;}
+    showModal(){this.open=true;}
+    get isConnected(){return true;}
+    querySelectorAll(selector){const match=n=>selector==='[data-mechanic-focus]'?Boolean(n.dataset.mechanicFocus):selector.startsWith('.')?n.className.split(' ').includes(selector.slice(1)):n.tagName===selector;return this.children.flatMap(n=>[...(match(n)?[n]:[]),...n.querySelectorAll(selector)]);}
+    querySelector(selector){return this.querySelectorAll(selector)[0]||null;}
+  }
+  document.createElement=tag=>new Element(tag);
+  document.createTextNode=text=>{const n=new Element('#text');n.textContent=text;return n;};
+  document.querySelectorAll=selector=>[...roots.values()].flatMap(n=>n.querySelectorAll(selector));
+  const $=id=>{if(!roots.has(id))roots.set(id,new Element('div'));return roots.get(id);};
+  return {document,$,Element};
+}
+function renderHarness(name='dionus',narrow=true){
+  const d=dom(),initial=deck(name),calls=[],searches=[];
+  const ctx=vm.createContext({...d,indexMechanics,keywordKey,mechanicRule,mechanicExplanation,initial,catalog,rules,
+    narrowMechanics:{matches:narrow},
+    cardVisual:card=>d.document.createTextNode(card.name),cardHeading:card=>d.document.createTextNode(card.name),printingMeta:card=>d.document.createTextNode(`${card.set}/${card.collector_number}`),
+    externalLink:label=>d.document.createTextNode(label),identitySymbols:()=>d.document.createTextNode('colors'),
+    ruleBody:(data,n)=>{calls.push(n);return d.document.createTextNode((data.sections[n]?.paragraphs||[data.rules[n]]).map(p=>p.text).join('\n'));},
+    showRule(){},runDiscovery(record){searches.push(record.atlas_row_id);},queryBox:record=>{const n=d.document.createElement('div');n.className='query-box';n.textContent=`Find ${record.master_name} cards`;return n;},buildVisibleQuery:()=>'',
+  });
+  vm.runInContext(`
+    ${slice(appSource,'const node =','const colors =')}
+    let importedDeck=initial,mechanicIndex=indexMechanics(initial),selectedMechanicId=null,rulesData=rules;
+    let importBusy=false,searchBusy=false,contextToken='token',identity={colorIdentity:['G'],rowIds:['x']};
+    const colors={W:'White',U:'Blue',B:'Black',R:'Red',G:'Green'};
+    let knownCards=new Map(initial.rows.filter(r=>r.card).map(r=>[r.card.id,r.card]));
+    function selectMechanic(key){selectedMechanicId=key;renderMechanics();}
+    ${slice(appSource,'function browseDeckMechanics()','function hideIdentityTip()')}
+    ${slice(appSource,'function renderMechanics()','function showRule(')}
+    globalThis.ui={render:renderMechanics,choose:chooseDeckMechanic,browse:browseDeckMechanics,
+      setBusy(v){importBusy=v;renderMechanics();},
+      setSources(nextCatalog,nextRules){catalog=nextCatalog;rulesData=nextRules;renderMechanics();},
+      replace(deck){importedDeck=deck;mechanicIndex=indexMechanics(deck);selectedMechanicId=null;knownCards=new Map(deck.rows.filter(r=>r.card).map(r=>[r.card.id,r.card]));renderMechanics();},
+      get selected(){return selectedMechanicId;}};
+    renderMechanics();`,ctx);
+  return {...d,ui:ctx.ui,calls,searches};
+}
+
+test('definition links resolve only exact reviewed headings at the pinned revision',()=>{
+  assert.equal(Object.keys(MECHANIC_RULE_LINKS).length,28);
+  for(const [label,number] of Object.entries(MECHANIC_RULE_LINKS)){
+    assert.equal(mechanicRule(rules,label),number);
+    assert.equal(mechanicRule(rules,label.toUpperCase()),number);
+    assert.ok(rules.sections[number].paragraphs.every(p=>p.text===rules.rules[p.number].text));
+  }
+  for(const label of ['Crew 6',' crew','Crew!','Food','Eternity Gate','Landfall','__proto__'])assert.equal(mechanicRule(rules,label),null);
+  assert.equal(mechanicRule({...rules,date:'2026-10-17'},'Crew'),null);
+  assert.equal(mechanicRule({...rules,sourceSha256:'changed'},'Crew'),null);
+  assert.equal(mechanicRule({...rules,sections:{'702.122':{title:'Other',paragraphs:[{}]}}},'Crew'),null);
+  assert.equal(rules.sourceSha256,RULES_REVISION.sourceSha256);
+  for(const name of ['cosmic','dionus'])for(const term of indexMechanics(deck(name)).terms.filter(t=>t.audited))assert.ok(mechanicRule(rules,term.label),`${name}: ${term.label}`);
+});
+
+test('main navigation exactly follows imported labels without a second mechanic list',()=>{
+  const h=renderHarness(),buttons=h.$('mechanic-list').querySelectorAll('button');
+  assert.equal(buttons.length,15);assert.equal(h.$('detected-list').querySelectorAll('button').length,1);
+  assert.ok(!buttons.some(b=>b.textContent.startsWith('Deathtouch')));
+  assert.ok(buttons.some(b=>b.textContent==='Crew · 16'));
+  assert.doesNotMatch(read('../public/index.html'),/other-mechanic-searches|other-card-searches/);
+  assert.doesNotMatch(appSource,/other-mechanic-searches|discovery:/);
+  h.ui.choose('station');assert.equal(h.$('mechanic-picker').open,false);
+  assert.equal(h.document.activeElement,h.$('mechanic-context').querySelector('h2'));
+  assert.match(h.$('mechanic-context').textContent,/Station · 3 distinct cards · 3 copies/);
+  assert.ok(h.calls.includes('702.184'));
+  h.ui.browse();assert.equal(h.$('mechanic-picker').open,true);
+  assert.equal(h.document.activeElement,h.$('mechanic-picker-summary'));
+  h.ui.setBusy(true);assert.equal(h.$('clear-deck-input').disabled,true);
+  h.ui.setBusy(false);assert.equal(h.$('clear-deck-input').disabled,false);
+});
+
+test('rules, evidence disclosures and unknown labels work independently of search support',()=>{
+  const h=renderHarness();
+  for(const [key,rule] of [['crew','702.122'],['station','702.184'],['mill','701.17'],['equip','702.6']]){
+    h.ui.choose(key);const context=h.$('mechanic-context');
+    assert.ok(h.calls.includes(rule));assert.match(context.textContent,/Reported by Scryfall/);
+    assert.ok(context.querySelectorAll('details').some(d=>d.textContent.includes('keywords[')));
+    assert.ok(!context.querySelectorAll('button').some(b=>b.textContent.startsWith('Search ')));
+  }
+  h.ui.choose('eternity gate');
+  assert.match(h.$('mechanic-context').textContent,/Eternity Gate: a flavor word/);
+  assert.match(h.$('mechanic-context').textContent,/Additional Scryfall label/);
+  assert.match(h.$('mechanic-context').textContent,/not certified/);
+  assert.ok(!h.$('mechanic-list').textContent.includes('Deathtouch'));
+});
+
+test('rendered deck replacement clears old selection and does not duplicate the long label list',()=>{
+  const h=renderHarness('cosmic',false);h.$('mechanic-picker').open=true;
+  h.ui.choose('flying');assert.equal(h.$('mechanic-picker').open,true);
+  assert.equal(h.$('mechanic-list').querySelectorAll('button').length,35);
+  h.ui.replace(deck('dionus'));assert.equal(h.ui.selected,null);
+  assert.equal(h.$('mechanic-list').querySelectorAll('button').length,15);
+  assert.match(h.$('mechanic-context').textContent,/Choose a mechanic/);
+  h.ui.replace(deck('cosmic'));assert.equal(h.$('mechanic-list').querySelectorAll('button').length,35);
+  h.ui.replace(deck('cosmic'));assert.equal(h.$('mechanic-list').querySelectorAll('button').length,35);
+});
+
+test('missing catalog or rules cannot hide imported cards, and partial resolution stays disclosed',()=>{
+  const h=renderHarness();h.ui.setSources(null,null);h.ui.choose('crew');
+  assert.match(h.$('mechanic-context').textContent,/No linked explanation/);
+  assert.match(h.$('mechanic-context').textContent,/Crew · 16 distinct cards · 16 copies/);
+  assert.match(h.$('mechanic-context').textContent,/External searches and historical color placements are unavailable/);
+  const parsed=parseDeck(captures.dionus.text);
+  const cards=structuredClone(captures.dionus.result.cards);
+  cards[0].keywords_status='missing';delete cards[0].keywords;
+  const partial=resolveDeck(parsed,cards.slice(0,-1),[]);h.ui.replace(partial);
+  const c=indexMechanics(partial).coverage;
+  assert.ok(c.missingEntries>0);assert.ok(c.entries>c.resolvedEntries);
+  assert.match(h.$('detected-list').textContent,new RegExp(`${c.entries-c.resolvedEntries} unresolved entries`));
+  assert.match(h.$('detected-list').textContent,new RegExp(`${c.missingEntries} missing`));
+});
+
+function detailHarness(){
+  const d=dom(),body=d.$('body'),title=d.$('title'),dialog=d.$('dialog');
+  const close=d.document.createElement('button');close.className='card-details-close';dialog.append(close);
+  const element=(tag,cls,text)=>{const n=d.document.createElement(tag);n.className=cls||'';if(text!==undefined)n.textContent=text;return n;};
+  const ctx=vm.createContext({...d,element,getCardFaces,getCardImageUrl,URL,
+    installCardPreviews(){},ensureDialog(){},suppress(){},closeCardPreview(){},applyColorFrame(){},
+    symbolText:(text,cls)=>element('p',cls,text),printingLabel:c=>`${c.set} ${c.collector_number}`,setSymbol:()=>element('span'),identitySymbols:()=>element('span'),safePrintingLink:()=>null,
+    cardSaveAction:action=>{const b=element('button','save','Save');b.addEventListener('click',action.onSave);return b;},
+    detailBody:body,detailTitle:title,detailDialog:dialog,
+  });
+  vm.runInContext(`let detailsReturnTrigger,detailsReturnContext;
+    ${slice(previewSource,'function cardArt(','function findTrigger(')}
+    ${slice(previewSource,'export function openCardDetails(','/** A semantic name button.').replace('export function','function')}
+    globalThis.open=openCardDetails;`,ctx);
+  return {...d,body,dialog,open:ctx.open};
+}
+
+test('actual detail handler flips exact face art, rules and flavor together without mutating printing or save action',()=>{
+  const card=deepFreeze(structuredClone(captures.cosmic.result.cards.find(c=>c.name==='Gwen Stacy // Ghost-Spider'))),before=JSON.stringify(card);
+  assert.ok(card);
+  const h=detailHarness();let saved;
+  h.open(card,null,{saveAction:{onSave(){saved=card.id;}}});
+  const flip=h.body.querySelector('.card-face-flip');assert.ok(flip);
+  for(const index of [0,1,0]){
+    assert.equal(h.body.querySelector('img').src,getCardImageUrl(card,index));
+    assert.equal(h.body.querySelector('.card-details-oracle').textContent,card.card_faces[index].oracle_text);
+    assert.equal(h.body.querySelector('.card-details-flavor').textContent,card.card_faces[index].flavor_text||'This face has no supplied flavor text.');
+    assert.equal(flip.getAttribute('aria-label'),`Show ${card.card_faces[1-index].name}`);
+    flip.click();assert.equal(h.document.activeElement,flip);
+  }
+  h.body.querySelector('.save').click();assert.equal(saved,card.id);assert.equal(h.dialog.open,true);
+  assert.equal(JSON.stringify(card),before);
+  const single=captures.dionus.result.cards.find(c=>!c.card_faces);
+  h.open(single,null);assert.equal(h.body.querySelector('.card-face-flip'),null);
+});
+
+test('flipping to a missing face image keeps its text and never borrows the other face art',()=>{
+  const card=structuredClone(captures.cosmic.result.cards.find(c=>c.name==='Gwen Stacy // Ghost-Spider'));
+  delete card.card_faces[1].image_uris;deepFreeze(card);
+  const h=detailHarness();h.open(card,null);h.body.querySelector('.card-face-flip').click();
+  assert.equal(h.body.querySelector('img'),null);
+  assert.match(h.body.textContent,/Art unavailable/);
+  assert.equal(h.body.querySelector('.card-details-oracle').textContent,card.card_faces[1].oracle_text);
+});
+
+
+test('Food and flavor-word references require exact retained clauses and never certify keywords',()=>{
+  for(const [label,numbers] of [['Food',['111.10b','111.10','205.3g']],['Eternity Gate',['207.2d']]]){
+    assert.deepEqual(mechanicExplanation(rules,label).rules,numbers);
+    assert.deepEqual(mechanicExplanation(rules,label.toUpperCase()).rules,numbers);
+    assert.equal(mechanicRule(rules,label),null);
+    for(const number of numbers){
+      const changed=structuredClone(rules);changed.rules[number].text+=' Changed.';
+      assert.equal(mechanicExplanation(changed,label),null);
+      delete changed.rules[number];assert.equal(mechanicExplanation(changed,label),null);
+    }
+    assert.equal(mechanicExplanation({...rules,date:'changed'},label),null);
+    assert.equal(mechanicExplanation({...rules,sourceSha256:'changed'},label),null);
+  }
+  for(const label of [' food','Food!','Eternity Gate 2','Mill','__proto__',null])assert.equal(mechanicExplanation(rules,label),null);
+  const h=renderHarness();h.ui.choose('food');
+  const text=h.$('mechanic-context').textContent;
+  assert.match(text,/other Food artifacts do not automatically/);
+  assert.match(text,/may modify/);
+  assert.match(text,/not certified by the pinned vocabulary/);
+  for(const n of ['111.10b','111.10','205.3g'])assert.ok(h.calls.includes(n));
+  assert.equal(h.searches.length,0);
+});
+
+test('Eternity Gate shows full resolved Oracle text without extracting an ability or asserting a relationship',()=>{
+  const h=renderHarness(),card=captures.dionus.result.cards.find(c=>c.name==='Necron Monolith');
+  h.ui.choose('eternity gate');
+  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text').textContent,card.oracle_text);
+  assert.match(h.$('mechanic-context').textContent,/no independent rules meaning/);
+  assert.match(h.$('mechanic-context').textContent,/Relationship: provider_reports/);
+  assert.ok(h.calls.includes('207.2d'));
+  const modified=structuredClone(captures.dionus.result.cards);
+  const current=modified.find(c=>c.id===card.id);
+  current.oracle_text='Revised text: do not reuse a pinned attack clause.';
+  h.ui.replace(resolveDeck(parseDeck(captures.dionus.text),modified,[]));h.ui.choose('eternity gate');
+  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text').textContent,current.oracle_text);
+  current.card_faces=[{name:'Front',oracle_text:'First face current text.'},{name:'Back',oracle_text:'Second face current text.'}];
+  h.ui.replace(resolveDeck(parseDeck(captures.dionus.text),modified,[]));h.ui.choose('eternity gate');
+  assert.deepEqual(h.$('mechanic-context').querySelectorAll('.mechanic-oracle-text').map(n=>n.textContent),current.card_faces.map(f=>f.oracle_text));
+  assert.match(h.$('mechanic-context').textContent,/no face attribution/);
+  h.ui.setSources(catalog,null);
+  assert.match(h.$('mechanic-context').textContent,/No linked explanation/);
+  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text'),null);
+  assert.equal(h.searches.length,0);
+});
+
+test('contextual history precedes evidence and supported search follows it; Surveil cannot search',()=>{
+  const h=renderHarness('cosmic');h.ui.choose('trample');
+  const context=h.$('mechanic-context'),children=context.children;
+  const history=context.querySelector('.color-history'),evidence=context.querySelector('.mechanic-deck-cards'),query=context.querySelector('.query-box');
+  assert.ok(history);assert.match(history.textContent,/2021 placement/);
+  assert.ok(children.indexOf(history)<children.indexOf(evidence));
+  assert.ok(children.indexOf(evidence)<children.indexOf(query));
+  assert.equal(h.searches.length,0);
+  context.querySelectorAll('button').find(b=>b.textContent==='Search Trample cards →').click();
+  assert.deepEqual(h.searches,['keyword-index-trample']);
+  h.ui.choose('surveil');assert.ok(h.calls.includes('701.25'));
+  assert.match(context.textContent,/No reviewed discovery search or historical color placement/);
+  assert.equal(context.querySelector('.query-box'),null);
+  assert.equal(context.querySelector('.color-history'),null);
+  assert.ok(!context.querySelectorAll('button').some(b=>b.textContent.startsWith('Search ')));
+  assert.deepEqual(h.searches,['keyword-index-trample']);
+  h.ui.choose('deathtouch');h.ui.replace(deck('dionus'));h.ui.choose('deathtouch');
+  assert.match(context.textContent,/Choose a mechanic/);assert.equal(context.querySelector('.query-box'),null);
+});

@@ -1,0 +1,1379 @@
+{
+  "date": "2026-10-16",
+  "provider": "Scryfall HTTPS API through local application server",
+  "fixture": "fixtures/cosmicspiderman.txt",
+  "sourceCopiedToPublic": false,
+  "input": {
+    "entries": 84,
+    "quantity": 100,
+    "distinctIdentifiers": 84
+  },
+  "providerRequests": [
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "method": "POST",
+      "start": "2026-10-17T02:55:41.541Z",
+      "identifierCount": 75
+    },
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "method": "POST",
+      "start": "2026-10-17T02:55:42.117Z",
+      "identifierCount": 9
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3AFlying%29&unique=prints&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "start": "2026-10-17T02:55:42.244Z",
+      "identifierCount": null
+    }
+  ],
+  "status": "PASS",
+  "sandboxAttempt": "Node localhost EACCES; Scryfall DNS ENOTFOUND. Retried approved network context.",
+  "resolveHttpStatus": 200,
+  "resolution": {
+    "counts": {
+      "entries": 84,
+      "quantity": 100,
+      "playableEntries": 84,
+      "playableQuantity": 100,
+      "excludedEntries": 0,
+      "resolvedEntries": 84,
+      "unresolvedEntries": 0,
+      "ambiguousEntries": 0,
+      "printingUnknownEntries": 0,
+      "distinctPrintings": 84,
+      "flavorAbsentEntries": 27,
+      "exactPassages": 58
+    },
+    "notFound": [],
+    "warnings": [],
+    "problems": []
+  },
+  "commander": {
+    "label": "WUBRG",
+    "colorIdentity": [
+      "W",
+      "U",
+      "B",
+      "R",
+      "G"
+    ],
+    "provisional": false,
+    "issues": [],
+    "cards": [
+      {
+        "id": "f82f4013-7308-4917-9042-19a5909f2134",
+        "name": "Cosmic Spider-Man",
+        "set": "spm",
+        "collectorNumber": "127",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U",
+          "B",
+          "R",
+          "G"
+        ]
+      }
+    ]
+  },
+  "verifiedPrintings": [
+    {
+      "id": "f5f18431-64c0-4ae5-bdc1-1e953313f086",
+      "name": "Arachnogenesis",
+      "set": "dsc",
+      "collectorNumber": "169",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8",
+      "name": "Araña, Heart of the Spider",
+      "set": "spm",
+      "collectorNumber": "123",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "95a87b4e-f0ea-457c-9517-4acf313c4ca6",
+      "name": "Arasta of the Endless Web",
+      "set": "tdc",
+      "collectorNumber": "244",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "1bbc3ce9-f3df-41b4-b238-37319546c595",
+      "name": "Arcane Signet",
+      "set": "msc",
+      "collectorNumber": "192",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "252c2564-c39d-476d-b7d0-43aee625fcaa",
+      "name": "Aunt May",
+      "set": "msc",
+      "collectorNumber": "768",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "400b43aa-c1d2-4435-b863-061f43889422",
+      "name": "Beast Within",
+      "set": "msc",
+      "collectorNumber": "169",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "1919bfec-1906-4178-ad32-d4589842e563",
+      "name": "Behold the Sinister Six!",
+      "set": "spm",
+      "collectorNumber": "51",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+      "name": "Black Market Connections",
+      "set": "msc",
+      "collectorNumber": "155",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "693da13a-49af-4f7e-b247-36b454fb31a0",
+      "name": "Chromatic Lantern",
+      "set": "msc",
+      "collectorNumber": "195",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "aef2eb36-f20d-4d90-a556-de2ba09b2635",
+      "name": "Coat of Arms",
+      "set": "plst",
+      "collectorNumber": "DDS-58",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "f82f4013-7308-4917-9042-19a5909f2134",
+      "name": "Cosmic Spider-Man",
+      "set": "spm",
+      "collectorNumber": "127",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "e60deb92-f7dd-4f4e-9036-e47dd586f985",
+      "name": "Cultivate",
+      "set": "msc",
+      "collectorNumber": "172",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "c1aac0f5-1d01-4673-b8d3-878d9a1d423c",
+      "name": "Farseek",
+      "set": "msc",
+      "collectorNumber": "173",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "1e24e2bc-b239-4f9a-85c0-5f272f58ed43",
+      "name": "Fellwar Stone",
+      "set": "msc",
+      "collectorNumber": "285",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "c9d637ac-e0d3-4c62-9f00-08270f3c1e91",
+      "name": "Forest",
+      "set": "msh",
+      "collectorNumber": "296",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "48810b27-0646-4ff9-9d4d-c6d09b2e0267",
+      "name": "Frontier Bivouac",
+      "set": "ecc",
+      "collectorNumber": "150",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U",
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+      "name": "Gwen Stacy // Ghost-Spider",
+      "set": "spm",
+      "collectorNumber": "78",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "U",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "46b6cc5d-7a37-4e8b-a1a5-9a573056610c",
+      "name": "Gwenom, Remorseless",
+      "set": "spm",
+      "collectorNumber": "56",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "1e8afbcf-c5a6-428c-8d91-a309821362b3",
+      "name": "Hashep Oasis",
+      "set": "m3c",
+      "collectorNumber": "347",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "08da9f92-0e25-4f39-aaa4-d8974af81a41",
+      "name": "Impostor Syndrome",
+      "set": "spm",
+      "collectorNumber": "34",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "8da5f34e-7f40-406a-88d2-bb1e3ed25200",
+      "name": "Iron Spider, Stark Upgrade",
+      "set": "spm",
+      "collectorNumber": "166",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "02f76514-9e0d-4d74-a224-15a2d7b44ae1",
+      "name": "Island",
+      "set": "msh",
+      "collectorNumber": "290",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "cec575f6-43c9-41c6-a996-bb806bf82185",
+      "name": "Kapow!",
+      "set": "spm",
+      "collectorNumber": "103",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "19bdedb2-768b-4adf-8193-917a10c8f729",
+      "name": "Kindred Discovery",
+      "set": "msc",
+      "collectorNumber": "150",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "f6cd7c08-f5d4-4bdc-a254-809d900b0fc3",
+      "name": "Kindred Dominance",
+      "set": "msc",
+      "collectorNumber": "156",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "a16ca3fc-3cdf-4333-93e0-524afafe367b",
+      "name": "Madame Web, Clairvoyant",
+      "set": "spm",
+      "collectorNumber": "36",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "178345f7-8ccd-4e47-80f4-5bd31bab6655",
+      "name": "Mary Jane Watson",
+      "set": "spm",
+      "collectorNumber": "134",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "c6f2c543-9b01-4760-966a-f0609c24f53e",
+      "name": "Maskwood Nexus",
+      "set": "drc",
+      "collectorNumber": "132",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+      "name": "Miles Morales // Ultimate Spider-Man",
+      "set": "spm",
+      "collectorNumber": "108",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "20dafceb-2cc4-437a-9500-edfacbef4d3d",
+      "name": "Mirrodin's Core",
+      "set": "plst",
+      "collectorNumber": "DST-165",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "33c2e889-d2e1-4197-ba97-81a2b8512746",
+      "name": "Morophon, the Boundless",
+      "set": "m3c",
+      "collectorNumber": "157",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "f7752159-06bd-4f6c-b3d2-c4c7616acfbb",
+      "name": "Mountain",
+      "set": "msh",
+      "collectorNumber": "294",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "bc23343a-3a01-4975-8430-17bf15fa639d",
+      "name": "Mystic Monastery",
+      "set": "msc",
+      "collectorNumber": "253",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "U",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "790d5244-5042-4b84-b16d-be0f87d11fad",
+      "name": "Nomad Outpost",
+      "set": "fic",
+      "collectorNumber": "409",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "B",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "4329f94a-9110-4f07-b4a6-f1ccae97ccc9",
+      "name": "Ominous Asylum",
+      "set": "spm",
+      "collectorNumber": "181",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "B",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "f0001153-dbcb-44e5-99be-2c186c9b10b0",
+      "name": "Opulent Palace",
+      "set": "ecc",
+      "collectorNumber": "157",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U",
+        "B",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "a10a7da7-d9cb-495a-9c9f-205d355c390d",
+      "name": "Origin of Spider-Man",
+      "set": "spm",
+      "collectorNumber": "9",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "1e609d6e-9e37-45d2-87de-8c76675f7cec",
+      "name": "Oscorp Industries",
+      "set": "spm",
+      "collectorNumber": "182",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "U",
+        "B",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "537ea7e7-e8e8-4736-bdd9-1085f1a7c259",
+      "name": "Patchwork Banner",
+      "set": "msc",
+      "collectorNumber": "207",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+      "name": "Peter Parker // Amazing Spider-Man",
+      "set": "spm",
+      "collectorNumber": "10",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 2,
+      "colorIdentity": [
+        "W",
+        "U",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "47875dff-c046-4cb0-b1e3-f926cbe25b59",
+      "name": "Peter Parker's Camera",
+      "set": "spm",
+      "collectorNumber": "171",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "5f029c91-f20b-4aa5-a7d9-dd6ddef1c877",
+      "name": "Plains",
+      "set": "msh",
+      "collectorNumber": "287",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "4131fa63-5afc-4b63-a4b4-f47b4bced87f",
+      "name": "Pongify",
+      "set": "tdc",
+      "collectorNumber": "160",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+      "name": "Radioactive Spider",
+      "set": "spm",
+      "collectorNumber": "111",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "ce9347e8-962f-4fc1-808f-b59ac751de13",
+      "name": "Raise the Palisade",
+      "set": "msc",
+      "collectorNumber": "278",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "52733829-27b7-40ec-a897-cabab35b3729",
+      "name": "Realmwalker",
+      "set": "ecc",
+      "collectorNumber": "114",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "b3f8d221-081f-49f5-a501-07e5eb21a840",
+      "name": "Rent Is Due",
+      "set": "spm",
+      "collectorNumber": "11",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "38120361-153f-414e-8a45-f86bb2e35a17",
+      "name": "Romantic Rendezvous",
+      "set": "spm",
+      "collectorNumber": "86",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "e7482def-e87e-4a7f-9c18-7859483b2a66",
+      "name": "Sandsteppe Citadel",
+      "set": "ecc",
+      "collectorNumber": "164",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "B",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "855f59a5-17a8-4aca-8a4d-f98111eba14c",
+      "name": "Savage Mansion",
+      "set": "spm",
+      "collectorNumber": "183",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+      "name": "Scarlet Spider, Ben Reilly",
+      "set": "spm",
+      "collectorNumber": "142",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+      "name": "Shelob, Child of Ungoliant",
+      "set": "ltr",
+      "collectorNumber": "230",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "B",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1",
+      "name": "Silk, Web Weaver",
+      "set": "spm",
+      "collectorNumber": "145",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "23190d7e-5165-49bd-b307-bf81877d228d",
+      "name": "Sinister Hideout",
+      "set": "spm",
+      "collectorNumber": "184",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U",
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "5bef0790-aa1b-4144-8391-338e59e86115",
+      "name": "Sol Ring",
+      "set": "msc",
+      "collectorNumber": "212",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "c47c1d83-e76d-4939-9ed6-05a9e709dea1",
+      "name": "SP//dr, Piloted by Peni",
+      "set": "spm",
+      "collectorNumber": "147",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W",
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "818a5c98-8740-43b1-a42a-6d2382138df8",
+      "name": "Spectacular Spider-Man",
+      "set": "lmar",
+      "collectorNumber": "2",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "032cc89a-9824-437d-b7fb-02a7901a8299",
+      "name": "Spectacular Tactics",
+      "set": "msc",
+      "collectorNumber": "775",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "99223677-b8a5-48f1-8009-e8475eada7db",
+      "name": "Spider Manifestation",
+      "set": "spm",
+      "collectorNumber": "148",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "24df824a-c1d6-4f09-b866-313b31fec5fb",
+      "name": "Spider-Bot",
+      "set": "spm",
+      "collectorNumber": "173",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "3a9a0ec2-6f57-4218-a307-6e8d785a1693",
+      "name": "Spider-Gwen, Free Spirit",
+      "set": "msc",
+      "collectorNumber": "874",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+      "name": "Spider-Man 2099",
+      "set": "spm",
+      "collectorNumber": "150",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "U",
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "65b8af30-559b-43a9-8526-62c28c378339",
+      "name": "Spider-Man India",
+      "set": "spm",
+      "collectorNumber": "151",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "bc64366c-2691-48cd-bb4b-a4b088c6f16b",
+      "name": "Spider-Man Noir",
+      "set": "spm",
+      "collectorNumber": "67",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "e19929bc-cbe1-4970-952d-8e9d0193ddce",
+      "name": "Spider-Man, Brooklyn Visionary",
+      "set": "spm",
+      "collectorNumber": "115",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "897418bc-df8c-4c97-b6bf-7c9133a8a577",
+      "name": "Spider-Man, Web-Slinger",
+      "set": "spm",
+      "collectorNumber": "16",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "0bd41879-fcd4-4211-9b98-47e7cdba5399",
+      "name": "Spider-Punk",
+      "set": "spm",
+      "collectorNumber": "92",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "4499a25b-f4a5-4f2c-9ebd-bc68c7840b39",
+      "name": "Spider-Sense",
+      "set": "spm",
+      "collectorNumber": "46",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "436527ec-5af4-4b6d-a5a0-d21fc466a625",
+      "name": "Spider-Suit",
+      "set": "spm",
+      "collectorNumber": "176",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "6beb4548-1fab-4b9e-bf24-f7b9aadecc87",
+      "name": "Spider-UK",
+      "set": "spm",
+      "collectorNumber": "17",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "f8779eb2-1210-430d-8d42-3077053441ee",
+      "name": "Spider-Verse",
+      "set": "spm",
+      "collectorNumber": "93",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "bc9b2a76-3cce-4fd0-a4ef-932747cb11b2",
+      "name": "Spider-Woman, Stunning Savior",
+      "set": "spm",
+      "collectorNumber": "152",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "a27834b7-e763-48ac-845e-ed49f2fa6c6d",
+      "name": "Spinneret and Spiderling",
+      "set": "spm",
+      "collectorNumber": "94",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "467df77a-a99c-4cfd-9af4-502eaa2eb2e3",
+      "name": "Suburban Sanctuary",
+      "set": "spm",
+      "collectorNumber": "185",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "2b54d4a5-634f-4ae3-b592-0dc527f60d56",
+      "name": "Sun-Spider, Nimble Webber",
+      "set": "spm",
+      "collectorNumber": "154",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "U"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "ad4adc3e-ec41-4406-8ff2-59ba8067cf4e",
+      "name": "Superior Spider-Man",
+      "set": "spm",
+      "collectorNumber": "155",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "U",
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "74414c62-4b68-4e1b-9241-feff3231b9ee",
+      "name": "Swamp",
+      "set": "msh",
+      "collectorNumber": "291",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "B"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "a70cb6d9-3955-4064-917b-11dec26440c5",
+      "name": "The World Tree",
+      "set": "khm",
+      "collectorNumber": "275",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "2e2b27e0-aaa7-426e-8c0b-283cb9f969eb",
+      "name": "Thwip!",
+      "set": "msc",
+      "collectorNumber": "780",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2",
+      "name": "Vibrant Cityscape",
+      "set": "tmc",
+      "collectorNumber": "82",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b",
+      "name": "Web of Life and Destiny",
+      "set": "spm",
+      "collectorNumber": "122",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "a0ca1108-6d99-4dc2-96ab-7728d65b0c06",
+      "name": "Web-Shooters",
+      "set": "spm",
+      "collectorNumber": "22",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "741f5373-b51a-421a-9a74-326f0575c99b",
+      "name": "Web-Warriors",
+      "set": "spm",
+      "collectorNumber": "159",
+      "language": "en",
+      "flavorPresent": true,
+      "passages": 1,
+      "colorIdentity": [
+        "W",
+        "G"
+      ],
+      "commanderLegality": "legal"
+    },
+    {
+      "id": "735b8aec-62d4-46db-9a68-a6c69cb6fd98",
+      "name": "Winds of Change",
+      "set": "por",
+      "collectorNumber": "156",
+      "language": "en",
+      "flavorPresent": false,
+      "passages": 0,
+      "colorIdentity": [
+        "R"
+      ],
+      "commanderLegality": "legal"
+    }
+  ],
+  "searchHttpStatus": 200,
+  "search": {
+    "query": "(f:commander id<=wubrg) (kw:Flying)",
+    "atlasRowId": "keyword-index-flying",
+    "identity": [
+      "W",
+      "U",
+      "B",
+      "R",
+      "G"
+    ],
+    "totalCards": 9963,
+    "pageCards": 175,
+    "skipped": 0,
+    "displayedCards": 12,
+    "hasMore": true,
+    "scryfallUrl": "https://scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3AFlying%29&unique=prints",
+    "results": [
+      {
+        "id": "f369827d-e4cd-4bc7-8c5e-72882eff0908",
+        "name": "Aang, Air Nomad",
+        "set": "tle",
+        "collectorNumber": "210",
+        "language": "en",
+        "colorIdentity": [
+          "W"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": true
+      },
+      {
+        "id": "cdd47fc3-6ea7-4516-ad66-b73f545f8221",
+        "name": "Aang, Air Nomad",
+        "set": "tle",
+        "collectorNumber": "265",
+        "language": "en",
+        "colorIdentity": [
+          "W"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": true
+      },
+      {
+        "id": "c7818c58-47f1-4031-8f7f-80b4b8c75530",
+        "name": "Aang, Air Nomad",
+        "set": "pmei",
+        "collectorNumber": "2025-25",
+        "language": "en",
+        "colorIdentity": [
+          "W"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": true
+      },
+      {
+        "id": "fea89ca0-8070-4f28-9851-994314f9d248",
+        "name": "Aang, at the Crossroads // Aang, Destined Savior",
+        "set": "tla",
+        "collectorNumber": "203",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U",
+          "G"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      },
+      {
+        "id": "44d42fdd-752a-45a8-a5f4-73470511fa78",
+        "name": "Aang, at the Crossroads // Aang, Destined Savior",
+        "set": "ptla",
+        "collectorNumber": "203s",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U",
+          "G"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      },
+      {
+        "id": "ea886239-c58f-4291-bd32-ed306ae1d6de",
+        "name": "Aang, at the Crossroads // Aang, Destined Savior",
+        "set": "tla",
+        "collectorNumber": "304",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U",
+          "G"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      },
+      {
+        "id": "d7f35cd9-71ac-4191-8604-1a653b56c42d",
+        "name": "Aang, at the Crossroads // Aang, Destined Savior",
+        "set": "tla",
+        "collectorNumber": "346",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U",
+          "G"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      },
+      {
+        "id": "82866a0e-485a-4f7e-8c49-f7d9ff3f4ad4",
+        "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "set": "tla",
+        "collectorNumber": "204",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": true
+      },
+      {
+        "id": "959cbe4c-ca7e-4343-8380-af70159deeb9",
+        "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "set": "ptla",
+        "collectorNumber": "204s",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": true
+      },
+      {
+        "id": "de89fec4-f5c8-4513-8504-ac9bafb44054",
+        "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "set": "tla",
+        "collectorNumber": "298",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      },
+      {
+        "id": "077a1ad2-6317-4271-b86c-cc999776251d",
+        "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "set": "tla",
+        "collectorNumber": "347",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      },
+      {
+        "id": "372afa84-9ca9-46e6-8643-e16249505c59",
+        "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "set": "tla",
+        "collectorNumber": "359",
+        "language": "en",
+        "colorIdentity": [
+          "W",
+          "U"
+        ],
+        "commanderLegality": "legal",
+        "flavorPresent": false
+      }
+    ]
+  },
+  "clipboardModule": {
+    "status": "PASS",
+    "export": "2 Aang, Air Nomad (TLE) 210",
+    "importUnchanged": true,
+    "browserCopy": "NOT TESTED by this API smoke"
+  }
+}

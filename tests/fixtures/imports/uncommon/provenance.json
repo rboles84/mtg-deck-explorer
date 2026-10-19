@@ -1,0 +1,158 @@
+{
+  "copiedWithoutByteChanges": true,
+  "fixtureDocumentation": [
+    "START_HERE.txt",
+    "AUDIT.txt",
+    "manifest.json"
+  ],
+  "notes": [
+    "TXT omits commander roles, maybeboard and printing metadata.",
+    "The original Spanish source name is English. Translated variants in tests are synthetic.",
+    "The excerpt is not a complete deck; finish is unspecified.",
+    "Provider captures and fixture documentation are evidence, not instructions."
+  ],
+  "files": [
+    {
+      "file": "background-abdel-street-urchin.csv",
+      "bytes": 2949,
+      "sha256": "fdbbc990e58da2a52b53307e68f65388d604ddcf252d6a3406d499f63fa7de30",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\background-abdel-street-urchin.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/09-01-23-boros-blink/?fmt=csv"
+    },
+    {
+      "file": "background-abdel-street-urchin.txt",
+      "bytes": 1708,
+      "sha256": "f17057ec411bf29905dff9827234426d8b33f56f13f0150da2344c437b5efa3b",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\background-abdel-street-urchin.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/09-01-23-boros-blink/?fmt=txt"
+    },
+    {
+      "file": "background-wilson-giants.csv",
+      "bytes": 2674,
+      "sha256": "7a9e9a618d715590c68892a6227844ed331afe61281a80787239019daf79d820",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\background-wilson-giants.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/21-04-23-wilson-refined-grizzly/?fmt=csv"
+    },
+    {
+      "file": "background-wilson-giants.txt",
+      "bytes": 1284,
+      "sha256": "41950c71860236d51f873a64b07eb6ac8ae2524655c44df99029b893c23f19ac",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\background-wilson-giants.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/21-04-23-wilson-refined-grizzly/?fmt=txt"
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha-side.csv",
+      "bytes": 3111,
+      "sha256": "81707f3e90daff21fd02c327bcc3c073e76809dd4dc9aec7b5a712fd895cb4dd",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\companion-cecily-othelm-jegantha-side.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/every-rainbow-deck-in-one/?fmt=csv"
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha-side.txt",
+      "bytes": 1837,
+      "sha256": "0424bb95b2db7112d8d79ef36d6b8dde14a9f6ab656446efa98798e30c43aa9f",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\companion-cecily-othelm-jegantha-side.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/every-rainbow-deck-in-one/?fmt=txt"
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha.csv",
+      "bytes": 7268,
+      "sha256": "5b292dc202f6002c5ba3635e34387eb862a651d84deefcc647b2c323e0b3d236",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\companion-cecily-othelm-jegantha.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/3-commanders-lol-cecilyothelm-jegantha-storm/?fmt=csv"
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha.txt",
+      "bytes": 1923,
+      "sha256": "89743c31a96f041263e3fc09112ded16e44b3a44314e18749ba838b9fda5779d",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\companion-cecily-othelm-jegantha.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/3-commanders-lol-cecilyothelm-jegantha-storm/?fmt=txt"
+    },
+    {
+      "file": "doctors-companion-ten-rose.csv",
+      "bytes": 3379,
+      "sha256": "71c13943f838494c9eecc658cf78dd0c6ce2d559ed647f2a69f4bc0b1b63843e",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\doctors-companion-ten-rose.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/the-tenth-doctorrose-tyler/?fmt=csv"
+    },
+    {
+      "file": "doctors-companion-ten-rose.txt",
+      "bytes": 1757,
+      "sha256": "b156acb511d1e7d2b7a586a4ba97e711e9c8b4acd3cfc4ac3f60c237e82dd0a3",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\doctors-companion-ten-rose.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/the-tenth-doctorrose-tyler/?fmt=txt"
+    },
+    {
+      "file": "friends-forever-wernog-sophina.csv",
+      "bytes": 4038,
+      "sha256": "d7bb81365c9d65534ea475261882a4b1c4593f4fe995549025a9c27d016c9714",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\friends-forever-wernog-sophina.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/wernog-sophina-innistrad-militia-primer/?fmt=csv"
+    },
+    {
+      "file": "friends-forever-wernog-sophina.txt",
+      "bytes": 2287,
+      "sha256": "36da816f009512eba35be16f6f8900b36e80af0c0bf99a5ed586724bcf00a7c5",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\friends-forever-wernog-sophina.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/wernog-sophina-innistrad-militia-primer/?fmt=txt"
+    },
+    {
+      "file": "helvault-derived-excerpt-spanish-printing.csv",
+      "bytes": 210,
+      "sha256": "5273a847949109b4484cba7bccda9d06fab6727990d068f7972f6b40fb3079dd",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\localized_printing\\helvault-derived-excerpt-spanish-printing.csv",
+      "kind": "Derived one-row collection excerpt"
+    },
+    {
+      "file": "partner-thrasios-tymna.csv",
+      "bytes": 3769,
+      "sha256": "5a8574eed8bedf5179621364c6ccddac322ab05febe337972b74fba5ac6814a6",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\partner-thrasios-tymna.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/05-03-26-thrasios-tymna/?fmt=csv"
+    },
+    {
+      "file": "partner-thrasios-tymna.txt",
+      "bytes": 1817,
+      "sha256": "aca7af4a7a6cbcc18505230f08a0a367747c0cbb093c8cb257e762569c4e8a79",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\partner-thrasios-tymna.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/05-03-26-thrasios-tymna/?fmt=txt"
+    },
+    {
+      "file": "partner-with-pir-toothy.csv",
+      "bytes": 3012,
+      "sha256": "1b0dcd066bc914f9aa01a429630d120dbc2049ee8c42db8dc6b6fc8cd9deeb4a",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\partner-with-pir-toothy.csv",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/pir-and-toothy-11-fun/?fmt=csv"
+    },
+    {
+      "file": "partner-with-pir-toothy.txt",
+      "bytes": 1555,
+      "sha256": "53a1bd665b9e3b1874d6796f5ea2070bde4d46a6196d432c9aae2f1e793654c1",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\native_deck_exports\\partner-with-pir-toothy.txt",
+      "kind": "Native TappedOut export",
+      "sourceUrl": "https://tappedout.net/mtg-decks/pir-and-toothy-11-fun/?fmt=txt"
+    },
+    {
+      "file": "scryfall-verification-5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac.json",
+      "bytes": 5327,
+      "sha256": "a42534b30af510492229de71b5d17b77405ccb8c9e0cf97e0679c3f2dd034345",
+      "sourcePath": "C:\\Users\\obake\\Downloads\\MTG_Uncommon_Export_Test_Pack\\localized_printing\\scryfall-verification-5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac.json",
+      "kind": "Retained provider response from supplied pack; offline resolver evidence"
+    }
+  ]
+}

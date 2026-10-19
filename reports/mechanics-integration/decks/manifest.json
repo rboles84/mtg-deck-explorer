@@ -1,0 +1,643 @@
+{
+  "capturedAt": "2026-10-17T20:36:29.902Z",
+  "requests": [
+    {
+      "file": "collection-1.json",
+      "sha256": "0919cba9a158fffa65e0e5aaa217695f59c3f748416345f2786c27f91dcc5ca9",
+      "url": "https://api.scryfall.com/cards/collection",
+      "request": {
+        "identifiers": [
+          {
+            "set": "dsc",
+            "collector_number": "169"
+          },
+          {
+            "set": "spm",
+            "collector_number": "123"
+          },
+          {
+            "set": "tdc",
+            "collector_number": "244"
+          },
+          {
+            "set": "msc",
+            "collector_number": "192"
+          },
+          {
+            "set": "msc",
+            "collector_number": "768"
+          },
+          {
+            "set": "msc",
+            "collector_number": "169"
+          },
+          {
+            "set": "spm",
+            "collector_number": "51"
+          },
+          {
+            "set": "msc",
+            "collector_number": "155"
+          },
+          {
+            "set": "msc",
+            "collector_number": "195"
+          },
+          {
+            "set": "plst",
+            "collector_number": "DDS-58"
+          },
+          {
+            "set": "spm",
+            "collector_number": "127"
+          },
+          {
+            "set": "msc",
+            "collector_number": "172"
+          },
+          {
+            "set": "msc",
+            "collector_number": "173"
+          },
+          {
+            "set": "msc",
+            "collector_number": "285"
+          },
+          {
+            "set": "msh",
+            "collector_number": "296"
+          },
+          {
+            "set": "ecc",
+            "collector_number": "150"
+          },
+          {
+            "set": "spm",
+            "collector_number": "78"
+          },
+          {
+            "set": "spm",
+            "collector_number": "56"
+          },
+          {
+            "set": "m3c",
+            "collector_number": "347"
+          },
+          {
+            "set": "spm",
+            "collector_number": "34"
+          },
+          {
+            "set": "spm",
+            "collector_number": "166"
+          },
+          {
+            "set": "msh",
+            "collector_number": "290"
+          },
+          {
+            "set": "spm",
+            "collector_number": "103"
+          },
+          {
+            "set": "msc",
+            "collector_number": "150"
+          },
+          {
+            "set": "msc",
+            "collector_number": "156"
+          },
+          {
+            "set": "spm",
+            "collector_number": "36"
+          },
+          {
+            "set": "spm",
+            "collector_number": "134"
+          },
+          {
+            "set": "drc",
+            "collector_number": "132"
+          },
+          {
+            "set": "spm",
+            "collector_number": "108"
+          },
+          {
+            "set": "plst",
+            "collector_number": "DST-165"
+          },
+          {
+            "set": "m3c",
+            "collector_number": "157"
+          },
+          {
+            "set": "msh",
+            "collector_number": "294"
+          },
+          {
+            "set": "msc",
+            "collector_number": "253"
+          },
+          {
+            "set": "fic",
+            "collector_number": "409"
+          },
+          {
+            "set": "spm",
+            "collector_number": "181"
+          },
+          {
+            "set": "ecc",
+            "collector_number": "157"
+          },
+          {
+            "set": "spm",
+            "collector_number": "9"
+          },
+          {
+            "set": "spm",
+            "collector_number": "182"
+          },
+          {
+            "set": "msc",
+            "collector_number": "207"
+          },
+          {
+            "set": "spm",
+            "collector_number": "10"
+          },
+          {
+            "set": "spm",
+            "collector_number": "171"
+          },
+          {
+            "set": "msh",
+            "collector_number": "287"
+          },
+          {
+            "set": "tdc",
+            "collector_number": "160"
+          },
+          {
+            "set": "spm",
+            "collector_number": "111"
+          },
+          {
+            "set": "msc",
+            "collector_number": "278"
+          },
+          {
+            "set": "ecc",
+            "collector_number": "114"
+          },
+          {
+            "set": "spm",
+            "collector_number": "11"
+          },
+          {
+            "set": "spm",
+            "collector_number": "86"
+          },
+          {
+            "set": "ecc",
+            "collector_number": "164"
+          },
+          {
+            "set": "spm",
+            "collector_number": "183"
+          },
+          {
+            "set": "spm",
+            "collector_number": "142"
+          },
+          {
+            "set": "ltr",
+            "collector_number": "230"
+          },
+          {
+            "set": "spm",
+            "collector_number": "145"
+          },
+          {
+            "set": "spm",
+            "collector_number": "184"
+          },
+          {
+            "set": "msc",
+            "collector_number": "212"
+          },
+          {
+            "set": "spm",
+            "collector_number": "147"
+          },
+          {
+            "set": "lmar",
+            "collector_number": "2"
+          },
+          {
+            "set": "msc",
+            "collector_number": "775"
+          },
+          {
+            "set": "spm",
+            "collector_number": "148"
+          },
+          {
+            "set": "spm",
+            "collector_number": "173"
+          },
+          {
+            "set": "msc",
+            "collector_number": "874"
+          },
+          {
+            "set": "spm",
+            "collector_number": "150"
+          },
+          {
+            "set": "spm",
+            "collector_number": "151"
+          },
+          {
+            "set": "spm",
+            "collector_number": "67"
+          },
+          {
+            "set": "spm",
+            "collector_number": "115"
+          },
+          {
+            "set": "spm",
+            "collector_number": "16"
+          },
+          {
+            "set": "spm",
+            "collector_number": "92"
+          },
+          {
+            "set": "spm",
+            "collector_number": "46"
+          },
+          {
+            "set": "spm",
+            "collector_number": "176"
+          },
+          {
+            "set": "spm",
+            "collector_number": "17"
+          },
+          {
+            "set": "spm",
+            "collector_number": "93"
+          },
+          {
+            "set": "spm",
+            "collector_number": "152"
+          },
+          {
+            "set": "spm",
+            "collector_number": "94"
+          },
+          {
+            "set": "spm",
+            "collector_number": "185"
+          },
+          {
+            "set": "spm",
+            "collector_number": "154"
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "file": "collection-2.json",
+      "sha256": "d6c159ca44043935678eac3c31b3fa4ebca855dd7be88e100c3c02c1e8ba56e0",
+      "url": "https://api.scryfall.com/cards/collection",
+      "request": {
+        "identifiers": [
+          {
+            "set": "spm",
+            "collector_number": "155"
+          },
+          {
+            "set": "msh",
+            "collector_number": "291"
+          },
+          {
+            "set": "khm",
+            "collector_number": "275"
+          },
+          {
+            "set": "msc",
+            "collector_number": "780"
+          },
+          {
+            "set": "tmc",
+            "collector_number": "82"
+          },
+          {
+            "set": "spm",
+            "collector_number": "122"
+          },
+          {
+            "set": "spm",
+            "collector_number": "22"
+          },
+          {
+            "set": "spm",
+            "collector_number": "159"
+          },
+          {
+            "set": "por",
+            "collector_number": "156"
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "file": "collection-3.json",
+      "sha256": "1e66b6e21350084d99808eef534e589b5ed4d69740ca210ae3cd71df2604cfdf",
+      "url": "https://api.scryfall.com/cards/collection",
+      "request": {
+        "identifiers": [
+          {
+            "set": "fin",
+            "collector_number": "252"
+          },
+          {
+            "set": "ltc",
+            "collector_number": "232"
+          },
+          {
+            "set": "eoc",
+            "collector_number": "93"
+          },
+          {
+            "set": "plst",
+            "collector_number": "KLD-198"
+          },
+          {
+            "set": "fic",
+            "collector_number": "376"
+          },
+          {
+            "set": "plst",
+            "collector_number": "CSP-105"
+          },
+          {
+            "set": "blb",
+            "collector_number": "167"
+          },
+          {
+            "set": "plst",
+            "collector_number": "UDS-102"
+          },
+          {
+            "set": "who",
+            "collector_number": "177"
+          },
+          {
+            "set": "eoe",
+            "collector_number": "238"
+          },
+          {
+            "set": "j25",
+            "collector_number": "648"
+          },
+          {
+            "set": "dft",
+            "collector_number": "157"
+          },
+          {
+            "set": "ecc",
+            "collector_number": "104"
+          },
+          {
+            "set": "j25",
+            "collector_number": "52"
+          },
+          {
+            "set": "drc",
+            "collector_number": "49"
+          },
+          {
+            "set": "fdn",
+            "collector_number": "554"
+          },
+          {
+            "set": "dft",
+            "collector_number": "160"
+          },
+          {
+            "set": "cmm",
+            "collector_number": "284"
+          },
+          {
+            "set": "mh3",
+            "collector_number": "151"
+          },
+          {
+            "set": "eoe",
+            "collector_number": "242"
+          },
+          {
+            "set": "tmt",
+            "collector_number": "319"
+          },
+          {
+            "set": "cmr",
+            "collector_number": "228"
+          },
+          {
+            "set": "bro",
+            "collector_number": "182"
+          },
+          {
+            "set": "ltc",
+            "collector_number": "440"
+          },
+          {
+            "set": "mb2",
+            "collector_number": "109"
+          },
+          {
+            "set": "fic",
+            "collector_number": "306"
+          },
+          {
+            "set": "dsk",
+            "collector_number": "183"
+          },
+          {
+            "set": "blb",
+            "collector_number": "246"
+          },
+          {
+            "set": "fic",
+            "collector_number": "309"
+          },
+          {
+            "set": "tle",
+            "collector_number": "168"
+          },
+          {
+            "set": "jmp",
+            "collector_number": "408"
+          },
+          {
+            "set": "dft",
+            "collector_number": "234"
+          },
+          {
+            "set": "fic",
+            "collector_number": "349"
+          },
+          {
+            "set": "fdn",
+            "collector_number": "227"
+          },
+          {
+            "set": "blc",
+            "collector_number": "228"
+          },
+          {
+            "set": "mh3",
+            "collector_number": "161"
+          },
+          {
+            "set": "ecl",
+            "collector_number": "182"
+          },
+          {
+            "set": "clb",
+            "collector_number": "324"
+          },
+          {
+            "set": "clb",
+            "collector_number": "328"
+          },
+          {
+            "set": "40k",
+            "collector_number": "161"
+          },
+          {
+            "set": "tla",
+            "collector_number": "187"
+          },
+          {
+            "set": "dft",
+            "collector_number": "173"
+          },
+          {
+            "set": "j25",
+            "collector_number": "698"
+          },
+          {
+            "set": "eoe",
+            "collector_number": "244"
+          },
+          {
+            "set": "mh3",
+            "collector_number": "428"
+          },
+          {
+            "set": "c16",
+            "collector_number": "160"
+          },
+          {
+            "set": "plst",
+            "collector_number": "M15-193"
+          },
+          {
+            "set": "fdn",
+            "collector_number": "231"
+          },
+          {
+            "set": "pip",
+            "collector_number": "141"
+          },
+          {
+            "set": "mb2",
+            "collector_number": "213"
+          },
+          {
+            "set": "nec",
+            "collector_number": "159"
+          },
+          {
+            "set": "nec",
+            "collector_number": "160"
+          },
+          {
+            "set": "tdm",
+            "collector_number": "159"
+          },
+          {
+            "set": "fem",
+            "collector_number": "72a"
+          },
+          {
+            "set": "blb",
+            "collector_number": "194"
+          },
+          {
+            "set": "neo",
+            "collector_number": "260"
+          },
+          {
+            "set": "fic",
+            "collector_number": "361"
+          },
+          {
+            "set": "apc",
+            "collector_number": "88"
+          },
+          {
+            "set": "neo",
+            "collector_number": "211"
+          },
+          {
+            "set": "eoe",
+            "collector_number": "210"
+          },
+          {
+            "set": "40k",
+            "collector_number": "167"
+          },
+          {
+            "set": "dft",
+            "collector_number": "183"
+          },
+          {
+            "set": "nec",
+            "collector_number": "165"
+          },
+          {
+            "set": "ons",
+            "collector_number": "301"
+          }
+        ]
+      },
+      "status": 200
+    }
+  ],
+  "decks": [
+    {
+      "name": "cosmic",
+      "path": "C:/dev/mtg-deck-explorer/fixtures/cosmicspiderman.txt",
+      "inputSha256": "0c960f066df52bd00471404c02cb7ffcbf87b18cd4185bb51516e9b74d63abc7",
+      "file": "cosmic.json",
+      "sha256": "0060617e824cd488ba2221c158ad3e59ce3cf5573a9c24b5e6ed12bfce1d8c56"
+    },
+    {
+      "name": "dionus",
+      "path": "C:/Users/obake/Downloads/carelf.txt",
+      "inputSha256": "1ac03f916f5eb1f68be0e55a04b51ea2cfc5aeb123da169758750f133c675d65",
+      "file": "dionus.json",
+      "sha256": "8851f25e6e7b3b676963af834712b75b52f5b5a6cdf51be54d6f750045d639f7"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-18T17:31:53.963Z",
+  "scope": "Offline local measurements, not production load testing",
+  "results": [
+    {
+      "name": "hakbal",
+      "scope": "Offline parser only",
+      "medianMs": 0.5189000000000021,
+      "p95Ms": 1.038499999999999
+    },
+    {
+      "name": "veyran",
+      "scope": "Offline parser only",
+      "medianMs": 0.41840000000001965,
+      "p95Ms": 0.8325999999999851
+    },
+    {
+      "name": "obeka-b",
+      "scope": "Offline parser only",
+      "medianMs": 0.4730000000000132,
+      "p95Ms": 0.7674000000000092
+    },
+    {
+      "name": "20,000 tags",
+      "characters": 80010,
+      "elapsedMs": 0.10320000000001528,
+      "error": "Each import record is limited to 8,000 characters."
+    },
+    {
+      "name": "501 text rows",
+      "characters": 4509,
+      "elapsedMs": 0.754600000000039,
+      "error": "Deck input is limited to 500 entries."
+    },
+    {
+      "name": "501 CSV rows",
+      "characters": 4523,
+      "elapsedMs": 1.0885999999999854,
+      "error": "Deck input is limited to 500 entries."
+    }
+  ]
+}

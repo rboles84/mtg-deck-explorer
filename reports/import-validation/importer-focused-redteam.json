@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-10-18T16:50:52.089Z",
+  "scope": "Read-only reproduction using actual parser, resolver and app handlers; synthetic provider responses",
+  "findings": [
+    {
+      "name": "ignored board and commander columns",
+      "input": "Quantity,Name,Board,Commander\n1,Hakbal of the Surging Soul,main,True\n99,Forest,main,",
+      "validationValid": true,
+      "deckCards": 100,
+      "extras": 0,
+      "commanders": 0,
+      "identifiers": [
+        {
+          "name": "Hakbal of the Surging Soul"
+        },
+        {
+          "name": "Forest"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "name": "ignored extra board",
+      "input": "Quantity,Name,Board\n100,Forest,maybe",
+      "validationValid": true,
+      "deckCards": 100,
+      "extras": 0,
+      "commanders": 0,
+      "identifiers": [
+        {
+          "name": "Forest"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "name": "ignored exact printing ID column",
+      "input": "Quantity,Name,scryfall_id\n100,Forest,00000000-0000-4000-8000-000000000002",
+      "validationValid": true,
+      "deckCards": 100,
+      "extras": 0,
+      "commanders": 0,
+      "identifiers": [
+        {
+          "name": "Forest"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "name": "set-only input rejected",
+      "input": "Quantity,Name,Set\n100,Forest,tst",
+      "validationValid": false,
+      "deckCards": 100,
+      "extras": 0,
+      "commanders": 0,
+      "identifiers": [],
+      "issues": [
+        "1 invalid import line. Correct the following before importing:",
+        "Line 2: Incomplete printing coordinates: supply both set and collector number, or remove both to request an assumed printing. Source: 100,Forest,tst"
+      ]
+    },
+    {
+      "name": "editing pending import commits stale input",
+      "visibleInput": "Commander\n1 Veyran, Voice of Duality\nDeck\n99 Island",
+      "committedInput": "Commander\n1 Hakbal of the Surging Soul\nDeck\n99 Forest",
+      "status": "Import complete. Deck + Commander: 100/100 cards. Extras: 0 cards in 0 entries. 2 deck entries resolved; 0 imported entries need attention. 2 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Hakbal of the Surging Soul.",
+      "workbenchOpen": false
+    },
+    {
+      "name": "alternate-name commander search omits imported aliases",
+      "importedAlias": "Godzilla, King of the Monsters",
+      "canonicalName": "Zilortha, Strength Incarnate",
+      "search": "Godzilla",
+      "visibleRows": 0,
+      "status": "0 resolved cards shown. Selection is retained when filtering.",
+      "scope": "Actual filter function; dataset populated exactly as renderDeck currently does"
+    },
+    {
+      "name": "collector validators disagree",
+      "collector": "1☆",
+      "parserStatus": "pending",
+      "parserValid": true,
+      "serverValidation": "Invalid set or collector number."
+    },
+    {
+      "name": "collector validators disagree",
+      "collector": "é",
+      "parserStatus": "pending",
+      "parserValid": true,
+      "serverValidation": "Invalid set or collector number."
+    },
+    {
+      "name": "collector validators disagree",
+      "collector": "1*",
+      "parserStatus": "invalid",
+      "parserValid": false,
+      "serverValidation": "accepted"
+    },
+    {
+      "name": "extra alias lookup failure aborts otherwise resolved deck",
+      "error": "Scryfall returned HTTP 503. No substitute data was used.",
+      "status": 502
+    }
+  ],
+  "nameAndSetProviderProbe": {
+    "checkedAt": "2026-10-18T16:51:50.907Z",
+    "status": 200,
+    "requested": [
+      {
+        "name": "Thrasios, Triton Hero",
+        "set": "c16"
+      },
+      {
+        "name": "Forest",
+        "set": "rna"
+      }
+    ],
+    "cards": [
+      {
+        "id": "21e27b91-c7f1-4709-aa0d-8b5d81b22a0a",
+        "name": "Thrasios, Triton Hero",
+        "set": "c16",
+        "collectorNumber": "46",
+        "lang": "en"
+      },
+      {
+        "id": "48764854-d268-462d-a016-27329c8f062d",
+        "name": "Forest",
+        "set": "rna",
+        "collectorNumber": "264",
+        "lang": "en"
+      }
+    ],
+    "notFound": []
+  }
+}

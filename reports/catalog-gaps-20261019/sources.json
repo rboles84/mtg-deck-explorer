@@ -1,0 +1,128 @@
+{
+  "sources": [
+    {
+      "labels": [
+        "Augment"
+      ],
+      "path": "card-preview/unstable-mechanics-2017-11-13",
+      "section": "Host and Augment",
+      "anchor": "Augment is an activated ability you activate from your hand.",
+      "url": "https://magic.wizards.com/en/news/card-preview/unstable-mechanics-2017-11-13",
+      "title": "Unstable Mechanics | MAGIC: THE GATHERING",
+      "sha256": "839d34630e45b91054adead86bce4c7a64d62912c48255f95431a5eca9367b96",
+      "file": "sources/839d34630e45b91054adead86bce4c7a64d62912c48255f95431a5eca9367b96.html",
+      "bytes": 183608,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.709Z"
+    },
+    {
+      "labels": [
+        "Specialize",
+        "Double team"
+      ],
+      "path": "mtg-arena/mtg-arena-announcements-june-22-2022",
+      "section": "Alchemy Horizons: Baldur’s Gate",
+      "anchor": "Specialize",
+      "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-june-22-2022",
+      "title": "MTG Arena Announcements, June 22, 2022 | Magic: The Gathering",
+      "sha256": "e7c91f49d8295494f564f16d5c3b6792eee1081d4f9ca608c96eef51f4fd9a50",
+      "file": "sources/e7c91f49d8295494f564f16d5c3b6792eee1081d4f9ca608c96eef51f4fd9a50.html",
+      "bytes": 187094,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.746Z"
+    },
+    {
+      "labels": [
+        "Intensity"
+      ],
+      "path": "mtg-arena/mtg-arena-state-game-alchemy-kamigawa-2022-03-16",
+      "section": "New Mechanic: Intensity",
+      "anchor": "New Mechanic: Intensity",
+      "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-state-game-alchemy-kamigawa-2022-03-16",
+      "title": "MTG Arena: State of the Game – Alchemy: Kamigawa | Magic: The Gathering",
+      "sha256": "238e30e7b9c8fab448c02a90f4b123084dbcfd40df9ebd5a0ebe84530ed30423",
+      "file": "sources/238e30e7b9c8fab448c02a90f4b123084dbcfd40df9ebd5a0ebe84530ed30423.html",
+      "bytes": 176868,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.791Z"
+    },
+    {
+      "labels": [
+        "Seek",
+        "Conjure",
+        "Draft from a spellbook"
+      ],
+      "path": "mtg-arena/designing-alchemy-2021-12-08",
+      "section": "How Can Our Mechanics Support a Dynamic Format?",
+      "anchor": "draft from the spellbook mechanic",
+      "url": "https://magic.wizards.com/en/news/mtg-arena/designing-alchemy-2021-12-08",
+      "title": "Designing for Alchemy | MAGIC: THE GATHERING",
+      "sha256": "d77c8d3e0a26c37607aab5933ed10ac334563c3c0d77c23f449a1ec8b76fa3f0",
+      "file": "sources/d77c8d3e0a26c37607aab5933ed10ac334563c3c0d77c23f449a1ec8b76fa3f0.html",
+      "bytes": 182805,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.841Z"
+    },
+    {
+      "labels": [
+        "Heist"
+      ],
+      "path": "mtg-arena/mtg-arena-announcements-april-29-2024",
+      "section": "Alchemy: Thunder Junction",
+      "anchor": "Heist is a new keyword ability",
+      "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-april-29-2024",
+      "title": "MTG Arena Announcements – April 29, 2024",
+      "sha256": "be0ca2b500f9f16aa9779370c64f997f10f647e2bacf434f255c44a532cefc70",
+      "file": "sources/be0ca2b500f9f16aa9779370c64f997f10f647e2bacf434f255c44a532cefc70.html",
+      "bytes": 233054,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.867Z"
+    },
+    {
+      "labels": [
+        "Incorporate"
+      ],
+      "path": "mtg-arena/mtg-arena-announcements-march-4-2024",
+      "section": "Alchemy: Karlov Manor Arrives Tomorrow!",
+      "anchor": "the new mechanic incorporate",
+      "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-march-4-2024",
+      "title": "MTG Arena Announcements – March 4, 2024",
+      "sha256": "5c0ea16e9ec7dec63fe991135ee0cef7371adb86b53d2b42c14828e26fb27655",
+      "file": "sources/5c0ea16e9ec7dec63fe991135ee0cef7371adb86b53d2b42c14828e26fb27655.html",
+      "bytes": 200730,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.903Z"
+    },
+    {
+      "labels": [
+        "Assimilate",
+        "Face a dilemma"
+      ],
+      "path": "feature/collecting-star-trek",
+      "section": "The Mechanics of Magic: The Gathering | Star Trek",
+      "anchor": "The assimilate keyword action",
+      "url": "https://magic.wizards.com/en/news/feature/collecting-star-trek",
+      "title": "Collecting Magic: The Gathering® | Star Trek™: A First Look",
+      "sha256": "c681999ee3dff2d4eec6f1b6205a4ba3d81536538396e48a98ae85c991cd62e1",
+      "file": "sources/c681999ee3dff2d4eec6f1b6205a4ba3d81536538396e48a98ae85c991cd62e1.html",
+      "bytes": 259987,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:03.947Z"
+    },
+    {
+      "labels": [
+        "Legacy"
+      ],
+      "path": "feature/mystery-booster-release-notes-2019-11-11",
+      "section": "Gold Mine; Inspirational Antelope",
+      "anchor": "Nodes remain permanently marked on the physical card.",
+      "url": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11",
+      "title": "Mystery Booster Release Notes | MAGIC: THE GATHERING",
+      "sha256": "85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590",
+      "file": "sources/85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590.html",
+      "bytes": 395944,
+      "status": 200,
+      "checkedAt": "2026-10-19T13:25:04.414Z"
+    }
+  ]
+}

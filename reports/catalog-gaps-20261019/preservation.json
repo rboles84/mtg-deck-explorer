@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-19T13:28:55.276Z",
+  "originalFiles": 2900,
+  "unchanged": 2893,
+  "changed": [
+    "lib/catalog.mjs",
+    "lib/scryfall.mjs",
+    "public/app.mjs",
+    "tests/mechanic-discovery.test.mjs",
+    "tests/mechanic-variants.test.mjs",
+    "tests/mechanics-shortlist.test.mjs",
+    "tests/mechanics-ui.test.mjs"
+  ],
+  "originalRuntimeRecordsUnchanged": 332,
+  "originalSourcesUnchanged": 8,
+  "baselineAndIdentityPolicyUnchanged": true,
+  "backup": {
+    "file": "backups/before-catalog-42-20261019.zip",
+    "sha256": "7aff843ed7b84c7577f9317d267f5fe3a0181c705f28104467550160eaf560fe",
+    "verifiedFiles": 2900
+  }
+}

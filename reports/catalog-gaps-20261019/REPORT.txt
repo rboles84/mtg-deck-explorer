@@ -1,0 +1,91 @@
+CATALOG GAP IMPLEMENTATION AND RED-TEAM REPORT — 2026-10-19
+
+OUTCOME
+All 373 catalog names now have an explicit detection scope, a source/reference disposition, and a manually invoked search. The 42 additions have retained live positive/negative Oracle-ID proofs. This is name coverage, not a universal Magic rules engine or a guarantee about unrevealed cards.
+19 additions use existing exact keywords[] reporting. 23 add bounded literal full-Oracle wording/symbol matches with source fields, offsets and face indices. Matching can mean a grant, restriction or reference; the app does not infer possession, execution, or commander-pair legality.
+24 additions display exact numbered clauses from Wizards Comprehensive Rules dated September 25, 2026. 12 link to independently fetched Wizards articles/release notes. No new mechanic definition, summary or paraphrase was generated.
+Six additions have only independently verified Scryfall card examples: Affinitycycling, Hero's Reward, Kinfall, Landship, Actualize, Covercast. Their unverified official-definition status is explicit and remains visible if rules fail to load. No general Wizards explanation was invented or enabled for them.
+
+BACKUP AND PRESERVATION
+backups/before-catalog-42-20261019.zip — 80,931,663 bytes; SHA-256 7aff843ed7b84c7577f9317d267f5fe3a0181c705f28104467550160eaf560fe.
+All 2,900 original workspace files were copied, hashed, and then verified inside the archive. Archive contains app/ plus manifest.json. Extraction into a separate empty directory recovers the exact pre-change app.
+2,893 original files remain byte-identical. Only three existing runtime files and four tests changed. All 332 previous runtime search records are deeply equal to the backed-up loader output. All eight original source inputs, all 250 historically protected files, all existing rules/definitions, styles, importer, card viewer, and Clipboard implementation remain unchanged.
+
+BLAST RADIUS
+public/app.mjs: use additive index/reference modules; show truthful Oracle evidence and source status in the existing mechanics layout.
+lib/catalog.mjs: append 42 independently validated Review-tier recipes. Existing records and commander baseline preserved.
+lib/scryfall.mjs: reject a search response containing provider warnings, because HTTP 200 can conceal an ignored filter. Successful warning-free searches follow the existing path.
+New modules/data are confined to catalog-gap indexing, references and recipe validation. New scripts, tests and retained evidence support this change. No dependencies, background fetches, automatic searches, data migrations, layout changes, deployments or writes to the frozen inputs were introduced.
+
+VERIFICATION
+node --test: 343 passed, zero failed/skipped (294 prior tests plus 49 new tests). Full output: tests-final.txt.
+Each of the 42 searches: retained raw positive/negative membership response plus a Commander-constrained response, with URL, timestamp, HTTP status and SHA-256. 84 final search receipts; three freshly rechecked catalog responses. Earlier rejected candidates remain separate evidence and are not enabled.
+All 38,753 corpus cards: original provider evidence and copy counts preserved; new excerpts checked as exact source slices; no deck mutation.
+11,968 render cases: all 374 executable recipes (373 catalog names plus existing Eternity Gate) across all 32 color subsets. Error, zero-result, stale-response and Clipboard regressions pass.
+Generation checks, original discovery-generation check, historical preservation check, full metadata audit and separate pre/post preservation audit passed.
+Browser: isolated localhost:4179 instance, real 100-card import, Absorb rule panel and exact absorb 1 source offset, Friends forever current 702.124i clause, Poisonous live WG search, exact SLD 659Φ printing saved, dialog stayed open, Escape restored focus, imported TSR printing preserved. See browser-absorb.png. Additional browser status is recorded in browser-verification.json.
+
+RED-TEAM FINDINGS RESOLVED
+1. Ordinary o: search omits reminder text. New literal searches use fo: and revalidated witnesses to match the imported Oracle text.
+2. A more complex Counter regex was ignored by Scryfall with HTTP 200 plus warnings. The candidate failed membership tests and was rejected. A simpler verified spell/ability expression replaces it; runtime now rejects warning-bearing searches.
+3. New recipe IDs initially conflicted with the existing Clipboard ID grammar. IDs now use its existing keyword-index prefix; Clipboard code was not changed.
+4. Counter noun uses, name/flavor-only mentions, cross-face concatenation, metadata/text double counting, malformed/missing keywords, unsupported query mutations, mismatched sources, and absent rules were challenged in tests.
+
+CONFIDENCE AND LIMITS
+High confidence in the tested additive behavior, source attribution, preservation and manual query boundaries. No numeric probability is claimed.
+No claim of exhaustive semantic recall: wording recognizers intentionally omit implicit actions and unreviewed variants. For example, Counter does not infer the action from every use of countered; Harness currently matches the verified The Soul Stone wording. Provider catalogs themselves are not a comprehensive list of all Magic concepts or future releases.
+Published Star Trek labels Assimilate and Face a dilemma are sourced to Wizards preview material. This does not certify every unrevealed Star Trek mechanic. Non-Commander, digital, playtest and preview cards can be inspected after import but can correctly yield zero Commander discovery results.
+
+42-NAME DISPOSITION (full 373-name reconciliation: reconciliation-373.json)
+Poisonous | detection: Oracle wording/symbols | source: CR 702.70 | search: PASS (2 WUBRG Commander matches) | witness: Virulent Sliver
+Absorb | detection: Oracle wording/symbols | source: CR 702.64 | search: PASS (1 WUBRG Commander matches) | witness: Lymph Sliver
+Augment | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Humming-
+Double agenda | detection: keywords[] | source: CR 702.106f | search: PASS (0 WUBRG Commander matches) | witness: Summoner's Bond
+Friends forever | detection: Oracle wording/symbols | source: CR 702.124i | search: PASS (7 WUBRG Commander matches) | witness: Othelm, Sigardian Outcast
+Specialize | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Klement, Novice Acolyte
+Intensity | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Chittering Skullspeaker
+Double team | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Gnoll Hunting Party
+Affinitycycling | detection: keywords[] | source: Scryfall example; official definition unverified | search: PASS (0 WUBRG Commander matches) | witness: Sojourner's Enforcermite
+Seek | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Hardened Bonds
+Activate | detection: Oracle wording/symbols | source: CR 701.2 | search: PASS (1593 WUBRG Commander matches) | witness: Pteramander
+Attach | detection: Oracle wording/symbols | source: CR 701.3 | search: PASS (740 WUBRG Commander matches) | witness: Brass Squire
+Cast | detection: Oracle wording/symbols | source: CR 701.5 | search: PASS (5950 WUBRG Commander matches) | witness: Young Pyromancer
+Counter | detection: Oracle wording/symbols | source: CR 701.6 | search: PASS (482 WUBRG Commander matches) | witness: Counterspell
+Create | detection: Oracle wording/symbols | source: CR 701.7 | search: PASS (3885 WUBRG Commander matches) | witness: Raise the Alarm
+Destroy | detection: Oracle wording/symbols | source: CR 701.8 | search: PASS (2021 WUBRG Commander matches) | witness: Murder
+Discard | detection: Oracle wording/symbols | source: CR 701.9 | search: PASS (2326 WUBRG Commander matches) | witness: Duress
+Exchange | detection: Oracle wording/symbols | source: CR 701.12 | search: PASS (52 WUBRG Commander matches) | witness: Switcheroo
+Exile | detection: Oracle wording/symbols | source: CR 701.13 | search: PASS (3026 WUBRG Commander matches) | witness: Swords to Plowshares
+Play | detection: Oracle wording/symbols | source: CR 701.18 | search: PASS (428 WUBRG Commander matches) | witness: Oracle of Mul Daya
+Reveal | detection: Oracle wording/symbols | source: CR 701.20 | search: PASS (1539 WUBRG Commander matches) | witness: Duress
+Sacrifice | detection: Oracle wording/symbols | source: CR 701.21 | search: PASS (4264 WUBRG Commander matches) | witness: Diabolic Edict
+Shuffle | detection: Oracle wording/symbols | source: CR 701.24 | search: PASS (1374 WUBRG Commander matches) | witness: Evolving Wilds
+Tap | detection: Oracle wording/symbols | source: CR 701.26a | search: PASS (6011 WUBRG Commander matches) | witness: Llanowar Elves
+Untap | detection: Oracle wording/symbols | source: CR 701.26b | search: PASS (1128 WUBRG Commander matches) | witness: Twiddle
+Vote | detection: Oracle wording/symbols | source: CR 701.38 | search: PASS (40 WUBRG Commander matches) | witness: Council's Judgment
+Planeswalk | detection: Oracle wording/symbols | source: CR 701.31 | search: PASS (8 WUBRG Commander matches) | witness: The Great Aerie
+Abandon | detection: Oracle wording/symbols | source: CR 701.33 | search: PASS (0 WUBRG Commander matches) | witness: Dark Wings Bring Your Downfall
+Set in motion | detection: Oracle wording/symbols | source: CR 701.32 | search: PASS (0 WUBRG Commander matches) | witness: What's Yours Is Now Mine
+Conjure | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Mine Security
+Harness | detection: Oracle wording/symbols | source: CR 701.64 | search: PASS (1 WUBRG Commander matches) | witness: The Soul Stone
+Draft from a spellbook | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Relics of the Rubblebelt
+Heist | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Axavar, Fate Thief
+Incorporate | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Guildpact Greenwalker
+Assimilate | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Borg Queen, Perfection Manifest
+Face a dilemma | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Seven of Nine
+Hero's Reward | detection: keywords[] | source: Scryfall example; official definition unverified | search: PASS (0 WUBRG Commander matches) | witness: Pheres-Band Revelers
+Kinfall | detection: keywords[] | source: Scryfall example; official definition unverified | search: PASS (0 WUBRG Commander matches) | witness: Plane-Merge Elf
+Landship | detection: keywords[] | source: Scryfall example; official definition unverified | search: PASS (0 WUBRG Commander matches) | witness: Plane-Merge Elf
+Legacy | detection: keywords[] | source: Wizards article/release notes | search: PASS (0 WUBRG Commander matches) | witness: Gold Mine
+Actualize | detection: keywords[] | source: Scryfall example; official definition unverified | search: PASS (0 WUBRG Commander matches) | witness: Etali, Primal Garden
+Covercast | detection: keywords[] | source: Scryfall example; official definition unverified | search: PASS (0 WUBRG Commander matches) | witness: Summitfest Closing Ceremony
+
+SOURCE URLs AND REPRODUCTION
+Catalogs: https://api.scryfall.com/catalog/keyword-abilities ; https://api.scryfall.com/catalog/keyword-actions ; https://api.scryfall.com/catalog/ability-words
+https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt
+Wizards article URLs and raw HTML hashes: sources.json. Card query URLs/raw response hashes: verification.json. Prior rejected requests: requests.json.
+Run: node --test
+Run: node scripts/build-catalog-gaps.mjs --check
+Run: node scripts/check-mechanics-preservation.mjs
+Run: node scripts/verify-catalog-gap-preservation.mjs
+Do not overwrite the retained verification.json to refresh this release; collect a new dated evidence set and review drift first.

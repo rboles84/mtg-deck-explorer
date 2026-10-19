@@ -1,0 +1,996 @@
+--- before/public/import-model.mjs
++++ after/public/import-model.mjs
+@@ -1,8 +1,9 @@
+ /** Shared literal identifier semantics. Never interpolate names into search queries. */
+ export const normalizeCardName = value => String(value ?? '').normalize('NFC').replace(/[\u2018\u2019]/g, "'").toLocaleLowerCase('en').replace(/\s*\/\/\s*/g, ' // ').replace(/\s+/g, ' ').trim();
+ export const canonicalCollector = value => String(value).toLowerCase().replace(/^0+(?=\d)/, '');
++export const validCollectorNumber = value => typeof value === 'string' && /^[\p{L}\p{N}._★☆†*-]{1,32}$/u.test(value);
+ export const identifierKey = identifier => identifier?.id ? `id:${identifier.id.toLowerCase()}`
+-  : identifier?.name ? `name:en:${normalizeCardName(identifier.name)}`
++  : identifier?.name ? `${identifier.set ? `name-set:en:${identifier.set.toLowerCase()}` : 'name:en'}:${normalizeCardName(identifier.name)}`
+   : identifier?.set && identifier?.collector_number ? `printing:${identifier.set.toLowerCase()}:${canonicalCollector(identifier.collector_number)}` : null;
+ export const cardNames = card => {
+   const faces=card.card_faces || [];
+@@ -15,7 +16,11 @@
+   return [...new Set([card.name, card.printed_name, card.flavor_name, ...faces.flatMap(face => [face.name, face.printed_name, face.flavor_name]),...spellings].filter(Boolean).map(normalizeCardName))];
+ };
+ export const matchesCardName = (card, name) => cardNames(card).includes(normalizeCardName(name));
++export const commanderSearchNames = row => [...new Set([normalizeCardName(row.name), ...cardNames(row.card)])];
+ export function printingDescription(provenance) {
++  if (provenance?.kind === 'assumed' && provenance.setHint) return provenance.setHint.status === 'unrecognized'
++    ? `Assumed printing · source set ${provenance.setHint.code.toUpperCase()} unrecognized; name reference used`
++    : `Assumed printing · set ${provenance.setHint.code.toUpperCase()} honored; collector/variant not supplied`;
+   if (provenance?.kind === 'assumed') return 'Assumed printing · your list supplied a name only';
+   if (provenance?.kind === 'user-selected') return 'User-selected printing';
+   if (provenance?.kind === 'supplied') return 'Supplied printing · verified coordinates';
+--- before/public/deck-import.mjs
++++ after/public/deck-import.mjs
+@@ -1,13 +1,14 @@
+-import {identifierKey} from './import-model.mjs';
++import {identifierKey, validCollectorNumber} from './import-model.mjs';
++import {csvAdapter} from './import-csv.mjs';
++import {MAX_INPUT_CHARACTERS, MAX_IMPORT_ROWS, MAX_RECORD_CHARACTERS, MAX_CSV_COLUMNS, MAX_METADATA_ITEMS} from './import-limits.mjs';
+ const deepFreeze = value => { if(value && typeof value === 'object' && !Object.isFrozen(value)){Object.values(value).forEach(deepFreeze);Object.freeze(value);}return value;};
+ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+ const SECTIONS = new Map([
+   ['commander', 'Commander'], ['commanders', 'Commander'], ['deck', 'Deck'],
+-  ['mainboard', 'Deck'], ['main deck', 'Deck'], ['sideboard', 'Sideboard'],
++  ['main', 'Deck'], ['side', 'Sideboard'], ['maybe', 'Maybeboard'], ['mainboard', 'Deck'], ['main deck', 'Deck'], ['sideboard', 'Sideboard'],
+   ['maybeboard', 'Maybeboard'], ['considering', 'Considering'],
+   ['companion', 'Companion'], ['companions', 'Companion'],
+ ]);
+-const CSV_HEADERS = ['Quantity', 'Name', 'Set', 'Collector Number', 'Scryfall ID', 'Language', 'Section'];
+ const sectionName = value => SECTIONS.get(String(value || 'Deck').trim().replace(/:$/, '').toLowerCase()) || String(value).trim();
+ const normalizeLanguage = value => String(value || 'en').trim().toLowerCase();
+ function csvRecords(text) {
+@@ -15,10 +16,16 @@
+   let cells = [], cell = '', quoted = false, afterQuote = false, start = 0, line = 1, recordLine = 1, errors = [];
+   const emit = end => {
+     cells.push(cell);
+-    records.push({ cells, originalLine: text.slice(start, end), lineNumber: recordLine, errors });
++    if (cells.length > MAX_CSV_COLUMNS) throw new RangeError('CSV is limited to 64 columns.');
++    if (text.slice(start, end).trim()) {
++      if (records.length >= MAX_IMPORT_ROWS + 1) throw new RangeError('Deck input is limited to 500 entries.');
++      records.push({ cells, originalLine: text.slice(start, end), lineNumber: recordLine, errors: [...new Set(errors)] });
++    }
+     cells = []; cell = ''; afterQuote = false; errors = [];
+   };
+   for (let i = 0; i < text.length; i++) {
++    if (i - start >= MAX_RECORD_CHARACTERS) throw new RangeError('Each import record is limited to 8,000 characters.');
++    if (cells.length >= MAX_CSV_COLUMNS) throw new RangeError('CSV is limited to 64 columns.');
+     const ch = text[i];
+     if (quoted) {
+       if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; }
+@@ -48,9 +55,10 @@
+     section: sectionName(data.section), quantityText, quantity: /^\d+$/.test(quantityText)?Number(quantityText):NaN, name: String(data.name || '').trim(),
+     set: String(data.set || '').trim().toLowerCase(), collectorNumber: String(data.collectorNumber || '').trim(),
+     scryfallId: String(data.scryfallId || '').trim().toLowerCase(),
++    oracleId: String(data.oracleId || '').trim().toLowerCase(), warnings: data.warnings || [],
+     language: String(data.language || '').trim() ? normalizeLanguage(data.language) : (String(data.scryfallId || '').trim() ? null : 'en'),
+     tags: data.tags || [], annotations: data.annotations || [], csvMetadata: data.csvMetadata || null, finish: data.finish || 'unspecified',
+-    sourceSection: sectionName(data.section), explicitPlacement: data.explicitPlacement || null, block: data.block ?? 0, blockHasHeading: Boolean(data.blockHasHeading), commanderSource: data.commanderSource || null,
++    sourceSection: sectionName(data.sourceSection || data.section), explicitPlacement: data.explicitPlacement || null, block: data.block ?? 0, blockHasHeading: Boolean(data.blockHasHeading), commanderSource: data.commanderSource || null,
+     printingProvenance: null, playable: false, identifier: null, lookup: null, status: 'pending', issues: [...(data.issues || [])], card: null,
+   };
+   row.playable = row.section === 'Commander' || row.section === 'Deck';
+@@ -59,9 +67,10 @@
+   if (!row.name) row.issues.push('A card name is required.');
+   if (!['unspecified','foil','nonfoil','etched'].includes(row.finish)) row.issues.push('Unsupported finish; use foil, nonfoil, or etched.');
+   if (row.name.length > 500 || /[\u0000-\u001f\u007f]/.test(row.name.replace(/[\r\n\t]/g, ''))) row.issues.push('Invalid or oversized card name.');
++  if (row.oracleId && !UUID.test(row.oracleId)) row.issues.push('Oracle ID must be a UUID.');
+   if (row.scryfallId && !UUID.test(row.scryfallId)) row.issues.push('Scryfall ID must be a printing UUID.');
+   if (row.set && !/^[a-z0-9]{2,8}$/.test(row.set)) row.issues.push('Invalid set code.');
+-  if (row.collectorNumber && !/^[\p{L}\p{N}._★☆†-]{1,32}$/u.test(row.collectorNumber)) row.issues.push('Unsupported collector number; the original value is preserved.');
++  if (row.collectorNumber && !validCollectorNumber(row.collectorNumber)) row.issues.push('Unsupported collector number; the original value is preserved.');
+   if (row.language !== null && !/^[a-z]{2,5}$/.test(row.language)) row.issues.push('Invalid language code.');
+   if (row.issues.length) row.status = 'invalid';
+   else if (row.language !== 'en' && !row.scryfallId) {
+@@ -69,16 +78,20 @@
+     row.issues.push('A non-English printing requires its exact Scryfall printing UUID.');
+   } else if (row.scryfallId) { row.identifier = { id: row.scryfallId }; row.lookup = {kind: 'printing-id', id: row.scryfallId}; }
+   else if (row.set && row.collectorNumber) { row.identifier = { set: row.set, collector_number: row.collectorNumber }; row.lookup = {kind: 'printing-coordinates', set: row.set, collectorNumber: row.collectorNumber}; }
++  else if (row.set && !row.collectorNumber) { row.identifier = {name: row.name.replace(/\s+/g, ' '), set: row.set}; row.lookup = {kind: 'name-set', name: row.name, set: row.set}; }
+   else if (!row.set && !row.collectorNumber) { row.identifier = {name: row.name.replace(/\s+/g, ' ')}; row.lookup = {kind: 'card-name', name: row.name}; }
+   else {
+     row.status = 'printing-unknown';
+-    row.issues.push('Incomplete printing coordinates: supply both set and collector number, or remove both to request an assumed printing.');
++    row.issues.push('A collector number requires a set code; the original value is preserved.');
+   }
+   row.parseIssues = [...row.issues];
+   return row;
+ }
+ 
+ function textMetadata(line) {
++  if (line.length > MAX_RECORD_CHARACTERS) throw new RangeError('Each import record is limited to 8,000 characters.');
++  // Reject metadata amplification before running suffix extraction.
++  if ((line.match(/[\[\^*{]/g) || []).length > MAX_METADATA_ITEMS) throw new RangeError('Each line is limited to 64 metadata markers.');
+   const tags = [], annotations = [], finishes = [], issues = [];
+   // Consume only recognized suffix structures, in either supported order.
+   while (true) {
+@@ -101,31 +114,26 @@
+ 
+ export function parseDeckInput(text, {commanderRowIds = []} = {}) {
+   if (typeof text !== 'string') throw new TypeError('Deck input must be text.');
+-  if (text.length > 200000) throw new RangeError('Deck input is limited to 200,000 characters.');
++  if (text.length > MAX_INPUT_CHARACTERS) throw new RangeError('Deck input is limited to 200,000 characters.');
+   const sourceText = text;
+   const working = text.replace(/^\uFEFF/, '');
+   const firstLine = (working.split(/\r\n|\n|\r/).find(line => line.trim()) || '').trim();
+-  const format = !/^\d+\s*x?\s+/i.test(firstLine) && firstLine.includes(',') && /(?:^|,)\s*"?(?:Quantity|Name|Collector Number|Scryfall ID)"?\s*(?:,|$)/i.test(firstLine) ? 'csv' : 'text';
++  const format = !/^\d+\s*x?\s+/i.test(firstLine) && firstLine.includes(',') && /(?:^|,)\s*"?(?:Quantity|Qty|Name|Board|collector_number|scryfall_id|Collector Number|Scryfall ID)"?\s*(?:,|$)/i.test(firstLine) ? 'csv' : 'text';
+   const rows = [], issues = [];
++  let schema = 'Plain text';
+   if (format === 'csv') {
+     const records = csvRecords(working).filter(record => record.originalLine.trim());
+     const header = records.shift();
+     issues.push(...header.errors.map(message=>`CSV header: ${message}`));
+-    const labels = header.cells.map(cell => cell.trim().toLowerCase());
+-    const headerValid = ['quantity', 'name'].every(label => labels.includes(label)) && new Set(labels).size === labels.length;
+-    if (!headerValid) issues.push('CSV requires distinct Quantity and Name columns; printing and section columns are optional.');
++    const adapter = csvAdapter(header.cells);
++    issues.push(...adapter.issues);
+     for (const record of records) {
+-      const field = name => record.cells[labels.indexOf(name.toLowerCase())] || '';
+-      const rowIssues = [...header.errors.map(message=>`CSV header: ${message}`),...record.errors];
+-      if (!headerValid) rowIssues.push('CSV header is missing required or has duplicate columns.');
+-      if (record.cells.length !== labels.length) rowIssues.push('CSV row has a different number of fields than its header.');
+-      const foil = field('Foil').trim().toLowerCase();
+-      const finish = field('Finish').trim().toLowerCase() || (foil === 'true' || foil === 'yes' || foil === '1' ? 'foil' : foil === 'false' || foil === 'no' || foil === '0' ? 'nonfoil' : 'unspecified');
+-      if (foil && !['true','yes','1','false','no','0'].includes(foil)) rowIssues.push('Unsupported Foil value; use true or false.');
+-      if (field('Finish') && foil && ((finish === 'foil') !== ['true','yes','1'].includes(foil))) rowIssues.push('Conflicting Finish and Foil columns.');
+-      const csvMetadata = Object.fromEntries(labels.filter(label => !CSV_HEADERS.map(header=>header.toLowerCase()).includes(label) && !['finish','foil'].includes(label)).map(label=>[label,field(label)]));
+-      rows.push(finishRow({ ...record, quantity: field('Quantity'), name: field('Name'), set: field('Set'), collectorNumber: field('Collector Number'), scryfallId: field('Scryfall ID'), language: field('Language'), section: field('Section') || 'Deck', commanderSource: sectionName(field('Section')) === 'Commander' ? 'column' : null, finish, csvMetadata, issues: rowIssues }, rows.length));
++      const data = adapter.row(record.cells);
++      const rowIssues = [...header.errors.map(message=>`CSV header: ${message}`), ...adapter.issues, ...record.errors, ...data.issues];
++      if (record.cells.length !== header.cells.length) rowIssues.push('CSV row has a different number of fields than its header.');
++      rows.push(finishRow({...record, ...data, issues: rowIssues}, rows.length));
+     }
++    schema = adapter.schema;
+   } else {
+     let section = 'Deck', block = 0, blank = false, blockHasHeading = false;
+     working.split(/\r\n|\n|\r/).forEach((originalLine, lineIndex) => {
+@@ -134,6 +142,7 @@
+       if (blank) { block++; blank = false; blockHasHeading = false; }
+       const heading = SECTIONS.get(line.replace(/:$/, '').toLowerCase());
+       if (heading) { section = heading; blockHasHeading = true; return; }
++      if (rows.length >= MAX_IMPORT_ROWS) throw new RangeError('Deck input is limited to 500 entries.');
+       const metadata = textMetadata(line);
+       const {tags, annotations, finish} = metadata; line = metadata.line;
+       const quantityMatch = line.match(/^(\d+)\s*x?\s+(.+)$/i);
+@@ -143,7 +152,7 @@
+       const printing = data.name.match(/^(.*?)\s+\(([A-Za-z0-9]+)\)\s+(\S+)\s*$/);
+       if (printing) { data.name = printing[1]; data.set = printing[2]; data.collectorNumber = printing[3]; }
+       else if (/\s+\([A-Za-z0-9]+\)\s+/.test(data.name)) data.issues.push('Malformed printing coordinates or unexpected trailing text; expected Card Name (SET) CollectorNumber.');
+-      else if (/\s+\([A-Za-z0-9]{2,8}\)$/.test(data.name)) data.issues.push('Incomplete printing coordinates; a set code requires a collector number.');
++      else { const hint = data.name.match(/^(.*?)\s+\(([A-Za-z0-9]{2,8})\)$/); if (hint) { data.name = hint[1]; data.set = hint[2]; } }
+       rows.push(finishRow(data, rows.length));
+     });
+   }
+@@ -158,6 +167,6 @@
+     row.section = 'Commander'; row.playable = true; row.commanderSource = 'confirmed';
+   }
+   const unique = new Map(rows.filter(row => row.identifier).map(row => [identifierKey(row.identifier), row.identifier]));
+-  return deepFreeze({ sourceText, format, parserVersion: 'text-import-v2', rows, identifiers: [...unique.values()], issues, commanderSuggestions: suggestions.filter(candidate => !commanderRowIds.includes(candidate.rowId)) });
++  return deepFreeze({ sourceText, format, schema, parserVersion: 'text-import-v3', rows, identifiers: [...unique.values()], issues, commanderSuggestions: suggestions.filter(candidate => !commanderRowIds.includes(candidate.rowId)) });
+ }
+ 
+--- before/public/core.mjs
++++ after/public/core.mjs
+@@ -109,24 +109,30 @@
+   }
+   const missing = new Set(notFound.map(identifierKey));
+   const rows = parsed.rows.map(original => {
+-    const row = { ...original, card: null, printingProvenance: null, returnedPrinting: null, issues: [...(original.parseIssues || original.issues)] };
++    const row = { ...original, card: null, printingProvenance: null, returnedPrinting: null, issues: [...(original.parseIssues || original.issues), ...(original.warnings || [])] };
+     if (!row.identifier) return row;
+     const key = identifierKey(row.identifier);
+-    let matches = (row.identifier.name ? byName : row.identifier.id ? byId : byPrinting).get(key) || [];
++    let matches = (row.identifier.name ? byName : row.identifier.id ? byId : byPrinting).get(row.identifier.name ? identifierKey({name:row.identifier.name}) : key) || [];
+     const outcome = outcomes.find(item => item.lookupKey === key);
++    const unrecognizedHint = Boolean(row.identifier.name && row.identifier.set && outcome?.setHint?.status === 'unrecognized' && outcome.setHint.code === row.identifier.set);
++    if (row.identifier.name && row.identifier.set && !unrecognizedHint) matches = matches.filter(card => card.set.toLowerCase() === row.identifier.set);
++    if (unrecognizedHint) row.issues.push(`Source set ${row.set.toUpperCase()} is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented.`);
++    if (outcome?.status === 'failed') { row.status = 'unresolved'; row.issues.push(`Optional extra could not be resolved: ${outcome.error}`); return row; }
++    if (outcome?.status === 'deferred') { row.status = 'pending'; row.issues.push('Extra lookup was not requested because required deck entries need correction.'); return row; }
+     if (outcome?.status === 'ambiguous') { row.status = 'ambiguous'; row.issues.push('The name matches more than one card identity; supply an exact printing.'); return row; }
+     if (outcome) matches = outcome.status === 'matched' ? matches.filter(card => card.id === outcome.cardId) : [];
+     if (!matches.length) {
+       row.status = 'unresolved';
+-      row.issues.push(row.identifier.name ? `Card name not found: ${row.name}. Check spelling or supply printing coordinates.` : missing.has(key) ? 'Scryfall reported this exact printing not found.' : 'The response did not contain the requested exact printing.');
++      row.issues.push(row.identifier.name ? `Card name not found${row.identifier.set && !unrecognizedHint ? ` in set ${row.set.toUpperCase()}` : ''}: ${row.name}. Check the source name/set or supply printing coordinates.` : missing.has(key) ? 'Scryfall reported this exact printing not found.' : 'The response did not contain the requested exact printing.');
+     } else if (matches.length > 1) {
+       row.status = 'ambiguous'; row.issues.push('More than one returned printing matched these coordinates; choose a printing UUID.');
+     } else {
+       const card = matches[0];
+       const mismatch = [];
+       if (row.scryfallId && row.scryfallId !== card.id.toLowerCase()) mismatch.push('printing UUID');
+-      if (row.set && row.set !== String(card.set).toLowerCase()) mismatch.push('set');
+-      if (row.collectorNumber && canonicalCollector(row.collectorNumber) !== canonicalCollector(card.collector_number)) mismatch.push('collector number');
++      if (!row.selectionOverride && row.set && !unrecognizedHint && row.set !== String(card.set).toLowerCase()) mismatch.push('set');
++      if (!row.selectionOverride && row.collectorNumber && canonicalCollector(row.collectorNumber) !== canonicalCollector(card.collector_number)) mismatch.push('collector number');
++      if (!row.selectionOverride && row.oracleId && row.oracleId !== card.oracle_id) mismatch.push('Oracle ID');
+       const names = cardNames(card);
+       if(row.selectionOverride){if(!row.selectionOracleId||card.oracle_id!==row.selectionOracleId)mismatch.push('card Oracle identity');}
+       else if (!names.includes(cleanName(row.name))) mismatch.push('supplied name');
+@@ -136,13 +142,21 @@
+         row.returnedPrinting = { id: card.id, name: card.name, set: card.set, collectorNumber: card.collector_number, language: card.lang };
+       } else {
+         row.status = 'resolved'; row.card = card;
+-        row.printingProvenance = row.selectionOverride ? {kind:'user-selected'} : row.identifier.name ? {kind: 'assumed', policy: 'scryfall-collection-reference-v1'} : {kind: 'supplied'};
++        row.printingProvenance = row.selectionOverride ? {kind:'user-selected'} : row.identifier.name ? {kind: 'assumed', policy: 'scryfall-collection-reference-v1', ...(row.set ? {setHint: {code:row.set, status:unrecognizedHint ? 'unrecognized' : 'honored'}} : {})} : {kind: 'supplied'};
+         if (row.finish !== 'unspecified' && Array.isArray(card.finishes) && !card.finishes.includes(row.finish)) row.issues.push(`Requested ${row.finish} finish is not reported for this edition; finish remains unverified.`);
+       }
+     }
+     return row;
+   });
+   return deepFreeze({ ...parsed, rows, counts: deckCounts(rows), notFound: structuredClone(notFound), resolution });
++}
++
++/** Extras never re-resolve or replace required deck rows or their context. */
++export function resolveExtras(deck, result) {
++  const extras = resolveDeck({...deck, rows:deck.rows.filter(row => !row.playable)}, result.cards, result.notFound || [], result.outcomes || []);
++  const byId = new Map(extras.rows.map(row => [row.id, row]));
++  const rows = deck.rows.map(row => row.playable ? row : byId.get(row.id));
++  return deepFreeze({...deck, rows, counts:deckCounts(rows)});
+ }
+ 
+ export function commanderContext(deck, selectedRowIds) {
+--- before/public/app.mjs
++++ after/public/app.mjs
+@@ -1,4 +1,6 @@
+-import {printingDescription} from './import-model.mjs';
++import {printingDescription, normalizeCardName, commanderSearchNames} from './import-model.mjs';
++import {resolveImport} from './import-resolution.mjs';
++import {readImportFile} from './import-limits.mjs';
+ import {parseDeck, validateCommanderImport, resolveDeck, commanderContext, analyzeFlavor, selectReferencePrinting, identifierKey} from './core.mjs';
+ import {indexMechanics, keywordKey} from './mechanics.mjs';
+ import {mechanicRule, mechanicExplanation} from './mechanic-rules.mjs';
+@@ -135,8 +137,42 @@
+ }
+ $('import-button').addEventListener('click',()=>importText());
+ let pendingImportDraft=null;
++const fileOwner=requestOwner();
++function releasePendingImport() {
++  importOwner.invalidate();contextGeneration++;importBusy=false;
++  $('commander-apply').disabled=false;$('import-button').textContent='Import deck →';renderMechanics();
++}
++function draftChanged() {
++  fileOwner.invalidate();releasePendingImport();pendingImportDraft=null;
++  $('import-placement').hidden=true;$('import-diagnostics').hidden=true;
++  safeStatus($('import-message'),'Draft changed. Click Import when ready; your loaded deck is unchanged.');
++}
++function previewDraft() {
++  try {
++    const parsed=parseDeck($('deck-input').value);
++    const errors=parsed.issues.length+parsed.rows.filter(row=>row.parseIssues.length).length;
++    const commanders=parsed.rows.filter(row=>row.section==='Commander').length;
++    safeStatus($('import-preview'),`${parsed.schema} · ${parsed.rows.length} entries · ${parsed.counts.playableQuantity}/100 deck cards · ${parsed.counts.excludedQuantity} extras · ${commanders} designated commanders.${errors?` ${errors} input issues to review.`:''} Nothing sent until Import.`,errors>0);
++  } catch(error) { safeStatus($('import-preview'),error.message,true); }
++}
++async function chooseImportFiles(files) {
++  draftChanged();
++  const ticket=fileOwner.begin({});
++  try {
++    if(files.length!==1)throw new Error('Choose or drop one .txt or .csv file at a time.');
++    const text=await readImportFile(files[0]);
++    if(!fileOwner.owns(ticket))return;
++    $('deck-input').value=text;previewDraft();
++    safeStatus($('import-message'),`Loaded ${files[0].name} locally. Review the preview, then click Import.`);
++    $('deck-input').focus();
++  } catch(error) { if(fileOwner.owns(ticket))safeStatus($('import-message'),error.message,true); }
++}
++$('deck-file').addEventListener('click',()=>{draftChanged();$('deck-file').value='';});
++$('deck-file').addEventListener('change',()=>chooseImportFiles([...$('deck-file').files]));
++$('import-drop').addEventListener('dragover',event=>{event.preventDefault();event.dataTransfer.dropEffect='copy';});
++$('import-drop').addEventListener('drop',event=>{event.preventDefault();return chooseImportFiles([...event.dataTransfer.files]);});
+ async function importText(commanderRowIds=[]){
+-  importOwner.invalidate();contextGeneration++;importBusy=false;$('commander-apply').disabled=false;$('import-button').textContent='Import deck →';renderMechanics();
++  fileOwner.invalidate();releasePendingImport();
+   let parsed;
+   try {
+     parsed=parseDeck($('deck-input').value,{commanderRowIds});
+@@ -157,9 +193,9 @@
+   $('import-button').textContent='Replace pending import →'; safeStatus($('import-message'),`Resolving ${parsed.identifiers.length} distinct card or printing identifiers through Scryfall… The previous deck remains visible until this import finishes.`);
+   invalidateDiscovery();renderMechanics();renderDiscoveries();
+   try {
+-    const result = parsed.identifiers.length ? await api('/api/resolve',{identifiers:parsed.identifiers}) : {cards:[],notFound:[],contextToken:null};
+-    if(!importOwner.owns(ticket))return;
+-    const candidate=resolveDeck(parsed,result.cards,result.notFound,result.outcomes,{resolvedAt:result.resolvedAt||null,policy:'scryfall-collection-reference-v1'});
++    const result = await resolveImport(parsed,api,()=>importOwner.owns(ticket));
++    if(!result||!importOwner.owns(ticket))return;
++    const candidate=result.deck;
+     const construction=validateCommanderImport(candidate);
+     if(!construction.valid){safeStatus($('import-message'),`Import blocked. ${construction.issues.join('\n')} Your loaded deck has not changed.`,true);return;}
+     const blocked=candidate.rows.filter(row=>row.playable&&row.status!=='resolved');
+@@ -181,14 +217,15 @@
+   if(pendingImportDraft.text!==$('deck-input').value){pendingImportDraft=null;$('import-placement').hidden=true;safeStatus($('import-message'),'The draft changed. Import again to review its placement.',true);return;}
+   return importText([pendingImportDraft.rowId]);
+ });
+-$('deck-input').addEventListener('input',()=>{pendingImportDraft=null;$('import-placement').hidden=true;});
++$('deck-input').addEventListener('input',()=>{draftChanged();previewDraft();});
+ $('demo-button').addEventListener('click',()=>{
++  fileOwner.invalidate();
+   importOwner.invalidate();contextGeneration++;importBusy=false;$('commander-apply').disabled=false;$('import-button').textContent='Import deck →';
+   pendingImportDraft=null;$('import-placement').hidden=true;commitDeck(createDemoDeck(),null);$('import-workbench').open=false;safeStatus($('import-message'),'Synthetic fixture loaded. No Scryfall requests were made.');$('archive-tab').focus();
+ });
+ $('clear-deck-input').addEventListener('click',()=>{
+   if(importBusy)return;
+-  pendingImportDraft=null;$('import-placement').hidden=true;$('deck-input').value='';
++  fileOwner.invalidate();pendingImportDraft=null;$('import-placement').hidden=true;$('deck-input').value='';$('import-preview').textContent='';
+   safeStatus($('import-message'),'Pasted text cleared. Your loaded deck and Clipboard are unchanged.');
+   $('deck-input').focus();
+ });
+@@ -216,7 +253,7 @@
+   $('commander-picker').open ||= !commanders.length;
+   const options=$('commander-options');options.replaceChildren();
+   for(const row of importedDeck.rows.filter(row=>row.playable&&row.status==='resolved')) {
+-    const option=node('div',undefined,'commander-option');option.dataset.name=row.card.name.toLocaleLowerCase('en');
++    const option=node('div',undefined,'commander-option');option.dataset.names=JSON.stringify(commanderSearchNames(row));
+     const label=node('label'),input=node('input');input.type='checkbox';input.value=row.id;input.checked=identity.rowIds.includes(row.id);input.setAttribute('aria-label',`Select ${row.card.name} (${row.card.set.toUpperCase()}) ${row.card.collector_number} as commander`);
+     append(label,input,document.createTextNode(row.card.name));append(option,label,printingMeta(row.card,row),cardTrigger(row.card,{label:'Inspect',className:'commander-inspect',synthetic:importedDeck.synthetic,reference:row}));options.append(option);
+   }
+@@ -247,7 +284,7 @@
+   contextGeneration++;selectedCommanderRows=selected;invalidateDiscovery();renderDeck();
+   $('commander-picker').open=false;($('commander-current').querySelector('button')||$('commander-picker').querySelector('summary')).focus({preventScroll:true});
+ });
+-function filterCommanders(){const query=$('commander-search').value.trim().toLocaleLowerCase('en');let shown=0;for(const option of $('commander-options').children){option.hidden=!option.dataset.name.includes(query);if(!option.hidden)shown++;}$('commander-option-status').textContent=`${shown} resolved cards shown. Selection is retained when filtering.`;}
++function filterCommanders(){const query=normalizeCardName($('commander-search').value);let shown=0;for(const option of $('commander-options').children){option.hidden=!JSON.parse(option.dataset.names).some(name=>name.includes(query));if(!option.hidden)shown++;}$('commander-option-status').textContent=`${shown} resolved cards shown. Selection is retained when filtering.`;}
+ $('commander-search').addEventListener('input',filterCommanders);
+ function rowFlags(row) {
+   return [...row.issues, ...(identity?.offIdentityRowIds.includes(row.id)?['Observed outside the selected commander color identity.']:[]),...(identity?.nonLegalRowIds.includes(row.id)?[`Scryfall Commander status: ${row.card.legalities.commander}.`]:[])];
+@@ -347,7 +384,7 @@
+     const identifiers=[...new Map(draft.rows.filter(row=>row.card||row.id===rowId).map(row=>{const id=row.id===rowId?printingId:row.card.id;return [id,{id}];})).values()];
+     const result=await api('/api/resolve',{identifiers});
+     if(importedDeck!==before||importBusy||revision!==contextGeneration){safeStatus(status,'The deck changed. Review the current import before choosing a printing.',true);return;}
+-    const outcomes=draft.rows.filter(row=>row.identifier).map(row=>{const cardId=row.id===rowId?printingId:before.rows.find(item=>item.id===row.id).card?.id;return {lookupKey:identifierKey(row.identifier),status:result.cards.some(card=>card.id===cardId)?'matched':'not-found',cardId};});
++    const outcomes=draft.rows.filter(row=>row.identifier).map(row=>{const cardId=row.id===rowId?printingId:before.rows.find(item=>item.id===row.id).card?.id;return {lookupKey:identifierKey(row.identifier),status:result.cards.some(card=>card.id===cardId)?'matched':'not-found',cardId,setHint:before.rows.find(item=>item.id===row.id)?.printingProvenance?.setHint || null};});
+     const candidate=resolveDeck(draft,result.cards,[],outcomes);
+     if(candidate.rows.find(row=>row.id===rowId).status!=='resolved')throw new Error(candidate.rows.find(row=>row.id===rowId).issues.join(' '));
+     if(candidate.rows.some(row=>row.playable&&row.status!=='resolved'))throw new Error('Other deck entries could not be verified. Your selected edition was not applied.');
+--- before/public/index.html
++++ after/public/index.html
+@@ -32,8 +32,8 @@
+       <details id="import-workbench" class="workbench" open>
+         <summary><span><span class="section-no">01</span> Import workbench</span><span id="import-summary" class="micro">Paste your deck list <span aria-hidden="true">↗</span></span></summary>
+         <div class="workbench-body">
+-          <div><label for="deck-input">Your deck export</label><textarea id="deck-input" spellcheck="false" placeholder="Commander&#10;1 Card Name (SET) 001a&#10;&#10;Deck&#10;1 Another Card (SET) 055"></textarea><div class="import-actions"><button id="import-button" class="primary">Import deck <span aria-hidden="true">→</span></button><button id="clear-deck-input" class="text-button">Clear pasted text</button><button id="demo-button" class="text-button">Load fixture demo</button></div><p id="import-message" role="status" class="status"></p><details id="import-diagnostics" hidden><summary>Inspect import problems</summary><div id="import-diagnostics-list"></div></details><div id="import-placement" class="import-review" hidden><p id="import-placement-message"></p><button id="confirm-import-commander" class="primary">Confirm suggested commander and import</button><p class="fine">If this card is an extra, edit the list to label its section explicitly before importing.</p></div></div>
+-          <aside class="import-note"><span class="eyebrow">A note on fidelity</span><h3>The edition matters.</h3><p>Paste names alone or include set and collector numbers. Name-only entries use clearly labeled assumed printings; flavor text belongs to the displayed edition.</p><p>Plain text and CSV supported. Commander tags, side sections, suffixes and leading zeros are preserved. Foil markers, commander tags, maybeboard tags and ownership labels are supported. Unlabeled commander placement requires confirmation.</p><details><summary>CSV columns & privacy</summary><p class="mono">Quantity,Name,Set,Collector Number,Scryfall ID,Language,Section</p><p>Card names and printing identifiers go to Scryfall only when you import. Your pasted deck stays in this page and the server’s temporary memory. No accounts or analytics.</p></details></aside>
++          <div id="import-drop" role="group" aria-label="Deck import: paste text or drop one TXT or CSV file"><label for="deck-file">Choose a deck file or drop it here</label><input id="deck-file" type="file" accept=".txt,.csv,text/plain,text/csv" aria-describedby="import-file-help"><p id="import-file-help" class="fine">One .txt or .csv file, up to 800 KB. Read locally; review the text before importing.</p><label for="deck-input">Your deck export</label><textarea id="deck-input" spellcheck="false" placeholder="Commander&#10;1 Card Name (SET) 001a&#10;&#10;Deck&#10;1 Another Card (SET) 055"></textarea><p id="import-preview" class="fine" role="status"></p><div class="import-actions"><button id="import-button" class="primary">Import deck <span aria-hidden="true">→</span></button><button id="clear-deck-input" class="text-button">Clear pasted text</button><button id="demo-button" class="text-button">Load fixture demo</button></div><p id="import-message" role="status" class="status"></p><details id="import-diagnostics" hidden><summary>Inspect import problems</summary><div id="import-diagnostics-list"></div></details><div id="import-placement" class="import-review" hidden><p id="import-placement-message"></p><button id="confirm-import-commander" class="primary">Confirm suggested commander and import</button><p class="fine">If this card is an extra, edit the list to label its section explicitly before importing.</p></div></div>
++          <aside class="import-note"><span class="eyebrow">A note on fidelity</span><h3>The edition matters.</h3><p>Paste names alone, add a set hint, or include exact set and collector numbers. Names and set hints use clearly labeled assumed printings; flavor text belongs to the displayed edition.</p><p>Plain text and CSV supported. Commander tags, side sections, suffixes and leading zeros are preserved. Foil markers, commander tags, maybeboard tags and ownership labels are supported. Unlabeled commander placement requires confirmation.</p><details><summary>CSV columns & privacy</summary><p class="mono">Quantity,Name,Set,Collector Number,Scryfall ID,Language,Section</p><p>TappedOut Board/Qty/Printing/Commander and Helvault-compatible set_code/collector_number/scryfall_id columns are also supported. Set hints constrain an assumed reference; unknown source codes remain visible with a warning.</p><p>Card names and printing identifiers go to Scryfall only when you import. Your pasted deck stays in this page and the server’s temporary memory. No accounts or analytics.</p></details></aside>
+         </div>
+       </details>
+       <section id="ledger-section" hidden><div class="ledger-bar"><div id="denominators"></div><button id="ledger-open" class="text-button" aria-haspopup="dialog">Inspect import ledger ↗</button></div><section class="commander-panel" aria-label="Selected commanders"><div class="commander-current-heading"><span class="eyebrow">Your commander</span><span id="commander-caption"></span></div><div id="commander-current"></div><details id="commander-picker" class="commander-picker"><summary>Change commander selection</summary><p>Changing commanders updates the colors used to find other cards. The mechanics from your imported cards stay the same. Select one or two commanders; pair eligibility is not checked.</p><label for="commander-search">Find an imported card</label><input id="commander-search" type="search" placeholder="Search your resolved cards"><div id="commander-options"></div><p id="commander-option-status" class="fine" role="status"></p><button id="commander-apply" class="primary">Use selected commanders</button></details></section></section>
+--- before/lib/scryfall.mjs
++++ after/lib/scryfall.mjs
+@@ -1,4 +1,4 @@
+-import {identifierKey as lookupKey, matchesCardName} from '../public/import-model.mjs';
++import {identifierKey as lookupKey, matchesCardName, validCollectorNumber} from '../public/import-model.mjs';
+ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+ const COLORS = ['W', 'U', 'B', 'R', 'G'];
+ export const DISCOVERY_PAGE_SIZE = 24;
+@@ -21,13 +21,14 @@
+     if (!exactKeys(item, ['id', 'set', 'collector_number', 'lang', 'name'])) throw new HttpError(400, 'Only a card name, printing ID, or set and collector number are accepted.');
+     let identifier;
+     if (item.name !== undefined) {
+-      if (Object.keys(item).some(key => key !== 'name') || typeof item.name !== 'string' || !item.name.trim() || item.name.length > 500 || /[\u0000-\u001f\u007f]/.test(item.name)) throw new HttpError(400, 'Supply a bounded literal card name by itself.');
+-      identifier = {name: item.name.trim().replace(/\s+/g, ' ')};
++      if (Object.keys(item).some(key => !['name','set'].includes(key)) || typeof item.name !== 'string' || !item.name.trim() || item.name.length > 500 || /[\u0000-\u001f\u007f]/.test(item.name)) throw new HttpError(400, 'Supply a bounded literal card name by itself or with a set hint.');
++      if (item.set !== undefined && (typeof item.set !== 'string' || !/^[a-z0-9]{2,8}$/i.test(item.set))) throw new HttpError(400, 'Invalid set hint.');
++      identifier = {name: item.name.trim().replace(/\s+/g, ' '), ...(item.set === undefined ? {} : {set:item.set.toLowerCase()})};
+     } else if (item.id !== undefined) {
+       if (typeof item.id!=='string' || !UUID.test(item.id) || Object.keys(item).some(k => k !== 'id')) throw new HttpError(400, 'A Scryfall printing ID must be a UUID and supplied by itself.');
+       identifier = { id: item.id.toLowerCase() };
+     } else {
+-      if (typeof item.set !== 'string' || !/^[a-z0-9]{2,8}$/i.test(item.set) || typeof item.collector_number !== 'string' || !/^[a-z0-9★†*.-]{1,32}$/i.test(item.collector_number)) throw new HttpError(400, 'Invalid set or collector number.');
++      if (typeof item.set !== 'string' || !/^[a-z0-9]{2,8}$/i.test(item.set) || !validCollectorNumber(item.collector_number)) throw new HttpError(400, 'Invalid set or collector number.');
+       if (item.lang !== undefined && item.lang !== 'en') throw new HttpError(422, 'Non-English printings require an exact Scryfall printing UUID. No English replacement was requested.');
+       identifier = { set: item.set.toLowerCase(), collector_number: item.collector_number };
+     }
+@@ -91,7 +92,7 @@
+   return result;
+ }
+ export function matchesIdentifier(card, identifier) {
+-  return identifier.name ? matchesCardName(card, identifier.name) && card.lang === 'en' : identifier.id ? card.id === identifier.id.toLowerCase() : card.set.toLowerCase() === identifier.set.toLowerCase() && normalizeCollector(card.collector_number) === normalizeCollector(identifier.collector_number) && card.lang === 'en';
++  return identifier.name ? matchesCardName(card, identifier.name) && card.lang === 'en' && (!identifier.set || card.set.toLowerCase() === identifier.set.toLowerCase()) : identifier.id ? card.id === identifier.id.toLowerCase() : card.set.toLowerCase() === identifier.set.toLowerCase() && normalizeCollector(card.collector_number) === normalizeCollector(identifier.collector_number) && card.lang === 'en';
+ }
+ 
+ export function buildQuery(catalog, atlasRowId, identity) {
+@@ -144,13 +145,16 @@
+ export function createScryfallClient({ fetchImpl = fetch, minimumGap = 120, timeoutMs = 15000, cacheTtl = 300000 } = {}) {
+   let queue = Promise.resolve(), lastStart = 0, blockedUntil = 0, pending = 0;
+   const cache = new Map(), inFlight = new Map(), searchTotals = new Map();
++  const MAX_CACHE_BYTES = 16 * 1024 * 1024;
++  let cacheBytes = 0;
++  const evict = key => { const entry=cache.get(key); if(entry){cacheBytes-=entry.bytes;cache.delete(key);} };
+   async function perform(pathname, body) {
+     if (pending >= 30) throw new HttpError(503, 'Provider queue is busy. Please wait before trying again.');
+     pending++;
+     const task = queue.catch(() => {}).then(async () => {
+       if (blockedUntil > Date.now()) throw new HttpError(429, 'Scryfall has asked us to wait. No automatic retry was made.', String(Math.ceil((blockedUntil - Date.now()) / 1000)));
+       const url = new URL(pathname, 'https://api.scryfall.com');
+-      if (url.origin !== 'https://api.scryfall.com' || !['/cards/collection', '/cards/search'].includes(url.pathname)) throw new HttpError(400, 'Outbound operation is not allowed.');
++      if (url.origin !== 'https://api.scryfall.com' || !['/cards/collection', '/cards/search', '/sets'].includes(url.pathname)) throw new HttpError(400, 'Outbound operation is not allowed.');
+       // Search is documented at two requests/second. Explicit zero spacing is
+       // retained for injected test providers; normal collection calls use 120ms.
+       const gap = url.pathname === '/cards/search' && minimumGap !== 0 ? Math.max(500, minimumGap) : minimumGap;
+@@ -163,7 +167,8 @@
+       if (response.status === 429) {
+         const retry = response.headers.get('retry-after');
+         const milliseconds = /^\d+$/.test(retry ?? '') ? Number(retry) * 1000 : Date.parse(retry ?? '') - Date.now();
+-        blockedUntil = Date.now() + Math.max(1000, Math.min(Number.isFinite(milliseconds) ? milliseconds : 60000, 3600000));
++        // Preserve the entire requested wait; no timer or automatic retry is scheduled.
++        blockedUntil = Math.min(Number.MAX_SAFE_INTEGER, Date.now() + Math.max(1000, Number.isFinite(milliseconds) ? milliseconds : milliseconds === Infinity ? Number.MAX_SAFE_INTEGER : 60000));
+         throw new HttpError(429, 'Scryfall rate limit reached. No automatic retry was made.', String(Math.ceil((blockedUntil - Date.now()) / 1000)));
+       }
+       if (response.status === 404 && url.pathname === '/cards/search') return { object: 'list', data: [], total_cards: 0, has_more: false };
+@@ -181,19 +186,21 @@
+     const key = pathname + (body ? JSON.stringify(body) : '');
+     const cached = cache.get(key);
+     if (cached && cached.expires > Date.now()) return structuredClone(cached.value);
++    if (cached) evict(key);
+     if (!inFlight.has(key)) {
+       const task = perform(pathname, body).then(data => {
+-        if (cache.size >= 64) cache.delete(cache.keys().next().value);
+-        cache.set(key, { value: data, expires: Date.now() + cacheTtl });
++        const bytes = Buffer.byteLength(JSON.stringify(data));
++        while (cache.size && (cache.size >= 64 || cacheBytes + bytes > MAX_CACHE_BYTES)) evict(cache.keys().next().value);
++        if (bytes <= MAX_CACHE_BYTES) { cache.set(key, {value:data, bytes, expires:Date.now()+cacheTtl}); cacheBytes+=bytes; }
+         return data;
+       }).finally(() => inFlight.delete(key));
+       inFlight.set(key, task);
+     }
+     return structuredClone(await inFlight.get(key));
+   }
+-  async function collectionResult(identifiers) {
++  async function collectionResult(identifiers, boundedRequest = request) {
+     const pathname='/cards/collection',body={identifiers};
+-    const response=await request(pathname,body);
++    const response=await boundedRequest(pathname,body);
+     try{
+       if(!response||response.object!=='list'||!Array.isArray(response.data)||response.data.length>75||!Array.isArray(response.not_found)||response.not_found.length>75)throw new HttpError(502,'Scryfall collection response did not match its expected schema.');
+       const cards=response.data.map(safeCard);
+@@ -203,15 +210,15 @@
+         return validated;
+       });
+       return {cards,missing};
+-    }catch(error){cache.delete(pathname+JSON.stringify(body));throw error;}
+-  }
+-  async function exactAliasCandidates(group) {
+-    const q=`(${group.map(identifier=>`!${JSON.stringify(identifier.name)}`).join(' or ')}) lang:en include:extras`;
++    }catch(error){evict(pathname+JSON.stringify(body));throw error;}
++  }
++  async function exactAliasCandidates(group, boundedRequest = request) {
++    const q=`(${group.map(identifier=>identifier.set ? `(!${JSON.stringify(identifier.name)} set:${identifier.set})` : `!${JSON.stringify(identifier.name)}`).join(' or ')}) lang:en include:extras`;
+     const cards=[],seen=new Set();let total;
+-    const invalidate=()=>{for(const pathname of cache.keys())if(pathname.startsWith('/cards/search?')&&new URL(pathname,'https://api.scryfall.com').searchParams.get('q')===q)cache.delete(pathname);};
++    const invalidate=()=>{for(const pathname of cache.keys())if(pathname.startsWith('/cards/search?')&&new URL(pathname,'https://api.scryfall.com').searchParams.get('q')===q)evict(pathname);};
+     try{for(let page=1;page<=8;page++){
+       // Construct every URL ourselves; provider next_page links are never followed.
+-      const result=await request('/cards/search?'+new URLSearchParams({q,unique:'prints',order:'name',page:String(page)}));
++      const result=await boundedRequest('/cards/search?'+new URLSearchParams({q,unique:'prints',order:'name',page:String(page)}));
+       if(!result||result.object!=='list'||!Array.isArray(result.data)||!Number.isSafeInteger(result.total_cards)||result.total_cards<0||typeof result.has_more!=='boolean')throw new HttpError(502,'Exact alias lookup returned invalid pagination metadata.');
+       if(result.total_cards>1400)throw new HttpError(422,'Exact alias lookup exceeds 1,400 printings. Supply printing coordinates for these names.');
+       if(total!==undefined&&result.total_cards!==total){invalidate();throw new HttpError(409,'Exact name results changed while importing. Import again.');}
+@@ -227,22 +234,44 @@
+   return {
+     async resolve(input) {
+       const identifiers = validateIdentifiers(input), cards = new Map(), notFound = [], warnings = [], outcomes = [];
++      let work = 0;
++      const boundedRequest = (pathname, body) => {
++        if (++work > 32) throw new HttpError(422, 'Import exceeds 32 provider operations. Supply exact printings for unresolved aliases.');
++        return request(pathname, body);
++      };
++      const effective = new Map(), hints = new Map();
++      if (identifiers.some(item => item.name && item.set)) {
++        const sets = await boundedRequest('/sets');
++        if (!sets || sets.object !== 'list' || !Array.isArray(sets.data) || sets.data.length > 5000 || sets.has_more === true || sets.data.some(set => !set || typeof set.code !== 'string' || !/^[a-z0-9]{2,8}$/i.test(set.code))) {
++          evict('/sets'); throw new HttpError(502, 'Scryfall returned an invalid set catalog. Set hints were not discarded.');
++        }
++        const codes = new Set(sets.data.map(set => set.code.toLowerCase()));
++        for (const identifier of identifiers.filter(item => item.name && item.set)) {
++          const recognized = codes.has(identifier.set);
++          const hint = {code:identifier.set, status:recognized ? 'honored' : 'unrecognized'};
++          hints.set(identifierKey(identifier), hint);
++          effective.set(identifierKey(identifier), recognized ? identifier : {name:identifier.name});
++          if (!recognized) warnings.push(`Source set ${identifier.set.toUpperCase()} is not in Scryfall's set catalog; an assumed name reference is used. No set mapping was invented.`);
++        }
++      }
++      const effectiveIdentifier = identifier => effective.get(identifierKey(identifier)) || identifier;
++      const matches = (card, identifier) => matchesIdentifier(card, effectiveIdentifier(identifier));
+       const batches = [identifiers.filter(item=>item.name),identifiers.filter(item=>!item.name)].flatMap(group => Array.from({length:Math.ceil(group.length/75)},(_,index)=>group.slice(index*75,index*75+75)));
+       for (const batch of batches) {
+         // Collection accepts an exact face name but can reject the combined
+         // split-card spelling. Verify the returned FULL name against the original
+         // request below, so this transport alias never becomes fuzzy substitution.
+-        const providerIdentifier = identifier => identifier.name && identifier.name.includes('//') && identifier.name.split('//')[0].trim() ? {name:identifier.name.split('//')[0].trim()} : identifier;
++        const providerIdentifier = original => { const identifier=effectiveIdentifier(original); return identifier.name && identifier.name.includes('//') && identifier.name.split('//')[0].trim() ? {...identifier,name:identifier.name.split('//')[0].trim()} : identifier; };
+         const providerBatch=[...new Map(batch.map(identifier=>{const transport=providerIdentifier(identifier);return [identifierKey(transport),transport];})).values()];
+-        const {cards:returned,missing:providerMissing}=await collectionResult(providerBatch);
++        const {cards:returned,missing:providerMissing}=await collectionResult(providerBatch, boundedRequest);
+         // Preserve each collection result before alias candidates are appended.
+         // An alternate-name request must not change another row's reference edition.
+-        const matchesByKey=new Map(batch.map(identifier=>[identifierKey(identifier),returned.filter(card=>matchesIdentifier(card,identifier))]));
++        const matchesByKey=new Map(batch.map(identifier=>[identifierKey(identifier),returned.filter(card=>matches(card,identifier))]));
+         const legacyRequests=batch.filter(item=>item.name&&item.name.includes('/')&&!matchesByKey.get(identifierKey(item)).length);
+         if(legacyRequests.length){
+-          const faceIdentifiers=[...new Map(legacyRequests.map(item=>{const name=item.name.split(/\/+/)[0].trim();return [identifierKey({name}),{name}];})).values()].filter(item=>item.name);
+-          const candidates=faceIdentifiers.length?(await collectionResult(faceIdentifiers)).cards:[];
+-          for(const identifier of legacyRequests){const matches=candidates.filter(card=>matchesIdentifier(card,identifier));matchesByKey.set(identifierKey(identifier),matches);for(const card of matches)if(!returned.some(existing=>existing.id===card.id))returned.push(card);}
++          const faceIdentifiers=[...new Map(legacyRequests.map(item=>{const name=item.name.split(/\/+/)[0].trim(), face={...effectiveIdentifier(item),name};return [identifierKey(face),face];})).values()].filter(item=>item.name);
++          const candidates=faceIdentifiers.length?(await collectionResult(faceIdentifiers, boundedRequest)).cards:[];
++          for(const identifier of legacyRequests){const matching=candidates.filter(card=>matches(card,identifier));matchesByKey.set(identifierKey(identifier),matching);for(const card of matching)if(!returned.some(existing=>existing.id===card.id))returned.push(card);}
+         }
+         const aliasKeys=new Set();
+         const aliasRequests=batch.filter(item=>item.name&&!matchesByKey.get(identifierKey(item)).length);
+@@ -251,15 +280,15 @@
+           // Literal exact-name search also indexes alternate English printed and
+           // flavor names which collection does not. No fuzzy lookup or handwritten
+           // equivalence table: accept only names exposed by the returned record.
+-          const candidates=await exactAliasCandidates(group);
+-          for(const identifier of group)matchesByKey.set(identifierKey(identifier),candidates.filter(card=>matchesIdentifier(card,identifier)));
++          const candidates=await exactAliasCandidates(group.map(effectiveIdentifier), boundedRequest);
++          for(const identifier of group)matchesByKey.set(identifierKey(identifier),candidates.filter(card=>matches(card,identifier)));
+           for(const card of candidates){
+-            if(group.some(identifier=>matchesIdentifier(card,identifier))&&!returned.some(existing=>existing.id===card.id))returned.push(card);
++            if(group.some(identifier=>matches(card,identifier))&&!returned.some(existing=>existing.id===card.id))returned.push(card);
+           }
+           group.forEach(identifier=>aliasKeys.add(identifierKey(identifier)));
+         }
+         for (const card of returned) {
+-          if (!batch.some(identifier => matchesIdentifier(card, identifier))) { warnings.push('An unrequested or mismatched provider printing was excluded.'); continue; }
++          if (!batch.some(identifier => matches(card, identifier))) { warnings.push('An unrequested or mismatched provider printing was excluded.'); continue; }
+         }
+         for (const identifier of batch) {
+           const matching = matchesByKey.get(identifierKey(identifier));
+@@ -274,11 +303,12 @@
+           const selected = matching.slice().sort((a,b) => a.id.localeCompare(b.id))[0];
+           if(selected&&identities.size<=1)cards.set(selected.id,selected);
+           outcomes.push({lookupKey: identifierKey(identifier), status: identities.size > 1 ? 'ambiguous' : selected ? 'matched' : 'not-found', cardId: identities.size <= 1 ? selected?.id || null : null,
++            setHint:hints.get(identifierKey(identifier)) || null,
+             lookupMethod:aliasKeys.has(identifierKey(identifier))?'exact-alias-search':'collection',
+-            printingSelection: identifier.name ? {kind: 'assumed', policy: 'scryfall-collection-reference-v1'} : {kind: 'supplied'}});
+-        }
+-      }
+-      return { cards: [...cards.values()], notFound, warnings, outcomes, resolvedAt: new Date().toISOString() };
++            printingSelection: identifier.name ? {kind: 'assumed', policy: 'scryfall-collection-reference-v1', setHint:hints.get(identifierKey(identifier)) || null} : {kind: 'supplied'}});
++        }
++      }
++      return { cards: [...cards.values()], notFound, warnings: [...new Set(warnings)], outcomes, resolvedAt: new Date().toISOString() };
+     },
+     async discover(query, identity, requestedPage = 1) {
+       const page = validateDiscoveryPage(requestedPage);
+@@ -302,7 +332,7 @@
+       if (end > firstProviderPage * PROVIDER_PAGE_SIZE) responses.push(await getPage(firstProviderPage + 1));
+       const previous = searchTotals.get(providerQuery);
+       if (responses.some(response => response.total_cards !== totalCards) || previous && previous.expires > Date.now() && previous.totalCards !== totalCards) {
+-        for (const pathname of cache.keys()) if (pathname.startsWith('/cards/search?') && new URL(pathname, 'https://api.scryfall.com').searchParams.get('q') === providerQuery) cache.delete(pathname);
++        for (const pathname of cache.keys()) if (pathname.startsWith('/cards/search?') && new URL(pathname, 'https://api.scryfall.com').searchParams.get('q') === providerQuery) evict(pathname);
+         searchTotals.delete(providerQuery);
+         throw new HttpError(409, 'Scryfall results changed while this page was loading. Search again to refresh the results.');
+       }
+--- before/README.md
++++ after/README.md
+@@ -22,7 +22,7 @@
+ 
+ ## Import exact printings
+ 
+-Paste plain text with quantities and card names. Set/collector coordinates are optional; supplied coordinates are verified, while name-only cards receive explicitly labeled assumed reference printings. A leading `x` after a quantity is accepted, as are trailing tags. An explicit `[Commander]` or `[Commander{top}]` tag selects the Commander section automatically. `*F*` and `*E*` are finish metadata, not part of the name. Category tags and `^Have,#37d67a^` ownership annotations are preserved. Inline `Maybeboard{noDeck}{noPrice}` tags exclude those quantities from the deck total.
++Paste plain text with quantities and card names, or choose/drop one `.txt` or `.csv` file. Files are read locally after a byte-size check, populate the same editable preview, and show detected format, card/extra counts and designated commanders. No provider requests run until **Import** is clicked. Set/collector coordinates are optional; supplied coordinates are verified, while name-only cards receive explicitly labeled assumed reference printings. A leading `x` after a quantity is accepted, as are trailing tags. An explicit `[Commander]` or `[Commander{top}]` tag selects the Commander section automatically. `*F*` and `*E*` are finish metadata, not part of the name. Category tags and `^Have,#37d67a^` ownership annotations are preserved. Inline `Maybeboard{noDeck}{noPrice}` tags exclude those quantities from the deck total.
+ 
+ ```text
+ Commander
+@@ -34,9 +34,9 @@
+ 
+ This fragment demonstrates two printing coordinates of one card; it is not a proposed Commander deck. Both printings were observed during this implementation's provider checks; consult the report for the precise verification status.
+ 
+-`Commander`, `Deck`, `Mainboard`, `Main deck`, `Sideboard`, `Maybeboard`, `Considering`, and `Companion` headings are supported. Only Commander and Deck entries enter the archive and analysis. Other sections stay in the import ledger and their quantities are reported separately as extras. Deck + Commander must total exactly 100 cards, counting quantities rather than rows; commanders are included in that total. Invalid lines (including malformed printing coordinates or trailing junk) block import with line numbers and reasons, preserving the loaded deck. Unmatched or mismatched main-deck entries block replacement and produce an explicit incomplete-import result with every problem line available in a disclosure. Failed requests preserve the loaded deck. Unmatched extras remain separately disclosed. A final unlabeled singleton after Sideboard produces a commander-placement review; the user must confirm it or label the extra section explicitly. Blank lines never automatically select commanders. The supplied read-only `fixtures/cosmicspiderman.txt` contains 84 entries with a total quantity of 100 and a `[Commander{top}]` tag; it is not copied into the public app.
++`Commander`, `Deck`, `Mainboard`, `Main deck`, `Sideboard`, `Maybeboard`, `Considering`, and `Companion` headings are supported. Only Commander and Deck entries enter the archive and analysis. Other sections stay in the import ledger and their quantities are reported separately as extras. Deck + Commander must total exactly 100 cards, counting quantities rather than rows; commanders are included in that total. Invalid lines (including malformed printing coordinates or trailing junk) block import with line numbers and reasons, preserving the loaded deck. Unmatched or mismatched main-deck entries block replacement and produce an explicit incomplete-import result with every problem line available in a disclosure. Failed requests preserve the loaded deck. Required deck rows resolve first. Extras resolve separately and their provider/alias failures are disclosed without preventing a complete required deck from loading. Main editions and the required response’s discovery context remain pinned. If required rows fail, extra lookups are deferred and labeled as not requested. A final unlabeled singleton after Sideboard produces a commander-placement review; the user must confirm it or label the extra section explicitly. Blank lines never automatically select commanders. The supplied read-only `fixtures/cosmicspiderman.txt` contains 84 entries with a total quantity of 100 and a `[Commander{top}]` tag; it is not copied into the public app.
+ 
+-CSV is also supported. Quantity and Name are required; the following printing, language and section columns are optional and may appear in any order. Finish (foil/nonfoil/etched) and Foil (true/false) columns are supported, and other columns are preserved as source metadata:
++CSV supports the generic columns below, native TappedOut (`Board,Qty,Name,Printing,Foil,Language,Commander`), and the supplied Helvault-compatible schema (`collector_number,extras,language,name,oracle_id,quantity,scryfall_id,set_code,set_name`). Headers may appear in any order. TappedOut main/side/maybe boards and Commander=True carry placement; an ordinary Background or sideboard Jegantha is never promoted by card type or ability. More than two commander flags blocks the import. TXT exports that omit roles require user selection. All CSV columns remain in source metadata; duplicate semantic columns, conflicting roles, unsupported meaning-bearing columns, and unsupported nonempty Extras values are flagged. Finish and common boolean Foil values are supported; Foil=foil is explicit foil, while Foil=pre is preserved with an unspecified-finish warning:
+ 
+ ```csv
+ Quantity,Name,Set,Collector Number,Scryfall ID,Language,Section
+@@ -48,11 +48,11 @@
+ 
+ Original text, row order, quantities, sections, tags, collector suffixes, and leading zeros are preserved. Matching accepts equivalent provider numbering such as `001a` and `1a`, including collector letter case, without rewriting the imported coordinate. Distinct rows stay distinct; duplicate identifiers are combined only for the provider request.
+ 
+-Name-only rows resolve by literal card name and use **Assumed printing** reference editions. The original name, source line and requested finish stay intact. Supplied printing failures never fall back to name resolution. Split-card lookups use an exact face name for transport and verify the complete supplied name on the returned card. Legacy slash spellings such as `Fire / Ice` and `Fire/Ice` are accepted only when actual face metadata verifies the joined name; literal slashes in other card names remain intact. Names not indexed by collection receive a bounded exact-name search, in groups of up to ten, with at most eight pages / 1,400 printings per group. Larger groups require printing coordinates. Pagination verifies complete pages, stable totals and distinct printing IDs, using fixed provider URLs. Returned English printed names and flavor names must match literally; this handles alternate names such as Black Panther's Claws without fuzzy substitution. Imported aliases and canonical Oracle names are shown together. Assumed, supplied and user-selected editions remain distinct in the archive, card viewers and flavor coverage. The ledger can change a reference edition using a Scryfall printing UUID; replacement editions must share the original resolved Oracle identity. Other selected editions stay pinned, the original source alias is preserved, and analysis is recomputed. A resolved edition with no flavor is a normal result. Multi-face passages remain separate, verbatim passages.
++Name-only rows resolve by literal card name and use **Assumed printing** reference editions. A name plus set hint (`100 Forest (RNA)`, CSV Set/Printing/set_code without a collector number) also uses an assumed printing: the collector/variant was not supplied. Hints are checked against Scryfall’s set catalog and recognized codes constrain collection and alias lookups. Unknown codes, including the observed 000, MYSTOR, UN3 and MBP, stay in the row and provenance with a visible warning when a name reference is used; no mappings are invented. A recognized code with no matching card remains unresolved. Exact IDs/coordinates never use this fallback. The original name, source line and requested finish stay intact. Supplied printing failures never fall back to name resolution. Split-card lookups use an exact face name for transport and verify the complete supplied name on the returned card. Legacy slash spellings such as `Fire / Ice` and `Fire/Ice` are accepted only when actual face metadata verifies the joined name; literal slashes in other card names remain intact. Names not indexed by collection receive a bounded exact-name search, in groups of up to ten, with at most eight pages / 1,400 printings per group. Larger groups require printing coordinates. Each resolve request also has a 32-operation budget, including collection, set-catalog and alias requests, even on cache hits; a full main-plus-extras import uses at most two such bounded phases. Pagination verifies complete pages, stable totals and distinct printing IDs, using fixed provider URLs. Returned English printed names and flavor names must match literally; this handles alternate names such as Black Panther's Claws without fuzzy substitution. Imported aliases and canonical Oracle names are shown together. Assumed, supplied and user-selected editions remain distinct in the archive, card viewers and flavor coverage. The ledger can change a reference edition using a Scryfall printing UUID; replacement editions must share the original resolved Oracle identity. Other selected editions stay pinned, the original source alias is preserved, and analysis is recomputed. A resolved edition with no flavor is a normal result. Multi-face passages remain separate, verbatim passages.
+ 
+ Coordinate-only imports request English printings. A non-English printing requires an exact Scryfall printing UUID in CSV. Supply Language to require that returned language; if Language is blank alongside a UUID, the UUID determines the language. Non-English flavor stays readable in the archive and is excluded from English lexical analysis.
+ 
+-Input is bounded to 200,000 characters and 500 entries as a resource safeguard across deck and extra sections, separate from the 100-card deck requirement. Quantities must be positive integers from 1 to 999. Partial coordinates, malformed CSV, and unsupported collector formats are disclosed. Clipboard export compatibility with other deckbuilders has not been tested.
++Input is bounded to 200,000 characters and 500 entries as a resource safeguard across deck and extra sections, separate from the 100-card deck requirement. Quantities must be positive integers from 1 to 999. A collector number without a set, malformed CSV, and unsupported collector formats are disclosed. Parser and API use the same collector-number validator. Each record is capped at 8,000 characters, CSV at 64 columns, and text at 64 metadata markers per line; excessive rows/metadata stop early. Files are capped at 800,000 bytes before decoding, then the 200,000-character limit still applies. Clipboard export compatibility with other deckbuilders has not been tested.
+ 
+ “Clear pasted text” empties only the import text field and returns focus there. It preserves the loaded deck, selected mechanics and Clipboard, and is disabled while an import is pending.
+ 
+@@ -60,7 +60,7 @@
+ 
+ Choose commander entries explicitly, or use the resolved Commander section. Each declared commander must have quantity one, and at most two distinct card identities can be selected. Different aliases or editions of the same Oracle card cannot occupy both commander slots. Identity comes from their returned `color_identity`, never from the other cards' colors or mana production. W/U is labeled Azorius; single colors and colorless have plain names, and other combinations use WUBRG codes. Multiple selected commanders produce a provisional union with pair eligibility unverified. Discovery supports one or two selected resolved commanders.
+ 
+-The selected commander's actual card image is visible above the reading views. Color identity is shown with mana symbols without repeating a WUBRG label or presenting mana cost as identity. Search the commander chooser, select imported entries, and apply the selection; filtering the chooser retains selections. The Import, Read, Understand, Explore, Collect and Export controls navigate the existing session. Changing views, using browser Back/Forward, and returning to the masthead preserve the deck and reading filters.
++The selected commander's actual card image is visible above the reading views. Color identity is shown with mana symbols without repeating a WUBRG label or presenting mana cost as identity. Search the commander chooser by imported alias or canonical name, using the same apostrophe, whitespace and split-name normalization as resolution; select imported entries, and apply the selection; filtering the chooser retains selections. The Import, Read, Understand, Explore, Collect and Export controls navigate the existing session. Changing views, using browser Back/Forward, and returning to the masthead preserve the deck and reading filters.
+ 
+ Hover or keyboard-focus a card name for an exact-printing preview; click, tap or press Enter for its detail dialog. Known double-faced layouts have a circular face button over the art, below the printed title/mana strip, with an accessible next-face name and a visible current-face label. Switching updates the exact face art, rules and flavor together. Adventure, split and same-side flip cards show one exact-printing image and both named text parts together, without a turn-over control. Unrecognized multipart layouts also expose their text without asserting a reverse side. Escape dismisses the preview or dialog, and dialogs return focus to their opener. Mana/cost symbols use locally bundled Mana; exact available set symbols use Keyrune. Unknown symbols remain readable text. Printing UUIDs are available inside contextual details rather than repeated in the reading flow.
+ 
+@@ -111,11 +111,11 @@
+ 
+ ## Local data, boundaries, and accessibility
+ 
+-Only `public/` is served as static content. Owner-supplied inputs, the private deck fixture, references, tests, and report are not web-served. The browser holds imported text in memory and loads the derived official rules index locally. Explicit imports send bounded printing identifiers to the local server, which calls `https://api.scryfall.com/cards/collection`; explicit searches call `https://api.scryfall.com/cards/search`. There are no keystroke requests, runtime bulk-card downloads, telemetry, accounts, deckbuilder integrations, or AI endpoints.
++Only `public/` is served as static content. Owner-supplied inputs, the private deck fixture, references, tests, and report are not web-served. The browser holds imported text in memory and loads the derived official rules index locally. Explicit imports send bounded printing identifiers to the local server, which calls `https://api.scryfall.com/cards/collection`; set-hinted imports also use `https://api.scryfall.com/sets`, and exact alias lookups and explicit discovery searches call `https://api.scryfall.com/cards/search`. There are no keystroke requests, runtime bulk-card downloads, telemetry, accounts, deckbuilder integrations, or AI endpoints.
+ 
+-Collection requests deduplicate identifiers and use sequential batches of at most 75, with a minimum 120 ms request gap. Search requests use a minimum 500 ms gap in the shared provider queue. Outbound HTTPS hosts and operations are allowlisted, redirects are rejected, timeouts and body limits apply, and HTTP 429 blocks retries for the stated wait interval. Network failures remain visible instead of switching to demo content.
++Collection requests deduplicate identifiers and use sequential batches of at most 75, with a minimum 120 ms request gap. Search requests use a minimum 500 ms gap in the shared provider queue. Outbound HTTPS hosts and operations are allowlisted, redirects are rejected, timeouts and body limits apply, and HTTP 429 blocks retries for the entire stated wait interval, including multi-hour numeric or HTTP-date Retry-After values; no automatic retries are scheduled. Network failures remain visible instead of switching to demo content.
+ 
+-The server keeps at most 64 resolved-import contexts, containing printing IDs and identities, with 30-minute expiry. Its bounded in-memory provider response cache holds up to 64 entries for five minutes. Nothing is persisted to backend storage; stopping the process discards these maps. Reimport if the discovery context expires.
++The server keeps at most 64 resolved-import contexts, containing printing IDs and identities, with 30-minute expiry. Its bounded in-memory provider response cache holds up to 64 entries and 16 MiB of serialized response data for five minutes (JavaScript object/cloning overhead is additional). Nothing is persisted to backend storage; stopping the process discards these maps. Reimport if the discovery context expires.
+ 
+ Commander art, card galleries and previews load only the displayed exact printing's provider-supplied images directly from `https://cards.scryfall.io`; no card images are bundled or generated. Missing images retain the card text and an explicit unavailable state. The icon fonts and styles are local, pinned assets with source commits, licenses and hashes in [public/vendor/SOURCES.md](public/vendor/SOURCES.md). Scryfall image documentation was inaccessible during this session, so imagery terms were not verified. Scryfall is a third-party card-data provider. Rules, owner taxonomy, historical placements, and site-authored analysis keep separate provenance labels.
+ 
+@@ -129,3 +129,14 @@
+ ## Text import verification
+ 
+ The untouched supplied exports are retained under `tests/fixtures/imports/`, alongside the Hakbal list supplied in chat. `tests/import-corpus.test.mjs` covers quantities, annotations, automatic commanders, explicit Obeka confirmation, provenance, split-card aliases and malformed inputs. `tests/import-redteam.test.mjs` adds strict CSV validation, alternate-name corrections, commander identity collisions, pagination boundaries/drift, malformed provider responses and explicit retry behavior. Handler tests cover failed/stale imports, unchanged loaded decks, uppercase printing UUIDs and confirmation after a draft changes. Run `node scripts/verify-import-live.mjs http://127.0.0.1:4174` against a running verification server for an explicit live Scryfall check; it asserts all five exports and saves `reports/import-validation/live.json`. Run `node scripts/verify-import-redteam-live.mjs http://127.0.0.1:4174` for real alternate-name, apostrophe, split spelling, commander and printing-correction checks; it saves `reports/import-validation/redteam-live.json`. These smoke checks are separate from deterministic tests.
++
++
++## Bounded importer verification (October 18, 2026)
++
++Editing the paste draft, opening/choosing a new file, or dropping new input invalidates an older import before its completion can commit, collapse the workbench, or change the new draft’s messages. File reads have their own ownership protection; an older read cannot overwrite later edits. A failed import preserves the loaded deck. Clear pasted text remains disabled during import.
++
++Run `node --test` for deterministic tests, including real fixture parsing, synthetic provider failures, draft ownership, local file preview, alias search, full Retry-After waits, shared collector validation and work/cache limits. Run `node scripts/verify-import-bounded-live.mjs http://127.0.0.1:4175` against a fresh verification server for explicit live checks; this is separate from the offline suite. Restart an existing Node server to load changed provider modules; refreshing a page alone reloads only client modules.
++
++The fixture bytes and source hashes are recorded in `tests/fixtures/imports/uncommon/provenance.json`. The Spanish file is a derived one-row collection excerpt, used only for resolver checks; it does not satisfy the 100-card deck requirement. Its original name is English and its finish is unspecified. Translated-name test variants are labeled synthetic.
++
++See [the bounded importer report](reports/import-validation/BOUNDED_IMPORTER_REPORT.md) for actual test results, live source-hint mismatches, browser evidence and limitations. The existing loopback host/origin checks, strict API payloads, text-node rendering, outbound allowlist, sequential batching, spacing, timeouts and request-body bounds remain in place. These process-local safeguards do not establish public-deployment readiness: authentication, shared quotas across processes, sustained abuse/load behavior and operating-memory sizing would require separate work. This change does not implement a full legality engine, collection manager or deployment infrastructure.
+--- /dev/null
++++ after/public/import-csv.mjs
+@@ -0,0 +1,52 @@
++// Explicit column vocabulary shared by the small export adapters. Unknown
++// meaning-bearing columns are errors; harmless columns remain source metadata.
++const key = value => value.trim().toLowerCase().replace(/[ _-]/g, '');
++const fields = {
++  quantity: ['quantity', 'qty'], name: ['name'], set: ['set', 'setcode', 'printing'],
++  collectorNumber: ['collectornumber'], scryfallId: ['scryfallid'], oracleId: ['oracleid'],
++  language: ['language'], section: ['section', 'board'], commander: ['commander'],
++  finish: ['finish'], foil: ['foil'], extras: ['extras'],
++};
++const meaningful = /commander|companion|board|section|printing|edition|scryfall|collector|oracle|language|finish|foil|^set$|^setcode$|^role$/;
++
++export function csvAdapter(header) {
++  const labels = header.map(key), issues = [], indices = new Map();
++  for (const [field, aliases] of Object.entries(fields)) {
++    const found = labels.flatMap((label, index) => aliases.includes(label) ? [index] : []);
++    if (found.length > 1) issues.push(`CSV has duplicate ${field} columns; keep one source of meaning.`);
++    if (found.length) indices.set(field, found[0]);
++  }
++  if (!indices.has('quantity') || !indices.has('name') || new Set(labels).size !== labels.length) issues.push('CSV requires distinct Quantity (or Qty) and Name columns, without duplicate columns.');
++  for (const label of labels) if (!Object.values(fields).flat().includes(label) && label !== 'setname' && meaningful.test(label)) issues.push(`Unsupported meaning-bearing CSV column: ${label}. Use a supported role or printing column.`);
++  const schema = labels.includes('board') && labels.includes('printing') && labels.includes('commander') ? 'TappedOut CSV'
++    : ['scryfallid','setcode','collectornumber','extras','oracleid'].every(label => labels.includes(label)) ? 'Helvault-compatible CSV' : 'CSV';
++  return {schema, issues, row(cells) {
++    const value = field => cells[indices.get(field)]?.trim() || '';
++    const rowIssues = [], warnings = [];
++    let section = value('section') || 'Deck', commanderSource = null;
++    const flag = value('commander').toLowerCase();
++    if (flag && !['true','false'].includes(flag)) rowIssues.push('Commander must be True, False, or blank.');
++    if (flag === 'true') {
++      if (!/^(deck|main|mainboard|main deck|commander|commanders)$/i.test(section)) rowIssues.push('Commander=True conflicts with an extra board. Correct the source placement.');
++      else { section = 'Commander'; commanderSource = 'column'; }
++    }
++    if (/^commanders?$/i.test(section)) commanderSource = 'column';
++    const foil = value('foil').toLowerCase(), explicitFinish = value('finish').toLowerCase();
++    const finishes = {'true':'foil',yes:'foil','1':'foil',foil:'foil','false':'nonfoil',no:'nonfoil','0':'nonfoil',nonfoil:'nonfoil',etched:'etched'};
++    if (foil === 'pre') warnings.push('Source Foil=pre is preserved; the exact finish is unspecified.');
++    else if (foil && !finishes[foil]) rowIssues.push('Unsupported Foil value; finish cannot be inferred.');
++    if (explicitFinish && finishes[foil] && explicitFinish !== finishes[foil]) rowIssues.push('Conflicting Finish and Foil columns.');
++    // Helvault extras are retained, never treated as deck placement. Nonempty
++    // values need review until their copy-level meaning is supported.
++    if (value('extras') && value('extras') !== '[]') rowIssues.push('Unsupported Extras metadata; clarify its finish or variant meaning before importing.');
++    if (labels.includes('setname') && cells[labels.indexOf('setname')]?.trim() && !value('set') && !value('scryfallId')) warnings.push('Set Name is preserved as metadata; supply a set code to constrain the assumed printing.');
++    return {
++      quantity: value('quantity'), name: value('name'), set: value('set'), collectorNumber: value('collectorNumber'),
++      scryfallId: value('scryfallId'), oracleId: value('oracleId'), language: value('language'), section,
++      sourceSection: value('section') || 'Deck', commanderSource, finish: explicitFinish || finishes[foil] || 'unspecified',
++      // Retain all columns, including the exact source codes and role spelling.
++      csvMetadata: Object.fromEntries(header.map((label, index) => [label.trim().toLowerCase(), cells[index] || ''])),
++      issues: rowIssues, warnings,
++    };
++  }};
++}
+--- /dev/null
++++ after/public/import-limits.mjs
+@@ -0,0 +1,14 @@
++export const MAX_INPUT_CHARACTERS = 200000;
++export const MAX_INPUT_BYTES = 800000; // UTF-8 can use four bytes per character.
++export const MAX_IMPORT_ROWS = 500;
++export const MAX_RECORD_CHARACTERS = 8000;
++export const MAX_CSV_COLUMNS = 64;
++export const MAX_METADATA_ITEMS = 64;
++
++export async function readImportFile(file) {
++  if (!file || !/\.(txt|csv)$/i.test(file.name)) throw new Error('Choose one .txt or .csv file.');
++  if (!Number.isSafeInteger(file.size) || file.size > MAX_INPUT_BYTES) throw new RangeError('Import files are limited to 800,000 bytes and 200,000 characters.');
++  const text = await file.text();
++  if (text.length > MAX_INPUT_CHARACTERS) throw new RangeError('Deck input is limited to 200,000 characters.');
++  return text;
++}
+--- /dev/null
++++ after/public/import-resolution.mjs
+@@ -0,0 +1,29 @@
++import {resolveDeck, resolveExtras, validateCommanderImport} from './core.mjs';
++import {identifierKey} from './import-model.mjs';
++
++export async function resolveImport(parsed, request, isCurrent = () => true) {
++  const identifiers = [...new Map(parsed.rows.filter(row => row.playable && row.identifier).map(row => [identifierKey(row.identifier),row.identifier])).values()];
++  const main = await request('/api/resolve', {identifiers});
++  if (!isCurrent()) return null;
++  let deck = resolveDeck(parsed, main.cards, main.notFound, main.outcomes, {resolvedAt:main.resolvedAt || null,policy:'scryfall-collection-reference-v1'});
++  const warnings = [...(main.warnings || [])];
++  if (deck.rows.some(row => row.playable && row.status !== 'resolved') || !validateCommanderImport(deck).valid) {
++    deck = resolveExtras(deck, {cards:[],outcomes:parsed.rows.filter(row=>!row.playable && row.identifier).map(row=>({lookupKey:identifierKey(row.identifier),status:'deferred'}))});
++    return {deck, contextToken:main.contextToken, warnings};
++  }
++  const mainKeys = new Set(identifiers.map(identifierKey));
++  const extraIdentifiers = [...new Map(parsed.rows.filter(row => !row.playable && row.identifier && !mainKeys.has(identifierKey(row.identifier))).map(row => [identifierKey(row.identifier),row.identifier])).values()];
++  if (extraIdentifiers.length) {
++    let extra;
++    try { extra = await request('/api/resolve', {identifiers:extraIdentifiers}); }
++    catch (error) {
++      extra = {cards:[], notFound:[], outcomes:extraIdentifiers.map(identifier => ({lookupKey:identifierKey(identifier),status:'failed',error:error.message}))};
++    }
++    if (!isCurrent()) return null;
++    // Main outcomes win when the same identifier appears on both boards. Pin
++    // required rows even if a provider returns another edition for an extra.
++    deck = resolveExtras(deck, {cards:[...main.cards,...extra.cards],notFound:[...(main.notFound || []),...(extra.notFound || [])],outcomes:[...(main.outcomes || []),...(extra.outcomes || [])]});
++    warnings.push(...(extra.warnings || []));
++  }
++  return {deck, contextToken:main.contextToken, warnings};
++}
+--- /dev/null
++++ after/tests/import-bounded.test.mjs
+@@ -0,0 +1,185 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import fs from 'node:fs';
++import {createHash} from 'node:crypto';
++import {parseDeck, resolveDeck, validateCommanderImport, selectReferencePrinting} from '../public/core.mjs';
++import {identifierKey, printingDescription, validCollectorNumber} from '../public/import-model.mjs';
++import {readImportFile} from '../public/import-limits.mjs';
++import {resolveImport} from '../public/import-resolution.mjs';
++import {createScryfallClient, validateIdentifiers} from '../lib/scryfall.mjs';
++import {createDeckServer} from '../server.mjs';
++
++const directory = new URL('fixtures/imports/uncommon/', import.meta.url);
++const read = name => fs.readFileSync(new URL(name, directory), 'utf8');
++const uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12,'0')}`;
++const card = (n, name='Forest', extra={}) => ({object:'card',id:uuid(n),oracle_id:uuid(n+1000),name,set:'rna',collector_number:String(n),lang:'en',color_identity:['G'],keywords:[],legalities:{commander:'legal'},...extra});
++const response = value => new Response(JSON.stringify(value));
++const collection = (data, not_found=[]) => response({object:'list',data,not_found});
++const sets = () => response({object:'list',data:[{code:'rna'},{code:'c16'}],has_more:false});
++
++test('copied pack fixtures retain their documented original bytes',()=>{
++  const provenance=JSON.parse(read('provenance.json'));
++  for(const file of provenance.files){
++    const bytes=fs.readFileSync(new URL(file.file,directory));
++    assert.equal(bytes.length,file.bytes);
++    assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,file.file);
++  }
++});
++
++for (const name of fs.readdirSync(directory).filter(name=>name.endsWith('.csv')&&!name.startsWith('helvault'))) test(`native TappedOut fixture retains roles, count, metadata: ${name}`,()=>{
++  const source=read(name),parsed=parseDeck(source),negative=name==='companion-cecily-othelm-jegantha.csv';
++  assert.equal(parsed.schema,'TappedOut CSV');assert.equal(parsed.sourceText,source);
++  assert.equal(parsed.counts.playableQuantity,100);
++  assert.equal(parsed.rows.filter(row=>row.section==='Commander').length,negative?3:2);
++  assert.equal(parsed.rows.filter(row=>row.section==='Deck').reduce((n,row)=>n+row.quantity,0),negative?97:98);
++  assert.equal(validateCommanderImport(parsed).valid,!negative,JSON.stringify(validateCommanderImport(parsed)));
++  assert.ok(parsed.rows.every(row=>row.status==='pending'));
++  for(const row of parsed.rows){
++    assert.equal(row.name,row.csvMetadata.name);assert.equal(row.set,row.csvMetadata.printing.toLowerCase());
++    if(row.csvMetadata.board==='maybe')assert.equal(row.section,'Maybeboard');
++    if(row.csvMetadata.board==='side')assert.equal(row.section,'Sideboard');
++    if(row.set)assert.deepEqual(row.identifier,{name:row.name,set:row.set});
++  }
++  if(name==='friends-forever-wernog-sophina.csv')assert.equal(parsed.rows.find(row=>row.name==='Agent of the Iron Throne').section,'Deck');
++  if(name==='companion-cecily-othelm-jegantha-side.csv')assert.equal(parsed.rows.find(row=>row.name==='Jegantha, the Wellspring').section,'Sideboard');
++  const txt=parseDeck(read(name.replace('.csv','.txt')));
++  assert.equal(txt.counts.playableQuantity,100);assert.equal(txt.rows.filter(row=>row.section==='Commander').length,0);
++  assert.equal(txt.commanderSuggestions.length,0);assert.equal(txt.rows.filter(row=>row.section==='Maybeboard').length,0);
++});
++
++test('Board and snake_case printing columns never silently become main/name-only input',()=>{
++  const maybe=parseDeck('Quantity,Name,Board\n100,Forest,maybe');
++  assert.equal(maybe.counts.playableQuantity,0);assert.equal(validateCommanderImport(maybe).valid,false);
++  const exact=parseDeck(`Quantity,Name,scryfall_id\n100,Forest,${uuid(1)}`);
++  assert.deepEqual(exact.identifiers,[{id:uuid(1)}]);
++  for(const field of ['Commander Role','Edition','Companion','Collector #'])assert.equal(validateCommanderImport(parseDeck(`Quantity,Name,${field}\n100,Forest,value`)).valid,false,field);
++  for(const source of ['Quantity,Name,Board,Section\n100,Forest,maybe,Deck','Quantity,Name,Board,Commander\n100,Forest,side,True','Quantity,Name,Commander\n100,Forest,yes'])assert.equal(validateCommanderImport(parseDeck(source)).valid,false);
++  assert.equal(parseDeck('Quantity,Name,Note\n100,Forest,<b>owned</b>').rows[0].csvMetadata.note,'<b>owned</b>');
++});
++
++test('derived Spanish excerpt preserves exact identity, language and unspecified finish without relaxing deck size',()=>{
++  const source=read('helvault-derived-excerpt-spanish-printing.csv'),parsed=parseDeck(source);
++  const original=JSON.parse(read('scryfall-verification-5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac.json'));
++  assert.equal(parsed.schema,'Helvault-compatible CSV');assert.equal(parsed.rows[0].name,'Breeding Pool');
++  assert.equal(parsed.rows[0].scryfallId,'5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac');
++  assert.equal(parsed.rows[0].language,'es');assert.equal(parsed.rows[0].finish,'unspecified');
++  assert.equal(validateCommanderImport(parsed).valid,false);
++  const resolved=resolveDeck(parsed,[original]);assert.equal(resolved.rows[0].status,'resolved');assert.equal(resolved.rows[0].printingProvenance.kind,'supplied');
++  const synthetic=parseDeck(source.replace('Breeding Pool','Estanque reproductor'));
++  assert.equal(resolveDeck(synthetic,[original]).rows[0].status,'resolved');
++  assert.equal(resolveDeck(parsed,[{...original,oracle_id:uuid(1)}]).rows[0].status,'mismatch');
++});
++
++test('name/set keys, validation and matching honor known hints, disclose unknown hints and preserve exact failures',async()=>{
++  const calls=[];
++  const client=createScryfallClient({minimumGap:0,fetchImpl:async(url,options)=>{
++    calls.push({url,body:options.body});if(url.endsWith('/sets'))return sets();
++    if(options.method==='GET')return response({object:'list',data:[],total_cards:0,has_more:false});
++    const ids=JSON.parse(options.body).identifiers;
++    return collection(ids.filter(item=>item.name).map(item=>card(item.set?2:1,item.name,{set:item.set||'c16',oracle_id:uuid(1001)})),ids.filter(item=>!item.name));
++  }});
++  const parsed=parseDeck('Quantity,Name,Set\n97,Forest,rna\n1,Forest,000\n1,Forest,MYSTOR\n1,Forest,MBP');
++  const result=await client.resolve(parsed.identifiers),deck=resolveDeck(parsed,result.cards,[],result.outcomes);
++  assert.ok(deck.rows.every(row=>row.status==='resolved'));assert.equal(deck.rows[0].card.id,uuid(2));
++  assert.match(printingDescription(deck.rows[0].printingProvenance),/Assumed.*honored/);
++  for(const row of deck.rows.slice(1)){assert.match(printingDescription(row.printingProvenance),/Assumed.*unrecognized/);assert.match(row.issues.join(' '),/No mapping/);}
++  assert.notEqual(identifierKey({name:'Forest'}),identifierKey({name:'Forest',set:'rna'}));
++  assert.notEqual(identifierKey({name:'set:rna:Forest'}),identifierKey({name:'Forest',set:'rna'}));
++  assert.deepEqual(validateIdentifiers([{name:'Forest',set:'RNA'},{name:'Forest',set:'rna'}]),[{name:'Forest',set:'rna'}]);
++  assert.equal(calls.filter(call=>call.url.endsWith('/sets')).length,1);
++  assert.equal(resolveDeck(parseDeck('100 Forest (c16)'),[card(1)]).rows[0].status,'unresolved');
++  assert.equal((await client.resolve([{set:'000',collector_number:'1'}])).outcomes[0].status,'not-found');
++  const selected=resolveDeck(selectReferencePrinting(deck,'row-1',uuid(9)),[card(9,'Forest',{set:'c16',oracle_id:deck.rows[0].card.oracle_id})]);
++  assert.equal(selected.rows[0].printingProvenance.kind,'user-selected');assert.equal(selected.rows[0].set,'rna');
++});
++
++test('split/alias fallback retains recognized set constraints and does not accept another set',async()=>{
++  const calls=[],split=card(1,'Fire // Ice',{card_faces:[{name:'Fire'},{name:'Ice'}]});
++  const client=createScryfallClient({minimumGap:0,fetchImpl:async(url,options)=>{
++    if(url.endsWith('/sets'))return sets();calls.push({url,body:options.body});
++    if(options.method==='POST')return collection([],JSON.parse(options.body).identifiers);
++    return response({object:'list',data:[split],total_cards:1,has_more:false});
++  }});
++  const result=await client.resolve([{name:'Fire / Ice',set:'c16'}]);
++  assert.equal(result.outcomes[0].status,'not-found');
++  assert.ok(calls.filter(call=>call.body).every(call=>JSON.parse(call.body).identifiers.every(id=>id.set==='c16')));
++  assert.match(new URL(calls.at(-1).url).searchParams.get('q'),/set:c16/);
++});
++
++test('parser and API share collector validation, reject excessive metadata/records early',()=>{
++  for(const value of ['1☆','é','1*','C21-284','0001','1/2','1?','a'.repeat(33)]){
++    const accepted=validCollectorNumber(value),row=parseDeck(`100 Forest (rna) ${value}`).rows[0];
++    assert.equal(row.status==='pending',accepted,value);
++    if(accepted)assert.doesNotThrow(()=>validateIdentifiers([{set:'rna',collector_number:value}]));
++    else assert.throws(()=>validateIdentifiers([{set:'rna',collector_number:value}]));
++  }
++  const start=performance.now();
++  assert.throws(()=>parseDeck('100 Forest'+' [X]'.repeat(20000)),/8,000|64 metadata/);
++  assert.ok(performance.now()-start<1000);
++  assert.throws(()=>parseDeck('1 Forest\n'.repeat(501)),/500 entries/);
++  assert.throws(()=>parseDeck('Quantity,Name\n'+'1,Forest\n'.repeat(501)),/500 entries/);
++  assert.throws(()=>parseDeck('Quantity,Name,'+'Note,'.repeat(65)+'\n100,Forest'),/64 columns/);
++  assert.throws(()=>parseDeck('x'.repeat(200001)),/200,000/);
++});
++
++test('file size/type checks precede reading, with a separate post-decode character check',async()=>{
++  let reads=0;const text=async()=>{reads++;return '100 Forest';};
++  await assert.rejects(readImportFile({name:'huge.txt',size:800001,text}),/800,000/);
++  await assert.rejects(readImportFile({name:'deck.exe',size:1,text}),/txt or .csv/);assert.equal(reads,0);
++  assert.equal(await readImportFile({name:'deck.CSV',size:100,text}),'100 Forest');
++  await assert.rejects(readImportFile({name:'deck.txt',size:200001,text:async()=>'x'.repeat(200001)}),/200,000/);
++});
++
++for(const kind of ['seconds','date'])test(`Retry-After preserves a full two-hour wait (${kind}, simulated clock)`,async t=>{
++  let now=Date.parse('2026-10-18T12:00:00Z'),calls=0;t.mock.method(Date,'now',()=>now);
++  const client=createScryfallClient({minimumGap:0,fetchImpl:async()=>{calls++;return calls===1?new Response('',{status:429,headers:{'Retry-After':kind==='seconds'?'7200':new Date(now+7200000).toUTCString()}}):collection([card(1)]);}});
++  await assert.rejects(client.resolve([{id:uuid(1)}]),error=>error.retryAfter==='7200');
++  now+=3601000;await assert.rejects(client.resolve([{id:uuid(1)}]),error=>error.retryAfter==='3599');assert.equal(calls,1);
++  now+=3599000;assert.equal((await client.resolve([{id:uuid(1)}])).cards.length,1);assert.equal(calls,2);
++});
++
++test('total alias work and aggregate response cache bytes are bounded',async()=>{
++  let calls=0;const client=createScryfallClient({minimumGap:0,fetchImpl:async(url,options)=>{
++    calls++;return options.method==='POST'?collection([],JSON.parse(options.body).identifiers):response({object:'list',data:[],total_cards:0,has_more:false});
++  }});
++  await assert.rejects(client.resolve(Array.from({length:500},(_,i)=>({name:`Missing ${i}`}))),/32 provider operations/);assert.equal(calls,32);
++  let largeCalls=0;
++  const large=createScryfallClient({minimumGap:0,fetchImpl:async(url,options)=>{
++    largeCalls++;const [{id}]=JSON.parse(options.body).identifiers;
++    return response({object:'list',data:[{...card(1),id}],not_found:[],padding:'x'.repeat(4*1024*1024)});
++  }});
++  for(let i=1;i<=5;i++)await large.resolve([{id:uuid(i)}]);
++  await large.resolve([{id:uuid(1)}]);assert.equal(largeCalls,6,'old cached bytes were evicted');
++});
++
++test('optional alias/provider failure preserves resolved main printing and authorizes discovery with its original context',async t=>{
++  const leader=card(1,'Leader'),forest=card(2);
++  const server=await createDeckServer({minimumGap:0,fetchImpl:async(url,options)=>{
++    if(options.method==='POST'){
++      const ids=JSON.parse(options.body).identifiers;
++      return ids.some(id=>id.name==='Missing extra')?collection([],ids):collection([leader,forest]);
++    }
++    if(new URL(url).searchParams.get('q').includes('Missing extra'))return new Response('',{status:503});
++    return response({object:'list',data:[],total_cards:0,has_more:false});
++  }});
++  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));t.after(()=>new Promise(resolve=>server.close(resolve)));
++  const request=async(path,body)=>{const result=await fetch(`http://127.0.0.1:${server.address().port}${path}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await result.json();if(!result.ok)throw new Error(data.error);return data;};
++  const result=await resolveImport(parseDeck('1 Leader [Commander]\n99 Forest\nSideboard\n1 Missing extra'),request);
++  assert.equal(result.deck.counts.resolvedEntries,2);assert.equal(result.deck.rows[1].card.id,forest.id);
++  assert.equal(result.deck.rows[2].status,'unresolved');assert.match(result.deck.rows[2].issues.join(' '),/Optional extra.*503/);
++  const discovery=await request('/api/discover',{atlasRowId:'keyword-index-flying',contextToken:result.contextToken,commanderIds:[leader.id]});
++  assert.deepEqual(discovery.identity,['G']);
++});
++
++test('successful extra resolution cannot replace a main edition or its discovery context',async()=>{
++  const parsed=parseDeck('1 Leader [Commander]\n99 Forest\nSideboard\n1 Forest\n1 Forest (c16)'),leader=card(1,'Leader'),forest=card(2),extraForest=card(3,'Forest',{set:'c16',oracle_id:forest.oracle_id});
++  let calls=0;
++  const result=await resolveImport(parsed,async(path,{identifiers})=>{
++    calls++;
++    const cards=calls===1?[leader,forest]:[extraForest];
++    return {cards,notFound:[],contextToken:calls===1?'main-context':'extra-context',outcomes:identifiers.map(identifier=>({lookupKey:identifierKey(identifier),status:'matched',cardId:identifier.name==='Leader'?leader.id:calls===1?forest.id:extraForest.id}))};
++  });
++  assert.equal(calls,2);assert.equal(result.contextToken,'main-context');
++  assert.deepEqual(result.deck.rows.map(row=>row.card.id),[leader.id,forest.id,forest.id,extraForest.id]);
++  assert.equal(result.deck.counts.playableQuantity,100);assert.equal(result.deck.counts.excludedQuantity,2);
++});
+--- /dev/null
++++ after/scripts/verify-import-bounded-live.mjs
+@@ -0,0 +1,55 @@
++// User-initiated live Scryfall verification, separate from offline regressions.
++import fs from 'node:fs';
++import assert from 'node:assert/strict';
++import {parseDeck, resolveDeck, validateCommanderImport, commanderContext} from '../public/core.mjs';
++import {resolveImport} from '../public/import-resolution.mjs';
++const base=process.argv[2] || 'http://127.0.0.1:4175';
++if(!/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(base))throw new Error('Use a local verification server.');
++const diagnosticsOnly=process.argv.includes('--diagnostics-only');
++let report={checkedAt:new Date().toISOString(),scope:'Live provider through updated local API; native exports, derived excerpt and synthetic diagnostic inputs labeled separately',cases:[]};
++const output=new URL('../reports/import-validation/bounded-live.json',import.meta.url);
++if(diagnosticsOnly)report=JSON.parse(fs.readFileSync(output,'utf8'));
++const save=()=>fs.writeFileSync(output,JSON.stringify(report,null,2));
++const request=async(path,body)=>{
++  const response=await fetch(base+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
++  const data=await response.json();if(!response.ok)throw new Error(`${response.status}: ${data.error}; Retry-After=${response.headers.get('retry-after')}`);return data;
++};
++const fixtures=new URL('../tests/fixtures/imports/',import.meta.url);
++if(!diagnosticsOnly)for(const name of ['hakbal','veyran','detailed','obeka-a','obeka-b']){
++  const text=fs.readFileSync(new URL(name+'.txt',fixtures),'utf8');let parsed=parseDeck(text);
++  if(parsed.commanderSuggestions.length)parsed=parseDeck(text,{commanderRowIds:[parsed.commanderSuggestions[0].rowId]});
++  const result=await resolveImport(parsed,request),deck=result.deck;
++  const problems=deck.rows.filter(row=>row.status!=='resolved'||row.issues.length).map(row=>({name:row.name,status:row.status,issues:row.issues}));
++  report.cases.push({name,source:'Existing regression export',counts:deck.counts,problems,commanders:commanderContext(deck).rowIds.map(id=>deck.rows.find(row=>row.id===id).card.name)});save();
++  assert.deepEqual(problems,[]);assert.equal(validateCommanderImport(deck).valid,true);
++  console.log(`${name}: ${deck.counts.resolvedEntries} resolved deck entries, ${problems.length} problems`);
++}
++if(!diagnosticsOnly)for(const name of fs.readdirSync(new URL('uncommon/',fixtures)).filter(name=>name.endsWith('.csv')&&!name.startsWith('helvault'))){
++  const parsed=parseDeck(fs.readFileSync(new URL('uncommon/'+name,fixtures),'utf8')),validation=validateCommanderImport(parsed);
++  if(!validation.valid){assert.equal(name,'companion-cecily-othelm-jegantha.csv');report.cases.push({name,source:'Native TappedOut CSV',blockedBeforeProvider:true,issues:validation.issues});save();continue;}
++  const {deck,contextToken}=await resolveImport(parsed,request);
++  const problems=deck.rows.filter(row=>row.status!=='resolved'||row.issues.length).map(row=>({name:row.name,section:row.section,set:row.set,status:row.status,issues:row.issues}));
++  const record={name,source:'Native TappedOut CSV',counts:deck.counts,commanders:commanderContext(deck).rowIds.map(id=>deck.rows.find(row=>row.id===id).card.name),problems};
++  if(!deck.counts.unresolvedEntries){
++    const discovery=await request('/api/discover',{atlasRowId:'keyword-index-flying',contextToken,commanderIds:deck.rows.filter(row=>row.section==='Commander').map(row=>row.card.id)});
++    record.discoveryIdentity=discovery.identity;record.pairing=discovery.identityNote;
++  }
++  report.cases.push(record);save();console.log(`${name}: ${deck.counts.unresolvedEntries} unresolved deck entries; ${problems.length} warnings/problems`);
++}
++if(!diagnosticsOnly){
++const excerpt=parseDeck(fs.readFileSync(new URL('uncommon/helvault-derived-excerpt-spanish-printing.csv',fixtures),'utf8'));
++const spanish=await request('/api/resolve',{identifiers:excerpt.identifiers});
++const row=resolveDeck(excerpt,spanish.cards,spanish.notFound,spanish.outcomes).rows[0];
++assert.equal(row.status,'resolved');assert.equal(row.card.lang,'es');assert.equal(row.finish,'unspecified');
++report.cases.push({name:'Spanish Breeding Pool',source:'Derived one-row collection excerpt; resolver only, not a full deck',row});save();
++}
++const diagnostic='1 Godzilla, King of the Monsters [Commander]\n95 Forest (rna)\n1 Forest (000)\n1 Forest (MYSTOR)\n1 Forest (UN3)\n1 Forest (MBP)\nSideboard\n1 Unfindable bounded importer extra';
++let diagnosticResult;
++try { diagnosticResult=await resolveImport(parseDeck(diagnostic),request); }
++catch(error) { report.interruptions ||= []; report.interruptions.push({checkedAt:new Date().toISOString(),case:'Final synthetic diagnostic',error:error.message});save();throw error; }
++const {deck}=diagnosticResult;
++assert.equal(deck.counts.unresolvedEntries,0);assert.equal(deck.rows[0].card.name,'Zilortha, Strength Incarnate');assert.equal(deck.rows[1].card.set,'rna');
++assert.ok(deck.rows.slice(2,6).every(row=>row.printingProvenance.setHint.status==='unrecognized'));
++report.cases.push({name:'Alias, set hints and optional missing extra',source:'Synthetic diagnostic deck text resolved with live provider; no legality assertion',rows:deck.rows.map(row=>({name:row.name,canonicalName:row.card?.name,status:row.status,printing:row.card?.id,provenance:row.printingProvenance,issues:row.issues}))});save();
++report.completedAt=new Date().toISOString();save();
++console.log('Live checks complete; evidence saved to bounded-live.json');

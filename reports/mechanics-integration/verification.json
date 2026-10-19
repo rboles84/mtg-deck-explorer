@@ -1,0 +1,4402 @@
+{
+  "gate": "RESEARCH_PARTIAL",
+  "sourceHashes": {
+    "C:/dev/mtg-source-snapshots/2026-10-14/oracle-cards-20261014210202.jsonl.gz": "f20614a1be5f3e99c92a2dd8f7a39a78eadd7be06f4d5f95b4e2dfede82236a9",
+    "reports/mechanics-coverage/snapshots/20261017090158/oracle-cards.jsonl.gz": "f278ae30bc51657e8e7fcb897984fafe0df0c93ed511160fe60429bbb0e29a71",
+    "C:/dev/mtg-mechanics/docs/research/mechanic-record/records.jsonl": "1f368ea982fa5f1f184c05d029f6a0a8427c7ca1876a2ffa7747409e5ad0ea0e",
+    "C:/dev/mtg-mechanics/docs/research/mechanic-record/schema.json": "b4e0f703aa7b167b44caa0022fb5671549aaba7783b6ede17a18226f524a5bda",
+    "C:/dev/mtg-mechanics/docs/research/mechanic-record/MANIFEST": "5eddac23774d1405598b5b730e0ad22e4ac7746f5e0a85d9f1021d3f84522d49",
+    "reports/mechanics-coverage/metadata-validation.json": "690d89ce69ad07c8f66f4df25d82aa978ae2aa90353c7d36e8f514e6fb8e5461",
+    "reports/mechanics-coverage/coverage-matrix.json": "3fbd824cc5d26640e5e37c3f77cd18a0288c59509e384567037c5ba99bebcbb2",
+    "reports/mechanics-coverage/snapshots/20261017090158/manifest.json": "a959e796d60be47ddb04d53a7da138b2a0f4bdc824875c5425deec538698715a",
+    "reports/mechanics-integration/decks/manifest.json": "5e5750da1f21835ca763e26f09ee897fd53264241de4b1c5621831c950c3ea08"
+  },
+  "research": [
+    {
+      "id": "crew",
+      "recordFound": true,
+      "membership": {
+        "value": {
+          "basis": "scryfall-keywords",
+          "main_cards": 180,
+          "keyword_terms": [
+            "Crew"
+          ],
+          "via_variant_only": 0,
+          "text_rule": null
+        },
+        "sources": [
+          "COMPENDIUM-IDENTITIES",
+          "SCRYFALL-ORACLE-20261014"
+        ],
+        "state": "Verified",
+        "rule": "R-MEMBER-KW"
+      },
+      "example": {
+        "card_name": "Consulate Dreadnought",
+        "oracle_id": "bc822c9a-633f-4830-9cb3-9af6a80622e4",
+        "first_printing": {
+          "date": "2017-01-20",
+          "set": "aer",
+          "set_name": "Aether Revolt"
+        },
+        "oracle_text_length": 137,
+        "oracle_text": "Crew 6 (Tap any number of creatures you control with total power 6 or more: This Vehicle becomes an artifact creature until end of turn.)"
+      },
+      "exampleState": "Verified",
+      "exampleOracleTextMatchesOct14": true,
+      "fieldsMatchOct14To17": true
+    },
+    {
+      "id": "station",
+      "recordFound": true,
+      "membership": {
+        "value": {
+          "basis": "scryfall-keywords",
+          "main_cards": 32,
+          "keyword_terms": [
+            "Station"
+          ],
+          "via_variant_only": 0,
+          "text_rule": null
+        },
+        "sources": [
+          "COMPENDIUM-CURATION",
+          "COMPENDIUM-IDENTITIES",
+          "SCRYFALL-ORACLE-20261014"
+        ],
+        "state": "Verified",
+        "rule": "R-MEMBER-KW"
+      },
+      "example": {
+        "card_name": "Galvanizing Sawship",
+        "oracle_id": "dfe8f77a-cc26-438b-92ae-2ca7a91f813b",
+        "first_printing": {
+          "date": "2025-08-01",
+          "set": "eoe",
+          "set_name": "Edge of Eternities"
+        },
+        "oracle_text_length": 181,
+        "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 3+.)\n3+ | Flying, haste"
+      },
+      "exampleState": "Verified",
+      "exampleOracleTextMatchesOct14": true,
+      "fieldsMatchOct14To17": true
+    },
+    {
+      "id": "mill",
+      "recordFound": true,
+      "membership": {
+        "value": {
+          "basis": "scryfall-keywords",
+          "main_cards": 581,
+          "keyword_terms": [
+            "Mill"
+          ],
+          "via_variant_only": 0,
+          "text_rule": null
+        },
+        "sources": [
+          "COMPENDIUM-IDENTITIES",
+          "SCRYFALL-ORACLE-20261014"
+        ],
+        "state": "Verified",
+        "rule": "R-MEMBER-KW"
+      },
+      "example": {
+        "card_name": "Greater Mossdog",
+        "oracle_id": "aedc3e69-3163-4b8d-97b2-0ad92f28a6dc",
+        "first_printing": {
+          "date": "2005-10-07",
+          "set": "rav",
+          "set_name": "Ravnica: City of Guilds"
+        },
+        "oracle_text_length": 132,
+        "oracle_text": "Dredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)"
+      },
+      "exampleState": "Verified",
+      "exampleOracleTextMatchesOct14": true,
+      "fieldsMatchOct14To17": true
+    },
+    {
+      "id": "equip",
+      "recordFound": false
+    },
+    {
+      "id": "flying",
+      "recordFound": true,
+      "membership": {
+        "value": {
+          "basis": "scryfall-keywords",
+          "main_cards": 3095,
+          "keyword_terms": [
+            "Flying"
+          ],
+          "via_variant_only": 0,
+          "text_rule": null
+        },
+        "sources": [
+          "COMPENDIUM-IDENTITIES",
+          "SCRYFALL-ORACLE-20261014"
+        ],
+        "state": "Verified",
+        "rule": "R-MEMBER-KW"
+      },
+      "example": {
+        "card_name": "Air Elemental",
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "first_printing": {
+          "date": "1993-08-05",
+          "set": "lea",
+          "set_name": "Limited Edition Alpha"
+        },
+        "oracle_text_length": 6,
+        "oracle_text": "Flying"
+      },
+      "exampleState": "Verified",
+      "exampleOracleTextMatchesOct14": true,
+      "fieldsMatchOct14To17": true
+    },
+    {
+      "id": "haste",
+      "recordFound": true,
+      "membership": {
+        "value": {
+          "basis": "scryfall-keywords",
+          "main_cards": 631,
+          "keyword_terms": [
+            "Haste"
+          ],
+          "via_variant_only": 0,
+          "text_rule": null
+        },
+        "sources": [
+          "COMPENDIUM-IDENTITIES",
+          "SCRYFALL-ORACLE-20261014"
+        ],
+        "state": "Verified",
+        "rule": "R-MEMBER-KW"
+      },
+      "example": {
+        "card_name": "Talruum Minotaur",
+        "oracle_id": "c5661500-c48f-4f6d-bbe7-c8bd7118d862",
+        "first_printing": {
+          "date": "1996-10-08",
+          "set": "mir",
+          "set_name": "Mirage"
+        },
+        "oracle_text_length": 5,
+        "oracle_text": "Haste"
+      },
+      "exampleState": "Verified",
+      "exampleOracleTextMatchesOct14": true,
+      "fieldsMatchOct14To17": true
+    },
+    {
+      "id": "daybound-and-nightbound",
+      "recordFound": true,
+      "membership": {
+        "value": {
+          "basis": "scryfall-keywords",
+          "main_cards": 36,
+          "keyword_terms": [
+            "Daybound",
+            "Nightbound"
+          ],
+          "via_variant_only": 36,
+          "text_rule": null
+        },
+        "sources": [
+          "COMPENDIUM-CURATION",
+          "COMPENDIUM-IDENTITIES",
+          "SCRYFALL-ORACLE-20261014"
+        ],
+        "state": "Supported but qualified",
+        "rule": "R-MEMBER-KW",
+        "qualifier": "36 members are reached only through a `VARIANT_OF` name."
+      },
+      "example": {
+        "card_name": "Tavern Ruffian // Tavern Smasher",
+        "oracle_id": "73a3b9a1-37a0-469a-9557-8c118a1ee78f",
+        "first_printing": {
+          "date": "2021-09-24",
+          "set": "mid",
+          "set_name": "Innistrad: Midnight Hunt"
+        },
+        "oracle_text_length": 189,
+        "oracle_text": "Daybound (If a player casts no spells during their own turn, it becomes night next turn.)\nNightbound (If a player casts at least two spells during their own turn, it becomes day next turn.)"
+      },
+      "exampleState": "Supported but qualified",
+      "exampleOracleTextMatchesOct14": true,
+      "fieldsMatchOct14To17": true
+    }
+  ],
+  "decks": [
+    {
+      "name": "cosmic",
+      "counts": {
+        "entries": 84,
+        "quantity": 100,
+        "playableEntries": 84,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "resolvedEntries": 84,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "distinctPrintings": 84,
+        "flavorAbsentEntries": 27,
+        "exactPassages": 58
+      },
+      "coverage": {
+        "entries": 84,
+        "copies": 100,
+        "resolvedEntries": 84,
+        "resolvedCopies": 100,
+        "reportedEntries": 84,
+        "reportedCopies": 100,
+        "missingEntries": 0,
+        "malformedEntries": 0,
+        "emptyEntries": 45,
+        "missingOracleEntries": 0
+      },
+      "commander": [
+        {
+          "name": "Cosmic Spider-Man",
+          "id": "f82f4013-7308-4917-9042-19a5909f2134"
+        }
+      ],
+      "flavorPassages": 58,
+      "mechanics": [
+        {
+          "label": "Buy Information",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-8",
+              "lineNumber": 8,
+              "printingId": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+              "quantity": 1,
+              "name": "Black Market Connections",
+              "occurrences": [
+                {
+                  "spelling": "Buy Information",
+                  "index": 3
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Camouflage",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-29",
+              "lineNumber": 29,
+              "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+              "quantity": 1,
+              "name": "Miles Morales // Ultimate Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Camouflage",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Changeling",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-31",
+              "lineNumber": 31,
+              "printingId": "33c2e889-d2e1-4197-ba97-81a2b8512746",
+              "quantity": 1,
+              "name": "Morophon, the Boundless",
+              "occurrences": [
+                {
+                  "spelling": "Changeling",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-46",
+              "lineNumber": 46,
+              "printingId": "52733829-27b7-40ec-a897-cabab35b3729",
+              "quantity": 1,
+              "name": "Realmwalker",
+              "occurrences": [
+                {
+                  "spelling": "Changeling",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Convoke",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-81",
+              "lineNumber": 81,
+              "printingId": "3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b",
+              "quantity": 1,
+              "name": "Web of Life and Destiny",
+              "occurrences": [
+                {
+                  "spelling": "Convoke",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Deathtouch",
+          "distinctCards": 3,
+          "copies": 3,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-18",
+              "lineNumber": 18,
+              "printingId": "46b6cc5d-7a37-4e8b-a1a5-9a573056610c",
+              "quantity": 1,
+              "name": "Gwenom, Remorseless",
+              "occurrences": [
+                {
+                  "spelling": "Deathtouch",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-44",
+              "lineNumber": 44,
+              "printingId": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+              "quantity": 1,
+              "name": "Radioactive Spider",
+              "occurrences": [
+                {
+                  "spelling": "Deathtouch",
+                  "index": 2
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-52",
+              "lineNumber": 52,
+              "printingId": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+              "quantity": 1,
+              "name": "Shelob, Child of Ungoliant",
+              "occurrences": [
+                {
+                  "spelling": "Deathtouch",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Double",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-29",
+              "lineNumber": 29,
+              "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+              "quantity": 1,
+              "name": "Miles Morales // Ultimate Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Double",
+                  "index": 4
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Double strike",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-62",
+              "lineNumber": 62,
+              "printingId": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+              "quantity": 1,
+              "name": "Spider-Man 2099",
+              "occurrences": [
+                {
+                  "spelling": "Double strike",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Equip",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-69",
+              "lineNumber": 69,
+              "printingId": "436527ec-5af4-4b6d-a5a0-d21fc466a625",
+              "quantity": 1,
+              "name": "Spider-Suit",
+              "occurrences": [
+                {
+                  "spelling": "Equip",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-82",
+              "lineNumber": 82,
+              "printingId": "a0ca1108-6d99-4dc2-96ab-7728d65b0c06",
+              "quantity": 1,
+              "name": "Web-Shooters",
+              "occurrences": [
+                {
+                  "spelling": "Equip",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Fateful Bite",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-44",
+              "lineNumber": 44,
+              "printingId": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+              "quantity": 1,
+              "name": "Radioactive Spider",
+              "occurrences": [
+                {
+                  "spelling": "Fateful Bite",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Fight",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-23",
+              "lineNumber": 23,
+              "printingId": "cec575f6-43c9-41c6-a996-bb806bf82185",
+              "quantity": 1,
+              "name": "Kapow!",
+              "occurrences": [
+                {
+                  "spelling": "Fight",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "First strike",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-11",
+              "lineNumber": 11,
+              "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+              "quantity": 1,
+              "name": "Cosmic Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "First strike",
+                  "index": 2
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-29",
+              "lineNumber": 29,
+              "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+              "quantity": 1,
+              "name": "Miles Morales // Ultimate Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "First strike",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Flash",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-57",
+              "lineNumber": 57,
+              "printingId": "818a5c98-8740-43b1-a42a-6d2382138df8",
+              "quantity": 1,
+              "name": "Spectacular Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Flash",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Flying",
+          "distinctCards": 3,
+          "copies": 3,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-11",
+              "lineNumber": 11,
+              "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+              "quantity": 1,
+              "name": "Cosmic Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+              "quantity": 1,
+              "name": "Gwen Stacy // Ghost-Spider",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-72",
+              "lineNumber": 72,
+              "printingId": "bc9b2a76-3cce-4fd0-a4ef-932747cb11b2",
+              "quantity": 1,
+              "name": "Spider-Woman, Stunning Savior",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Food",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-52",
+              "lineNumber": 52,
+              "printingId": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+              "quantity": 1,
+              "name": "Shelob, Child of Ungoliant",
+              "occurrences": [
+                {
+                  "spelling": "Food",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "From the Future",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-62",
+              "lineNumber": 62,
+              "printingId": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+              "quantity": 1,
+              "name": "Spider-Man 2099",
+              "occurrences": [
+                {
+                  "spelling": "From the Future",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Haste",
+          "distinctCards": 3,
+          "copies": 3,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-11",
+              "lineNumber": 11,
+              "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+              "quantity": 1,
+              "name": "Cosmic Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Haste",
+                  "index": 3
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+              "quantity": 1,
+              "name": "Gwen Stacy // Ghost-Spider",
+              "occurrences": [
+                {
+                  "spelling": "Haste",
+                  "index": 3
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-29",
+              "lineNumber": 29,
+              "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+              "quantity": 1,
+              "name": "Miles Morales // Ultimate Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Haste",
+                  "index": 3
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Hire a Mercenary",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-8",
+              "lineNumber": 8,
+              "printingId": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+              "quantity": 1,
+              "name": "Black Market Connections",
+              "occurrences": [
+                {
+                  "spelling": "Hire a Mercenary",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Lifelink",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-11",
+              "lineNumber": 11,
+              "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+              "quantity": 1,
+              "name": "Cosmic Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Lifelink",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-18",
+              "lineNumber": 18,
+              "printingId": "46b6cc5d-7a37-4e8b-a1a5-9a573056610c",
+              "quantity": 1,
+              "name": "Gwenom, Remorseless",
+              "occurrences": [
+                {
+                  "spelling": "Lifelink",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Mayhem",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-38",
+              "lineNumber": 38,
+              "printingId": "1e609d6e-9e37-45d2-87de-8c76675f7cec",
+              "quantity": 1,
+              "name": "Oscorp Industries",
+              "occurrences": [
+                {
+                  "spelling": "Mayhem",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Menace",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-64",
+              "lineNumber": 64,
+              "printingId": "bc64366c-2691-48cd-bb4b-a4b088c6f16b",
+              "quantity": 1,
+              "name": "Spider-Man Noir",
+              "occurrences": [
+                {
+                  "spelling": "Menace",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Mill",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-26",
+              "lineNumber": 26,
+              "printingId": "a16ca3fc-3cdf-4333-93e0-524afafe367b",
+              "quantity": 1,
+              "name": "Madame Web, Clairvoyant",
+              "occurrences": [
+                {
+                  "spelling": "Mill",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Mind Swap",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-76",
+              "lineNumber": 76,
+              "printingId": "ad4adc3e-ec41-4406-8ff2-59ba8067cf4e",
+              "quantity": 1,
+              "name": "Superior Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Mind Swap",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Pavitr's Sevā",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-63",
+              "lineNumber": 63,
+              "printingId": "65b8af30-559b-43a9-8526-62c28c378339",
+              "quantity": 1,
+              "name": "Spider-Man India",
+              "occurrences": [
+                {
+                  "spelling": "Pavitr's Sevā",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Reach",
+          "distinctCards": 6,
+          "copies": 6,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-3",
+              "lineNumber": 3,
+              "printingId": "95a87b4e-f0ea-457c-9517-4acf313c4ca6",
+              "quantity": 1,
+              "name": "Arasta of the Endless Web",
+              "occurrences": [
+                {
+                  "spelling": "Reach",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+              "quantity": 1,
+              "name": "Peter Parker // Amazing Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Reach",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-44",
+              "lineNumber": 44,
+              "printingId": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+              "quantity": 1,
+              "name": "Radioactive Spider",
+              "occurrences": [
+                {
+                  "spelling": "Reach",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-59",
+              "lineNumber": 59,
+              "printingId": "99223677-b8a5-48f1-8009-e8475eada7db",
+              "quantity": 1,
+              "name": "Spider Manifestation",
+              "occurrences": [
+                {
+                  "spelling": "Reach",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-60",
+              "lineNumber": 60,
+              "printingId": "24df824a-c1d6-4f09-b866-313b31fec5fb",
+              "quantity": 1,
+              "name": "Spider-Bot",
+              "occurrences": [
+                {
+                  "spelling": "Reach",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-61",
+              "lineNumber": 61,
+              "printingId": "3a9a0ec2-6f57-4218-a307-6e8d785a1693",
+              "quantity": 1,
+              "name": "Spider-Gwen, Free Spirit",
+              "occurrences": [
+                {
+                  "spelling": "Reach",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Riot",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-67",
+              "lineNumber": 67,
+              "printingId": "0bd41879-fcd4-4211-9b98-47e7cdba5399",
+              "quantity": 1,
+              "name": "Spider-Punk",
+              "occurrences": [
+                {
+                  "spelling": "Riot",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Sell Contraband",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-8",
+              "lineNumber": 8,
+              "printingId": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+              "quantity": 1,
+              "name": "Black Market Connections",
+              "occurrences": [
+                {
+                  "spelling": "Sell Contraband",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Sensational Save",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-51",
+              "lineNumber": 51,
+              "printingId": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+              "quantity": 1,
+              "name": "Scarlet Spider, Ben Reilly",
+              "occurrences": [
+                {
+                  "spelling": "Sensational Save",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Surveil",
+          "distinctCards": 5,
+          "copies": 5,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-35",
+              "lineNumber": 35,
+              "printingId": "4329f94a-9110-4f07-b4a6-f1ccae97ccc9",
+              "quantity": 1,
+              "name": "Ominous Asylum",
+              "occurrences": [
+                {
+                  "spelling": "Surveil",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-50",
+              "lineNumber": 50,
+              "printingId": "855f59a5-17a8-4aca-8a4d-f98111eba14c",
+              "quantity": 1,
+              "name": "Savage Mansion",
+              "occurrences": [
+                {
+                  "spelling": "Surveil",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-54",
+              "lineNumber": 54,
+              "printingId": "23190d7e-5165-49bd-b307-bf81877d228d",
+              "quantity": 1,
+              "name": "Sinister Hideout",
+              "occurrences": [
+                {
+                  "spelling": "Surveil",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-64",
+              "lineNumber": 64,
+              "printingId": "bc64366c-2691-48cd-bb4b-a4b088c6f16b",
+              "quantity": 1,
+              "name": "Spider-Man Noir",
+              "occurrences": [
+                {
+                  "spelling": "Surveil",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-74",
+              "lineNumber": 74,
+              "printingId": "467df77a-a99c-4cfd-9af4-502eaa2eb2e3",
+              "quantity": 1,
+              "name": "Suburban Sanctuary",
+              "occurrences": [
+                {
+                  "spelling": "Surveil",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Trample",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-11",
+              "lineNumber": 11,
+              "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+              "quantity": 1,
+              "name": "Cosmic Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Trample",
+                  "index": 4
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-51",
+              "lineNumber": 51,
+              "printingId": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+              "quantity": 1,
+              "name": "Scarlet Spider, Ben Reilly",
+              "occurrences": [
+                {
+                  "spelling": "Trample",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Transform",
+          "distinctCards": 3,
+          "copies": 3,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+              "quantity": 1,
+              "name": "Gwen Stacy // Ghost-Spider",
+              "occurrences": [
+                {
+                  "spelling": "Transform",
+                  "index": 2
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-29",
+              "lineNumber": 29,
+              "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+              "quantity": 1,
+              "name": "Miles Morales // Ultimate Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Transform",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+              "quantity": 1,
+              "name": "Peter Parker // Amazing Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Transform",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Treasure",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-8",
+              "lineNumber": 8,
+              "printingId": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+              "quantity": 1,
+              "name": "Black Market Connections",
+              "occurrences": [
+                {
+                  "spelling": "Treasure",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Venom Blast",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-72",
+              "lineNumber": 72,
+              "printingId": "bc9b2a76-3cce-4fd0-a4ef-932747cb11b2",
+              "quantity": 1,
+              "name": "Spider-Woman, Stunning Savior",
+              "occurrences": [
+                {
+                  "spelling": "Venom Blast",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Vigilance",
+          "distinctCards": 5,
+          "copies": 5,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+              "quantity": 1,
+              "name": "Gwen Stacy // Ghost-Spider",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-21",
+              "lineNumber": 21,
+              "printingId": "8da5f34e-7f40-406a-88d2-bb1e3ed25200",
+              "quantity": 1,
+              "name": "Iron Spider, Stark Upgrade",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+              "quantity": 1,
+              "name": "Peter Parker // Amazing Spider-Man",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-56",
+              "lineNumber": 56,
+              "printingId": "c47c1d83-e76d-4939-9ed6-05a9e709dea1",
+              "quantity": 1,
+              "name": "SP//dr, Piloted by Peni",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-62",
+              "lineNumber": 62,
+              "printingId": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+              "quantity": 1,
+              "name": "Spider-Man 2099",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Ward",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-52",
+              "lineNumber": 52,
+              "printingId": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+              "quantity": 1,
+              "name": "Shelob, Child of Ungoliant",
+              "occurrences": [
+                {
+                  "spelling": "Ward",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Web-slinging",
+          "distinctCards": 7,
+          "copies": 7,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-51",
+              "lineNumber": 51,
+              "printingId": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+              "quantity": 1,
+              "name": "Scarlet Spider, Ben Reilly",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-53",
+              "lineNumber": 53,
+              "printingId": "588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1",
+              "quantity": 1,
+              "name": "Silk, Web Weaver",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-63",
+              "lineNumber": 63,
+              "printingId": "65b8af30-559b-43a9-8526-62c28c378339",
+              "quantity": 1,
+              "name": "Spider-Man India",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-65",
+              "lineNumber": 65,
+              "printingId": "e19929bc-cbe1-4970-952d-8e9d0193ddce",
+              "quantity": 1,
+              "name": "Spider-Man, Brooklyn Visionary",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-66",
+              "lineNumber": 66,
+              "printingId": "897418bc-df8c-4c97-b6bf-7c9133a8a577",
+              "quantity": 1,
+              "name": "Spider-Man, Web-Slinger",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-68",
+              "lineNumber": 68,
+              "printingId": "4499a25b-f4a5-4f2c-9ebd-bc68c7840b39",
+              "quantity": 1,
+              "name": "Spider-Sense",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-70",
+              "lineNumber": 70,
+              "printingId": "6beb4548-1fab-4b9e-bf24-f7b9aadecc87",
+              "quantity": 1,
+              "name": "Spider-UK",
+              "occurrences": [
+                {
+                  "spelling": "Web-slinging",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        }
+      ],
+      "oct14": [
+        {
+          "name": "Arachnogenesis",
+          "printingId": "f5f18431-64c0-4ae5-bdc1-1e953313f086",
+          "oracleId": "b655bee5-52d3-467e-b16c-cfc2edf2b1a1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Araña, Heart of the Spider",
+          "printingId": "b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8",
+          "oracleId": "a16037f2-a0f6-465d-8d6e-cec34b4a6320",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Arasta of the Endless Web",
+          "printingId": "95a87b4e-f0ea-457c-9517-4acf313c4ca6",
+          "oracleId": "695eea46-1535-48c5-bbb6-0b8379e77bfc",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Arcane Signet",
+          "printingId": "1bbc3ce9-f3df-41b4-b238-37319546c595",
+          "oracleId": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Aunt May",
+          "printingId": "252c2564-c39d-476d-b7d0-43aee625fcaa",
+          "oracleId": "bdb769b5-c861-4ec1-ad6b-e2a56ca05fd1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Beast Within",
+          "printingId": "400b43aa-c1d2-4435-b863-061f43889422",
+          "oracleId": "7735eeba-693b-47e2-bd51-414379cf1016",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Behold the Sinister Six!",
+          "printingId": "1919bfec-1906-4178-ad32-d4589842e563",
+          "oracleId": "6fa27f8a-bade-460f-853a-abc1c05c946a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Black Market Connections",
+          "printingId": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+          "oracleId": "d2664f28-49e1-46f8-a863-b217e961a57c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Chromatic Lantern",
+          "printingId": "693da13a-49af-4f7e-b247-36b454fb31a0",
+          "oracleId": "539f5396-d99a-417d-a84c-dff7930b5900",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Coat of Arms",
+          "printingId": "aef2eb36-f20d-4d90-a556-de2ba09b2635",
+          "oracleId": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cosmic Spider-Man",
+          "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+          "oracleId": "0334a2f8-a74a-44c9-ba64-d9b7fabe160c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cultivate",
+          "printingId": "e60deb92-f7dd-4f4e-9036-e47dd586f985",
+          "oracleId": "8b755881-a72d-4e21-a369-d2924eb4585a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Farseek",
+          "printingId": "c1aac0f5-1d01-4673-b8d3-878d9a1d423c",
+          "oracleId": "495e52e6-4c2b-4574-9474-eadbdcc8b4ac",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Fellwar Stone",
+          "printingId": "1e24e2bc-b239-4f9a-85c0-5f272f58ed43",
+          "oracleId": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Forest",
+          "printingId": "c9d637ac-e0d3-4c62-9f00-08270f3c1e91",
+          "oracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Frontier Bivouac",
+          "printingId": "48810b27-0646-4ff9-9d4d-c6d09b2e0267",
+          "oracleId": "e4cf6c2f-0f1e-4980-9ef9-e4eabcae42a9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gwen Stacy // Ghost-Spider",
+          "printingId": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+          "oracleId": "5f143d87-35fb-40e3-94ae-f85cfff9adb5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gwenom, Remorseless",
+          "printingId": "46b6cc5d-7a37-4e8b-a1a5-9a573056610c",
+          "oracleId": "c48cf135-b280-4e9f-a9d9-225104870741",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Hashep Oasis",
+          "printingId": "1e8afbcf-c5a6-428c-8d91-a309821362b3",
+          "oracleId": "eab70fff-6a9f-4f9f-89a2-b6910c199e46",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Impostor Syndrome",
+          "printingId": "08da9f92-0e25-4f39-aaa4-d8974af81a41",
+          "oracleId": "7be47440-b627-411e-a28f-d5a92e5e2fb7",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Iron Spider, Stark Upgrade",
+          "printingId": "8da5f34e-7f40-406a-88d2-bb1e3ed25200",
+          "oracleId": "e123fd7d-ace9-48a4-9510-eedcc837d8e8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Island",
+          "printingId": "02f76514-9e0d-4d74-a224-15a2d7b44ae1",
+          "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Kapow!",
+          "printingId": "cec575f6-43c9-41c6-a996-bb806bf82185",
+          "oracleId": "d6eabbff-cc0c-4000-8feb-4826e1b6bc66",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Kindred Discovery",
+          "printingId": "19bdedb2-768b-4adf-8193-917a10c8f729",
+          "oracleId": "005ee549-1bf5-478f-bc3f-3e791bd7eecf",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Kindred Dominance",
+          "printingId": "f6cd7c08-f5d4-4bdc-a254-809d900b0fc3",
+          "oracleId": "ccaa44f2-96be-44e2-884f-c31baa3908d5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Madame Web, Clairvoyant",
+          "printingId": "a16ca3fc-3cdf-4333-93e0-524afafe367b",
+          "oracleId": "b1e0841d-b004-40f9-a644-aecb422f6ad5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mary Jane Watson",
+          "printingId": "178345f7-8ccd-4e47-80f4-5bd31bab6655",
+          "oracleId": "6d44c87b-8945-4c39-b034-7690cf483992",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Maskwood Nexus",
+          "printingId": "c6f2c543-9b01-4760-966a-f0609c24f53e",
+          "oracleId": "9b2cdbed-c733-409b-b0e4-2c8960c25111",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Miles Morales // Ultimate Spider-Man",
+          "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+          "oracleId": "be48c721-bdc6-4f2c-96d6-82d934b31615",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mirrodin's Core",
+          "printingId": "20dafceb-2cc4-437a-9500-edfacbef4d3d",
+          "oracleId": "ea53adbe-3f9a-4847-87c7-723ac2789918",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Morophon, the Boundless",
+          "printingId": "33c2e889-d2e1-4197-ba97-81a2b8512746",
+          "oracleId": "bf418a2f-e639-4e52-9cad-5a0713a1829b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mountain",
+          "printingId": "f7752159-06bd-4f6c-b3d2-c4c7616acfbb",
+          "oracleId": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mystic Monastery",
+          "printingId": "bc23343a-3a01-4975-8430-17bf15fa639d",
+          "oracleId": "834b8f71-9a45-42ae-9e99-e749fa6fb45e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Nomad Outpost",
+          "printingId": "790d5244-5042-4b84-b16d-be0f87d11fad",
+          "oracleId": "4619de7e-3d6e-4c6b-8e6e-e24db324839d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Ominous Asylum",
+          "printingId": "4329f94a-9110-4f07-b4a6-f1ccae97ccc9",
+          "oracleId": "676141c3-a433-4aba-86fb-729628f96dfa",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Opulent Palace",
+          "printingId": "f0001153-dbcb-44e5-99be-2c186c9b10b0",
+          "oracleId": "f9e7e855-1e3b-42d3-91b0-64ba8b5b8982",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Origin of Spider-Man",
+          "printingId": "a10a7da7-d9cb-495a-9c9f-205d355c390d",
+          "oracleId": "7fbe9056-190f-40a1-bee9-59ebd6f981f5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Oscorp Industries",
+          "printingId": "1e609d6e-9e37-45d2-87de-8c76675f7cec",
+          "oracleId": "f432eb6a-f1bf-4ce7-b915-1488dccb4bb9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Patchwork Banner",
+          "printingId": "537ea7e7-e8e8-4736-bdd9-1085f1a7c259",
+          "oracleId": "4fb00dbe-1f82-4ba6-b18c-97e816d10d3a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Peter Parker // Amazing Spider-Man",
+          "printingId": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+          "oracleId": "f1b7488c-c675-42e9-818a-24a50347ec2c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Peter Parker's Camera",
+          "printingId": "47875dff-c046-4cb0-b1e3-f926cbe25b59",
+          "oracleId": "10777360-c046-43e3-ab44-9d0b926fbbf8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Plains",
+          "printingId": "5f029c91-f20b-4aa5-a7d9-dd6ddef1c877",
+          "oracleId": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Pongify",
+          "printingId": "4131fa63-5afc-4b63-a4b4-f47b4bced87f",
+          "oracleId": "05849bd6-8f38-4031-be2b-e2aa03beb8cc",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Radioactive Spider",
+          "printingId": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+          "oracleId": "f15bd5c0-99ff-42c6-8eed-48de6df81b61",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Raise the Palisade",
+          "printingId": "ce9347e8-962f-4fc1-808f-b59ac751de13",
+          "oracleId": "f55a3781-fe33-4301-9bb5-6a54b9c13c4f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Realmwalker",
+          "printingId": "52733829-27b7-40ec-a897-cabab35b3729",
+          "oracleId": "b81eaa2f-0554-41c6-bdf6-d1cb73b8f56f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Rent Is Due",
+          "printingId": "b3f8d221-081f-49f5-a501-07e5eb21a840",
+          "oracleId": "3fe1530d-bcf2-440b-a905-5a2216daa7eb",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Romantic Rendezvous",
+          "printingId": "38120361-153f-414e-8a45-f86bb2e35a17",
+          "oracleId": "8ca585b5-25c4-41cc-a0b9-dc66ae803d04",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sandsteppe Citadel",
+          "printingId": "e7482def-e87e-4a7f-9c18-7859483b2a66",
+          "oracleId": "544dbabd-cbfc-40da-a5ba-2fea9cddb453",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Savage Mansion",
+          "printingId": "855f59a5-17a8-4aca-8a4d-f98111eba14c",
+          "oracleId": "1af15c1d-a41c-44cc-9614-d72694dd26e8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Scarlet Spider, Ben Reilly",
+          "printingId": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+          "oracleId": "13ab2f3f-f65e-42b5-b743-39b30a4c4751",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Shelob, Child of Ungoliant",
+          "printingId": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+          "oracleId": "8372115d-c963-4a41-8759-72f7f6a8935a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Silk, Web Weaver",
+          "printingId": "588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1",
+          "oracleId": "50477dc8-9a2a-41eb-984d-c9e1e78e08a2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sinister Hideout",
+          "printingId": "23190d7e-5165-49bd-b307-bf81877d228d",
+          "oracleId": "80f08b47-a237-4efd-8d86-dfe35a816b0e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sol Ring",
+          "printingId": "5bef0790-aa1b-4144-8391-338e59e86115",
+          "oracleId": "6ad8011d-3471-4369-9d68-b264cc027487",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "SP//dr, Piloted by Peni",
+          "printingId": "c47c1d83-e76d-4939-9ed6-05a9e709dea1",
+          "oracleId": "722ab6e4-a2e0-4aaa-a050-7b6436e22b40",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spectacular Spider-Man",
+          "printingId": "818a5c98-8740-43b1-a42a-6d2382138df8",
+          "oracleId": "eed5e0cc-8f88-4779-bf10-6a823c72df7f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spectacular Tactics",
+          "printingId": "032cc89a-9824-437d-b7fb-02a7901a8299",
+          "oracleId": "15948fdf-3f9e-4eed-b85b-c5a554ff0571",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider Manifestation",
+          "printingId": "99223677-b8a5-48f1-8009-e8475eada7db",
+          "oracleId": "8281f2b9-e81b-48da-812a-8713b2adf8ab",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Bot",
+          "printingId": "24df824a-c1d6-4f09-b866-313b31fec5fb",
+          "oracleId": "e4bb33b2-adde-4176-9274-7598b559aa6a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Gwen, Free Spirit",
+          "printingId": "3a9a0ec2-6f57-4218-a307-6e8d785a1693",
+          "oracleId": "2648559d-1d96-47d2-a769-cfa2cbca2be5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man 2099",
+          "printingId": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+          "oracleId": "19845456-3d96-48a4-89fa-9b8e583774c9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man India",
+          "printingId": "65b8af30-559b-43a9-8526-62c28c378339",
+          "oracleId": "8933297c-62f1-4df9-91b8-2d3481db77e5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man Noir",
+          "printingId": "bc64366c-2691-48cd-bb4b-a4b088c6f16b",
+          "oracleId": "2efd6494-c5e1-41de-bc6e-8490ff046cd1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man, Brooklyn Visionary",
+          "printingId": "e19929bc-cbe1-4970-952d-8e9d0193ddce",
+          "oracleId": "2ca85872-9436-4515-af50-c13e59605627",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man, Web-Slinger",
+          "printingId": "897418bc-df8c-4c97-b6bf-7c9133a8a577",
+          "oracleId": "505231d8-714f-4c5b-a635-d1662bd18a78",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Punk",
+          "printingId": "0bd41879-fcd4-4211-9b98-47e7cdba5399",
+          "oracleId": "03bf7a90-78c1-4e83-8553-e22d85e49876",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Sense",
+          "printingId": "4499a25b-f4a5-4f2c-9ebd-bc68c7840b39",
+          "oracleId": "c4485bf9-e7ff-48b5-a983-02900939ee9d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Suit",
+          "printingId": "436527ec-5af4-4b6d-a5a0-d21fc466a625",
+          "oracleId": "ba08b4cf-9a13-40fd-8522-9504d2ff1a19",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-UK",
+          "printingId": "6beb4548-1fab-4b9e-bf24-f7b9aadecc87",
+          "oracleId": "ebf8d006-2997-431b-b4cb-9692741b45ca",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Verse",
+          "printingId": "f8779eb2-1210-430d-8d42-3077053441ee",
+          "oracleId": "7ef7d902-1f05-40b3-8997-dec197b0b678",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Woman, Stunning Savior",
+          "printingId": "bc9b2a76-3cce-4fd0-a4ef-932747cb11b2",
+          "oracleId": "be2b9c6d-4ecb-49ec-b276-4aa93c5dfc00",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spinneret and Spiderling",
+          "printingId": "a27834b7-e763-48ac-845e-ed49f2fa6c6d",
+          "oracleId": "daca1d5e-349d-4e8a-abc7-427dab43fb0c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Suburban Sanctuary",
+          "printingId": "467df77a-a99c-4cfd-9af4-502eaa2eb2e3",
+          "oracleId": "6ef30340-a26d-49aa-bc86-0b8aa5252f87",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sun-Spider, Nimble Webber",
+          "printingId": "2b54d4a5-634f-4ae3-b592-0dc527f60d56",
+          "oracleId": "2d961997-4f5f-4ce2-b062-11411147e2f7",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Superior Spider-Man",
+          "printingId": "ad4adc3e-ec41-4406-8ff2-59ba8067cf4e",
+          "oracleId": "636cc915-9d1b-4ffe-9e74-795b78663911",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Swamp",
+          "printingId": "74414c62-4b68-4e1b-9241-feff3231b9ee",
+          "oracleId": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "The World Tree",
+          "printingId": "a70cb6d9-3955-4064-917b-11dec26440c5",
+          "oracleId": "3437d504-bf62-4c27-b15f-f6330182ff7e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Thwip!",
+          "printingId": "2e2b27e0-aaa7-426e-8c0b-283cb9f969eb",
+          "oracleId": "f7d11254-b48a-4016-a035-c0d6642fdfae",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Vibrant Cityscape",
+          "printingId": "b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2",
+          "oracleId": "6a7f3e1f-6798-4644-b64c-7765f81f0938",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Web of Life and Destiny",
+          "printingId": "3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b",
+          "oracleId": "33d556c5-1bb4-49bb-88c2-627311eb8c9b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Web-Shooters",
+          "printingId": "a0ca1108-6d99-4dc2-96ab-7728d65b0c06",
+          "oracleId": "ec528198-a38a-4ef7-9804-78a25c94ecc1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Web-Warriors",
+          "printingId": "741f5373-b51a-421a-9a74-326f0575c99b",
+          "oracleId": "3b23e4f8-882d-4cce-9b61-171ae2cc3a18",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Winds of Change",
+          "printingId": "735b8aec-62d4-46db-9a68-a6c69cb6fd98",
+          "oracleId": "f525cf10-e24c-4c46-9a13-6f8579d09d50",
+          "present": true,
+          "match": true
+        }
+      ],
+      "oct17": [
+        {
+          "name": "Arachnogenesis",
+          "printingId": "f5f18431-64c0-4ae5-bdc1-1e953313f086",
+          "oracleId": "b655bee5-52d3-467e-b16c-cfc2edf2b1a1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Araña, Heart of the Spider",
+          "printingId": "b02bfa0e-f761-45e1-b35c-f44ff7c5d0e8",
+          "oracleId": "a16037f2-a0f6-465d-8d6e-cec34b4a6320",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Arasta of the Endless Web",
+          "printingId": "95a87b4e-f0ea-457c-9517-4acf313c4ca6",
+          "oracleId": "695eea46-1535-48c5-bbb6-0b8379e77bfc",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Arcane Signet",
+          "printingId": "1bbc3ce9-f3df-41b4-b238-37319546c595",
+          "oracleId": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Aunt May",
+          "printingId": "252c2564-c39d-476d-b7d0-43aee625fcaa",
+          "oracleId": "bdb769b5-c861-4ec1-ad6b-e2a56ca05fd1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Beast Within",
+          "printingId": "400b43aa-c1d2-4435-b863-061f43889422",
+          "oracleId": "7735eeba-693b-47e2-bd51-414379cf1016",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Behold the Sinister Six!",
+          "printingId": "1919bfec-1906-4178-ad32-d4589842e563",
+          "oracleId": "6fa27f8a-bade-460f-853a-abc1c05c946a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Black Market Connections",
+          "printingId": "9d9ca869-e68a-4f53-9f52-85c714dac6f3",
+          "oracleId": "d2664f28-49e1-46f8-a863-b217e961a57c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Chromatic Lantern",
+          "printingId": "693da13a-49af-4f7e-b247-36b454fb31a0",
+          "oracleId": "539f5396-d99a-417d-a84c-dff7930b5900",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Coat of Arms",
+          "printingId": "aef2eb36-f20d-4d90-a556-de2ba09b2635",
+          "oracleId": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cosmic Spider-Man",
+          "printingId": "f82f4013-7308-4917-9042-19a5909f2134",
+          "oracleId": "0334a2f8-a74a-44c9-ba64-d9b7fabe160c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cultivate",
+          "printingId": "e60deb92-f7dd-4f4e-9036-e47dd586f985",
+          "oracleId": "8b755881-a72d-4e21-a369-d2924eb4585a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Farseek",
+          "printingId": "c1aac0f5-1d01-4673-b8d3-878d9a1d423c",
+          "oracleId": "495e52e6-4c2b-4574-9474-eadbdcc8b4ac",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Fellwar Stone",
+          "printingId": "1e24e2bc-b239-4f9a-85c0-5f272f58ed43",
+          "oracleId": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Forest",
+          "printingId": "c9d637ac-e0d3-4c62-9f00-08270f3c1e91",
+          "oracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Frontier Bivouac",
+          "printingId": "48810b27-0646-4ff9-9d4d-c6d09b2e0267",
+          "oracleId": "e4cf6c2f-0f1e-4980-9ef9-e4eabcae42a9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gwen Stacy // Ghost-Spider",
+          "printingId": "b0f1597f-1dc7-465e-8fcb-0afe61bcca46",
+          "oracleId": "5f143d87-35fb-40e3-94ae-f85cfff9adb5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gwenom, Remorseless",
+          "printingId": "46b6cc5d-7a37-4e8b-a1a5-9a573056610c",
+          "oracleId": "c48cf135-b280-4e9f-a9d9-225104870741",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Hashep Oasis",
+          "printingId": "1e8afbcf-c5a6-428c-8d91-a309821362b3",
+          "oracleId": "eab70fff-6a9f-4f9f-89a2-b6910c199e46",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Impostor Syndrome",
+          "printingId": "08da9f92-0e25-4f39-aaa4-d8974af81a41",
+          "oracleId": "7be47440-b627-411e-a28f-d5a92e5e2fb7",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Iron Spider, Stark Upgrade",
+          "printingId": "8da5f34e-7f40-406a-88d2-bb1e3ed25200",
+          "oracleId": "e123fd7d-ace9-48a4-9510-eedcc837d8e8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Island",
+          "printingId": "02f76514-9e0d-4d74-a224-15a2d7b44ae1",
+          "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Kapow!",
+          "printingId": "cec575f6-43c9-41c6-a996-bb806bf82185",
+          "oracleId": "d6eabbff-cc0c-4000-8feb-4826e1b6bc66",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Kindred Discovery",
+          "printingId": "19bdedb2-768b-4adf-8193-917a10c8f729",
+          "oracleId": "005ee549-1bf5-478f-bc3f-3e791bd7eecf",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Kindred Dominance",
+          "printingId": "f6cd7c08-f5d4-4bdc-a254-809d900b0fc3",
+          "oracleId": "ccaa44f2-96be-44e2-884f-c31baa3908d5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Madame Web, Clairvoyant",
+          "printingId": "a16ca3fc-3cdf-4333-93e0-524afafe367b",
+          "oracleId": "b1e0841d-b004-40f9-a644-aecb422f6ad5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mary Jane Watson",
+          "printingId": "178345f7-8ccd-4e47-80f4-5bd31bab6655",
+          "oracleId": "6d44c87b-8945-4c39-b034-7690cf483992",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Maskwood Nexus",
+          "printingId": "c6f2c543-9b01-4760-966a-f0609c24f53e",
+          "oracleId": "9b2cdbed-c733-409b-b0e4-2c8960c25111",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Miles Morales // Ultimate Spider-Man",
+          "printingId": "9f8b4d9b-208a-4673-a617-5e3edd069c33",
+          "oracleId": "be48c721-bdc6-4f2c-96d6-82d934b31615",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mirrodin's Core",
+          "printingId": "20dafceb-2cc4-437a-9500-edfacbef4d3d",
+          "oracleId": "ea53adbe-3f9a-4847-87c7-723ac2789918",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Morophon, the Boundless",
+          "printingId": "33c2e889-d2e1-4197-ba97-81a2b8512746",
+          "oracleId": "bf418a2f-e639-4e52-9cad-5a0713a1829b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mountain",
+          "printingId": "f7752159-06bd-4f6c-b3d2-c4c7616acfbb",
+          "oracleId": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mystic Monastery",
+          "printingId": "bc23343a-3a01-4975-8430-17bf15fa639d",
+          "oracleId": "834b8f71-9a45-42ae-9e99-e749fa6fb45e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Nomad Outpost",
+          "printingId": "790d5244-5042-4b84-b16d-be0f87d11fad",
+          "oracleId": "4619de7e-3d6e-4c6b-8e6e-e24db324839d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Ominous Asylum",
+          "printingId": "4329f94a-9110-4f07-b4a6-f1ccae97ccc9",
+          "oracleId": "676141c3-a433-4aba-86fb-729628f96dfa",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Opulent Palace",
+          "printingId": "f0001153-dbcb-44e5-99be-2c186c9b10b0",
+          "oracleId": "f9e7e855-1e3b-42d3-91b0-64ba8b5b8982",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Origin of Spider-Man",
+          "printingId": "a10a7da7-d9cb-495a-9c9f-205d355c390d",
+          "oracleId": "7fbe9056-190f-40a1-bee9-59ebd6f981f5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Oscorp Industries",
+          "printingId": "1e609d6e-9e37-45d2-87de-8c76675f7cec",
+          "oracleId": "f432eb6a-f1bf-4ce7-b915-1488dccb4bb9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Patchwork Banner",
+          "printingId": "537ea7e7-e8e8-4736-bdd9-1085f1a7c259",
+          "oracleId": "4fb00dbe-1f82-4ba6-b18c-97e816d10d3a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Peter Parker // Amazing Spider-Man",
+          "printingId": "3ce33422-5dba-4a42-8375-dd8ccc692a7b",
+          "oracleId": "f1b7488c-c675-42e9-818a-24a50347ec2c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Peter Parker's Camera",
+          "printingId": "47875dff-c046-4cb0-b1e3-f926cbe25b59",
+          "oracleId": "10777360-c046-43e3-ab44-9d0b926fbbf8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Plains",
+          "printingId": "5f029c91-f20b-4aa5-a7d9-dd6ddef1c877",
+          "oracleId": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Pongify",
+          "printingId": "4131fa63-5afc-4b63-a4b4-f47b4bced87f",
+          "oracleId": "05849bd6-8f38-4031-be2b-e2aa03beb8cc",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Radioactive Spider",
+          "printingId": "f2d267f5-7f12-45f8-8fcb-e0ba3fbdeddc",
+          "oracleId": "f15bd5c0-99ff-42c6-8eed-48de6df81b61",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Raise the Palisade",
+          "printingId": "ce9347e8-962f-4fc1-808f-b59ac751de13",
+          "oracleId": "f55a3781-fe33-4301-9bb5-6a54b9c13c4f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Realmwalker",
+          "printingId": "52733829-27b7-40ec-a897-cabab35b3729",
+          "oracleId": "b81eaa2f-0554-41c6-bdf6-d1cb73b8f56f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Rent Is Due",
+          "printingId": "b3f8d221-081f-49f5-a501-07e5eb21a840",
+          "oracleId": "3fe1530d-bcf2-440b-a905-5a2216daa7eb",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Romantic Rendezvous",
+          "printingId": "38120361-153f-414e-8a45-f86bb2e35a17",
+          "oracleId": "8ca585b5-25c4-41cc-a0b9-dc66ae803d04",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sandsteppe Citadel",
+          "printingId": "e7482def-e87e-4a7f-9c18-7859483b2a66",
+          "oracleId": "544dbabd-cbfc-40da-a5ba-2fea9cddb453",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Savage Mansion",
+          "printingId": "855f59a5-17a8-4aca-8a4d-f98111eba14c",
+          "oracleId": "1af15c1d-a41c-44cc-9614-d72694dd26e8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Scarlet Spider, Ben Reilly",
+          "printingId": "ee771581-f867-48d7-9ddb-897a1ffcdf0a",
+          "oracleId": "13ab2f3f-f65e-42b5-b743-39b30a4c4751",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Shelob, Child of Ungoliant",
+          "printingId": "a14c4b29-3363-45ce-9190-0f79e1a0ef7f",
+          "oracleId": "8372115d-c963-4a41-8759-72f7f6a8935a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Silk, Web Weaver",
+          "printingId": "588dc8d9-6ce0-4bd7-afbd-84bb251fdcb1",
+          "oracleId": "50477dc8-9a2a-41eb-984d-c9e1e78e08a2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sinister Hideout",
+          "printingId": "23190d7e-5165-49bd-b307-bf81877d228d",
+          "oracleId": "80f08b47-a237-4efd-8d86-dfe35a816b0e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sol Ring",
+          "printingId": "5bef0790-aa1b-4144-8391-338e59e86115",
+          "oracleId": "6ad8011d-3471-4369-9d68-b264cc027487",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "SP//dr, Piloted by Peni",
+          "printingId": "c47c1d83-e76d-4939-9ed6-05a9e709dea1",
+          "oracleId": "722ab6e4-a2e0-4aaa-a050-7b6436e22b40",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spectacular Spider-Man",
+          "printingId": "818a5c98-8740-43b1-a42a-6d2382138df8",
+          "oracleId": "eed5e0cc-8f88-4779-bf10-6a823c72df7f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spectacular Tactics",
+          "printingId": "032cc89a-9824-437d-b7fb-02a7901a8299",
+          "oracleId": "15948fdf-3f9e-4eed-b85b-c5a554ff0571",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider Manifestation",
+          "printingId": "99223677-b8a5-48f1-8009-e8475eada7db",
+          "oracleId": "8281f2b9-e81b-48da-812a-8713b2adf8ab",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Bot",
+          "printingId": "24df824a-c1d6-4f09-b866-313b31fec5fb",
+          "oracleId": "e4bb33b2-adde-4176-9274-7598b559aa6a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Gwen, Free Spirit",
+          "printingId": "3a9a0ec2-6f57-4218-a307-6e8d785a1693",
+          "oracleId": "2648559d-1d96-47d2-a769-cfa2cbca2be5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man 2099",
+          "printingId": "2a72c7e7-34f5-4cb0-9959-35516e398e49",
+          "oracleId": "19845456-3d96-48a4-89fa-9b8e583774c9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man India",
+          "printingId": "65b8af30-559b-43a9-8526-62c28c378339",
+          "oracleId": "8933297c-62f1-4df9-91b8-2d3481db77e5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man Noir",
+          "printingId": "bc64366c-2691-48cd-bb4b-a4b088c6f16b",
+          "oracleId": "2efd6494-c5e1-41de-bc6e-8490ff046cd1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man, Brooklyn Visionary",
+          "printingId": "e19929bc-cbe1-4970-952d-8e9d0193ddce",
+          "oracleId": "2ca85872-9436-4515-af50-c13e59605627",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Man, Web-Slinger",
+          "printingId": "897418bc-df8c-4c97-b6bf-7c9133a8a577",
+          "oracleId": "505231d8-714f-4c5b-a635-d1662bd18a78",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Punk",
+          "printingId": "0bd41879-fcd4-4211-9b98-47e7cdba5399",
+          "oracleId": "03bf7a90-78c1-4e83-8553-e22d85e49876",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Sense",
+          "printingId": "4499a25b-f4a5-4f2c-9ebd-bc68c7840b39",
+          "oracleId": "c4485bf9-e7ff-48b5-a983-02900939ee9d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Suit",
+          "printingId": "436527ec-5af4-4b6d-a5a0-d21fc466a625",
+          "oracleId": "ba08b4cf-9a13-40fd-8522-9504d2ff1a19",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-UK",
+          "printingId": "6beb4548-1fab-4b9e-bf24-f7b9aadecc87",
+          "oracleId": "ebf8d006-2997-431b-b4cb-9692741b45ca",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Verse",
+          "printingId": "f8779eb2-1210-430d-8d42-3077053441ee",
+          "oracleId": "7ef7d902-1f05-40b3-8997-dec197b0b678",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spider-Woman, Stunning Savior",
+          "printingId": "bc9b2a76-3cce-4fd0-a4ef-932747cb11b2",
+          "oracleId": "be2b9c6d-4ecb-49ec-b276-4aa93c5dfc00",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spinneret and Spiderling",
+          "printingId": "a27834b7-e763-48ac-845e-ed49f2fa6c6d",
+          "oracleId": "daca1d5e-349d-4e8a-abc7-427dab43fb0c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Suburban Sanctuary",
+          "printingId": "467df77a-a99c-4cfd-9af4-502eaa2eb2e3",
+          "oracleId": "6ef30340-a26d-49aa-bc86-0b8aa5252f87",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Sun-Spider, Nimble Webber",
+          "printingId": "2b54d4a5-634f-4ae3-b592-0dc527f60d56",
+          "oracleId": "2d961997-4f5f-4ce2-b062-11411147e2f7",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Superior Spider-Man",
+          "printingId": "ad4adc3e-ec41-4406-8ff2-59ba8067cf4e",
+          "oracleId": "636cc915-9d1b-4ffe-9e74-795b78663911",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Swamp",
+          "printingId": "74414c62-4b68-4e1b-9241-feff3231b9ee",
+          "oracleId": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "The World Tree",
+          "printingId": "a70cb6d9-3955-4064-917b-11dec26440c5",
+          "oracleId": "3437d504-bf62-4c27-b15f-f6330182ff7e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Thwip!",
+          "printingId": "2e2b27e0-aaa7-426e-8c0b-283cb9f969eb",
+          "oracleId": "f7d11254-b48a-4016-a035-c0d6642fdfae",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Vibrant Cityscape",
+          "printingId": "b5e7cdb4-7b4d-4c6c-b016-d6cd3f9a04f2",
+          "oracleId": "6a7f3e1f-6798-4644-b64c-7765f81f0938",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Web of Life and Destiny",
+          "printingId": "3b3c609e-f7c9-4fe5-84d9-4f4c76020a4b",
+          "oracleId": "33d556c5-1bb4-49bb-88c2-627311eb8c9b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Web-Shooters",
+          "printingId": "a0ca1108-6d99-4dc2-96ab-7728d65b0c06",
+          "oracleId": "ec528198-a38a-4ef7-9804-78a25c94ecc1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Web-Warriors",
+          "printingId": "741f5373-b51a-421a-9a74-326f0575c99b",
+          "oracleId": "3b23e4f8-882d-4cce-9b61-171ae2cc3a18",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Winds of Change",
+          "printingId": "735b8aec-62d4-46db-9a68-a6c69cb6fd98",
+          "oracleId": "f525cf10-e24c-4c46-9a13-6f8579d09d50",
+          "present": true,
+          "match": true
+        }
+      ]
+    },
+    {
+      "name": "dionus",
+      "counts": {
+        "entries": 64,
+        "quantity": 100,
+        "playableEntries": 64,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "resolvedEntries": 64,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "distinctPrintings": 64,
+        "flavorAbsentEntries": 24,
+        "exactPassages": 40
+      },
+      "coverage": {
+        "entries": 64,
+        "copies": 100,
+        "resolvedEntries": 64,
+        "resolvedCopies": 100,
+        "reportedEntries": 64,
+        "reportedCopies": 100,
+        "missingEntries": 0,
+        "malformedEntries": 0,
+        "emptyEntries": 37,
+        "missingOracleEntries": 0
+      },
+      "commander": [
+        {
+          "name": "Dionus, Elvish Archdruid",
+          "id": "5a3dfd71-9ec0-4842-b99d-c1833679f0c5"
+        }
+      ],
+      "flavorPassages": 40,
+      "mechanics": [
+        {
+          "label": "Adapt",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-19",
+              "lineNumber": 19,
+              "printingId": "4d89283e-9783-4006-9294-4ae0473d2ce6",
+              "quantity": 1,
+              "name": "Evolution Witness",
+              "occurrences": [
+                {
+                  "spelling": "Adapt",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-29",
+              "lineNumber": 29,
+              "printingId": "348d4546-3da5-4f78-82f3-9a79d2f9b0d1",
+              "quantity": 1,
+              "name": "Incubation Druid",
+              "occurrences": [
+                {
+                  "spelling": "Adapt",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Crew",
+          "distinctCards": 16,
+          "copies": 16,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-1",
+              "lineNumber": 1,
+              "printingId": "0a1d6dcd-bd41-4f57-a35b-6613811fe4d4",
+              "quantity": 1,
+              "name": "Adventurer's Airship",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-4",
+              "lineNumber": 4,
+              "printingId": "b0b14b51-a125-4359-a271-7c75d9b17fe8",
+              "quantity": 1,
+              "name": "Bomat Bazaar Barge",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-9",
+              "lineNumber": 9,
+              "printingId": "b0b9d006-7179-4d59-88ef-34b4d4b2e2fc",
+              "quantity": 1,
+              "name": "Cybership",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "ee386cd0-934a-4b33-9db3-0a9033ab577e",
+              "quantity": 1,
+              "name": "Earthrumbler",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-27",
+              "lineNumber": 27,
+              "printingId": "39e83502-2ffd-4169-94e3-116701323ed5",
+              "quantity": 1,
+              "name": "Hedge Shredder",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-32",
+              "lineNumber": 32,
+              "printingId": "40c92203-17df-4f10-92c6-ebcc79f01357",
+              "quantity": 1,
+              "name": "Lifecraft Engine",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-38",
+              "lineNumber": 38,
+              "printingId": "257f12c2-db58-413f-9896-6e556bd9c0d9",
+              "quantity": 1,
+              "name": "Mighty Servant of Leuk-o",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-39",
+              "lineNumber": 39,
+              "printingId": "d4e2f75e-75f3-4255-969f-0eab32f7bd1e",
+              "quantity": 1,
+              "name": "Nautiloid Ship",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+              "quantity": 1,
+              "name": "Necron Monolith",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 3
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-49",
+              "lineNumber": 49,
+              "printingId": "21aa59d3-e786-4ba0-9802-01b57597cda2",
+              "quantity": 1,
+              "name": "Recon Craft Theta",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-51",
+              "lineNumber": 51,
+              "printingId": "4f8075be-8932-49b3-990b-4b365fa27e94",
+              "quantity": 1,
+              "name": "Skysovereign, Consul Flagship",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-52",
+              "lineNumber": 52,
+              "printingId": "2680ed41-da35-475a-9d80-ae2f4686feed",
+              "quantity": 1,
+              "name": "Smuggler's Copter",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-56",
+              "lineNumber": 56,
+              "printingId": "3c4bf679-01cc-4786-a3bd-89c8ae70fdfa",
+              "quantity": 1,
+              "name": "Surgehacker Mech",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-61",
+              "lineNumber": 61,
+              "printingId": "6790720a-e1f3-4533-acd8-b002c8e91929",
+              "quantity": 1,
+              "name": "Thunderhawk Gunship",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-62",
+              "lineNumber": 62,
+              "printingId": "98a79557-8ed6-4d9a-b4e1-cece05664984",
+              "quantity": 1,
+              "name": "Thunderous Velocipede",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-63",
+              "lineNumber": 63,
+              "printingId": "c86cf087-c50a-487a-bc1a-eee5410f14d9",
+              "quantity": 1,
+              "name": "Weatherlight",
+              "occurrences": [
+                {
+                  "spelling": "Crew",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Equip",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-33",
+              "lineNumber": 33,
+              "printingId": "779abd27-985f-4bb9-9330-38d49bf52903",
+              "quantity": 1,
+              "name": "Lightning Greaves",
+              "occurrences": [
+                {
+                  "spelling": "Equip",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-57",
+              "lineNumber": 57,
+              "printingId": "1beee53e-9380-481e-86a6-d13645a6a5a5",
+              "quantity": 1,
+              "name": "Swiftfoot Boots",
+              "occurrences": [
+                {
+                  "spelling": "Equip",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Eternity Gate",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+              "quantity": 1,
+              "name": "Necron Monolith",
+              "occurrences": [
+                {
+                  "spelling": "Eternity Gate",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Evolve",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-26",
+              "lineNumber": 26,
+              "printingId": "236c4e0d-1a54-4024-85ef-4d73028bfb87",
+              "quantity": 1,
+              "name": "Gyre Sage",
+              "occurrences": [
+                {
+                  "spelling": "Evolve",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Flying",
+          "distinctCards": 9,
+          "copies": 9,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-1",
+              "lineNumber": 1,
+              "printingId": "0a1d6dcd-bd41-4f57-a35b-6613811fe4d4",
+              "quantity": 1,
+              "name": "Adventurer's Airship",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-9",
+              "lineNumber": 9,
+              "printingId": "b0b9d006-7179-4d59-88ef-34b4d4b2e2fc",
+              "quantity": 1,
+              "name": "Cybership",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-39",
+              "lineNumber": 39,
+              "printingId": "d4e2f75e-75f3-4255-969f-0eab32f7bd1e",
+              "quantity": 1,
+              "name": "Nautiloid Ship",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+              "quantity": 1,
+              "name": "Necron Monolith",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-49",
+              "lineNumber": 49,
+              "printingId": "21aa59d3-e786-4ba0-9802-01b57597cda2",
+              "quantity": 1,
+              "name": "Recon Craft Theta",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-51",
+              "lineNumber": 51,
+              "printingId": "4f8075be-8932-49b3-990b-4b365fa27e94",
+              "quantity": 1,
+              "name": "Skysovereign, Consul Flagship",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-52",
+              "lineNumber": 52,
+              "printingId": "2680ed41-da35-475a-9d80-ae2f4686feed",
+              "quantity": 1,
+              "name": "Smuggler's Copter",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-61",
+              "lineNumber": 61,
+              "printingId": "6790720a-e1f3-4533-acd8-b002c8e91929",
+              "quantity": 1,
+              "name": "Thunderhawk Gunship",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-63",
+              "lineNumber": 63,
+              "printingId": "c86cf087-c50a-487a-bc1a-eee5410f14d9",
+              "quantity": 1,
+              "name": "Weatherlight",
+              "occurrences": [
+                {
+                  "spelling": "Flying",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Food",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": false,
+          "contributors": [
+            {
+              "rowId": "row-7",
+              "lineNumber": 7,
+              "printingId": "dfd977dc-a7c3-4d0a-aca7-b25bd154e963",
+              "quantity": 1,
+              "name": "Cache Grab",
+              "occurrences": [
+                {
+                  "spelling": "Food",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Indestructible",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+              "quantity": 1,
+              "name": "Necron Monolith",
+              "occurrences": [
+                {
+                  "spelling": "Indestructible",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Menace",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-56",
+              "lineNumber": 56,
+              "printingId": "3c4bf679-01cc-4786-a3bd-89c8ae70fdfa",
+              "quantity": 1,
+              "name": "Surgehacker Mech",
+              "occurrences": [
+                {
+                  "spelling": "Menace",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Mill",
+          "distinctCards": 4,
+          "copies": 4,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-7",
+              "lineNumber": 7,
+              "printingId": "dfd977dc-a7c3-4d0a-aca7-b25bd154e963",
+              "quantity": 1,
+              "name": "Cache Grab",
+              "occurrences": [
+                {
+                  "spelling": "Mill",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-27",
+              "lineNumber": 27,
+              "printingId": "39e83502-2ffd-4169-94e3-116701323ed5",
+              "quantity": 1,
+              "name": "Hedge Shredder",
+              "occurrences": [
+                {
+                  "spelling": "Mill",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-37",
+              "lineNumber": 37,
+              "printingId": "c5112bbf-752c-41e7-9c61-4c81e6a77463",
+              "quantity": 1,
+              "name": "Midnight Tilling",
+              "occurrences": [
+                {
+                  "spelling": "Mill",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-40",
+              "lineNumber": 40,
+              "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+              "quantity": 1,
+              "name": "Necron Monolith",
+              "occurrences": [
+                {
+                  "spelling": "Mill",
+                  "index": 4
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Proliferate",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-49",
+              "lineNumber": 49,
+              "printingId": "21aa59d3-e786-4ba0-9802-01b57597cda2",
+              "quantity": 1,
+              "name": "Recon Craft Theta",
+              "occurrences": [
+                {
+                  "spelling": "Proliferate",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Station",
+          "distinctCards": 3,
+          "copies": 3,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-10",
+              "lineNumber": 10,
+              "printingId": "6133355c-3dcf-466a-b771-fe6c44d4fa4d",
+              "quantity": 1,
+              "name": "Dawnsire, Sunstar Dreadnought",
+              "occurrences": [
+                {
+                  "spelling": "Station",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-20",
+              "lineNumber": 20,
+              "printingId": "5541cdd2-84a6-4667-83eb-fffbe5b3cd3d",
+              "quantity": 1,
+              "name": "Extinguisher Battleship",
+              "occurrences": [
+                {
+                  "spelling": "Station",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-44",
+              "lineNumber": 44,
+              "printingId": "bf784de8-5ae2-4c07-92bb-a5b7f593b773",
+              "quantity": 1,
+              "name": "Pinnacle Kill-Ship",
+              "occurrences": [
+                {
+                  "spelling": "Station",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Trample",
+          "distinctCards": 3,
+          "copies": 3,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "ee386cd0-934a-4b33-9db3-0a9033ab577e",
+              "quantity": 1,
+              "name": "Earthrumbler",
+              "occurrences": [
+                {
+                  "spelling": "Trample",
+                  "index": 2
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-38",
+              "lineNumber": 38,
+              "printingId": "257f12c2-db58-413f-9896-6e556bd9c0d9",
+              "quantity": 1,
+              "name": "Mighty Servant of Leuk-o",
+              "occurrences": [
+                {
+                  "spelling": "Trample",
+                  "index": 1
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-62",
+              "lineNumber": 62,
+              "printingId": "98a79557-8ed6-4d9a-b4e1-cece05664984",
+              "quantity": 1,
+              "name": "Thunderous Velocipede",
+              "occurrences": [
+                {
+                  "spelling": "Trample",
+                  "index": 1
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Vigilance",
+          "distinctCards": 2,
+          "copies": 2,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-11",
+              "lineNumber": 11,
+              "printingId": "c7160307-309e-406b-8a86-259322475d1c",
+              "quantity": 1,
+              "name": "Deepwood Denizen",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 0
+                }
+              ],
+              "face": null
+            },
+            {
+              "rowId": "row-17",
+              "lineNumber": 17,
+              "printingId": "ee386cd0-934a-4b33-9db3-0a9033ab577e",
+              "quantity": 1,
+              "name": "Earthrumbler",
+              "occurrences": [
+                {
+                  "spelling": "Vigilance",
+                  "index": 0
+                }
+              ],
+              "face": null
+            }
+          ]
+        },
+        {
+          "label": "Ward",
+          "distinctCards": 1,
+          "copies": 1,
+          "audited": true,
+          "contributors": [
+            {
+              "rowId": "row-38",
+              "lineNumber": 38,
+              "printingId": "257f12c2-db58-413f-9896-6e556bd9c0d9",
+              "quantity": 1,
+              "name": "Mighty Servant of Leuk-o",
+              "occurrences": [
+                {
+                  "spelling": "Ward",
+                  "index": 2
+                }
+              ],
+              "face": null
+            }
+          ]
+        }
+      ],
+      "oct14": [
+        {
+          "name": "Adventurer's Airship",
+          "printingId": "0a1d6dcd-bd41-4f57-a35b-6613811fe4d4",
+          "oracleId": "e3016295-00f7-4daf-91b0-57653733b103",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Arbor Elf",
+          "printingId": "8c61d23e-2be3-4b99-a24c-2a55e29d99d3",
+          "oracleId": "4567a528-75f0-4ea6-b927-3a500caf76ac",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Beast Within",
+          "printingId": "ccac70d4-6e04-4802-8bb8-021368a40e14",
+          "oracleId": "7735eeba-693b-47e2-bd51-414379cf1016",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Bomat Bazaar Barge",
+          "printingId": "b0b14b51-a125-4359-a271-7c75d9b17fe8",
+          "oracleId": "c46a7dc0-88d7-4fbe-8d63-a40688bb5861",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Bonders' Enclave",
+          "printingId": "abcd3daa-dd34-4d7d-b3ed-839f5e438cd7",
+          "oracleId": "f33ce38a-34ec-4b65-a0fc-160484a02007",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Boreal Druid",
+          "printingId": "f656c45c-60f8-4588-9f18-67e7a5e2ae05",
+          "oracleId": "2fcc69ff-8ab5-4e14-afe3-db892049a872",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cache Grab",
+          "printingId": "dfd977dc-a7c3-4d0a-aca7-b25bd154e963",
+          "oracleId": "06ccec61-27d2-4079-80b5-29ebd3a980ee",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Compost",
+          "printingId": "2ce77b4d-637a-4fa3-bf31-b38e846277b0",
+          "oracleId": "4681bcc2-8a46-44cd-8b04-6ab140904dea",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cybership",
+          "printingId": "b0b9d006-7179-4d59-88ef-34b4d4b2e2fc",
+          "oracleId": "9c6ac895-0644-47ea-8a40-8f35cbbeba42",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Dawnsire, Sunstar Dreadnought",
+          "printingId": "6133355c-3dcf-466a-b771-fe6c44d4fa4d",
+          "oracleId": "afc9436b-8cad-4916-929d-ff33a37b42d5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Deepwood Denizen",
+          "printingId": "c7160307-309e-406b-8a86-259322475d1c",
+          "oracleId": "4a6887e3-7a65-4f24-be71-183b00a0ad56",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Defend the Rider",
+          "printingId": "59ed23a2-6153-47b2-ab73-062195cafb74",
+          "oracleId": "561af57d-d43d-4d98-9ef6-18a0843f22ae",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Devoted Druid",
+          "printingId": "22589a81-3ea8-4e78-98c9-c015e7539cf9",
+          "oracleId": "cb814e16-acf7-41d5-a357-1323dcc369f3",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Dionus, Elvish Archdruid",
+          "printingId": "5a3dfd71-9ec0-4842-b99d-c1833679f0c5",
+          "oracleId": "d5e5cf55-eb9e-4f01-9056-791215411b27",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Druid of Purification",
+          "printingId": "85fc3d2a-e254-4e1c-8a9d-15a3ea94810b",
+          "oracleId": "5bb32efd-9e58-4021-bbda-4ffccfa1d601",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Druid of the Cowl",
+          "printingId": "db2d0ee9-865c-4fc9-8cb6-540c597e1bf4",
+          "oracleId": "b1793c3b-25d6-4fae-a99d-cfdd2210ca67",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Earthrumbler",
+          "printingId": "ee386cd0-934a-4b33-9db3-0a9033ab577e",
+          "oracleId": "ba5982a9-e8c1-4e7c-9a73-c4caad0f7336",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Elvish Mystic",
+          "printingId": "75918859-c93f-41b4-9ad0-a4a96c389f0d",
+          "oracleId": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Evolution Witness",
+          "printingId": "4d89283e-9783-4006-9294-4ae0473d2ce6",
+          "oracleId": "0e07f1af-5ff6-4da5-8683-aea4cc390975",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Extinguisher Battleship",
+          "printingId": "5541cdd2-84a6-4667-83eb-fffbe5b3cd3d",
+          "oracleId": "cce3dcc3-57bb-4b95-8b70-337c67bb3c4e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Forest",
+          "printingId": "3b84ec1e-ccce-4b8b-9302-b26f84cfa469",
+          "oracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Fyndhorn Elves",
+          "printingId": "450744cf-7eba-491b-97b0-ca80c6368bbb",
+          "oracleId": "df317532-7d36-40fd-938f-e972749c8792",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gaea's Gift",
+          "printingId": "5503186a-46fe-4956-8ae3-5ab3343f8a93",
+          "oracleId": "2cb95721-56c8-4008-8055-579a5a97fc8b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Galadhrim Ambush",
+          "printingId": "6bbd1461-bd98-4ba9-a538-2dae0cf39b53",
+          "oracleId": "3b22d21f-e19a-40df-840b-a2b7f11f79c2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Ghost Quarter",
+          "printingId": "b3699c15-d834-4dde-ae3b-b3eb8241b442",
+          "oracleId": "2ec4288e-34c6-4831-a2c0-ba1ca1d9d1dc",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gyre Sage",
+          "printingId": "236c4e0d-1a54-4024-85ef-4d73028bfb87",
+          "oracleId": "e3aa16cf-079b-4737-9ffd-7bfdffef0cb2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Hedge Shredder",
+          "printingId": "39e83502-2ffd-4169-94e3-116701323ed5",
+          "oracleId": "f22665cd-4710-48df-83c1-3c9081097cb5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Heirloom Epic",
+          "printingId": "7839ce48-0175-494a-ab89-9bdfb7a50cb1",
+          "oracleId": "43037ef5-09e8-4881-beff-ed38cf7574c6",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Incubation Druid",
+          "printingId": "348d4546-3da5-4f78-82f3-9a79d2f9b0d1",
+          "oracleId": "34428f42-03ac-4795-8286-6cbea796df2b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Inspiring Call",
+          "printingId": "2555ec7b-5cc2-4ffd-9344-6368019feff9",
+          "oracleId": "9b9a10ff-5a5d-4df8-88aa-18d84ff9117c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Leaf Gilder",
+          "printingId": "58b3bd44-3b01-4507-b9be-ab94601ea736",
+          "oracleId": "61324e37-4b79-4325-bf46-621b4270afe2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Lifecraft Engine",
+          "printingId": "40c92203-17df-4f10-92c6-ebcc79f01357",
+          "oracleId": "caa69b51-1efd-4d0e-803b-914a83ccb836",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Lightning Greaves",
+          "printingId": "779abd27-985f-4bb9-9330-38d49bf52903",
+          "oracleId": "ca204b66-8d0c-431a-8d34-282f7c2d17da",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Llanowar Elves",
+          "printingId": "6a0b230b-d391-4998-a3f7-7b158a0ec2cd",
+          "oracleId": "68954295-54e3-4303-a6bc-fc4547a4e3a3",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Llanowar Loamspeaker",
+          "printingId": "0dba8ffb-b7b1-411e-90c5-070b7a888e3f",
+          "oracleId": "08377424-619e-48ae-bc3c-fb199cd77cf9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Malevolent Rumble",
+          "printingId": "a178cfe8-f9fa-4255-88d0-54a0bed079f5",
+          "oracleId": "d30d8968-ec24-4155-97e2-28efd52c8810",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Midnight Tilling",
+          "printingId": "c5112bbf-752c-41e7-9c61-4c81e6a77463",
+          "oracleId": "79bc2c6d-b03d-4ceb-b468-293378ec73ae",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mighty Servant of Leuk-o",
+          "printingId": "257f12c2-db58-413f-9896-6e556bd9c0d9",
+          "oracleId": "0b59099f-2172-4eab-9c0d-7048e6771018",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Nautiloid Ship",
+          "printingId": "d4e2f75e-75f3-4255-969f-0eab32f7bd1e",
+          "oracleId": "613a8774-165e-4cf6-ad43-124f9ffc9980",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Necron Monolith",
+          "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+          "oracleId": "20932bca-52be-4288-9c7d-4154650c5ec9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Origin of Metalbending",
+          "printingId": "25749f9a-260d-4bdc-bd28-429c12faa4a5",
+          "oracleId": "177113f8-1188-4e5e-8ad7-34a7bb8ca7f1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Oviya, Automech Artisan",
+          "printingId": "ee5f504c-33fc-4a91-b69b-8ef555987c79",
+          "oracleId": "b01649b8-b0b5-4cf6-aea7-291f3407859e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Paradise Druid",
+          "printingId": "87cb35f0-1703-48cb-9384-f530a9a94ba4",
+          "oracleId": "e119869d-1f66-402b-8251-d351965cf0d3",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Pinnacle Kill-Ship",
+          "printingId": "bf784de8-5ae2-4c07-92bb-a5b7f593b773",
+          "oracleId": "ad556aee-3dbf-4c8b-9f3a-31947e26c6f5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Priest of Titania",
+          "printingId": "c777b6f4-38de-4cba-b050-361b0f5bc560",
+          "oracleId": "3a198a16-17b9-481e-b516-5bc945c7e247",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Quirion Explorer",
+          "printingId": "d56bae65-1811-4428-93f4-60c36ceee715",
+          "oracleId": "766c8a68-9c51-44ea-903c-1f5cb30941d1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Ranger's Guile",
+          "printingId": "8facd7ba-8172-46bc-b706-486ddccbf976",
+          "oracleId": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Reclamation Sage",
+          "printingId": "1918ea65-ab7f-4d40-97fd-a656c892a2a1",
+          "oracleId": "032ec6e2-6cc3-4a97-9cc7-3233f5e11904",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Recon Craft Theta",
+          "printingId": "21aa59d3-e786-4ba0-9802-01b57597cda2",
+          "oracleId": "8fba247e-9849-4a06-84ff-242894b0503a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Seeker of Skybreak",
+          "printingId": "ecb01acc-8302-426f-a22c-47fe4864f3d4",
+          "oracleId": "704723f3-0490-4d96-930a-aacc6d19ba8d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Skysovereign, Consul Flagship",
+          "printingId": "4f8075be-8932-49b3-990b-4b365fa27e94",
+          "oracleId": "50b14338-9318-4327-a1dd-c0ef38903cc4",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Smuggler's Copter",
+          "printingId": "2680ed41-da35-475a-9d80-ae2f4686feed",
+          "oracleId": "49136bdc-bc50-49a2-999a-1ef9c16ea130",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Snakeskin Veil",
+          "printingId": "a3d2c692-7566-468e-9c86-47a9f768fde2",
+          "oracleId": "1e6a24be-8281-41c1-a5ba-b68f0ef1d7b8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spore Cloud",
+          "printingId": "1691a9f4-4ea7-440f-9bdc-4214ab3c90f0",
+          "oracleId": "36d55084-4696-4d16-ab3a-b00f1456603f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Stocking the Pantry",
+          "printingId": "50e95c7b-f0b2-4276-8c5e-4191b7ba35d1",
+          "oracleId": "068b370f-a358-4244-8050-6c81680c55c7",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Surgehacker Mech",
+          "printingId": "3c4bf679-01cc-4786-a3bd-89c8ae70fdfa",
+          "oracleId": "bf9421d2-54e2-44d8-8b39-2e41192a6517",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Swiftfoot Boots",
+          "printingId": "1beee53e-9380-481e-86a6-d13645a6a5a5",
+          "oracleId": "c8b143ad-43ec-4e0d-a440-e348daa31391",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Symbiotic Deployment",
+          "printingId": "a6e2b7e9-d52b-478e-b118-e890a81fd471",
+          "oracleId": "a6872d7a-b647-4baf-bd1e-06707ccbb71a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Tamiyo's Safekeeping",
+          "printingId": "fd4b7ee2-de65-4288-872d-486065a4f226",
+          "oracleId": "bb2b324c-970a-4920-884e-c92ba49669f0",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Terrasymbiosis",
+          "printingId": "26008c7d-5dbe-4da2-b475-4dd307e7bc68",
+          "oracleId": "4ac94586-3ac7-4ade-af31-ad0d0e3ffc4a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Thunderhawk Gunship",
+          "printingId": "6790720a-e1f3-4533-acd8-b002c8e91929",
+          "oracleId": "d64a4ad2-c80e-4a7f-93f2-b702916dba07",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Thunderous Velocipede",
+          "printingId": "98a79557-8ed6-4d9a-b4e1-cece05664984",
+          "oracleId": "899007b5-6a07-4491-9104-bb537106b07d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Weatherlight",
+          "printingId": "c86cf087-c50a-487a-bc1a-eee5410f14d9",
+          "oracleId": "73b3682f-396a-4ebe-aaac-6ce3ee36283a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Wirewood Elf",
+          "printingId": "10a34e31-97f1-40e8-9d91-a8139af7f096",
+          "oracleId": "4aab6794-506f-413c-91e0-d886e0019dce",
+          "present": true,
+          "match": true
+        }
+      ],
+      "oct17": [
+        {
+          "name": "Adventurer's Airship",
+          "printingId": "0a1d6dcd-bd41-4f57-a35b-6613811fe4d4",
+          "oracleId": "e3016295-00f7-4daf-91b0-57653733b103",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Arbor Elf",
+          "printingId": "8c61d23e-2be3-4b99-a24c-2a55e29d99d3",
+          "oracleId": "4567a528-75f0-4ea6-b927-3a500caf76ac",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Beast Within",
+          "printingId": "ccac70d4-6e04-4802-8bb8-021368a40e14",
+          "oracleId": "7735eeba-693b-47e2-bd51-414379cf1016",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Bomat Bazaar Barge",
+          "printingId": "b0b14b51-a125-4359-a271-7c75d9b17fe8",
+          "oracleId": "c46a7dc0-88d7-4fbe-8d63-a40688bb5861",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Bonders' Enclave",
+          "printingId": "abcd3daa-dd34-4d7d-b3ed-839f5e438cd7",
+          "oracleId": "f33ce38a-34ec-4b65-a0fc-160484a02007",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Boreal Druid",
+          "printingId": "f656c45c-60f8-4588-9f18-67e7a5e2ae05",
+          "oracleId": "2fcc69ff-8ab5-4e14-afe3-db892049a872",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cache Grab",
+          "printingId": "dfd977dc-a7c3-4d0a-aca7-b25bd154e963",
+          "oracleId": "06ccec61-27d2-4079-80b5-29ebd3a980ee",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Compost",
+          "printingId": "2ce77b4d-637a-4fa3-bf31-b38e846277b0",
+          "oracleId": "4681bcc2-8a46-44cd-8b04-6ab140904dea",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Cybership",
+          "printingId": "b0b9d006-7179-4d59-88ef-34b4d4b2e2fc",
+          "oracleId": "9c6ac895-0644-47ea-8a40-8f35cbbeba42",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Dawnsire, Sunstar Dreadnought",
+          "printingId": "6133355c-3dcf-466a-b771-fe6c44d4fa4d",
+          "oracleId": "afc9436b-8cad-4916-929d-ff33a37b42d5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Deepwood Denizen",
+          "printingId": "c7160307-309e-406b-8a86-259322475d1c",
+          "oracleId": "4a6887e3-7a65-4f24-be71-183b00a0ad56",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Defend the Rider",
+          "printingId": "59ed23a2-6153-47b2-ab73-062195cafb74",
+          "oracleId": "561af57d-d43d-4d98-9ef6-18a0843f22ae",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Devoted Druid",
+          "printingId": "22589a81-3ea8-4e78-98c9-c015e7539cf9",
+          "oracleId": "cb814e16-acf7-41d5-a357-1323dcc369f3",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Dionus, Elvish Archdruid",
+          "printingId": "5a3dfd71-9ec0-4842-b99d-c1833679f0c5",
+          "oracleId": "d5e5cf55-eb9e-4f01-9056-791215411b27",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Druid of Purification",
+          "printingId": "85fc3d2a-e254-4e1c-8a9d-15a3ea94810b",
+          "oracleId": "5bb32efd-9e58-4021-bbda-4ffccfa1d601",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Druid of the Cowl",
+          "printingId": "db2d0ee9-865c-4fc9-8cb6-540c597e1bf4",
+          "oracleId": "b1793c3b-25d6-4fae-a99d-cfdd2210ca67",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Earthrumbler",
+          "printingId": "ee386cd0-934a-4b33-9db3-0a9033ab577e",
+          "oracleId": "ba5982a9-e8c1-4e7c-9a73-c4caad0f7336",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Elvish Mystic",
+          "printingId": "75918859-c93f-41b4-9ad0-a4a96c389f0d",
+          "oracleId": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Evolution Witness",
+          "printingId": "4d89283e-9783-4006-9294-4ae0473d2ce6",
+          "oracleId": "0e07f1af-5ff6-4da5-8683-aea4cc390975",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Extinguisher Battleship",
+          "printingId": "5541cdd2-84a6-4667-83eb-fffbe5b3cd3d",
+          "oracleId": "cce3dcc3-57bb-4b95-8b70-337c67bb3c4e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Forest",
+          "printingId": "3b84ec1e-ccce-4b8b-9302-b26f84cfa469",
+          "oracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Fyndhorn Elves",
+          "printingId": "450744cf-7eba-491b-97b0-ca80c6368bbb",
+          "oracleId": "df317532-7d36-40fd-938f-e972749c8792",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gaea's Gift",
+          "printingId": "5503186a-46fe-4956-8ae3-5ab3343f8a93",
+          "oracleId": "2cb95721-56c8-4008-8055-579a5a97fc8b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Galadhrim Ambush",
+          "printingId": "6bbd1461-bd98-4ba9-a538-2dae0cf39b53",
+          "oracleId": "3b22d21f-e19a-40df-840b-a2b7f11f79c2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Ghost Quarter",
+          "printingId": "b3699c15-d834-4dde-ae3b-b3eb8241b442",
+          "oracleId": "2ec4288e-34c6-4831-a2c0-ba1ca1d9d1dc",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Gyre Sage",
+          "printingId": "236c4e0d-1a54-4024-85ef-4d73028bfb87",
+          "oracleId": "e3aa16cf-079b-4737-9ffd-7bfdffef0cb2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Hedge Shredder",
+          "printingId": "39e83502-2ffd-4169-94e3-116701323ed5",
+          "oracleId": "f22665cd-4710-48df-83c1-3c9081097cb5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Heirloom Epic",
+          "printingId": "7839ce48-0175-494a-ab89-9bdfb7a50cb1",
+          "oracleId": "43037ef5-09e8-4881-beff-ed38cf7574c6",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Incubation Druid",
+          "printingId": "348d4546-3da5-4f78-82f3-9a79d2f9b0d1",
+          "oracleId": "34428f42-03ac-4795-8286-6cbea796df2b",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Inspiring Call",
+          "printingId": "2555ec7b-5cc2-4ffd-9344-6368019feff9",
+          "oracleId": "9b9a10ff-5a5d-4df8-88aa-18d84ff9117c",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Leaf Gilder",
+          "printingId": "58b3bd44-3b01-4507-b9be-ab94601ea736",
+          "oracleId": "61324e37-4b79-4325-bf46-621b4270afe2",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Lifecraft Engine",
+          "printingId": "40c92203-17df-4f10-92c6-ebcc79f01357",
+          "oracleId": "caa69b51-1efd-4d0e-803b-914a83ccb836",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Lightning Greaves",
+          "printingId": "779abd27-985f-4bb9-9330-38d49bf52903",
+          "oracleId": "ca204b66-8d0c-431a-8d34-282f7c2d17da",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Llanowar Elves",
+          "printingId": "6a0b230b-d391-4998-a3f7-7b158a0ec2cd",
+          "oracleId": "68954295-54e3-4303-a6bc-fc4547a4e3a3",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Llanowar Loamspeaker",
+          "printingId": "0dba8ffb-b7b1-411e-90c5-070b7a888e3f",
+          "oracleId": "08377424-619e-48ae-bc3c-fb199cd77cf9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Malevolent Rumble",
+          "printingId": "a178cfe8-f9fa-4255-88d0-54a0bed079f5",
+          "oracleId": "d30d8968-ec24-4155-97e2-28efd52c8810",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Midnight Tilling",
+          "printingId": "c5112bbf-752c-41e7-9c61-4c81e6a77463",
+          "oracleId": "79bc2c6d-b03d-4ceb-b468-293378ec73ae",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Mighty Servant of Leuk-o",
+          "printingId": "257f12c2-db58-413f-9896-6e556bd9c0d9",
+          "oracleId": "0b59099f-2172-4eab-9c0d-7048e6771018",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Nautiloid Ship",
+          "printingId": "d4e2f75e-75f3-4255-969f-0eab32f7bd1e",
+          "oracleId": "613a8774-165e-4cf6-ad43-124f9ffc9980",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Necron Monolith",
+          "printingId": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+          "oracleId": "20932bca-52be-4288-9c7d-4154650c5ec9",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Origin of Metalbending",
+          "printingId": "25749f9a-260d-4bdc-bd28-429c12faa4a5",
+          "oracleId": "177113f8-1188-4e5e-8ad7-34a7bb8ca7f1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Oviya, Automech Artisan",
+          "printingId": "ee5f504c-33fc-4a91-b69b-8ef555987c79",
+          "oracleId": "b01649b8-b0b5-4cf6-aea7-291f3407859e",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Paradise Druid",
+          "printingId": "87cb35f0-1703-48cb-9384-f530a9a94ba4",
+          "oracleId": "e119869d-1f66-402b-8251-d351965cf0d3",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Pinnacle Kill-Ship",
+          "printingId": "bf784de8-5ae2-4c07-92bb-a5b7f593b773",
+          "oracleId": "ad556aee-3dbf-4c8b-9f3a-31947e26c6f5",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Priest of Titania",
+          "printingId": "c777b6f4-38de-4cba-b050-361b0f5bc560",
+          "oracleId": "3a198a16-17b9-481e-b516-5bc945c7e247",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Quirion Explorer",
+          "printingId": "d56bae65-1811-4428-93f4-60c36ceee715",
+          "oracleId": "766c8a68-9c51-44ea-903c-1f5cb30941d1",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Ranger's Guile",
+          "printingId": "8facd7ba-8172-46bc-b706-486ddccbf976",
+          "oracleId": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Reclamation Sage",
+          "printingId": "1918ea65-ab7f-4d40-97fd-a656c892a2a1",
+          "oracleId": "032ec6e2-6cc3-4a97-9cc7-3233f5e11904",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Recon Craft Theta",
+          "printingId": "21aa59d3-e786-4ba0-9802-01b57597cda2",
+          "oracleId": "8fba247e-9849-4a06-84ff-242894b0503a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Seeker of Skybreak",
+          "printingId": "ecb01acc-8302-426f-a22c-47fe4864f3d4",
+          "oracleId": "704723f3-0490-4d96-930a-aacc6d19ba8d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Skysovereign, Consul Flagship",
+          "printingId": "4f8075be-8932-49b3-990b-4b365fa27e94",
+          "oracleId": "50b14338-9318-4327-a1dd-c0ef38903cc4",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Smuggler's Copter",
+          "printingId": "2680ed41-da35-475a-9d80-ae2f4686feed",
+          "oracleId": "49136bdc-bc50-49a2-999a-1ef9c16ea130",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Snakeskin Veil",
+          "printingId": "a3d2c692-7566-468e-9c86-47a9f768fde2",
+          "oracleId": "1e6a24be-8281-41c1-a5ba-b68f0ef1d7b8",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Spore Cloud",
+          "printingId": "1691a9f4-4ea7-440f-9bdc-4214ab3c90f0",
+          "oracleId": "36d55084-4696-4d16-ab3a-b00f1456603f",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Stocking the Pantry",
+          "printingId": "50e95c7b-f0b2-4276-8c5e-4191b7ba35d1",
+          "oracleId": "068b370f-a358-4244-8050-6c81680c55c7",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Surgehacker Mech",
+          "printingId": "3c4bf679-01cc-4786-a3bd-89c8ae70fdfa",
+          "oracleId": "bf9421d2-54e2-44d8-8b39-2e41192a6517",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Swiftfoot Boots",
+          "printingId": "1beee53e-9380-481e-86a6-d13645a6a5a5",
+          "oracleId": "c8b143ad-43ec-4e0d-a440-e348daa31391",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Symbiotic Deployment",
+          "printingId": "a6e2b7e9-d52b-478e-b118-e890a81fd471",
+          "oracleId": "a6872d7a-b647-4baf-bd1e-06707ccbb71a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Tamiyo's Safekeeping",
+          "printingId": "fd4b7ee2-de65-4288-872d-486065a4f226",
+          "oracleId": "bb2b324c-970a-4920-884e-c92ba49669f0",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Terrasymbiosis",
+          "printingId": "26008c7d-5dbe-4da2-b475-4dd307e7bc68",
+          "oracleId": "4ac94586-3ac7-4ade-af31-ad0d0e3ffc4a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Thunderhawk Gunship",
+          "printingId": "6790720a-e1f3-4533-acd8-b002c8e91929",
+          "oracleId": "d64a4ad2-c80e-4a7f-93f2-b702916dba07",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Thunderous Velocipede",
+          "printingId": "98a79557-8ed6-4d9a-b4e1-cece05664984",
+          "oracleId": "899007b5-6a07-4491-9104-bb537106b07d",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Weatherlight",
+          "printingId": "c86cf087-c50a-487a-bc1a-eee5410f14d9",
+          "oracleId": "73b3682f-396a-4ebe-aaac-6ce3ee36283a",
+          "present": true,
+          "match": true
+        },
+        {
+          "name": "Wirewood Elf",
+          "printingId": "10a34e31-97f1-40e8-9d91-a8139af7f096",
+          "oracleId": "4aab6794-506f-413c-91e0-d886e0019dce",
+          "present": true,
+          "match": true
+        }
+      ]
+    }
+  ]
+}

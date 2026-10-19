@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-18T17:34:13.191Z",
+  "scope": "Isolated in-app browser on 4175; existing 4174 session untouched. Native file chooser tested; drop behavior covered by actual-handler synthetic event tests.",
+  "checks": [
+    {
+      "case": "Native TappedOut file selection before Import",
+      "preview": "TappedOut CSV · 110 entries · 100/100 deck cards · 10 extras · 2 designated commanders. Nothing sent until Import.",
+      "header": "No deck imported"
+    },
+    {
+      "case": "Native CSV with recognized but unmatched source hint",
+      "message": "Import incomplete: 1 deck entries could not be matched. Your loaded deck has not changed.\nLine 77: Card name not found: Rhystic Study. Check spelling or supply printing coordinates."
+    },
+    {
+      "case": "Synthetic two-commanders plus sideboard; live provider",
+      "message": "Import complete. Deck + Commander: 100/100 cards. Extras: 1 card in 1 entry. 3 deck entries resolved; 0 imported entries need attention. 3 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Thrasios, Triton Hero, Tymna the Weaver.",
+      "commanders": "Thrasios, Triton Hero\nC16 / 46 · EN · COMMANDER\nAssumed printing · set C16 honored; collector/variant not supplied\n\nSelect the card to inspect its rules and printing.\n\nTymna the Weaver\nC16 / 48 · EN · COMMANDER\nAssumed printing · set C16 honored; collector/variant not supplied\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "case": "Original Obeka needs confirmation",
+      "message": "Commander placement needs confirmation. Your loaded deck has not changed.",
+      "placement": "Line 105: Obeka, Splitter of Seconds is in an unlabeled final block after Sideboard. Confirm whether it is your commander. Deck: 99 cards; extras: 9."
+    },
+    {
+      "case": "Obeka confirmed",
+      "message": "Import complete. Deck + Commander: 100/100 cards. Extras: 8 cards in 8 entries. 94 deck entries resolved; 0 imported entries need attention. 94 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Obeka, Splitter of Seconds.",
+      "header": "Obeka, Splitter of Seconds"
+    },
+    {
+      "case": "Live pending-import draft edit",
+      "message": "Draft changed. Click Import when ready; your loaded deck is unchanged.",
+      "header": "Obeka, Splitter of Seconds",
+      "workbenchOpen": "",
+      "applyEnabled": true
+    },
+    {
+      "case": "Synthetic alias/set/extra browser import; live Scryfall",
+      "message": "Import needs attention. Deck + Commander: 100/100 cards. Extras: 1 card in 1 entry. 3 deck entries resolved; 2 imported entries need attention.\nLine 3 (Deck): Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented.\nLine 5 (Sideboard): Card name not found: Unfindable optional extra 20261018. Check the source name/set or supply printing coordinates. 3 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Zilortha, Strength Incarnate. Source set 000 is not in Scryfall's set catalog; an assumed name reference is used. No set mapping was invented.",
+      "aliasSearch": "Zilortha, Strength Incarnate\nIKO / 275 · EN · COMMANDER\nAssumed printing · your list supplied a name only\nImported as Godzilla, King of the Monsters · Oracle name: Zilortha, Strength Incarnate\nInspect"
+    },
+    {
+      "case": "Native three-flag negative import preserves loaded deck",
+      "message": "Import blocked. This app supports one or two commander entries. Review your Commander section.",
+      "header": "Zilortha, Strength Incarnate"
+    },
+    {
+      "case": "Live user-selected reference correction retains other unknown-set provenance",
+      "selected": "2. Forest\n\nDECK · QUANTITY 98 · RESOLVED\n\n98 Forest (rna)\n\nReturned: Forest · MDD 301 · en · 2e781bfd-f8cb-4d20-b977-4359f3a21311\n\nChange reference printing\n\nUser-selected printing",
+      "pinned": "3. Forest\n\nDECK · QUANTITY 1 · RESOLVED\n\n1 Forest (000)\n\nSource set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented.\n\nReturned: Forest · RNA 264 · en · 48764854-d268-462d-a016-27329c8f062d\n\nChange reference printing\n\nAssumed printing · source set 000 unrecognized; name reference used"
+    },
+    {
+      "case": "Synthetic supplied UUID import; live provider",
+      "message": "Import complete. Deck + Commander: 100/100 cards. Extras: 0 cards in 0 entries. 2 deck entries resolved; 0 imported entries need attention. 0 deck entries use assumed printings; 2 use supplied editions; 0 use user-selected editions. Commander: Zilortha, Strength Incarnate.",
+      "commander": "Zilortha, Strength Incarnate\nIKO / 275 · EN · COMMANDER\nSupplied printing · verified coordinates\nImported as Godzilla, King of the Monsters · Oracle name: Zilortha, Strength Incarnate\n\nSelect the card to inspect its rules and printing."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "baselineFiles": 127,
+  "changed": [
+    "public/app.mjs",
+    "public/mechanic-explanations.mjs",
+    "public/mechanic-rule-clauses.mjs",
+    "public/mechanic-rules.mjs",
+    "public/mechanic-supplement.mjs",
+    "public/mechanics.mjs",
+    "lib/catalog.mjs",
+    "scripts/check-mechanics-preservation.mjs",
+    "tests/mechanic-discovery.test.mjs",
+    "tests/mechanic-sourcing.test.mjs",
+    "tests/mechanics-shortlist.test.mjs",
+    "tests/mechanics-ui.test.mjs",
+    "README.md"
+  ]
+}

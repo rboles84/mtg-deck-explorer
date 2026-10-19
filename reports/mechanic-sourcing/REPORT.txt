@@ -1,0 +1,141 @@
+Remaining-label reference completion — 2026-10-18
+
+This follow-up supersedes the earlier statement below that the 181 uncovered
+runtime labels remain outside scope. The original source ledger and mappings
+remain intact; remaining-labels-verification.json records this follow-up.
+
+All 181 previously uncovered labels now have verified official references:
+- 131 exact sections from the pinned Wizards Comprehensive Rules.
+- 2 clause references: For Mirrodin! (702.163a) and Start Your Engines!
+  (702.179a–f). Exact clauses avoid changing the existing rules extractor's
+  handling of punctuation-bearing headings.
+- 41 links to official Wizards mechanic discussions, accompanied by the exact
+  general ability-word rule (207.2c).
+- 7 named card examples in Wizards release notes: Eminence (Sidar Jabari of
+  Zhalfir), Hellbent (Gathan Raiders), Join forces (Minds Aglow), Parade!
+  (Starlight Spectacular), Tempting offer (Tempt with Vengeance), Threshold
+  (Nightwhorl Hermit), and Underdog (Ruff, Underdog Champ).
+
+Zero unresolved source flags among these 181. No new article quotes, authored
+summaries, label inventory, detection, search recipes, or parser/import changes.
+The original 103 direct mappings and 45 explanation records are unchanged.
+The combined scope is 234 direct mappings plus 95 other references: 329 labels.
+This covers the 296-label vocabulary, 32 shortlist labels and Eternity Gate.
+
+Card-example citations establish the printed/named example, not a universal
+mechanic definition or all provider-reported card associations. Parade! and
+Underdog have card-only references; no CR entry or classification is invented.
+The existing general-rule panel now distinguishes ability-word background,
+flavor-word background, and official card-only references. Every article or
+card citation links to its official page and names its section or card.
+
+Verification: downloaded the official September 25, 2026 rules directly from
+Wizards; its SHA-256 matches the retained source and the entire local extraction.
+Official articles/release notes were checked for the named mechanic or card and
+reviewed in context. The follow-up ledger records all 181 dispositions, official
+URLs, source hashes, section/card names, and paragraph fingerprints. No full
+articles or newly written explanations were added to the application.
+
+Validation: all 286 tests passed, including all 181 added reference panels,
+card-only versus general-rule presentation, official links, zero automatic
+searches, unchanged original mappings, unknown-label abstention, and the full
+import suite. Vocabulary, discovery registry, witness-plan, syntax and
+preservation checks passed. All 250 historical protected files are unchanged.
+
+Remaining limits: the broader historical master inventory and every individual
+Scryfall card-to-label association have not been independently official-source
+audited. The pinned rules are the September 25, 2026 revision. A card-example
+reference is deliberately narrower than a mechanic-wide explanation. Existing
+search permissions, legality restrictions and source-unverified warnings remain.
+
+Earlier sourcing pass (historical record):
+
+Mechanic reference sourcing correction — 2026-10-18
+
+Scope: the existing 45 explanation records and their presentation. No new
+mechanics, classification inventory, discovery recipes, or import behavior.
+The earlier correction also replaced the existing Devoid empty-search help
+with two verbatim rule excerpts and an official source link.
+
+All 45 authored summaries remain removed. The replacement content is:
+- 13 references containing only existing, exact numbered rules.
+- 15 short verbatim excerpts from Wizards mechanics articles/release notes,
+  each with its source URL and section. Full explanations remain at the link.
+- 17 general flavor-word references using exact CR 207.2d. Eight have
+  card-specific Wizards release-note citations. The remaining nine now have
+  Gatherer citations verified against the official card images listed below.
+  Citations verify the named card, not every Scryfall association with a label.
+
+103 existing direct rule-section mappings remain unchanged. Every reference
+panel links to the pinned official rules document. The pinned rules file,
+its extraction, and its retained clauses were not rewritten.
+
+verification.json records 32 successful label/excerpt checks: the original
+15 exact excerpts and 8 release-note citations, plus 9 card labels on 6
+Gatherer pages. It records the retrieval date, HTML fingerprints, exact
+italic label markup, and official image URLs with visual verification.
+The Gatherer matches were inside the cardDetailsOracleText element for the
+named card. Official card faces were inspected directly in the browser.
+Images verify the printed labels; the app links to current Gatherer card text.
+Abaddon's gallery image is 40K #2; Gatherer's available reference is 40K #171.
+Both visibly contain Mark of Chaos Ascendant on Abaddon the Despoiler.
+
+No added ability prose, paraphrases, generated explanations, or new quotes.
+Existing article excerpts remain at most 25 words per source. The original
+numbered rules remain checked against the user-provided Wizards snapshot.
+
+Follow-up: all nine previously flagged labels verified; zero unresolved
+among these nine. Their visible unverified warnings are cleared. The existing
+warning behavior remains intact for unresolved sources, even without rules.
+No user-authored explanations are required.
+
+Black Market Connections: Buy Information / Hire a Mercenary / Sell Contraband
+Gatherer: https://gatherer.wizards.com/CLB/en-us/669/black-market-connections
+Official image: https://media.wizards.com/2022/clb/en_tAODlCHjk5.png
+Image source page: https://magic.wizards.com/en/news/card-image-gallery/commander-legends-battle-for-baldurs-gate-commander-card-image-gallery
+Printed image: CLB 669
+
+Ghastly Death Tyrant: Death Ray / Disintegration Ray
+Gatherer: https://gatherer.wizards.com/CLB/en-us/127/ghastly-death-tyrant
+Official image: https://media.wizards.com/2022/clb/en_CYGkbzJlCF.png
+Image source page: https://magic.wizards.com/en/news/card-image-gallery/commander-legends-battle-for-baldurs-gate
+Printed image: CLB 127
+
+Deep Gnome Terramancer: Mold Earth
+Gatherer: https://gatherer.wizards.com/CLB/en-us/658/deep-gnome-terramancer
+Official image: https://media.wizards.com/2022/clb/en_CY9JdvuVN9.png
+Image source page: https://magic.wizards.com/en/news/card-image-gallery/commander-legends-battle-for-baldurs-gate-commander-card-image-gallery
+Printed image: CLB 658
+
+Abaddon the Despoiler: Mark of Chaos Ascendant
+Gatherer: https://gatherer.wizards.com/40K/en-us/171/abaddon-the-despoiler
+Official image: https://media.wizards.com/2022/40k/en_Q4GFUivMH4.png
+Image source page: https://magic.wizards.com/en/news/card-image-gallery/warhammer-40000-commander-decks
+Printed image: 40K 2
+
+Guy in the Chair: Web Support
+Gatherer: https://gatherer.wizards.com/SPM/en-us/102/guy-in-the-chair
+Official image: https://gatherer-static.wizards.com/Cards/medium/A0E86EEAD0CB5E38FD88855176CF70DEC6AB915F62DDA7B3380C84ACC27CE8D4.webp
+Image source page: https://gatherer.wizards.com/SPM/en-us/102/guy-in-the-chair
+Printed image: SPM 102
+
+Necron Monolith: Eternity Gate
+Gatherer: https://gatherer.wizards.com/40K/en-us/161/necron-monolith
+Official image: https://media.wizards.com/2022/40k/en_IQYBnIeTTw.png
+Image source page: https://magic.wizards.com/en/news/card-image-gallery/warhammer-40000-commander-decks
+Printed image: 40K 161
+
+Broader labels with no explanation before this pass remain outside this change.
+This is not a certification of every Scryfall label or the Wiki-derived master
+inventory. Existing search validation remains separate from rules sourcing.
+Eternity Gate still has no general discovery mapping; this source verification
+does not add or authorize one.
+
+Validation: all 282 tests passed, including the import suite, rendering of all
+142 pack labels, verified card citations, the actual external-link allowlist,
+and an unresolved-source warning simulated without adding a production label.
+The first run exposed one stale assertion expecting wording in the removed
+warning; that assertion now checks the retained contributing-card guidance.
+Vocabulary, discovery registry, witness-plan, syntax and preservation checks
+passed. All 250 historical protected files are unchanged. Source data,
+mechanics inventory, searches, parser, and import modules were not edited.

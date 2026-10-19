@@ -1,0 +1,99 @@
+Commander shortlist mechanics follow-up — 2026-10-18
+
+Scope and result
+All mechanics gaps identified in the 28-deck pack recon are addressed. No importer,
+format support, card-name guessing, deck-count policy, layout, or rules source was
+changed. This is coverage of the reviewed examples, not a claim of exhaustive
+Magic rules detection or explanations for all labels outside this pack.
+
+Before / after in the retained pack:
+  Distinct labels:                  142 / 142
+  Linked definitions/explanations:  24 / 142
+  Manual discovery searches:       110 / 126
+  Unclassified provider labels:     32 / 0
+
+The other 16 labels are card-specific flavor words. They now explain that status,
+link to CR 207.2d, retain the contributing card, and direct users to its Oracle
+text. They deliberately do not have a broad mechanic search or invented keyword
+rule. These are completed dispositions, not pending mappings.
+
+Changes
+- Added 75 exact-title links to existing rules sections and 43 explanations.
+  Globally the app now has 103 direct section links and 45 explanations, including
+  the two earlier Food/Eternity Gate explanations.
+- Added 32 exact-label classifications in a supplement. The original 296-label
+  vocabulary audit and its provenance remain unchanged.
+- Added 16 independently validated native Scryfall keyword searches. The original
+  296-label registry remains unchanged; the loaded catalog has 312 searches.
+- Added 100 retained card-field snapshots spanning all 142 pack labels, with
+  original whole-card hashes and a pinned fixture hash. Added seven regression
+  tests and broadened existing catalog-wide checks to the 16 new search records.
+- Updated source disclosures to distinguish the historical audit from the new
+  review and to report the expanded rules/search support accurately.
+
+New searchable concepts
+Double; Regenerate; Triple; Partner with; Choose a background; Megamorph;
+Forestwalk; Hexproof from; Islandwalk; Landcycling; Plainscycling; Typecycling;
+Treasure; Food; Role token; Prepared.
+
+Card-specific flavor words
+Buy Information; Hire a Mercenary; Sell Contraband; Two-Headed Coin; Warp Vortex;
+Berzerker; Death Ray; Disintegration Ray; Jump; Mark of Chaos Ascendant;
+Mold Earth; Scions' Secretary; Sigil of Corruption; The Betrayer; Web Support;
+Wild Card.
+
+Data safeguards
+Rules still require the pinned September 25, 2026 source revision. Direct links
+also require the exact heading; explanations require unchanged numbered clauses.
+Ability-word summaries give orientation and defer to the card's exact conditions.
+Corrupted's ability-word status is additionally supported by Wizards' mechanics
+article (the retained CR 207.2c list omits it):
+https://magic.wizards.com/en/news/feature/phyrexia-all-will-be-one-mechanics
+Prepared's designation is defined in retained CR 722.3a-c and supported by:
+https://magic.wizards.com/en/news/feature/secrets-of-strixhaven-mechanics
+
+Searches use reviewed literal expressions, never interpolate imported labels,
+require explicit clicks, preserve the commander color ceiling, and do not infer
+inherent possession, an originating card face, or legal commander pairing.
+The supplemental rows retain live counts for f:commander id<=wubrg, explicitly
+recorded in baseline_case/baseline_relation. The UI uses current response counts.
+
+Verification
+1. Full suite: 278/278 passing. The existing tests now also exercise all 312
+   searches across 32 color subsets (9,984 rendered empty-state cases), HTTP
+   whitelisting, query composition, Clipboard provenance, and failed-page behavior.
+2. All 28 source-included deck examples replayed with retained Scryfall responses:
+   142 labels, zero missing explanations, zero unresolved entries. Twenty-four
+   source projections have complete 100-card lists; incomplete research examples
+   remain unchanged and are still useful for mechanics coverage.
+3. Sixteen live native keyword searches verified positive and negative witnesses
+   by Oracle identity. Raw membership responses and SHA-256 hashes are retained
+   beside membership.json. Returned witnesses also carry the exact provider label.
+4. Live HTTP user flow: 100-card Esika deck imported, all 16 new searches succeeded,
+   and one result from each search was saved in memory (14 distinct printings,
+   because two results repeated). The imported deck remained byte-for-byte
+   unchanged. This run used 19 provider requests. See live-flow.json; its response
+   directory identifies the retained raw responses outside the repository.
+5. Live browser: a purpose-built 100-card test deck imported all 8 distinct entries;
+   Prepared's explanation opened, its search returned 72 cards, and a result saved
+   to the Clipboard. Buy Information displayed the flavor-word explanation and
+   opened Black Market Connections with the correct Oracle ability. Treasure's
+   explanation and search controls were present. Browsing explanations did not
+   issue searches. This browser run used two provider requests.
+6. Preservation check: all 250 historical protected files unchanged. Three
+   authorized derived input files exist (the two prior inputs plus this supplement).
+   Baseline vocabulary and discovery generation --check commands passed unchanged.
+
+Test input notes and remaining boundaries
+The original Esika text contains four research-note lines and a Phyrexian Vraska
+printing (ONE 326). The smoke-test adapter removed the notes and used a name-only
+English reference for that one card. This was a test-input correction, not an
+importer change. Initial rejection evidence is retained separately.
+
+Incomplete lists, unsupported research CSVs, incorrect names/non-English printing
+references, and additional unreviewed labels outside the pack remain existing
+boundaries. Current Scryfall keywords may be incomplete or change; the site still
+does not claim that provider labels are an exhaustive model of every card's rules.
+
+Detailed run artifacts and browser screenshots:
+C:/Users/obake/.codex/visualizations/2026/10/18/01a150a8-12d2-74e1-8155-f5c6a29e7bc8/commander-mechanics/

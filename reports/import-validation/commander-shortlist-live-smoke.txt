@@ -1,0 +1,41 @@
+Commander Shortlist live smoke test - 2026-10-18
+
+Result: PASS. No application code or fixtures changed during this smoke test.
+The existing local application used fresh live Scryfall responses, with an
+isolated in-memory cache and 500 ms minimum request spacing.
+
+Normal import - browser
+The pack's Oops all copies TXT imported 100 cards across 74 entries, with no
+unresolved rows. Name-only references remained labeled assumed printings.
+Manual Parnesse selection displayed Blue/Black/Red commander identity.
+
+Prepare image fix - browser and live response
+Sanar, Unfinished Genius // Wild Idea displayed its actual SOS 223 artwork.
+Both text parts were readable and no reverse-side control was shown.
+The exact printing's live prepare-layout response supplied the shared image
+used by the viewer. The existing exact-printing image checks remained active.
+
+Reversible identity fix - live API and import functions
+All four captured reversible printing UUIDs returned successfully and accepted
+their matching face Oracle IDs: Command Tower, Ugin, Eye of the Storms,
+Hallowed Fountain and Steam Vents.
+A deliberately wrong Oracle ID remained a mismatch.
+A diagnostic ordinary/reversible Command Tower fragment counted as one card
+for flavor evidence and did not create false two-card support for "enough".
+
+Exact import - browser
+The previously prepared Zhulodok CSV imported 100 cards across 94 entries,
+with 94 resolved, zero unresolved, and the explicit colorless commander.
+The live import ledger confirmed the exact reversible Ugin printing and its
+Oracle ID, plus the exact French Basalt Monolith printing, without substitution.
+
+Request accounting
+Four live Scryfall /cards/collection requests: 74, 6, 75 and 19 identifiers.
+All returned HTTP 200 with every requested record and empty not_found arrays.
+No throttling, provider errors, automatic retries or discovery searches.
+Browser card-image requests are separate from these four API requests.
+
+Evidence directory (raw responses, request log, targeted assertions, screenshot):
+C:/Users/obake/.codex/visualizations/2026/10/18/01a150a8-12d2-74e1-8155-f5c6a29e7bc8/commander-live-smoke/
+
+This was a scoped live smoke test, not a fresh audit of the full deck pack.

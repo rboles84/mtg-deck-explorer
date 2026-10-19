@@ -1,0 +1,105 @@
+1 Aarakocra Sneak
+1 Aether Tunnel
+1 An Offer You Can't Refuse
+1 Aqueous Form
+1 Arcane Signet
+1 Arena of Glory
+1 As Foretold
+1 Blood Crypt
+1 Bloodboil Sorcerer
+1 Bloodstained Mire
+1 Brotherhood Regalia
+1 Cascade Bluffs
+1 Caves of Chaos Adventurer
+1 Chaos Warp
+1 Command Tower
+1 Counterspell
+1 Court of Ambition
+1 Court of Embereth
+1 Court of Ire
+1 Court of Locthwain
+1 Court of Vantress
+1 Creeping Bloodsucker
+1 Cyclonic Rift
+1 Deflecting Swat
+1 Dragonmaster Outcast
+1 Dragonskull Summit
+1 Drowned Catacomb
+1 Dungeoneer's Pack
+1 Exotic Orchard
+1 Extravagant Replication
+1 Feywild Caretaker
+1 Fiery Islet
+1 From the Catacombs
+1 Frostboil Snarl
+1 Frostcliff Siege
+1 Hatred
+1 Haunted Ridge
+3 Island
+1 Izzet Signet
+1 Lavaspur Boots
+1 Lightning Greaves
+1 Loot Dispute
+1 Mechanized Production
+1 Mistrise Village
+1 Mithril Coat
+2 Mountain
+1 Nightscape Familiar
+1 Opal Palace
+1 Overkill
+1 Passageway Seer
+1 Plargg and Nassari
+1 Polluted Delta
+1 Ravenloft Adventurer
+1 Reckless Charge
+1 Reliquary Tower
+1 Rilsa Rael, Kingpin
+1 Ring of Evos Isle
+1 Ring of Xathrid
+1 Rogue's Passage
+1 Sarevok's Tome
+1 Shipwreck Marsh
+1 Shivan Reef
+1 Silent Arbiter
+1 Silver Shroud Costume
+1 Smaug the Magnificent
+1 Sol Ring
+1 Steam Vents
+1 Stirring Bard
+1 Stormcarved Coast
+1 Sulfur Falls
+1 Sulfurous Springs
+1 Sunken Hollow
+1 Suspended Sentence
+4 Swamp
+1 Swan Song
+1 Swiftfoot Boots
+1 Talisman of Creativity
+1 Talisman of Dominance
+1 Talisman of Indulgence
+1 Thassa, God of the Sea
+1 The Theorist, Jace Beleren
+1 Thopter Spy Network
+1 Tomb of Horrors Adventurer
+1 Trailblazer's Boots
+1 Turbulent Crater
+1 Turbulent Wetlands
+1 Twilight Prophet
+1 Underdark Explorer
+1 Underground River
+1 Vicious Battlerager
+1 Watery Grave
+1 Whispersilk Cloak
+1 Xander's Lounge
+
+SIDEBOARD:
+1 Black Panther's Claws
+1 Champion's Helm
+1 Crumbling Necropolis
+1 Evolving Wilds
+1 Exclusive Nightclub
+1 Fabled Passage
+1 Return the Favor
+1 Spectral Restitching
+
+1 Obeka, Splitter of Seconds

@@ -1,0 +1,71 @@
+REMAINING SIX SOURCE INVESTIGATION — 2026-10-19
+
+RESULT
+The application was not changed. This investigation found an archived Wizards mechanic discussion for Hero's Reward, official Wizards card images for Actualize and Covercast, and a first-hand designer video showing Affinitycycling. Kinfall and Landship still lack a verified official definition or official card-text image in the sources retrieved.
+
+These are four improvements in source evidence, not six certified universal definitions. No generated mechanic explanation was added. The existing app's unverified-definition warnings, detection, search, Commander restrictions and previously retained validation evidence remain intact.
+
+SIX-NAME FINDINGS
+
+Affinitycycling — VERIFIED DESIGNER CARD EXAMPLE
+The wiki's 2023 Unknown Event list cites Gavin Verhey's Good Morning Magic video, published February 20, 2023. At 10:17, the video visibly shows Sojourner's Enforcermite, Affinitycycling 2 and its reminder wording. This was checked visually against the retained card example; automatic captions were used only to find the timestamp.
+Source: https://www.youtube.com/watch?v=NuWq8-rnJ38&t=617s
+Evidence: affinitycycling-designer-video.png; retained video-page HTML and metadata in receipts.json.
+Boundary: a designer's primary publication, not a Wizards-hosted rules definition or release note. The video type line omits Artifact while the retained Scryfall record includes it. Only the observed Affinitycycling reminder wording is corroborated; do not replace whole-card metadata.
+
+Hero's Reward — VERIFIED ARCHIVED WIZARDS DISCUSSION
+The Face the Hydra wiki citations lead to Sam Stoddard's Building a Hydra, October 25, 2013, section A Hero's Reward. The article explicitly identifies the mechanic and discusses its development. The current Wizards URL returns 404; the specific Internet Archive copy linked by the wiki is readable and retained.
+Source: https://web.archive.org/web/20201021225115/https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25
+Boundary: verified official design discussion about Face the Hydra, not a formal definition covering all Challenge Deck cards. Do not turn its Hydra-specific discussion into a universal leaves-the-battlefield rule.
+
+Kinfall — OFFICIAL CARD EXISTENCE VERIFIED; DEFINITION UNVERIFIED
+Wizards' Mystery Booster Playtest Card Artists page lists Plane-Merge Elf and Nataly Scheidt. That establishes official card provenance, but supplies no ability text. The retrieved 2019 release notes contain neither Plane-Merge Elf nor Kinfall. The wiki's Kinfall section supplies explanatory prose without a citation attached to that definition.
+Official listing: https://magic.wizards.com/en/news/feature/mystery-booster-playtest-card-artists-2019-11-11
+Boundary: an artist credit is not a rules source. Keep the general definition unverified.
+
+Landship — OFFICIAL CARD EXISTENCE VERIFIED; DEFINITION UNVERIFIED
+The same Plane-Merge Elf artist listing is available. The retrieved 2019 release notes contain neither Plane-Merge Elf nor Landship. The wiki's Landship section has no citation attached to its definition.
+Official listing: https://magic.wizards.com/en/news/feature/mystery-booster-playtest-card-artists-2019-11-11
+Boundary: keep the general definition unverified. The direct old Gatherer card URL now redirects to Gatherer's home page; HTTP 200 did not count as card-text evidence.
+
+Actualize — VERIFIED WIZARDS CARD EXAMPLE
+Wizards' Alchemy: Reality Fracture article links the official gallery. The gallery's Etali, Primal Garden entry points directly to the Wizards-hosted image below. Its Actualize cost-reduction line agrees with the existing Scryfall evidence.
+Gallery: https://magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA&cigquery=Etali
+Official image: https://media.wizards.com/2026/fra/23ns838efds/en_Lxfa4Q7Z9u.webp
+Evidence: actualize-official-dom.html; actualize-official.png.
+Boundary: the wiki describes Actualize as a cast trigger, but Etali uses it for a cost reduction. Copying that wiki formulation would introduce a false universal statement. Its cited 2021 Arena-rules-policy statement does not define this 2026 mechanic.
+
+Covercast — VERIFIED WIZARDS CARD EXAMPLE
+Wizards' May 11, 2026 Arena announcement previews Summitfest Closing Ceremony. The official gallery and Wizards-hosted image show its Covercast line, matching the existing Scryfall example.
+Announcement: https://magic.wizards.com/en/news/mtg-arena/announcements-may-11-2026
+Gallery: https://magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery?cigquery=Summitfest%20Closing%20Ceremony
+Official image: https://media.wizards.com/2026/sos/Lag23xc2fN/en_dmeAiPcKlR.webp
+Evidence: covercast-official-dom.html; covercast-official.png.
+Boundary: the image does not establish the wiki's all-zones or does-not-use-the-stack claims. Those remain unverified. The wiki also calls Covercast a keyword ability whereas the retained Scryfall catalog puts it among ability words; no classification change was made.
+
+PDF AND RELEASE-NOTE CHECKS
+The September 25, 2026 Comprehensive Rules PDF was retrieved from media.wizards.com, hashed and text-extracted across 312 pages. No exact occurrences of the six names were found. Rule 207.2c is the general ability-word rule; it is not a missing individual definition for any of these six.
+https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.pdf
+SHA-256: 674241213075cd581dd3255567ebeec7b40ffae3a27c6a3bd99218af6b2b6659
+
+The original 2019 Mystery Booster release-note page and its wiki citation chain were inspected. The 2024 Mystery Booster 2 release-note PDF was also retrieved and text-extracted across 57 pages: none of the six names or Plane-Merge Elf occurs. This successor-release check is supplementary; it is not proof about every card in the 2019 release or any later Alchemy release.
+https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11
+https://media.wizards.com/2024/downloads/MB2_Release_Notes_OFjn1qzZAq/EN_MTGMB2_ReleaseNotes_20241003.pdf
+SHA-256: c5b5944319ca8d513c897926b9700f2fe0f97d881346d799b308e756412c46e9
+
+The PDF extractor reported recoverable object-offset warnings; both documents yielded text and page counts. Negative text searches are limited evidence, not proof that no official source exists elsewhere.
+
+AUDIT AND PRESERVATION
+All fetched responses have URL, retrieval time, status, final URL, byte count and SHA-256 in receipts.json. Failed DNS requests, 404 pages, empty caption responses and redirects are retained as failed leads, not accepted definitions. findings.json separates accepted observations, source scope and unsupported claims for each name.
+Official card images were inspected through the real browser. Their source URLs and gallery DOM links are retained, with screenshots hashed in findings.json. Image pixels were not converted into a generated mechanic definition.
+The only new files are inside reports/remaining-six-sources-20261019/. No application source, prior test, frozen input, prior report or backup was edited. preservation.json compares all 3,006 pre-existing files against hashes taken before this investigation, and checks for unexpected additions outside this report directory.
+Full test suite rerun: 343 passed, zero failed. Output: tests.txt.
+
+BLAST RADIUS AND CONFIDENCE
+Runtime blast radius: zero application changes. Existing source statuses were not promoted.
+High confidence in the specific source observations, source chains and preservation checks. No claim of exhaustive web coverage or that unfound definitions cannot exist. Any later app change should preserve the narrow source labels: official card example, archived official discussion, or designer example. Kinfall and Landship must not be upgraded to verified definitions on this evidence.
+
+REPRODUCTION
+node reports/remaining-six-sources-20261019/build-findings.mjs
+node reports/remaining-six-sources-20261019/verify.mjs
+The first command rebuilds findings from retained receipts; it does not modify the app. The second checks source/artifact hashes, all pre-existing workspace files, the scope of findings and the recorded full-suite result.

@@ -1,0 +1,82 @@
+[
+  {
+    "path": "public/import-model.mjs",
+    "beforeSha256": "22f86b11e7353403fcf299df3228093bf57aa3056d4e0b886354d194ec500335",
+    "afterSha256": "7d1922e243525ee27f964f10adbcfbd4c20f7a5fafad76d3671dea2c7042ed1a"
+  },
+  {
+    "path": "public/deck-import.mjs",
+    "beforeSha256": "201e3d9eef58b29c117a60f521e3b0ab2d6baa4f8add577dfe119933468322ef",
+    "afterSha256": "5a026465169f73103658fea657d9feaf70782f867cbb7f88ffa3fc6781bab3ed"
+  },
+  {
+    "path": "public/core.mjs",
+    "beforeSha256": "32ca0dd9b1ea57c1bf5ad9d524613d6e0c173cc70522d3243260a70895943e80",
+    "afterSha256": "6584e699fdd0bd01a45771c64f6782f71028ae1a525b7a454a9018fe2507ccd6"
+  },
+  {
+    "path": "public/app.mjs",
+    "beforeSha256": "97812fca808a0b9695c65852014213b023fdc9bbd5f0468b26bc1ba2cc6bb845",
+    "afterSha256": "edc19d1f3ccb9880547995406c626bf9ce67a15b5f5415fbb83757f20388d0d9"
+  },
+  {
+    "path": "public/index.html",
+    "beforeSha256": "67d1b86fa3f6b8f393ef727235bb383bb25594f405e62768388d5331c033afe9",
+    "afterSha256": "b3c04147fd157d37ddd889988710ef843fb2f83581d69f2030679cecf1926789"
+  },
+  {
+    "path": "lib/scryfall.mjs",
+    "beforeSha256": "ac5bc26ed369361daeb4eb7eca24b5d6c2d2c6aed2354272abb2579545217122",
+    "afterSha256": "0e88e71c045e482faa4727691c972b2e24962020de8c3f0b11187a26b9c22c7a"
+  },
+  {
+    "path": "README.md",
+    "beforeSha256": "13d8c5ae6ca58194e78fcab60019ffdc86aaffcbbc26d1a3424c36d2c7e630dd",
+    "afterSha256": "8d072dec1f12fdf0c180acfdf0bca1cfd188ff2064876ac8bf25f06d14795024"
+  },
+  {
+    "path": "public/import-csv.mjs",
+    "added": true,
+    "afterSha256": "225bcf060c85e2b900e50668c8a3022c6e76669119f0b5a41516f44b6eec9851"
+  },
+  {
+    "path": "public/import-limits.mjs",
+    "added": true,
+    "afterSha256": "e7f69042513c27f11933786ffa68ea09857b314536e7b3178917b26bb3474726"
+  },
+  {
+    "path": "public/import-resolution.mjs",
+    "added": true,
+    "afterSha256": "a69fe302ec0a7f26dfafe50d6550582d02eb2669c83d89d679235114b294afea"
+  },
+  {
+    "path": "tests/import-bounded.test.mjs",
+    "added": true,
+    "afterSha256": "25e3347c4feee3112512351450cf79e4e2873d8e336797552e406d4174e40885"
+  },
+  {
+    "path": "scripts/verify-import-bounded-live.mjs",
+    "added": true,
+    "afterSha256": "71bbe8c794fb94dc6f1e642849655a7331c8e32e863e56f29d9e7999497ed481"
+  },
+  {
+    "path": "tests/import-corpus.test.mjs",
+    "modified": true,
+    "afterSha256": "d6f6dc2f5c0408bc5a9a0b3db7186decac047b0f8880ceb18cf1a0d6d8170019"
+  },
+  {
+    "path": "tests/import-redteam.test.mjs",
+    "modified": true,
+    "afterSha256": "9d4661902f4243655c8121a00c8ab9a97395e21ccbd5ebea85a7c8c9de7f1dcd"
+  },
+  {
+    "path": "tests/mechanics-state.test.mjs",
+    "modified": true,
+    "afterSha256": "083b7441c9c2515ebb76a8c82b709fbfe6872a987ac2b98f1357a6ad89ef1107"
+  },
+  {
+    "path": "tests/server.test.mjs",
+    "modified": true,
+    "afterSha256": "8a8d543a8ce61653d8d60f838ef8b4f914bf8f9eef49232ea7d7de0dfd8cdd5f"
+  }
+]

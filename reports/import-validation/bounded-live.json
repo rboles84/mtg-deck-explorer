@@ -1,0 +1,797 @@
+{
+  "checkedAt": "2026-10-18T17:30:19.772Z",
+  "scope": "Live provider through updated local API; native exports, derived excerpt and synthetic diagnostic inputs labeled separately",
+  "cases": [
+    {
+      "name": "hakbal",
+      "source": "Existing regression export",
+      "counts": {
+        "entries": 84,
+        "quantity": 100,
+        "playableEntries": 84,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "excludedQuantity": 0,
+        "resolvedEntries": 84,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 84,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 82,
+        "flavorAbsentEntries": 31,
+        "exactPassages": 0
+      },
+      "problems": [],
+      "commanders": [
+        "Hakbal of the Surging Soul"
+      ]
+    },
+    {
+      "name": "veyran",
+      "source": "Existing regression export",
+      "counts": {
+        "entries": 79,
+        "quantity": 101,
+        "playableEntries": 78,
+        "playableQuantity": 100,
+        "excludedEntries": 1,
+        "excludedQuantity": 1,
+        "resolvedEntries": 78,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 0,
+        "suppliedEntries": 78,
+        "chosenEntries": 0,
+        "distinctPrintings": 78,
+        "flavorAbsentEntries": 22,
+        "exactPassages": 59
+      },
+      "problems": [],
+      "commanders": [
+        "Veyran, Voice of Duality"
+      ]
+    },
+    {
+      "name": "detailed",
+      "source": "Existing regression export",
+      "counts": {
+        "entries": 90,
+        "quantity": 100,
+        "playableEntries": 90,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "excludedQuantity": 0,
+        "resolvedEntries": 90,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 0,
+        "suppliedEntries": 90,
+        "chosenEntries": 0,
+        "distinctPrintings": 90,
+        "flavorAbsentEntries": 27,
+        "exactPassages": 64
+      },
+      "problems": [],
+      "commanders": []
+    },
+    {
+      "name": "obeka-a",
+      "source": "Existing regression export",
+      "counts": {
+        "entries": 102,
+        "quantity": 108,
+        "playableEntries": 94,
+        "playableQuantity": 100,
+        "excludedEntries": 8,
+        "excludedQuantity": 8,
+        "resolvedEntries": 94,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 94,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 94,
+        "flavorAbsentEntries": 33,
+        "exactPassages": 0
+      },
+      "problems": [],
+      "commanders": [
+        "Obeka, Splitter of Seconds"
+      ]
+    },
+    {
+      "name": "obeka-b",
+      "source": "Existing regression export",
+      "counts": {
+        "entries": 102,
+        "quantity": 108,
+        "playableEntries": 94,
+        "playableQuantity": 100,
+        "excludedEntries": 8,
+        "excludedQuantity": 8,
+        "resolvedEntries": 94,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 94,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 94,
+        "flavorAbsentEntries": 33,
+        "exactPassages": 0
+      },
+      "problems": [],
+      "commanders": [
+        "Obeka, Splitter of Seconds"
+      ]
+    },
+    {
+      "name": "background-abdel-street-urchin.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 89,
+        "quantity": 100,
+        "playableEntries": 89,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "excludedQuantity": 0,
+        "resolvedEntries": 89,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 89,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 89,
+        "flavorAbsentEntries": 32,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Abdel Adrian, Gorion's Ward",
+        "Street Urchin"
+      ],
+      "problems": [],
+      "discoveryIdentity": [
+        "W",
+        "R"
+      ],
+      "pairing": "Cards within the provisional color union; commander pair eligibility is unverified."
+    },
+    {
+      "name": "background-wilson-giants.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 82,
+        "quantity": 111,
+        "playableEntries": 71,
+        "playableQuantity": 100,
+        "excludedEntries": 11,
+        "excludedQuantity": 11,
+        "resolvedEntries": 71,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 71,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 71,
+        "flavorAbsentEntries": 14,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Raised by Giants",
+        "Wilson, Refined Grizzly"
+      ],
+      "problems": [
+        {
+          "name": "Boundless Realms",
+          "section": "Maybeboard",
+          "set": "mystor",
+          "status": "resolved",
+          "issues": [
+            "Source set MYSTOR is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        }
+      ],
+      "discoveryIdentity": [
+        "G"
+      ],
+      "pairing": "Cards within the provisional color union; commander pair eligibility is unverified."
+    },
+    {
+      "name": "companion-cecily-othelm-jegantha-side.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 91,
+        "quantity": 101,
+        "playableEntries": 90,
+        "playableQuantity": 100,
+        "excludedEntries": 1,
+        "excludedQuantity": 1,
+        "resolvedEntries": 90,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 90,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 90,
+        "flavorAbsentEntries": 33,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Cecily, Haunted Mage",
+        "Othelm, Sigardian Outcast"
+      ],
+      "problems": [],
+      "discoveryIdentity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "pairing": "Cards within the provisional color union; commander pair eligibility is unverified."
+    },
+    {
+      "name": "companion-cecily-othelm-jegantha.csv",
+      "source": "Native TappedOut CSV",
+      "blockedBeforeProvider": true,
+      "issues": [
+        "This app supports one or two commander entries. Review your Commander section."
+      ]
+    },
+    {
+      "name": "doctors-companion-ten-rose.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 96,
+        "quantity": 100,
+        "playableEntries": 96,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "excludedQuantity": 0,
+        "resolvedEntries": 96,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 96,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 95,
+        "flavorAbsentEntries": 52,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Rose Tyler",
+        "The Tenth Doctor"
+      ],
+      "problems": [],
+      "discoveryIdentity": [
+        "W",
+        "U",
+        "R"
+      ],
+      "pairing": "Cards within the provisional color union; commander pair eligibility is unverified."
+    },
+    {
+      "name": "friends-forever-wernog-sophina.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 121,
+        "quantity": 125,
+        "playableEntries": 96,
+        "playableQuantity": 100,
+        "excludedEntries": 25,
+        "excludedQuantity": 25,
+        "resolvedEntries": 96,
+        "unresolvedEntries": 0,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 96,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 96,
+        "flavorAbsentEntries": 38,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Sophina, Spearsage Deserter",
+        "Wernog, Rider's Chaplain"
+      ],
+      "problems": [],
+      "discoveryIdentity": [
+        "W",
+        "B",
+        "R"
+      ],
+      "pairing": "Cards within the provisional color union; commander pair eligibility is unverified."
+    },
+    {
+      "name": "partner-thrasios-tymna.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 110,
+        "quantity": 110,
+        "playableEntries": 100,
+        "playableQuantity": 100,
+        "excludedEntries": 10,
+        "excludedQuantity": 10,
+        "resolvedEntries": 99,
+        "unresolvedEntries": 1,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 99,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 99,
+        "flavorAbsentEntries": 42,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "problems": [
+        {
+          "name": "Avacyn's Pilgrim",
+          "section": "Deck",
+          "set": "000",
+          "status": "resolved",
+          "issues": [
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Badgermole Cub",
+          "section": "Maybeboard",
+          "set": "tla",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Calamity's Wake",
+          "section": "Maybeboard",
+          "set": "bro",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Chrome Mox",
+          "section": "Deck",
+          "set": "000",
+          "status": "resolved",
+          "issues": [
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Dark Ritual",
+          "section": "Maybeboard",
+          "set": "fca",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Diabolic Intent",
+          "section": "Maybeboard",
+          "set": "",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Elvish Spirit Guide",
+          "section": "Maybeboard",
+          "set": "dmr",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Formidable Speaker",
+          "section": "Maybeboard",
+          "set": "ecl",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Mnemonic Betrayal",
+          "section": "Maybeboard",
+          "set": "grn",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Orim's Chant",
+          "section": "Maybeboard",
+          "set": "mh3",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Rhystic Study",
+          "section": "Deck",
+          "set": "cma",
+          "status": "unresolved",
+          "issues": [
+            "Card name not found in set CMA: Rhystic Study. Check the source name/set or supply printing coordinates."
+          ]
+        },
+        {
+          "name": "Strix Serenade",
+          "section": "Maybeboard",
+          "set": "",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        },
+        {
+          "name": "Training Grounds",
+          "section": "Deck",
+          "set": "000",
+          "status": "resolved",
+          "issues": [
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Valley Floodcaller",
+          "section": "Maybeboard",
+          "set": "",
+          "status": "pending",
+          "issues": [
+            "Extra lookup was not requested because required deck entries need correction."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "partner-with-pir-toothy.csv",
+      "source": "Native TappedOut CSV",
+      "counts": {
+        "entries": 84,
+        "quantity": 100,
+        "playableEntries": 84,
+        "playableQuantity": 100,
+        "excludedEntries": 0,
+        "excludedQuantity": 0,
+        "resolvedEntries": 81,
+        "unresolvedEntries": 3,
+        "ambiguousEntries": 0,
+        "printingUnknownEntries": 0,
+        "assumedEntries": 81,
+        "suppliedEntries": 0,
+        "chosenEntries": 0,
+        "distinctPrintings": 81,
+        "flavorAbsentEntries": 40,
+        "exactPassages": 0
+      },
+      "commanders": [
+        "Pir, Imaginative Rascal",
+        "Toothy, Imaginary Friend"
+      ],
+      "problems": [
+        {
+          "name": "Bloodspore Thrinax",
+          "section": "Deck",
+          "set": "cm1",
+          "status": "unresolved",
+          "issues": [
+            "Card name not found in set CM1: Bloodspore Thrinax. Check the source name/set or supply printing coordinates."
+          ]
+        },
+        {
+          "name": "Fathom Mage",
+          "section": "Deck",
+          "set": "000",
+          "status": "resolved",
+          "issues": [
+            "Source Foil=pre is preserved; the exact finish is unspecified.",
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Forest",
+          "section": "Deck",
+          "set": "un3",
+          "status": "resolved",
+          "issues": [
+            "Source set UN3 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Fuel for the Cause",
+          "section": "Deck",
+          "set": "mbp",
+          "status": "resolved",
+          "issues": [
+            "Source set MBP is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Growth Spiral",
+          "section": "Deck",
+          "set": "000",
+          "status": "resolved",
+          "issues": [
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented.",
+            "Requested foil finish is not reported for this edition; finish remains unverified."
+          ]
+        },
+        {
+          "name": "Inkmoth Nexus",
+          "section": "Deck",
+          "set": "mbp",
+          "status": "resolved",
+          "issues": [
+            "Source set MBP is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Island",
+          "section": "Deck",
+          "set": "un3",
+          "status": "resolved",
+          "issues": [
+            "Source set UN3 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Mycoloth",
+          "section": "Deck",
+          "set": "cm1",
+          "status": "unresolved",
+          "issues": [
+            "Card name not found in set CM1: Mycoloth. Check the source name/set or supply printing coordinates."
+          ]
+        },
+        {
+          "name": "Simic Ascendancy",
+          "section": "Deck",
+          "set": "000",
+          "status": "resolved",
+          "issues": [
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented.",
+            "Requested foil finish is not reported for this edition; finish remains unverified."
+          ]
+        },
+        {
+          "name": "Sol Ring",
+          "section": "Deck",
+          "set": "cm1",
+          "status": "unresolved",
+          "issues": [
+            "Card name not found in set CM1: Sol Ring. Check the source name/set or supply printing coordinates."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spanish Breeding Pool",
+      "source": "Derived one-row collection excerpt; resolver only, not a full deck",
+      "row": {
+        "id": "row-1",
+        "lineNumber": 2,
+        "originalLine": "246,,es,Breeding Pool,20283c4a-f1f0-42f0-bc08-6da87474426b,1,5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac,rna,Ravnica Allegiance",
+        "section": "Deck",
+        "quantityText": "1",
+        "quantity": 1,
+        "name": "Breeding Pool",
+        "set": "rna",
+        "collectorNumber": "246",
+        "scryfallId": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac",
+        "oracleId": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+        "warnings": [],
+        "language": "es",
+        "tags": [],
+        "annotations": [],
+        "csvMetadata": {
+          "collector_number": "246",
+          "extras": "",
+          "language": "es",
+          "name": "Breeding Pool",
+          "oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+          "quantity": "1",
+          "scryfall_id": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac",
+          "set_code": "rna",
+          "set_name": "Ravnica Allegiance"
+        },
+        "finish": "unspecified",
+        "sourceSection": "Deck",
+        "explicitPlacement": null,
+        "block": 0,
+        "blockHasHeading": false,
+        "commanderSource": null,
+        "printingProvenance": {
+          "kind": "supplied"
+        },
+        "playable": true,
+        "identifier": {
+          "id": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac"
+        },
+        "lookup": {
+          "kind": "printing-id",
+          "id": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac"
+        },
+        "status": "resolved",
+        "issues": [],
+        "card": {
+          "object": "card",
+          "id": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac",
+          "name": "Breeding Pool",
+          "set": "rna",
+          "collector_number": "246",
+          "lang": "es",
+          "color_identity": [
+            "U",
+            "G"
+          ],
+          "keywords": [],
+          "legalities": {
+            "commander": "legal"
+          },
+          "oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+          "finishes": [
+            "nonfoil",
+            "foil"
+          ],
+          "flavor_text": "\"Un comienzo, muchos caminos\".\n\u2014Vannifar",
+          "oracle_text": "({T}: Add {G} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+          "type_line": "Land \u2014 Forest Island",
+          "layout": "normal",
+          "mana_cost": "",
+          "printed_name": "Estanque reproductor",
+          "released_at": "2019-01-25",
+          "set_name": "Ravnica Allegiance",
+          "artist": "Ravenna Tran",
+          "rarity": "rare",
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/a/5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac.jpg?1782923152",
+            "normal": "https://cards.scryfall.io/normal/front/5/a/5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac.jpg?1782923152",
+            "large": "https://cards.scryfall.io/large/front/5/a/5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac.jpg?1782923152"
+          },
+          "keywords_status": "reported",
+          "scryfall_uri": "https://scryfall.com/card/rna/246/es/estanque-reproductor-(breeding-pool)?utm_source=api"
+        },
+        "parseIssues": [],
+        "returnedPrinting": null
+      }
+    },
+    {
+      "name": "Alias, set hints and optional missing extra",
+      "source": "Synthetic diagnostic deck text resolved with live provider; no legality assertion",
+      "rows": [
+        {
+          "name": "Godzilla, King of the Monsters",
+          "canonicalName": "Zilortha, Strength Incarnate",
+          "status": "resolved",
+          "printing": "9a0639a0-c898-4a07-975c-a02bdd53175b",
+          "provenance": {
+            "kind": "assumed",
+            "policy": "scryfall-collection-reference-v1"
+          },
+          "issues": []
+        },
+        {
+          "name": "Forest",
+          "canonicalName": "Forest",
+          "status": "resolved",
+          "printing": "48764854-d268-462d-a016-27329c8f062d",
+          "provenance": {
+            "kind": "assumed",
+            "policy": "scryfall-collection-reference-v1",
+            "setHint": {
+              "code": "rna",
+              "status": "honored"
+            }
+          },
+          "issues": []
+        },
+        {
+          "name": "Forest",
+          "canonicalName": "Forest",
+          "status": "resolved",
+          "printing": "48764854-d268-462d-a016-27329c8f062d",
+          "provenance": {
+            "kind": "assumed",
+            "policy": "scryfall-collection-reference-v1",
+            "setHint": {
+              "code": "000",
+              "status": "unrecognized"
+            }
+          },
+          "issues": [
+            "Source set 000 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Forest",
+          "canonicalName": "Forest",
+          "status": "resolved",
+          "printing": "48764854-d268-462d-a016-27329c8f062d",
+          "provenance": {
+            "kind": "assumed",
+            "policy": "scryfall-collection-reference-v1",
+            "setHint": {
+              "code": "mystor",
+              "status": "unrecognized"
+            }
+          },
+          "issues": [
+            "Source set MYSTOR is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Forest",
+          "canonicalName": "Forest",
+          "status": "resolved",
+          "printing": "48764854-d268-462d-a016-27329c8f062d",
+          "provenance": {
+            "kind": "assumed",
+            "policy": "scryfall-collection-reference-v1",
+            "setHint": {
+              "code": "un3",
+              "status": "unrecognized"
+            }
+          },
+          "issues": [
+            "Source set UN3 is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Forest",
+          "canonicalName": "Forest",
+          "status": "resolved",
+          "printing": "48764854-d268-462d-a016-27329c8f062d",
+          "provenance": {
+            "kind": "assumed",
+            "policy": "scryfall-collection-reference-v1",
+            "setHint": {
+              "code": "mbp",
+              "status": "unrecognized"
+            }
+          },
+          "issues": [
+            "Source set MBP is not in Scryfall's set catalog; the assumed reference does not verify that source set. No mapping was invented."
+          ]
+        },
+        {
+          "name": "Unfindable bounded importer extra",
+          "status": "unresolved",
+          "provenance": null,
+          "issues": [
+            "Card name not found: Unfindable bounded importer extra. Check the source name/set or supply printing coordinates."
+          ]
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-10-18T17:31:52.933Z",
+  "observedRateLimit": {
+    "status": 429,
+    "retryAfterSeconds": 60,
+    "evidence": "bounded-live-output.txt",
+    "scope": "Final diagnostic interrupted; app also displayed the wait. Completed with an explicit diagnostics-only run after the full interval; no automatic retries."
+  }
+}

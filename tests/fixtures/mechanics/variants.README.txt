@@ -1,0 +1,7 @@
+20-label mechanic regression fixtures
+
+variants.json contains unmodified Scryfall card objects captured from one public collection request. Its response file and SHA-256 point into reports/mechanic-variants-20261018/responses/. Positive and related negative cards are paired by Oracle ID for each approved exact label. Complete search results and membership evidence are retained separately in verification.json.
+
+Also retained: Cid and Direct Current for the Jump collision; Court of Grace and Aether Hub for the unchanged text-only-concept boundary. Test-only altered objects are explicitly constructed in tests; captured card objects are never edited to manufacture coverage.
+
+Wizards rules/article wording is independently sourced; Scryfall metadata is not used as a substitute for an official explanation. Live rechecks do not overwrite these pinned fixtures.

@@ -1,0 +1,17 @@
+[
+  {
+    "path": "public/app.mjs",
+    "beforeSha256": "17bf9ac5c86256eb2565db1dac0adc790262d935a992207e97ea3e64a0264c9b",
+    "afterSha256": "31b788c8a614e91ed20419831b5b3a47bab22f75d9abf8710260500e989e1a54"
+  },
+  {
+    "path": "tests/mechanics-ui.test.mjs",
+    "beforeSha256": "e185c98cb838bcecb72a126edd6e9d5c55ec55d7e38c32795ca61df004659a71",
+    "afterSha256": "48f51cdf1cd784d17b2112d3bf11c39ee06e92461960143fd6578d66ecc4eedd"
+  },
+  {
+    "path": "reports/mechanics-integration/IMPLEMENTATION_REPORT.md",
+    "beforeSha256": "651fad93f8da1762a95c69029a5e83ba6efa0612ff4d500883ca3f2000bebce0",
+    "afterSha256": "479eda1b25a57c61c6bb0379eb600deadec6cec512ede1f3ba43519a8b2ccfb0"
+  }
+]

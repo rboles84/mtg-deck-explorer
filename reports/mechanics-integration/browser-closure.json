@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-10-17T21:23:03.303Z",
+  "surface": "ChatGPT in-app browser, existing Deck Explorer tab",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "method": "Documented native tab.drag from a non-card button to a card name, then release; observed settled CSS :hover with keyboard focus outside the card. No synthetic DOM events or application changes.",
+  "pointerHover": {
+    "status": "PASS",
+    "first": {
+      "clipboard": "3",
+      "dialogs": 0,
+      "focusId": "clipboard-open",
+      "hovered": [
+        "Pinnacle Kill-Ship"
+      ],
+      "image": "https://cards.scryfall.io/normal/front/b/f/bf784de8-5ae2-4c07-92bb-a5b7f593b773.jpg?1783905919",
+      "previewHidden": false,
+      "previewText": "EXACT PRINTING\nPinnacle Kill-Ship\n\nEdge of Eternities · 244 · EN\n\nArtifact — Spacecraft\n\nCurrent Oracle text\n\nWhen this Spacecraft enters, it deals 10 damage to up to one target creature.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying\n\nClick or press Enter to inspect"
+    },
+    "leave": {
+      "dialogs": 0,
+      "focusId": "clipboard-open",
+      "previewHidden": true
+    },
+    "second": {
+      "dialogs": 0,
+      "focusText": "Reach",
+      "hovered": [
+        "Dawnsire, Sunstar Dreadnought"
+      ],
+      "image": "https://cards.scryfall.io/normal/front/6/1/6133355c-3dcf-466a-b771-fe6c44d4fa4d.jpg?1783905921",
+      "previewHidden": false,
+      "previewText": "EXACT PRINTING\nDawnsire, Sunstar Dreadnought\n\nEdge of Eternities · 238 · EN\n\nLegendary Artifact — Spacecraft\n\nCurrent Oracle text\n\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 20+.)\n10+ | Whenever you attack, Dawnsire deals 100 damage to up to one target creature or planeswalker.\n20+ | Flying\n\nClick or press Enter to inspect",
+      "selectedHeading": "Station"
+    },
+    "escape": {
+      "clipboard": "3",
+      "dialogs": 0,
+      "previewHidden": true,
+      "selectedHeading": "Station"
+    }
+  },
+  "chromiumVerification": {
+    "status": "BLOCKED",
+    "version": null,
+    "attempt": "chrome://version/",
+    "reason": "Browser security URL policy permits only http/https and rejected the internal version page. No workaround attempted."
+  },
+  "warnings": [],
+  "candidateIntegrity": {
+    "files": 13,
+    "mismatches": 0
+  }
+}

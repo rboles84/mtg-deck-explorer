@@ -1,0 +1,498 @@
+[
+  {
+    "label": "Double",
+    "key": "double",
+    "query": "kw:\"Double\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:01.842Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Double%22%29+%28%21%22Deepglow+Skate%22+OR+%21%22Tifa+Lockhart%22+OR+%21%22Island%22+OR+%21%22Boros+Charm%22%29+include%3Aextras",
+    "file": "probe-double.json",
+    "sha256": "b978cd8826e98674c5df92482e292eb2bf8fef36ea44c8b66a9ecb585ef238e2",
+    "positive": [
+      {
+        "name": "Deepglow Skate",
+        "oracleId": "debce64a-18bd-42f5-9e85-158c2242e9e9",
+        "found": true
+      },
+      {
+        "name": "Tifa Lockhart",
+        "oracleId": "878df304-9d6d-4ce9-b65b-1439c251f3e0",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Boros Charm",
+        "oracleId": "2679d0dd-ba30-4a1c-b6a0-b3ac6c790496",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Regenerate",
+    "key": "regenerate",
+    "query": "kw:\"Regenerate\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:02.582Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Regenerate%22%29+%28%21%22Skithiryx%2C+the+Blight+Dragon%22+OR+%21%22Exterminator+Magmarch%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-regenerate.json",
+    "sha256": "bcf90fe35a62bb9c309bb2a6bdd35e44558abfe18a7c022dc56380a04027aef3",
+    "positive": [
+      {
+        "name": "Skithiryx, the Blight Dragon",
+        "oracleId": "daf6c421-e7f7-4fc6-967c-65f4ab96fcfd",
+        "found": true
+      },
+      {
+        "name": "Exterminator Magmarch",
+        "oracleId": "f42c0b5b-7a86-4f79-a5d3-859ec25ed870",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Triple",
+    "key": "triple",
+    "query": "kw:\"Triple\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:03.312Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Triple%22%29+%28%21%22Fiery+Emancipation%22+OR+%21%22Island%22+OR+%21%22Deepglow+Skate%22%29+include%3Aextras",
+    "file": "probe-triple.json",
+    "sha256": "a0bb0a70fc192cfb28896c5eb65698c9b118fd732ea5297ee43398cdc85798cf",
+    "positive": [
+      {
+        "name": "Fiery Emancipation",
+        "oracleId": "52159875-354c-47f9-bb1c-cd65395fcc68",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Deepglow Skate",
+        "oracleId": "debce64a-18bd-42f5-9e85-158c2242e9e9",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Partner with",
+    "key": "partner with",
+    "query": "kw:\"Partner with\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:04.065Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Partner+with%22%29+%28%21%22Okaun%2C+Eye+of+Chaos%22+OR+%21%22Zndrsplt%2C+Eye+of+Wisdom%22+OR+%21%22Island%22+OR+%21%22Lae%27zel%2C+Vlaakith%27s+Champion%22%29+include%3Aextras",
+    "file": "probe-partner-with.json",
+    "sha256": "0c242ea012fe77e6cbfd3d09f4dfe05a39a3d01e9ae7dbc0dbe2af0816fa48e6",
+    "positive": [
+      {
+        "name": "Okaun, Eye of Chaos",
+        "oracleId": "7dec219b-96d1-4d4c-b3ac-15eda9d2ccc6",
+        "found": true
+      },
+      {
+        "name": "Zndrsplt, Eye of Wisdom",
+        "oracleId": "502849a6-8e65-40f3-b348-a41c4f939768",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Lae'zel, Vlaakith's Champion",
+        "oracleId": "c066f921-e349-45d1-8ec3-0955d10bbf19",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Choose a background",
+    "key": "choose a background",
+    "query": "kw:\"Choose a background\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:05.028Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Choose+a+background%22%29+%28%21%22Lae%27zel%2C+Vlaakith%27s+Champion%22+OR+%21%22Jaheira%2C+Friend+of+the+Forest%22+OR+%21%22Island%22+OR+%21%22Okaun%2C+Eye+of+Chaos%22%29+include%3Aextras",
+    "file": "probe-choose-a-background.json",
+    "sha256": "485fed71f503f53f84cdaa069a450a87c75da4619c01f52a2952a93ab51c2a19",
+    "positive": [
+      {
+        "name": "Lae'zel, Vlaakith's Champion",
+        "oracleId": "c066f921-e349-45d1-8ec3-0955d10bbf19",
+        "found": true
+      },
+      {
+        "name": "Jaheira, Friend of the Forest",
+        "oracleId": "0aeeb0d7-15a3-4722-ad67-8fc7fe89220d",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Okaun, Eye of Chaos",
+        "oracleId": "7dec219b-96d1-4d4c-b3ac-15eda9d2ccc6",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Megamorph",
+    "key": "megamorph",
+    "query": "kw:\"Megamorph\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:05.852Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Megamorph%22%29+%28%21%22Stratus+Dancer%22+OR+%21%22Ainok+Survivalist%22+OR+%21%22Island%22+OR+%21%22Willbender%22%29+include%3Aextras",
+    "file": "probe-megamorph.json",
+    "sha256": "7b74a90605def1f5bfab1d77f6bab94e10286b5b80f0a69ac552dadb8c6163d2",
+    "positive": [
+      {
+        "name": "Stratus Dancer",
+        "oracleId": "5b6a821c-51e4-44dc-8353-f4d10eab7fcb",
+        "found": true
+      },
+      {
+        "name": "Ainok Survivalist",
+        "oracleId": "7a5dae5f-29ab-4996-b236-c754de8769bc",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Willbender",
+        "oracleId": "0aae277e-e58e-4115-b5fd-0459451e17ec",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Forestwalk",
+    "key": "forestwalk",
+    "query": "kw:\"Forestwalk\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:06.562Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Forestwalk%22%29+%28%21%22Mirri%2C+Cat+Warrior%22+OR+%21%22Island%22+OR+%21%22Cold-Eyed+Selkie%22%29+include%3Aextras",
+    "file": "probe-forestwalk.json",
+    "sha256": "632f3a9d98816b60ffcbb567a8c57cd89dc5c589b5e6414b5d334dce1304a7ea",
+    "positive": [
+      {
+        "name": "Mirri, Cat Warrior",
+        "oracleId": "f01efb04-ad2b-46fb-852c-dfb7e523e1b7",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Cold-Eyed Selkie",
+        "oracleId": "f33cd975-ab70-4209-a6d8-e0d727772bf2",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Hexproof from",
+    "key": "hexproof from",
+    "query": "kw:\"Hexproof from\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:07.695Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Hexproof+from%22%29+%28%21%22General+Ferrous+Rokiric%22+OR+%21%22Island%22+OR+%21%22Swiftfoot+Boots%22%29+include%3Aextras",
+    "file": "probe-hexproof-from.json",
+    "sha256": "e3b3e1d5395579cb40cff966b56afa7a15b78a0983f3a72e55dfa248c424c415",
+    "positive": [
+      {
+        "name": "General Ferrous Rokiric",
+        "oracleId": "64c15098-f893-44f2-bf7f-162db8ab80e9",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "oracleId": "c8b143ad-43ec-4e0d-a440-e348daa31391",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Islandwalk",
+    "key": "islandwalk",
+    "query": "kw:\"Islandwalk\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:08.548Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Islandwalk%22%29+%28%21%22Cold-Eyed+Selkie%22+OR+%21%22Island%22+OR+%21%22Mirri%2C+Cat+Warrior%22%29+include%3Aextras",
+    "file": "probe-islandwalk.json",
+    "sha256": "795cb1ce030ba17444ba54d73eae236aa524d999a51461c4e30501fefe1584b8",
+    "positive": [
+      {
+        "name": "Cold-Eyed Selkie",
+        "oracleId": "f33cd975-ab70-4209-a6d8-e0d727772bf2",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Mirri, Cat Warrior",
+        "oracleId": "f01efb04-ad2b-46fb-852c-dfb7e523e1b7",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Landcycling",
+    "key": "landcycling",
+    "query": "kw:\"Landcycling\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:09.394Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Landcycling%22%29+%28%21%22Angel+of+the+Ruins%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-landcycling.json",
+    "sha256": "358a4489b7fa3200fd1905070f39123d37cc44755ed8f3c428f33e4c42136841",
+    "positive": [
+      {
+        "name": "Angel of the Ruins",
+        "oracleId": "14878a5f-7983-4133-a1a7-9d539531e092",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Plainscycling",
+    "key": "plainscycling",
+    "query": "kw:\"Plainscycling\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:10.140Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Plainscycling%22%29+%28%21%22Angel+of+the+Ruins%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-plainscycling.json",
+    "sha256": "358a4489b7fa3200fd1905070f39123d37cc44755ed8f3c428f33e4c42136841",
+    "positive": [
+      {
+        "name": "Angel of the Ruins",
+        "oracleId": "14878a5f-7983-4133-a1a7-9d539531e092",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Typecycling",
+    "key": "typecycling",
+    "query": "kw:\"Typecycling\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:10.993Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Typecycling%22%29+%28%21%22Angel+of+the+Ruins%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-typecycling.json",
+    "sha256": "358a4489b7fa3200fd1905070f39123d37cc44755ed8f3c428f33e4c42136841",
+    "positive": [
+      {
+        "name": "Angel of the Ruins",
+        "oracleId": "14878a5f-7983-4133-a1a7-9d539531e092",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Treasure",
+    "key": "treasure",
+    "query": "kw:\"Treasure\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:11.731Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Treasure%22%29+%28%21%22Monument+to+Endurance%22+OR+%21%22An+Offer+You+Can%27t+Refuse%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-treasure.json",
+    "sha256": "f97edab7fcf8b43d89c095818087f9cb98690c1cc06b13e81d37898083590a26",
+    "positive": [
+      {
+        "name": "Monument to Endurance",
+        "oracleId": "e69e8de4-b521-4888-8074-17f1efe2f345",
+        "found": true
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "oracleId": "234a734b-ba28-4f1b-9d01-3c3e7d516590",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Food",
+    "key": "food",
+    "query": "kw:\"Food\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:12.632Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Food%22%29+%28%21%22Oko%2C+Thief+of+Crowns%22+OR+%21%22Tireless+Provisioner%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-food.json",
+    "sha256": "54da32c6c3eaf76857f02081278830de5dd1e912f50e024557b21facf34f2b5a",
+    "positive": [
+      {
+        "name": "Oko, Thief of Crowns",
+        "oracleId": "60c60923-ff1b-43f7-8768-731499fcffc9",
+        "found": true
+      },
+      {
+        "name": "Tireless Provisioner",
+        "oracleId": "ab8d5f5c-1976-4f77-8ed2-8d28ee666741",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Role token",
+    "key": "role token",
+    "query": "kw:\"Role token\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:13.500Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Role+token%22%29+%28%21%22Royal+Treatment%22+OR+%21%22Island%22%29+include%3Aextras",
+    "file": "probe-role-token.json",
+    "sha256": "8dde5db5bd4f8d58fe712f9bb6d7e927e79c268115d0f4e207630c43962ef4e5",
+    "positive": [
+      {
+        "name": "Royal Treatment",
+        "oracleId": "fd0f8fdc-4065-41f4-b8fb-ecb8f185774d",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  },
+  {
+    "label": "Prepared",
+    "key": "prepared",
+    "query": "kw:\"Prepared\"",
+    "status": 200,
+    "checkedAt": "2026-10-18T22:38:14.403Z",
+    "url": "https://api.scryfall.com/cards/search?q=%28kw%3A%22Prepared%22%29+%28%21%22Sanar%2C+Unfinished+Genius+%2F%2F+Wild+Idea%22+OR+%21%22Island%22+OR+%21%22Ponder%22%29+include%3Aextras",
+    "file": "probe-prepared.json",
+    "sha256": "46152a8188694317f147bb4c959065a55bf439c19b7db27439ac2f71546b3438",
+    "positive": [
+      {
+        "name": "Sanar, Unfinished Genius // Wild Idea",
+        "oracleId": "a8c44bd9-6470-47d7-934f-77c76a44a984",
+        "found": true
+      }
+    ],
+    "negative": [
+      {
+        "name": "Island",
+        "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "found": false
+      },
+      {
+        "name": "Ponder",
+        "oracleId": "02090581-61aa-4348-ad57-451be8ee91c2",
+        "found": false
+      }
+    ],
+    "hasMore": false,
+    "pass": true
+  }
+]

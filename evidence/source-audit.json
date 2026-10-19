@@ -1,0 +1,111 @@
+{
+  "recordedOn": "2026-10-16",
+  "originalFiles": [
+    {
+      "path": "inputs/atlas_v2.0.json",
+      "bytes": 809648,
+      "sha256": "6baa0058902db3732192e87a3002a0b5890a17d8f24fb5edac734b7fc09b1b2f"
+    },
+    {
+      "path": "inputs/mechanical-color-pie.runtime.json",
+      "bytes": 180187,
+      "sha256": "1b251f778e87d8c58a23bff0b8a15e342c3b3db21c6edf99475d9515738d2241"
+    },
+    {
+      "path": "inputs/MECHANICS-CONTRACT.md",
+      "bytes": 22023,
+      "sha256": "5c49d4ad3247998fbc0a5ef2bf312ab180b388f29199bba297820fe20d188ebb"
+    },
+    {
+      "path": "inputs/mtg-mechanics-master-list.md",
+      "bytes": 18644,
+      "sha256": "da2ee08ffc531202cadb25e3db94ed0a959798bc8d0df7085c1cfe6bb76c27d6"
+    },
+    {
+      "path": "inputs/PROBABLY_PARADISE_GDD_VISUAL_ATLAS_V3_1.html",
+      "bytes": 1071177,
+      "sha256": "653e38feb4388c1d115b6962358b606c105a34f631e04471a36bd83fc0add6db"
+    },
+    {
+      "path": "fixtures/cosmicspiderman.txt",
+      "bytes": 3249,
+      "sha256": "0c960f066df52bd00471404c02cb7ffcbf87b18cd4185bb51516e9b74d63abc7"
+    },
+    {
+      "path": "references/art-trail-card-detail.png",
+      "bytes": 897829,
+      "sha256": "2254f2b73af4a7299fd571a804a21da793598b51ed1f50439d00884a5a748a3c"
+    },
+    {
+      "path": "references/art-trail-cosmic-spider-man.png",
+      "bytes": 769752,
+      "sha256": "2172d1350b0c6f1462aea921a2d8350e10ee83c4df6c24d9b35436158be32ff2"
+    },
+    {
+      "path": "references/art-trail-desktop.png",
+      "bytes": 956556,
+      "sha256": "cf3e0c2f0382957f45a7070c1e2291b464a28b822e8d4cb37143be4b2dfd06f7"
+    },
+    {
+      "path": "references/art-trail-moor-fiend.png",
+      "bytes": 945816,
+      "sha256": "260a36340cb55984cf7b5b859f19256e6b08a320f7e1a14983c4c651c3d35ff3"
+    },
+    {
+      "path": "references/art-trail-start.png",
+      "bytes": 539383,
+      "sha256": "5e9107bc29bfaf6a6e6b2e88ca41c48e29df9e58e57687d5818ddf1230973d60"
+    },
+    {
+      "path": "references/color-wheel-conflict.png",
+      "bytes": 1474613,
+      "sha256": "cd4c289700b11e7c798b389f4d2ce25a9ba6d898ae7c44f46ffd23b4f2c7195b"
+    },
+    {
+      "path": "references/color-wheel-selection.png",
+      "bytes": 1508887,
+      "sha256": "df3be9b86f51ec38a3f6472f506c633e831d7fa9bf1112d112835ad4c54f9458"
+    },
+    {
+      "path": "references/color-wheel.png",
+      "bytes": 1431629,
+      "sha256": "c1b83ab01b08508bfb361418f1b3bb65d7abfcabc19eee8313152e551d366f60"
+    },
+    {
+      "path": "references/mechanical-color-pie-details.png",
+      "bytes": 1628079,
+      "sha256": "29467c42950b8393ffb0c2357a5318d9166c5ade51f90c65206be4b8ed6c42b0"
+    },
+    {
+      "path": "references/mechanical-color-pie.png",
+      "bytes": 1455106,
+      "sha256": "91c80e987fb8684cc45d97efcaca79f4fea86800f08742df315a98108c9abbd1"
+    },
+    {
+      "path": "references/personal-blog-mtg-article.png",
+      "bytes": 262227,
+      "sha256": "f943e30cbff18042310ed494137c3833926a036c4ff02e7a02d62b8d922133cc"
+    },
+    {
+      "path": "references/personal-blog-mtg.png",
+      "bytes": 330116,
+      "sha256": "f7cd5e1f20eebc34eb8a65c8de191f22e7d1bb650fcd862fa8c8abce27ac18f7"
+    }
+  ],
+  "sourceInspection": {
+    "masterConcreteListedEntries": 524,
+    "playtestCategoryIndexBullets": 3,
+    "atlasRows": 1086,
+    "tierCounts": {
+      "Production-ready": 684,
+      "Review": 353,
+      "Semantic": 27,
+      "Do-not-emit": 22
+    },
+    "historicalValidityCensusRows": 623,
+    "rosewaterProjectionMechanics": 216,
+    "rosewaterSnapshot": "2021-10-18",
+    "allFourPinnedFilesReadInFull": true
+  },
+  "postImplementationCheck": null
+}

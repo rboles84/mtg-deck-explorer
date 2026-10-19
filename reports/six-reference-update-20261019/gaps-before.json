@@ -1,0 +1,932 @@
+[
+  {
+    "key": "poisonous",
+    "term": "Poisonous",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bpoisonous [0-9X]+\\b",
+    "clauses": {
+      "702.70a": "Poisonous is a triggered ability. “Poisonous N” means “Whenever this creature deals combat damage to a player, that player gets N poison counters.” (For information about poison counters, see rule 104.3d.)",
+      "702.70b": "If a creature has multiple instances of poisonous, each triggers separately."
+    },
+    "reference": {
+      "title": "Poisonous",
+      "rules": [
+        "702.70a",
+        "702.70b"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "absorb",
+    "term": "Absorb",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\babsorb [0-9X]+\\b",
+    "clauses": {
+      "702.64a": "Absorb is a static ability. “Absorb N” means “If a source would deal damage to this creature, prevent N of that damage.”",
+      "702.64b": "Each absorb ability can prevent only N damage from any one source at any one time. It will apply separately to damage from other sources, or to damage dealt by the same source at a different time.",
+      "702.64c": "If an object has multiple instances of absorb, each applies separately."
+    },
+    "reference": {
+      "title": "Absorb",
+      "rules": [
+        "702.64a",
+        "702.64b",
+        "702.64c"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "augment",
+    "term": "Augment",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Augment",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Unstable Mechanics | MAGIC: THE GATHERING",
+        "section": "Host and Augment",
+        "url": "https://magic.wizards.com/en/news/card-preview/unstable-mechanics-2017-11-13",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "839d34630e45b91054adead86bce4c7a64d62912c48255f95431a5eca9367b96"
+      }
+    }
+  },
+  {
+    "key": "double agenda",
+    "term": "Double agenda",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {
+      "702.106f": "Double agenda is a variant of the hidden agenda ability. As you put a conspiracy card with double agenda into the command zone, you secretly name two different cards rather than one. You don’t reveal that more than one name was secretly chosen until you reveal the chosen names."
+    },
+    "reference": {
+      "title": "Double agenda",
+      "rules": [
+        "702.106f"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "friends forever",
+    "term": "Friends forever",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bfriends forever\\b",
+    "clauses": {
+      "702.124i": "“Partner—[text]” means “You may designate two legendary cards as your commander rather than one if each of them has the same ‘partner—[text]’ ability.” The “partner—[text]” abilities are “partner—Character select,” “partner—Father & son,” “partner—Friends forever,” and “partner—Survivors.”"
+    },
+    "reference": {
+      "title": "Friends forever",
+      "rules": [
+        "702.124i"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "specialize",
+    "term": "Specialize",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Specialize",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "MTG Arena Announcements, June 22, 2022 | Magic: The Gathering",
+        "section": "Alchemy Horizons: Baldur’s Gate",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-june-22-2022",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "e7c91f49d8295494f564f16d5c3b6792eee1081d4f9ca608c96eef51f4fd9a50"
+      }
+    }
+  },
+  {
+    "key": "intensity",
+    "term": "Intensity",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Intensity",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "MTG Arena: State of the Game – Alchemy: Kamigawa | Magic: The Gathering",
+        "section": "New Mechanic: Intensity",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-state-game-alchemy-kamigawa-2022-03-16",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "238e30e7b9c8fab448c02a90f4b123084dbcfd40df9ebd5a0ebe84530ed30423"
+      }
+    }
+  },
+  {
+    "key": "double team",
+    "term": "Double team",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Double team",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "MTG Arena Announcements, June 22, 2022 | Magic: The Gathering",
+        "section": "Alchemy Horizons: Baldur’s Gate",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-june-22-2022",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "e7c91f49d8295494f564f16d5c3b6792eee1081d4f9ca608c96eef51f4fd9a50"
+      }
+    }
+  },
+  {
+    "key": "affinitycycling",
+    "term": "Affinitycycling",
+    "category": "keyword ability",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Affinitycycling",
+      "rules": [],
+      "verification": "provider-card-example",
+      "referenceKind": "provider-card-example",
+      "source": {
+        "title": "Oracle card record",
+        "section": "Sojourner's Enforcermite",
+        "url": "https://scryfall.com/card/unk/CA06b/sojourners-enforcermite",
+        "kind": "card-example",
+        "verifiedOn": "2026-10-19"
+      }
+    }
+  },
+  {
+    "key": "seek",
+    "term": "Seek",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Seek",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Designing for Alchemy | MAGIC: THE GATHERING",
+        "section": "How Can Our Mechanics Support a Dynamic Format?",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/designing-alchemy-2021-12-08",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "d77c8d3e0a26c37607aab5933ed10ac334563c3c0d77c23f449a1ec8b76fa3f0"
+      }
+    }
+  },
+  {
+    "key": "activate",
+    "term": "Activate",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bactivate[ds]?\\b",
+    "clauses": {
+      "701.2a": "To activate an activated ability is to put it onto the stack and pay its costs, so that it will eventually resolve and have its effect. Only an object’s controller (or its owner, if it doesn’t have a controller) can activate its activated ability unless the object specifically says otherwise. A player may activate an ability if they have priority. See rule 602, “Activating Activated Abilities.”"
+    },
+    "reference": {
+      "title": "Activate",
+      "rules": [
+        "701.2a"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "attach",
+    "term": "Attach",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\battach(?:ed|es|ing)?\\b",
+    "clauses": {
+      "701.3a": "To attach an Aura, Equipment, or Fortification to an object or player means to take it from where it currently is and put it onto that object or player. If something is attached to a permanent on the battlefield, it’s customary to place it so that it’s physically touching the permanent. An Aura, Equipment, or Fortification can’t be attached to an object or player it couldn’t enchant, equip, or fortify, respectively.",
+      "701.3b": "If an effect tries to attach an Aura, Equipment, or Fortification to an object or player it can’t be attached to, the Aura, Equipment, or Fortification doesn’t move. If an effect tries to attach an Aura, Equipment, or Fortification to the object or player it’s already attached to, the effect does nothing. If an effect tries to attach an object that isn’t an Aura, Equipment, or Fortification to another object or player, the effect does nothing and the first object doesn’t move.",
+      "701.3c": "Attaching an Aura, Equipment, or Fortification on the battlefield to a different object or player causes the Aura, Equipment, or Fortification to receive a new timestamp.",
+      "701.3d": "To “unattach” an Equipment from a creature means to move it away from that creature so the Equipment is on the battlefield but is not equipping anything. It should no longer be physically touching any creature. If an Aura, Equipment, or Fortification that was attached to an object or player ceases to be attached to it, that counts as “becoming unattached [from that object or player]”; this includes if that Aura, Equipment, or Fortification leaves the battlefield, the object leaves the zone it was in, or that player leaves the game."
+    },
+    "reference": {
+      "title": "Attach",
+      "rules": [
+        "701.3a",
+        "701.3b",
+        "701.3c",
+        "701.3d"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "cast",
+    "term": "Cast",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bcast(?:s|ing)?\\b",
+    "clauses": {
+      "701.5a": "To cast a spell is to take it from the zone it’s in (usually the hand), put it on the stack, and pay its costs, so that it will eventually resolve and have its effect. A player may cast a spell if they have priority. See rule 601, “Casting Spells.”",
+      "701.5b": "To cast a card is to cast it as a spell."
+    },
+    "reference": {
+      "title": "Cast",
+      "rules": [
+        "701.5a",
+        "701.5b"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "counter",
+    "term": "Counter",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bcounter (target|that|all|each|any|up to) ([a-z]+ )*(spells?|ability|abilities)\\b",
+    "clauses": {
+      "701.6a": "To counter a spell or ability means to cancel it, removing it from the stack. It doesn’t resolve and none of its effects occur. A countered spell is put into its owner’s graveyard.",
+      "701.6b": "The player who cast a countered spell or activated a countered ability doesn’t get a “refund” of any costs that were paid."
+    },
+    "reference": {
+      "title": "Counter",
+      "rules": [
+        "701.6a",
+        "701.6b"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "create",
+    "term": "Create",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bcreat(?:e[ds]?|ing)\\b",
+    "clauses": {
+      "701.7a": "To create one or more tokens with certain characteristics, put the specified number of tokens with the specified characteristics onto the battlefield.",
+      "701.7b": "If a replacement effect applies to a token being created, that effect applies before considering any continuous effects that will modify the characteristics of that token. If a replacement effect applies to a token entering the battlefield, that effect applies after considering any continuous effects that will modify the characteristics of that token.",
+      "701.7c": "Previously, an effect that created tokens instructed a player to “put [those tokens] onto the battlefield.” Cards that were printed with that text have received errata in the Oracle card reference so they now “create” those tokens."
+    },
+    "reference": {
+      "title": "Create",
+      "rules": [
+        "701.7a",
+        "701.7b",
+        "701.7c"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "destroy",
+    "term": "Destroy",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bdestroy(?:s|ed|ing)?\\b",
+    "clauses": {
+      "701.8a": "To destroy a permanent, move it from the battlefield to its owner’s graveyard.",
+      "701.8b": "The only ways a permanent can be destroyed are as a result of an effect that uses the word “destroy” or as a result of the state-based actions that check for lethal damage (see rule 704.5g) or damage from a source with deathtouch (see rule 704.5h). If a permanent is put into its owner’s graveyard for any other reason, it hasn’t been “destroyed.”",
+      "701.8c": "A regeneration effect replaces a destruction event. See rule 701.19, “Regenerate.”"
+    },
+    "reference": {
+      "title": "Destroy",
+      "rules": [
+        "701.8a",
+        "701.8b",
+        "701.8c"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "discard",
+    "term": "Discard",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bdiscard(?:s|ed|ing)?\\b",
+    "clauses": {
+      "701.9a": "To discard a card, move it from its owner’s hand to that player’s graveyard.",
+      "701.9b": "By default, effects that cause a player to discard a card allow the affected player to choose which card to discard. Some effects, however, require a random discard or allow another player to choose which card is discarded.",
+      "701.9c": "If a card is discarded, but an effect causes it to be put into a hidden zone instead of into its owner’s graveyard without being revealed, all values of that card’s characteristics are considered to be undefined. If a card is discarded this way to pay a cost that specifies a characteristic about the discarded card, that cost payment is illegal; the game returns to the moment before the cost was paid (see rule 733, “Handling Illegal Actions”)."
+    },
+    "reference": {
+      "title": "Discard",
+      "rules": [
+        "701.9a",
+        "701.9b",
+        "701.9c"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "exchange",
+    "term": "Exchange",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bexchang(?:e[ds]?|ing)\\b",
+    "clauses": {
+      "701.12a": "A spell or ability may instruct players to exchange something (for example, life totals or control of two permanents) as part of its resolution. When such a spell or ability resolves, if the entire exchange can’t be completed, no part of the exchange occurs.\nExample: If a spell attempts to exchange control of two target creatures but one of those creatures is destroyed before the spell resolves, the spell does nothing to the other creature.",
+      "701.12b": "When control of two permanents is exchanged, if those permanents are controlled by different players, each of those players simultaneously gains control of the permanent that was controlled by the other player. If, on the other hand, those permanents are controlled by the same player, the exchange effect does nothing.",
+      "701.12c": "When life totals are exchanged, each player gains or loses the amount of life necessary to equal the other player’s previous life total. Replacement effects may modify these gains and losses, and triggered abilities may trigger on them. A player who can’t gain life can’t be given a higher life total this way, and a player who can’t lose life can’t be given a lower life total this way (see rules 119.7–8).",
+      "701.12d": "Some spells or abilities may instruct a player to exchange cards in one zone with cards in a different zone (for example, exiled cards and cards in a player’s hand). These spells and abilities work the same as other “exchange” spells and abilities, except they can exchange the cards only if all the cards are owned by the same player, and they can exchange the cards even if one zone is empty.",
+      "701.12e": "If a card in one zone is exchanged with a card in a different zone, and either of them is attached to an object, that card stops being attached to that object and the other card becomes attached to that object.",
+      "701.12f": "If a spell or ability instructs a player to simply exchange two zones, and one of the zones is empty, the cards in the zones are still exchanged.",
+      "701.12g": "A spell or ability may instruct a player to exchange two numerical values. In such an exchange, each value becomes equal to the previous value of the other. If either of those values is a life total, the affected player gains or loses the amount of life necessary to equal the other value. Replacement effects may modify this gain or loss, and triggered abilities may trigger on it. A player who can’t gain life can’t be given a higher life total this way, and a player who can’t lose life can’t be given a lower life total this way (see rules 119.7–8). If either of those values is a power or toughness, a continuous effect is created setting that power or toughness to the other value (see rule 613.4b). This rule does not apply to spells and abilities that switch a creature’s power and toughness.",
+      "701.12h": "One card (Exchange of Words) instructs a player to exchange the text boxes of two creatures. This creates a text-changing effect (see rule 612, “Text-Changing Effects”). In such an exchange, the rules text of each permanent becomes the previous rules text of the other."
+    },
+    "reference": {
+      "title": "Exchange",
+      "rules": [
+        "701.12a",
+        "701.12b",
+        "701.12c",
+        "701.12d",
+        "701.12e",
+        "701.12f",
+        "701.12g",
+        "701.12h"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "exile",
+    "term": "Exile",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bexile (?:target|all|each|a|an|the|it|that|those|this|up to|any)\\b",
+    "clauses": {
+      "701.13a": "To exile an object, move it to the exile zone from wherever it is. See rule 406, “Exile.”"
+    },
+    "reference": {
+      "title": "Exile",
+      "rules": [
+        "701.13a"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "play",
+    "term": "Play",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bplay (?:a|an|the|that|those|this|it|cards|lands|up to|any)\\b",
+    "clauses": {
+      "701.18a": "To play a land means to put it onto the battlefield from the zone it’s in (usually the hand). A player may play a land if they have priority, it’s the main phase of their turn, the stack is empty, and they haven’t played a land this turn. Playing a land is a special action (see rule 116), so it doesn’t use the stack; it simply happens. Putting a land onto the battlefield as the result of a spell or ability isn’t the same as playing a land. See rule 305, “Lands.”",
+      "701.18b": "To play a card means to play that card as a land or to cast that card as a spell, whichever is appropriate.",
+      "701.18c": "Some effects instruct a player to “play” with a certain aspect of the game changed, such as “Play with the top card of your library revealed.” “Play” in this sense means to play the Magic game.",
+      "701.18d": "Previously, the action of casting a spell, or casting a card as a spell, was referred to on cards as “playing” that spell or that card. Cards that were printed with that text have received errata in the Oracle card reference so they now refer to “casting” that spell or that card.",
+      "701.18e": "Previously, the action of using an activated ability was referred to on cards as “playing” that ability. Cards that were printed with that text have received errata in the Oracle card reference so they now refer to “activating” that ability."
+    },
+    "reference": {
+      "title": "Play",
+      "rules": [
+        "701.18a",
+        "701.18b",
+        "701.18c",
+        "701.18d",
+        "701.18e"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "reveal",
+    "term": "Reveal",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\breveal(?:s|ed|ing)?\\b",
+    "clauses": {
+      "701.20a": "To reveal a card, show that card to all players for a brief time. If an effect causes a card to be revealed, it remains revealed for as long as necessary to complete the parts of the effect that card is relevant to. If the cost to cast a spell or activate an ability includes revealing a card, or if a card is revealed because an ability is activated from a hidden zone (see rule 602.2a), the card remains revealed from the time the spell or ability is announced until the time it leaves the stack. If revealing a card causes a triggered ability to trigger, the card remains revealed until that triggered ability leaves the stack. If that ability isn’t put onto the stack the next time a player would receive priority, the card ceases to be revealed.",
+      "701.20b": "Revealing a card doesn’t cause it to leave the zone it’s in.",
+      "701.20c": "A card that is currently revealed may be revealed again.\nExample: Telepathy is an enchantment card that reads “Your opponents play with their hands revealed.” Silvergill Adept is a creature card that reads, in part, “As an additional cost to cast this spell, reveal a Merfolk card from your hand or pay {3}.” A player may reveal a Merfolk card from their hand to pay the additional cost of Silvergill Adept even if that card is already revealed due to Telepathy’s effect.",
+      "701.20d": "If cards in a player’s library are shuffled or otherwise reordered, any revealed cards that are reordered stop being revealed and become new objects.",
+      "701.20e": "Some effects instruct a player to look at one or more cards. Looking at a card follows the same rules as revealing a card, except that the card is shown only to the specified player."
+    },
+    "reference": {
+      "title": "Reveal",
+      "rules": [
+        "701.20a",
+        "701.20b",
+        "701.20c",
+        "701.20d",
+        "701.20e"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "sacrifice",
+    "term": "Sacrifice",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bsacrific(?:e[ds]?|ing)\\b",
+    "clauses": {
+      "701.21a": "To sacrifice a permanent, its controller moves it from the battlefield directly to its owner’s graveyard. A player can’t sacrifice something that isn’t a permanent, or something that’s a permanent they don’t control. Sacrificing a permanent doesn’t destroy it, so regeneration or other effects that replace destruction can’t affect this action."
+    },
+    "reference": {
+      "title": "Sacrifice",
+      "rules": [
+        "701.21a"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "shuffle",
+    "term": "Shuffle",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bshuffl(?:e[ds]?|ing)\\b",
+    "clauses": {
+      "701.24a": "To shuffle a library or a face-down pile of cards, randomize the cards within it so that no player knows their order.",
+      "701.24b": "Some effects cause a player to search a library for a card or cards, shuffle that library, then put some or all of the found cards into a different zone or in a certain position in that library. In such cases, the found cards aren’t included in the shuffle, even though they remain in the library at that time. Rather, all the cards in that library except those are shuffled. Abilities that trigger when a library is shuffled will still trigger. See also rule 401, “Library.”",
+      "701.24c": "If an effect would cause a player to shuffle one or more specific objects into a library, that library is shuffled even if none of those objects are in the zone they’re expected to be in or an effect causes all of those objects to be moved to another zone or remain in their current zone.\nExample: Guile says, in part, “When Guile is put into a graveyard from anywhere, shuffle it into its owner’s library.” It’s put into a graveyard and its ability triggers, then a player exiles it from that graveyard in response. When the ability resolves, the library is shuffled.\nExample: Black Sun’s Zenith says, in part, “Shuffle Black Sun’s Zenith into its owner’s library.” Black Sun’s Zenith is in a graveyard, has gained flashback (due to Recoup, perhaps), and is cast from that graveyard. Black Sun’s Zenith will be exiled, and its owner’s library will be shuffled.",
+      "701.24d": "If an effect would cause a player to shuffle a set of objects into a library, that library is shuffled even if there are no objects in that set.\nExample: Loaming Shaman says “When this creature enters, target player shuffles any number of target cards from their graveyard into their library.” It enters the battlefield, its ability triggers, and no cards are targeted. When the ability resolves, the targeted player will still have to shuffle their library.",
+      "701.24e": "If an effect causes a player to shuffle a library containing zero or one cards, abilities that trigger when a library is shuffled will still trigger.",
+      "701.24f": "If two or more effects cause a library to be shuffled multiple times simultaneously, abilities that trigger when that library is shuffled will trigger that many times.",
+      "701.24g": "If an effect would cause a player to shuffle a library at the same time that an object would be put into a certain position in that library, the result is a shuffled library that’s randomized except that the object is in the specified position.\nExample: Darksteel Colossus and Gravebane Zombie are put into a player’s graveyard from the battlefield at the same time. Darksteel Colossus says in part “If Darksteel Colossus would be put into a graveyard from anywhere, reveal Darksteel Colossus and shuffle it into its owner’s library instead.” Gravebane Zombie says “If this creature would die, put it on top of its owner’s library instead.” The player shuffles Darksteel Colossus into their library and puts Gravebane Zombie on top of that library."
+    },
+    "reference": {
+      "title": "Shuffle",
+      "rules": [
+        "701.24a",
+        "701.24b",
+        "701.24c",
+        "701.24d",
+        "701.24e",
+        "701.24f",
+        "701.24g"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "tap",
+    "term": "Tap",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\btap\\b|\\{T\\}",
+    "clauses": {
+      "701.26a": "To tap a permanent, turn it sideways from an upright position. Only untapped permanents can be tapped."
+    },
+    "reference": {
+      "title": "Tap",
+      "rules": [
+        "701.26a"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "untap",
+    "term": "Untap",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\buntap\\b|\\{Q\\}",
+    "clauses": {
+      "701.26b": "To untap a permanent, rotate it back to the upright position from a sideways position. Only tapped permanents can be untapped."
+    },
+    "reference": {
+      "title": "Untap",
+      "rules": [
+        "701.26b"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "vote",
+    "term": "Vote",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\b(vote|votes|voted|voting)\\b",
+    "clauses": {
+      "701.38a": "Some spells and abilities instruct players to vote for one choice from a list of options to determine some aspect of the effect of that spell or ability. To vote, each player, starting with a specified player and proceeding in turn order, chooses one of those choices.",
+      "701.38b": "The listed choices may be objects, words with no rules meaning that are each connected to a different effect, or other variables relevant to the resolution of the spell or ability.",
+      "701.38c": "If the text of a spell or ability refers to “voting,” it refers only to an actual vote, not to any spell or ability that involves the players making choices or decisions without using the word “vote.”",
+      "701.38d": "If an effect gives a player multiple votes, those votes all happen at the same time the player would otherwise have voted."
+    },
+    "reference": {
+      "title": "Vote",
+      "rules": [
+        "701.38a",
+        "701.38b",
+        "701.38c",
+        "701.38d"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "planeswalk",
+    "term": "Planeswalk",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bplaneswalk(?:s|ed|ing)?\\b",
+    "clauses": {
+      "701.31a": "A player may planeswalk only during a Planechase game. Only the planar controller may planeswalk. See rule 901, “Planechase.”",
+      "701.31b": "To planeswalk is to put each face-up plane card and phenomenon card on the bottom of its owner’s planar deck face down, then move the top card of your planar deck off that planar deck and turn it face up.",
+      "701.31c": "A player may planeswalk as the result of the “planeswalking ability” (see rule 901.8), because the owner of a face-up plane card or phenomenon card leaves the game (see rule 901.10), or because a phenomenon’s triggered ability leaves the stack (see rule 704.6f). Abilities may also instruct a player to planeswalk.",
+      "701.31d": "The plane card that’s turned face up is the plane the player planeswalks to. The plane card that’s turned face down or that leaves the game is the plane the player planeswalks away from. The same is true with respect to phenomena."
+    },
+    "reference": {
+      "title": "Planeswalk",
+      "rules": [
+        "701.31a",
+        "701.31b",
+        "701.31c",
+        "701.31d"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "abandon",
+    "term": "Abandon",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\babandon (?:this|that|a|the) scheme\\b",
+    "clauses": {
+      "701.33a": "Only a face-up ongoing scheme card may be abandoned, and only during an Archenemy game. See rule 314, “Schemes,” and rule 904, “Archenemy.”",
+      "701.33b": "To abandon a scheme, turn it face down and put it on the bottom of its owner’s scheme deck."
+    },
+    "reference": {
+      "title": "Abandon",
+      "rules": [
+        "701.33a",
+        "701.33b"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "set in motion",
+    "term": "Set in motion",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bset (?:this scheme |a scheme |schemes |)in motion\\b",
+    "clauses": {
+      "701.32a": "Only a scheme card may be set in motion, and only during an Archenemy game. Only the archenemy may set a scheme card in motion. See rule 314, “Schemes,” and rule 904, “Archenemy.”",
+      "701.32b": "To set a scheme in motion, move it off the top of your scheme deck if it’s on top of your scheme deck and turn it face up if it isn’t face up. That scheme is considered to have been set in motion even if neither of these actions was performed on it.",
+      "701.32c": "Schemes may only be set in motion one at a time. If a player is instructed to set multiple schemes in motion, that player sets a scheme in motion that many times."
+    },
+    "reference": {
+      "title": "Set in motion",
+      "rules": [
+        "701.32a",
+        "701.32b",
+        "701.32c"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "conjure",
+    "term": "Conjure",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Conjure",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Designing for Alchemy | MAGIC: THE GATHERING",
+        "section": "How Can Our Mechanics Support a Dynamic Format?",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/designing-alchemy-2021-12-08",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "d77c8d3e0a26c37607aab5933ed10ac334563c3c0d77c23f449a1ec8b76fa3f0"
+      }
+    }
+  },
+  {
+    "key": "harness",
+    "term": "Harness",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": "\\bharness The Soul Stone\\b",
+    "clauses": {
+      "701.64a": "“Harness [this permanent]” means “If this permanent isn’t harnessed, it becomes harnessed.”",
+      "701.64b": "Harnessed is a designation that has no rules meaning other than to act as a marker that other spells and abilities can identify. Only permanents can be or become harnessed. Once a permanent becomes harnessed, it stays harnessed until it leaves the battlefield. Harnessed is neither an ability nor part of the permanent’s copiable values."
+    },
+    "reference": {
+      "title": "Harness",
+      "rules": [
+        "701.64a",
+        "701.64b"
+      ],
+      "verification": "verified"
+    }
+  },
+  {
+    "key": "draft from a spellbook",
+    "term": "Draft from a spellbook",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Draft from a spellbook",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Designing for Alchemy | MAGIC: THE GATHERING",
+        "section": "How Can Our Mechanics Support a Dynamic Format?",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/designing-alchemy-2021-12-08",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "d77c8d3e0a26c37607aab5933ed10ac334563c3c0d77c23f449a1ec8b76fa3f0"
+      }
+    }
+  },
+  {
+    "key": "heist",
+    "term": "Heist",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Heist",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "MTG Arena Announcements – April 29, 2024",
+        "section": "Alchemy: Thunder Junction",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-april-29-2024",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "be0ca2b500f9f16aa9779370c64f997f10f647e2bacf434f255c44a532cefc70"
+      }
+    }
+  },
+  {
+    "key": "incorporate",
+    "term": "Incorporate",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Incorporate",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "MTG Arena Announcements – March 4, 2024",
+        "section": "Alchemy: Karlov Manor Arrives Tomorrow!",
+        "url": "https://magic.wizards.com/en/news/mtg-arena/mtg-arena-announcements-march-4-2024",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "5c0ea16e9ec7dec63fe991135ee0cef7371adb86b53d2b42c14828e26fb27655"
+      }
+    }
+  },
+  {
+    "key": "assimilate",
+    "term": "Assimilate",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Assimilate",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Collecting Magic: The Gathering® | Star Trek™: A First Look",
+        "section": "The Mechanics of Magic: The Gathering | Star Trek",
+        "url": "https://magic.wizards.com/en/news/feature/collecting-star-trek",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "c681999ee3dff2d4eec6f1b6205a4ba3d81536538396e48a98ae85c991cd62e1"
+      }
+    }
+  },
+  {
+    "key": "face a dilemma",
+    "term": "Face a dilemma",
+    "category": "keyword action",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Face a dilemma",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Collecting Magic: The Gathering® | Star Trek™: A First Look",
+        "section": "The Mechanics of Magic: The Gathering | Star Trek",
+        "url": "https://magic.wizards.com/en/news/feature/collecting-star-trek",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "c681999ee3dff2d4eec6f1b6205a4ba3d81536538396e48a98ae85c991cd62e1"
+      }
+    }
+  },
+  {
+    "key": "hero's reward",
+    "term": "Hero's Reward",
+    "category": "ability word",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Hero's Reward",
+      "rules": [],
+      "verification": "provider-card-example",
+      "referenceKind": "provider-card-example",
+      "source": {
+        "title": "Oracle card record",
+        "section": "Pheres-Band Revelers",
+        "url": "https://scryfall.com/card/tdag/5/pheres-band-revelers",
+        "kind": "card-example",
+        "verifiedOn": "2026-10-19"
+      }
+    }
+  },
+  {
+    "key": "kinfall",
+    "term": "Kinfall",
+    "category": "ability word",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Kinfall",
+      "rules": [],
+      "verification": "provider-card-example",
+      "referenceKind": "provider-card-example",
+      "source": {
+        "title": "Oracle card record",
+        "section": "Plane-Merge Elf",
+        "url": "https://scryfall.com/card/cmb2/83/plane-merge-elf",
+        "kind": "card-example",
+        "verifiedOn": "2026-10-19"
+      }
+    }
+  },
+  {
+    "key": "landship",
+    "term": "Landship",
+    "category": "ability word",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Landship",
+      "rules": [],
+      "verification": "provider-card-example",
+      "referenceKind": "provider-card-example",
+      "source": {
+        "title": "Oracle card record",
+        "section": "Plane-Merge Elf",
+        "url": "https://scryfall.com/card/cmb2/83/plane-merge-elf",
+        "kind": "card-example",
+        "verifiedOn": "2026-10-19"
+      }
+    }
+  },
+  {
+    "key": "legacy",
+    "term": "Legacy",
+    "category": "ability word",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Legacy",
+      "rules": [],
+      "verification": "verified",
+      "referenceKind": "official-mechanic-reference",
+      "source": {
+        "title": "Mystery Booster Release Notes | MAGIC: THE GATHERING",
+        "section": "Gold Mine; Inspirational Antelope",
+        "url": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11",
+        "kind": "article",
+        "verifiedOn": "2026-10-19",
+        "sourceSha256": "85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590"
+      }
+    }
+  },
+  {
+    "key": "actualize",
+    "term": "Actualize",
+    "category": "ability word",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Actualize",
+      "rules": [],
+      "verification": "provider-card-example",
+      "referenceKind": "provider-card-example",
+      "source": {
+        "title": "Oracle card record",
+        "section": "Etali, Primal Garden",
+        "url": "https://scryfall.com/card/yfra/15/etali-primal-garden",
+        "kind": "card-example",
+        "verifiedOn": "2026-10-19"
+      }
+    }
+  },
+  {
+    "key": "covercast",
+    "term": "Covercast",
+    "category": "ability word",
+    "review": "catalog-gaps-2026-10-19",
+    "discovery": "reviewed-search",
+    "pattern": null,
+    "clauses": {},
+    "reference": {
+      "title": "Covercast",
+      "rules": [],
+      "verification": "provider-card-example",
+      "referenceKind": "provider-card-example",
+      "source": {
+        "title": "Oracle card record",
+        "section": "Summitfest Closing Ceremony",
+        "url": "https://scryfall.com/card/ysos/28/summitfest-closing-ceremony",
+        "kind": "card-example",
+        "verifiedOn": "2026-10-19"
+      }
+    }
+  }
+]

@@ -1,0 +1,761 @@
+{
+  "checkedOn": "2026-10-18",
+  "scope": "Read-only live query smoke tests. Five-color Commander baseline; metadata consistency only. Not enabled in the application; negative fixtures and semantic review still needed before activation. Counts are search matches, not popularity.",
+  "nativePositive": 20,
+  "nativeZero": 3,
+  "textPositive": 7,
+  "receipts": [
+    {
+      "label": "Daybound",
+      "expression": "kw:\"Daybound\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Daybound\")",
+      "status": 200,
+      "total": 35,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+          "keywords": [
+            "Transform",
+            "Daybound",
+            "Nightbound"
+          ]
+        },
+        {
+          "name": "Avabruck Caretaker // Hollowhenge Huntmaster",
+          "keywords": [
+            "Transform",
+            "Daybound",
+            "Hexproof",
+            "Nightbound"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Daybound%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Daybound%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Nightbound",
+      "expression": "kw:\"Nightbound\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Nightbound\")",
+      "status": 200,
+      "total": 35,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+          "keywords": [
+            "Transform",
+            "Daybound",
+            "Nightbound"
+          ]
+        },
+        {
+          "name": "Avabruck Caretaker // Hollowhenge Huntmaster",
+          "keywords": [
+            "Transform",
+            "Daybound",
+            "Hexproof",
+            "Nightbound"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Nightbound%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Nightbound%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Doctor's companion",
+      "expression": "kw:\"Doctor's companion\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Doctor's companion\")",
+      "status": 200,
+      "total": 27,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Ace, Fearless Rebel",
+          "keywords": [
+            "Nitro-9",
+            "Fight",
+            "Doctor's companion"
+          ]
+        },
+        {
+          "name": "Adric, Mathematical Genius",
+          "keywords": [
+            "Ultimate Sacrifice",
+            "Doctor's companion"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Doctor's%20companion%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Doctor's%20companion%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Commander ninjutsu",
+      "expression": "kw:\"Commander ninjutsu\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Commander ninjutsu\")",
+      "status": 200,
+      "total": 1,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Yuriko, the Tiger's Shadow",
+          "keywords": [
+            "Commander ninjutsu"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Commander%20ninjutsu%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Commander%20ninjutsu%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Multikicker",
+      "expression": "kw:\"Multikicker\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Multikicker\")",
+      "status": 200,
+      "total": 19,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Apex Hawks",
+          "keywords": [
+            "Flying",
+            "Multikicker"
+          ]
+        },
+        {
+          "name": "Batroc the Leaper",
+          "keywords": [
+            "Multikicker"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Multikicker%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Multikicker%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Basic landcycling",
+      "expression": "kw:\"Basic landcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Basic landcycling\")",
+      "status": 200,
+      "total": 36,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Absorb Vis",
+          "keywords": [
+            "Landcycling",
+            "Basic landcycling",
+            "Typecycling",
+            "Cycling"
+          ]
+        },
+        {
+          "name": "A.I.M. Scientists",
+          "keywords": [
+            "Landcycling",
+            "Basic landcycling",
+            "Typecycling",
+            "Cycling",
+            "Connive"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Basic%20landcycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Basic%20landcycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Islandcycling",
+      "expression": "kw:\"Islandcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Islandcycling\")",
+      "status": 200,
+      "total": 11,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Daggermaw Megalodon",
+          "keywords": [
+            "Islandcycling",
+            "Vigilance",
+            "Landcycling",
+            "Typecycling",
+            "Cycling"
+          ]
+        },
+        {
+          "name": "Giant Koi",
+          "keywords": [
+            "Islandcycling",
+            "Landcycling",
+            "Typecycling",
+            "Waterbend",
+            "Cycling"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Islandcycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Islandcycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Swampcycling",
+      "expression": "kw:\"Swampcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Swampcycling\")",
+      "status": 200,
+      "total": 11,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Bebop, Warthog Warrior",
+          "keywords": [
+            "Landcycling",
+            "Menace",
+            "Typecycling",
+            "Cycling",
+            "Swampcycling"
+          ]
+        },
+        {
+          "name": "Canyon Crawler",
+          "keywords": [
+            "Landcycling",
+            "Food",
+            "Typecycling",
+            "Cycling",
+            "Swampcycling",
+            "Deathtouch"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Swampcycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Swampcycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Mountaincycling",
+      "expression": "kw:\"Mountaincycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Mountaincycling\")",
+      "status": 200,
+      "total": 13,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Bedhead Beastie",
+          "keywords": [
+            "Mountaincycling",
+            "Landcycling",
+            "Menace",
+            "Typecycling",
+            "Cycling"
+          ]
+        },
+        {
+          "name": "Chartooth Cougar",
+          "keywords": [
+            "Mountaincycling",
+            "Landcycling",
+            "Typecycling",
+            "Cycling"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Mountaincycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Mountaincycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Forestcycling",
+      "expression": "kw:\"Forestcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Forestcycling\")",
+      "status": 200,
+      "total": 11,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Balamb T-Rexaur",
+          "keywords": [
+            "Landcycling",
+            "Trample",
+            "Forestcycling",
+            "Typecycling",
+            "Cycling"
+          ]
+        },
+        {
+          "name": "Elvish Aberration",
+          "keywords": [
+            "Landcycling",
+            "Forestcycling",
+            "Typecycling",
+            "Cycling"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Forestcycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Forestcycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Wizardcycling",
+      "expression": "kw:\"Wizardcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Wizardcycling\")",
+      "status": 200,
+      "total": 2,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Step Through",
+          "keywords": [
+            "Wizardcycling",
+            "Typecycling",
+            "Cycling"
+          ]
+        },
+        {
+          "name": "Vedalken Aethermage",
+          "keywords": [
+            "Wizardcycling",
+            "Typecycling",
+            "Flash",
+            "Cycling"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Wizardcycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Wizardcycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Slivercycling",
+      "expression": "kw:\"Slivercycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Slivercycling\")",
+      "status": 200,
+      "total": 1,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Homing Sliver",
+          "keywords": [
+            "Typecycling",
+            "Cycling",
+            "Slivercycling"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Slivercycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Slivercycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Halflingcycling",
+      "expression": "kw:\"Halflingcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Halflingcycling\")",
+      "status": 200,
+      "total": 1,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Hobbit Hole",
+          "keywords": [
+            "Cycling",
+            "Halflingcycling"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Halflingcycling%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Halflingcycling%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Swampwalk",
+      "expression": "kw:\"Swampwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Swampwalk\")",
+      "status": 200,
+      "total": 41,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Anaconda",
+          "keywords": [
+            "Landwalk",
+            "Swampwalk"
+          ]
+        },
+        {
+          "name": "Anurid Murkdiver",
+          "keywords": [
+            "Landwalk",
+            "Swampwalk"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Swampwalk%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Swampwalk%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Mountainwalk",
+      "expression": "kw:\"Mountainwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Mountainwalk\")",
+      "status": 200,
+      "total": 17,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Canyon Wildcat",
+          "keywords": [
+            "Landwalk",
+            "Mountainwalk"
+          ]
+        },
+        {
+          "name": "Cavern Crawler",
+          "keywords": [
+            "Landwalk",
+            "Mountainwalk"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Mountainwalk%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Mountainwalk%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Plainswalk",
+      "expression": "kw:\"Plainswalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Plainswalk\")",
+      "status": 200,
+      "total": 4,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Boggart Arsonists",
+          "keywords": [
+            "Landwalk",
+            "Plainswalk"
+          ]
+        },
+        {
+          "name": "Graceful Antelope",
+          "keywords": [
+            "Landwalk",
+            "Plainswalk"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Plainswalk%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Plainswalk%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Desertwalk",
+      "expression": "kw:\"Desertwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Desertwalk\")",
+      "status": 200,
+      "total": 2,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Desert Nomads",
+          "keywords": [
+            "Landwalk",
+            "Desertwalk"
+          ]
+        },
+        {
+          "name": "Hazezon, Shaper of Sand",
+          "keywords": [
+            "Landwalk",
+            "Desertwalk"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Desertwalk%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Desertwalk%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Legendary landwalk",
+      "expression": "kw:\"Legendary landwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Legendary landwalk\")",
+      "status": 200,
+      "total": 2,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Ayumi, the Last Visitor",
+          "keywords": [
+            "Landwalk",
+            "Legendary landwalk"
+          ]
+        },
+        {
+          "name": "Livonya Silone",
+          "keywords": [
+            "Landwalk",
+            "First strike",
+            "Legendary landwalk"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Legendary%20landwalk%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Legendary%20landwalk%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Nonbasic landwalk",
+      "expression": "kw:\"Nonbasic landwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Nonbasic landwalk\")",
+      "status": 200,
+      "total": 1,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Dryad Sophisticate",
+          "keywords": [
+            "Landwalk",
+            "Nonbasic landwalk"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Nonbasic%20landwalk%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Nonbasic%20landwalk%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Descend",
+      "expression": "kw:\"Descend\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Descend\")",
+      "status": 200,
+      "total": 17,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Akawalli, the Seething Tower",
+          "keywords": [
+            "Descend"
+          ]
+        },
+        {
+          "name": "Basking Capybara",
+          "keywords": [
+            "Descend"
+          ]
+        }
+      ],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Descend%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Descend%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Absorb",
+      "expression": "kw:\"Absorb\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Absorb\")",
+      "status": 404,
+      "total": 0,
+      "hasMore": false,
+      "examples": [],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Absorb%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Absorb%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Poisonous",
+      "expression": "kw:\"Poisonous\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Poisonous\")",
+      "status": 404,
+      "total": 0,
+      "hasMore": false,
+      "examples": [],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Poisonous%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Poisonous%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Friends forever",
+      "expression": "kw:\"Friends forever\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Friends forever\")",
+      "status": 404,
+      "total": 0,
+      "hasMore": false,
+      "examples": [],
+      "mismatches": [],
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Friends%20forever%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(kw%3A%22Friends%20forever%22)&unique=cards&order=name"
+    },
+    {
+      "label": "The Monarch",
+      "expression": "o:\"the monarch\"",
+      "query": "(f:commander id<=wubrg) (o:\"the monarch\")",
+      "status": 200,
+      "total": 62,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Aragorn, King of Gondor",
+          "keywords": [
+            "Lifelink",
+            "Vigilance"
+          ]
+        },
+        {
+          "name": "Archivist of Gondor",
+          "keywords": []
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22the%20monarch%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22the%20monarch%22)&unique=cards&order=name"
+    },
+    {
+      "label": "The Initiative",
+      "expression": "o:\"the initiative\"",
+      "query": "(f:commander id<=wubrg) (o:\"the initiative\")",
+      "status": 200,
+      "total": 26,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Aarakocra Sneak",
+          "keywords": [
+            "Flying"
+          ]
+        },
+        {
+          "name": "Avenging Hunter",
+          "keywords": [
+            "Trample"
+          ]
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22the%20initiative%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22the%20initiative%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Energy",
+      "expression": "o:\"{E}\"",
+      "query": "(f:commander id<=wubrg) (o:\"{E}\")",
+      "status": 200,
+      "total": 142,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Aether Chaser",
+          "keywords": [
+            "First strike"
+          ]
+        },
+        {
+          "name": "Aetherflux Conduit",
+          "keywords": []
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22%7BE%7D%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22%7BE%7D%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Expend",
+      "expression": "o:\"expend\"",
+      "query": "(f:commander id<=wubrg) (o:\"expend\")",
+      "status": 200,
+      "total": 12,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Bakersbane Duo",
+          "keywords": [
+            "Food"
+          ]
+        },
+        {
+          "name": "Bark-Knuckle Boxer",
+          "keywords": []
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22expend%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22expend%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Rad counters",
+      "expression": "o:\"rad counter\"",
+      "query": "(f:commander id<=wubrg) (o:\"rad counter\")",
+      "status": 200,
+      "total": 23,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Acquired Mutation",
+          "keywords": [
+            "Goad",
+            "Enchant"
+          ]
+        },
+        {
+          "name": "Bloatfly Swarm",
+          "keywords": [
+            "Flying"
+          ]
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22rad%20counter%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22rad%20counter%22)&unique=cards&order=name"
+    },
+    {
+      "label": "The Ring tempts you",
+      "expression": "o:\"the Ring tempts you\"",
+      "query": "(f:commander id<=wubrg) (o:\"the Ring tempts you\")",
+      "status": 200,
+      "total": 54,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Aragorn, Company Leader",
+          "keywords": [
+            "Vigilance",
+            "Deathtouch"
+          ]
+        },
+        {
+          "name": "Bilbo, Retired Burglar",
+          "keywords": [
+            "Treasure"
+          ]
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22the%20Ring%20tempts%20you%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22the%20Ring%20tempts%20you%22)&unique=cards&order=name"
+    },
+    {
+      "label": "Vote",
+      "expression": "o:\"vote\"",
+      "query": "(f:commander id<=wubrg) (o:\"vote\")",
+      "status": 200,
+      "total": 41,
+      "hasMore": false,
+      "examples": [
+        {
+          "name": "Ballot Broker",
+          "keywords": []
+        },
+        {
+          "name": "Basri's Aegis",
+          "keywords": []
+        }
+      ],
+      "mismatches": null,
+      "url": "https://api.scryfall.com/cards/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22vote%22)&unique=cards&order=name",
+      "scryfallSearch": "https://scryfall.com/search?q=(f%3Acommander%20id%3C%3Dwubrg)%20(o%3A%22vote%22)&unique=cards&order=name"
+    }
+  ]
+}

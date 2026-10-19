@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-18T14:29:22.597Z",
+  "checks": [
+    {
+      "name": "hakbal",
+      "status": "Import complete. Deck + Commander: 100/100 cards. Extras: 0 cards in 0 entries. 84 deck entries resolved; 0 imported entries need attention. 84 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Hakbal of the Surging Soul.",
+      "commander": "Hakbal of the Surging Soul\nLCC / 3 · EN · COMMANDER\nAssumed printing · your list supplied a name only\nRequested finish: foil\n\nSelect the card to inspect its rules and printing.",
+      "counts": "100physical cards\n84input entries\n82resolved printings\n53passages"
+    },
+    {
+      "name": "veyran",
+      "status": "Import complete. Deck + Commander: 100/100 cards. Extras: 1 card in 1 entry. 78 deck entries resolved; 0 imported entries need attention. 0 deck entries use assumed printings; 78 use supplied editions; 0 use user-selected editions. Commander: Veyran, Voice of Duality.",
+      "commander": "Veyran, Voice of Duality\nC21 / 3 · EN · COMMANDER\nSupplied printing · verified coordinates\nRequested finish: foil\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "name": "obeka-review",
+      "status": "Commander placement needs confirmation. Your loaded deck has not changed.",
+      "review": "Line 105: Obeka, Splitter of Seconds is in an unlabeled final block after Sideboard. Confirm whether it is your commander. Deck: 99 cards; extras: 9.",
+      "loadedCommander": "Veyran, Voice of Duality\nC21 / 3 · EN · COMMANDER\nSupplied printing · verified coordinates\nRequested finish: foil\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "name": "obeka-b",
+      "status": "Import complete. Deck + Commander: 100/100 cards. Extras: 8 cards in 8 entries. 94 deck entries resolved; 0 imported entries need attention. 94 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Obeka, Splitter of Seconds.",
+      "commander": "Obeka, Splitter of Seconds\nOTJ / 222 · EN · COMMANDER\nAssumed printing · your list supplied a name only\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "name": "malformed-junk",
+      "status": "Import blocked. Card total is incomplete because one or more quantities are invalid.\n1 invalid import line. Correct the following before importing:\nLine 11: Unrecognized line: expected a positive quantity followed by a card name. Quantity must be a positive integer from 1 to 999. Source: aksjfl;asjflk;asjf;lkajwklj;lk23j4l;1k2j34",
+      "loadedCommander": "Obeka, Splitter of Seconds\nOTJ / 222 · EN · COMMANDER\nAssumed printing · your list supplied a name only\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "name": "unknown-name",
+      "status": "Import incomplete: 1 deck entries could not be matched. Your loaded deck has not changed.\nLine 11: Card name not found: NotARealCard_ImportRedteam_7391. Check spelling or supply printing coordinates.",
+      "loadedCommander": "Obeka, Splitter of Seconds\nOTJ / 222 · EN · COMMANDER\nAssumed printing · your list supplied a name only\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "name": "alternate-name-diagnostic",
+      "status": "Import complete. Deck + Commander: 100/100 cards. Extras: 0 cards in 0 entries. 8 deck entries resolved; 0 imported entries need attention. 8 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Zilortha, Strength Incarnate.",
+      "commander": "◇\nLoading printing…\nZilortha, Strength Incarnate\nIKO / 275 · EN · COMMANDER\nAssumed printing · your list supplied a name only\nImported as Godzilla, King of the Monsters · Oracle name: Zilortha, Strength Incarnate\n\nSelect the card to inspect its rules and printing."
+    },
+    {
+      "name": "alias-edition-correction",
+      "ledgerRow": "7. Black Panther's Claws\n\nDECK · QUANTITY 1 · RESOLVED\n\n1 Black Panther's Claws\n\nReturned: Hammer of Nazahn · CMM 388 · en · e77a8ac1-f40d-423e-a0b3-0a8e236a6c1e\n\nChange reference printing\n\nUser-selected printing",
+      "sourceUnchanged": true
+    },
+    {
+      "name": "card-dialog-correction",
+      "provenance": "Scryfall card data · User-selected printing",
+      "alias": "Imported as Black Panther's Claws · Oracle name: Hammer of Nazahn"
+    },
+    {
+      "name": "card-dialog-assumed",
+      "provenance": "Scryfall card data · Assumed printing · your list supplied a name only"
+    }
+  ],
+  "consoleErrors": [],
+  "passed": true
+}

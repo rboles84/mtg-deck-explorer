@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\public\\catalog-gap-data.mjs",
+    "Hash": "0165F68391906389965C9B10370DCC2F306E600A69F0C1DD67966A83A36B6038"
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\public\\catalog-gap-index.mjs",
+    "Hash": "E99D9390EACE93EA0BD636221943AFD74D3B38992EC96C1CDE3160485CB04BED"
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\lib\\mechanic-discovery.catalog-gaps.json",
+    "Hash": "AD1394FE34B3C9D4D2E4EAED9A8A82566B93096D2CFC49E89CE5663FEA3A20A0"
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\public\\app.mjs",
+    "Hash": "C6FB6E8E8345911F9AA88C9D9916DDC91CEB5F725C2E69CE2941748C8260E39F"
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\tests\\mechanics-ui.test.mjs",
+    "Hash": "24260D1878A76318FBB0AC6B090988640B55558E0985260D73F174B686C5A0A4"
+  }
+]

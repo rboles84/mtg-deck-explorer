@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const dir='reports/remaining-six-sources-20261019';
+const r=JSON.parse(fs.readFileSync(dir+'/receipts.json')).find(r=>r.status===200&&r.url==='https://www.youtube.com/watch?v=NuWq8-rnJ38');
+const html=fs.readFileSync(dir+'/'+r.file,'utf8');
+const match=html.match(/var ytInitialPlayerResponse = (.*?);<\/script>/s);
+const data=JSON.parse(match[1]);
+const track=data.captions.playerCaptionsTracklistRenderer.captionTracks.find(t=>t.languageCode==='en');
+fs.writeFileSync(dir+'/video-lead.json',JSON.stringify({title:data.videoDetails.title,author:data.videoDetails.author,url:r.url,captionType:track.kind,disposition:'Auto-generated captions are a navigation aid only, not accepted definition text.'},null,2)+'\n');
+process.argv=[process.argv[0],process.argv[1],track.baseUrl];
+await import('./collect.mjs');

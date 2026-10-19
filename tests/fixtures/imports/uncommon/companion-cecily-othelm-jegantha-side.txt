@@ -1,0 +1,94 @@
+1 Amulet of Vigor
+1 And They Shall Know No Fear
+1 Arcane Signet
+1 Atalan Jackal
+1 Azorius Guildgate
+1 Baldur's Gate
+1 Basilisk Gate
+1 Bastion Protector
+1 Belisarius Cawl
+1 Biophagus
+1 Birth of the Imperium
+1 Bjorna, Nightfall Alchemist
+1 Black Dragon Gate
+1 Blitzwing, Cruel Tormentor
+1 Boros Guildgate
+1 Cecily, Haunted Mage
+1 Chromatic Lantern
+1 Citadel Gate
+1 Cliffgate
+1 Cloudshredder Sliver
+1 Command Tower
+1 Commissar Severina Raine
+1 Deny the Witch
+1 Dimir Guildgate
+1 Elmar, Ulvenwald Informant
+1 Elvish Reclaimer
+3 Forest
+1 Gatebreaker Ram
+1 Gates Ablaze
+1 Gateway Plaza
+1 Go-Shintai of Ancient Wars
+1 Go-Shintai of Boundless Vigor
+1 Go-Shintai of Hidden Cruelty
+1 Go-Shintai of Life's Origin
+1 Go-Shintai of Lost Wisdom
+1 Go-Shintai of Shared Purpose
+1 Goldbug, Humanity's Ally
+1 Golgari Guildgate
+1 Gond Gate
+1 Gruul Guildgate
+1 Guild Summit
+1 Heap Gate
+1 Hivestone
+1 Honden of Cleansing Fire
+1 Honden of Infinite Rage
+1 Honden of Life's Web
+1 Honden of Night's Reach
+1 Honden of Seeing Winds
+1 Inquisitor Greyfax
+1 Iridian Maelstrom
+3 Island
+1 Izzet Guildgate
+1 Leyline Binding
+1 Maelstrom Nexus
+1 Mana Crypt
+1 Manor Gate
+1 Marneus Calgar
+1 Maskwood Nexus
+1 Maze's End
+1 Megatron, Tyrant
+3 Mountain
+1 Nine-Fingers Keene
+1 Open the Gates
+1 Optimus Prime, Hero
+1 Orzhov Guildgate
+1 Othelm, Sigardian Outcast
+1 Pir's Whim
+3 Plains
+1 Prismatic Vista
+1 Rakdos Guildgate
+1 Sanctum of All
+1 Sanctum of Calm Waters
+1 Sanctum of Fruitful Harvest
+1 Sanctum of Shattered Heights
+1 Sanctum of Stone Fangs
+1 Sanctum of Tranquil Light
+1 Sea Gate
+1 Selesnya Guildgate
+1 Simic Guildgate
+1 Sol Ring
+1 Sophina, Spearsage Deserter
+1 Soundwave, Sonic Spy
+1 Sphere of Safety
+3 Swamp
+1 Tempt with Discovery
+1 The First Sliver
+1 Thran Portal
+1 Timeless Lotus
+1 Unite the Coalition
+1 Wernog, Rider's Chaplain
+
+Sideboard:
+1 Jegantha, the Wellspring
+

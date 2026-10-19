@@ -1,0 +1,714 @@
+{
+  "checkedAt": "2026-10-19T01:01:49.585Z",
+  "requests": [
+    {
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+      "checkedAt": "2026-10-19T01:01:50.037Z"
+    },
+    {
+      "url": "https://magic.wizards.com/en/news/feature/the-lost-caverns-of-ixalan-mechanics",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "a97b1961abb82b997df2944c486f9db6c73d70e114a2cabe58eff025ea6eb3d2",
+      "checkedAt": "2026-10-19T01:01:51.367Z"
+    },
+    {
+      "url": "https://magic.wizards.com/en/news/feature/final-fantasy-release-notes",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "ee9d68798e632ad14267429752d8a0a23c943aca2cd8aa84ef7108816142c22f",
+      "checkedAt": "2026-10-19T01:01:54.140Z"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "method": "POST",
+      "requestBody": {
+        "identifiers": [
+          {
+            "name": "Yuriko, the Tiger's Shadow"
+          },
+          {
+            "name": "Ninja of the Deep Hours"
+          },
+          {
+            "name": "Rose Tyler"
+          },
+          {
+            "name": "Thrasios, Triton Hero"
+          },
+          {
+            "name": "Arlinn, the Pack's Hope"
+          },
+          {
+            "name": "Huntmaster of the Fells"
+          },
+          {
+            "name": "Everflowing Chalice"
+          },
+          {
+            "name": "Into the Roil"
+          },
+          {
+            "name": "Absorb Vis"
+          },
+          {
+            "name": "Shoreline Ranger"
+          },
+          {
+            "name": "Twisted Abomination"
+          },
+          {
+            "name": "Oliphaunt"
+          },
+          {
+            "name": "Elvish Aberration"
+          },
+          {
+            "name": "Vedalken Aethermage"
+          },
+          {
+            "name": "Homing Sliver"
+          },
+          {
+            "name": "Hobbit Hole"
+          },
+          {
+            "name": "Anaconda"
+          },
+          {
+            "name": "Mountain Goat"
+          },
+          {
+            "name": "Graceful Antelope"
+          },
+          {
+            "name": "Hazezon, Shaper of Sand"
+          },
+          {
+            "name": "Ayumi, the Last Visitor"
+          },
+          {
+            "name": "Dryad Sophisticate"
+          },
+          {
+            "name": "Basking Capybara"
+          },
+          {
+            "name": "Broodrage Mycoid"
+          },
+          {
+            "name": "Cid, Freeflier Pilot"
+          },
+          {
+            "name": "Direct Current"
+          },
+          {
+            "name": "Court of Grace"
+          },
+          {
+            "name": "Aether Hub"
+          }
+        ]
+      },
+      "status": 200,
+      "sha256": "0bf014a1c6e4db480d324235872af01ac17a281e261f32167f02f9c736d3ce7e",
+      "checkedAt": "2026-10-19T01:01:54.807Z",
+      "file": "responses/0bf014a1c6e4db480d324235872af01ac17a281e261f32167f02f9c736d3ce7e.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Commander+ninjutsu%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "11a9e66ccee2dd984330d0a76e5f15af9986548b1ba88a5291163b9204915e6b",
+      "checkedAt": "2026-10-19T01:01:55.068Z",
+      "file": "responses/11a9e66ccee2dd984330d0a76e5f15af9986548b1ba88a5291163b9204915e6b.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Doctor%27s+companion%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "454d448e2cc92f8463b06da0f0ef269ba278d77b120fb661aca24aaeff9c4fbb",
+      "checkedAt": "2026-10-19T01:01:55.642Z",
+      "file": "responses/454d448e2cc92f8463b06da0f0ef269ba278d77b120fb661aca24aaeff9c4fbb.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Daybound%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617",
+      "checkedAt": "2026-10-19T01:01:56.693Z",
+      "file": "responses/a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Nightbound%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617",
+      "checkedAt": "2026-10-19T01:01:57.348Z",
+      "file": "responses/a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Multikicker%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "ecbcf4a103dcb70fbc449d26adf7188d34916ccc27a68a734ae10ce3aed373e0",
+      "checkedAt": "2026-10-19T01:01:57.651Z",
+      "file": "responses/ecbcf4a103dcb70fbc449d26adf7188d34916ccc27a68a734ae10ce3aed373e0.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Basic+landcycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "c72b5f152f5812ec53c30493d997e0cfa0f384bea1b715c73d9ca26cfa1c6938",
+      "checkedAt": "2026-10-19T01:01:58.208Z",
+      "file": "responses/c72b5f152f5812ec53c30493d997e0cfa0f384bea1b715c73d9ca26cfa1c6938.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Islandcycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "68a398d8ec2e4e7f5ffd377fef7701a3b656190ffc79c3b9a5348963655f1eba",
+      "checkedAt": "2026-10-19T01:01:58.644Z",
+      "file": "responses/68a398d8ec2e4e7f5ffd377fef7701a3b656190ffc79c3b9a5348963655f1eba.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Swampcycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "f0379ecdc52965a6d4bb0a371b4830b6284b3dc2a6de1a4901b506c6f9520017",
+      "checkedAt": "2026-10-19T01:01:59.310Z",
+      "file": "responses/f0379ecdc52965a6d4bb0a371b4830b6284b3dc2a6de1a4901b506c6f9520017.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Mountaincycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "32e2c147400ccba87f037c979ca7869ef8fe2d673594ae79642008b7360c83f2",
+      "checkedAt": "2026-10-19T01:01:59.880Z",
+      "file": "responses/32e2c147400ccba87f037c979ca7869ef8fe2d673594ae79642008b7360c83f2.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Forestcycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "d6a28acefb6f7add5342456749de12e3092a0528ff3f43ac6b57cfccc034af0d",
+      "checkedAt": "2026-10-19T01:02:00.438Z",
+      "file": "responses/d6a28acefb6f7add5342456749de12e3092a0528ff3f43ac6b57cfccc034af0d.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Wizardcycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "b69adcb7e4653550985e15dc6069c8bbd629e30e27359db64ef08826f00f1193",
+      "checkedAt": "2026-10-19T01:02:00.841Z",
+      "file": "responses/b69adcb7e4653550985e15dc6069c8bbd629e30e27359db64ef08826f00f1193.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Slivercycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "5dd58cb307a50b59ce0396ce538a69915c4950f76ca8e9b3709a6212a9eb668a",
+      "checkedAt": "2026-10-19T01:02:01.393Z",
+      "file": "responses/5dd58cb307a50b59ce0396ce538a69915c4950f76ca8e9b3709a6212a9eb668a.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Halflingcycling%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "76a681817560ea6c26da49b5878ac9663810303e03de3b89d235731de485cc35",
+      "checkedAt": "2026-10-19T01:02:02.029Z",
+      "file": "responses/76a681817560ea6c26da49b5878ac9663810303e03de3b89d235731de485cc35.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Swampwalk%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "f76e4bf0efa676369d88a652beae44ee73668fe31c228e375b60ad5b589ac74a",
+      "checkedAt": "2026-10-19T01:02:02.560Z",
+      "file": "responses/f76e4bf0efa676369d88a652beae44ee73668fe31c228e375b60ad5b589ac74a.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Mountainwalk%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "9f43e8d4406aadbfe91aa7cfae5b0ce03e765a49276ad95341f80ebba909473f",
+      "checkedAt": "2026-10-19T01:02:03.157Z",
+      "file": "responses/9f43e8d4406aadbfe91aa7cfae5b0ce03e765a49276ad95341f80ebba909473f.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Plainswalk%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "40308729a47645c124c64432c8400c3911ebc6c46d24faa7368ab006eec14a7d",
+      "checkedAt": "2026-10-19T01:02:03.675Z",
+      "file": "responses/40308729a47645c124c64432c8400c3911ebc6c46d24faa7368ab006eec14a7d.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Desertwalk%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "34b4eb6ad95f7da1b6a8cdd018f4b088c510697011e06a33c0477e430fc0d5d5",
+      "checkedAt": "2026-10-19T01:02:04.253Z",
+      "file": "responses/34b4eb6ad95f7da1b6a8cdd018f4b088c510697011e06a33c0477e430fc0d5d5.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Legendary+landwalk%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "f409f84b834562c1f255ef365f28a1b9c5a9f9c4d5cac6071448e75ad4f69701",
+      "checkedAt": "2026-10-19T01:02:04.642Z",
+      "file": "responses/f409f84b834562c1f255ef365f28a1b9c5a9f9c4d5cac6071448e75ad4f69701.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Nonbasic+landwalk%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "a46e33150ce8404ecd6cc28c57156b6bdffeb656ec6cd053b1e5a26d80f90026",
+      "checkedAt": "2026-10-19T01:02:05.350Z",
+      "file": "responses/a46e33150ce8404ecd6cc28c57156b6bdffeb656ec6cd053b1e5a26d80f90026.json"
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Descend%22%29&unique=cards&order=name&dir=asc&include_extras=false",
+      "method": "GET",
+      "requestBody": null,
+      "status": 200,
+      "sha256": "271cb2e72519b356a9f8f3918a330b94dedb187c19b5742e884e7a9fbde4cd51",
+      "checkedAt": "2026-10-19T01:02:05.796Z",
+      "file": "responses/271cb2e72519b356a9f8f3918a330b94dedb187c19b5742e884e7a9fbde4cd51.json"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "rules",
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+      "clauses": [
+        "702.49d",
+        "702.124m",
+        "702.124n",
+        "702.145a",
+        "702.145b",
+        "702.145c",
+        "702.145d",
+        "702.145e",
+        "702.145f",
+        "702.145g",
+        "702.33c",
+        "702.33d",
+        "702.33e",
+        "702.29e",
+        "702.29f",
+        "702.14a",
+        "702.14b",
+        "702.14c",
+        "702.14d",
+        "702.14e",
+        "207.2c"
+      ]
+    },
+    {
+      "kind": "article",
+      "url": "https://magic.wizards.com/en/news/feature/the-lost-caverns-of-ixalan-mechanics",
+      "sha256": "a97b1961abb82b997df2944c486f9db6c73d70e114a2cabe58eff025ea6eb3d2",
+      "quote": "Descend 4 and descend 8 abilities care about there being at least four or eight permanent cards in your graveyard, respectively.",
+      "quoteSha256": "5d19bb46ae63f9728fd3895fa6bfb2cac4c1683db36f3086e86a2eac97c54306"
+    },
+    {
+      "kind": "card-example",
+      "url": "https://magic.wizards.com/en/news/feature/final-fantasy-release-notes",
+      "sha256": "ee9d68798e632ad14267429752d8a0a23c943aca2cd8aa84ef7108816142c22f",
+      "cardName": "Cid, Freeflier Pilot",
+      "matchedBlockSha256": "2111081c55673e23b7d6cd64df66066f52d1ce3eb36a60e0fc1749604c374518",
+      "matchMethod": "named-card-and-label-in-same-paragraph"
+    }
+  ],
+  "queries": [
+    {
+      "label": "Commander ninjutsu",
+      "key": "commander ninjutsu",
+      "expression": "kw:\"Commander ninjutsu\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Commander ninjutsu\")",
+      "totalCards": 1,
+      "responseFile": "responses/11a9e66ccee2dd984330d0a76e5f15af9986548b1ba88a5291163b9204915e6b.json",
+      "responseSha256": "11a9e66ccee2dd984330d0a76e5f15af9986548b1ba88a5291163b9204915e6b",
+      "positive": {
+        "name": "Yuriko, the Tiger's Shadow",
+        "oracleId": "a7043fbd-1dfd-42cf-be4b-cc343d0949e5"
+      },
+      "negative": {
+        "name": "Ninja of the Deep Hours",
+        "oracleId": "1f3c2b00-0000-4ae1-9650-9553accac52e"
+      },
+      "pass": true
+    },
+    {
+      "label": "Doctor's companion",
+      "key": "doctor's companion",
+      "expression": "kw:\"Doctor's companion\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Doctor's companion\")",
+      "totalCards": 27,
+      "responseFile": "responses/454d448e2cc92f8463b06da0f0ef269ba278d77b120fb661aca24aaeff9c4fbb.json",
+      "responseSha256": "454d448e2cc92f8463b06da0f0ef269ba278d77b120fb661aca24aaeff9c4fbb",
+      "positive": {
+        "name": "Rose Tyler",
+        "oracleId": "2f56de72-80d7-48c6-9b57-84fbd252c699"
+      },
+      "negative": {
+        "name": "Thrasios, Triton Hero",
+        "oracleId": "3d867016-2601-4a37-a73d-308898d3bd37"
+      },
+      "pass": true
+    },
+    {
+      "label": "Daybound",
+      "key": "daybound",
+      "expression": "kw:\"Daybound\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Daybound\")",
+      "totalCards": 35,
+      "responseFile": "responses/a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617.json",
+      "responseSha256": "a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617",
+      "positive": {
+        "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+        "oracleId": "f227ce07-7e96-4a36-ab7c-9be6e777d649"
+      },
+      "negative": {
+        "name": "Huntmaster of the Fells // Ravager of the Fells",
+        "oracleId": "582328cd-660d-47a4-bb23-e91e80b9a907"
+      },
+      "pass": true
+    },
+    {
+      "label": "Nightbound",
+      "key": "nightbound",
+      "expression": "kw:\"Nightbound\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Nightbound\")",
+      "totalCards": 35,
+      "responseFile": "responses/a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617.json",
+      "responseSha256": "a78ac0cdb6b2d439ed66c2532b9afa29886fe26667eecfe920d139de27659617",
+      "positive": {
+        "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+        "oracleId": "f227ce07-7e96-4a36-ab7c-9be6e777d649"
+      },
+      "negative": {
+        "name": "Huntmaster of the Fells // Ravager of the Fells",
+        "oracleId": "582328cd-660d-47a4-bb23-e91e80b9a907"
+      },
+      "pass": true
+    },
+    {
+      "label": "Multikicker",
+      "key": "multikicker",
+      "expression": "kw:\"Multikicker\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Multikicker\")",
+      "totalCards": 19,
+      "responseFile": "responses/ecbcf4a103dcb70fbc449d26adf7188d34916ccc27a68a734ae10ce3aed373e0.json",
+      "responseSha256": "ecbcf4a103dcb70fbc449d26adf7188d34916ccc27a68a734ae10ce3aed373e0",
+      "positive": {
+        "name": "Everflowing Chalice",
+        "oracleId": "0a79237e-0811-4a8a-bd4d-db3ca91bff22"
+      },
+      "negative": {
+        "name": "Into the Roil",
+        "oracleId": "c2898bbd-82a4-4d26-b6ee-169b0ebe71b4"
+      },
+      "pass": true
+    },
+    {
+      "label": "Basic landcycling",
+      "key": "basic landcycling",
+      "expression": "kw:\"Basic landcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Basic landcycling\")",
+      "totalCards": 36,
+      "responseFile": "responses/c72b5f152f5812ec53c30493d997e0cfa0f384bea1b715c73d9ca26cfa1c6938.json",
+      "responseSha256": "c72b5f152f5812ec53c30493d997e0cfa0f384bea1b715c73d9ca26cfa1c6938",
+      "positive": {
+        "name": "Absorb Vis",
+        "oracleId": "04ea7e88-7ea5-4b4c-9a7c-2a6ac0bc0682"
+      },
+      "negative": {
+        "name": "Shoreline Ranger",
+        "oracleId": "606fbf99-d3e3-4131-b991-3cb71c003834"
+      },
+      "pass": true
+    },
+    {
+      "label": "Islandcycling",
+      "key": "islandcycling",
+      "expression": "kw:\"Islandcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Islandcycling\")",
+      "totalCards": 11,
+      "responseFile": "responses/68a398d8ec2e4e7f5ffd377fef7701a3b656190ffc79c3b9a5348963655f1eba.json",
+      "responseSha256": "68a398d8ec2e4e7f5ffd377fef7701a3b656190ffc79c3b9a5348963655f1eba",
+      "positive": {
+        "name": "Shoreline Ranger",
+        "oracleId": "606fbf99-d3e3-4131-b991-3cb71c003834"
+      },
+      "negative": {
+        "name": "Twisted Abomination",
+        "oracleId": "139af10d-a3e5-4ade-b876-87324e6c8017"
+      },
+      "pass": true
+    },
+    {
+      "label": "Swampcycling",
+      "key": "swampcycling",
+      "expression": "kw:\"Swampcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Swampcycling\")",
+      "totalCards": 11,
+      "responseFile": "responses/f0379ecdc52965a6d4bb0a371b4830b6284b3dc2a6de1a4901b506c6f9520017.json",
+      "responseSha256": "f0379ecdc52965a6d4bb0a371b4830b6284b3dc2a6de1a4901b506c6f9520017",
+      "positive": {
+        "name": "Twisted Abomination",
+        "oracleId": "139af10d-a3e5-4ade-b876-87324e6c8017"
+      },
+      "negative": {
+        "name": "Shoreline Ranger",
+        "oracleId": "606fbf99-d3e3-4131-b991-3cb71c003834"
+      },
+      "pass": true
+    },
+    {
+      "label": "Mountaincycling",
+      "key": "mountaincycling",
+      "expression": "kw:\"Mountaincycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Mountaincycling\")",
+      "totalCards": 13,
+      "responseFile": "responses/32e2c147400ccba87f037c979ca7869ef8fe2d673594ae79642008b7360c83f2.json",
+      "responseSha256": "32e2c147400ccba87f037c979ca7869ef8fe2d673594ae79642008b7360c83f2",
+      "positive": {
+        "name": "Oliphaunt",
+        "oracleId": "186b2256-4af3-48cb-96b0-b0e80a7ee6dc"
+      },
+      "negative": {
+        "name": "Elvish Aberration",
+        "oracleId": "1d25b831-c1de-4f79-bbb3-1582eda96452"
+      },
+      "pass": true
+    },
+    {
+      "label": "Forestcycling",
+      "key": "forestcycling",
+      "expression": "kw:\"Forestcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Forestcycling\")",
+      "totalCards": 11,
+      "responseFile": "responses/d6a28acefb6f7add5342456749de12e3092a0528ff3f43ac6b57cfccc034af0d.json",
+      "responseSha256": "d6a28acefb6f7add5342456749de12e3092a0528ff3f43ac6b57cfccc034af0d",
+      "positive": {
+        "name": "Elvish Aberration",
+        "oracleId": "1d25b831-c1de-4f79-bbb3-1582eda96452"
+      },
+      "negative": {
+        "name": "Oliphaunt",
+        "oracleId": "186b2256-4af3-48cb-96b0-b0e80a7ee6dc"
+      },
+      "pass": true
+    },
+    {
+      "label": "Wizardcycling",
+      "key": "wizardcycling",
+      "expression": "kw:\"Wizardcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Wizardcycling\")",
+      "totalCards": 2,
+      "responseFile": "responses/b69adcb7e4653550985e15dc6069c8bbd629e30e27359db64ef08826f00f1193.json",
+      "responseSha256": "b69adcb7e4653550985e15dc6069c8bbd629e30e27359db64ef08826f00f1193",
+      "positive": {
+        "name": "Vedalken Aethermage",
+        "oracleId": "271b37b6-b60b-4687-bd82-ecacf3b66cb3"
+      },
+      "negative": {
+        "name": "Homing Sliver",
+        "oracleId": "34b4d137-780b-446c-8cdd-fd1673180971"
+      },
+      "pass": true
+    },
+    {
+      "label": "Slivercycling",
+      "key": "slivercycling",
+      "expression": "kw:\"Slivercycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Slivercycling\")",
+      "totalCards": 1,
+      "responseFile": "responses/5dd58cb307a50b59ce0396ce538a69915c4950f76ca8e9b3709a6212a9eb668a.json",
+      "responseSha256": "5dd58cb307a50b59ce0396ce538a69915c4950f76ca8e9b3709a6212a9eb668a",
+      "positive": {
+        "name": "Homing Sliver",
+        "oracleId": "34b4d137-780b-446c-8cdd-fd1673180971"
+      },
+      "negative": {
+        "name": "Vedalken Aethermage",
+        "oracleId": "271b37b6-b60b-4687-bd82-ecacf3b66cb3"
+      },
+      "pass": true
+    },
+    {
+      "label": "Halflingcycling",
+      "key": "halflingcycling",
+      "expression": "kw:\"Halflingcycling\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Halflingcycling\")",
+      "totalCards": 1,
+      "responseFile": "responses/76a681817560ea6c26da49b5878ac9663810303e03de3b89d235731de485cc35.json",
+      "responseSha256": "76a681817560ea6c26da49b5878ac9663810303e03de3b89d235731de485cc35",
+      "positive": {
+        "name": "Hobbit Hole",
+        "oracleId": "17492186-9814-4c41-8111-1f000a96c212"
+      },
+      "negative": {
+        "name": "Homing Sliver",
+        "oracleId": "34b4d137-780b-446c-8cdd-fd1673180971"
+      },
+      "pass": true
+    },
+    {
+      "label": "Swampwalk",
+      "key": "swampwalk",
+      "expression": "kw:\"Swampwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Swampwalk\")",
+      "totalCards": 41,
+      "responseFile": "responses/f76e4bf0efa676369d88a652beae44ee73668fe31c228e375b60ad5b589ac74a.json",
+      "responseSha256": "f76e4bf0efa676369d88a652beae44ee73668fe31c228e375b60ad5b589ac74a",
+      "positive": {
+        "name": "Anaconda",
+        "oracleId": "3eff03f1-2c5f-4c59-b465-a8c4cd05e1ba"
+      },
+      "negative": {
+        "name": "Mountain Goat",
+        "oracleId": "031cd561-d9b1-4a0e-bc38-bc09e80563c3"
+      },
+      "pass": true
+    },
+    {
+      "label": "Mountainwalk",
+      "key": "mountainwalk",
+      "expression": "kw:\"Mountainwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Mountainwalk\")",
+      "totalCards": 17,
+      "responseFile": "responses/9f43e8d4406aadbfe91aa7cfae5b0ce03e765a49276ad95341f80ebba909473f.json",
+      "responseSha256": "9f43e8d4406aadbfe91aa7cfae5b0ce03e765a49276ad95341f80ebba909473f",
+      "positive": {
+        "name": "Mountain Goat",
+        "oracleId": "031cd561-d9b1-4a0e-bc38-bc09e80563c3"
+      },
+      "negative": {
+        "name": "Anaconda",
+        "oracleId": "3eff03f1-2c5f-4c59-b465-a8c4cd05e1ba"
+      },
+      "pass": true
+    },
+    {
+      "label": "Plainswalk",
+      "key": "plainswalk",
+      "expression": "kw:\"Plainswalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Plainswalk\")",
+      "totalCards": 4,
+      "responseFile": "responses/40308729a47645c124c64432c8400c3911ebc6c46d24faa7368ab006eec14a7d.json",
+      "responseSha256": "40308729a47645c124c64432c8400c3911ebc6c46d24faa7368ab006eec14a7d",
+      "positive": {
+        "name": "Graceful Antelope",
+        "oracleId": "8dac693b-c5c5-4d80-9739-a3b95949a213"
+      },
+      "negative": {
+        "name": "Anaconda",
+        "oracleId": "3eff03f1-2c5f-4c59-b465-a8c4cd05e1ba"
+      },
+      "pass": true
+    },
+    {
+      "label": "Desertwalk",
+      "key": "desertwalk",
+      "expression": "kw:\"Desertwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Desertwalk\")",
+      "totalCards": 2,
+      "responseFile": "responses/34b4eb6ad95f7da1b6a8cdd018f4b088c510697011e06a33c0477e430fc0d5d5.json",
+      "responseSha256": "34b4eb6ad95f7da1b6a8cdd018f4b088c510697011e06a33c0477e430fc0d5d5",
+      "positive": {
+        "name": "Hazezon, Shaper of Sand",
+        "oracleId": "66b16cb3-c2b1-447c-a4b0-a67326c99f20"
+      },
+      "negative": {
+        "name": "Graceful Antelope",
+        "oracleId": "8dac693b-c5c5-4d80-9739-a3b95949a213"
+      },
+      "pass": true
+    },
+    {
+      "label": "Legendary landwalk",
+      "key": "legendary landwalk",
+      "expression": "kw:\"Legendary landwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Legendary landwalk\")",
+      "totalCards": 2,
+      "responseFile": "responses/f409f84b834562c1f255ef365f28a1b9c5a9f9c4d5cac6071448e75ad4f69701.json",
+      "responseSha256": "f409f84b834562c1f255ef365f28a1b9c5a9f9c4d5cac6071448e75ad4f69701",
+      "positive": {
+        "name": "Ayumi, the Last Visitor",
+        "oracleId": "12acd466-deb9-4e68-b75b-aed86680b917"
+      },
+      "negative": {
+        "name": "Dryad Sophisticate",
+        "oracleId": "7cf59255-0ad7-4ca8-bc95-f3a8cc2643d5"
+      },
+      "pass": true
+    },
+    {
+      "label": "Nonbasic landwalk",
+      "key": "nonbasic landwalk",
+      "expression": "kw:\"Nonbasic landwalk\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Nonbasic landwalk\")",
+      "totalCards": 1,
+      "responseFile": "responses/a46e33150ce8404ecd6cc28c57156b6bdffeb656ec6cd053b1e5a26d80f90026.json",
+      "responseSha256": "a46e33150ce8404ecd6cc28c57156b6bdffeb656ec6cd053b1e5a26d80f90026",
+      "positive": {
+        "name": "Dryad Sophisticate",
+        "oracleId": "7cf59255-0ad7-4ca8-bc95-f3a8cc2643d5"
+      },
+      "negative": {
+        "name": "Ayumi, the Last Visitor",
+        "oracleId": "12acd466-deb9-4e68-b75b-aed86680b917"
+      },
+      "pass": true
+    },
+    {
+      "label": "Descend",
+      "key": "descend",
+      "expression": "kw:\"Descend\"",
+      "query": "(f:commander id<=wubrg) (kw:\"Descend\")",
+      "totalCards": 17,
+      "responseFile": "responses/271cb2e72519b356a9f8f3918a330b94dedb187c19b5742e884e7a9fbde4cd51.json",
+      "responseSha256": "271cb2e72519b356a9f8f3918a330b94dedb187c19b5742e884e7a9fbde4cd51",
+      "positive": {
+        "name": "Basking Capybara",
+        "oracleId": "0ce678fa-6495-4857-b178-231c283b4514"
+      },
+      "negative": {
+        "name": "Broodrage Mycoid",
+        "oracleId": "eeba4706-b4f2-48f9-bcb1-e42a5fc68c40"
+      },
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "fixtureSha256": "ea07827bdac59bd5606e600b8c56b1da5aa5120eb666e16ec2d4957771d425d8"
+}

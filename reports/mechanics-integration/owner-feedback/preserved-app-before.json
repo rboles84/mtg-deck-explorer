@@ -1,0 +1,12 @@
+{
+  "public/core.mjs": "929a8652edc8e11687f6da6196d187b23750d92467ea1ed9c22cbed06a2fd4d9",
+  "public/mechanics.mjs": "fe97cee41615efde2b6507bc57867cb165d7cab748a07f759fd70d984715ec6e",
+  "public/mechanics-vocabulary.mjs": "d657859e3da107e3631aeb486e9a96f13a58ca96b3137d3f374f4a3462d07fde",
+  "public/clipboard.mjs": "1468bbff45adf13ccc973121d1ac24597f25a20c27cb2b9a7d77f76a4a907a94",
+  "lib/scryfall.mjs": "36a0b16fb623a7af69ffc727cf5635d8f341f224609554b1b7ab522d5c091979",
+  "lib/catalog.mjs": "3c6bfca6577f03c7ba6840b1922f35d5a3f9324c0a9636a0e70913e2df8bdbee",
+  "server.mjs": "c93381c5dbc23b854588d4e1820adbd6f6afec7bb8f5b34b02d78ca10c7e32ff",
+  "crosswalk.json": "fb8b7fa486db2bbf5793a961864e3c80f0f3ca629e4450fc3254d545f430ad27",
+  "public/rules-data.json": "a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2",
+  "evidence/MagicCompRules-20260925.txt": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca"
+}

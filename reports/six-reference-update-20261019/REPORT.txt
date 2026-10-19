@@ -1,0 +1,86 @@
+Six source-reference updates — 2026-10-19
+
+Result
+Kinfall and Landship now identify Plane-Merge Elf as a Mystery Booster playtest
+card, with its dated Scryfall Commander status (not legal). Each reference links
+the card, a keyword search including extras, and Wizards' playtest format guidance.
+Fresh Scryfall searches with unique=cards and include_extras=true returned one
+unique card for each label, both Oracle ID 45f94525-84f6-462d-99da-14735f2c273c.
+This is a dated unique-card count, not a claim about the number of printings or
+all future cards. Searches without include_extras returned no results; those
+responses were retained too. Commander searches returned no results with or
+without extras. The app's existing Commander discovery queries remain unchanged.
+
+Wizards' 2019 Mystery Booster release notes distinguish tournament legality from
+Mystery Booster Limited formats and casual play. The app therefore continues to
+inspect imported playtest cards while excluding them from Commander discovery.
+Source: https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11
+Card: https://scryfall.com/card/cmb2/83/plane-merge-elf
+
+The four accepted references are connected with distinct source labels:
+Affinitycycling — Gavin Verhey's designer video, Sojourner's Enforcermite at 10:17.
+https://www.youtube.com/watch?v=NuWq8-rnJ38&t=617s
+Hero's Reward — archived Wizards design discussion, Building a Hydra, A Hero's Reward.
+https://web.archive.org/web/20201021225115/https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25
+Actualize — Wizards card gallery, Etali, Primal Garden.
+https://magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA&cigquery=Etali
+Covercast — Wizards card gallery, Summitfest Closing Ceremony.
+https://magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery?cigquery=Summitfest%20Closing%20Ceremony
+
+No general mechanic definition, generated rules prose, or new rules quotation
+was added. Each panel explicitly says that a general rules definition is not
+supplied. Card rules text remains the existing Scryfall record. Designer and
+Scryfall sources are not labeled as Wizards publications. The archived source
+is labeled as archived. Unverified wiki generalizations remain excluded.
+
+Blast radius
+Two runtime files changed: public/app.mjs and public/catalog-gap-data.mjs.
+Only six reference objects changed in the generated data. UI changes cover the
+source labels, playtest metadata, citation layout and two exact outside-host URLs
+in the existing external-link guard. The guard does not allow arbitrary YouTube
+or Internet Archive URLs. No new runtime dependency or provider request is added.
+Build-time source verification and tests were extended separately.
+
+Preservation
+All 374 runtime catalog records, search policy, queries and catalog metadata
+deep-equal the pre-change snapshot. All 42 gap detection specifications are
+unchanged. All 3,101 pre-existing files were checked: 3,096 are byte-identical;
+the five expected edits are the two runtime files, builder and two test files.
+No files were removed. Prior reports, proofs, original rule text, original
+mechanics modules, imports, Commander filtering and discovery registry are intact.
+
+Backup
+backups/before-six-references-20261019.zip
+SHA-256: 292957a0fa771a83e6c45b95243e957ff0126bf99a7959c6b5c44c760007e770
+3,099 archived files verified individually against SHA-256. The earlier backup
+was preserved and excluded from the new archive to avoid recursive backups.
+The ZIP contains app/ and manifest.json. Do not unpack it inside the running
+workspace: Node's test discovery could include duplicate backed-up tests.
+
+Verification
+Full suite: 347 passed; 0 failed; 0 skipped. tests.txt retains the output.
+The deterministic builder --check and app syntax check passed.
+Source receipts and earlier accepted screenshots/HTML are checked by SHA-256.
+New tests prove whole-catalog and detector preservation, dated playtest counts,
+unchanged imported-card detection, zero Commander membership and source types.
+UI tests cover all 42 gap panels, missing rules, actual link-guard behavior and
+rejection of unreviewed/spoofed outside-host URLs. Existing all-mechanics and
+32-color-subset checks passed again.
+
+Browser review used a temporary server on 127.0.0.1:4179, separate from the main
+app origin. A 100-card witness list imported successfully with seven entries;
+all six labels appeared. Every source panel rendered its intended clickable
+link with accurate attribution. Kinfall's manual WG Commander search returned
+No compatible Kinfall cards found without changing the search restrictions.
+The final playtest layout was visually inspected. Browser console: no warnings
+or errors. See browser-panels.json, browser-console.json and browser-kinfall.png.
+
+Confidence
+High for this bounded reference/display update, supported by byte preservation,
+source receipts, complete regression tests and browser checks. It does not
+establish a formal universal definition for these six labels, guarantee future
+card coverage, or guarantee external links will remain available forever.
+
+Recheck without network: node scripts/build-catalog-gaps.mjs --check
+Preservation audit: node reports/six-reference-update-20261019/verify.mjs
+Full regression: node --test

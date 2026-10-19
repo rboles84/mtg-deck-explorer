@@ -1,0 +1,21 @@
+FOCUSED END-USER BROWSER SMOKE TEST
+
+Result: app-flow checks passed. No code, features, parser/detection behavior, source mappings, or design changes.
+
+Used a fresh temporary local server and a separate ChatGPT in-app browser tab with real Scryfall traffic. Two 100-card, five-color Commander test lists imported successfully: the first with Cid and Direct Current (9/9 entries resolved), the second with Direct Current and no Cid (8/8 resolved). Basic lands filled the lists for import testing; these are smoke-test lists, not suggested deck builds.
+
+Checked Multikicker rules 702.33c–e and the 601.2b cross-reference preview; Descend official threshold wording and its general ability-word reference; Doctor's companion clauses 702.124m–n; and Jump-start rule 702.133a. Text and mana symbols displayed correctly inside the app.
+Live searches returned Multikicker 19 cards, Descend 17 cards, and Jump-start 12 cards. Selecting a different label cleared old results without automatically searching. A Comet Storm result opened its correct card viewer and closed normally. Clipboard remained empty.
+Jump with both contributing cards showed a citation explicitly limited to Cid and no generic Jump search. After reimporting without Cid, Jump displayed the safe no-linked-explanation message and Direct Current remained available; Jump-start kept its independent rules and live search.
+
+LINKS
+Clicked and opened the official pinned Comprehensive Rules TXT, the Lost Caverns of Ixalan mechanics article, the FINAL FANTASY release notes, and Open on Scryfall for Jump-start. Verified the Descend article section and the named Cid paragraph in the rendered page. Scryfall showed the same exact query and 12 results as the app.
+
+OBSERVATION
+The external Wizards raw TXT document opened successfully but displayed garbled punctuation in this browser. In-app official rules, the Ixalan article, and the Cid release-note text rendered correctly. This did not block the checked flow. No broader browser/encoding investigation or source change was made.
+
+SCOPE / EVIDENCE
+This was a small desktop browser smoke test, not an exhaustive rerun of all 20 labels, all browsers, or the automated suite. The previous 294-test result remains the implementation baseline; no tests needed changing.
+All 133 captured application, source-input, script, and test files are byte-for-byte unchanged. Only smoke-test evidence was added.
+Browser tabs created for this smoke test were closed. The pre-existing browser tab was retained.
+Evidence: browser-evidence.json, jump-mixed.png, jump-direct-only.png, jump-start-results.txt, scryfall-results.txt, no-change-check.json.

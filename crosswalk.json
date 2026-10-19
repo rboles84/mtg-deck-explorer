@@ -1,0 +1,223 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-10-16",
+  "scope": "Eight explicit keyword abilities, with exact reviewed Rosewater labels and frozen Atlas recipes. Not a universal mechanics detector.",
+  "records": [
+    {
+      "master_name": "Flying",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.9",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-flying",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "flying",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-flying-reported",
+        "keyword-flying-absent",
+        "atlas-flying-query"
+      ]
+    },
+    {
+      "master_name": "Trample",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.19",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-trample",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "trample",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact Trample entry; deliberately not Super trample.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-trample-reported",
+        "keyword-trample-absent",
+        "atlas-trample-query"
+      ]
+    },
+    {
+      "master_name": "Deathtouch",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.2",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-deathtouch",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "deathtouch",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-deathtouch-reported",
+        "keyword-deathtouch-absent",
+        "atlas-deathtouch-query"
+      ]
+    },
+    {
+      "master_name": "Vigilance",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.20",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-vigilance",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "vigilance",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-vigilance-reported",
+        "keyword-vigilance-absent",
+        "atlas-vigilance-query"
+      ]
+    },
+    {
+      "master_name": "Haste",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.10",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-haste",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "haste",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-haste-reported",
+        "keyword-haste-absent",
+        "atlas-haste-query"
+      ]
+    },
+    {
+      "master_name": "Menace",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.111",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-menace",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "menace",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-menace-reported",
+        "keyword-menace-absent",
+        "atlas-menace-query"
+      ]
+    },
+    {
+      "master_name": "Reach",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.17",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-reach",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "reach",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-reach-reported",
+        "keyword-reach-absent",
+        "atlas-reach-query"
+      ]
+    },
+    {
+      "master_name": "Lifelink",
+      "master_category": "keyword_ability",
+      "rules_reference": {
+        "section": "CR 702.15",
+        "date": "2026-09-25",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+        "verified_on": "2026-10-16"
+      },
+      "atlas_row_id": "keyword-index-lifelink",
+      "detection_method": "Scryfall keywords exact case-insensitive membership; card-level only, no inference of face or inherent possession",
+      "rosewater_id": "lifelink",
+      "link_review_status": "reviewed-exact-label-and-scope",
+      "link_review_note": "Exact label and scope reviewed in the frozen runtime; original explanation and per-color ownership retained.",
+      "blind_spot": "kw: means the card has the ability. A card that grants it to another creature is found with Oracle text instead. CAL-006.",
+      "source_dates": {
+        "inventory": "2026-09-25",
+        "atlas": "2026-10-05",
+        "rosewater": "2021-10-18",
+        "reviewed": "2026-10-16"
+      },
+      "test_fixture_ids": [
+        "keyword-lifelink-reported",
+        "keyword-lifelink-absent",
+        "atlas-lifelink-query"
+      ]
+    }
+  ]
+}

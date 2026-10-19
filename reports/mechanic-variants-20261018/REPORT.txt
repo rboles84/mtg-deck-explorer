@@ -1,0 +1,50 @@
+MECHANIC VARIANTS — FOCUSED IMPLEMENTATION, 2026-10-18
+
+Completed the 20 approved label additions and the Jump reference correction. No parser changes, Oracle-text detection, new aliases, import changes, or layout redesign.
+
+USER-VISIBLE RESULT
+All 20 labels now have an official reference and an explicit, manual Find action when Scryfall reports that exact label on an imported card. Nineteen use verbatim pinned rule clauses; Descend uses a short verbatim Wizards excerpt and the general ability-word rule. No generated mechanic explanations were added.
+Jump remains visible on cards that report it. Its Cid citation is displayed only when Cid contributes Jump, and the panel explicitly limits the citation to Cid. Direct Current never acquires that citation merely by reporting Jump; its existing Jump-Start rules and search remain available. Mixed Cid/Direct Current imports retain both cards while naming the reference scope.
+
+ADDED LABELS / RETAINED COMMANDER SEARCH COUNTS
+Commander ninjutsu: 1 results; kw:"Commander ninjutsu"; positive Yuriko, the Tiger's Shadow; negative Ninja of the Deep Hours
+Doctor's companion: 27 results; kw:"Doctor's companion"; positive Rose Tyler; negative Thrasios, Triton Hero
+Daybound: 35 results; kw:"Daybound"; positive Arlinn, the Pack's Hope // Arlinn, the Moon's Fury; negative Huntmaster of the Fells // Ravager of the Fells
+Nightbound: 35 results; kw:"Nightbound"; positive Arlinn, the Pack's Hope // Arlinn, the Moon's Fury; negative Huntmaster of the Fells // Ravager of the Fells
+Multikicker: 19 results; kw:"Multikicker"; positive Everflowing Chalice; negative Into the Roil
+Basic landcycling: 36 results; kw:"Basic landcycling"; positive Absorb Vis; negative Shoreline Ranger
+Islandcycling: 11 results; kw:"Islandcycling"; positive Shoreline Ranger; negative Twisted Abomination
+Swampcycling: 11 results; kw:"Swampcycling"; positive Twisted Abomination; negative Shoreline Ranger
+Mountaincycling: 13 results; kw:"Mountaincycling"; positive Oliphaunt; negative Elvish Aberration
+Forestcycling: 11 results; kw:"Forestcycling"; positive Elvish Aberration; negative Oliphaunt
+Wizardcycling: 2 results; kw:"Wizardcycling"; positive Vedalken Aethermage; negative Homing Sliver
+Slivercycling: 1 results; kw:"Slivercycling"; positive Homing Sliver; negative Vedalken Aethermage
+Halflingcycling: 1 results; kw:"Halflingcycling"; positive Hobbit Hole; negative Homing Sliver
+Swampwalk: 41 results; kw:"Swampwalk"; positive Anaconda; negative Mountain Goat
+Mountainwalk: 17 results; kw:"Mountainwalk"; positive Mountain Goat; negative Anaconda
+Plainswalk: 4 results; kw:"Plainswalk"; positive Graceful Antelope; negative Anaconda
+Desertwalk: 2 results; kw:"Desertwalk"; positive Hazezon, Shaper of Sand; negative Graceful Antelope
+Legendary landwalk: 2 results; kw:"Legendary landwalk"; positive Ayumi, the Last Visitor; negative Dryad Sophisticate
+Nonbasic landwalk: 1 results; kw:"Nonbasic landwalk"; positive Dryad Sophisticate; negative Ayumi, the Last Visitor
+Descend: 17 results; kw:"Descend"; positive Basking Capybara; negative Broodrage Mycoid
+
+OFFICIAL SOURCING
+Pinned CR revision: September 25, 2026. Live download SHA-256 matches the existing source. 21 distinct numbered clauses used by the additions, with exact extraction checked offline and live.
+Both Daybound and Nightbound include the complete 702.145a–g text, including the nightbound-only transition rule. Descend references threshold abilities (Descend 4/8), not the separate “descended this turn” event; Broodrage Mycoid is a retained negative example.
+Descend: https://magic.wizards.com/en/news/feature/the-lost-caverns-of-ixalan-mechanics
+Jump / named Cid card paragraph: https://magic.wizards.com/en/news/feature/final-fantasy-release-notes
+Full hashes, source receipts, complete Scryfall responses, positive/negative identities and query membership are in verification.json and responses/. Scryfall validates provider labels and discovery membership; Wizards supplies explanatory wording.
+
+VALIDATION
+node --test: 294 passed; 0 failed, skipped, or cancelled. Full output: tests.txt. The initial sandbox-only baseline could not access loopback; the successful complete run had the required local HTTP access.
+Live validation: all 20 queries passed; complete result lists with no additional pages, no exact-label mismatches, and positive/negative Oracle-ID membership checks. 28 unmodified real card snapshots retained in tests/fixtures/mechanics/variants.json.
+Actual rendering/interaction code tested for all 20 additions, Cid-only, Direct Current-only, mixed decks, missing Oracle identity, Cid present without contributing Jump, unavailable sources, and unknown labels. Searches remain deliberate. The existing UI matrix now covers 332 searches across all 32 color subsets (10,624 cases). These are DOM-boundary tests, not a new browser visual smoke test.
+Preservation checks: 250 historical protected files unchanged; the four cumulative approved derived inputs include this new registry. Historical vocabulary (296), original discovery derivation, and witness plan (1,574 assertions / 1,182 printings) all passed --check.
+Before/after comparison: 127 baseline application/input/test/script files; changed-files.json lists the scoped edits. Parser/import modules, server, original source inputs, CSS, HTML, and original rules extraction remain unchanged.
+
+CURRENT COUNTS AND LIMITS
+349 labels with official references in the reviewed scope, including the card-specific Jump reference. 332 approved manual searches; 36 supplemental search rows; 52 reviewed supplemental labels. Historical 296-label audit membership remains unchanged.
+No claim of complete Magic-mechanic detection: indexing still uses exact provider keywords only. Other unknown labels stay visible with contributing cards and a no-linked-reference/search message. No invented prose, guessed query, or automatic broader fallback is introduced. Scryfall counts and labels may change after the retained verification date.
+
+RERUNS
+node scripts/verify-mechanic-variants-live.mjs explicitly rechecks the same public sources and 20 queries, retaining fresh receipts in live-verification.json without overwriting the pinned fixture or original verification.json. Requests are paced; failures stop without automatic retry.

@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "provider": "Scryfall",
+  "bulk": {
+    "object": "bulk_data",
+    "id": "27bf3214-1271-490b-bdfe-c0be6c23d02e",
+    "type": "oracle_cards",
+    "updated_at": "2026-10-17T09:01:58.799+00:00",
+    "uri": "https://api.scryfall.com/bulk-data/27bf3214-1271-490b-bdfe-c0be6c23d02e",
+    "name": "Oracle Cards",
+    "description": "A JSON file containing one Scryfall card object for each Oracle ID on Scryfall. The chosen sets for the cards are an attempt to return the most up-to-date recognizable version of the card.",
+    "jsonl_download_uri": "https://data.scryfall.io/oracle-cards/oracle-cards-20261017090158.jsonl.gz",
+    "compressed_size": 24950067
+  },
+  "catalogs": {
+    "keyword-abilities": "keyword-abilities.json",
+    "keyword-actions": "keyword-actions.json",
+    "ability-words": "ability-words.json"
+  },
+  "corpus_file": "oracle-cards.jsonl.gz",
+  "requests": [
+    {
+      "url": "https://api.scryfall.com/bulk-data",
+      "started_at": "2026-10-17T14:09:55.042Z",
+      "completed_at": "2026-10-17T14:09:55.201Z",
+      "status": 200,
+      "bytes": 3472,
+      "sha256": "0b06f37590eab16e734a1029f0b0b896cb6a92c2122bb888ec89328d7ccffff3",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 14:09:55 GMT",
+        "etag": "W/\"0b06f37590eab16e734a1029f0b0b896\"",
+        "last-modified": null,
+        "content-type": "application/json; charset=utf-8",
+        "content-encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://api.scryfall.com/catalog/keyword-abilities",
+      "started_at": "2026-10-17T14:09:55.601Z",
+      "completed_at": "2026-10-17T14:09:55.686Z",
+      "status": 200,
+      "bytes": 2641,
+      "sha256": "e0bfb032e5062341469dba7c7a504a8f11595b33fb7b8d7fb7610cfcfc76bf98",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 14:09:55 GMT",
+        "etag": "W/\"e0bfb032e5062341469dba7c7a504a8f\"",
+        "last-modified": null,
+        "content-type": "application/json; charset=utf-8",
+        "content-encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://api.scryfall.com/catalog/keyword-actions",
+      "started_at": "2026-10-17T14:09:56.159Z",
+      "completed_at": "2026-10-17T14:09:56.230Z",
+      "status": 200,
+      "bytes": 987,
+      "sha256": "3e889244ea0d462101403de85a048786f7ede2254cf9dfc263bf6ec9f58e1034",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 14:09:56 GMT",
+        "etag": "W/\"3e889244ea0d462101403de85a048786\"",
+        "last-modified": null,
+        "content-type": "application/json; charset=utf-8",
+        "content-encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://api.scryfall.com/catalog/ability-words",
+      "started_at": "2026-10-17T14:09:56.720Z",
+      "completed_at": "2026-10-17T14:09:56.786Z",
+      "status": 200,
+      "bytes": 929,
+      "sha256": "9740da731e3832381cd4680b0e9d4c971b3e81f03d7a01cf29a73d54886286a3",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 14:09:56 GMT",
+        "etag": "W/\"9740da731e3832381cd4680b0e9d4c97\"",
+        "last-modified": null,
+        "content-type": "application/json; charset=utf-8",
+        "content-encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://data.scryfall.io/oracle-cards/oracle-cards-20261017090158.jsonl.gz",
+      "started_at": "2026-10-17T14:09:57.279Z",
+      "completed_at": "2026-10-17T14:09:57.841Z",
+      "status": 200,
+      "bytes": 24950067,
+      "sha256": "f278ae30bc51657e8e7fcb897984fafe0df0c93ed511160fe60429bbb0e29a71",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 14:09:57 GMT",
+        "etag": "\"398c11bb4157498f7d1847eb6ba812a2\"",
+        "last-modified": "Sat, 17 Oct 2026 09:02:00 GMT",
+        "content-type": "application/gzip",
+        "content-encoding": null
+      }
+    }
+  ],
+  "completed_at": "2026-10-17T14:09:57.862Z",
+  "note": "Immutable raw public responses. Hashes attest retained bytes, not independent correctness of provider tagging."
+}

@@ -1,0 +1,306 @@
+MECHANICS GAP RECON - 18 OCTOBER 2026
+
+Scope: Read-only application inspection, retained corpus comparison, official-source checks, live candidate searches, and existing focused tests. Application code, parser, approved mappings, and runtime search recipes are unchanged. Only this recon report and its JSON evidence were added.
+
+WHAT IS STILL MISSING
+329 current labels have official references; 312 have approved searches. The completed sourcing pass remains complete within that scope.
+The retained October 17 Scryfall Oracle corpus contains 891 distinct reported labels across 38,753 cards. 562 labels have no current reference; 488 occur on paper Commander-legal cards. 526 of the 562 occur on exactly one corpus card. These are provider labels, NOT 562 verified universal mechanics. Most of this long tail needs card-specific verification, and every unverified row is marked in gap-audit.json.
+The three current Scryfall catalogs have 62 names without references. These overlap the corpus gaps and include unused keyword entries, ordinary game actions, digital-only terms and variants; do not add the counts together.
+The local broader master inventory is Wiki-derived. Its 224 unmatched names are leads only, include combined names/aliases and effect families, and are not official verification.
+
+RECOMMENDED ORDER
+First: address the Jump association ambiguity alongside the next small mapping pass. Direct Current currently reports both Jump and Jump-start, while the existing Jump citation names Cid, Freeflier Pilot. The citation is real but does not verify every provider association. Keep card-specific references tied to verified card examples.
+Next: the 20 exact reported-label proposals below. They fit the current reviewed-registry approach. Exact official wording is already retained locally. All 20 candidate keyword searches returned matches and all returned cards carried the requested exact label. New mappings still need positive/negative regression fixtures and normal integration checks before activation.
+After that: separately scope non-keyword concepts such as Monarch, Initiative, energy, tokens and descended. Definitions alone cannot make the current keywords-only detector see them. Do not quietly turn on broad Oracle-text parsing in a label-mapping change.
+Later: verify individual card-specific labels through official Gatherer/card images, and leave digital, acorn, obsolete and unreleased mechanics lower priority for this Commander-focused experience. A card-specific label may correctly have no mechanic-wide search.
+
+OFFICIAL TEXT AND SOURCES
+All numbered text in exactOfficialText in gap-audit.json is copied verbatim from the existing official rules, not an authored summary. The live Wizards source matched the retained SHA-256: 8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca
+Official rules: https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt
+Local original: evidence/MagicCompRules-20260925.txt
+Descend article: https://magic.wizards.com/en/news/feature/the-lost-caverns-of-ixalan-mechanics
+Use the named Descended and Descend 4/8/Fathomless Descent sections together. Having descended this turn and meeting a graveyard-count threshold are different claims.
+
+PROPOSALS (candidate searches only; none enabled)
+Counts below are live five-color Commander search matches, not popularity or unique deck adoption. The application must continue deriving commander colors on the server. Text queries indicate mentions/involvement, not necessarily inherent possession or performing the action.
+
+Priority 1: Commander ninjutsu
+Official text: CR 702.49d
+Candidate query: (f:commander id<=wubrg) (kw:"Commander ninjutsu")
+Live matches: 1; HTTP 200
+Yuriko is a directly observed Commander example; preserve its distinction from ordinary ninjutsu.
+
+Priority 1: Doctor's companion
+Official text: CR 702.124m, 702.124n
+Candidate query: (f:commander id<=wubrg) (kw:"Doctor's companion")
+Live matches: 27; HTTP 200
+A reference does not validate a commander pair. Straight provider apostrophe and curly official apostrophe must be handled explicitly.
+
+Priority 1: Daybound
+Official text: CR 702.145a, 702.145b, 702.145c, 702.145d, 702.145e, 702.145f
+Candidate query: (f:commander id<=wubrg) (kw:"Daybound")
+Live matches: 35; HTTP 200
+Use the shared official section while preserving the two provider labels; metadata is whole-card, not face attribution.
+
+Priority 1: Nightbound
+Official text: CR 702.145a, 702.145b, 702.145c, 702.145d, 702.145e, 702.145f
+Candidate query: (f:commander id<=wubrg) (kw:"Nightbound")
+Live matches: 35; HTTP 200
+Use the shared official section while preserving the two provider labels; metadata is whole-card, not face attribution.
+
+Priority 2: Multikicker
+Official text: CR 702.33c, 702.33d, 702.33e
+Candidate query: (f:commander id<=wubrg) (kw:"Multikicker")
+Live matches: 19; HTTP 200
+Use the official kicker variant definition.
+
+Priority 2: Basic landcycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Basic landcycling")
+Live matches: 36; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Islandcycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Islandcycling")
+Live matches: 11; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Swampcycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Swampcycling")
+Live matches: 11; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Mountaincycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Mountaincycling")
+Live matches: 13; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Forestcycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Forestcycling")
+Live matches: 11; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Wizardcycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Wizardcycling")
+Live matches: 2; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Slivercycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Slivercycling")
+Live matches: 1; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Halflingcycling
+Official text: CR 702.29e, 702.29f
+Candidate query: (f:commander id<=wubrg) (kw:"Halflingcycling")
+Live matches: 1; HTTP 200
+Explicit exact variant entry; no unrestricted suffix matching.
+
+Priority 2: Swampwalk
+Official text: CR 702.14a, 702.14b, 702.14c, 702.14d, 702.14e
+Candidate query: (f:commander id<=wubrg) (kw:"Swampwalk")
+Live matches: 41; HTTP 200
+Explicit exact variant entry; keep landwalk family rule and parameter visible.
+
+Priority 2: Mountainwalk
+Official text: CR 702.14a, 702.14b, 702.14c, 702.14d, 702.14e
+Candidate query: (f:commander id<=wubrg) (kw:"Mountainwalk")
+Live matches: 17; HTTP 200
+Explicit exact variant entry; keep landwalk family rule and parameter visible.
+
+Priority 2: Plainswalk
+Official text: CR 702.14a, 702.14b, 702.14c, 702.14d, 702.14e
+Candidate query: (f:commander id<=wubrg) (kw:"Plainswalk")
+Live matches: 4; HTTP 200
+Explicit exact variant entry; keep landwalk family rule and parameter visible.
+
+Priority 2: Desertwalk
+Official text: CR 702.14a, 702.14b, 702.14c, 702.14d, 702.14e
+Candidate query: (f:commander id<=wubrg) (kw:"Desertwalk")
+Live matches: 2; HTTP 200
+Explicit exact variant entry; keep landwalk family rule and parameter visible.
+
+Priority 2: Legendary landwalk
+Official text: CR 702.14a, 702.14b, 702.14c, 702.14d, 702.14e
+Candidate query: (f:commander id<=wubrg) (kw:"Legendary landwalk")
+Live matches: 2; HTTP 200
+Explicit exact variant entry; keep landwalk family rule and parameter visible.
+
+Priority 2: Nonbasic landwalk
+Official text: CR 702.14a, 702.14b, 702.14c, 702.14d, 702.14e
+Candidate query: (f:commander id<=wubrg) (kw:"Nonbasic landwalk")
+Live matches: 1; HTTP 200
+Explicit exact variant entry; keep landwalk family rule and parameter visible.
+
+Priority 2: Descend
+Official text: CR 207.2c, 700.11
+Candidate query: (f:commander id<=wubrg) (kw:"Descend")
+Live matches: 17; HTTP 200
+Provider label collapses terminology; do not equate descend 4/8 graveyard thresholds with having descended this turn.
+
+Priority 3: The Monarch
+Official text: CR 725.1, 725.2, 725.3, 725.4, 725.5
+Candidate query: (f:commander id<=wubrg) (o:"the monarch")
+Live matches: 62; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 3: The Initiative
+Official text: CR 726.1, 726.2, 726.3, 726.4, 726.5
+Candidate query: (f:commander id<=wubrg) (o:"the initiative")
+Live matches: 26; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 3: Energy
+Official text: CR 107.14
+Candidate query: (f:commander id<=wubrg) (o:"{E}")
+Live matches: 142; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 3: Expend
+Official text: CR 700.14
+Candidate query: (f:commander id<=wubrg) (o:"expend")
+Live matches: 12; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 3: Rad counters
+Official text: CR 728.1, 728.1a
+Candidate query: (f:commander id<=wubrg) (o:"rad counter")
+Live matches: 23; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 3: The Ring tempts you
+Official text: CR 701.54a, 701.54b, 701.54c, 701.54d
+Candidate query: (f:commander id<=wubrg) (o:"the Ring tempts you")
+Live matches: 54; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 3: Vote
+Official text: CR 701.38a, 701.38b, 701.38c, 701.38d
+Candidate query: (f:commander id<=wubrg) (o:/\b(vote|votes|voted|voting)\b/)
+Live matches: 40; HTTP 200
+Concept coverage: keyword metadata alone may omit this concept entirely. Candidate search finds Oracle-text mentions; it is not a detector or proof of performing/granting the action.
+
+Priority 4: Absorb
+Official text: CR 702.64a
+Candidate query: (f:commander id<=wubrg) (o:/\babsorb [0-9X]+\b/)
+Live matches: 1; HTTP 200
+Keyword query returned zero. Narrow Oracle-text expression found Lymph Sliver, which grants absorb. Broad o:absorb also returned Absorbing Man and must not be used as a verified classifier.
+
+Priority 4: Poisonous
+Official text: CR 702.70a
+Candidate query: (f:commander id<=wubrg) (o:"poisonous")
+Live matches: 2; HTTP 200
+Keyword query returned zero. Oracle-text expression found Snake Cult Initiation and Virulent Sliver; both grant the ability. Keep granting distinct from inherent possession.
+
+Priority 3: Clue tokens
+Official text: CR 111.10f, 701.16a
+Candidate query: (f:commander id<=wubrg) ((o:"Clue" or kw:"Investigate"))
+Live matches: 170; HTTP 200
+Includes Investigate because CR 701.16a explicitly creates Clue tokens. Direct mentions alone miss many investigators.
+
+Priority 3: Blood tokens
+Official text: CR 111.10g
+Candidate query: (f:commander id<=wubrg) (o:"Blood token")
+Live matches: 41; HTTP 200
+Text-research coverage. No automatic classification or claim of comprehensive behavior detection.
+
+Priority 3: Map tokens
+Official text: CR 111.10s
+Candidate query: (f:commander id<=wubrg) (o:"Map token")
+Live matches: 12; HTTP 200
+Text-research coverage. No automatic classification or claim of comprehensive behavior detection.
+
+Priority 3: Powerstone tokens
+Official text: CR 111.10h
+Candidate query: (f:commander id<=wubrg) (o:/\bPowerstone tokens?\b/)
+Live matches: 32; HTTP 200
+Text-research coverage. No automatic classification or claim of comprehensive behavior detection.
+
+Priority 3: Junk tokens
+Official text: CR 111.10t
+Candidate query: (f:commander id<=wubrg) (o:"Junk token")
+Live matches: 15; HTTP 200
+Text-research coverage. No automatic classification or claim of comprehensive behavior detection.
+
+Priority 3: Descended this turn
+Official text: CR 700.11
+Candidate query: (f:commander id<=wubrg) (o:"descended")
+Live matches: 12; HTTP 200
+Text-research coverage. No automatic classification or claim of comprehensive behavior detection.
+
+DEFERRED / UNVERIFIED
+Friends forever: present in the Scryfall catalog, but kw search returned zero Commander matches and the current pinned CR does not contain the former definition. Do not revive older wording or invent a new alias without current official evidence.
+Absorb and Poisonous: native keyword searches both returned zero, although official definitions exist and real cards grant these abilities. Alternative text candidates above are separate research searches, not hidden keyword fallbacks.
+All other inventoryMissingReferences rows without a scoped proposal remain explicitly UNVERIFIED. Provider card names and URLs are evidence leads, not official verification. No text or query was filled in for them.
+
+HOW UNKNOWN MECHANICS CURRENTLY FAIL GRACEFULLY
+1. Import stays intact. Unknown reported labels and their contributing cards remain available with images and Oracle text.
+2. The UI says: No linked explanation is available in this rules reference. Open a card below to read its rules.
+3. The UI says: No validated discovery search is linked to this provider label yet. Its imported cards remain available; new labels require an explicit reviewed mapping.
+4. No search button is offered without an approved registry entry. The server rejects unknown mappings and arbitrary client queries; labels never become queries automatically.
+5. Missing/changed official rules fail closed while keeping imported cards available. Missing or malformed keyword arrays are disclosed separately from empty arrays.
+6. The blind spot: a mechanic omitted from keywords[] does not get an individual unknown-label warning because no label reaches the app. The card remains readable and the page warns that its list may not include every mechanic. Court of Grace has no keywords despite Monarch text; Aether Hub has energy text but no keywords. Fixing that coverage would be a separate, bounded detection change.
+
+REGRESSION FIXTURES NEEDED BEFORE IMPLEMENTATION
+
+Unknown labels
+- A real unmatched label such as Commander ninjutsu remains visible with its imported card and Oracle text
+- No explanation is invented; no Search action or network prefetch appears
+- An unknown or malicious query label cannot execute at the server
+
+Daybound / Nightbound
+- Arlinn, the Pack’s Hope has both labels; two display entries share the official section without inferring which face currently applies
+- Huntmaster of the Fells transforms but has neither label; do not infer them from all transforming DFCs
+
+Commander variants
+- Yuriko is Commander ninjutsu; Ninja of the Deep Hours is ordinary Ninjutsu
+- Doctor’s companion is distinct from generic Partner; this pass does not establish commander-pair legality
+
+Multikicker and typecycling
+- Everflowing Chalice is Multikicker; ordinary Kicker remains separate
+- Absorb Vis is Basic landcycling; explicitly enumerate the eight proposed cycling variants
+- Retain labels, printing provenance, and quantities when one card reports family and variant labels
+
+Descend semantics
+- Basking Capybara has Descend and a graveyard-count threshold
+- Broodrage Mycoid has no provider keyword but refers to having descended this turn; do not equate this with Descend 4/8
+
+Unreported concepts
+- Court of Grace has no keywords but establishes Monarch
+- Aether Hub has no keywords but uses energy
+- Academy Manufactor reports Food/Treasure but not Clue
+- Radstorm has Storm/Proliferate and must not become a rad-counter card based on its name
+
+Text-query false positives
+- o:absorb finds Absorbing Man; narrowed absorb-number expression excludes it
+- A word-boundary voting query excludes the extra match returned by o:vote
+- Clue references and Investigate must both be covered; direct Clue mentions alone are incomplete
+- Token queries must not turn every namesake card into a token mechanic
+
+Provider ambiguity
+- Direct Current reports Jump and Jump-start, but its rules contain only Jump-start
+- Do not apply Cid’s card-specific Jump wording universally to all provider Jump labels
+
+Failure states
+- Missing, malformed, and empty keyword metadata remain distinct
+- Missing rules/catalog resources keep imported cards readable
+- Zero matches differs from provider failure; do not broaden commander colors to obtain results
+- Unverified official wording stays flagged; revised sources fail closed rather than silently accepting drift
+
+VERIFICATION COMPLETED
+7 existing focused tests passed: unknown label indexing, metadata distinctions, absent rules/catalog fallback, source-revision rejection, whitelist validation, and HTTP rejection of unknown/arbitrary queries.
+42 read-only live candidate/probe searches completed. 20 exact-label proposals returned positive results with zero requested-label mismatches. Three native keyword probes returned structured not_found. Text probes exposed broad-query false positives and omissions; narrowed alternatives and coverage cautions are recorded.
+Five named-card live lookups confirmed Yuriko, Lymph Sliver, Direct Current, Court of Grace and Sauron metadata distinctions.
+No full-catalog live recrawl, every-card official-source audit, behavior-parser implementation, or new UI/browser smoke test is claimed.
+
+FILES
+gap-audit.json: full missing-label inventory, flagged broader master leads, 35 prioritized/scoped proposals, 51 exact official clauses, accuracy cautions and fixtures.
+query-receipts.json: initial 30 live query observations.
+refined-query-receipts.json: four refined/additional query observations.
+gap-audit.json / additionalQueryChecks: eight additional observations.

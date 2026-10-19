@@ -1,0 +1,21 @@
+// Definition links only: these do not detect card behavior or authorize searches.
+// Reviewed against the retained September 25, 2026 rules headings and clauses.
+export const RULES_REVISION = Object.freeze({
+  date: '2026-09-25',
+  sourceSha256: '8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca',
+});
+export const MECHANIC_RULE_LINKS = Object.freeze({
+  adapt: '701.46', changeling: '702.73', convoke: '702.51', crew: '702.122',
+  deathtouch: '702.2', 'double strike': '702.4', equip: '702.6', evolve: '702.100',
+  fight: '701.14', 'first strike': '702.7', flash: '702.8', flying: '702.9',
+  haste: '702.10', indestructible: '702.12', lifelink: '702.15', mayhem: '702.187', menace: '702.111',
+  mill: '701.17', proliferate: '701.34', reach: '702.17', riot: '702.136',
+  station: '702.184', surveil: '701.25', trample: '702.19', transform: '701.27',
+  vigilance: '702.20', ward: '702.21', 'web-slinging': '702.188',
+});
+export function mechanicRule(data, label) {
+  if (typeof label !== 'string' || data?.date !== RULES_REVISION.date || data?.sourceSha256 !== RULES_REVISION.sourceSha256) return null;
+  const key = label.toLowerCase(), number = MECHANIC_RULE_LINKS[key];
+  const section = data.sections?.[number];
+  return section?.title?.toLowerCase() === key && section.paragraphs?.length ? number : null;
+}

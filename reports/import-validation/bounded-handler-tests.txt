@@ -1,0 +1,42 @@
+✔ invalid deck totals and garbage block import without transport or replacing the loaded deck (20.6509ms)
+✔ valid import reports deck and extra quantities separately (7.4646ms)
+✔ unresolved or mismatched content stays prominently flagged and keeps import workbench open (6.0897ms)
+✔ old import success and finally cannot replace or clear newer pending import (5.8907ms)
+✔ old import failure and finally cannot replace or clear newer pending import (6.6757ms)
+✔ stale search success/finally after mechanic cannot affect newer results/loading (3.445ms)
+✔ stale search success/finally after commander cannot affect newer results/loading (3.3386ms)
+✔ stale search success/finally after import cannot affect newer results/loading (4.7534ms)
+✔ stale search success/finally after same query cannot affect newer results/loading (3.3838ms)
+✔ stale search success/finally after page cannot affect newer results/loading (2.2391ms)
+✔ stale search failure/finally after mechanic cannot affect newer results/loading (2.1943ms)
+✔ stale search failure/finally after commander cannot affect newer results/loading (4.2262ms)
+✔ stale search failure/finally after import cannot affect newer results/loading (2.9987ms)
+✔ stale search failure/finally after same query cannot affect newer results/loading (2.2613ms)
+✔ stale search failure/finally after page cannot affect newer results/loading (3.3687ms)
+✔ navigation while searching suppresses late navigation and focus; current cleanup still completes (2.6807ms)
+✔ failed newest import preserves the loaded deck; old response cannot replace it (2.7924ms)
+✔ commander changes and mechanic reads use no transport and leave imported evidence intact (2.2286ms)
+✔ late AbortError cleanup in either request lane cannot clear its newer busy state (6.951ms)
+✔ clear pasted text preserves the loaded deck, mechanic selection and provider context without transport (4.0083ms)
+✔ clear is a no-op during a pending import and works after completion (3.2568ms)
+✔ hakbal actual import handler selects tagged commander and discloses editions (10.2258ms)
+✔ veyran actual import handler selects tagged commander and discloses editions (6.3602ms)
+✔ Obeka actual handler requires confirmation and rejects changed-draft confirmation (10.0007ms)
+✔ a newer invalid draft cancels ownership of an earlier pending import (4.2511ms)
+✔ changing one reference edition pins other editions and preserves original text (3.7997ms)
+✔ commander chooser rejects duplicate identities and invalid selection counts (3.1944ms)
+✔ duplicate commander aliases block the actual import without replacing the loaded deck (2.8328ms)
+✔ uppercase reference UUIDs work in the actual correction handler (4.0663ms)
+✔ editing a pending draft prevents stale commit and restores busy controls (3.4993ms)
+✔ editing a pending draft prevents stale error and restores busy controls (3.0364ms)
+✔ file selection and drop use local preview only, and supersede older imports and file reads (4.4697ms)
+✔ actual commander filter searches source aliases and canonical names with shared normalization (5.3028ms)
+✔ optional-extra failure commits complete required rows and keeps main context, while stale extra completion cannot commit (9.9518ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 264.2171

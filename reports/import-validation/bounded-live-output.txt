@@ -1,0 +1,23 @@
+hakbal: 84 resolved deck entries, 0 problems
+veyran: 78 resolved deck entries, 0 problems
+detailed: 90 resolved deck entries, 0 problems
+obeka-a: 94 resolved deck entries, 0 problems
+obeka-b: 94 resolved deck entries, 0 problems
+background-abdel-street-urchin.csv: 0 unresolved deck entries; 0 warnings/problems
+background-wilson-giants.csv: 0 unresolved deck entries; 1 warnings/problems
+companion-cecily-othelm-jegantha-side.csv: 0 unresolved deck entries; 0 warnings/problems
+doctors-companion-ten-rose.csv: 0 unresolved deck entries; 0 warnings/problems
+friends-forever-wernog-sophina.csv: 0 unresolved deck entries; 0 warnings/problems
+partner-thrasios-tymna.csv: 1 unresolved deck entries; 14 warnings/problems
+partner-with-pir-toothy.csv: 3 unresolved deck entries; 10 warnings/problems
+file:///C:/dev/mtg-deck-explorer/scripts/verify-import-bounded-live.mjs:13
+  const data=await response.json();if(!response.ok)throw new Error(`${response.status}: ${data.error}; Retry-After=${response.headers.get('retry-after')}`);return data;
+                                                         ^
+
+Error: 429: Scryfall rate limit reached. No automatic retry was made.; Retry-After=60
+    at request (file:///C:/dev/mtg-deck-explorer/scripts/verify-import-bounded-live.mjs:13:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async resolveImport (file:///C:/dev/mtg-deck-explorer/public/import-resolution.mjs:6:16)
+    at async file:///C:/dev/mtg-deck-explorer/scripts/verify-import-bounded-live.mjs:43:14
+
+Node.js v24.14.0

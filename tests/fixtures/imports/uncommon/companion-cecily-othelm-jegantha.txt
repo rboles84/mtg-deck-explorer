@@ -1,0 +1,109 @@
+1 Abzan Charm
+1 Altar of Dementia
+1 An Offer You Can't Refuse
+1 Animate Dead
+1 Aphetto Alchemist
+1 Arcane Denial
+1 Arcane Signet
+1 Arid Mesa
+1 Ashnod's Altar
+1 Atraxa, Grand Unifier
+1 Baleful Strix
+1 Birds of Paradise
+1 Blasphemous Act
+1 Blood Crypt
+1 Bloodstained Mire
+1 Bloom Tender
+1 Bountiful Promenade
+1 Breeding Pool
+1 Burnt Offering
+1 Cecily, Haunted Mage
+1 Chainer, Nightmare Adept
+1 Coiling Oracle
+1 Command Tower
+1 Corrupted Conviction
+1 Culling the Weak
+1 Deadly Dispute
+1 Delighted Halfling
+1 Derevi, Empyrial Tactician
+1 Evolutionary Leap
+1 Exotic Orchard
+1 Faeburrow Elder
+1 Faithless Looting
+2 Forest
+1 Godless Shrine
+1 Hallowed Fountain
+1 Hofri Ghostforge
+1 Ignoble Hierarch
+1 Island
+1 Jegantha, the Wellspring
+1 Kenrith, the Returned King
+1 Ketria Triome
+1 Kiora's Follower
+1 Life's Legacy
+1 Lightning Greaves
+1 Loot, the Pathfinder
+1 Luxury Suite
+1 Mardu Siegebreaker
+1 Marsh Flats
+1 Misty Rainforest
+1 Morphic Pool
+1 Mountain
+1 Mulldrifter
+1 Nature's Chosen
+1 Nature's Lore
+1 Noble Hierarch
+1 Othelm, Sigardian Outcast
+1 Overgrown Tomb
+1 Path of Ancestry
+1 Peregrine Drake
+1 Phantasmal Image
+1 Phyrexian Altar
+1 Phyrexian Tower
+1 Plains
+1 Preordain
+1 Ratadrabik of Urborg
+1 Reanimate
+1 Reflector Mage
+1 Sacred Foundry
+1 Sacrifice
+1 Scalding Tarn
+1 Sea of Clouds
+1 Shriekmaw
+1 Skullwinder
+1 Sneak Attack
+1 Sol Ring
+1 Spellskite
+1 Spire Garden
+1 Steam Vents
+1 Stomping Ground
+1 Swamp
+1 Swords to Plowshares
+1 Temple Garden
+1 Temur Ascendancy
+1 The Kami War
+1 Three Visits
+1 Tinder Wall
+1 Tivit, Seller of Secrets
+1 Treasure Cruise
+1 Tyvar, Jubilant Brawler
+1 Unite the Coalition
+1 Uro, Titan of Nature's Wrath
+1 Verdant Catacombs
+1 Village Bell-Ringer
+1 Village Rites
+1 Watery Grave
+1 Wild Growth
+1 Zagoth Triome
+1 Zealous Conscripts
+1 Ziatora's Proving Ground
+
+Sideboard:
+1 Carrion Feeder
+1 Fellwar Stone
+1 Sakura-Tribe Elder
+1 Skullclamp
+1 Solemn Simulacrum
+1 Torsten, Founder of Benalia
+1 Viscera Seer
+

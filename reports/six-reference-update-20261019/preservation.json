@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-19T14:50:48.782Z",
+  "existingFiles": 3101,
+  "unchanged": 3096,
+  "changed": [
+    "public/app.mjs",
+    "public/catalog-gap-data.mjs",
+    "scripts/build-catalog-gaps.mjs",
+    "tests/catalog-gaps.test.mjs",
+    "tests/mechanics-ui.test.mjs"
+  ],
+  "added": [
+    "backups/before-six-references-20261019.manifest.json",
+    "backups/before-six-references-20261019.zip",
+    "scripts/catalog-gap-reference-updates.mjs",
+    "tests/six-references.test.mjs"
+  ],
+  "missing": [],
+  "runtimeFilesChanged": [
+    "public/app.mjs",
+    "public/catalog-gap-data.mjs"
+  ],
+  "catalogRecordsUnchanged": 374,
+  "detectionSpecificationsUnchanged": 42,
+  "changedReferences": [
+    "actualize",
+    "affinitycycling",
+    "covercast",
+    "hero's reward",
+    "kinfall",
+    "landship"
+  ],
+  "definitionsAdded": 0,
+  "sourceKinds": [
+    {
+      "name": "Affinitycycling",
+      "kind": "designer-card-example",
+      "publisher": "Gavin Verhey"
+    },
+    {
+      "name": "Hero's Reward",
+      "kind": "archived-mechanic-discussion",
+      "publisher": "Wizards (archived)"
+    },
+    {
+      "name": "Actualize",
+      "kind": "official-card-example",
+      "publisher": "Wizards"
+    },
+    {
+      "name": "Covercast",
+      "kind": "official-card-example",
+      "publisher": "Wizards"
+    },
+    {
+      "name": "Kinfall",
+      "kind": "playtest-card-example",
+      "publisher": "Scryfall"
+    },
+    {
+      "name": "Landship",
+      "kind": "playtest-card-example",
+      "publisher": "Scryfall"
+    }
+  ],
+  "backup": {
+    "file": "backups/before-six-references-20261019.zip",
+    "sha256": "292957a0fa771a83e6c45b95243e957ff0126bf99a7959c6b5c44c760007e770",
+    "verifiedFiles": 3099
+  },
+  "tests": {
+    "passed": 347,
+    "failed": 0,
+    "skipped": 0,
+    "logSha256": "b67d90407661ad853cfc3ad39a29834ee2679384a2afbbeb2c34d89033ccf66b"
+  },
+  "browser": {
+    "panelsVerified": 6,
+    "consoleMessages": [],
+    "artifacts": [
+      {
+        "file": "browser-panels.json",
+        "sha256": "53295d4c34713f6e9a10240cfd240cb91658fdc042f5e5b747000ae5072aec6a"
+      },
+      {
+        "file": "browser-console.json",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "file": "browser-kinfall.png",
+        "sha256": "0c3c06740d233b9bee0d39f39c62ecdea0d50a4f6e15dd536429ed152c87f8ab"
+      }
+    ]
+  }
+}

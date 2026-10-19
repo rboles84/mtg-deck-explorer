@@ -1,0 +1,22 @@
+{
+  "mode": "checked",
+  "rows": 743,
+  "summary": {
+    "master": {
+      "direct": 296,
+      "rule": 112,
+      "exception": 116,
+      "excluded": 3
+    },
+    "color-pie": {
+      "rule": 180,
+      "direct": 19,
+      "exception": 17
+    }
+  },
+  "sourceIntegrity": "all three hashes match original audit",
+  "outputs": [
+    "C:\\dev\\mtg-deck-explorer\\reports\\mechanics-coverage\\coverage-matrix.json",
+    "C:\\dev\\mtg-deck-explorer\\reports\\mechanics-coverage\\index.html"
+  ]
+}

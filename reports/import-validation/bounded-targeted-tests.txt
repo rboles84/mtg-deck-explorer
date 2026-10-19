@@ -1,0 +1,118 @@
+✔ untouched hakbal export normalizes without losing metadata (5.7415ms)
+✔ untouched veyran export normalizes without losing metadata (2.7343ms)
+✔ untouched detailed export normalizes without losing metadata (1.9199ms)
+✔ untouched obeka-a export normalizes without losing metadata (1.5501ms)
+✔ untouched obeka-b export normalizes without losing metadata (0.9634ms)
+✔ obeka-a commander stays extra until explicitly confirmed (2.8533ms)
+✔ obeka-b commander stays extra until explicitly confirmed (2.7644ms)
+✔ generated metadata order and newline variations preserve card meaning (2.1423ms)
+✔ explicit extra headings end ambiguous-placement review and card names cannot trigger CSV detection (0.8042ms)
+✖ malformed metadata, coordinates and quantities are not silently repaired (0.9006ms)
+✔ name resolution enables automatic tagged commanders and tracks per-row printing provenance (5.1193ms)
+✔ selected reference editions preserve source and re-resolution clears stale state and warnings (1.0458ms)
+✔ mixed server lookups have separate batches, keyed outcomes and no exact-coordinate fallback (5.5901ms)
+✔ split-face names resolve literally, unknown names stay unknown, and ambiguity is explicit (13.2295ms)
+✔ split-card transport uses an exact face alias and verifies the complete supplied name (1.3506ms)
+✔ alternate printed and flavor names resolve through verified exact search without losing provenance (2.8776ms)
+✔ exact alias fallback rejects unrelated search results and quotes names as literal data (0.9049ms)
+✖ HTTP name import returns keyed outcomes and authorizes commander identity from its cards (38.213ms)
+✔ CSV quantities are decimal integers, and malformed headers are never ignored (4.9752ms)
+✖ commander rules respect explicit placements, comma tags and noDeck modifiers (2.177ms)
+✔ two commander names cannot designate the same resolved Oracle identity (1.2428ms)
+✔ alternate-name edition changes use Oracle identity and preserve original names (1.03ms)
+✔ literal name matching accepts typographic apostrophes and only verified split-face spellings (11.6693ms)
+✔ joined translated face names require complete provider metadata (0.511ms)
+✔ exact alias lookup traverses 175 printings on fixed provider URLs (23.8043ms)
+✔ exact alias lookup traverses 176 printings on fixed provider URLs (3.6578ms)
+✔ exact alias lookup rejects changed total (2.2295ms)
+✔ exact alias lookup rejects duplicate printing (1.8785ms)
+✔ exact alias lookup rejects truncated page (1.8042ms)
+✔ exact alias lookup rejects bad more (1.2745ms)
+✔ exact alias lookup rejects oversized total (0.6428ms)
+✔ pagination drift invalidates cached alias pages so an explicit retry can succeed (5.1741ms)
+✔ alias fallback cannot change a collection-resolved reference edition (0.6981ms)
+✔ ambiguous alias identities and missing Oracle identities are never silently combined (1.1856ms)
+✔ malformed identifier and provider ID types produce typed validation failures (0.2081ms)
+✔ invalid provider collection data is not cached across an explicit retry (0.4715ms)
+✔ null provider payloads produce a provider error instead of an internal failure (0.5683ms)
+✔ invalid provider alias data is not cached across an explicit retry (0.5547ms)
+✔ an alias rate limit is reported and never automatically retried (0.659ms)
+✖ HTTP alias import derives commander identity and rejects malformed IDs before provider work (35.2543ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 36
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 211.815
+
+✖ failing tests:
+
+test at tests\import-corpus.test.mjs:57:1
+✖ malformed metadata, coordinates and quantities are not silently repaired (0.9006ms)
+  AssertionError [ERR_ASSERTION]: 100 Forest (tst)
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/import-corpus.test.mjs:59:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\import-corpus.test.mjs:159:1
+✖ HTTP name import returns keyed outcomes and authorizes commander identity from its cards (38.213ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:52064
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 52064
+    }
+  }
+
+test at tests\import-redteam.test.mjs:27:1
+✖ commander rules respect explicit placements, comma tags and noDeck modifiers (2.177ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/dev/mtg-deck-explorer/tests/import-redteam.test.mjs:38:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\import-redteam.test.mjs:172:1
+✖ HTTP alias import derives commander identity and rejects malformed IDs before provider work (35.2543ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:52066
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 52066
+    }
+  }

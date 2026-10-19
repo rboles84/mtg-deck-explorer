@@ -1,0 +1,17 @@
+# Local recovery archives and publication scratch work.
+/backups/
+
+# Local credentials, dependencies and editor/OS state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+*.pyc

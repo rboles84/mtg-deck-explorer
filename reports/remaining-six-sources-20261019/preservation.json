@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-19T14:32:08.020Z",
+  "existingFiles": 3006,
+  "unchanged": 3006,
+  "changed": [],
+  "missing": [],
+  "outsideAdditions": [],
+  "sourceReceiptsChecked": 38,
+  "tests": {
+    "passed": 343,
+    "failed": 0,
+    "logSha256": "1c0fee690616448a41f1e3de6da6a51919063ab2332f8d8104c86ff50bc423ae"
+  },
+  "applicationChanges": 0
+}

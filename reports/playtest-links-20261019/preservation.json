@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\public\\catalog-gap-data.mjs",
+    "Unchanged": true
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\public\\catalog-gap-index.mjs",
+    "Unchanged": true
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\lib\\mechanic-discovery.catalog-gaps.json",
+    "Unchanged": true
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\public\\app.mjs",
+    "Unchanged": false
+  },
+  {
+    "Path": "C:\\dev\\mtg-deck-explorer\\tests\\mechanics-ui.test.mjs",
+    "Unchanged": false
+  }
+]

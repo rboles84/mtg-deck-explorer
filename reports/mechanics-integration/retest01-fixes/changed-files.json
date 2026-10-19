@@ -1,0 +1,42 @@
+[
+  {
+    "path": "public/app.mjs",
+    "beforeSha256": "ed215d34148174566b7adde2d333fa5b4c1aeeb11526ab1ec1b8286c01548a64",
+    "afterSha256": "803a95945ca8e515f7443d098abbbfd9766ff1b6080024f2dd7e2b4bdf24b256"
+  },
+  {
+    "path": "public/index.html",
+    "beforeSha256": "49d96085c244a0b213c08f8ed2185a663b91ea7fdd7f53b36765961ba70fc91e",
+    "afterSha256": "f1a5c1af1323f66ae1e333a357114a196f49d7409db845d5e7d0bfe6d97e558d"
+  },
+  {
+    "path": "public/refinement.css",
+    "beforeSha256": "c8befe2ba589a41c65da0df89cbc0ae62a2c197cfcb7b8f9f5bccfde6375f990",
+    "afterSha256": "ff80f34f43f4c2e301fc4e7cb90d90b5dcc634672f147b5de08589a51c6f8717"
+  },
+  {
+    "path": "public/card-preview.css",
+    "beforeSha256": "76b587dc85d215e4ee86105d048814da0f20d4d28084dfd92420eccbac707ca0",
+    "afterSha256": "7d5a3900d927c54ab5fa89891fcb53da9657598fdfafeeba9d4e93981057e912"
+  },
+  {
+    "path": "public/mechanic-rules.mjs",
+    "beforeSha256": "2628537161258fa1f650a53e964682c326f69e1178b36b120766f37793ee0f4b",
+    "afterSha256": "d85d559227ed6b0572c165bdd1b8c603e4ca7164a7c0278e9b8131d689e12d7a"
+  },
+  {
+    "path": "tests/mechanics-ui.test.mjs",
+    "beforeSha256": "d561505b3eff3886c5f0ca48cd823c41af495d11b3f36f31a9149dc69822530f",
+    "afterSha256": "07108e1fc98d1a23bcbbff8c5dfef6de28b618a75fd58891b397db77a0c9257d"
+  },
+  {
+    "path": "README.md",
+    "beforeSha256": "7fc7f5d2b8a0b648e7af4792e76bb875677989aa0f7291469b1d028acdfae8d6",
+    "afterSha256": "e6258cb7ad016be9edea400b8e1875244452aeba0d50227abba65d6f29beaeed"
+  },
+  {
+    "path": "reports/mechanics-integration/IMPLEMENTATION_REPORT.md",
+    "beforeSha256": "88a8ae35b6841d599898202d92bcdc380c51cf6509c2bdd92237d9c159ce188f",
+    "afterSha256": "ed2f723a77709759ba48caee6628791fcde22152dbf18584bb5e487c94987fd3"
+  }
+]

@@ -1,0 +1,204 @@
+[
+  {
+    "requested": "Black Panther's Claws",
+    "cards": [
+      {
+        "object": "card",
+        "id": "e1aae864-cad1-48b2-bb33-8c2dbb53f5ec",
+        "name": "Hammer of Nazahn",
+        "flavor_name": "Black Panther's Claws",
+        "set": "msc",
+        "collector_number": "286",
+        "lang": "en",
+        "oracle_id": "e3955573-3db5-490e-903e-65e0172a9202",
+        "oracle_text": "Whenever Hammer of Nazahn or another Equipment you control enters, you may attach that Equipment to target creature you control.\nEquipped creature gets +2/+0 and has indestructible.\nEquip {4}",
+        "flavor_text": "\"They remain as sharp as they were the day they first cut the air.\"",
+        "type_line": "Legendary Artifact — Equipment",
+        "color_identity": [],
+        "keywords": [
+          "Equip"
+        ],
+        "legalities": {
+          "standard": "not_legal",
+          "future": "not_legal",
+          "historic": "not_legal",
+          "timeless": "not_legal",
+          "gladiator": "not_legal",
+          "pioneer": "not_legal",
+          "modern": "not_legal",
+          "legacy": "legal",
+          "pauper": "not_legal",
+          "vintage": "legal",
+          "penny": "not_legal",
+          "commander": "legal",
+          "oathbreaker": "legal",
+          "standardbrawl": "not_legal",
+          "brawl": "not_legal",
+          "competitivebrawl": "not_legal",
+          "alchemy": "not_legal",
+          "paupercommander": "not_legal",
+          "duel": "legal",
+          "oldschool": "not_legal",
+          "premodern": "not_legal",
+          "predh": "not_legal",
+          "tlr": "not_legal"
+        },
+        "finishes": [
+          "nonfoil",
+          "foil"
+        ],
+        "scryfall_uri": "https://scryfall.com/card/msc/286/hammer-of-nazahn?utm_source=api"
+      },
+      {
+        "object": "card",
+        "id": "5684e177-12b5-4dea-905c-856088d717bc",
+        "name": "Hammer of Nazahn",
+        "flavor_name": "Black Panther's Claws",
+        "set": "msc",
+        "collector_number": "427",
+        "lang": "en",
+        "oracle_id": "e3955573-3db5-490e-903e-65e0172a9202",
+        "oracle_text": "Whenever Hammer of Nazahn or another Equipment you control enters, you may attach that Equipment to target creature you control.\nEquipped creature gets +2/+0 and has indestructible.\nEquip {4}",
+        "flavor_text": "\"They remain as sharp as they were the day they first cut the air.\"",
+        "type_line": "Legendary Artifact — Equipment",
+        "color_identity": [],
+        "keywords": [
+          "Equip"
+        ],
+        "legalities": {
+          "standard": "not_legal",
+          "future": "not_legal",
+          "historic": "not_legal",
+          "timeless": "not_legal",
+          "gladiator": "not_legal",
+          "pioneer": "not_legal",
+          "modern": "not_legal",
+          "legacy": "legal",
+          "pauper": "not_legal",
+          "vintage": "legal",
+          "penny": "not_legal",
+          "commander": "legal",
+          "oathbreaker": "legal",
+          "standardbrawl": "not_legal",
+          "brawl": "not_legal",
+          "competitivebrawl": "not_legal",
+          "alchemy": "not_legal",
+          "paupercommander": "not_legal",
+          "duel": "legal",
+          "oldschool": "not_legal",
+          "premodern": "not_legal",
+          "predh": "not_legal",
+          "tlr": "not_legal"
+        },
+        "finishes": [
+          "nonfoil"
+        ],
+        "scryfall_uri": "https://scryfall.com/card/msc/427/hammer-of-nazahn?utm_source=api"
+      }
+    ]
+  },
+  {
+    "requested": "Exclusive Nightclub",
+    "cards": [
+      {
+        "object": "card",
+        "id": "cb962bcf-5d63-49b1-a383-068e53bb4db5",
+        "name": "Oscorp Industries",
+        "printed_name": "Exclusive Nightclub",
+        "set": "om1",
+        "collector_number": "179",
+        "lang": "en",
+        "oracle_id": "f432eb6a-f1bf-4ce7-b915-1488dccb4bb9",
+        "oracle_text": "This land enters tapped.\nWhen this land enters from a graveyard, you lose 2 life.\n{T}: Add {U}, {B}, or {R}.\nMayhem (You may play this card from your graveyard if you discarded it this turn. Timing rules still apply.)",
+        "type_line": "Land",
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "keywords": [
+          "Mayhem"
+        ],
+        "legalities": {
+          "standard": "legal",
+          "future": "legal",
+          "historic": "legal",
+          "timeless": "legal",
+          "gladiator": "legal",
+          "pioneer": "legal",
+          "modern": "legal",
+          "legacy": "legal",
+          "pauper": "not_legal",
+          "vintage": "legal",
+          "penny": "not_legal",
+          "commander": "legal",
+          "oathbreaker": "legal",
+          "standardbrawl": "legal",
+          "brawl": "legal",
+          "competitivebrawl": "legal",
+          "alchemy": "legal",
+          "paupercommander": "not_legal",
+          "duel": "legal",
+          "oldschool": "not_legal",
+          "premodern": "not_legal",
+          "predh": "not_legal",
+          "tlr": "legal"
+        },
+        "finishes": [
+          "nonfoil"
+        ],
+        "scryfall_uri": "https://scryfall.com/card/om1/179/oscorp-industries?utm_source=api"
+      }
+    ]
+  },
+  {
+    "requested": "Spectral Restitching",
+    "cards": [
+      {
+        "object": "card",
+        "id": "168b8831-6aab-4545-9ba7-d4f2af9920ff",
+        "name": "Hide on the Ceiling",
+        "printed_name": "Spectral Restitching",
+        "set": "om1",
+        "collector_number": "44",
+        "lang": "en",
+        "oracle_id": "376fa374-ead1-4728-ab8b-aca230b72031",
+        "oracle_text": "Exile X target artifacts and/or creatures. Return the exiled cards to the battlefield under their owners' control at the beginning of the next end step.",
+        "type_line": "Instant",
+        "color_identity": [
+          "U"
+        ],
+        "keywords": [],
+        "legalities": {
+          "standard": "legal",
+          "future": "legal",
+          "historic": "legal",
+          "timeless": "legal",
+          "gladiator": "legal",
+          "pioneer": "legal",
+          "modern": "legal",
+          "legacy": "legal",
+          "pauper": "not_legal",
+          "vintage": "legal",
+          "penny": "not_legal",
+          "commander": "legal",
+          "oathbreaker": "legal",
+          "standardbrawl": "legal",
+          "brawl": "legal",
+          "competitivebrawl": "legal",
+          "alchemy": "legal",
+          "paupercommander": "not_legal",
+          "duel": "legal",
+          "oldschool": "not_legal",
+          "premodern": "not_legal",
+          "predh": "not_legal",
+          "tlr": "legal"
+        },
+        "finishes": [
+          "nonfoil"
+        ],
+        "scryfall_uri": "https://scryfall.com/card/om1/44/hide-on-the-ceiling?utm_source=api"
+      }
+    ]
+  }
+]

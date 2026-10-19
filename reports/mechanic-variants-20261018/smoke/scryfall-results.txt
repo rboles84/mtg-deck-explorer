@@ -1,0 +1,118 @@
+Browser tab: 16, Title: "(f:commander id<=wubrg) (kw:\"jump-start\") prefer:newest · Scryfall Magic: The Gathering Search", URL: "https://scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc".
+0 AXWebArea (f:commander id<=wubrg) (kw:"jump-start") prefer:newest · Scryfall Magic: The Gathering Search, URL: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc
+	1 container
+		2 content list
+			3 link Description: Skip to main content, Value: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc#main
+			4 link Description: Skip to footer, Value: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc#footer
+		5 container
+			6 link Description: Scryfall, Help: Back to homepage, Value: scryfall.com/
+			7 text Search for Magic cards
+			8 text field (settable) Search for Magic cards, Value: (f:commander id<=wubrg) (kw:"Jump-Start") prefer:newest, ID: header-search-field
+			9 button Find Cards
+			10 link Description: Advanced, Value: scryfall.com/advanced
+			11 link Description: Syntax, Value: scryfall.com/docs/syntax
+			12 link Description: Sets, Value: scryfall.com/sets
+			13 link Description: Random, Value: scryfall.com/random
+			14 link Description: Your decks, Value: scryfall.com/account/decks
+			15 link Description: Sign In, Help: Your account, Value: scryfall.com/settings
+		16 container main
+			17 text Show
+			18 pop up button (collapsed, settable) Description: Change how cards are found, Value: Cards, ID: unique, Secondary Actions: Expand
+				19 menu
+					20 (selected) Cards
+					21 All prints
+					22 Unique art
+			23 text as
+			24 pop up button (collapsed, settable) Description: Change how cards are displayed, Value: Images, ID: as, Secondary Actions: Expand
+				25 menu
+					26 (selected) Images
+					27 Checklist
+					28 Text Only
+					29 Full
+			30 text sorted by
+			31 pop up button (collapsed, settable) Description: Change how cards are sorted, Value: Name, ID: order, Secondary Actions: Expand
+				32 menu
+					33 (selected) Name
+					34 Release Date
+					35 Set/Number
+					36 Rarity
+					37 Color
+					38 Price: USD
+					39 Price: TIX
+					40 Price: EUR
+					41 Mana Value
+					42 Power
+					43 Toughness
+					44 Artist Name
+					45 EDHREC Rank
+					46 Set Review
+			47 container Sort direction
+				48 text :
+			49 pop up button (collapsed, settable) Description: Change sort direction, ascending or descending, Value: Asc, ID: dir, Secondary Actions: Expand
+				50 menu
+					51 Auto
+					52 (selected) Asc
+					53 Desc
+			54 link Description: Find a random card within this search, ID: shuffle-button, Value: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc#
+			55 container
+				56 text 12 cards where (it’s legal in Commander and the color identity ≤ BGRUW) and (the card has the keyword “Jump-start”)
+			57 container
+				58 link Description: Beacon Bolt (Guilds of Ravnica #154), Value: scryfall.com/card/grn/154/beacon-bolt
+				59 link Description: Chemister's Insight (Ravnica: Clue Edition #81), Value: scryfall.com/card/clu/81/chemisters-insight
+				60 link Description: Dihada's Ploy (Modern Horizons 2 #193), Value: scryfall.com/card/mh2/193/dihadas-ploy
+				61 link Description: Direct Current (Ravnica: Clue Edition #132), Value: scryfall.com/card/clu/132/direct-current
+				62 link Description: Gravitic Punch (The List #GRN-105), Value: scryfall.com/card/plst/GRN-105/gravitic-punch
+				63 link Description: Maximize Altitude (The List #GRN-43), Value: scryfall.com/card/plst/GRN-43/maximize-altitude
+				64 link Description: Maximize Velocity (The List #GRN-111), Value: scryfall.com/card/plst/GRN-111/maximize-velocity
+				65 link Description: Quasiduplicate (Ravnica Remastered #55), Value: scryfall.com/card/rvr/55/quasiduplicate
+				66 link Description: Radical Idea (Outlaws of Thunder Junction Commander #110), Value: scryfall.com/card/otc/110/radical-idea
+				67 link Description: Risk Factor (Guilds of Ravnica Promos #113p), Value: scryfall.com/card/pgrn/113p/risk-factor
+				68 link Description: Sonic Assault (Guilds of Ravnica #199), Value: scryfall.com/card/grn/199/sonic-assault
+				69 link Description: Start the TARDIS (Doctor Who #661), Value: scryfall.com/card/who/661/start-the-tardis
+			70 text The orcs’ banner sends a clear message: “You've reached the end of this search.”
+		71 container
+			72 heading CARDS, Value: 6
+				73 text CARDS
+			74 content list
+				75 link Description: Advanced Search, Value: scryfall.com/advanced
+				76 link Description: Syntax Guide, Value: scryfall.com/docs/syntax
+				77 link Description: All Sets, Value: scryfall.com/sets
+				78 link Description: Your Decks, Value: scryfall.com/account/decks, ID: account-decks-footer-link
+				79 link Description: Random Card, Value: scryfall.com/random
+			80 heading SCRYFALL, Value: 6
+				81 text SCRYFALL
+			82 content list
+				83 link Description: Slack & Discord Bots, Value: scryfall.com/bots
+				84 link Description: Site FAQs & Help, Value: scryfall.com/docs/faqs
+				85 link Description: Scryfall Blog, Value: scryfall.com/blog
+				86 link Description: Scryfall Tagger, Value: tagger.scryfall.com/
+				87 link Description: MTG Wiki, Value: mtg.wiki/
+				88 link Description: Art Game, Value: artgame.scryfall.com/
+				89 link Description: April Fools Archive, Value: aprilfools.scryfall.com/
+			90 heading ACCOUNT, Value: 6
+				91 text ACCOUNT
+			92 content list
+				93 link Description: Your Account, Value: scryfall.com/settings/profile
+				94 link Description: Register, Value: scryfall.com/register
+				95 link Description: Terms of Service, Value: scryfall.com/docs/terms
+				96 link Description: Contact Us, Value: scryfall.com/contact
+				97 link Description: Privacy & Security, Value: scryfall.com/docs/privacy
+			98 heading DEVELOPERS, Value: 6
+				99 text DEVELOPERS
+			100 content list
+				101 link Description: API Documentation, Value: scryfall.com/docs/api
+				102 link Description: Card Objects, Value: scryfall.com/docs/api/cards
+				103 link Description: Card Imagery, Value: scryfall.com/docs/api/images
+				104 link Description: Bulk Data, Value: scryfall.com/docs/api/bulk-data
+				105 link Description: API Changelog, Value: scryfall.com/blog/category/api
+			106 heading MORE, Value: 6
+				107 text MORE
+			108 content list
+				109 link Description: Our Team, Value: scryfall.com/team
+				110 link Description: Donate to Scryfall, Value: scryfall.com/donate
+				111 link Description: Patreon, Value: patreon.com/scryfall
+				112 link Description: Bluesky, Value: bsky.app/profile/scryfall.com
+				113 link Description: GitHub, Value: github.com/scryfall
+			114 text Portions of Scryfall are unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Scryfall is not produced by or endorsed by Wizards of the Coast. The Slack, Discord, Cash App, PayPal, and Patreon logos are copyright their respective owners. Scryfall is not produced by or endorsed by these services. Card prices and promotional offers represent daily estimates and/or market values provided by our affiliates. Absolutely no guarantee is made for any price information. See stores for final prices and details. All other content © 2026 Scryfall, LLC.
+
+The focused UI element is 0 AXWebArea (f:commander id<=wubrg) (kw:"jump-start") prefer:newest · Scryfall Magic: The Gathering Search, URL: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc

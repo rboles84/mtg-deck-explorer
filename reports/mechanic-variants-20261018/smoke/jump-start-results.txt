@@ -1,0 +1,224 @@
+Browser tab: 12, Title: "Deck Explorer · A field journal", URL: "http://127.0.0.1:58149/#discovery".
+0 AXWebArea Deck Explorer · A field journal, URL: 127.0.0.1:58149/#discovery
+	1 link Description: Skip to archive, Value: 127.0.0.1:58149/#main
+	2 container
+		3 link Description: Deck Explorer, back to top, Value: 127.0.0.1:58149/#main
+		4 text CURRENT COLLECTION
+		244 text Kenrith, the Returned King
+		6 pop up button Description: Discovery Clipboard, 0 cards, ID: clipboard-open
+			7 text Clipboard
+			8 text 0
+	9 container Journal sequence
+		10 text YOUR FIELD JOURNAL
+		11 link Description: 01 Import Bring your printings, Value: 127.0.0.1:58149/#import-workbench
+		12 link Description: 02 Read Explore the passages, Value: 127.0.0.1:58149/#archive-view
+		13 link Description: 03 Understand Follow the mechanics, Value: 127.0.0.1:58149/#mechanics-view
+		14 link Description: 04 Explore Find other printings, Value: 127.0.0.1:58149/#discovery
+		15 button 05 Collect Open your Clipboard
+			16 text 05
+			17 text Collect
+			18 text Open your Clipboard
+		19 button 06 Export Take your list with you
+			20 text 06
+			21 text Export
+			22 text Take your list with you
+		23 container
+			24 text Each printing,
+			25 text in its own words.
+	26 container main
+		27 container
+			28 text A CLOSER READING OF THE CARDS YOU CHOSE
+			29 heading Every printing has a perspective., Value: 1
+				30 text Every printing
+				31 text has a 
+				32 text perspective.
+			33 text Read the language. Follow the mechanics.
+			34 text Find something worth keeping.
+			35 container Commander color identity
+				36 container
+					37 text COLOR
+					38 text IDENTITY
+					39 pop up button White · Included in the selected commander identity. Inspect details
+						40 image One white mana
+					41 pop up button Blue · Included in the selected commander identity. Inspect details
+						42 image One blue mana
+					43 pop up button Black · Included in the selected commander identity. Inspect details
+						44 image One black mana
+					45 pop up button Red · Included in the selected commander identity. Inspect details
+						46 image One red mana
+					47 pop up button Green · Included in the selected commander identity. Inspect details
+						48 image One green mana
+				49 text COMMANDER REFERENCE
+				245 text Your colors
+				246 text From your selected commander.
+				52 text Inspect a mana symbol
+		247 button (collapsed) 01 Import workbench 8 ENTRIES · 8 RESOLVED · OPEN WORKBENCH +, Secondary Actions: Expand
+			248 text 01
+			249 text  Import workbench
+			250 text 8 ENTRIES · 8 RESOLVED · OPEN WORKBENCH
+			251 text +
+		58 container ledger-section
+			59 container denominators
+				252 text 100 physical cards 8 input entries 8 resolved printings 2 passages
+			61 pop up button Inspect import ledger ↗, ID: ledger-open
+			62 container Selected commanders
+				63 text YOUR COMMANDER
+				253 image White, Blue, Black, Red, Green color identity
+				65 container commander-current
+					254 pop up button Inspect Kenrith, the Returned King
+					255 heading Kenrith, the Returned King, Value: 3
+						256 text Kenrith, the Returned King
+					257 text PLST / ELD-303 · EN · COMMANDER Assumed printing · your list supplied a name only
+					258 text Select the card to inspect its rules and printing.
+				71 button (collapsed) Change commander selection, Secondary Actions: Expand
+					72 text Change commander selection
+		73 container Journal views
+			74 checkbox 02 Flavor Archive, Value: 0, ID: archive-tab
+			75 checkbox 03 Mechanics Atlas, Value: 1, ID: mechanics-tab
+			76 text Evidence before interpretation.
+		77 container Description: Mechanics Atlas, ID: mechanics-view
+			78 text A BOUNDED FIELD OF STUDY
+			79 heading Mechanics, with their sources attached., Value: 2
+				80 text Mechanics, with
+				81 text their sources attached.
+			82 text Explore the mechanics reported for your imported cards, read their rules, and inspect the exact printings.
+			83 container
+				84 text I
+				85 heading Mechanics in your deck, Value: 3
+					86 text Mechanics in your deck
+				87 text Choose a mechanic below to see its cards and available rules.
+				88 container detected-list
+					259 text 14 card labels reported by Scryfall · 100 cards in your imported main deck.
+					260 text 8 of 8 imported entries have usable label data (100 of 100 copies). 0 unresolved entries. This list may not include every mechanic.
+					261 text Your import determines which cards appear here. Scryfall supplies their mechanic labels; the linked rules explain those terms.
+					262 button (collapsed) Import record details, Secondary Actions: Expand
+						263 text Import record details
+					264 button Browse this deck’s mechanics →
+			95 container
+				96 text II
+				97 heading Explore this deck, Value: 3
+					98 text Explore this deck
+				99 container mechanic-picker
+					100 button (expanded) Jump-start, ID: mechanic-picker-summary, Secondary Actions: Collapse
+						265 text Jump-start
+					102 container mechanic-list
+						266 checkbox Bad Wolf · 1, Value: 0
+						267 checkbox Cycling · 1, Value: 0
+						268 checkbox Daybound · 1, Value: 0
+						269 checkbox Descend · 1, Value: 0
+						270 checkbox Doctor's companion · 1, Value: 0
+						271 checkbox Flying · 1, Value: 0
+						272 checkbox Islandcycling · 1, Value: 0
+						273 checkbox Jump · 1, Value: 0
+						274 checkbox Jump-start · 1, Value: 1
+						275 checkbox Landcycling · 1, Value: 0
+						276 checkbox Multikicker · 1, Value: 0
+						277 checkbox Nightbound · 1, Value: 0
+						278 checkbox Transform · 1, Value: 0
+						279 checkbox Typecycling · 1, Value: 0
+			117 container mechanic-context
+				280 text KEYWORD ABILITY
+				281 heading Jump-start, Value: 2
+					282 text Jump-start
+				283 button (collapsed) Read rules · Jump-start, Secondary Actions: Expand
+					284 text Read rules · Jump-start
+				285 container
+					286 heading Jump-start · 1 distinct card · 1 copy, Value: 3
+						287 text Jump-start · 1 distinct card · 1 copy
+					288 text Reported by Scryfall These cards are in your imported deck, and Scryfall lists this label for them. Open a card to read its rules; the label alone does not explain what the card does or which face uses it.
+					289 pop up button Inspect Direct Current
+					290 heading Direct Current, Value: 3
+						291 pop up button Direct Current
+					292 image Ravnica: Clue Edition, common
+					293 text CLU / 132 · EN · DECK Assumed printing · your list supplied a name only
+					294 text 1 copy in your deck
+					295 text Imported lines: 10
+					296 link Description: Displayed edition on Scryfall ↗, Value: scryfall.com/card/clu/132/direct-current?utm_source=api
+					297 button (collapsed) Source record details, Secondary Actions: Expand
+						298 text Source record details
+				299 heading Find Jump-Start cards, Value: 3
+					300 text Find Jump-Start cards
+				301 container
+					302 text Commander-legal cards within your commander’s colors 
+					303 image White, Blue, Black, Red, Green color identity
+				304 button (collapsed) How this search works, Secondary Actions: Expand
+					305 text How this search works
+				306 button Search Jump-Start cards →
+			145 container discovery
+				146 text III
+				147 heading Discover cards, Value: 3
+					148 text Discover cards
+				149 text One recent printing per card. Inspect an image or save it to your Clipboard.
+				307 text 1–12 of 12 distinct cards
+				308 container discovery-query
+					309 button (collapsed) View exact query, Secondary Actions: Expand
+						310 text View exact query
+					311 link Description: Open on Scryfall ↗, Value: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc
+				312 container Description: Discovery pages, ID: discovery-pages-top
+					313 button (disabled) Previous discovery page
+					314 container
+						315 text Page
+						316 pop up button (collapsed, settable) Description: Discovery page, Value: 1, ID: discovery-page-top, Secondary Actions: Expand
+							317 menu
+								318 (selected) 1
+						319 text of 1
+					320 button (disabled) Next discovery page
+				321 container discovery-results
+					322 container
+						323 pop up button Inspect Beacon Bolt
+						324 button Save Beacon Bolt to Clipboard
+					325 container
+						326 pop up button Inspect Chemister's Insight
+						327 button Save Chemister's Insight to Clipboard
+					328 container
+						329 pop up button Inspect Dihada's Ploy
+						330 button Save Dihada's Ploy to Clipboard
+					331 container
+						332 pop up button Inspect Direct Current
+						333 button Save Direct Current to Clipboard
+					334 container
+						335 pop up button Inspect Gravitic Punch
+						336 button Save Gravitic Punch to Clipboard
+					337 container
+						338 pop up button Inspect Maximize Altitude
+						339 button Save Maximize Altitude to Clipboard
+					340 container
+						341 pop up button Inspect Maximize Velocity
+						342 button Save Maximize Velocity to Clipboard
+					343 container
+						344 pop up button Inspect Quasiduplicate
+						345 button Save Quasiduplicate to Clipboard
+					346 container
+						347 pop up button Inspect Radical Idea
+						348 button Save Radical Idea to Clipboard
+					349 container
+						350 pop up button Inspect Risk Factor
+						351 button Save Risk Factor to Clipboard
+					352 container
+						353 pop up button Inspect Sonic Assault
+						354 button Save Sonic Assault to Clipboard
+					355 container
+						356 pop up button Inspect Start the TARDIS
+						357 button Save Start the TARDIS to Clipboard
+				358 container Description: Discovery pages below results, ID: discovery-pages-bottom
+					359 button (disabled) Previous discovery page
+					360 container
+						361 text Page
+						362 pop up button (collapsed, settable) Description: Discovery page below results, Value: 1, ID: discovery-page-bottom, Secondary Actions: Expand
+							363 menu
+								364 (selected) 1
+						365 text of 1
+					366 button (disabled) Next discovery page
+		233 container
+			234 text DECK EXPLORER Read → Understand → Explore → Collect → Export A local research instrument. No AI, deck ratings or deck modifications.
+			235 text Card data and images: 
+			236 link Description: Scryfall, Value: scryfall.com/
+			237 text . Symbols: 
+			238 link Description: Mana, Value: mana.andrewgioia.com/
+			239 text  & 
+			240 link Description: Keyrune, Value: keyrune.andrewgioia.com/
+			241 text  by Andrew Gioia. Magic: The Gathering is © Wizards of the Coast.
+			242 button (collapsed) Sources & boundaries, Secondary Actions: Expand
+				243 text Sources & boundaries
+
+The focused UI element is 311 link Description: Open on Scryfall ↗, URL: scryfall.com/search?q=%28f%3Acommander+id%3C%3Dwubrg%29+%28kw%3A%22Jump-Start%22%29+prefer%3Anewest&unique=cards&order=name&dir=asc

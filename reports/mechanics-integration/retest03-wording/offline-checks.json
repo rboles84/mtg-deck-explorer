@@ -1,0 +1,18 @@
+[
+  {
+    "exitCode": 0,
+    "check": "audit-mechanics-metadata"
+  },
+  {
+    "exitCode": 0,
+    "check": "build-mechanics-coverage"
+  },
+  {
+    "exitCode": 0,
+    "check": "build-mechanics-vocabulary"
+  },
+  {
+    "exitCode": 0,
+    "check": "check-mechanics-preservation"
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Actualize",
+    "panel": {
+      "links": [
+        {
+          "label": "Wizards card example · Official card image gallery · Etali, Primal Garden ↗",
+          "url": "https://magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA&cigquery=Etali"
+        }
+      ],
+      "text": "Actualize · Official card example\n\nGeneral rules definition not supplied. Read each card’s own text below.\n\nWizards card example · Official card image gallery · Etali, Primal Garden ↗"
+    },
+    "state": "Browser tab: 3, Title: \"Deck Explorer · A field journal\", URL: \"http://127.0.0.1:4179/#discovery\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 144-150, 152-158, 171-174\n+\t\t\t\t\t152 text 19 mechanic labels and Oracle-text matches · 100 cards in your imported main deck.\n+\t\t\t\t\t153 text 7 of 7 imported entries have usable label data (100 of 100 copies). 0 unresolved entries. This list may not include every mechanic.\n+\t\t\t\t\t154 text Your import determines which cards appear here. Matches use Scryfall labels and reviewed Oracle wording. Open a mechanic to inspect its source.\n+\t\t\t\t\t155 button (collapsed) Import record details, Secondary Actions: Expand\n+\t\t\t\t\t\t156 text Import record details\n+\t\t\t\t\t157 button Browse this deck’s mechanics →\n~\t\t\t\t\t97 button (expanded) Actualize, ID: mechanic-picker-summary, Secondary Actions: Collapse\n+\t\t\t\t\t\t158 text Actualize\n~\t\t\t\t\t\t159 checkbox Actualize · 1, Value: 1\n~\t\t\t\t\t\t160 checkbox Affinity · 1, Value: 0\n~\t\t\t\t\t\t161 checkbox Affinitycycling · 1, Value: 0\n~\t\t\t\t\t\t162 checkbox Cast · 3, Value: 0\n~\t\t\t\t\t\t163 checkbox Conjure · 1, Value: 0\n~\t\t\t\t\t\t164 checkbox Covercast · 1, Value: 0\n~\t\t\t\t\t\t165 checkbox Create · 1, Value: 0\n~\t\t\t\t\t\t166 checkbox Cycling · 1, Value: 0\n~\t\t\t\t\t\t167 checkbox Discard · 1, Value: 0\n~\t\t\t\t\t\t168 checkbox Friends forever · 1, Value: 0\n~\t\t\t\t\t\t169 checkbox Hero's Reward · 1, Value: 0\n~\t\t\t\t\t\t170 checkbox Intensity · 1, Value: 0\n+\t\t\t\t\t\t171 checkbox Kinfall · 1, Value: 0\n+\t\t\t\t\t\t172 checkbox Landship · 1, Value: 0\n+\t\t\t\t\t\t173 checkbox Partner · 1, Value: 0\n+\t\t\t\t\t\t174 checkbox Reveal · 2, Value: 0\n+\t\t\t\t\t\t175 checkbox Shuffle · 1, Value: 0\n+\t\t\t\t\t\t176 checkbox Tap · 2, Value: 0\n+\t\t\t\t\t\t177 checkbox Trample · 1, Value: 0\n+\t\t\t\t178 text ABILITY WORD\n+\t\t\t\t179 heading Actualize, Value: 2\n+\t\t\t\t\t180 text Actualize\n+\t\t\t\t181 container\n+\t\t\t\t\t182 button (expanded) Actualize · Official card example, Secondary Actions: Collapse\n+\t\t\t\t\t\t183 text Actualize · Official card example\n+\t\t\t\t\t184 text General rules definition not supplied. Read each card’s own text below.\n+\t\t\t\t\t185 link Description: Wizards card example · Official card image gallery · Etali, Primal Garden ↗, Value: magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA&cigquery=Etali\n+\t\t\t\t186 container\n+\t\t\t\t\t187 heading Actualize · 1 distinct card · 1 copy, Value: 3\n+\t\t\t\t\t\t188 text Actualize · 1 distinct card · 1 copy\n+\t\t\t\t\t189 text Reported by Scryfall These cards are in your imported deck, and Scryfall lists this label for them. Open a card to read its rules; the label alone does not explain what the card does or which face uses it.\n+\t\t\t\t\t190 pop up button Inspect Etali, Primal Garden\n+\t\t\t\t\t191 heading Etali, Primal Garden, Value: 3\n+\t\t\t\t\t\t192 pop up button Etali, Primal Garden\n+\t\t\t\t\t193 text YFRA / 15 · EN · DECK Supplied printing · verified coordinates\n+\t\t\t\t\t194 text 1 copy in your deck\n+\t\t\t\t\t195 text Imported lines: 7\n+\t\t\t\t\t196 link Description: Displayed edition on Scryfall ↗, Value: scryfall.com/card/yfra/15/etali-primal-garden?utm_source=api\n+\t\t\t\t\t197 button (collapsed) Source record details, Secondary Actions: Expand\n+\t\t\t\t\t\t198 text Source record details\n+\t\t\t\t199 heading Find Actualize cards, Value: 3\n+\t\t\t\t\t200 text Find Actualize cards\n+\t\t\t\t201 container\n+\t\t\t\t\t202 text Commander-legal cards within your commander’s colors \n+\t\t\t\t\t203 image White, Green color identity\n+\t\t\t\t204 button (collapsed) How this search works · Review coverage, Secondary Actions: Expand\n+\t\t\t\t\t205 text How this search works · Review coverage\n+\t\t\t\t206 button Search Actualize cards →\n+\t\t\t\t207 text No discovery search has been run for this commander context.\nThe focused UI element is 182 button (expanded) Actualize · Official card example, Secondary Actions: Collapse"
+  },
+  {
+    "name": "Affinitycycling",
+    "panel": {
+      "links": [
+        {
+          "label": "Gavin Verhey card reference · My 62 Secret Magic Playtest Cards! · Sojourner's Enforcermite · 10:17 ↗",
+          "url": "https://www.youtube.com/watch?v=NuWq8-rnJ38&t=617s"
+        }
+      ],
+      "text": "Affinitycycling · Designer card example\n\nGeneral rules definition not supplied. Read each card’s own text below.\n\nGavin Verhey card reference · My 62 Secret Magic Playtest Cards! · Sojourner's Enforcermite · 10:17 ↗"
+    },
+    "state": "Browser tab: 3, Title: \"Deck Explorer · A field journal\", URL: \"http://127.0.0.1:4179/#discovery\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t97 button (expanded) Affinitycycling, ID: mechanic-picker-summary, Secondary Actions: Collapse\n~\t\t\t\t\t\t158 text Affinitycycling\n~\t\t\t\t\t\t159 checkbox Actualize · 1, Value: 0\n~\t\t\t\t\t\t161 checkbox Affinitycycling · 1, Value: 1\n~\t\t\t\t178 text KEYWORD ABILITY\n~\t\t\t\t179 heading Affinitycycling, Value: 2\n~\t\t\t\t\t180 text Affinitycycling\n~\t\t\t\t\t182 button (expanded) Affinitycycling · Designer card example, Secondary Actions: Collapse\n~\t\t\t\t\t\t183 text Affinitycycling · Designer card example\n~\t\t\t\t\t185 link Value: youtube.com/watch?v=NuWq8-rnJ38&t=617s, Description: Gavin Verhey card reference · My 62 Secret Magic Playtest Cards! · Sojourner's Enforcermite · 10:17 ↗\n~\t\t\t\t\t187 heading Affinitycycling · 1 distinct card · 1 copy, Value: 3\n~\t\t\t\t\t\t188 text Affinitycycling · 1 distinct card · 1 copy\n~\t\t\t\t\t190 pop up button Inspect Sojourner's Enforcermite\n~\t\t\t\t\t191 heading Sojourner's Enforcermite, Value: 3\n~\t\t\t\t\t\t192 pop up button Sojourner's Enforcermite\n~\t\t\t\t\t193 text UNK / CA06B · EN · DECK Supplied printing · verified coordinates\n~\t\t\t\t\t195 text Imported lines: 5\n~\t\t\t\t\t196 link Description: Displayed edition on Scryfall ↗, Value: scryfall.com/card/unk/CA06b/sojourners-enforcermite?utm_source=api\n~\t\t\t\t199 heading Find Affinitycycling cards, Value: 3\n~\t\t\t\t\t200 text Find Affinitycycling cards\n~\t\t\t\t206 button Search Affinitycycling cards →\nThe focused UI element is 182 button (expanded) Affinitycycling · Designer card example, Secondary Actions: Collapse"
+  },
+  {
+    "name": "Covercast",
+    "panel": {
+      "links": [
+        {
+          "label": "Wizards card example · Official card image gallery · Summitfest Closing Ceremony ↗",
+          "url": "https://magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery?cigquery=Summitfest%20Closing%20Ceremony"
+        }
+      ],
+      "text": "Covercast · Official card example\n\nGeneral rules definition not supplied. Read each card’s own text below.\n\nWizards card example · Official card image gallery · Summitfest Closing Ceremony ↗"
+    },
+    "state": "Browser tab: 3, Title: \"Deck Explorer · A field journal\", URL: \"http://127.0.0.1:4179/#discovery\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t97 button (expanded) Covercast, ID: mechanic-picker-summary, Secondary Actions: Collapse\n~\t\t\t\t\t\t158 text Covercast\n~\t\t\t\t\t\t161 checkbox Affinitycycling · 1, Value: 0\n~\t\t\t\t\t\t164 checkbox Covercast · 1, Value: 1\n~\t\t\t\t178 text ABILITY WORD\n~\t\t\t\t179 heading Covercast, Value: 2\n~\t\t\t\t\t180 text Covercast\n~\t\t\t\t\t182 button (expanded) Covercast · Official card example, Secondary Actions: Collapse\n~\t\t\t\t\t\t183 text Covercast · Official card example\n~\t\t\t\t\t185 link Description: Wizards card example · Official card image gallery · Summitfest Closing Ceremony ↗, Value: magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery?cigquery=Summitfest%20Closing%20Ceremony\n~\t\t\t\t\t187 heading Covercast · 1 distinct card · 1 copy, Value: 3\n~\t\t\t\t\t\t188 text Covercast · 1 distinct card · 1 copy\n~\t\t\t\t\t190 pop up button Inspect Summitfest Closing Ceremony\n~\t\t\t\t\t191 heading Summitfest Closing Ceremony, Value: 3\n~\t\t\t\t\t\t192 pop up button Summitfest Closing Ceremony\n~\t\t\t\t\t193 text YSOS / 28 · EN · DECK Supplied printing · verified coordinates\n~\t\t\t\t\t195 text Imported lines: 8\n~\t\t\t\t\t196 link Description: Displayed edition on Scryfall ↗, Value: scryfall.com/card/ysos/28/summitfest-closing-ceremony?utm_source=api\n~\t\t\t\t199 heading Find Covercast cards, Value: 3\n~\t\t\t\t\t200 text Find Covercast cards\n~\t\t\t\t206 button Search Covercast cards →\nThe focused UI element is 182 button (expanded) Covercast · Official card example, Secondary Actions: Collapse"
+  },
+  {
+    "name": "Hero's Reward",
+    "panel": {
+      "links": [
+        {
+          "label": "Wizards (archived) mechanic reference · Building a Hydra · A Hero's Reward ↗",
+          "url": "https://web.archive.org/web/20201021225115/https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25"
+        }
+      ],
+      "text": "Hero's Reward · Archived Wizards discussion\n\nGeneral rules definition not supplied. Read each card’s own text below.\n\nWizards (archived) mechanic reference · Building a Hydra · A Hero's Reward ↗"
+    },
+    "state": "Browser tab: 3, Title: \"Deck Explorer · A field journal\", URL: \"http://127.0.0.1:4179/#discovery\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t97 button (expanded) Hero's Reward, ID: mechanic-picker-summary, Secondary Actions: Collapse\n~\t\t\t\t\t\t158 text Hero's Reward\n~\t\t\t\t\t\t164 checkbox Covercast · 1, Value: 0\n~\t\t\t\t\t\t169 checkbox Hero's Reward · 1, Value: 1\n~\t\t\t\t179 heading Hero's Reward, Value: 2\n~\t\t\t\t\t180 text Hero's Reward\n~\t\t\t\t\t182 button (expanded) Hero's Reward · Archived Wizards discussion, Secondary Actions: Collapse\n~\t\t\t\t\t\t183 text Hero's Reward · Archived Wizards discussion\n~\t\t\t\t\t185 link Description: Wizards (archived) mechanic reference · Building a Hydra · A Hero's Reward ↗, Value: web.archive.org/web/20201021225115/https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25\n~\t\t\t\t\t187 heading Hero's Reward · 1 distinct card · 1 copy, Value: 3\n~\t\t\t\t\t\t188 text Hero's Reward · 1 distinct card · 1 copy\n~\t\t\t\t\t190 pop up button Inspect Pheres-Band Revelers\n~\t\t\t\t\t191 heading Pheres-Band Revelers, Value: 3\n~\t\t\t\t\t\t192 pop up button Pheres-Band Revelers\n~\t\t\t\t\t193 text TDAG / 5 · EN · DECK Supplied printing · verified coordinates\n~\t\t\t\t\t195 text Imported lines: 6\n~\t\t\t\t\t196 link Description: Displayed edition on Scryfall ↗, Value: scryfall.com/card/tdag/5/pheres-band-revelers?utm_source=api\n~\t\t\t\t199 heading Find Hero's Reward cards, Value: 3\n~\t\t\t\t\t200 text Find Hero's Reward cards\n~\t\t\t\t206 button Search Hero's Reward cards →\nThe focused UI element is 182 button (expanded) Hero's Reward · Archived Wizards discussion, Secondary Actions: Collapse"
+  },
+  {
+    "name": "Landship",
+    "panel": {
+      "links": [
+        {
+          "label": "Scryfall card example · Oracle card record · Plane-Merge Elf ↗",
+          "url": "https://scryfall.com/card/cmb2/83/plane-merge-elf"
+        },
+        {
+          "label": "Scryfall keyword search · 1 unique card (2026-10-19; includes playtest cards) ↗",
+          "url": "https://scryfall.com/search?q=keyword%3A%22Landship%22&unique=cards&include_extras=true"
+        },
+        {
+          "label": "Wizards playtest format guidance · Mystery Booster Release Notes · Playtest Cards ↗",
+          "url": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11"
+        }
+      ],
+      "text": "Landship · Playtest card reference\n\nGeneral rules definition not supplied. Read each card’s own text below.\n\nScryfall card example · Oracle card record · Plane-Merge Elf ↗\n\nScryfall keyword search · 1 unique card (2026-10-19; includes playtest cards) ↗\n\nWizards playtest format guidance · Mystery Booster Release Notes · Playtest Cards ↗"
+    },
+    "state": "Browser tab: 3, Title: \"Deck Explorer · A field journal\", URL: \"http://127.0.0.1:4179/#discovery\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 182-203, 206-207\n~\t\t\t\t\t97 button (expanded) Landship, ID: mechanic-picker-summary, Secondary Actions: Collapse\n~\t\t\t\t\t\t158 text Landship\n~\t\t\t\t\t\t169 checkbox Hero's Reward · 1, Value: 0\n~\t\t\t\t\t\t172 checkbox Landship · 1, Value: 1\n~\t\t\t\t178 text PLAYTEST ABILITY WORD · CARD REFERENCE\n~\t\t\t\t179 heading Landship, Value: 2\n~\t\t\t\t\t180 text Landship\n~\t\t\t\t181 text Plane-Merge Elf · Mystery Booster playtest card · Commander: not legal (Scryfall, 2026-10-19).\n+\t\t\t\t182 container\n+\t\t\t\t\t183 button (expanded) Landship · Playtest card reference, Secondary Actions: Collapse\n+\t\t\t\t\t\t184 text Landship · Playtest card reference\n+\t\t\t\t\t185 text General rules definition not supplied. Read each card’s own text below.\n+\t\t\t\t\t186 link Description: Scryfall card example · Oracle card record · Plane-Merge Elf ↗, Value: scryfall.com/card/cmb2/83/plane-merge-elf\n+\t\t\t\t\t187 link Description: Scryfall keyword search · 1 unique card (2026-10-19; includes playtest cards) ↗, Value: scryfall.com/search?q=keyword%3A%22Landship%22&unique=cards&include_extras=true\n+\t\t\t\t\t188 link Description: Wizards playtest format guidance · Mystery Booster Release Notes · Playtest Cards ↗, Value: magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11\n+\t\t\t\t189 container\n+\t\t\t\t\t190 heading Landship · 1 distinct card · 1 copy, Value: 3\n+\t\t\t\t\t\t191 text Landship · 1 distinct card · 1 copy\n+\t\t\t\t\t192 text Reported by Scryfall These cards are in your imported deck, and Scryfall lists this label for them. Open a card to read its rules; the label alone does not explain what the card does or which face uses it.\n+\t\t\t\t\t193 pop up button Inspect Plane-Merge Elf\n+\t\t\t\t\t194 heading Plane-Merge Elf, Value: 3\n+\t\t\t\t\t\t195 pop up button Plane-Merge Elf\n+\t\t\t\t\t196 text CMB2 / 83 · EN · DECK Supplied printing · verified coordinates\n+\t\t\t\t\t197 text 1 copy in your deck\n+\t\t\t\t\t198 text Imported lines: 4\n+\t\t\t\t\t199 link Description: Displayed edition on Scryfall ↗, Value: scryfall.com/card/cmb2/83/plane-merge-elf?utm_source=api\n+\t\t\t\t\t200 button (collapsed) Source record details, Secondary Actions: Expand\n+\t\t\t\t\t\t201 text Source record details\n+\t\t\t\t202 heading Find Landship cards, Value: 3\n+\t\t\t\t\t203 text Find Landship cards\n~\t\t\t\t204 container\n~\t\t\t\t\t205 text Commander-legal cards within your commander’s colors \n+\t\t\t\t\t206 image White, Green color identity\n+\t\t\t\t207 button (collapsed) How this search works · Review coverage, Secondary Actions: Expand\n+\t\t\t\t\t208 text How this search works · Review coverage\n+\t\t\t\t209 button Search Landship cards →\n+\t\t\t\t210 text No discovery search has been run for this commander context.\nThe focused UI element is 183 button (expanded) Landship · Playtest card reference, Secondary Actions: Collapse"
+  },
+  {
+    "name": "Kinfall",
+    "panel": {
+      "links": [
+        {
+          "label": "Scryfall card example · Oracle card record · Plane-Merge Elf ↗",
+          "url": "https://scryfall.com/card/cmb2/83/plane-merge-elf"
+        },
+        {
+          "label": "Scryfall keyword search · 1 unique card (2026-10-19; includes playtest cards) ↗",
+          "url": "https://scryfall.com/search?q=keyword%3A%22Kinfall%22&unique=cards&include_extras=true"
+        },
+        {
+          "label": "Wizards playtest format guidance · Mystery Booster Release Notes · Playtest Cards ↗",
+          "url": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11"
+        }
+      ],
+      "text": "Kinfall · Playtest card reference\n\nGeneral rules definition not supplied. Read each card’s own text below.\n\nScryfall card example · Oracle card record · Plane-Merge Elf ↗\n\nScryfall keyword search · 1 unique card (2026-10-19; includes playtest cards) ↗\n\nWizards playtest format guidance · Mystery Booster Release Notes · Playtest Cards ↗"
+    },
+    "state": "Browser tab: 3, Title: \"Deck Explorer · A field journal\", URL: \"http://127.0.0.1:4179/#discovery\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t97 button (expanded) Kinfall, ID: mechanic-picker-summary, Secondary Actions: Collapse\n~\t\t\t\t\t\t158 text Kinfall\n~\t\t\t\t\t\t171 checkbox Kinfall · 1, Value: 1\n~\t\t\t\t\t\t172 checkbox Landship · 1, Value: 0\n~\t\t\t\t179 heading Kinfall, Value: 2\n~\t\t\t\t\t180 text Kinfall\n~\t\t\t\t\t183 button (expanded) Kinfall · Playtest card reference, Secondary Actions: Collapse\n~\t\t\t\t\t\t184 text Kinfall · Playtest card reference\n~\t\t\t\t\t187 link Description: Scryfall keyword search · 1 unique card (2026-10-19; includes playtest cards) ↗, Value: scryfall.com/search?q=keyword%3A%22Kinfall%22&unique=cards&include_extras=true\n~\t\t\t\t\t190 heading Kinfall · 1 distinct card · 1 copy, Value: 3\n~\t\t\t\t\t\t191 text Kinfall · 1 distinct card · 1 copy\n~\t\t\t\t202 heading Find Kinfall cards, Value: 3\n~\t\t\t\t\t203 text Find Kinfall cards\n~\t\t\t\t209 button Search Kinfall cards →\nThe focused UI element is 183 button (expanded) Kinfall · Playtest card reference, Secondary Actions: Collapse"
+  }
+]

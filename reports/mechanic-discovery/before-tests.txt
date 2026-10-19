@@ -1,0 +1,362 @@
+✔ all 18 supplied original files remain byte-identical to the pre-implementation audit (158.8528ms)
+✔ keyword-flying-reported / keyword-flying-absent / atlas-flying-query (10.9861ms)
+✔ keyword-trample-reported / keyword-trample-absent / atlas-trample-query (0.7204ms)
+✔ keyword-deathtouch-reported / keyword-deathtouch-absent / atlas-deathtouch-query (0.6571ms)
+✔ keyword-vigilance-reported / keyword-vigilance-absent / atlas-vigilance-query (0.4659ms)
+✔ keyword-haste-reported / keyword-haste-absent / atlas-haste-query (0.4028ms)
+✔ keyword-menace-reported / keyword-menace-absent / atlas-menace-query (0.3598ms)
+✔ keyword-reach-reported / keyword-reach-absent / atlas-reach-query (0.3389ms)
+✔ keyword-lifelink-reported / keyword-lifelink-absent / atlas-lifelink-query (0.4503ms)
+✔ whole deterministic product loop keeps search candidates out of immutable imported evidence (59.3677ms)
+✔ a malformed provider face is classified as a provider failure (0.5057ms)
+✔ manual add merges same printing quantity and keeps another printing of the same name separate (1.9098ms)
+✔ quantity, removal, clear and print-aware export preserve exact entries and imported deck immutability (5.0623ms)
+✔ synthetic cards, invalid UUIDs, export newlines and hostile query IDs are rejected (0.3503ms)
+✔ session restore validates objects, strips unknown properties, discards duplicates and malformed entries (0.4092ms)
+✔ session storage uses its own key and falls back to memory when access is blocked (1.3822ms)
+✔ Commander import requires 100 physical cards including commanders and counts extras separately (8.3348ms)
+✔ invalid lines and appended garbage block import even with exactly 100 cards (2.1453ms)
+✔ plain parser preserves source lines, zero padding, suffix, tags, sections, bad rows and duplicate quantities (1.1858ms)
+✔ owner supplied fixture is parsed without changing original text or printing coordinates (9.6442ms)
+✔ CSV supports all quoted columns, commas, escaped quotes and multiline original records (0.5929ms)
+✔ malformed CSV, invalid UUID and non-English coordinates remain visible unresolved rows (0.5071ms)
+✔ resolution joins reordered data, honors not-found, preserves source and accepts equivalent zero padding (1.3219ms)
+✔ UUID takes precedence but set, collector, supplied name and language conflicts are flagged (0.5975ms)
+✔ exact non-English UUID resolves only that language and printed name; analysis excludes it (1.9856ms)
+✔ ambiguous coordinates and a wrong UUID are never treated as exact data (0.5273ms)
+✔ same Oracle card in two printings keeps absent flavor absent; faces remain separate (0.7971ms)
+✔ Commander identity comes only from explicit section or selection; pair union is provisional (1.0926ms)
+✔ colorless is an empty color identity, and excluded side sections cannot become commanders (0.2774ms)
+✔ literal analysis distinguishes word boundaries and records exact original spans and rules (24.3882ms)
+✔ analysis uses Unicode whole words, exact spans and deterministic alphabetic ties (0.6246ms)
+✔ physical copies and repeated editions do not supply distinct card identity or independent evidence (0.7189ms)
+✔ analysis separately counts raw hits, physical quantities, printings and distinct supporting cards (0.4468ms)
+✔ stopwords, sparse evidence and punctuation boundaries do not manufacture a theme (0.6165ms)
+✔ documented generic auxiliaries and quantifiers abstain without suppressing concrete literal evidence (0.4571ms)
+✔ mechanic detection is actual record keyword evidence with no face or inherent-possession inference (0.4644ms)
+✔ synthetic demonstration is explicitly identified, has mixed archive states and no real URLs (2.7331ms)
+✔ XSS-like text is preserved as literal source data and parser rejects oversized decks (2.8901ms)
+✔ 24-card pages traverse the full distinct result set, including provider boundaries and final partial page (40.6637ms)
+✔ arbitrary page jumps use at most two numeric provider requests and concurrent identical requests share the cache (30.5454ms)
+✔ defensive duplicate collapse uses Oracle or name and chooses the newest printing without moving other page positions (1.113ms)
+✔ page bounds reject invalid values before provider work and empty search has no next page (1.1842ms)
+✔ postfilter and duplicate diagnostics describe only the requested UI page (6.4168ms)
+✔ changed provider totals cannot combine stale pages and clear cached search pages for a fresh retry (7.2614ms)
+✔ malformed pagination metadata cannot silently truncate the matching set (0.4525ms)
+✔ search calls honor the documented 500ms interval and cached pages do not repeat requests (502.4536ms)
+✖ HTTP pages retain context validation, reject client URLs and isolate commander/mechanic queries (25.5552ms)
+✖ a context that expires during a provider request cannot return stale discovery results (8.172ms)
+✔ preview imagery is constrained to supported sizes on the exact trusted HTTPS host (1.5488ms)
+✔ exact card and face images and attribution survive sanitization without changing printing identity (1.4329ms)
+✔ invalid optional image and attribution data does not invent or break an exact printing (0.3391ms)
+✔ copied pack fixtures retain their documented original bytes (15.4941ms)
+✔ native TappedOut CSV is blocked with TXT guidance: background-abdel-street-urchin.csv (7.2464ms)
+✔ native TappedOut CSV is blocked with TXT guidance: background-wilson-giants.csv (1.7602ms)
+✔ native TappedOut CSV is blocked with TXT guidance: companion-cecily-othelm-jegantha-side.csv (2.2489ms)
+✔ native TappedOut CSV is blocked with TXT guidance: companion-cecily-othelm-jegantha.csv (1.9988ms)
+✔ native TappedOut CSV is blocked with TXT guidance: doctors-companion-ten-rose.csv (1.8698ms)
+✔ native TappedOut CSV is blocked with TXT guidance: friends-forever-wernog-sophina.csv (3.2641ms)
+✔ native TappedOut CSV is blocked with TXT guidance: partner-thrasios-tymna.csv (2.106ms)
+✔ native TappedOut CSV is blocked with TXT guidance: partner-with-pir-toothy.csv (1.8788ms)
+✔ TappedOut format detection ignores header order/case and leaves generic CSV supported (1.3473ms)
+✔ Board and snake_case printing columns never silently become main/name-only input (3.3747ms)
+✔ derived Spanish excerpt preserves exact identity, language and unspecified finish without relaxing deck size (5.065ms)
+✔ name/set keys, validation and matching honor known hints, disclose unknown hints and preserve exact failures (19.826ms)
+✔ split/alias fallback retains recognized set constraints and does not accept another set (2.1923ms)
+✔ parser and API share collector validation, reject excessive metadata/records early (4.1205ms)
+✔ file size/type checks precede reading, with a separate post-decode character check (0.4438ms)
+✔ Retry-After preserves a full two-hour wait (seconds, simulated clock) (1.8292ms)
+✔ Retry-After preserves a full two-hour wait (date, simulated clock) (1.5329ms)
+✔ total alias work and aggregate response cache bytes are bounded (226.3353ms)
+✖ optional alias/provider failure preserves resolved main printing and authorizes discovery with its original context (38.4348ms)
+✔ successful extra resolution cannot replace a main edition or its discovery context (1.4049ms)
+✔ untouched hakbal export normalizes without losing metadata (13.2791ms)
+✔ untouched veyran export normalizes without losing metadata (3.577ms)
+✔ untouched detailed export normalizes without losing metadata (3.3227ms)
+✔ untouched obeka-a export normalizes without losing metadata (2.3497ms)
+✔ untouched obeka-b export normalizes without losing metadata (1.7912ms)
+✔ obeka-a commander stays extra until explicitly confirmed (4.1901ms)
+✔ obeka-b commander stays extra until explicitly confirmed (2.5538ms)
+✔ generated metadata order and newline variations preserve card meaning (2.5015ms)
+✔ explicit extra headings end ambiguous-placement review and card names cannot trigger CSV detection (1.0337ms)
+✔ malformed metadata, coordinates and quantities are not silently repaired (1.0529ms)
+✔ name resolution enables automatic tagged commanders and tracks per-row printing provenance (5.5668ms)
+✔ selected reference editions preserve source and re-resolution clears stale state and warnings (0.9919ms)
+✔ mixed server lookups have separate batches, keyed outcomes and no exact-coordinate fallback (14.051ms)
+✔ split-face names resolve literally, unknown names stay unknown, and ambiguity is explicit (20.6816ms)
+✔ split-card transport uses an exact face alias and verifies the complete supplied name (10.6541ms)
+✔ alternate printed and flavor names resolve through verified exact search without losing provenance (3.9021ms)
+✔ exact alias fallback rejects unrelated search results and quotes names as literal data (1.1175ms)
+✖ HTTP name import returns keyed outcomes and authorizes commander identity from its cards (69.107ms)
+✔ CSV quantities are decimal integers, and malformed headers are never ignored (5.8804ms)
+✔ commander rules respect explicit placements, comma tags and noDeck modifiers (1.4747ms)
+✔ two commander names cannot designate the same resolved Oracle identity (5.9855ms)
+✔ alternate-name edition changes use Oracle identity and preserve original names (4.7284ms)
+✔ literal name matching accepts typographic apostrophes and only verified split-face spellings (22.297ms)
+✔ joined translated face names require complete provider metadata (0.6774ms)
+✔ exact alias lookup traverses 175 printings on fixed provider URLs (21.7859ms)
+✔ exact alias lookup traverses 176 printings on fixed provider URLs (10.3126ms)
+✔ exact alias lookup rejects changed total (3.3099ms)
+✔ exact alias lookup rejects duplicate printing (3.2552ms)
+✔ exact alias lookup rejects truncated page (3.1275ms)
+✔ exact alias lookup rejects bad more (1.6993ms)
+✔ exact alias lookup rejects oversized total (0.5861ms)
+✔ pagination drift invalidates cached alias pages so an explicit retry can succeed (6.2314ms)
+✔ alias fallback cannot change a collection-resolved reference edition (0.7661ms)
+✔ ambiguous alias identities and missing Oracle identities are never silently combined (1.0959ms)
+✔ malformed identifier and provider ID types produce typed validation failures (2.4735ms)
+✔ invalid provider collection data is not cached across an explicit retry (0.6874ms)
+✔ null provider payloads produce a provider error instead of an internal failure (0.7265ms)
+✔ invalid provider alias data is not cached across an explicit retry (0.782ms)
+✔ an alias rate limit is reported and never automatically retried (1.1833ms)
+✖ HTTP alias import derives commander identity and rejects malformed IDs before provider work (83.6923ms)
+✔ captured response hashes and exact printing fields survive the existing safe projection (34.0228ms)
+✔ 296 observed labels are unique and exactly pinned to audit; all 16 failures excluded (5.3977ms)
+✔ exact lowercase comparison only; preserve spellings; unknown and failed candidates visible but unmapped (0.7473ms)
+✔ same Oracle ID deduplicates cards, retaining alternate printings, rows, quantities and exact flavor (1.4771ms)
+✔ missing and malformed arrays survive projection distinctly from empty metadata; partial imports remain explicit (0.4069ms)
+✔ actual provider witnesses never promote grants, references, reminder text, numeric thresholds or face possession (0.5914ms)
+✔ captured Cosmic → Dionus → Cosmic and repeat are deterministic; all current labels survive without network (102.6123ms)
+✔ invalid deck totals and garbage block import without transport or replacing the loaded deck (43.4253ms)
+✔ TappedOut CSV paste blocks before transport and preserves the loaded deck (8.0471ms)
+✔ TappedOut CSV file blocks before transport and preserves the loaded deck (11.0706ms)
+✔ TappedOut CSV drop blocks before transport and preserves the loaded deck (5.5023ms)
+✔ valid import reports deck and extra quantities separately (16.4269ms)
+✔ unresolved or mismatched content stays prominently flagged and keeps import workbench open (9.4467ms)
+✔ old import success and finally cannot replace or clear newer pending import (12.8993ms)
+✔ old import failure and finally cannot replace or clear newer pending import (15.2874ms)
+✔ stale search success/finally after mechanic cannot affect newer results/loading (7.3999ms)
+✔ stale search success/finally after commander cannot affect newer results/loading (6.2705ms)
+✔ stale search success/finally after import cannot affect newer results/loading (6.2227ms)
+✔ stale search success/finally after same query cannot affect newer results/loading (6.644ms)
+✔ stale search success/finally after page cannot affect newer results/loading (4.6192ms)
+✔ stale search failure/finally after mechanic cannot affect newer results/loading (2.6201ms)
+✔ stale search failure/finally after commander cannot affect newer results/loading (5.5251ms)
+✔ stale search failure/finally after import cannot affect newer results/loading (4.9568ms)
+✔ stale search failure/finally after same query cannot affect newer results/loading (2.7117ms)
+✔ stale search failure/finally after page cannot affect newer results/loading (2.5197ms)
+✔ navigation while searching suppresses late navigation and focus; current cleanup still completes (2.9473ms)
+✔ failed newest import preserves the loaded deck; old response cannot replace it (4.3378ms)
+✔ commander changes and mechanic reads use no transport and leave imported evidence intact (4.1986ms)
+✔ late AbortError cleanup in either request lane cannot clear its newer busy state (9.1696ms)
+✔ clear pasted text preserves the loaded deck, mechanic selection and provider context without transport (3.4643ms)
+✔ clear is a no-op during a pending import and works after completion (5.4647ms)
+✔ hakbal actual import handler selects tagged commander and discloses editions (11.9399ms)
+✔ veyran actual import handler selects tagged commander and discloses editions (9.8467ms)
+✔ Obeka actual handler requires confirmation and rejects changed-draft confirmation (13.9247ms)
+✔ a newer invalid draft cancels ownership of an earlier pending import (3.1427ms)
+✔ changing one reference edition pins other editions and preserves original text (5.952ms)
+✔ commander chooser rejects duplicate identities and invalid selection counts (4.5736ms)
+✔ duplicate commander aliases block the actual import without replacing the loaded deck (3.886ms)
+✔ uppercase reference UUIDs work in the actual correction handler (2.9162ms)
+✔ editing a pending draft prevents stale commit and restores busy controls (4.951ms)
+✔ editing a pending draft prevents stale error and restores busy controls (4.3192ms)
+✔ file selection and drop use local preview only, and supersede older imports and file reads (6.6731ms)
+✔ actual commander filter searches source aliases and canonical names with shared normalization (3.3365ms)
+✔ optional-extra failure commits complete required rows and keeps main context, while stale extra completion cannot commit (9.5471ms)
+✔ reference correction retains unknown-set provenance on other pinned rows (4.4991ms)
+✔ definition links resolve only exact reviewed headings at the pinned revision (22.4673ms)
+✔ main navigation exactly follows imported labels without a second mechanic list (7.8895ms)
+✔ rules, evidence disclosures and unknown labels work independently of search support (9.4264ms)
+✔ one explanation precedes cards and raw evidence stays in one closed section below them (9.7826ms)
+✔ rendered deck replacement clears old selection and does not duplicate the long label list (20.0993ms)
+✔ missing catalog or rules cannot hide imported cards, and partial resolution stays disclosed (7.8568ms)
+✔ detail viewer retains assumed versus supplied entry context for the same printing (2.3272ms)
+✔ actual detail handler flips exact face art, rules and flavor together without mutating printing or save action (1.7309ms)
+✔ flipping to a missing face image keeps its text and never borrows the other face art (0.9943ms)
+✔ Food and flavor-word references require exact retained clauses and never certify keywords (115.2631ms)
+✔ Eternity Gate keeps evidence cards and source status without duplicate inline Oracle text (3.1262ms)
+✔ contextual history precedes evidence and supported search follows it; Surveil cannot search (8.7292ms)
+✔ all available rule panels start collapsed and Food renders only its three requested clauses (23.017ms)
+✔ retained Adventure, flip and split printings show both parts with one image and no turn control (5.9997ms)
+✔ modal DFC preserves real front/back rendering; unknown layouts do not invent a reverse side (1.5388ms)
+✔ preview helpers inspect frozen exact-printing data without adding presentation state (3.8525ms)
+✔ a missing double-faced image never borrows the opposite face or a card-level image (0.1758ms)
+✔ a shared-image split layout can show its exact combined printing for either face (0.2866ms)
+✔ single-faced and image-absent printings retain usable face data (0.2858ms)
+✔ synthetic previews never expose even an otherwise valid provider image (0.345ms)
+✔ preview image selection rejects unrelated printing and unsafe URL forms (0.7493ms)
+✔ preview placement fits within each viewport edge when its dimensions fit (0.8419ms)
+✔ preview placement leaves a roomy trigger unobscured and stays nonnegative in narrow views (0.1544ms)
+✖ local symbol fonts are served as usable fonts, including versioned CSS URLs and HEAD requests (51.8398ms)
+✖ image-enabled page policy keeps fonts and connections local and source files private (18.6995ms)
+✔ sixty saved printings remain reachable exactly once across five bounded pages (7.6309ms)
+✔ name, edition, and collector searches change the view while export retains every printing (1.5334ms)
+✔ filtered quantity edits and removals update only the selected printing and preserve the imported deck (5.6403ms)
+✔ removing the final page clamps the visible page without dropping earlier printings (1.631ms)
+✔ searching a repeated card name keeps separate editions and quantities independently exportable (1.0532ms)
+✔ saving after browsing a filtered page restores the entire sixty-printing collection (2.8122ms)
+✔ rules data is reproducibly derived from the pinned official source without source edits (274.1885ms)
+✔ all numbered entries have exact source locations and the glossary is not misclassified as rules (66.0614ms)
+✔ reviewed mechanic sections contain full official subrules and retained examples (0.2742ms)
+✔ frozen sources: 524 concrete entries plus 3 playtest indexes; classifications remain distinct (12.2992ms)
+✔ all Atlas tier/auto-execute counts and separate historical census are enforced (7.4795ms)
+✔ eight explicit crosswalks retain exact Atlas rows and Rosewater explanation and color ownership (4.2874ms)
+✔ reviewed keyword recipes use the original Commander identity ceiling after the user correction (1.1724ms)
+✔ bounded identifiers preserve suffixes, normalize duplicate keys, and require UUID for foreign printings (2.6997ms)
+✔ collection resolves 100 identifiers in sequential 75 + 25 batches, dedupes, tolerates reordering and not_found (17.9858ms)
+✔ mismatched returned UUID is excluded, same-Oracle editions retain distinct flavor, faces remain separate, absent text stays absent (1.1039ms)
+✔ provider failures and 429 are surfaced without retry; retry-after blocks subsequent requests (1.1666ms)
+✔ minimum 120ms request spacing and small repeated-request cache (122.4622ms)
+✔ WU discovery includes mono-color and colorless cards, excludes outside colors and banned cards, and fetches one page (3.0033ms)
+✔ WUBRG discovery allows every color subset while colorless identity allows only colorless cards (1.0106ms)
+✖ HTTP context derives only selected commanders; caller identities/queries and IDs from another import are rejected (29.7975ms)
+✖ HTTP security: source files unreachable, local host/origin enforced, JSON and size bounds enforced (11.9094ms)
+✖ missing source catalog fails visibly while independent printing resolution remains available (2.939ms)
+✖ expired commander context requires a fresh import (11.4821ms)
+✔ mana token rendering covers actual costs and preserves unsupported syntax without HTML parsing (1.8287ms)
+✔ every emitted mana glyph exists in the pinned CSS (21.2256ms)
+✔ set symbols use exact known set codes and preserve unknown codes without aliases (7.1851ms)
+ℹ tests 209
+ℹ suites 0
+ℹ pass 198
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 870.5758
+
+✖ failing tests:
+
+test at tests\discovery.test.mjs:112:1
+✖ HTTP pages retain context validation, reject client URLs and isolate commander/mechanic queries (25.5552ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:59595
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 59595
+    }
+  }
+
+test at tests\discovery.test.mjs:134:1
+✖ a context that expires during a provider request cannot return stale discovery results (8.172ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:59597
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 59597
+    }
+  }
+
+test at tests\import-bounded.test.mjs:150:1
+✖ optional alias/provider failure preserves resolved main printing and authorizes discovery with its original context (38.4348ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50894
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50894
+    }
+  }
+
+test at tests\import-corpus.test.mjs:159:1
+✖ HTTP name import returns keyed outcomes and authorizes commander identity from its cards (69.107ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50886
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50886
+    }
+  }
+
+test at tests\import-redteam.test.mjs:172:1
+✖ HTTP alias import derives commander identity and rejects malformed IDs before provider work (83.6923ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50890
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50890
+    }
+  }
+
+test at tests\polish.test.mjs:114:1
+✖ local symbol fonts are served as usable fonts, including versioned CSS URLs and HEAD requests (51.8398ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50888
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50888
+    }
+  }
+
+test at tests\polish.test.mjs:146:1
+✖ image-enabled page policy keeps fonts and connections local and source files private (18.6995ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50892
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50892
+    }
+  }
+
+test at tests\server.test.mjs:171:1
+✖ HTTP context derives only selected commanders; caller identities/queries and IDs from another import are rejected (29.7975ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50896
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50896
+    }
+  }
+
+test at tests\server.test.mjs:191:1
+✖ HTTP security: source files unreachable, local host/origin enforced, JSON and size bounds enforced (11.9094ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50898
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50898
+    }
+  }
+
+test at tests\server.test.mjs:208:1
+✖ missing source catalog fails visibly while independent printing resolution remains available (2.939ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50900
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50900
+    }
+  }
+
+test at tests\server.test.mjs:214:1
+✖ expired commander context requires a fresh import (11.4821ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50902
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50902
+    }
+  }

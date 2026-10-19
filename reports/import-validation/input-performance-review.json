@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-18T16:58:27.138Z",
+  "normalParse": [
+    {
+      "name": "hakbal",
+      "rows": 84,
+      "medianMs": 0.369,
+      "p95Ms": 0.613,
+      "scope": "Parser only; excludes rendering, provider and network time"
+    },
+    {
+      "name": "veyran",
+      "rows": 79,
+      "medianMs": 0.289,
+      "p95Ms": 0.586,
+      "scope": "Parser only; excludes rendering, provider and network time"
+    },
+    {
+      "name": "obeka-b",
+      "rows": 102,
+      "medianMs": 0.326,
+      "p95Ms": 0.59,
+      "scope": "Parser only; excludes rendering, provider and network time"
+    }
+  ],
+  "metadataStress": [
+    {
+      "tags": 1000,
+      "chars": 4011,
+      "elapsedMs": 10.99,
+      "tagsAccepted": 1000
+    },
+    {
+      "tags": 5000,
+      "chars": 20011,
+      "elapsedMs": 171.63,
+      "tagsAccepted": 5000
+    },
+    {
+      "tags": 20000,
+      "timedOut": true,
+      "error": "spawnSync C:\\Program Files\\nodejs\\node.exe ETIMEDOUT"
+    }
+  ],
+  "scope": "Local targeted checks, not a production load test or security certification",
+  "retryAfterReview": {
+    "providerRequestedWaitSeconds": 7200,
+    "simulatedElapsedSeconds": 3601,
+    "providerCalls": 2,
+    "errors": [
+      {
+        "status": 429,
+        "reportedRetryAfter": "3600"
+      },
+      {
+        "status": 429,
+        "reportedRetryAfter": "3600"
+      }
+    ],
+    "scope": "Injected provider and simulated clock; no live requests"
+  }
+}

@@ -1,0 +1,412 @@
+--- before/public/app.mjs
++++ public/app.mjs
+@@ -1,6 +1,6 @@
+ import {parseDeck, resolveDeck, commanderContext, analyzeFlavor} from './core.mjs';
+ import {indexMechanics, keywordKey} from './mechanics.mjs';
+-import {mechanicRule} from './mechanic-rules.mjs';
++import {mechanicRule, mechanicExplanation} from './mechanic-rules.mjs';
+ import {requestOwner} from './request-owner.mjs';
+ import {createDemoDeck} from './demo.mjs';
+ import {addClipboard, setClipboardQuantity, removeClipboard, clearClipboard, exportClipboard, loadClipboard, saveClipboard} from './clipboard.mjs';
+@@ -303,18 +303,22 @@
+   $('mechanic-picker-summary').textContent=found.find(term=>term.key===selectedMechanicId)?.label||`Choose a mechanic (${found.length})`;
+   for(const term of found){const el=button(`${term.label} · ${term.distinctCards}`,()=>chooseDeckMechanic(term.key),'mechanic-choice');el.dataset.mechanicFocus=`deck-${term.key}`;el.setAttribute('aria-pressed',String(selectedMechanicId===term.key));choices.append(el);}
+   if(!found.length)choices.append(node('p','No deck labels to browse yet.','fine'));
+-  const searches=$('other-mechanic-searches');searches.replaceChildren();
+-  if(!catalog)searches.append(node('p','External searches are unavailable. You can still inspect your imported cards.','fine'));
+-  for(const record of catalog?.records||[]){const el=button(record.master_name,()=>{selectMechanic(`discovery:${record.atlas_row_id}`);$('mechanic-context').scrollIntoView({block:'start'});$('mechanic-context').querySelector('h2')?.focus({preventScroll:true});},'mechanic-choice');el.dataset.mechanicFocus=`choice-${record.atlas_row_id}`;el.setAttribute('aria-pressed',String(selectedMechanicId===`discovery:${record.atlas_row_id}`));searches.append(el);}
+-  const record=catalog?.records.find(r=>`discovery:${r.atlas_row_id}`===selectedMechanicId||keywordKey(r.master_name)===selectedMechanicId);
+-  const item=found.find(r=>r.key===(record?keywordKey(record.master_name):selectedMechanicId));
++  const item=found.find(r=>r.key===selectedMechanicId);
++  const record=item?catalog?.records.find(r=>keywordKey(r.master_name)===item.key):null;
+   const context=$('mechanic-context');context.replaceChildren();
+-  if(!item&&!record){context.append(node('h2','Choose a mechanic'),node('p','Choose from this deck’s list to read the rules and see the cards Scryfall associates with that label.','fine'));restoreFocus();return;}
+-  append(context,node('span',selectedMechanicId?.startsWith('discovery:')?'Find other cards':item?.audited?item.category:'Additional card label','eyebrow'),node('h2',item?.label||record.master_name));
++  if(!item){context.append(node('h2','Choose a mechanic'),node('p','Choose from this deck’s list to read the rules and see the cards Scryfall associates with that label.','fine'));restoreFocus();return;}
++  append(context,node('span',item.audited?item.category:'Additional card label','eyebrow'),node('h2',item?.label||record.master_name));
+   context.querySelector('h2').tabIndex=-1;context.querySelector('h2').dataset.mechanicFocus='context-title';
+-  const ruleNumber=mechanicRule(rulesData,item?.label||record.master_name);
++  const ruleNumber=mechanicRule(rulesData,item.label);
++  const explanation=mechanicExplanation(rulesData,item.label);
+   if(ruleNumber){const rules=node('section',undefined,'rules-card');
+     append(rules,append(node('div',undefined,'rules-heading'),node('h3','How it works')),ruleBody(rulesData,ruleNumber,{onOpen:showRule}),node('p','Comprehensive Rules · September 25, 2026. These explain the mechanic; open each card for its specific rules.','fine'));context.append(rules);
++  }else if(explanation){
++    const rules=node('section',undefined,'rules-card');
++    append(rules,node('h3',explanation.title),node('p',explanation.summary));
++    for(const number of explanation.rules)rules.append(ruleBody(rulesData,number,{onOpen:showRule}));
++    rules.append(node('p','Comprehensive Rules · September 25, 2026. Explanatory references only; provider-label audit status is unchanged.','fine'));
++    context.append(rules);
+   }else context.append(node('p','No linked explanation is available in this rules reference. Open a card below to read its rules.','fine'));
+   const deckCards=node('section',undefined,'mechanic-deck-cards');
+   deckCards.append(node('h3',item?`${item.label} · ${item.distinctCards} distinct ${item.distinctCards===1?'card':'cards'} · ${item.copies} ${item.copies===1?'copy':'copies'}`:'This label is not reported on your imported cards'));
+@@ -339,12 +343,26 @@
+       for(const row of rows)for(const occurrence of row.occurrences)proof.append(node('p',`keywords[${occurrence.index}] = ${JSON.stringify(occurrence.spelling)}`,'mono'));
+       append(proof,node('p',`Oracle ID: ${card.oracle_id||'unavailable'} · Printing ID: ${id}`,'mono'),node('p',`Import rows: ${rows.map(r=>r.rowId).join(', ')}. Metadata applies to the whole card; no face attribution.`, 'fine'));
+       if(card.scryfall_uri)proof.append(externalLink('Exact printing on Scryfall ↗',card.scryfall_uri));
+-      tile.append(proof);grid.append(tile);
++      tile.append(proof);
++      if(explanation?.showCardText){
++        const text=node('section',undefined,'mechanic-card-text');
++        text.append(node('h4','Current Oracle text · Scryfall'));
++        const faces=card.card_faces?.length?card.card_faces:[card];
++        for(const face of faces){
++          if(faces.length>1)text.append(node('h5',face.name));
++          text.append(node('p',face.oracle_text||'Oracle text unavailable.','mechanic-oracle-text'));
++        }
++        text.append(node('p','Full card text, not an extracted or inferred relationship.','fine'));
++        tile.append(text);
++      }
++      grid.append(tile);
+     }
+     deckCards.append(grid);
+   }else deckCards.append(node('p','This optional search looks for other cards. It does not add a mechanic to your deck’s list. Scryfall labels may be incomplete.','fine'));
+-  context.append(deckCards);
+-  if(!record){restoreFocus();return;}
++  if(!record){
++    context.append(deckCards,node('p',catalog?'No reviewed discovery search or historical color placement is linked to this label.':'External searches and historical color placements are unavailable. You can still inspect your imported cards.','fine'));
++    restoreFocus();return;
++  }
+   const history=append(node('details',undefined,'color-history'),node('summary',`How the colors use ${record.master_name}`));
+   if(record.placement){
+     history.append(node('p','A historical view of color design. Primary, secondary and tertiary describe how often a color receives an ability, not its strength.','fine'));
+@@ -355,7 +373,7 @@
+     if(record.placement.explanation)history.append(node('p',record.placement.explanation,'source-explanation'));
+     history.append(node('p','Based on the 2021 color-pie article. Individual sets may depart from this pattern. Full source information is in the footer.','fine'));
+   } else history.append(node('p','No linked historical placement is available.','fine'));
+-  context.append(history);
++  context.append(history,deckCards);
+   const box=queryBox(record,buildVisibleQuery(record));context.append(box);
+   const run=button(searchBusy?'Searching Scryfall…':`Search ${record.master_name} cards →`,()=>runDiscovery(record),'primary');
+   run.dataset.mechanicFocus='run-discovery';
+--- before/public/index.html
++++ public/index.html
+@@ -49,7 +49,7 @@
+       <section id="mechanics-view" tabindex="-1" aria-label="Mechanics Atlas" hidden>
+         <div class="atlas-intro"><div><p class="eyebrow">A bounded field of study</p><h2>Mechanics, with<br><em>their sources attached.</em></h2></div><p>Explore the mechanics reported for your imported cards, read their rules, and inspect the exact printings.</p></div>
+         <section class="detected-panel"><div class="panel-title"><span class="section-no">I</span><h3>Mechanics in your deck</h3></div><p class="fine">Choose a mechanic below to see its cards and available rules.</p><div id="detected-list"></div></section>
+-        <div class="atlas-grid"><section class="mechanic-index"><div class="panel-title"><span class="section-no">II</span><h3>Explore this deck</h3></div><details id="mechanic-picker" open><summary id="mechanic-picker-summary">Choose a mechanic</summary><div id="mechanic-list"></div></details><details class="other-card-searches"><summary>Find other cards</summary><p class="fine">Eight optional searches outside your deck. These choices do not describe the mechanics in your deck. Search colors follow your selected commander.</p><div id="other-mechanic-searches"></div></details></section><section id="mechanic-context" class="mechanic-context"></section></div>
++        <div class="atlas-grid"><section class="mechanic-index"><div class="panel-title"><span class="section-no">II</span><h3>Explore this deck</h3></div><details id="mechanic-picker" open><summary id="mechanic-picker-summary">Choose a mechanic</summary><div id="mechanic-list"></div></details></section><section id="mechanic-context" class="mechanic-context"></section></div>
+         <section id="discovery" class="discovery" tabindex="-1"><div class="panel-title"><span class="section-no">III</span><h3>Discover cards</h3></div><p class="fine">One recent printing per card. Inspect an image or save it to your Clipboard.</p><div id="discovery-status" role="status"></div><div id="discovery-query"></div><nav id="discovery-pages-top" class="discovery-pagination" aria-label="Discovery pages" hidden></nav><div id="discovery-results" class="results-grid visual-card-grid"></div><nav id="discovery-pages-bottom" class="discovery-pagination" aria-label="Discovery pages below results" hidden></nav></section>
+       </section>
+       <footer><div><strong>DECK EXPLORER</strong><span>Read → Understand → Explore → Collect → Export</span></div><p>A local research instrument. No AI, deck ratings or deck modifications.<br>Card data and images: <a href="https://scryfall.com" target="_blank" rel="noreferrer">Scryfall</a>. Symbols: <a href="https://mana.andrewgioia.com/" target="_blank" rel="noreferrer">Mana</a> &amp; <a href="https://keyrune.andrewgioia.com/" target="_blank" rel="noreferrer">Keyrune</a> by Andrew Gioia. Magic: The Gathering is © Wizards of the Coast.</p><details><summary>Sources & boundaries</summary><div id="source-notes"></div></details></footer>
+--- before/public/refinement.css
++++ public/refinement.css
+@@ -20,10 +20,6 @@
+ #mechanic-picker>summary{cursor:pointer;padding:12px 4px;font-weight:600}
+ #mechanic-picker #mechanic-list{display:grid;grid-template-columns:1fr;max-height:28rem;overflow-y:auto;overscroll-behavior:contain}
+ #mechanic-list .mechanic-choice{gap:8px;overflow-wrap:anywhere;min-height:44px}
+-.other-card-searches{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}
+-.other-card-searches>summary{cursor:pointer;font-weight:600;min-height:44px}
+-.other-card-searches>.fine{margin:10px 0}
+-#other-mechanic-searches{display:grid}
+ #mechanic-picker,#mechanic-context{scroll-margin-top:130px}
+ .mechanic-deck-cards>.technical-details{margin:12px 0 20px}
+ .import-actions{flex-wrap:wrap}
+@@ -31,7 +27,6 @@
+   #mechanic-picker,#mechanic-context{scroll-margin-top:190px}
+   #mechanic-picker #mechanic-list{max-height:18rem}
+   .mechanic-index{padding-bottom:12px}
+-  .other-card-searches{margin-top:12px;padding-top:12px}
+ }
+ 
+ /* Shared printing surfaces: the paper journal leads into a dark reading room. */
+@@ -671,3 +666,7 @@
+ @media (prefers-reduced-motion: reduce) {
+   .card-visual, .visual-card .save-card, .rule-popover { animation: none; transition: none; }
+ }
++
++.mechanic-card-text{text-align:left;margin-top:16px}
++.mechanic-card-text h4{margin:0 0 8px}
++.mechanic-oracle-text{white-space:pre-wrap;overflow-wrap:anywhere}
+--- before/public/card-preview.css
++++ public/card-preview.css
+@@ -54,7 +54,7 @@
+ .card-details-body{display:grid;grid-template-columns:minmax(210px,340px) minmax(0,1fr);gap:36px;padding:28px}
+ .card-details-art-column{min-width:0}
+ .card-details-art-frame{position:relative}
+-.card-details-dialog .card-face-flip{position:absolute;top:12px;right:12px;width:44px;height:44px;min-height:44px;padding:0;border:1px solid #263e35;border-radius:50%;background:#f4eedf;color:#172522;font:30px/1 Georgia,serif;box-shadow:0 2px 8px #0006;cursor:pointer}
++.card-details-dialog .card-face-flip{position:absolute;top:15%;right:12px;width:44px;height:44px;min-height:44px;padding:0;border:1px solid #263e35;border-radius:50%;background:#f4eedf;color:#172522;font:30px/1 Georgia,serif;box-shadow:0 2px 8px #0006;cursor:pointer}
+ .card-details-dialog .card-face-flip:hover{background:#d8bd81}
+ .card-details-dialog .card-face-flip:focus-visible{outline:3px solid #d8bd81;outline-offset:3px}
+ .card-details-save-area{display:grid;gap:8px;margin-top:18px;padding-top:18px;border-top:1px solid var(--card-line)}
+--- before/public/mechanic-rules.mjs
++++ public/mechanic-rules.mjs
+@@ -19,3 +19,26 @@
+   const section = data.sections?.[number];
+   return section?.title?.toLowerCase() === key && section.paragraphs?.length ? number : null;
+ }
++
++// Explicit explanatory references, separate from keyword definitions and detection.
++// Exact retained clauses guard these links as well as the source revision.
++const EXPLANATORY_RULES = Object.freeze({
++  '111.10': 'Some effects instruct a player to create a predefined token. These effects use the definition below to determine the characteristics the token is created with. The effect that creates a predefined token may also modify or add to the predefined characteristics.',
++  '111.10b': 'A Food token is a colorless Food artifact token with “{2}, {T}, Sacrifice this token: You gain 3 life.”',
++  '205.3g': 'Artifacts have their own unique set of subtypes; these subtypes are called artifact types. The artifact types are Attraction (see rule 717), Blood, Bobblehead, Book, Clue, Contraption, Equipment (see rule 301.5), Food, Fortification (see rule 301.6), Gold, Heartwood, Incubator, Infinity, Junk, Lander, Map, Mutagen, Powerstone, Spacecraft, Stone, Treasure, Vehicle (see rule 301.7), and Vibranium.',
++  '207.2d': 'Similar to ability words, flavor words appear in italics at the beginning of some abilities. Flavor words provide a flavorful description of abilities, but they have no special rules meaning and are not listed in the Comprehensive Rules. While an ability word ties together several abilities with similar functionality, each flavor word is tailored to the specific ability it appears with.',
++});
++export function mechanicExplanation(data, label) {
++  if (typeof label !== 'string' || data?.date !== RULES_REVISION.date || data?.sourceSha256 !== RULES_REVISION.sourceSha256) return null;
++  const key=label.toLowerCase();
++  const explanation=key==='food'?{
++    title:'Food tokens and Food artifacts',
++    summary:'Food is an artifact subtype. The standard Food token has the ability below; other Food artifacts do not automatically have that ability. A creating effect may modify the token’s predefined characteristics.',
++    rules:['111.10b','111.10','205.3g'],
++  }:key==='eternity gate'?{
++    title:'Eternity Gate: a flavor word',
++    summary:'Eternity Gate labels a card-specific ability; it has no independent rules meaning. Read the contributing card’s full Oracle text below. This reference explains flavor words, not a separate Eternity Gate keyword rule.',
++    rules:['207.2d'], showCardText:true,
++  }:null;
++  return explanation?.rules.every(number=>data.rules?.[number]?.text===EXPLANATORY_RULES[number])?explanation:null;
++}
+--- before/tests/mechanics-ui.test.mjs
++++ tests/mechanics-ui.test.mjs
+@@ -2,15 +2,17 @@
+ import assert from 'node:assert/strict';
+ import fs from 'node:fs';
+ import vm from 'node:vm';
++import {fileURLToPath} from 'node:url';
++import {loadCatalog} from '../lib/catalog.mjs';
+ import {indexMechanics, keywordKey} from '../public/mechanics.mjs';
+ import {parseDeck, resolveDeck, deepFreeze} from '../public/core.mjs';
+-import {mechanicRule, MECHANIC_RULE_LINKS, RULES_REVISION} from '../public/mechanic-rules.mjs';
++import {mechanicRule, mechanicExplanation, MECHANIC_RULE_LINKS, RULES_REVISION} from '../public/mechanic-rules.mjs';
+ import {getCardFaces, getCardImageUrl} from '../public/card-preview.mjs';
+ 
+ const read=path=>fs.readFileSync(new URL(path,import.meta.url),'utf8');
+ const appSource=read('../public/app.mjs'),previewSource=read('../public/card-preview.mjs');
+ const rules=JSON.parse(read('../public/rules-data.json'));
+-const catalog=JSON.parse(read('../crosswalk.json'));
++const catalog=await loadCatalog(fileURLToPath(new URL('..',import.meta.url)));
+ const captures=Object.fromEntries(['cosmic','dionus'].map(name=>[name,JSON.parse(read(`../reports/mechanics-integration/decks/${name}.json`))]));
+ const deck=name=>{const c=captures[name];return resolveDeck(parseDeck(c.text),c.result.cards,c.result.notFound);};
+ function slice(source,start,end){const a=source.indexOf(start),b=source.indexOf(end,a);assert.ok(a>=0&&b>a,`source markers: ${start}`);return source.slice(a,b);}
+@@ -44,13 +46,13 @@
+   return {document,$,Element};
+ }
+ function renderHarness(name='dionus',narrow=true){
+-  const d=dom(),initial=deck(name),calls=[];
+-  const ctx=vm.createContext({...d,indexMechanics,keywordKey,mechanicRule,initial,catalog,rules,
++  const d=dom(),initial=deck(name),calls=[],searches=[];
++  const ctx=vm.createContext({...d,indexMechanics,keywordKey,mechanicRule,mechanicExplanation,initial,catalog,rules,
+     narrowMechanics:{matches:narrow},
+     cardVisual:card=>d.document.createTextNode(card.name),cardHeading:card=>d.document.createTextNode(card.name),printingMeta:card=>d.document.createTextNode(`${card.set}/${card.collector_number}`),
+     externalLink:label=>d.document.createTextNode(label),identitySymbols:()=>d.document.createTextNode('colors'),
+-    ruleBody:(data,n)=>{calls.push(n);return d.document.createTextNode(data.sections[n].paragraphs.map(p=>p.text).join('\n'));},
+-    showRule(){},runDiscovery(){throw new Error('Unexpected search');},queryBox:()=>d.document.createElement('div'),buildVisibleQuery:()=>'',
++    ruleBody:(data,n)=>{calls.push(n);return d.document.createTextNode((data.sections[n]?.paragraphs||[data.rules[n]]).map(p=>p.text).join('\n'));},
++    showRule(){},runDiscovery(record){searches.push(record.atlas_row_id);},queryBox:record=>{const n=d.document.createElement('div');n.className='query-box';n.textContent=`Find ${record.master_name} cards`;return n;},buildVisibleQuery:()=>'',
+   });
+   vm.runInContext(`
+     ${slice(appSource,'const node =','const colors =')}
+@@ -67,7 +69,7 @@
+       replace(deck){importedDeck=deck;mechanicIndex=indexMechanics(deck);selectedMechanicId=null;knownCards=new Map(deck.rows.filter(r=>r.card).map(r=>[r.card.id,r.card]));renderMechanics();},
+       get selected(){return selectedMechanicId;}};
+     renderMechanics();`,ctx);
+-  return {...d,ui:ctx.ui,calls};
++  return {...d,ui:ctx.ui,calls,searches};
+ }
+ 
+ test('definition links resolve only exact reviewed headings at the pinned revision',()=>{
+@@ -85,13 +87,13 @@
+   for(const name of ['cosmic','dionus'])for(const term of indexMechanics(deck(name)).terms.filter(t=>t.audited))assert.ok(mechanicRule(rules,term.label),`${name}: ${term.label}`);
+ });
+ 
+-test('main navigation exactly follows imported labels; all eight searches stay separate',()=>{
++test('main navigation exactly follows imported labels without a second mechanic list',()=>{
+   const h=renderHarness(),buttons=h.$('mechanic-list').querySelectorAll('button');
+   assert.equal(buttons.length,15);assert.equal(h.$('detected-list').querySelectorAll('button').length,1);
+   assert.ok(!buttons.some(b=>b.textContent.startsWith('Deathtouch')));
+   assert.ok(buttons.some(b=>b.textContent==='Crew · 16'));
+-  assert.equal(h.$('other-mechanic-searches').querySelectorAll('button').length,8);
+-  assert.match(h.$('other-mechanic-searches').textContent,/Deathtouch/);
++  assert.doesNotMatch(read('../public/index.html'),/other-mechanic-searches|other-card-searches/);
++  assert.doesNotMatch(appSource,/other-mechanic-searches|discovery:/);
+   h.ui.choose('station');assert.equal(h.$('mechanic-picker').open,false);
+   assert.equal(h.document.activeElement,h.$('mechanic-context').querySelector('h2'));
+   assert.match(h.$('mechanic-context').textContent,/Station · 3 distinct cards · 3 copies/);
+@@ -111,11 +113,9 @@
+     assert.ok(!context.querySelectorAll('button').some(b=>b.textContent.startsWith('Search ')));
+   }
+   h.ui.choose('eternity gate');
+-  assert.match(h.$('mechanic-context').textContent,/No linked explanation/);
++  assert.match(h.$('mechanic-context').textContent,/Eternity Gate: a flavor word/);
+   assert.match(h.$('mechanic-context').textContent,/Additional Scryfall label/);
+   assert.match(h.$('mechanic-context').textContent,/not certified/);
+-  h.$('other-mechanic-searches').querySelectorAll('button').find(b=>b.textContent==='Deathtouch').click();
+-  assert.match(h.$('mechanic-context').textContent,/This label is not reported on your imported cards/);
+   assert.ok(!h.$('mechanic-list').textContent.includes('Deathtouch'));
+ });
+ 
+@@ -134,7 +134,7 @@
+   const h=renderHarness();h.ui.setSources(null,null);h.ui.choose('crew');
+   assert.match(h.$('mechanic-context').textContent,/No linked explanation/);
+   assert.match(h.$('mechanic-context').textContent,/Crew · 16 distinct cards · 16 copies/);
+-  assert.match(h.$('other-mechanic-searches').textContent,/unavailable/);
++  assert.match(h.$('mechanic-context').textContent,/External searches and historical color placements are unavailable/);
+   const parsed=parseDeck(captures.dionus.text);
+   const cards=structuredClone(captures.dionus.result.cards);
+   cards[0].keywords_status='missing';delete cards[0].keywords;
+@@ -189,3 +189,69 @@
+   assert.match(h.body.textContent,/Art unavailable/);
+   assert.equal(h.body.querySelector('.card-details-oracle').textContent,card.card_faces[1].oracle_text);
+ });
++
++
++test('Food and flavor-word references require exact retained clauses and never certify keywords',()=>{
++  for(const [label,numbers] of [['Food',['111.10b','111.10','205.3g']],['Eternity Gate',['207.2d']]]){
++    assert.deepEqual(mechanicExplanation(rules,label).rules,numbers);
++    assert.deepEqual(mechanicExplanation(rules,label.toUpperCase()).rules,numbers);
++    assert.equal(mechanicRule(rules,label),null);
++    for(const number of numbers){
++      const changed=structuredClone(rules);changed.rules[number].text+=' Changed.';
++      assert.equal(mechanicExplanation(changed,label),null);
++      delete changed.rules[number];assert.equal(mechanicExplanation(changed,label),null);
++    }
++    assert.equal(mechanicExplanation({...rules,date:'changed'},label),null);
++    assert.equal(mechanicExplanation({...rules,sourceSha256:'changed'},label),null);
++  }
++  for(const label of [' food','Food!','Eternity Gate 2','Mill','__proto__',null])assert.equal(mechanicExplanation(rules,label),null);
++  const h=renderHarness();h.ui.choose('food');
++  const text=h.$('mechanic-context').textContent;
++  assert.match(text,/other Food artifacts do not automatically/);
++  assert.match(text,/may modify/);
++  assert.match(text,/not certified by the pinned vocabulary/);
++  for(const n of ['111.10b','111.10','205.3g'])assert.ok(h.calls.includes(n));
++  assert.equal(h.searches.length,0);
++});
++
++test('Eternity Gate shows full resolved Oracle text without extracting an ability or asserting a relationship',()=>{
++  const h=renderHarness(),card=captures.dionus.result.cards.find(c=>c.name==='Necron Monolith');
++  h.ui.choose('eternity gate');
++  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text').textContent,card.oracle_text);
++  assert.match(h.$('mechanic-context').textContent,/no independent rules meaning/);
++  assert.match(h.$('mechanic-context').textContent,/Relationship: provider_reports/);
++  assert.ok(h.calls.includes('207.2d'));
++  const modified=structuredClone(captures.dionus.result.cards);
++  const current=modified.find(c=>c.id===card.id);
++  current.oracle_text='Revised text: do not reuse a pinned attack clause.';
++  h.ui.replace(resolveDeck(parseDeck(captures.dionus.text),modified,[]));h.ui.choose('eternity gate');
++  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text').textContent,current.oracle_text);
++  current.card_faces=[{name:'Front',oracle_text:'First face current text.'},{name:'Back',oracle_text:'Second face current text.'}];
++  h.ui.replace(resolveDeck(parseDeck(captures.dionus.text),modified,[]));h.ui.choose('eternity gate');
++  assert.deepEqual(h.$('mechanic-context').querySelectorAll('.mechanic-oracle-text').map(n=>n.textContent),current.card_faces.map(f=>f.oracle_text));
++  assert.match(h.$('mechanic-context').textContent,/no face attribution/);
++  h.ui.setSources(catalog,null);
++  assert.match(h.$('mechanic-context').textContent,/No linked explanation/);
++  assert.equal(h.$('mechanic-context').querySelector('.mechanic-oracle-text'),null);
++  assert.equal(h.searches.length,0);
++});
++
++test('contextual history precedes evidence and supported search follows it; Surveil cannot search',()=>{
++  const h=renderHarness('cosmic');h.ui.choose('trample');
++  const context=h.$('mechanic-context'),children=context.children;
++  const history=context.querySelector('.color-history'),evidence=context.querySelector('.mechanic-deck-cards'),query=context.querySelector('.query-box');
++  assert.ok(history);assert.match(history.textContent,/2021 placement/);
++  assert.ok(children.indexOf(history)<children.indexOf(evidence));
++  assert.ok(children.indexOf(evidence)<children.indexOf(query));
++  assert.equal(h.searches.length,0);
++  context.querySelectorAll('button').find(b=>b.textContent==='Search Trample cards →').click();
++  assert.deepEqual(h.searches,['keyword-index-trample']);
++  h.ui.choose('surveil');assert.ok(h.calls.includes('701.25'));
++  assert.match(context.textContent,/No reviewed discovery search or historical color placement/);
++  assert.equal(context.querySelector('.query-box'),null);
++  assert.equal(context.querySelector('.color-history'),null);
++  assert.ok(!context.querySelectorAll('button').some(b=>b.textContent.startsWith('Search ')));
++  assert.deepEqual(h.searches,['keyword-index-trample']);
++  h.ui.choose('deathtouch');h.ui.replace(deck('dionus'));h.ui.choose('deathtouch');
++  assert.match(context.textContent,/Choose a mechanic/);assert.equal(context.querySelector('.query-box'),null);
++});
+--- before/README.md
++++ README.md
+@@ -62,7 +62,7 @@
+ 
+ The selected commander's actual card image is visible above the reading views. Color identity is shown with mana symbols without repeating a WUBRG label or presenting mana cost as identity. Search the commander chooser, select imported entries, and apply the selection; filtering the chooser retains selections. The Import, Read, Understand, Explore, Collect and Export controls navigate the existing session. Changing views, using browser Back/Forward, and returning to the masthead preserve the deck and reading filters.
+ 
+-Hover or keyboard-focus a card name for an exact-printing preview; click, tap or press Enter for its detail dialog. Multi-face detail dialogs have a circular face button over the art, with an accessible next-face name and a visible current-face label. Switching updates the exact face art, rules and flavor together. Escape dismisses the preview or dialog, and dialogs return focus to their opener. Mana/cost symbols use locally bundled Mana; exact available set symbols use Keyrune. Unknown symbols remain readable text. Printing UUIDs are available inside contextual details rather than repeated in the reading flow.
++Hover or keyboard-focus a card name for an exact-printing preview; click, tap or press Enter for its detail dialog. Multi-face detail dialogs have a circular face button over the art, below the printed title/mana strip, with an accessible next-face name and a visible current-face label. Switching updates the exact face art, rules and flavor together. Escape dismisses the preview or dialog, and dialogs return focus to their opener. Mana/cost symbols use locally bundled Mana; exact available set symbols use Keyrune. Unknown symbols remain readable text. Printing UUIDs are available inside contextual details rather than repeated in the reading flow.
+ 
+ Archive rows place edition details beside the exact flavor passages, stacking them on narrow screens. Mana costs are omitted from this reading view. Repeated-language evidence retains the dark reading dialog, with set symbols, the actual passages and highlighted matching words. Plain-language explanations lead; contextual printing details retain the exact coordinates and identifiers for inspection.
+ 
+@@ -76,7 +76,7 @@
+ 
+ “Mechanics in your deck” is built only from successfully resolved imported cards' actual `keywords[]`. `public/mechanics.mjs` uses lowercase exact equality without aliasing, punctuation changes or Oracle-text parsing. The compact `public/mechanics-vocabulary.mjs` contains the 296 labels observed in the retained October 17 audit; all other reported strings remain visible as unmapped terms. Missing or malformed metadata is distinct from an empty array. Counts deduplicate Oracle IDs while retaining printing IDs, source rows and physical quantities. Multi-face metadata is card-level. This establishes only `provider_reports`, never possession, grants, references or complete mechanical coverage.
+ 
+-The separate manual discovery whitelist remains **Flying, Trample, Deathtouch, Vigilance, Haste, Menace, Reach, and Lifelink**. `crosswalk.json` retains those eight reviewed rule/Atlas/historical-placement links. Only those eight links authorize external discovery searches. They live under the secondary “Find other cards” disclosure, separate from the deck-derived navigation. Claude's Phase 0 aggregate research is not used as a card-relationship database.
++The separate manual discovery whitelist remains **Flying, Trample, Deathtouch, Vigilance, Haste, Menace, Reach, and Lifelink**. `crosswalk.json` retains those eight reviewed rule/Atlas/historical-placement links. Only those eight links authorize external discovery searches. Their search actions appear at the bottom of a selected in-deck mechanic when it has a reviewed mapping. There is no separate discovery mechanic list. Unsupported labels, including Surveil, do not gain search permission from a rules explanation. Claude's Phase 0 aggregate research is not used as a card-relationship database.
+ 
+ Observed deck keywords, historical color placements, and search candidates are separate claims. Search uses only the eight reviewed Production-ready Atlas keyword recipes, combined with the vetted `f:commander id<=[COLORS]` baseline. For Azorius, the semantic filter is `f:commander id<=wu kw:Flying`, which includes compatible monocolor and colorless cards. The server derives identity from the selected printing IDs in the current resolved import context. It does not accept client-supplied queries, hosts, URLs, or arbitrary identity claims.
+ 
+@@ -84,7 +84,7 @@
+ 
+ Discovery requests `unique=cards` with `prefer:newest`, showing one result per distinct card using the provider's preferred newest matching printing. Results are presented in logical pages of **24 cards**, with Previous, Next and a direct page selector above and below the grid. All matching pages can be browsed; the server fetches only the provider page or pages needed for the requested view. Each candidate is checked for identity subset and reported Commander legality. Provider counts and skipped results are disclosed. An empty result is not silently broadened. A compatible search candidate is not a recommendation or a guarantee that a complete deck is legal.
+ 
+-The compact deck summary leads to one deck-derived mechanic chooser. On narrow screens it is collapsible and closes after selection; all labels remain reachable in a bounded scrolling list. Each label shows contributing exact printings, with technical fields and audit details under “Source details.” Definitions are independent of discovery permission: `public/mechanic-rules.mjs` links 28 explicitly checked labels to unchanged local September 25 rules sections, requiring the pinned revision and an exact section-title match. These explain the general mechanic, not any particular card relationship. Missing definitions remain explicit; no text parser, source regeneration or new search recipe is introduced. Rule cross-references retain their hover previews and dialogs. Historical color placement is available in a separate disclosure. Discovery presents a compact image grid with **Save** below each card. Opening a result's detail dialog also offers **Save to Clipboard**; saving keeps the dialog open, reports the saved quantity and updates the grid's saved indicator. Browsing, opening or switching result pages never collects cards automatically.
++The compact deck summary leads to one deck-derived mechanic chooser. On narrow screens it is collapsible and closes after selection; all labels remain reachable in a bounded scrolling list. Each label shows contributing exact printings, with technical fields and audit details under “Source details.” Definitions are independent of discovery permission: `public/mechanic-rules.mjs` links 28 explicitly checked labels to unchanged local September 25 rules sections, requiring the pinned revision and an exact section-title match. These explain the general mechanic, not any particular card relationship. Missing definitions remain explicit; no text parser, source regeneration or new search recipe is introduced. Rule cross-references retain their hover previews and dialogs. Food has explicit explanatory links to retained CR 111.10b, 111.10 and 205.3g; Eternity Gate links to the flavor-word rule 207.2d and displays full current Oracle text from contributing imported cards. These two links require the pinned revision and exact retained clauses; they do not promote either provider term into the audited vocabulary. Historical color placement, where reviewed, appears in a disclosure before the contributing cards for the selected mechanic; its supported search action follows the cards. Discovery presents a compact image grid with **Save** below each card. Opening a result's detail dialog also offers **Save to Clipboard**; saving keeps the dialog open, reports the saved quantity and updates the grid's saved indicator. Browsing, opening or switching result pages never collects cards automatically.
+ 
+ The read-only source package stays frozen:
+ 
+--- before/reports/mechanics-integration/IMPLEMENTATION_REPORT.md
++++ reports/mechanics-integration/IMPLEMENTATION_REPORT.md
+@@ -1,6 +1,61 @@
+ # Dynamic mechanics — owner-review candidate
+ 
+-## Latest revision: approved owner-feedback fixes — 2026-10-17
++## Latest revision: approved Retest01 fixes — 2026-10-17
++
++**Exit: PARTIAL. Code: PASS. Automated: PASS (121/121). Browser: OWNER RETEST PENDING / NOT TESTED for this revision.** No browser or headless run, live search, source download, server restart, deployment, merge or push was performed. This section supersedes earlier UI descriptions below; historical results remain identified as historical.
++
++The owner approved this bounded patch after review of all eight tabs, notes and 14 screenshots in `C:/Users/obake/Downloads/manualTesting_Retest01.xlsx`: five tabs Passed, three Issue. The original and completed workbooks were not edited. The completed workbook hash is retained in [preservation receipts](retest01-fixes/preserved-before.json). Gate 0 remains **RESEARCH_PARTIAL**; no Claude adapter or semantic detector was added. No applicable AGENTS.md was found in the named application/ancestor locations. `git status` confirms this directory is not a Git repository; before copies and an incremental diff record the candidate instead.
++
++### Changes and blast radius
++
++| Files | Change and exposure |
++|---|---|
++| `public/app.mjs`, `public/index.html`, `public/refinement.css` | Removed the separate eight-item discovery selector. The single imported-deck selector controls rules, available dated color history, contributing cards, and then the supported search action. An absent deck label cannot open a discovery context. Labels without a reviewed mapping explain that search/history are unavailable. Medium exposure: mechanics rendering, layout and focus; existing import/state/search handlers unchanged. |
++| `public/mechanic-rules.mjs` | Added two explicit explanatory mappings, separate from the existing 28 keyword-definition links. Food uses CR 111.10b, 111.10 and 205.3g; Eternity Gate uses the general flavor-word rule 207.2d. The retained date, source hash and exact clauses must match or the explanation abstains. No vocabulary promotion, Oracle parsing, new search or card-relation inference. |
++| `public/app.mjs`, `public/refinement.css` | Eternity Gate also shows the full Oracle text supplied by each contributing resolved printing, preserving newlines. It does not extract or hardcode an attack clause. Multi-face inputs display each supplied face's text without assigning the provider label to a face. Missing rules retain the existing fallback. |
++| `public/card-preview.css` | Moved the 44 px flip button from 12 px below the top to 15% of the art frame height, retaining its right offset, focus treatment and existing behavior. Small CSS change, but shared-dialog exposure across all entry points. Visual clearance remains an owner check. |
++| `tests/mechanics-ui.test.mjs`, `README.md` | Updated renderer expectations and documentation; added three focused regression tests. |
++
++Seven application/test/documentation paths plus this report changed. [Actual incremental diff](retest01-fixes/candidate.diff), [changed-file hashes](retest01-fixes/changed-files.json), and `retest01-fixes/before/` preserve the reviewed scope. Archived tests use `.before` suffixes and are not runnable test copies.
++
++Search authorization remains exactly Flying, Trample, Deathtouch, Vigilance, Haste, Menace, Reach and Lifelink. These actions are now reachable through a matching imported-deck label. Surveil's rules definition grants no discovery permission. The crosswalk, catalog, server, provider transport, identity ceiling, pagination and query recipes are unchanged. Reading/indexing starts no searches.
++
++### Observed verification and source evidence
++
++- Baseline: **118/118 PASS** ([output](retest01-fixes/tests-baseline.txt)). An initial restricted run could not connect to localhost HTTP test servers (EACCES); the permitted loopback rerun passed before edits.
++- Final: **121/121 PASS**, zero failures/skips ([output](retest01-fixes/tests-final.txt)). This includes the actual renderer/detail-handler tests and existing exact-printing, quantity, Clipboard/session/export, stale-response and search-boundary suites.
++- New checks exercise exact explanatory clauses and changed/missing revision rejection; Food remaining unmapped; full Necron Monolith text and changed resolved text; multi-face text without label attribution; history/evidence/search order; no automatic search; no Surveil search; and an absent label unable to create a search context. DOM-boundary tests do not establish actual browser layout or native interaction behavior.
++- `node --check` passed for app and explanation modules. No build step exists.
++- Offline metadata audit, coverage matrix and vocabulary `--check` commands: **exit 0**. Still 296 observed labels, 16 failed direct candidates; 305 retained same-provider witnesses with zero compared-field mismatches. No regeneration/downloads. Those witness checks are not independent rules validation.
++- Preservation: **250 protected files unchanged**, including frozen app inputs/fixtures/references, coverage/audit/retained responses, research repository/Git bytes and source snapshots. **13 additional app/reference/workbook files unchanged**, including import/index/vocabulary, Clipboard, card-preview JavaScript, rules data/UI, server/provider/catalog and crosswalk. [Receipt](retest01-fixes/verification.json).
++
++Definitions use the retained official September 25, 2026 rules, not a claim about the latest release. Source SHA-256: `8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca`; rules-data SHA-256: `a03161572a07d1a20ad1653717349fe998343b2656ca470e4781558329ebb4b2`. Earlier source manifest/hash tables remain applicable.
++
++Captured Dionus remains 64 resolved entries / 100 copies / 15 reported labels, with Food on Cache Grab (BLB 167; Oracle ID `06ccec61-27d2-4079-80b5-29ebd3a980ee`) and Eternity Gate on Necron Monolith (40K 161; Oracle ID `20932bca-52be-4288-9c7d-4154650c5ec9`), each one distinct card / one copy. Both terms remain outside the pinned audited vocabulary. The displayed Monolith text comes from the resolved card, including Flying, indestructible, its attack ability and Crew 4. It is not a generated summary or stronger relationship claim. Cosmic remains 84 resolved entries / 100 copies / 35 labels. These are retained-response results; the owner's retest independently reported 35 and 15 labels, not new agent live captures.
++
++Confidence: **9/10 in the scoped behavior backed by tests; visual acceptance pending** (engineering judgment, not a statistical estimate). Remaining risk is layout/readability, flip-button clearance and native focus behavior. Previously passed owner checks are preserved feedback, not automatic approval of this changed revision. No semantic-completeness or all-mechanics search claim is made.
++
++### Browser retest checklist — owner
++
++Use the running app at `http://127.0.0.1:4173/` and refresh to load the candidate. Record PASS, ISSUE or NOT TESTED; keep existing Clipboard entries. Browser/device/date: ______
++
++| # | Check | Expected | Result / notes |
++|---|---|---|---|
++| 1 | Mechanics navigation | Only the deck-derived selector remains; no separate eight-item “Find other cards” list. Choose several labels and return to the selector. | |
++| 2 | Contextual history/search | Select Trample (or another supported in-deck label). Its dated 2021 history is before contributing cards; its search action is below them. Search still uses the selected commander's colors and paginates normally. | |
++| 3 | Unsupported search | Select Surveil in Cosmic. Its rules remain readable, but it has no search button or invented color history. No search starts merely by selecting a mechanic. | |
++| 4 | Food | Select Food in Dionus. See the standard token rule, creating-effect qualification and artifact-subtype explanation; Cache Grab still opens its exact printing. Food remains an additional/unmapped provider label. | |
++| 5 | Eternity Gate | Select it in Dionus. See the flavor-word explanation and Necron Monolith's full current Oracle text. Compare it with the card detail view; line breaks and wording should agree. | |
++| 6 | Flip control | Open Gwen Stacy / Ghost-Spider. Flip both directions: button clears mana/title on both faces; art, rules and flavor remain correct. Check click, keyboard activation, Escape and return focus. | |
++| 7 | Deck switching | Cosmic → Dionus → Cosmic. No stale cards/mechanics/selections; Dionus has no Deathtouch unless a current resolved card reports it. Retained captures have 35 / 15 / 35 labels. | |
++| 8 | Clipboard/exact printing smoke check | Keep existing entries. Save one test printing, edit its quantity and export; verify set, collector number and quantity. Switch decks/reload and confirm persistence. | |
++| 9 | Narrow layout | At approximately 390 px wide, repeat selector, Food/Eternity Gate and both-face checks. No clipped controls/text, horizontal overflow, or stuck dialogs. | |
++
++For an issue, return the item number, deck/card, steps, expected/actual result and screenshot. Browser version is optional. No additional agent browser checks or follow-on changes are started without owner direction.
++
++---
++
++## Previous revision: approved owner-feedback fixes — 2026-10-17
+ 
+ **Exit: PARTIAL. Code: PASS. Automated: PASS (118/118). Browser: NOT TESTED for this revision / pending owner verification.** This section supersedes earlier candidate descriptions below. The earlier pointer-hover PASS remains historical evidence; it is not a fresh browser sign-off for the changed card dialog. No browser, headless browser, live search or new deck capture was run for this revision. No merge, push or deployment.
+ 

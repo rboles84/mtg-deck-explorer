@@ -1,0 +1,70 @@
+Commander Shortlist focused pass - 2026-10-18
+
+Scope completed
+Two production files changed. No import format, mechanics registry, discovery
+recipe, legality policy or parser architecture changes. The downloaded source
+pack was not edited.
+
+Fixes
+1. lib/scryfall.mjs retains valid face Oracle IDs. For a reversible_card with
+   exactly two faces, no supplied top-level Oracle ID and matching valid face
+   IDs, the sanitized card exposes that shared Oracle identity. Existing import,
+   edition-selection and evidence consumers use it without separate changes.
+   Conflicting/missing/invalid identities are not guessed.
+2. public/card-preview.mjs recognizes prepare as a shared-image layout. Sanar
+   uses its exact printing's top-level image while retaining both text parts
+   and no reverse-side control. Existing image host/printing validation remains.
+
+Regression fixtures
+tests/commander-shortlist.test.mjs: 37 cases, including 28 deck examples.
+tests/fixtures/imports/commander-shortlist/: original primary deck text, three
+relevant alternatives, and 16 unmodified captured card objects with provenance.
+Tests run offline without requiring the owner's Downloads directory.
+
+Coverage includes explicit commanders/boards and quantities, incomplete decks,
+source-vs-named-board differences, the three official export name corrections,
+all four reversible printings, wrong/missing/conflicting identity, duplicate
+Command Tower flavor evidence, verified edition changes, prepare/MDFC imagery,
+Japanese/Phyrexian/French printings, actual reported mechanics, extras exclusion,
+unmapped labels and a provisional paired-commander color union.
+
+Core export # annotations are removed only in the test adapter. Originals are
+also tested as rejected input. Incomplete 97/91-card decks remain incomplete;
+29 Command Towers remain quantity 29. Import success does not imply legality.
+
+Verification
+- Existing suite before edits: 234 passed.
+- New regressions before production fixes: 33 passed, 4 failed, reproducing
+  the two bugs across identity retention/import/evidence and image handling.
+- New regressions after fixes: 37 passed.
+- Full node --test: 271 passed, 0 failed, 0 skipped.
+- Vocabulary, discovery, coverage and preservation --check commands passed.
+- Replayed all 105 pack input variants against captured Scryfall responses.
+  Existing format/count rejections remain; 30 variants pass local validation,
+  and 29 TXT variants complete. These variants are not 30 independent decks.
+- All included rows in the 24 community-source UUID + Oracle-ID projections
+  resolve, including the formerly mismatched reversible cards. The 97/91 and
+  source-inclusion 105/104 totals still fail the 100-card gate as expected.
+
+Browser verification (isolated local server, captured provider card responses)
+- Copies deck: 74 entries / 100 cards imported; assumed editions disclosed.
+- Selected Parnesse manually; Blue/Black/Red identity shown.
+- Prepared remains a visible additional label with Sanar as its contributor.
+- Sanar's actual image loaded; both text parts visible, no false flip control.
+- Provider search failure preserved the loaded copies deck.
+- Exact Zhulodok CSV: 94 entries / 100 cards, 94 supplied editions, 0 unresolved;
+  colorless commander selected from its explicit source role.
+- Ledger shows Ugin's reversible printing and French Basalt Monolith resolved
+  to the supplied UUIDs with correct Oracle identities.
+- Deliberately wrong Ugin Oracle ID: line 85 identifies the mismatch and the
+  loaded Zhulodok deck remains intact.
+
+These checks used pinned provider responses, not a fresh live Scryfall audit.
+The snapshot search stub returned a provider error for the official native
+export's unsupported names; that browser check proves failure recovery, not
+the live provider's exact not-found wording.
+
+Detailed run artifacts and Sanar screenshot:
+C:/Users/obake/.codex/visualizations/2026/10/18/01a150a8-12d2-74e1-8155-f5c6a29e7bc8/commander-focused/
+
+Reproduce automated coverage: node --test

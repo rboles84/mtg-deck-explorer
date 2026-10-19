@@ -1,0 +1,79 @@
+1x An Offer You Can't Refuse (fic) 267 [Removal]
+1x Arcane Signet (moc) 348 [Ramp] ^Have,#37d67a^
+1x Archaeomancer (sld) 283 [Recursion] ^Have,#37d67a^
+1x Archmage Emeritus (stx) 37 [Draw]
+1x Archmage of Runes (fdn) 30 [Draw]
+1x Birgi, God of Storytelling // Harnfel, Horn of Bounty (khm) 123 [Ramp] ^Have,#37d67a^
+1x Blasphemous Act (lcc) 216 [Removal]
+1x Brainstorm (afc) 79 [Draw] ^Have,#37d67a^
+1x Chaos Warp (mkc) 149 [Removal] ^Have,#37d67a^
+1x Command Tower (plst) C21-284 [Land] ^Have,#37d67a^
+1x Coruscation Mage (blb) 131 [Maybeboard{noDeck}{noPrice},Burn]
+1x Counterspell (dmr) 45 [Removal] ^Have,#37d67a^
+1x Cyclonic Rift (rtr) 35 [Removal] ^Have,#37d67a^
+1x Deflecting Swat (cmm) 214 [Protection]
+1x Electrostatic Field (grn) 97 [Burn] ^Have,#37d67a^
+1x Erebor Flamesmith (ltr) 122 [Burn]
+1x Faithless Looting (brc) 116 [Draw]
+1x Fiery Inscription (ltr) 126 [Burn]
+1x Firebrand Archer (fdn) 196 [Burn]
+1x Force of Negation (2x2) 50 [Counters] ^Have,#37d67a^
+1x Force of Will (dmr) 50 [Counters] ^Have,#37d67a^
+1x Forgotten Cave (onc) 153 [Land]
+1x Frostboil Snarl (moc) 403 [Land]
+1x Gamble (dmr) 433 [Tutor] ^Have,#37d67a^
+1x Gitaxian Probe (plst) NPH-35 [Draw]
+1x Goblin Electromancer (otc) 228 [Ramp]
+1x Guttersnipe (scd) 145 [Burn]
+1x Harmonic Prodigy (mh2) 132 [Copy]
+11x Island (plst) AKH-258 [Land]
+1x Isochron Scepter (plst) MRD-188 [Copy]
+1x Izzet Boilerworks (brc) 188 [Land]
+1x Izzet Signet (moc) 362 [Ramp]
+1x Jeska's Will (clb) 799 [Ramp]
+1x Jin-Gitaxias, Progress Tyrant (neo) 59 [Copy] ^Have,#37d67a^
+1x Jori En, Ruin Diver (dds) 23 [Draw]
+1x Kessig Flamebreather (vow) 164 [Burn]
+1x Laboratory Maniac (plst) UMA-61 [Finisher]
+1x Leyline of Anticipation (clb) 726 [Protection] ^Have,#37d67a^
+1x Lightning Bolt (clu) 141 [Removal] ^Have,#37d67a^
+1x Lightning Greaves (cmm) 398 [Protection] ^Have,#37d67a^
+1x Lonely Sandbar (c21) 298 [Land]
+1x Magus of the Wheel (sld) 1166 [Draw]
+1x Mana Drain (2x2) 348 *F* [Removal] ^Have,#37d67a^
+1x Mizzix's Mastery (plst) C15-29 [Recursion]
+13x Mountain (plst) AKH-264 [Land]
+1x Murmuring Mystic (j25) 107 [Tokens]
+1x Mystic Confluence (ncc) 227 [Removal] ^Have,#37d67a^
+1x Mystic Sanctuary (eld) 247 [Land]
+1x Mystical Tutor (dmr) 421 [Tutor] ^Have,#37d67a^
+1x Niv-Mizzet, Parun (rvr) 438 [Draw] ^Have,#37d67a^
+1x Niv-Mizzet, Visionary (fdn) 123 [Draw]
+1x Opt (j22) 332 [Draw]
+1x Overmaster (dmr) 132 [Draw]
+1x Primal Amulet // Primal Wellspring (xln) 243 [Ramp]
+1x Prismari Command (stx) 214 [Removal]
+1x Propaganda (fic) 268 [Protection]
+1x Reliquary Tower (mkc) 282 [Land] ^Have,#37d67a^
+1x Reverberate (m13) 145 [Copy]
+1x Ruby Medallion (cmm) 405 [Ramp]
+1x Sapphire Medallion (cmm) 407 [Ramp] ^Have,#37d67a^
+1x Search for Azcanta // Azcanta, the Sunken Ruin (plst) XLN-74 [Draw]
+1x Shivan Reef (dmu) 255 [Land]
+1x Silundi Vision // Silundi Isle (znr) 80 [Draw]
+1x Sol Ring (plst) C18-222 [Ramp]
+1x Steam Vents (grn) 257 [Land]
+1x Storm-Kiln Artist (otc) 181 [Ramp] ^Have,#37d67a^
+1x Sulfur Falls (dmr) 258 [Land]
+1x Swiftfoot Boots (lcc) 314 [Protection] ^Have,#37d67a^
+1x Talrand, Sky Summoner (cmm) 124 [Tokens] ^Have,#37d67a^
+1x Teferi's Ageless Insight (m21) 76 [Draw]
+1x The One Ring (ltr) 246 [Draw] ^Have,#37d67a^
+1x Training Center (plst) CMR-358 [Land]
+1x Underworld Breach (thb) 161 [Recursion]
+1x Valakut Awakening // Valakut Stoneforge (plst) ZNR-174 [Draw]
+1x Vandalblast (scd) 167 [Removal]
+1x Veilstone Amulet (fut) 166 [Protection]
+1x Veyran, Voice of Duality (c21) 3 *F* [Commander{top}] ^Have,#37d67a^
+1x Windfall (khc) 46 [Draw]
+1x Young Pyromancer (j22) 626 [Tokens]

@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-19",
+  "scope": "Source investigation only. No application files, source statuses, definitions, detection, search recipes or prior validation records changed.",
+  "summary": {
+    "namesInvestigated": 6,
+    "verifiedWizardsDiscussion": 1,
+    "verifiedWizardsCardExamples": 2,
+    "verifiedDesignerCardExample": 1,
+    "officialExistenceOnly": 2,
+    "verifiedGeneralDefinitions": 0,
+    "appDefinitionsAdded": 0
+  },
+  "rulesPdf": {
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.pdf",
+    "finalUrl": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.pdf",
+    "retrievedAt": "2026-10-19T14:20:40.611Z",
+    "sha256": "674241213075cd581dd3255567ebeec7b40ffae3a27c6a3bd99218af6b2b6659",
+    "file": "sources/674241213075cd581dd3255567ebeec7b40ffae3a27c6a3bd99218af6b2b6659.pdf"
+  },
+  "rulesPdfCheck": {
+    "file": "cr-pdf-check.json",
+    "sha256": "0b0b53cb9ebb4a4d61d71e19d107683380464e8c86039c6fd22ba3f399d26a85"
+  },
+  "successorReleasePdf": {
+    "url": "https://media.wizards.com/2024/downloads/MB2_Release_Notes_OFjn1qzZAq/EN_MTGMB2_ReleaseNotes_20241003.pdf",
+    "finalUrl": "https://media.wizards.com/2024/downloads/MB2_Release_Notes_OFjn1qzZAq/EN_MTGMB2_ReleaseNotes_20241003.pdf",
+    "retrievedAt": "2026-10-19T14:29:17.961Z",
+    "sha256": "c5b5944319ca8d513c897926b9700f2fe0f97d881346d799b308e756412c46e9",
+    "file": "sources/c5b5944319ca8d513c897926b9700f2fe0f97d881346d799b308e756412c46e9.pdf"
+  },
+  "successorReleasePdfCheck": {
+    "file": "mb2-pdf-check.json",
+    "sha256": "ed4240c55942a6e74feac29e5c3d2582d433af314ca5cbfdafa4cc8fe2e61f16"
+  },
+  "priorCardEvidence": {
+    "file": "../catalog-gaps-20261019/verification.json",
+    "sha256": "24268db98d5542e8659dbb42e4706e3651c315e88c0b638d6f4e7eac2c639cfc"
+  },
+  "rows": [
+    {
+      "name": "Affinitycycling",
+      "status": "verified-designer-card-example",
+      "officialGeneralDefinitionVerified": false,
+      "wiki": [
+        {
+          "url": "https://mtg.wiki/page/Unknown_Event/2023_list_of_event_cards",
+          "finalUrl": "https://mtg.wiki/page/Unknown_Event/2023_list_of_event_cards",
+          "retrievedAt": "2026-10-19T14:18:53.119Z",
+          "sha256": "4376370ce8a869c72f5d3ebc098ebe232cef07fd5f6d998bc9cf20041c9a36f4",
+          "file": "sources/4376370ce8a869c72f5d3ebc098ebe232cef07fd5f6d998bc9cf20041c9a36f4.html"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.youtube.com/watch?v=NuWq8-rnJ38",
+          "finalUrl": "https://www.youtube.com/watch?v=NuWq8-rnJ38",
+          "retrievedAt": "2026-10-19T14:20:15.462Z",
+          "sha256": "6f1c3aeb7f2711e85adf24a4b649c38c1383cfb86453dfe95758eec4bd51a492",
+          "file": "sources/6f1c3aeb7f2711e85adf24a4b649c38c1383cfb86453dfe95758eec4bd51a492.html"
+        }
+      ],
+      "locator": {
+        "url": "https://www.youtube.com/watch?v=NuWq8-rnJ38&t=617s",
+        "author": "Gavin Verhey",
+        "channel": "Good Morning Magic",
+        "publishedOn": "2023-02-20",
+        "timestampSeconds": 617,
+        "card": "Sojourner's Enforcermite"
+      },
+      "artifacts": [
+        {
+          "file": "affinitycycling-designer-video.png",
+          "sha256": "195060a70a5833fb822b466f7b42e71b31076ae75ce8231693b30597d7df34c0"
+        }
+      ],
+      "verifiedScope": "The designer video visibly presents the card name, Affinitycycling 2 and its printed reminder text. The reminder wording agrees with the retained Scryfall example; the video uses plain numeric costs.",
+      "limits": "First-hand designer publication, not a Wizards Comprehensive Rules definition or a Wizards-hosted release note. The video type line omits Artifact, unlike the retained Scryfall record. No whole-card metadata replacement is supported. Automatic captions were used only to locate the slide; they are not accepted mechanic text."
+    },
+    {
+      "name": "Hero's Reward",
+      "status": "verified-archived-wizards-mechanic-discussion",
+      "officialGeneralDefinitionVerified": false,
+      "wiki": [
+        {
+          "url": "https://mtg.wiki/page/Hero%27s_Reward",
+          "finalUrl": "https://mtg.wiki/page/Hero%27s_Reward",
+          "retrievedAt": "2026-10-19T14:19:10.229Z",
+          "sha256": "0edd3387e3c288b48663ed91e06b3a64820f95d6e9938421cf26ef5ab985f039",
+          "file": "sources/0edd3387e3c288b48663ed91e06b3a64820f95d6e9938421cf26ef5ab985f039.html"
+        },
+        {
+          "url": "https://mtg.wiki/page/Face_the_Hydra",
+          "finalUrl": "https://mtg.wiki/page/Face_the_Hydra",
+          "retrievedAt": "2026-10-19T14:19:10.311Z",
+          "sha256": "9601715a0f68bf3c0145e7f25f0ce0fd6faa0478daa01e6fffb217b49b3b8b3a",
+          "file": "sources/9601715a0f68bf3c0145e7f25f0ce0fd6faa0478daa01e6fffb217b49b3b8b3a.html"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://web.archive.org/web/20201021225115/https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25",
+          "finalUrl": "https://web.archive.org/web/20201021225115/https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25",
+          "retrievedAt": "2026-10-19T14:20:09.401Z",
+          "sha256": "f4f5d14daa2cff4e2a636834cae60669f3e3f97a3b44f6e9efad2b4f4fc1537c",
+          "file": "sources/f4f5d14daa2cff4e2a636834cae60669f3e3f97a3b44f6e9efad2b4f4fc1537c.html"
+        }
+      ],
+      "locator": {
+        "title": "Building a Hydra",
+        "author": "Sam Stoddard",
+        "publishedOn": "2013-10-25",
+        "section": "A Hero's Reward",
+        "originalUrl": "https://magic.wizards.com/en/articles/archive/latest-developments/building-hydra-2013-10-25"
+      },
+      "exactExcerpt": "This is where the hero's reward mechanic emerged.",
+      "verifiedScope": "Official Wizards design discussion explicitly identifies the mechanic and its origin in Face the Hydra.",
+      "limits": "Retrieved from the Internet Archive copy cited by the wiki. The current original URL returns 404. This design article is not a formal rule covering every Challenge Deck card; do not apply its Hydra-specific account as a universal trigger definition."
+    },
+    {
+      "name": "Kinfall",
+      "status": "official-card-existence-only-definition-unverified",
+      "officialGeneralDefinitionVerified": false,
+      "wiki": [
+        {
+          "url": "https://mtg.wiki/page/Kinfall",
+          "finalUrl": "https://mtg.wiki/page/Kinfall",
+          "retrievedAt": "2026-10-19T14:19:09.644Z",
+          "sha256": "ff0d74d4fc4034fc632e999c3895d5765a97aabd437e032dc67e9808c916ec97",
+          "file": "sources/ff0d74d4fc4034fc632e999c3895d5765a97aabd437e032dc67e9808c916ec97.html"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://magic.wizards.com/en/news/feature/mystery-booster-playtest-card-artists-2019-11-11",
+          "finalUrl": "https://magic.wizards.com/en/news/feature/mystery-booster-playtest-card-artists-2019-11-11",
+          "retrievedAt": "2026-10-19T14:21:39.348Z",
+          "sha256": "13b56d395a82e2bb711a7bcfeff6795ef2d1173b0a54f223c7f10fb1282bb556",
+          "file": "sources/13b56d395a82e2bb711a7bcfeff6795ef2d1173b0a54f223c7f10fb1282bb556.html"
+        },
+        {
+          "url": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11",
+          "finalUrl": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11",
+          "retrievedAt": "2026-10-19T14:18:54.371Z",
+          "sha256": "85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590",
+          "file": "sources/85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590.html"
+        }
+      ],
+      "locator": {
+        "card": "Plane-Merge Elf",
+        "artist": "Nataly Scheidt"
+      },
+      "verifiedScope": "Wizards lists Plane-Merge Elf and its artist.",
+      "limits": "The official artist list contains no card ability text. The verified 2019 release notes contain neither this card name nor Kinfall. The wiki section has no citation attached to its Kinfall definition. An official definition or original official card image was not verified."
+    },
+    {
+      "name": "Landship",
+      "status": "official-card-existence-only-definition-unverified",
+      "officialGeneralDefinitionVerified": false,
+      "wiki": [
+        {
+          "url": "https://mtg.wiki/page/Landship",
+          "finalUrl": "https://mtg.wiki/page/Landship",
+          "retrievedAt": "2026-10-19T14:19:09.954Z",
+          "sha256": "cc182987b4e204ab80a7d17ba56c4e2c02a51542c19ffafae7e1dedaeefc0998",
+          "file": "sources/cc182987b4e204ab80a7d17ba56c4e2c02a51542c19ffafae7e1dedaeefc0998.html"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://magic.wizards.com/en/news/feature/mystery-booster-playtest-card-artists-2019-11-11",
+          "finalUrl": "https://magic.wizards.com/en/news/feature/mystery-booster-playtest-card-artists-2019-11-11",
+          "retrievedAt": "2026-10-19T14:21:39.348Z",
+          "sha256": "13b56d395a82e2bb711a7bcfeff6795ef2d1173b0a54f223c7f10fb1282bb556",
+          "file": "sources/13b56d395a82e2bb711a7bcfeff6795ef2d1173b0a54f223c7f10fb1282bb556.html"
+        },
+        {
+          "url": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11",
+          "finalUrl": "https://magic.wizards.com/en/news/feature/mystery-booster-release-notes-2019-11-11",
+          "retrievedAt": "2026-10-19T14:18:54.371Z",
+          "sha256": "85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590",
+          "file": "sources/85e2156d1985e93694f349e0a19c2ecc8fd11fc5392d78295d759cbf5a56f590.html"
+        }
+      ],
+      "locator": {
+        "card": "Plane-Merge Elf",
+        "artist": "Nataly Scheidt"
+      },
+      "verifiedScope": "Wizards lists Plane-Merge Elf and its artist.",
+      "limits": "The official artist list contains no card ability text. The verified 2019 release notes contain neither this card name nor Landship. The wiki section has no citation attached to its Landship definition. An official definition or original official card image was not verified."
+    },
+    {
+      "name": "Actualize",
+      "status": "verified-wizards-card-example",
+      "officialGeneralDefinitionVerified": false,
+      "wiki": [
+        {
+          "url": "https://mtg.wiki/page/Actualize",
+          "finalUrl": "https://mtg.wiki/page/Actualize",
+          "retrievedAt": "2026-10-19T14:19:10.063Z",
+          "sha256": "ae5d8f6ada0070f24238dee1749a9d42d5594fc704308c1ff869cb1b581895b8",
+          "file": "sources/ae5d8f6ada0070f24238dee1749a9d42d5594fc704308c1ff869cb1b581895b8.html"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://magic.wizards.com/en/news/mtg-arena/alchemy-reality-fracture-spellbook",
+          "finalUrl": "https://magic.wizards.com/en/news/mtg-arena/alchemy-reality-fracture-spellbook",
+          "retrievedAt": "2026-10-19T14:19:44.288Z",
+          "sha256": "865a544567a346273983c383c9b58c6d20da9e9f544bd4bdb0fdd58c5ee22f81",
+          "file": "sources/865a544567a346273983c383c9b58c6d20da9e9f544bd4bdb0fdd58c5ee22f81.html"
+        },
+        {
+          "url": "https://magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA",
+          "finalUrl": "https://magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA",
+          "retrievedAt": "2026-10-19T14:20:39.550Z",
+          "sha256": "ce26d81c5165bee434addee9d87e2ea5ce4bad92fc5f56343bc29ac9cd3cc1e9",
+          "file": "sources/ce26d81c5165bee434addee9d87e2ea5ce4bad92fc5f56343bc29ac9cd3cc1e9.html"
+        }
+      ],
+      "locator": {
+        "card": "Etali, Primal Garden",
+        "galleryEntry": "1nAcR8CqQNfGwjuXIOhrZ9",
+        "galleryUrl": "https://magic.wizards.com/en/products/reality-fracture/card-image-gallery?cigset=Y26-FRA&cigquery=Etali",
+        "imageUrl": "https://media.wizards.com/2026/fra/23ns838efds/en_Lxfa4Q7Z9u.webp"
+      },
+      "artifacts": [
+        {
+          "file": "actualize-official-dom.html",
+          "sha256": "d8912db4fa322a46a801eca4943bca0ea9a6812f5d9b6a9047914b06879cef70"
+        },
+        {
+          "file": "actualize-official.png",
+          "sha256": "3e4d4142a0101ff6efc8343896774ffb0887da075a10f88b583b614a60b8ac75"
+        }
+      ],
+      "verifiedScope": "The official gallery and its Wizards-hosted image show Actualize on Etali; its first ability agrees with the retained Scryfall cost-reduction wording.",
+      "limits": "No formal mechanic-wide definition was verified. The wiki generalizes Actualize as a cast trigger; Etali is a counterexample to that universal formulation. Its wiki reference concerns Arena rules policy in 2021, not this 2026 mechanic."
+    },
+    {
+      "name": "Covercast",
+      "status": "verified-wizards-card-example",
+      "officialGeneralDefinitionVerified": false,
+      "wiki": [
+        {
+          "url": "https://mtg.wiki/page/Covercast",
+          "finalUrl": "https://mtg.wiki/page/Covercast",
+          "retrievedAt": "2026-10-19T14:19:10.150Z",
+          "sha256": "03d25f4c2be29490fc60c27777e4e4c8bcbd65daf64856310be94399da481449",
+          "file": "sources/03d25f4c2be29490fc60c27777e4e4c8bcbd65daf64856310be94399da481449.html"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://magic.wizards.com/en/news/mtg-arena/announcements-may-11-2026",
+          "finalUrl": "https://magic.wizards.com/en/news/mtg-arena/announcements-may-11-2026",
+          "retrievedAt": "2026-10-19T14:18:54.514Z",
+          "sha256": "b1a7098413954d328c36af553980639634ac54bc64b007ab67a694d11192fdb2",
+          "file": "sources/b1a7098413954d328c36af553980639634ac54bc64b007ab67a694d11192fdb2.html"
+        },
+        {
+          "url": "https://magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery",
+          "finalUrl": "https://magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery",
+          "retrievedAt": "2026-10-19T14:20:40.170Z",
+          "sha256": "6440f85c3538e34335d5e89c5f1508dcd71ca5fcc5f97e2a809ea945f40c9831",
+          "file": "sources/6440f85c3538e34335d5e89c5f1508dcd71ca5fcc5f97e2a809ea945f40c9831.html"
+        }
+      ],
+      "locator": {
+        "card": "Summitfest Closing Ceremony",
+        "galleryEntry": "1rnXSILJY2jVH90bVQ0yxt",
+        "galleryUrl": "https://magic.wizards.com/en/products/secrets-of-strixhaven/card-image-gallery?cigquery=Summitfest%20Closing%20Ceremony",
+        "imageUrl": "https://media.wizards.com/2026/sos/Lag23xc2fN/en_dmeAiPcKlR.webp"
+      },
+      "artifacts": [
+        {
+          "file": "covercast-official-dom.html",
+          "sha256": "6636f12a19912a3033a295190d6c1d93d5efa3295b4ba97f49dee32ee86ebfe7"
+        },
+        {
+          "file": "covercast-official.png",
+          "sha256": "fb86f301fac13dd4fbf1498eb6c458ca9ccb3db389806881bdfac599e395b8ed"
+        }
+      ],
+      "verifiedScope": "The official announcement identifies the card, and its official gallery image shows the Covercast ability. That line agrees with the retained Scryfall example.",
+      "limits": "The official image does not state that the ability functions in all zones or does not use the stack. Those wiki claims remain unverified. The wiki calls this a keyword ability while the retained Scryfall catalog classifies it as an ability word; no classification change is justified by this evidence."
+    }
+  ],
+  "confidence": "High for the specific source observations and unchanged application hashes. No assertion that an unfound source does not exist, or that these references establish universal mechanic definitions."
+}

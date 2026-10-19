@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-18T17:45:37.952Z",
+  "pid": 23604,
+  "staticChecks": [
+    {
+      "url": "/",
+      "status": 200,
+      "exactDiskMatch": true
+    },
+    {
+      "url": "/app.mjs",
+      "status": 200,
+      "exactDiskMatch": true
+    },
+    {
+      "url": "/import-model.mjs",
+      "status": 200,
+      "exactDiskMatch": true
+    },
+    {
+      "url": "/import-resolution.mjs",
+      "status": 200,
+      "exactDiskMatch": true
+    },
+    {
+      "url": "/import-csv.mjs",
+      "status": 200,
+      "exactDiskMatch": true
+    }
+  ],
+  "catalogStatus": 200,
+  "catalogRecords": 8,
+  "browserSmoke": {
+    "source": "Synthetic TappedOut-shaped 100-card diagnostic; live Scryfall, no full legality claim",
+    "message": "Import complete. Deck + Commander: 100/100 cards. Extras: 1 card in 1 entry. 3 deck entries resolved; 0 imported entries need attention. 3 deck entries use assumed printings; 0 use supplied editions; 0 use user-selected editions. Commander: Thrasios, Triton Hero, Tymna the Weaver.",
+    "commanders": "Thrasios, Triton Hero\nC16 / 46 · EN · COMMANDER\nAssumed printing · set C16 honored; collector/variant not supplied\n\nSelect the card to inspect its rules and printing.\n\nTymna the Weaver\nC16 / 48 · EN · COMMANDER\nAssumed printing · set C16 honored; collector/variant not supplied\n\nSelect the card to inspect its rules and printing."
+  },
+  "finishedAt": "2026-10-18T17:46:50.686Z",
+  "server": {
+    "port": 4174,
+    "pid": 23604,
+    "httpStatus": 200,
+    "temporary4175Stopped": true
+  },
+  "browser": {
+    "preservedTabId": "1",
+    "currentUrl": "http://127.0.0.1:4174/",
+    "draftPreserved": true,
+    "verificationTabClosed": true
+  }
+}

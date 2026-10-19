@@ -1,0 +1,518 @@
+{
+  "checkedAt": "2026-10-18T16:46:01.860Z",
+  "scope": "Read-only pack reconnaissance; application code unchanged; no native export network resolution",
+  "files": [
+    {
+      "file": "background-abdel-street-urchin.csv",
+      "format": "csv",
+      "rows": 89,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 89,
+        "Quantity must be a positive integer from 1 to 999.": 89
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "background-abdel-street-urchin.txt",
+      "format": "text",
+      "rows": 89,
+      "playableQuantity": 100,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "background-wilson-giants.csv",
+      "format": "csv",
+      "rows": 82,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 82,
+        "Quantity must be a positive integer from 1 to 999.": 82
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "background-wilson-giants.txt",
+      "format": "text",
+      "rows": 71,
+      "playableQuantity": 100,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha-side.csv",
+      "format": "csv",
+      "rows": 91,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 91,
+        "Quantity must be a positive integer from 1 to 999.": 91
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha-side.txt",
+      "format": "text",
+      "rows": 91,
+      "playableQuantity": 100,
+      "extras": 1,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha.csv",
+      "format": "csv",
+      "rows": 222,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 222,
+        "Quantity must be a positive integer from 1 to 999.": 222
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "companion-cecily-othelm-jegantha.txt",
+      "format": "text",
+      "rows": 106,
+      "playableQuantity": 100,
+      "extras": 7,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "doctors-companion-ten-rose.csv",
+      "format": "csv",
+      "rows": 96,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 96,
+        "Quantity must be a positive integer from 1 to 999.": 96
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "doctors-companion-ten-rose.txt",
+      "format": "text",
+      "rows": 96,
+      "playableQuantity": 100,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "friends-forever-wernog-sophina.csv",
+      "format": "csv",
+      "rows": 121,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 121,
+        "Quantity must be a positive integer from 1 to 999.": 121
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "friends-forever-wernog-sophina.txt",
+      "format": "text",
+      "rows": 119,
+      "playableQuantity": 100,
+      "extras": 23,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "partner-thrasios-tymna.csv",
+      "format": "csv",
+      "rows": 110,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 110,
+        "Quantity must be a positive integer from 1 to 999.": 110
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "partner-thrasios-tymna.txt",
+      "format": "text",
+      "rows": 100,
+      "playableQuantity": 100,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    },
+    {
+      "file": "partner-with-pir-toothy.csv",
+      "format": "csv",
+      "rows": 84,
+      "playableQuantity": 0,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": false,
+      "globalIssues": [
+        "CSV requires distinct Quantity and Name columns; printing and section columns are optional."
+      ],
+      "rowIssueCounts": {
+        "CSV header is missing required or has duplicate columns.": 84,
+        "Quantity must be a positive integer from 1 to 999.": 84,
+        "Unsupported Foil value; use true or false.": 5
+      },
+      "identifierKinds": []
+    },
+    {
+      "file": "partner-with-pir-toothy.txt",
+      "format": "text",
+      "rows": 84,
+      "playableQuantity": 100,
+      "extras": 0,
+      "commanderRows": [],
+      "commanderSuggestions": [],
+      "validationValid": true,
+      "globalIssues": [],
+      "rowIssueCounts": {},
+      "identifierKinds": [
+        "card-name"
+      ]
+    }
+  ],
+  "localized": {
+    "file": "localized_printing/helvault-derived-excerpt-spanish-printing.csv",
+    "format": "csv",
+    "row": {
+      "id": "row-1",
+      "lineNumber": 2,
+      "originalLine": "246,,es,Breeding Pool,20283c4a-f1f0-42f0-bc08-6da87474426b,1,5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac,rna,Ravnica Allegiance",
+      "section": "Deck",
+      "quantityText": "1",
+      "quantity": 1,
+      "name": "Breeding Pool",
+      "set": "",
+      "collectorNumber": "",
+      "scryfallId": "",
+      "language": "es",
+      "tags": [],
+      "annotations": [],
+      "csvMetadata": {
+        "collector_number": "246",
+        "extras": "",
+        "oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+        "scryfall_id": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac",
+        "set_code": "rna",
+        "set_name": "Ravnica Allegiance"
+      },
+      "finish": "unspecified",
+      "sourceSection": "Deck",
+      "explicitPlacement": null,
+      "block": 0,
+      "blockHasHeading": false,
+      "commanderSource": null,
+      "printingProvenance": null,
+      "playable": true,
+      "identifier": null,
+      "lookup": null,
+      "status": "language-unsupported",
+      "issues": [
+        "A non-English printing requires its exact Scryfall printing UUID."
+      ],
+      "card": null,
+      "parseIssues": [
+        "A non-English printing requires its exact Scryfall printing UUID."
+      ]
+    },
+    "validation": {
+      "valid": false,
+      "issues": [
+        "Deck + Commander contains 1 cards; exactly 100 are required (including commanders). Extras are counted separately: 0 cards.",
+        "1 invalid import line. Correct the following before importing:",
+        "Line 2: A non-English printing requires its exact Scryfall printing UUID. Source: 246,,es,Breeding Pool,20283c4a-f1f0-42f0-bc08-6da87474426b,1,5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac,rna,Ravnica Allegiance"
+      ]
+    }
+  },
+  "commanderMetadataChecks": [
+    {
+      "case": "partner-thrasios-tymna",
+      "selectedNames": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "observedIdentity": "WUBG",
+      "expectedIdentity": "WUBG",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "background-abdel-street-urchin",
+      "selectedNames": [
+        "Abdel Adrian, Gorion's Ward",
+        "Street Urchin"
+      ],
+      "observedIdentity": "WR",
+      "expectedIdentity": "WR",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "partner-with-pir-toothy",
+      "selectedNames": [
+        "Pir, Imaginative Rascal",
+        "Toothy, Imaginary Friend"
+      ],
+      "observedIdentity": "UG",
+      "expectedIdentity": "UG",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "doctors-companion-ten-rose",
+      "selectedNames": [
+        "Rose Tyler",
+        "The Tenth Doctor"
+      ],
+      "observedIdentity": "WUR",
+      "expectedIdentity": "WUR",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "background-wilson-giants",
+      "selectedNames": [
+        "Raised by Giants",
+        "Wilson, Refined Grizzly"
+      ],
+      "observedIdentity": "G",
+      "expectedIdentity": "G",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "companion-cecily-othelm-jegantha",
+      "selectedNames": [
+        "Cecily, Haunted Mage",
+        "Jegantha, the Wellspring",
+        "Othelm, Sigardian Outcast"
+      ],
+      "observedIdentity": "WUBRG",
+      "expectedIdentity": "WUBRG",
+      "constructionValid": false,
+      "constructionIssues": [
+        "This app supports one or two commander entries. Review your Commander section."
+      ],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "friends-forever-wernog-sophina",
+      "selectedNames": [
+        "Sophina, Spearsage Deserter",
+        "Wernog, Rider's Chaplain"
+      ],
+      "observedIdentity": "WBR",
+      "expectedIdentity": "WBR",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    },
+    {
+      "case": "companion-cecily-othelm-jegantha-side",
+      "selectedNames": [
+        "Cecily, Haunted Mage",
+        "Othelm, Sigardian Outcast"
+      ],
+      "observedIdentity": "WUBRG",
+      "expectedIdentity": "WUBRG",
+      "constructionValid": true,
+      "constructionIssues": [],
+      "source": "Synthetic commander-only harness with recorded provider fixtures; not a full deck resolution"
+    }
+  ],
+  "externalVerification": {
+    "checkedAt": "2026-10-18T16:46:42.750Z",
+    "results": [
+      {
+        "index": 0,
+        "status": "fulfilled",
+        "value": {
+          "checkedCodes": [
+            {
+              "sourceCode": "000",
+              "scryfallMatch": false,
+              "setName": null
+            },
+            {
+              "sourceCode": "MYSTOR",
+              "scryfallMatch": false,
+              "setName": null
+            },
+            {
+              "sourceCode": "UN3",
+              "scryfallMatch": false,
+              "setName": null
+            },
+            {
+              "sourceCode": "MBP",
+              "scryfallMatch": false,
+              "setName": null
+            },
+            {
+              "sourceCode": "C16",
+              "scryfallMatch": true,
+              "setName": "Commander 2016"
+            },
+            {
+              "sourceCode": "WHO",
+              "scryfallMatch": true,
+              "setName": "Doctor Who"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "status": "fulfilled",
+        "value": {
+          "pinnedCollectionSourceMatches": true,
+          "bytes": 160316,
+          "sha256": "f2e6d768ab2ec341951bd3849a7bbf8948e13b8aa99b8fb2339463524d358c64"
+        }
+      },
+      {
+        "index": 2,
+        "status": "fulfilled",
+        "value": {
+          "spanishPrinting": {
+            "id": "5a6ff93c-b08e-4cf0-bcd3-d58435fc2dac",
+            "name": "Breeding Pool",
+            "printedName": "Estanque reproductor",
+            "lang": "es",
+            "set": "rna",
+            "collectorNumber": "246",
+            "finishes": [
+              "nonfoil",
+              "foil"
+            ]
+          },
+          "checks": [
+            {
+              "inputName": "Breeding Pool",
+              "status": "resolved",
+              "lang": "es",
+              "provenance": "supplied",
+              "issues": []
+            },
+            {
+              "inputName": "Estanque reproductor",
+              "status": "resolved",
+              "lang": "es",
+              "provenance": "supplied",
+              "issues": []
+            }
+          ],
+          "scope": "Synthetic in-memory header/name normalization of a one-row fixture; not native CSV compatibility or a complete deck import"
+        }
+      }
+    ]
+  },
+  "localIntegrity": {
+    "hashesPassed": 49,
+    "deckPairs": 8,
+    "deckCsvRows": 895,
+    "method": "Reviewed and ran supplied offline standard-library verifier with Python assertions enabled"
+  }
+}

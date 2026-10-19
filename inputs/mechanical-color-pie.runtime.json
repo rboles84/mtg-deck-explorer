@@ -1,0 +1,4976 @@
+{
+  "meta": {
+    "document": "Mechanical Color Pie 2021",
+    "author": "Mark Rosewater (with the Council of Colors)",
+    "snapshot_date": "2021-10-18",
+    "display_label": "Mechanical Color Pie 2021 · snapshot dated October 18, 2021",
+    "url": "https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021",
+    "caution": "A snapshot that will continue to evolve. Per-set needs bend the default and some entries are experiments. Never present this as the current state of the colour pie.",
+    "tier_meaning": "Primary, secondary and tertiary describe frequency and ownership in design, NOT card quality. Never sum them into a score, and never compare tiers across different mechanics as if they were one unit.",
+    "families_are": "vox_mana_derived navigation vocabulary, not Rosewater's",
+    "generated": "by tools/build_runtime.py; do not hand-edit",
+    "counts": {
+      "projection_mechanics": 216,
+      "families": 23
+    }
+  },
+  "byMechanic": {
+    "+0/+n (on auras)": {
+      "label": "+0/+N (on Auras)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is also isn't done often, but when it is used, it's used on white, blue, and green.",
+      "has_restriction": false
+    },
+    "+0/+n (on creatures)": {
+      "label": "+0/+N (on creatures)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White used to do this quite a bit, but we've backed off because it tends to just clog up the board. Green also uses this on occasion.",
+      "has_restriction": true
+    },
+    "+0/+n (on spells)": {
+      "label": "+0/+N (on spells)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Once again, white (and to an even lesser extent green) used to do this more often, but these days we'll boost power some if we're going to boost toughness.",
+      "has_restriction": false
+    },
+    "+1/+1 counter (creation and caring)": {
+      "label": "+1/+1 counter (creation and caring)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "counters",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "Any color can put +1/+1 counters on themselves, but white and green are best overall at doing it, including putting them on other creatures.",
+      "has_restriction": false
+    },
+    "+n/+0 (on auras)": {
+      "label": "+N/+0 (on Auras)",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red is the color most often to have just power-pumping Auras (including \"firebreathing\" Auras). White and black do it occasionally with white tending to go no higher than +2/+0. Blue and green do it on rare occasion with blue, like white, sticking at +2/+0 or lower.",
+      "has_restriction": true
+    },
+    "+n/+0 (on creatures)": {
+      "label": "+N/+0 (on creatures)",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability, as a repeatable activation, is what we refer to as \"firebreathing.\" It's most often seen on red creatures. White tends to get one-time upgrades of usually +1/+0. Green gets +N/+0 when it's not intended for it to survive the fight.",
+      "has_restriction": true
+    },
+    "+n/+0 (on spells)": {
+      "label": "+N/+0 (on spells)",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black and red are the two colors that tend to pump power as a spell without also pumping toughness. White does it occasionally as a combat trick but usually never more than +1/+0.",
+      "has_restriction": true
+    },
+    "+n/+n (on auras)": {
+      "label": "+N/+N (on Auras)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "All colors have access to Auras that grant +N/+N. White, blue, black, and red tend to top out at +2/+2. Green is the one color that regularly grants +3/+3 and above on Auras",
+      "has_restriction": true
+    },
+    "+n/+n (on creatures)": {
+      "label": "+N/+N (on creatures)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "For black this is mostly seen on Shades and usually requires black mana. Green gets unlimited pumping activations but usually only when the activation cost is high enough that multiple activations don't happen until the late game.",
+      "has_restriction": true
+    },
+    "+n/+n (on creatures, single use)": {
+      "label": "+N/+N (on creatures, single use)",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is what we refer to as the Rootwalla ability. It's trying to simulate a built-in Giant Growth. It's almost always exclusive to green.",
+      "has_restriction": false
+    },
+    "+n/+n (on spells)": {
+      "label": "+N/+N (on spells)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "adjudicated",
+          "conflict": {
+            "colour_list_says": "secondary",
+            "ability_catalog_says": "primary"
+          },
+          "ruling": {
+            "tier": "primary",
+            "authority": "companion change log, 2021-10-18",
+            "mechanism": "The change log records White as primary in 2017 as well, so the White-Secondary list entry contradicts both editions."
+          }
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "The most common use of this is on Giant Growth–like effects in green, usually +3/+3 but it can vary a little. White's pumping is usually +2/+2 or smaller, but it most often will grant an ability as well. The three exception for white is that it can get larger pumps if counting the number of creatures you have, the number of plains you have, or is restricted to blockers. Black will occasionally get smaller buffs, usually with an ability added. Red gets buffs but usually the power is higher than the toughness. All four colors default in this ability to being on instants as it's a combat trick.",
+      "has_restriction": true
+    },
+    "+n/-n (on auras)": {
+      "label": "+N/-N (on Auras)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "These tend to be flavored as \"push your luck\" cards that can double as creature kill. Black will go up to -3 on the toughness, whereas red tends to stop at -2.",
+      "has_restriction": true
+    },
+    "+n/-n (on creatures)": {
+      "label": "+N/-N (on creatures)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue tends to use this mostly on Elementals and Shapeshifters, flavored as shape-changing. Black and red use this on occasion to play up their reckless side.",
+      "has_restriction": true
+    },
+    "+n/-n (on spells)": {
+      "label": "+N/-N (on spells)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "As this is mostly used as a kill spell, the ability resides mostly in black.",
+      "has_restriction": true
+    },
+    "-n/+n (on auras)": {
+      "label": "-N/+N (on Auras)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "colour-list-only"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "",
+      "has_restriction": false
+    },
+    "-n/+n (on creatures)": {
+      "label": "-N/+N (on creatures)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is also used in blue on Elementals and Shapeshifters, often on the same cards with the +N/-N. White, on rare occasion, will have an activation that uses this defensively.",
+      "has_restriction": true
+    },
+    "-n/+n (on spells)": {
+      "label": "-N/+N (on spells)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "colour-list-only"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "",
+      "has_restriction": false
+    },
+    "-n/-0 (on auras)": {
+      "label": "-N/-0 (on Auras)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We tend to treat the Auras similarly to how we treat the spells.",
+      "has_restriction": true
+    },
+    "-n/-0 (on creatures)": {
+      "label": "-N/-0 (on creatures)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "colour-list-only"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "",
+      "has_restriction": false
+    },
+    "-n/-0 (on spells)": {
+      "label": "-N/-0 (on spells)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "In blue, this is shrinking its target. In black it's usually some form of torture.",
+      "has_restriction": true
+    },
+    "-n/-0 to their team": {
+      "label": "-N/-0 to their team",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [
+        "-N/-0 to their team, one-shot"
+      ],
+      "explanation": "Just as blue can \"shrink\" a single creature, so too can it \"shrink\" an entire team.",
+      "has_restriction": false
+    },
+    "-n/-n (on auras)": {
+      "label": "-N/-N (on Auras)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is an area only black tends to go, used almost exclusively on the opponent's creatures. This ability will occasionally be paired with a positive ability, making it a card you might play on your own creature.",
+      "has_restriction": true
+    },
+    "-n/-n (on creatures)": {
+      "label": "-N/-N (on creatures)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "On creatures, this effect is used almost exclusively by creatures on other creatures, and almost exclusively in black.",
+      "has_restriction": false
+    },
+    "-n/-n (on spells)": {
+      "label": "-N/-N (on spells)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the only color to do -N/-N abilities on spells. Other colors do put -1/-1 counters on creatures, usually in place of spots where they would do damage in sets with -1/-1 counters.",
+      "has_restriction": true
+    },
+    "animating artifacts": {
+      "label": "Animating artifacts (Target/all non-creature artifact(s) you control becomes an artifact creature.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the color most likely to turn a non-creature artifact into an artifact creature. Green is second most likely to do it.",
+      "has_restriction": false
+    },
+    "animating enchantments": {
+      "label": "Animating Enchantments (Target/all non-aura enchantment(s) you control becomes an enchantment creature.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the color that animates other enchantments. Blue has enchantments that under certain conditions can become animated.",
+      "has_restriction": false
+    },
+    "animating lands": {
+      "label": "Animating lands (Target land becomes an N/N creature until end of turn.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Green, as the color connected most closely to lands and creatures, is the color most likely to turn lands into creatures—usually still keeping them lands. When we do this, we often grant the land haste to avoid having to worry if it was the one you played this turn (which would have summoning sickness). Red uses this ability a little playing into its one-shot damage cards that come through attacking. All the colors have dipped their toe into this area, but it's infrequent and usually only involves animating their own basic land type and is most often done in cycles.",
+      "has_restriction": true
+    },
+    "artifact destruction": {
+      "label": "Artifact destruction",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red and green usually have one artifact destruction card in common, although green's is usually also a spell that destroy both artifacts and enchantments. (See enchantment destruction.) White is starting to get more artifact destruction at common and is usually also able to destroy enchantments.",
+      "has_restriction": true
+    },
+    "banisher priest-like effect": {
+      "label": "Banisher Priest–like effect (When this card enters the battlefield, exile target creature/permanent until this card leaves play.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [
+        "Banisher Priest-like effects (When this card enters the battlefield, exile target creature/permanent until this card leaves play.)"
+      ],
+      "explanation": "This is one of white's most efficient answers, especially in Limited. It is usually used on creatures but sometimes hits other permanents. The effect is always on a permanent, usually a creature or enchantment.",
+      "has_restriction": true
+    },
+    "basic land counting": {
+      "label": "Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "All colors have access to this, but red does it most, followed by black and green.",
+      "has_restriction": false
+    },
+    "bite": {
+      "label": "\"Bite\" (Target creature deals damage to equal to its power to another target creature.)",
+      "colors": {
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This used to just be a red ability, but we realized that green needed it more, as green's creature removal has to be tied to creatures and red had plenty of other direct-damage spells. So red now does this less often.",
+      "has_restriction": false
+    },
+    "bring back creatures/permanents that went to the graveyard this turn": {
+      "label": "Bring back creatures/permanents that went to the graveyard this turn",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White, the color of mercy, is the color that saves things the turn they are destroyed.",
+      "has_restriction": false
+    },
+    "can't be attacked (creatures can't attack you.)": {
+      "label": "Can't be attacked (Creatures can't attack you.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [
+        "Can't be attacked. (Creatures can't attack you.)"
+      ],
+      "explanation": "We don't do this often, but this effect keeps you from either being attacked for a turn or as long as a specific permanent is on the battlefield.",
+      "has_restriction": false
+    },
+    "can't be blocked": {
+      "label": "Can't be blocked",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We tried to keyword this ability only to discover that there are so many variations on it that we couldn't. Instead, we changed from \"unblockable\" to \"can't be blocked\" to avoid players thinking it was a keyword. (It matters occasionally.) Blue has creatures with this ability and grants it through spells and Auras.",
+      "has_restriction": true
+    },
+    "can't be countered": {
+      "label": "Can't be countered",
+      "colors": {
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red tends to have spells that can't be countered while green tends to have creatures that can't be countered. When blue does \"can't be countered,\" which is less often, it's usually a more control-oriented card.",
+      "has_restriction": true
+    },
+    "can't block": {
+      "label": "Can't block",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "For a long time we separated black from red by making black have the \"can't block\" drawback on its creatures and red have the \"must attack\" drawback on its creatures. Time has shown that the \"can't block\" drawback leads to better gameplay, so we've started using it on red as much as black.",
+      "has_restriction": true
+    },
+    "can't lose the game and opponent can't win": {
+      "label": "Can't lose the game and opponent can't win",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "win_condition",
+      "families_secondary": [],
+      "source_aliases": [
+        "Can't lose the game and opponents can't win."
+      ],
+      "explanation": "This is a defensive ability, and thus shows up in white.",
+      "has_restriction": false
+    },
+    "can't win the game and opponent can't lose": {
+      "label": "Can't win the game and opponent can't lose",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "win_condition",
+      "families_secondary": [],
+      "source_aliases": [
+        "Can't win the game and opponents can't lose"
+      ],
+      "explanation": "This ability is used as a drawback in black.",
+      "has_restriction": false
+    },
+    "card draw": {
+      "label": "Card draw",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is best at card drawing. It has the most of it and no restrictions. Black's card drawing must involve paying some other cost, most often life but sometimes sacrificing permanents. Green's card draw is tied to creatures. In the past, we've also connected it to land, but that ended up making green card draw a little too much like blue, so we've pulled back from that. All colors get cantrips (spells that draw you a single card). Blue gets the best cantrip spells, white gets the best cantrip small creatures, and green gets the best cantrip large creatures. While white is still tertiary at card drawing, we have added some new abilities for white to draw cards. The big limitation is that white tends to draw over time rather than all at once, so it has a once-per-turn limit on card drawing (multiplayer does allow white on occasion to draw multiple cards tied to how many opponents a player has). Other than cantrips, red only draws cards with three exceptions: impulsive draw, \"punisher\" effects, and wheeling. (See impulsive draw, \"punisher\" effects, and wheeling.)",
+      "has_restriction": true
+    },
+    "card filtering": {
+      "label": "Card filtering (Look at the top N cards of your library and put N in your hand and put the rest on the bottom of the library in any order.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the color of information, so it loves having the ability to choose what exactly it gets to draw. Sometimes card filtering looks similar to looting, where you draw some number of cards and then discard a close number. When green does this, it can usually only get a subset of permanents (usually creatures and/or lands) into its hand.",
+      "has_restriction": true
+    },
+    "cast spells from opponent's graveyard/exile": {
+      "label": "Cast spells from opponent's graveyard/exile.",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "The two sneakiest colors are the ones most likely to use the opponent's own resources against them. Sometimes blue and black will make the player discard/mill the cards into exile where they can later cast them.",
+      "has_restriction": false
+    },
+    "cast spells from your graveyard": {
+      "label": "Cast spells from your graveyard.",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "Black is the color most likely to cast cards from the graveyard, but it's something blue and red also do on occasion, especially instants and sorceries. I've listed white and green as tertiary because we do flashback with regularity.",
+      "has_restriction": false
+    },
+    "cast spells out of graveyard": {
+      "label": "Cast spells out of graveyard.",
+      "colors": {
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "Black is the color most focused on the graveyard. Blue occasionally can cast instants and sorceries out of the graveyard. We've also let red play a little in this area, especially in sets where it can grant flashback to instants and sorceries in the graveyard.",
+      "has_restriction": true
+    },
+    "changing lands": {
+      "label": "Changing lands (Target land becomes the basic land of your choice.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do a lot of land changing these days, but the ability is still in blue in environments where we might need it. It allows blue a way to get access to other colors in multicolor environments.",
+      "has_restriction": false
+    },
+    "color changing": {
+      "label": "Color changing (Target/this creature becomes the color(s) of your choice until end of turn.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue can change any creature's color, including its own. Green has this ability on creatures that can change themselves, usually flavored as a chameleon-like effect. White and black have had the ability on rare occasion to make things their own color. As we've lessened the number of effects that care about color, this ability isn't used much these days.",
+      "has_restriction": true
+    },
+    "copying permanents, permanently": {
+      "label": "Copying permanents, permanently",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "copying",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue has permanents that will choose a target and then remain that target for the rest of the game (or until the permanent chooses to copy a new target).",
+      "has_restriction": false
+    },
+    "copying permanents, temporarily": {
+      "label": "Copying permanents, temporarily",
+      "colors": {
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "copying",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red has permanents (or spells that create this effect) that can temporarily become another creature, usually until end of turn. Blue's cards in this category are cards that change but don't let the controller explicitly choose what they become. (For instance, one might copy the last creature played.)",
+      "has_restriction": true
+    },
+    "counter target activated/triggered ability": {
+      "label": "Counter target activated/triggered ability",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "control",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "For a while this was a green effect, but we've moved it to be more in blue. Green does it on rare occasions, usually to counter artifact activations these days.",
+      "has_restriction": true
+    },
+    "counterspell": {
+      "label": "Counterspell",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "control",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Counterspelling is one of the few abilities that's almost universally used in a single color. White dips its toe into the ability with taxing and delay-style counterspells.",
+      "has_restriction": false
+    },
+    "creature pumping, their team, one-shot :: -n/-n to their team": {
+      "label": "-N/-N to their team",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [
+        "-N/-N to their team, one-shot"
+      ],
+      "explanation": "This is a common way for black to kill creatures. Sometimes this effect will affect all creatures and not just your opponents.",
+      "has_restriction": false
+    },
+    "creature pumping, their team, ongoing :: -n/-n to their team": {
+      "label": "-N/-N to their team",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [
+        "-N/-N to their team, ongoing"
+      ],
+      "explanation": "This is a common way for black to kill creatures. Sometimes this effect will affect all creatures and not just your opponents.",
+      "has_restriction": false
+    },
+    "creature pumping, your team, one-shot :: +n/+0 to your team": {
+      "label": "+N/+0 to your team",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [
+        "+N/+0 to your team",
+        "+N/+0 to your team, one-shot"
+      ],
+      "explanation": "Team pump that only pumps power is most often done in red, usually affecting attacking creatures. White will sometimes pump its team's power without pumping toughness (although it more often pumps both).",
+      "has_restriction": true
+    },
+    "creature pumping, your team, one-shot :: +n/+n to your team": {
+      "label": "+N/+N to your team",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [
+        "+N/+N to your team, one-shot"
+      ],
+      "explanation": "White is the color most likely to pump its team, most often with +1/+1, but it will occasionally go up to +2/+2. Green's team pump starts at +3/+3 and often also adds trample.",
+      "has_restriction": true
+    },
+    "creature pumping, your team, ongoing :: +n/+0 to your team": {
+      "label": "+N/+0 to your team",
+      "colors": {
+        "B": {
+          "tier": "tertiary",
+          "basis": "adjudicated",
+          "conflict": {
+            "colour_list_says": "secondary",
+            "ability_catalog_says": "tertiary"
+          },
+          "ruling": {
+            "tier": "tertiary",
+            "authority": "ability catalog",
+            "mechanism": "Persistent summary/catalog inconsistency in BOTH 2017 and 2021. The detailed catalog says tertiary and no 2021 change is recorded, so the Black-Secondary summary claim is a long-standing list error."
+          }
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [
+        "+N/+0 to your team, ongoing"
+      ],
+      "explanation": "Team pump that only pumps power is most often done in red, usually affecting attacking creatures. White will sometimes pump its team's power without pumping toughness (although it more often pumps both).",
+      "has_restriction": true
+    },
+    "creature pumping, your team, ongoing :: +n/+n to your team": {
+      "label": "+N/+N to your team",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [
+        "+N/+N to your team, ongoing"
+      ],
+      "explanation": "White is the color most likely to pump its team, most often with +1/+1, but it will occasionally go up to +2/+2. Green's team pump starts at +3/+3 and often also adds trample.",
+      "has_restriction": true
+    },
+    "creature sacrifice, forced, repeatable": {
+      "label": "Creature sacrifice, forced, repeatable (All players/opponents must sacrifice a creature each turn.)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Sometimes black likes killing things slowly.",
+      "has_restriction": false
+    },
+    "curiosity": {
+      "label": "\"Curiosity\" (Whenever this creature deals combat damage to an opponent, draw a card.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability started as a blue-only ability, but we added it in green because it works with green's creature-tied card drawing.",
+      "has_restriction": true
+    },
+    "damage prevention": {
+      "label": "Damage prevention (Prevent the next N damage that would be dealt to target creature/player.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do a lot of this effect any more, but when we do it's almost always in white.",
+      "has_restriction": false
+    },
+    "damage redirection": {
+      "label": "Damage redirection (Prevent the next N damage that would be dealt to target creature/player this turn. If damage is prevented in this way, this card deals that much damage to target creature/player.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is another effect we've cut significantly back on that is also squarely in white.",
+      "has_restriction": false
+    },
+    "daunt": {
+      "label": "\"Daunt\" (This creature can't be blocked by creatures with power 2 or less.)",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is an ability we've been trying out in small doses in green. I don't know if it will ever make it to evergreen status, but it's a possibility.",
+      "has_restriction": false
+    },
+    "deal damage when blocked": {
+      "label": "Deal damage when blocked",
+      "colors": {
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is an effect that goes on creatures. It is done primarily in red. When black does it, it is usually loss of life. I list blue because the afflict mechanic (from Hour of Devastation) that does this is also in blue (as Bolas's Eternal Zombie army was in Bolas's colors: blue, black, and red).",
+      "has_restriction": true
+    },
+    "deal n damage to a creature that's been damaged this turn": {
+      "label": "Deal N damage to a creature that's been damaged this turn.",
+      "colors": {
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black and red are the colors that prey on the weak.",
+      "has_restriction": false
+    },
+    "deal n damage to a creature with flying": {
+      "label": "Deal N damage to a creature with flying.",
+      "colors": {
+        "R": {
+          "tier": "tertiary",
+          "basis": "adjudicated",
+          "conflict": {
+            "colour_list_says": "secondary",
+            "ability_catalog_says": "tertiary"
+          },
+          "ruling": {
+            "tier": "tertiary",
+            "authority": "ability catalog",
+            "mechanism": "Absent from the change log, so unchanged since 2017. The catalog explains why: green is the stronger anti-flying colour and ordinary red burn already reaches fliers."
+          }
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "As the two anti-flying colors, red and green will deal damage to fliers. Green does it significantly more than red, as any of red's direct damage to creatures can hit fliers.",
+      "has_restriction": false
+    },
+    "deal n damage to a creature/planeswalker/player where n is the number of cards in your hand/your opponent's hand": {
+      "label": "Deal N damage to a creature/planeswalker/player where N is the number of cards in your hand/your opponent's hand.",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [
+        "Deal N damage to a creature/player where N is the number of cards in your hand/your opponent's hand."
+      ],
+      "explanation": "We tend to do this in sets when red has a more spell-based theme.",
+      "has_restriction": true
+    },
+    "deal n damage to creature, planeswalker, and/or player": {
+      "label": "Deal N damage to creature, planeswalker, and/or player.",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red is king of direct damage and has it in many forms, including the most straightforward versions. White can do damage where N is the number of creatures you control. Black will do direct damage to creatures, planeswalkers, or players and then gain life. (See drain life.) Black will sometimes deal damage to players as a punishment.",
+      "has_restriction": false
+    },
+    "deal n damage to target attacking or blocking creature": {
+      "label": "Deal N damage to target attacking or blocking creature.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Other than basing damage on number of creatures, white's direct damage only shows up in combat.",
+      "has_restriction": true
+    },
+    "deathtouch": {
+      "label": "Deathtouch",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability was primary in both black and green for a while, but we found that black both had more need for it and had more flavorful ways to express it creatively.",
+      "has_restriction": false
+    },
+    "defender": {
+      "label": "Defender",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Basically everyone can have defender, but it leans toward white and blue philosophically as those are the most defensive colors.",
+      "has_restriction": false
+    },
+    "destroy all creatures": {
+      "label": "Destroy all creatures.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the color that most often does mass creature kill, with it showing up on a rare or mythic rare in almost every set. Black mass-creature kill is not quite as frequent. Red has a similar effect where it does large amount of damage to all creatures (see direct damage).",
+      "has_restriction": false
+    },
+    "destroy all creatures controlled by one player": {
+      "label": "Destroy all creatures controlled by one player.",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White believes in balance and parity, so only black will kill just one player's creatures.",
+      "has_restriction": true
+    },
+    "destroy all creatures with power 3 or greater": {
+      "label": "Destroy all creatures with power 3 or greater.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [
+        "Destroy all creatures with power 3/4 or greater."
+      ],
+      "explanation": "Killing big creatures is a white thing, so it can be combined with mass creature kill. The number is most often 3 power, but occasionally can be tweaked up. White will occasionally also do mass destruction based on other criteria, but it tends to destroy all creatures of that quality.",
+      "has_restriction": true
+    },
+    "destroy target attacking or blocking creature": {
+      "label": "Destroy target attacking or blocking creature.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White tends to do its creature destruction in one of four ways: white can kill during combat, it sometimes will just hit attackers or just hit blockers, or white will often exile creatures instead of destroying then.",
+      "has_restriction": true
+    },
+    "destroy target creature": {
+      "label": "Destroy target creature.",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "ability-catalog-only"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is king of creature destruction and is the one color that can kill regardless of circumstance. White can kill a single creature, but usually at a higher cost. Sometimes in both white and black this spell exiles the creature instead of destroying it.",
+      "has_restriction": true
+    },
+    "destroy target creature that damaged you or a creature you control this turn": {
+      "label": "Destroy target creature that damaged you or a creature you control this turn.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is also willing to destroy something after it has hurt white in some way.",
+      "has_restriction": false
+    },
+    "destroy target creature with flying": {
+      "label": "Destroy target creature with flying.",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "Green is allowed to kill only two types of creatures—flying creatures (as it is the anti-flying color) and artifact creatures (see artifact destruction).",
+      "has_restriction": true
+    },
+    "destroy target creature with power 3 or greater": {
+      "label": "Destroy target creature with power 3 or greater.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [
+        "Destroy target creature with power 3/4 or greater."
+      ],
+      "explanation": "As champion of the little guy, white will also destroy large creatures. We've moved the floor of the ability from power 4 to power 3.",
+      "has_restriction": false
+    },
+    "destroy target creature. its controller gets compensation": {
+      "label": "Destroy target creature. Its controller gets compensation.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability used to be in white and blue (flavored as transformation in blue), but it's now just a white ability.",
+      "has_restriction": false
+    },
+    "destroy target tapped creature": {
+      "label": "Destroy target tapped creature.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White can also destroyed tapped creatures using a similar flavor to destroying creatures that have harmed it.",
+      "has_restriction": false
+    },
+    "devil's deal permanents": {
+      "label": "\"Devil's Deal\" permanents (Cards that grant you power but at a cost)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the color of \"power at any cost,\" so it gets permanents (usually) that start helping you but have the potential to hurt you in the end. These are most often creatures or enchantments, but occasionally show up in other forms.",
+      "has_restriction": true
+    },
+    "direct damage, multiple targets": {
+      "label": "Direct damage, multiple targets",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red will deal damage to all or a subset of creatures, sometimes dealing a small amount (1 or 2 damage, killing small creatures), sometimes doing larger amounts that kill most creatures. Red's damage in this area most often hits all creatures, including its own. White will occasionally deal damage to multiple creature if they all are attackers and/or blockers.",
+      "has_restriction": true
+    },
+    "discard as a cost": {
+      "label": "Discard as a cost",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [
+        "disruption"
+      ],
+      "source_aliases": [],
+      "explanation": "While all colors have access to discarding cards as a cost, black does it most and red does it second most.",
+      "has_restriction": false
+    },
+    "discard as effect": {
+      "label": "Discard as effect",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is one of only a handful of major abilities to be contained to just one color. The closest a second color comes is blue, which occasionally gets targeted card filtering that can be used on the opponent.",
+      "has_restriction": true
+    },
+    "double strike": {
+      "label": "Double strike",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White and red are also the primary colors for first strike. Black, which is tertiary in first strike, does not get double strike.",
+      "has_restriction": false
+    },
+    "drain life": {
+      "label": "\"Drain life\" (Deal damage to a creature/player and gain life equal to that damage.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "life",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "Other colors will deal damage or gain life, but black is the color that does both at the same time. (Okay, technically, red and white together can do this too.) Black also will do triggered or activated effects that repeatedly drain the player, usually for 1. White has dipped its toe into this area in Orzhov sets (aka Ravnica sets).",
+      "has_restriction": true
+    },
+    "enchantment destruction": {
+      "label": "Enchantment destruction",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White and green usually have one enchantment destruction card in common; green's usually also destroys artifacts, and sometimes white does as well. (See artifact destruction.) We've also started to let black have enchantment removal. It's clearly at a power level lower than white or green and often forces the opponent to sacrifice the enchantment or makes you pay an extra cost.",
+      "has_restriction": true
+    },
+    "enchantress ability": {
+      "label": "\"Enchantress\" ability (Whenever you play an enchantment, draw a card.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability started in Limited Edition (Alpha) on Verduran Enchantress, a green card. It has bounced back and forth between green and white, and now can be done by either. In white, it has the limitation of only drawing one card per turn as that's a new rule for white card drawing. The best ones are probably going to appear in white and green.",
+      "has_restriction": true
+    },
+    "exiling cards from graveyard": {
+      "label": "Exiling cards from graveyard",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "adjudicated",
+          "conflict": {
+            "colour_list_says": "primary",
+            "ability_catalog_says": "secondary"
+          },
+          "ruling": {
+            "tier": "secondary",
+            "authority": "ability catalog",
+            "mechanism": "Absent from the change log, so unchanged since 2017; the White-Primary list entry is a summary-list error."
+          }
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This effect is used to get rid of cards in a graveyard that might have an effect/usable activation cost. Black does it most often, but white and green occasionally do it in sets that need it.",
+      "has_restriction": true
+    },
+    "extra attack": {
+      "label": "Extra attack (Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Attacking twice has always been red's domain. Thematically, it makes sense that white might occasionally do this.",
+      "has_restriction": true
+    },
+    "fight": {
+      "label": "Fight",
+      "colors": {
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is green's primary form of creature destruction. Red uses it occasionally but at a much lower volume.",
+      "has_restriction": true
+    },
+    "first strike": {
+      "label": "First strike",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White and red are the two cards with trained fighters (white has the army and red the creatures that have gotten good through constant impulsive fighting). Black is tertiary, and uses this these days almost exclusively on Knights.",
+      "has_restriction": false
+    },
+    "flash": {
+      "label": "Flash",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "adjudicated",
+          "conflict": {
+            "colour_list_says": "tertiary",
+            "ability_catalog_says": "secondary"
+          },
+          "ruling": {
+            "tier": "secondary",
+            "authority": "companion change log, 2021-10-18",
+            "mechanism": "Flash moved black from tertiary to secondary in 2021; the Black-Tertiary list entry is stale 2017 data."
+          }
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "ability-catalog-only"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Everyone gets some access to flash. Blue gets it the most as it plays into the color's reactive play style. In the last few years, we made it secondary in white and black, and kept it secondary in green. White tends to get the small cheap and mid-size defensive creatures, black gets creatures that can surprise kill you, often with higher power than toughness, and green gets bigger creatures. Red can get flash when it functionally needs it to get an effect to work, most often with reactive enters-the-battlefield effects.",
+      "has_restriction": true
+    },
+    "flicker": {
+      "label": "\"Flicker\" (Exile target creature/permanent, then return it to the battlefield under its owner's control—occasionally the creature/permanent returns at the end of the turn.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [
+        "protection"
+      ],
+      "source_aliases": [],
+      "explanation": "This ability appears in both white and blue, although we've recently been trying to push it a little more in white.",
+      "has_restriction": false
+    },
+    "flying": {
+      "label": "Flying",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "White and blue are the two main colors with flying. Blue gets the most fliers. White gets the most efficient small fliers. Blue more often grants flying, although white does it on occasion. Red's flying is mostly restricted to Dragons and Phoenixes with the occasional weak small fliers. Green's tertiary is almost a quaternary, in that it gets flying very infrequently.",
+      "has_restriction": true
+    },
+    "fog": {
+      "label": "\"Fog\" (Prevent all combat damage that would be dealt this turn.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This effect has shown up in four of the five colors over the years. It started in green, spent numerous years bouncing around, ended up in white, and then finally got moved back to green where it has stayed.",
+      "has_restriction": false
+    },
+    "forced attack": {
+      "label": "Forced attack (Target creature attacks this turn if able.)",
+      "colors": {
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't use this ability a lot, but when we do, we use it in red and blue. Red is flavored as emotional tampering and blue as mind control.",
+      "has_restriction": false
+    },
+    "forced block (target creature must block this turn.)": {
+      "label": "Forced block (Target creature must block this turn.)",
+      "colors": {
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do this effect often, but green does it most, then red.",
+      "has_restriction": false
+    },
+    "forced sacrifice :: sacrifice a creature": {
+      "label": "Sacrifice a creature. (Target/all player(s) sacrifice a creature.)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "ability-catalog-only"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Sometimes black kills your creatures and sometimes it makes you do it.",
+      "has_restriction": false
+    },
+    "forced sacrifice :: sacrifice an artifact": {
+      "label": "Sacrifice an artifact. (Target/all player(s) sacrifice an artifact.)",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "ability-catalog-only"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red can force you to sacrifice artifacts.",
+      "has_restriction": false
+    },
+    "forced sacrifice of a creature": {
+      "label": "Forced sacrifice of a creature",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "colour-list-only"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "",
+      "has_restriction": false
+    },
+    "freeze creature": {
+      "label": "\"Freeze\" creature (Tap target creature. That creature doesn't untap during its controller's next untap step.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is a blue ability that R&D has grown fond of in recent years.",
+      "has_restriction": false
+    },
+    "friendly to artifacts": {
+      "label": "Friendly to artifacts",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White and blue, as the colors of civilization, are both very friendly with artifacts. Red tends to be associated with Equipment and Vehicles (along with white) or using artifacts as a resource (interacting with things like treasure artifact tokens).",
+      "has_restriction": true
+    },
+    "friendly to creatures": {
+      "label": "Friendly to creatures",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Green and white are the main creature colors (they have the highest percentage of creatures versus spells) so they most often like you having creatures.",
+      "has_restriction": false
+    },
+    "friendly to enchantments": {
+      "label": "Friendly to enchantments",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White and green are also the two colors that most appreciate enchantments. Black sometimes cares in sets with an enchantment theme or subtheme.",
+      "has_restriction": false
+    },
+    "friendly to instants and sorceries": {
+      "label": "Friendly to instants and sorceries",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "The creature colors like creatures, the spell colors like instants and sorceries.",
+      "has_restriction": false
+    },
+    "friendly to lands": {
+      "label": "Friendly to lands",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Green is the color that loves lands the most, but every color loves its own basic land type.",
+      "has_restriction": false
+    },
+    "friendly to legendary permanents": {
+      "label": "Friendly to legendary permanents",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the color that most interacts with legendary permanents. It can search the library for them and get them back from the graveyard, among other positive interactions.",
+      "has_restriction": false
+    },
+    "friendly to low mana value cards": {
+      "label": "Friendly to low mana value cards",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the color that most positively interacts with low mana value (anywhere from mana value 3 or less) cards. It can search the library for them and get them back from the graveyard, among other positive interactions.",
+      "has_restriction": false
+    },
+    "friendly to planeswalkers": {
+      "label": "Friendly to planeswalkers",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the color that most interacts with planeswalkers. It can search the library for them and get them back from the graveyard, among other positive interactions.",
+      "has_restriction": false
+    },
+    "gain control of target player's turn": {
+      "label": "Gain control of target player's turn",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "theft",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This effect is actually most often done in colorless, but black is the color that can do it in the color pie.",
+      "has_restriction": false
+    },
+    "gaseous form": {
+      "label": "\"Gaseous Form\" (This creature neither deals nor receives damage.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do this effect much any more, but years back we moved it from blue to white (and in the very early days it showed up in green as a Fog variant). White will grant the ability to creatures, whereas blue tends to have the ability on creatures.",
+      "has_restriction": true
+    },
+    "haste": {
+      "label": "Haste",
+      "colors": {
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Haste shows up most often on red creatures. We've moved green into second place for haste. Black is still technically secondary, but gets haste less often than green.",
+      "has_restriction": false
+    },
+    "hexproof": {
+      "label": "Hexproof",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue both has more creatures with hexproof and more often grants it as a pseudo-counterspell. Green tends to get hexproof on larger creatures without evasion. White gets hexproof infrequently, sometimes on players, in ways that feel like it's protecting the thing.",
+      "has_restriction": true
+    },
+    "illusion ability": {
+      "label": "\"Illusion ability\" (Sacrifice this creature if it is the target of a spell or ability.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability started in black on Spirits and was known as \"skulking,\" but has since been moved into blue and attached to Illusions. The ability used to care about spells and abilities, but now just cares about spells.",
+      "has_restriction": false
+    },
+    "impulsive draw": {
+      "label": "\"Impulsive draw\" (Exile the top N cards of your library. Until end of turn, you may play cards exiled this way.)",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is red's primary way of card drawing, playing into red's impulsive nature of wanting to do things now. Sometimes we let you cast the spell until the end of your next turn.",
+      "has_restriction": false
+    },
+    "increasing counters and/or tokens": {
+      "label": "Increasing counters and/or tokens",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "counters",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This effect either makes more counters or tokens as they're being made or makes more after they've already been made. Sometimes this is one for one, sometimes it just adds one or two more. Blue and green do it most often, but we've started letting white in on the fun.",
+      "has_restriction": false
+    },
+    "indestructible": {
+      "label": "Indestructible",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White, and to a lesser extent green, tend to have creature that naturally have indestructible. Black and green, as the replacement for regeneration, often have activated abilities that grant indestructible until end of turn. White will at times use temporary indestructibility where it used to use protection. We allow all colors access to it when we do things like cycles of Gods.",
+      "has_restriction": true
+    },
+    "instant and/or sorcery triggers": {
+      "label": "Instant and/or sorcery triggers (Whenever you cast an instant and/or sorcery . . . )",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue and red are the two colors with the highest percentage of spells (as opposed to creatures), so they are the two colors that most often care about them being cast.",
+      "has_restriction": false
+    },
+    "land destruction": {
+      "label": "Land destruction",
+      "colors": {
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [
+        "disruption"
+      ],
+      "source_aliases": [],
+      "explanation": "Red is the one color that regularly does land destruction. Black and green are still able to do it, but do it very infrequently. Most land destruction in green these days (and \"these days\" hasn't been in a while) is \"destroy target noncreature permanent.\"",
+      "has_restriction": true
+    },
+    "lhurgoyf": {
+      "label": "\"Lhurgoyf\" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Lhurgoyfs started as a green thing and have since gone on to also be a black thing. On rare occasion, we'll have other colors play in this space, either in a cycle or by caring about some different quality of card in the graveyard. Another change is that sometimes we'll care about the number when casting and lock it down with +1/+1 counters rather than it being a stat you have to keep checking on.",
+      "has_restriction": true
+    },
+    "life gain": {
+      "label": "Life gain",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "life",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White and green are the two colors that will have effects that simply gain a player life. Black can gain life but only when either sacrificing something, using lifelink, or damaging another creature or player. (See drain life.) White will sometimes gain life when other creatures enter the battlefield and black will sometimes gain life when other creatures die.",
+      "has_restriction": true
+    },
+    "life loss as a cost": {
+      "label": "Life loss as a cost",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "life",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the color that most often uses life as a cost. All colors have access to it on rare occasions where the world calls for it (like New Phyrexia).",
+      "has_restriction": true
+    },
+    "life loss as an effect": {
+      "label": "Life loss as an effect",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "life",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black will sometimes just make players lose life straight up without a drain effect.",
+      "has_restriction": false
+    },
+    "lifelink": {
+      "label": "Lifelink",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "life",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "White and black have very different flavor rationales for the abilities, but both use it almost every set.",
+      "has_restriction": false
+    },
+    "lobotomy": {
+      "label": "\"Lobotomy\" (Choose a non-land card name. Search target player's graveyard hand and library for all cards with that name and exile them.)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "control",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability started on a blue-black card in Tempest called [autocard mvid=\"23170\"]Lobotomy, but has since drifted to be just a black thing.",
+      "has_restriction": false
+    },
+    "lockdown (enchanted creature doesn't untap.)": {
+      "label": "\"Lockdown\" (Enchanted creature doesn't untap.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is one of blue's primary creature answers in Limited. It's used almost solely on Auras. See freeze for a temporary version, also in blue.",
+      "has_restriction": false
+    },
+    "looking at opponent's hand": {
+      "label": "Looking at opponent's hand",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the color that can simply do this effect. Black does it only in conjunction with discarding where it has to choose what gets discarded. We've been scaling back on this effect, as it tends to slow down gameplay. This has had the interesting effect of making the ability appear more in black than blue, as we still make the discard spells.",
+      "has_restriction": true
+    },
+    "looting (draw a card and discard a card.)": {
+      "label": "\"Looting\" (Draw a card and discard a card.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the color that likes to go searching for answers by digging through its library.",
+      "has_restriction": false
+    },
+    "lure": {
+      "label": "\"Lure\" (All creatures able to block this creature must do so.)",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability has been with Magic since Limited Edition (Alpha), but we've started scaling back how often we do it. It's done infrequently now, and only at higher rarities because of its impact on Limited.",
+      "has_restriction": true
+    },
+    "lure, limited": {
+      "label": "\"Lure,\" limited (This creature must be blocked this turn if able.)",
+      "colors": {
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is the watered-down version of Lure. Somebody must block your creature, but everyone doesn't have to. We started occasionally using the ability in red.",
+      "has_restriction": true
+    },
+    "mana production, permanent": {
+      "label": "Mana production, permanent",
+      "colors": {
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Besides being the land-fetching color, green is also the color with permanents that can produce mana turn after turn to help it ramp up quickly and cast large spells. Black does this infrequently, usually with some payment required. Blue has access to permanents that produce colorless man, sometimes flavored to helping cast artifacts.",
+      "has_restriction": true
+    },
+    "mana production, temporary": {
+      "label": "Mana production, temporary",
+      "colors": {
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red is the color best at producing temporary bursts of mana, be it with one-shot spells, permanents with one-time triggers, or things that need to be sacrificed to be used. Black can also get mana but usually requires paying some cost, most often sacrificing something else.",
+      "has_restriction": true
+    },
+    "manipulate time (end the turn.)": {
+      "label": "\"Manipulate time\" (End the turn.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do this ability very often, but when we do it's put in blue and flavored as time manipulation. Red has done it once with a \"lose at end of next turn\" rider.",
+      "has_restriction": false
+    },
+    "maro ability": {
+      "label": "\"Maro\" ability (This creature's power and toughness are equal to the number of cards in our hand.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the color of knowledge and green is the color of wisdom, so those are the two colors that like to care about what you \"know.\"",
+      "has_restriction": false
+    },
+    "meddling": {
+      "label": "\"Meddling\" (Name a spell. That spell can't be played as long as this card is on the battlefield.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "rules_alteration",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability, named after Meddling Mage from Invasion (Chris Pikula's Invitational card), is usually on a creature or enchantment and stops a specific spell from being cast. As this is proactive, it's in white.",
+      "has_restriction": true
+    },
+    "menace": {
+      "label": "Menace",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "This ability started in red when it was an unnamed thing, but was added to black when it became keyworded because intimidate had gone away and black needed some kind of evasion other than flying. There's been some talk that a third color should be secondary or tertiary.",
+      "has_restriction": false
+    },
+    "milling": {
+      "label": "Milling (You/target player puts the top N cards from his or her library into his or her graveyard.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [
+        "graveyard"
+      ],
+      "source_aliases": [],
+      "explanation": "For many years this ability was only in blue, but a number of years ago we started allowing black to do it as well. Both colors also get self-mill as an effect and a cost.",
+      "has_restriction": true
+    },
+    "moving enchantments/counters": {
+      "label": "Moving enchantments/counters",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "counters",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the color of moving attached things. It hasn't moved Equipment yet, but perhaps one day.",
+      "has_restriction": false
+    },
+    "must attack": {
+      "label": "Must attack",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "The flavor of this is great in red, but we've found the gameplay is not always great. So we've been doing less of this in red overall.",
+      "has_restriction": false
+    },
+    "pacifism-like effect": {
+      "label": "Pacifism-like effect (Enchanted creature cannot attack or block.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is one of white's strongest forms of creature removal for Limited, usually in the form of an Aura. It infrequently is used on noncreatures. Sometimes the spell also prevents that creature/permanent from using activations. It also sometimes only stops just attacking or just blocking.",
+      "has_restriction": true
+    },
+    "panic": {
+      "label": "\"Panic\" (Target creature can't block this turn.)",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability mostly shows up on spells but occasionally as an activated ability at higher rarities.",
+      "has_restriction": true
+    },
+    "planeswalker destruction": {
+      "label": "Planeswalker destruction",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the color that regularly destroys planeswalkers, often using \"destroy creature or planeswalker.\" Green doesn't call out planeswalker by name (Nissa's Defeat being an exception), but can \"destroy target noncreature.\" Green is now tertiary in this as we don't use this ability much any more in green. Red is not listed here because it uses damage to deal with planeswalkers rather than destroy them outright.",
+      "has_restriction": false
+    },
+    "play extra lands/put a land from hand onto the battlefield": {
+      "label": "Play extra lands/Put a land from hand onto the battlefield",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do either of these effects often, but they are both in green's slice of the color pie.",
+      "has_restriction": false
+    },
+    "playing cards off the top of library, for free": {
+      "label": "Playing cards off the top of library, for free",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability used to be in blue, but we moved it to red as it has a chaotic feel (you don't know what's about to happen) and red needed more stuff.",
+      "has_restriction": false
+    },
+    "playing cards off the top of opponent's library": {
+      "label": "Playing cards off the top of opponent's library",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue and black, being the sneaky colors, are the two that most often cast spells off the opponent's deck. We occasionally let red do it, but usually there's a short duration during which you can do it, unlike blue and black that usually doesn't have a time limit.",
+      "has_restriction": true
+    },
+    "playing cards off the top of your library, paying their mana cost": {
+      "label": "Playing cards off the top of your library, paying their mana cost (You may look at the top card of your library and if it's a [blah] you may play it.)",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We don't do this effect very often, so I made it primary in no color. Any color can have access to it, but it must play cards from a subset that make sense for that color. Blue is the color we've let cast any card off the top.",
+      "has_restriction": true
+    },
+    "polymorph": {
+      "label": "\"Polymorph\" (Exile target creature. Its controller reveals cards from the top of his or her library until he or she reveals a creature card. That player puts that card onto the battlefield.)",
+      "colors": {
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "For a long time, this ability was a blue thing. When we were looking for more places to expand red, we decided to slice up the polymorph pie. Blue gets transformations where the outcome is known and red gets them where it is not. The idea being that blue only wants to transform something when they know what they're going to get, whereas red is willing to take a risk. Red will also do large chaotic effects where many things change all at once.",
+      "has_restriction": true
+    },
+    "preventing actions": {
+      "label": "Preventing actions (Your opponents can't cast spells this turn.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "rules_alteration",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the proactive color, stopping things from before they happen (as opposed to blue being reactive, stopping things as they happen).",
+      "has_restriction": false
+    },
+    "protection": {
+      "label": "Protection",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Protection has changed back from deciduous status back to evergreen status, but it doesn't show up in every set. It's mostly a white ability that can show up in other colors, usually with protection from something the color dislikes (an enemy color, artifacts for green, etc.).",
+      "has_restriction": true
+    },
+    "prowess": {
+      "label": "Prowess",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_type_affinity",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability started out as a Jeskai keyword in Khans of Tarkir. It filled a gap we had in blue and red, so that's where we focused it. White has not yet gotten a prowess card outside of Khans of Tarkir block, but I believe it eventually will. For a while this ability was evergreen, but it's since become deciduous (and even then, barely). I don't list most of the deciduous abilities in this article, but as this used to be evergreen, I left it in.",
+      "has_restriction": false
+    },
+    "punisher effects": {
+      "label": "\"Punisher\" effects (Opponent chooses one: thing X happens or thing Y happens.)​",
+      "colors": {
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "In red, one of the two abilities is usually damage to the opponent making the choice; the other option is often something red doesn't normally do in the color pie. Black does this a little, but doesn't tend to have the color pie–bending aspect.",
+      "has_restriction": true
+    },
+    "putting artifacts from hand onto the battlefield": {
+      "label": "Putting artifacts from hand onto the battlefield",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "cheat_into_play",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue does this as the \"friendly to artifacts\" color. White will do it when it involves Equipment.",
+      "has_restriction": false
+    },
+    "putting creatures from hand onto the battlefield": {
+      "label": "Putting creatures from hand onto the battlefield",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "cheat_into_play",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Green does this effect the most often. Blue will do it usually flavored as transformation, and will return one its creatures to its owner's hand. When red does this the creature is most often sacrificed or returned to hand at end of turn. We let all colors dip their toes in this area when messing with creature types of their color.",
+      "has_restriction": true
+    },
+    "putting enchantments from hand onto the battlefield": {
+      "label": "Putting enchantments from hand onto the battlefield",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "cheat_into_play",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is another effect we don't do that often. White and, interestingly, blue tend to do this tied to Auras, while green will put out any enchantment.",
+      "has_restriction": true
+    },
+    "putting lands from hand onto the battlefield": {
+      "label": "Putting lands from hand onto the battlefield",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Green used to do this all the time. It still does it, but not as often as it used to.",
+      "has_restriction": false
+    },
+    "putting planeswalkers from hand onto the battlefield": {
+      "label": "Putting planeswalkers from hand onto the battlefield",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "cheat_into_play",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We haven't actually done this effect yet. My best guess is it would be in white.",
+      "has_restriction": false
+    },
+    "random destruction effects": {
+      "label": "Random destruction effects (Destruction where the outcome is unknown at the time of casting.)",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "removal",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red is the color of chaos, so we occasionally give it effects that destroy random nonenchantment permanents (sometimes a subset).",
+      "has_restriction": true
+    },
+    "reach": {
+      "label": "Reach",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "As green mostly has no flying, this is one of the tools green has to deal with other players' flying creatures. We've very recently decided to make it secondary in red. White's tertiary status comes mostly on archers.",
+      "has_restriction": true
+    },
+    "reanimate permanent": {
+      "label": "\"Reanimate\" permanent (Return a permanent card from a graveyard to the battlefield.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the one color that can reanimate any permanent type, so it gets to reanimate \"target permanent.\" It can also reanimate \"target artifact,\" \"target enchantment,\" or \"target planeswalker.\" It doesn't specifically get \"target land,\" but can do so when it's \"target permanent.\"",
+      "has_restriction": false
+    },
+    "reanimation": {
+      "label": "\"Reanimation\" (Return a creature card from a graveyard to the battlefield.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the best at bringing the dead back to life. It has no real restrictions on what it can bring back. White tends to reanimate smaller creatures, usually with a converted mana cost of 2 or less, but we've started letting white bring back larger creatures on occasion. Red has Phoenixes. Green has creatures that can bring themselves back from the graveyard. Both black and white will sometimes reanimate a swath of creatures all at once.",
+      "has_restriction": true
+    },
+    "removing counters": {
+      "label": "Removing counters",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "counters",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the color that gets rid of counters, but only from permanents on the battlefield and not players.",
+      "has_restriction": true
+    },
+    "restocking": {
+      "label": "\"Restocking\" (Putting cards from graveyard back into your library)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is a means of getting cards in your graveyard back into your library. Green does it as a \"cycle of life\" flavor, while blue is flavored more as magical manipulation. Blue sometimes also shuffling your hand in as well and then draws you cards.",
+      "has_restriction": false
+    },
+    "return target artifact from graveyard to hand": {
+      "label": "Return target artifact from graveyard to hand.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue used to be the color that returned artifacts from the graveyard to the hand, but the ability is now in white.",
+      "has_restriction": false
+    },
+    "return target card from graveyard to hand": {
+      "label": "Return target card from graveyard to hand.",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "The ability to get back any card is mostly done in green and usually appears at uncommon or higher in rarity.",
+      "has_restriction": true
+    },
+    "return target creature from graveyard to hand": {
+      "label": "Return target creature from graveyard to hand.",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black can return any creature, but only from your graveyard. (We don't allow you to put other player's cards in your hand.) Black will often do this as an enters-the-battlefield effect nicknamed a \"Gravedigger,\" as that's the card that did it first. White usually returns creatures with smaller converted mana costs.",
+      "has_restriction": true
+    },
+    "return target enchantment from graveyard to hand": {
+      "label": "Return target enchantment from graveyard to hand.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Getting back enchantments is primarily a white thing.",
+      "has_restriction": false
+    },
+    "return target instant from graveyard to hand": {
+      "label": "Return target instant from graveyard to hand.",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "As blue and red are the spell colors (they have the highest percentage of spells versus creatures), they are the two colors that can get instants back. When there is a choice to separate them, blue leans toward getting back instants and red leans toward getting back sorceries.",
+      "has_restriction": false
+    },
+    "return target land from graveyard to hand": {
+      "label": "Return target land from graveyard to hand.",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "While green can get back any card, when the card types are divvied up, green often gets back lands.",
+      "has_restriction": false
+    },
+    "return target sorcery from graveyard to hand": {
+      "label": "Return target sorcery from graveyard to hand.",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "graveyard",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is the same as for getting back instants.",
+      "has_restriction": false
+    },
+    "return to hand": {
+      "label": "Return to hand (Return target creature/permanent to its owner's hand.)",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "tertiary",
+          "basis": "ability-catalog-only"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue can bounce any type of permanent, although these days doesn't often bounce lands. It also will often bounce a creature via an enters-the-battlefield effect. (R&D refers to these as \"[autocard mvid=\"413601\"]Man-o'-Wars,\" based on the first card that did it.) White can only bounce its own permanents to protect them (and often to do cool combo-ish things). Green bounces creatures as a cost for playing bigger creatures.",
+      "has_restriction": true
+    },
+    "return to library": {
+      "label": "Return to library (Put a creature/permanent on top of its owner's library or some number of cards down.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue does this as an upgraded version of returning to hand. Blue will sometimes put the card a few cards down into the library and sometimes shuffles it into a small pile on top. White used to also do this, but it has been removed from white.",
+      "has_restriction": false
+    },
+    "rewards for death": {
+      "label": "Rewards for death (Whenever another creature/creature you control dies . . . )",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Black is the color that most triggers off of other things dying, usually flavored as gaining strength from others' pain. White usually gains life, creates a token creature, or helps the creature go somewhere other than the graveyard, often your hand. Red tends to create creature tokens or deal damage.",
+      "has_restriction": true
+    },
+    "rules setting": {
+      "label": "Rules setting",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "rules_alteration",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "These cards are permanents, mostly creatures and enchantments, that change some basic rule of the game. Every color has some amount of access to do this, but white does it at the highest volume.",
+      "has_restriction": true
+    },
+    "rummaging (discard a card and draw a card.)": {
+      "label": "\"Rummaging\" (Discard a card and draw a card.)",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red has its version of \"looting\" (see looting), but its recklessness has it discard the card before drawing.",
+      "has_restriction": false
+    },
+    "sacrifice a creature and deal damage to creature/planeswalker/player equal to the sacrificed creature's power/toughness": {
+      "label": "Sacrifice a creature and deal damage to creature/planeswalker/player equal to the sacrificed creature's power/toughness.",
+      "colors": {
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [
+        "removal"
+      ],
+      "source_aliases": [
+        "Sacrifice a creature and deal damage to creature/player equal to the sacrificed creature's power/toughness."
+      ],
+      "explanation": "In red, this is flavored as throwing the creatures. In black, it's more treated as a sacrifice for a ritual.",
+      "has_restriction": false
+    },
+    "sacrifice a land": {
+      "label": "Sacrifice a land.",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red is the color most likely to sacrifice lands.",
+      "has_restriction": false
+    },
+    "sacrifice a permanent": {
+      "label": "Sacrifice a permanent.",
+      "colors": {
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red is the color most likely to sacrifice any permanent as it's the color that can individually sacrifice them all. We are letting black do this a little more.",
+      "has_restriction": false
+    },
+    "sacrifice a permanent :: sacrifice a creature": {
+      "label": "Sacrifice a creature.",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [],
+      "source_aliases": [
+        "Sacrifice a creature.",
+        "Sacrifice a creature. (Target player/all player(s) sacrifice a creature.)"
+      ],
+      "explanation": "Black and red are the two most likely colors to sacrifice creatures. This is often part of a draft archetype.",
+      "has_restriction": false
+    },
+    "sacrifice a permanent :: sacrifice an artifact": {
+      "label": "Sacrifice an artifact.",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [],
+      "source_aliases": [
+        "Sacrifice an artifact.",
+        "Sacrifice an artifact. (Target/all player(s) sacrifice an artifact.)"
+      ],
+      "explanation": "Black and red are the most likely to sacrifice artifacts to generate an effect.",
+      "has_restriction": false
+    },
+    "sacrifice an enchantment": {
+      "label": "Sacrifice an enchantment.",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "sacrifice",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Red and green are the two colors that most often sacrifice enchantments. This only tends to get used in sets with enchantment themes.",
+      "has_restriction": true
+    },
+    "scry": {
+      "label": "Scry",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "card_flow",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "All colors have access to scry but blue gets the most. Blue also gets the largest scry numbers with red getting the lowest.",
+      "has_restriction": false
+    },
+    "sengir ability": {
+      "label": "\"Sengir\" ability (When a creature damaged by this creature dies, put a +1/+1 counter on this creature.)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "life",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability appeared in Limited Edition (Alpha) on Sengir Vampire and gets used occasionally in black. Because it doesn't often result in the creature getting +1/+1 counters, we now often do variations of it.",
+      "has_restriction": true
+    },
+    "specter ability": {
+      "label": "\"Specter\" ability (When this creature deals combat damage to an opponent, that player discards a card.)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability is often tied to the Specter creature type. Just as the \"curiosity\" ability is in the card drawing color, so too is the \"Specter\" ability in the discard color, black.",
+      "has_restriction": false
+    },
+    "spell copying": {
+      "label": "Spell copying (Copy target instant or sorcery spell. You may choose new targets for the copy.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "copying",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability is mostly done at rare. We bounced back and forth between whether blue or red was supposed to do it and finally let them both do it.",
+      "has_restriction": true
+    },
+    "spell redirection": {
+      "label": "Spell redirection (Change the target of target spell and/or ability with a single target.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "The same thing happened with spell redirection as spell copying, and we ended up with the same solution—letting both colors do it. We've started letting some of these effects redirect abilities as well as spells.",
+      "has_restriction": false
+    },
+    "stalking": {
+      "label": "\"Stalking\" (This creature can't be blocked by more than one creature.)",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is usually used on creatures 3/3 or bigger.",
+      "has_restriction": true
+    },
+    "stealing permanents, permanently": {
+      "label": "Stealing permanents, permanently",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "theft",
+      "families_secondary": [
+        "removal"
+      ],
+      "source_aliases": [],
+      "explanation": "Blue is the main color to gain control of other players' permanents. It can steal any type of permanent but most often steals creatures. Black is allowed to steal things infrequently. Red also steals but only temporarily (see below).",
+      "has_restriction": true
+    },
+    "stealing permanents, temporarily": {
+      "label": "Stealing permanents, temporarily",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "theft",
+      "families_secondary": [
+        "removal"
+      ],
+      "source_aliases": [],
+      "explanation": "Red takes control of permanents, mostly creatures, for the turn, gives them haste, and then returns them at end of turn.",
+      "has_restriction": true
+    },
+    "super trample": {
+      "label": "\"Super trample\" (You may have this creature assign combat damage as though it weren't blocked.)",
+      "colors": {
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "We don't do this ability very often, but when we do, we do it in green.",
+      "has_restriction": false
+    },
+    "switch power/toughness": {
+      "label": "Switch power/toughness",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [
+        "Switching power/toughness"
+      ],
+      "explanation": "Blue does this most often, but red does it on occasion. Sometimes this is on creatures that can switch their own power and toughness.",
+      "has_restriction": false
+    },
+    "tapping creatures": {
+      "label": "Tapping creatures",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White is the main color of tapping creatures. Blue usually taps creatures only when also given the ability to untap them. (See twiddle.) The one exception is when it \"freezes\" creatures. (See freezing.)",
+      "has_restriction": true
+    },
+    "taxing": {
+      "label": "Taxing",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "control",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Taxing cards are ones that force the opponent to pay some cost to do an activity they could normally do without an additional cost. Taxing cards are most often creatures and enchantments, but occasionally are done as one-shot spells. Most of blue's taxing has gone to white (it used to be primary in blue), but blue still gets taxing counterspells (such as Mana Leak).",
+      "has_restriction": true
+    },
+    "time walk (take an extra turn after this one.)": {
+      "label": "\"Time Walk\" (Take an extra turn after this one.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Blue is the main color to take extra turns. It usually does it at mythic rare. Red on rare occasion will do a \"[autocard mvid=\"383131\"]Time Walk\" that comes with some big penalty—often losing the game at the end of the extra turn.",
+      "has_restriction": true
+    },
+    "token generation": {
+      "label": "Token generation",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tokens",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "All colors can make creature tokens. White and green, as the two main creature colors, do it most often. White tends to make smaller creature tokens, usually 1/1s, while green tends to make larger ones, from 3/3 and up. White often will make multiple tokens at once since they're smaller. Black most often makes 2/2 Zombies. Red most often makes 1/1 Goblins. Sometimes red's token creatures are a little bigger and get exiled at end of turn.",
+      "has_restriction": true
+    },
+    "torment ability": {
+      "label": "\"Torment\" ability (Target player sacrifices a nonland permanent, pays 3 life, or discards a card.)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "We've been playing around with an ability giving the opponent some options of what to pay. This ability is being used in black.",
+      "has_restriction": false
+    },
+    "trample": {
+      "label": "Trample",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "evasion",
+      "families_secondary": [
+        "combat"
+      ],
+      "source_aliases": [],
+      "explanation": "Green is the main trample color, but red's share has been growing over time. Any color is allowed access to trample if the creature is large enough and of a higher rarity.",
+      "has_restriction": false
+    },
+    "transformation": {
+      "label": "\"Transformation\" (Target creature becomes a (color) (card type) with N power and N toughness.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Transformation can be temporary, through a one-shot spell that lasts for the turn, or more permanent, usually through an Aura. It overwrites the base power and toughness of the creature. This ability used to be in both blue and white, but we decided to focus it in blue. Sometimes blue can overwrite what the creature is currently doing and just make it the \"transformed\" creature. The one thing that we've taken from blue is destroying or exiling a creature and then giving the controller of that creature a creature token as a means of flavoring transformation. That is now a white ability flavored as giving compensation for destroying/exiling the creature. This means all of blue's transformation abilities are auras or limited effects on spells or activations.",
+      "has_restriction": true
+    },
+    "treasure creation": {
+      "label": "Treasure creation (artifact tokens with \"T, Sacrifice this artifact: Add one mana of any color.\")",
+      "colors": {
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [
+        "tokens"
+      ],
+      "source_aliases": [],
+      "explanation": "As the color of temporary mana, red is best at treasure creation. Black and green can both make treasure, but black tends to usually require some additional cost. Green historically has not had a lot of treasure making cards, but it's squarely in pie for green to do so. For flavor reasons, like Pirates, blue occasionally creates Treasure.",
+      "has_restriction": true
+    },
+    "tutor for a creature": {
+      "label": "\"Tutor\" for a creature.",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "Green is the main color to tutor for creatures. Sometimes it will even put them directly onto the battlefield. All colors have access to tutoring for specific creature types that are in their color. Red, for example, can tutor for Dragons.",
+      "has_restriction": false
+    },
+    "tutor for a land": {
+      "label": "\"Tutor\" for a land.",
+      "colors": {
+        "W": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "Green, being one of the colors most closely associated with land and mana, is the best at tutoring for land. It occasionally will put them directly onto the battlefield. The other four colors are allowed to occasionally tutor for their own basic land type. White is getting more tutoring for a Plains as a catch-up feature when it's behind on land.",
+      "has_restriction": true
+    },
+    "tutor for a planeswalker": {
+      "label": "\"Tutor\" for a planeswalker.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "White is the color that cares the most about planeswalkers, so it's the color that can tutor for them.",
+      "has_restriction": false
+    },
+    "tutor for an artifact": {
+      "label": "\"Tutor\" for an artifact.",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "Blue can go get any type of artifact. White tends to focus on certain subsets such as Equipment and Vehicles.",
+      "has_restriction": true
+    },
+    "tutor for an enchantment": {
+      "label": "\"Tutor\" for an enchantment.",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "White is the color that searches the library for enchantments.",
+      "has_restriction": false
+    },
+    "tutor for an instant or sorcery": {
+      "label": "\"Tutor\" for an instant or sorcery.",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "When tutoring, the two spell types are often put together and blue seeks them out. We occasionally let red search out red instants and sorceries (usually to get things like direct damage spells).",
+      "has_restriction": true
+    },
+    "tutor for any card": {
+      "label": "\"Tutor\" for any card.",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tutoring",
+      "families_secondary": [
+        "card_flow"
+      ],
+      "source_aliases": [],
+      "explanation": "Limited Edition (Alpha) had the card [autocard mvid=\"394025\"]Demonic Tutor, which locked in black as the color to tutor for any type of card. There's been much talk over the years that blue seems philosophically the better color to have this ability, but so far no changes have been made.",
+      "has_restriction": false
+    },
+    "twiddle": {
+      "label": "\"Twiddle\" (Tap or untap target creature/permanent.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Ever since the card [autocard mvid=\"45235\"]Twiddle appeared in Limited Edition (Alpha), blue has had the ability to tap or untap permanents. It's most often used just on creatures. Blue doesn't tend to just tap or just untap, but rather give you the choice between the two. The one exception is \"freezing\" where it taps creatures and keeps them from untapping for a turn. (See freezing.)",
+      "has_restriction": true
+    },
+    "untapping creatures": {
+      "label": "Untapping creatures",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Untapping creatures used to be white's domain, but we moved individual creature untapping off to green to give it more creature answers. White still can untap all your creatures or an individual creature on a spell that's defined as solely defensive. Blue's ability to untap is usually accompanied by its ability to also tap (see twiddle above).",
+      "has_restriction": true
+    },
+    "untapping lands": {
+      "label": "Untapping lands",
+      "colors": {
+        "U": {
+          "tier": "tertiary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "mana",
+      "families_secondary": [
+        "tempo"
+      ],
+      "source_aliases": [],
+      "explanation": "Green, as the color most in tune with lands and acquiring mana, is the color that most often untaps lands. Blue does this a little.",
+      "has_restriction": false
+    },
+    "untaps itself": {
+      "label": "Untaps itself",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "tempo",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is a creature that has an activated ability (or sometimes a triggered ability) that untaps itself. It's mostly used in blue, but occasionally in white when we want to simulate vigilance because actual vigilance is problematic due to timing.",
+      "has_restriction": true
+    },
+    "variable creature": {
+      "label": "Variable Creature (This creature enters the battlefield with X +1/+1 counters.)",
+      "colors": {
+        "B": {
+          "tier": "tertiary",
+          "basis": "ability-catalog-only"
+        },
+        "R": {
+          "tier": "tertiary",
+          "basis": "ability-catalog-only"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "counters",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This is a creature with an X in its cost determining how big it's going to be.",
+      "has_restriction": false
+    },
+    "vigilance": {
+      "label": "Vigilance",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "combat",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "White tends to get this on creatures where the power is equal to or less than the toughness, and seldom with a power greater than 3. Green tends to get this ability on larger creatures to differentiate it from white. We've recently decided to also make blue secondary in vigilance because we were looking for more creature abilities to use in blue. We're still feeling out what kind of blue creatures will get vigilance.",
+      "has_restriction": true
+    },
+    "ward (for life)": {
+      "label": "Ward (for life)",
+      "colors": {
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "While white, blue, and green get to have ward using mana, black and red get to use it with a life payment instead. Black can also ward for discard.",
+      "has_restriction": false
+    },
+    "ward (for mana)": {
+      "label": "Ward (for mana)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "protection",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "Ward is a new evergreen ability. It makes any opponent who wishes to target the item with ward pay an additional cost. The most common way we use this is ward for mana, and that's in white, blue and green. It's in white because it's both the most protective and taxing color; and it's in blue and green, flavored as antimagic, in places where hexproof used to be.",
+      "has_restriction": false
+    },
+    "warlord": {
+      "label": "\"Warlord\" (This creature's power and toughness is equal to the number of creatures you control.)",
+      "colors": {
+        "W": {
+          "tier": "primary",
+          "basis": "both-agree"
+        },
+        "G": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "stat_modification",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This ability started in red with Keldon Warlord in Limited Edition (Alpha). We later moved it into green, as green is the creature color. The ability then got moved into white because white is the army color that likes giving rewards for having lots of little creatures. We still do the ability a little in green, but it's mostly in white these days.",
+      "has_restriction": true
+    },
+    "wheeling": {
+      "label": "\"Wheeling\" (All players discard their hand and draw N cards.)",
+      "colors": {
+        "R": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "disruption",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "There's a big debate in R&D as to whether this is supposed to be a red ability. It obviously goes all the way back to Limited Edition (Alpha) with Wheel of Fortune, but it's a raw form of card advantage that's supposed to be something red is bad at. For now, it stays in red's part of the color pie.",
+      "has_restriction": false
+    },
+    "word changing": {
+      "label": "Word Changing (Change a word in rules text into another word from the same subset.)",
+      "colors": {
+        "U": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "characteristic_change",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This isn't an ability we do often any more, but it's blue when we do it. The most common use is changing a color word (white, blue, black, red, or green) for another color word or changing a basic land type (Plains, Island, Swamp, Mountain, or Forest) for another basic land type.",
+      "has_restriction": false
+    },
+    "you don't lose": {
+      "label": "\"You don't lose\" (Permanents that prevent you from losing the game while they're on the battlefield, usually with an alternate means to lose.)",
+      "colors": {
+        "W": {
+          "tier": "secondary",
+          "basis": "both-agree"
+        },
+        "B": {
+          "tier": "primary",
+          "basis": "both-agree"
+        }
+      },
+      "family": "win_condition",
+      "families_secondary": [],
+      "source_aliases": [],
+      "explanation": "This started with Lich in Limited Edition (Alpha) and has continued to be used on rare occasion. More recently, white has also started using this ability, often with the flavor of protecting the player.",
+      "has_restriction": true
+    }
+  },
+  "byColor": {
+    "W": {
+      "primary": [
+        "+0/+n (on auras)",
+        "+0/+n (on creatures)",
+        "+0/+n (on spells)",
+        "+1/+1 counter (creation and caring)",
+        "+n/+n (on auras)",
+        "+n/+n (on spells)",
+        "-n/+n (on auras)",
+        "-n/+n (on spells)",
+        "animating enchantments",
+        "banisher priest-like effect",
+        "bring back creatures/permanents that went to the graveyard this turn",
+        "can't be attacked (creatures can't attack you.)",
+        "can't lose the game and opponent can't win",
+        "creature pumping, your team, one-shot :: +n/+n to your team",
+        "creature pumping, your team, ongoing :: +n/+n to your team",
+        "damage prevention",
+        "damage redirection",
+        "deal n damage to target attacking or blocking creature",
+        "defender",
+        "destroy all creatures",
+        "destroy all creatures with power 3 or greater",
+        "destroy target attacking or blocking creature",
+        "destroy target creature that damaged you or a creature you control this turn",
+        "destroy target creature with power 3 or greater",
+        "destroy target creature. its controller gets compensation",
+        "destroy target tapped creature",
+        "double strike",
+        "enchantment destruction",
+        "enchantress ability",
+        "first strike",
+        "flicker",
+        "flying",
+        "friendly to artifacts",
+        "friendly to enchantments",
+        "friendly to legendary permanents",
+        "friendly to low mana value cards",
+        "friendly to planeswalkers",
+        "gaseous form",
+        "indestructible",
+        "life gain",
+        "lifelink",
+        "meddling",
+        "pacifism-like effect",
+        "preventing actions",
+        "protection",
+        "putting enchantments from hand onto the battlefield",
+        "putting planeswalkers from hand onto the battlefield",
+        "reanimate permanent",
+        "reanimation",
+        "return target artifact from graveyard to hand",
+        "return target enchantment from graveyard to hand",
+        "rules setting",
+        "tapping creatures",
+        "taxing",
+        "token generation",
+        "tutor for a planeswalker",
+        "tutor for an enchantment",
+        "vigilance",
+        "ward (for mana)",
+        "warlord"
+      ],
+      "secondary": [
+        "+n/+0 (on auras)",
+        "+n/+0 (on creatures)",
+        "+n/+0 (on spells)",
+        "artifact destruction",
+        "creature pumping, your team, one-shot :: +n/+0 to your team",
+        "deal n damage to creature, planeswalker, and/or player",
+        "destroy target creature",
+        "direct damage, multiple targets",
+        "exiling cards from graveyard",
+        "flash",
+        "friendly to creatures",
+        "friendly to lands",
+        "increasing counters and/or tokens",
+        "playing cards off the top of your library, paying their mana cost",
+        "putting artifacts from hand onto the battlefield",
+        "return target creature from graveyard to hand",
+        "return to hand",
+        "rewards for death",
+        "scry",
+        "tutor for a creature",
+        "tutor for an artifact",
+        "untapping creatures",
+        "untaps itself",
+        "you don't lose"
+      ],
+      "tertiary": [
+        "-n/+n (on creatures)",
+        "-n/-n (on spells)",
+        "animating lands",
+        "basic land counting",
+        "card draw",
+        "cast spells from your graveyard",
+        "color changing",
+        "counterspell",
+        "discard as a cost",
+        "drain life",
+        "extra attack",
+        "fog",
+        "hexproof",
+        "lhurgoyf",
+        "life loss as a cost",
+        "prowess",
+        "putting creatures from hand onto the battlefield",
+        "reach",
+        "trample",
+        "tutor for a land"
+      ]
+    },
+    "U": {
+      "primary": [
+        "+n/-n (on creatures)",
+        "-n/+n (on creatures)",
+        "-n/-0 (on auras)",
+        "-n/-0 (on creatures)",
+        "-n/-0 (on spells)",
+        "-n/-0 to their team",
+        "animating artifacts",
+        "can't be blocked",
+        "card draw",
+        "card filtering",
+        "cast spells from opponent's graveyard/exile",
+        "changing lands",
+        "color changing",
+        "copying permanents, permanently",
+        "counter target activated/triggered ability",
+        "counterspell",
+        "curiosity",
+        "defender",
+        "flash",
+        "flicker",
+        "flying",
+        "freeze creature",
+        "friendly to artifacts",
+        "friendly to instants and sorceries",
+        "hexproof",
+        "illusion ability",
+        "increasing counters and/or tokens",
+        "instant and/or sorcery triggers",
+        "lockdown (enchanted creature doesn't untap.)",
+        "looking at opponent's hand",
+        "looting (draw a card and discard a card.)",
+        "manipulate time (end the turn.)",
+        "maro ability",
+        "milling",
+        "moving enchantments/counters",
+        "playing cards off the top of opponent's library",
+        "prowess",
+        "putting artifacts from hand onto the battlefield",
+        "restocking",
+        "return target instant from graveyard to hand",
+        "return target sorcery from graveyard to hand",
+        "return to hand",
+        "return to library",
+        "scry",
+        "spell copying",
+        "spell redirection",
+        "stealing permanents, permanently",
+        "switch power/toughness",
+        "time walk (take an extra turn after this one.)",
+        "transformation",
+        "tutor for an artifact",
+        "tutor for an instant or sorcery",
+        "twiddle",
+        "untapping creatures",
+        "untaps itself",
+        "ward (for mana)",
+        "word changing"
+      ],
+      "secondary": [
+        "+0/+n (on auras)",
+        "+n/+n (on auras)",
+        "animating enchantments",
+        "can't be countered",
+        "cast spells from your graveyard",
+        "cast spells out of graveyard",
+        "copying permanents, temporarily",
+        "forced attack",
+        "friendly to lands",
+        "gaseous form",
+        "mana production, permanent",
+        "playing cards off the top of your library, paying their mana cost",
+        "polymorph",
+        "putting creatures from hand onto the battlefield",
+        "rules setting",
+        "tapping creatures",
+        "taxing",
+        "token generation",
+        "tutor for a creature",
+        "vigilance"
+      ],
+      "tertiary": [
+        "+1/+1 counter (creation and caring)",
+        "+n/+0 (on auras)",
+        "-n/-n (on spells)",
+        "animating lands",
+        "basic land counting",
+        "creature pumping, your team, ongoing :: +n/+n to your team",
+        "deal damage when blocked",
+        "discard as a cost",
+        "indestructible",
+        "lhurgoyf",
+        "life loss as a cost",
+        "protection",
+        "putting enchantments from hand onto the battlefield",
+        "trample",
+        "treasure creation",
+        "tutor for a land",
+        "untapping lands"
+      ]
+    },
+    "B": {
+      "primary": [
+        "+n/+0 (on spells)",
+        "+n/+n (on creatures)",
+        "+n/-n (on auras)",
+        "+n/-n (on spells)",
+        "-n/-n (on auras)",
+        "-n/-n (on creatures)",
+        "-n/-n (on spells)",
+        "can't block",
+        "can't win the game and opponent can't lose",
+        "cast spells from opponent's graveyard/exile",
+        "cast spells from your graveyard",
+        "cast spells out of graveyard",
+        "creature pumping, their team, one-shot :: -n/-n to their team",
+        "creature pumping, their team, ongoing :: -n/-n to their team",
+        "creature sacrifice, forced, repeatable",
+        "deathtouch",
+        "destroy all creatures controlled by one player",
+        "destroy target creature",
+        "devil's deal permanents",
+        "discard as a cost",
+        "discard as effect",
+        "drain life",
+        "exiling cards from graveyard",
+        "forced sacrifice :: sacrifice a creature",
+        "forced sacrifice of a creature",
+        "gain control of target player's turn",
+        "life loss as a cost",
+        "life loss as an effect",
+        "lifelink",
+        "lobotomy",
+        "menace",
+        "planeswalker destruction",
+        "playing cards off the top of opponent's library",
+        "reanimation",
+        "removing counters",
+        "return target creature from graveyard to hand",
+        "rewards for death",
+        "sacrifice a permanent :: sacrifice a creature",
+        "sacrifice a permanent :: sacrifice an artifact",
+        "sengir ability",
+        "specter ability",
+        "torment ability",
+        "tutor for any card",
+        "ward (for life)",
+        "you don't lose"
+      ],
+      "secondary": [
+        "+1/+1 counter (creation and caring)",
+        "+n/+0 (on auras)",
+        "+n/+n (on auras)",
+        "+n/+n (on spells)",
+        "+n/-n (on creatures)",
+        "-n/-0 (on auras)",
+        "-n/-0 (on spells)",
+        "basic land counting",
+        "card draw",
+        "deal damage when blocked",
+        "deal n damage to a creature that's been damaged this turn",
+        "deal n damage to creature, planeswalker, and/or player",
+        "defender",
+        "destroy all creatures",
+        "destroy target tapped creature",
+        "enchantment destruction",
+        "flash",
+        "flying",
+        "friendly to lands",
+        "haste",
+        "indestructible",
+        "lhurgoyf",
+        "life gain",
+        "looking at opponent's hand",
+        "mana production, temporary",
+        "milling",
+        "playing cards off the top of your library, paying their mana cost",
+        "punisher effects",
+        "rules setting",
+        "sacrifice a creature and deal damage to creature/planeswalker/player equal to the sacrificed creature's power/toughness",
+        "sacrifice a permanent",
+        "scry",
+        "token generation",
+        "treasure creation",
+        "tutor for a creature"
+      ],
+      "tertiary": [
+        "animating lands",
+        "color changing",
+        "creature pumping, your team, ongoing :: +n/+0 to your team",
+        "creature pumping, your team, ongoing :: +n/+n to your team",
+        "first strike",
+        "friendly to enchantments",
+        "land destruction",
+        "mana production, permanent",
+        "protection",
+        "putting creatures from hand onto the battlefield",
+        "stealing permanents, permanently",
+        "trample",
+        "tutor for a land",
+        "variable creature"
+      ]
+    },
+    "R": {
+      "primary": [
+        "+n/+0 (on auras)",
+        "+n/+0 (on creatures)",
+        "+n/+0 (on spells)",
+        "artifact destruction",
+        "basic land counting",
+        "can't be countered",
+        "can't block",
+        "copying permanents, temporarily",
+        "creature pumping, your team, one-shot :: +n/+0 to your team",
+        "creature pumping, your team, ongoing :: +n/+0 to your team",
+        "deal damage when blocked",
+        "deal n damage to a creature that's been damaged this turn",
+        "deal n damage to a creature/planeswalker/player where n is the number of cards in your hand/your opponent's hand",
+        "deal n damage to creature, planeswalker, and/or player",
+        "direct damage, multiple targets",
+        "double strike",
+        "extra attack",
+        "first strike",
+        "forced attack",
+        "forced sacrifice :: sacrifice an artifact",
+        "haste",
+        "impulsive draw",
+        "instant and/or sorcery triggers",
+        "land destruction",
+        "mana production, temporary",
+        "menace",
+        "must attack",
+        "panic",
+        "playing cards off the top of library, for free",
+        "polymorph",
+        "punisher effects",
+        "random destruction effects",
+        "rummaging (discard a card and draw a card.)",
+        "sacrifice a creature and deal damage to creature/planeswalker/player equal to the sacrificed creature's power/toughness",
+        "sacrifice a land",
+        "sacrifice a permanent",
+        "sacrifice a permanent :: sacrifice a creature",
+        "sacrifice a permanent :: sacrifice an artifact",
+        "sacrifice an enchantment",
+        "spell copying",
+        "spell redirection",
+        "stealing permanents, temporarily",
+        "treasure creation",
+        "ward (for life)",
+        "wheeling"
+      ],
+      "secondary": [
+        "+n/+n (on auras)",
+        "+n/+n (on spells)",
+        "+n/-n (on auras)",
+        "+n/-n (on creatures)",
+        "animating lands",
+        "bite",
+        "cast spells from your graveyard",
+        "cast spells out of graveyard",
+        "defender",
+        "discard as a cost",
+        "fight",
+        "flying",
+        "forced block (target creature must block this turn.)",
+        "friendly to artifacts",
+        "friendly to instants and sorceries",
+        "friendly to lands",
+        "lure, limited",
+        "playing cards off the top of opponent's library",
+        "playing cards off the top of your library, paying their mana cost",
+        "prowess",
+        "putting creatures from hand onto the battlefield",
+        "reach",
+        "reanimation",
+        "return target instant from graveyard to hand",
+        "return target sorcery from graveyard to hand",
+        "rules setting",
+        "scry",
+        "switch power/toughness",
+        "token generation",
+        "trample",
+        "tutor for a creature",
+        "tutor for an instant or sorcery"
+      ],
+      "tertiary": [
+        "+1/+1 counter (creation and caring)",
+        "-n/-n (on spells)",
+        "card draw",
+        "creature pumping, your team, ongoing :: +n/+n to your team",
+        "deal n damage to a creature with flying",
+        "flash",
+        "indestructible",
+        "lhurgoyf",
+        "life loss as a cost",
+        "manipulate time (end the turn.)",
+        "protection",
+        "rewards for death",
+        "time walk (take an extra turn after this one.)",
+        "tutor for a land",
+        "variable creature"
+      ]
+    },
+    "G": {
+      "primary": [
+        "+1/+1 counter (creation and caring)",
+        "+n/+n (on auras)",
+        "+n/+n (on creatures, single use)",
+        "+n/+n (on spells)",
+        "animating lands",
+        "artifact destruction",
+        "bite",
+        "can't be countered",
+        "card filtering",
+        "daunt",
+        "deal n damage to a creature with flying",
+        "destroy target creature with flying",
+        "enchantment destruction",
+        "enchantress ability",
+        "fight",
+        "fog",
+        "forced block (target creature must block this turn.)",
+        "friendly to creatures",
+        "friendly to enchantments",
+        "friendly to lands",
+        "increasing counters and/or tokens",
+        "lhurgoyf",
+        "life gain",
+        "lure",
+        "lure, limited",
+        "mana production, permanent",
+        "play extra lands/put a land from hand onto the battlefield",
+        "putting creatures from hand onto the battlefield",
+        "putting lands from hand onto the battlefield",
+        "reach",
+        "restocking",
+        "return target card from graveyard to hand",
+        "return target land from graveyard to hand",
+        "sacrifice an enchantment",
+        "stalking",
+        "super trample",
+        "token generation",
+        "trample",
+        "tutor for a creature",
+        "tutor for a land",
+        "untapping creatures",
+        "untapping lands",
+        "variable creature",
+        "ward (for mana)"
+      ],
+      "secondary": [
+        "+0/+n (on auras)",
+        "+0/+n (on creatures)",
+        "+0/+n (on spells)",
+        "+n/+0 (on creatures)",
+        "+n/+n (on creatures)",
+        "animating artifacts",
+        "basic land counting",
+        "card draw",
+        "color changing",
+        "creature pumping, your team, one-shot :: +n/+n to your team",
+        "creature pumping, your team, ongoing :: +n/+n to your team",
+        "curiosity",
+        "deathtouch",
+        "defender",
+        "exiling cards from graveyard",
+        "flash",
+        "haste",
+        "hexproof",
+        "indestructible",
+        "maro ability",
+        "playing cards off the top of your library, paying their mana cost",
+        "putting enchantments from hand onto the battlefield",
+        "reanimation",
+        "rules setting",
+        "scry",
+        "treasure creation",
+        "vigilance",
+        "warlord"
+      ],
+      "tertiary": [
+        "+n/+0 (on auras)",
+        "-n/-n (on spells)",
+        "cast spells from your graveyard",
+        "counter target activated/triggered ability",
+        "discard as a cost",
+        "flying",
+        "land destruction",
+        "life loss as a cost",
+        "planeswalker destruction",
+        "protection",
+        "return to hand"
+      ]
+    }
+  },
+  "byFamily": {
+    "card_flow": [
+      "card draw",
+      "card filtering",
+      "curiosity",
+      "enchantress ability",
+      "impulsive draw",
+      "looting (draw a card and discard a card.)",
+      "maro ability",
+      "playing cards off the top of library, for free",
+      "playing cards off the top of opponent's library",
+      "playing cards off the top of your library, paying their mana cost",
+      "scry"
+    ],
+    "card_type_affinity": [
+      "friendly to artifacts",
+      "friendly to creatures",
+      "friendly to enchantments",
+      "friendly to instants and sorceries",
+      "friendly to lands",
+      "friendly to legendary permanents",
+      "friendly to low mana value cards",
+      "friendly to planeswalkers",
+      "instant and/or sorcery triggers",
+      "prowess"
+    ],
+    "characteristic_change": [
+      "animating artifacts",
+      "animating enchantments",
+      "animating lands",
+      "changing lands",
+      "color changing",
+      "transformation",
+      "word changing"
+    ],
+    "cheat_into_play": [
+      "putting artifacts from hand onto the battlefield",
+      "putting creatures from hand onto the battlefield",
+      "putting enchantments from hand onto the battlefield",
+      "putting planeswalkers from hand onto the battlefield"
+    ],
+    "combat": [
+      "bite",
+      "deal damage when blocked",
+      "deal n damage to a creature that's been damaged this turn",
+      "deal n damage to a creature/planeswalker/player where n is the number of cards in your hand/your opponent's hand",
+      "deal n damage to creature, planeswalker, and/or player",
+      "deal n damage to target attacking or blocking creature",
+      "deathtouch",
+      "defender",
+      "direct damage, multiple targets",
+      "double strike",
+      "fight",
+      "first strike",
+      "haste",
+      "spell redirection",
+      "vigilance"
+    ],
+    "control": [
+      "counter target activated/triggered ability",
+      "counterspell",
+      "lobotomy",
+      "taxing"
+    ],
+    "copying": [
+      "copying permanents, permanently",
+      "copying permanents, temporarily",
+      "spell copying"
+    ],
+    "counters": [
+      "+1/+1 counter (creation and caring)",
+      "increasing counters and/or tokens",
+      "moving enchantments/counters",
+      "removing counters",
+      "variable creature"
+    ],
+    "disruption": [
+      "discard as effect",
+      "looking at opponent's hand",
+      "milling",
+      "punisher effects",
+      "rummaging (discard a card and draw a card.)",
+      "specter ability",
+      "torment ability",
+      "wheeling"
+    ],
+    "evasion": [
+      "can't be blocked",
+      "can't block",
+      "deal n damage to a creature with flying",
+      "flying",
+      "forced attack",
+      "forced block (target creature must block this turn.)",
+      "lure",
+      "lure, limited",
+      "menace",
+      "must attack",
+      "panic",
+      "reach",
+      "stalking",
+      "trample"
+    ],
+    "graveyard": [
+      "bring back creatures/permanents that went to the graveyard this turn",
+      "cast spells from opponent's graveyard/exile",
+      "cast spells from your graveyard",
+      "cast spells out of graveyard",
+      "exiling cards from graveyard",
+      "lhurgoyf",
+      "reanimate permanent",
+      "reanimation",
+      "restocking",
+      "return target artifact from graveyard to hand",
+      "return target card from graveyard to hand",
+      "return target creature from graveyard to hand",
+      "return target enchantment from graveyard to hand",
+      "return target instant from graveyard to hand",
+      "return target land from graveyard to hand",
+      "return target sorcery from graveyard to hand"
+    ],
+    "life": [
+      "drain life",
+      "life gain",
+      "life loss as a cost",
+      "life loss as an effect",
+      "lifelink",
+      "sengir ability"
+    ],
+    "mana": [
+      "basic land counting",
+      "mana production, permanent",
+      "mana production, temporary",
+      "play extra lands/put a land from hand onto the battlefield",
+      "putting lands from hand onto the battlefield",
+      "treasure creation",
+      "untapping lands"
+    ],
+    "protection": [
+      "can't be attacked (creatures can't attack you.)",
+      "can't be countered",
+      "damage prevention",
+      "damage redirection",
+      "fog",
+      "hexproof",
+      "illusion ability",
+      "indestructible",
+      "protection",
+      "rewards for death",
+      "ward (for life)",
+      "ward (for mana)"
+    ],
+    "removal": [
+      "artifact destruction",
+      "banisher priest-like effect",
+      "creature sacrifice, forced, repeatable",
+      "destroy all creatures",
+      "destroy all creatures controlled by one player",
+      "destroy all creatures with power 3 or greater",
+      "destroy target attacking or blocking creature",
+      "destroy target creature",
+      "destroy target creature that damaged you or a creature you control this turn",
+      "destroy target creature with flying",
+      "destroy target creature with power 3 or greater",
+      "destroy target creature. its controller gets compensation",
+      "destroy target tapped creature",
+      "enchantment destruction",
+      "forced sacrifice :: sacrifice a creature",
+      "forced sacrifice :: sacrifice an artifact",
+      "forced sacrifice of a creature",
+      "land destruction",
+      "pacifism-like effect",
+      "planeswalker destruction",
+      "polymorph",
+      "random destruction effects"
+    ],
+    "rules_alteration": [
+      "meddling",
+      "preventing actions",
+      "rules setting"
+    ],
+    "sacrifice": [
+      "devil's deal permanents",
+      "discard as a cost",
+      "sacrifice a creature and deal damage to creature/planeswalker/player equal to the sacrificed creature's power/toughness",
+      "sacrifice a land",
+      "sacrifice a permanent",
+      "sacrifice a permanent :: sacrifice a creature",
+      "sacrifice a permanent :: sacrifice an artifact",
+      "sacrifice an enchantment"
+    ],
+    "stat_modification": [
+      "+0/+n (on auras)",
+      "+0/+n (on creatures)",
+      "+0/+n (on spells)",
+      "+n/+0 (on auras)",
+      "+n/+0 (on creatures)",
+      "+n/+0 (on spells)",
+      "+n/+n (on auras)",
+      "+n/+n (on creatures)",
+      "+n/+n (on creatures, single use)",
+      "+n/+n (on spells)",
+      "+n/-n (on auras)",
+      "+n/-n (on creatures)",
+      "+n/-n (on spells)",
+      "-n/+n (on auras)",
+      "-n/+n (on creatures)",
+      "-n/+n (on spells)",
+      "-n/-0 (on auras)",
+      "-n/-0 (on creatures)",
+      "-n/-0 (on spells)",
+      "-n/-0 to their team",
+      "-n/-n (on auras)",
+      "-n/-n (on creatures)",
+      "-n/-n (on spells)",
+      "creature pumping, their team, one-shot :: -n/-n to their team",
+      "creature pumping, their team, ongoing :: -n/-n to their team",
+      "creature pumping, your team, one-shot :: +n/+0 to your team",
+      "creature pumping, your team, one-shot :: +n/+n to your team",
+      "creature pumping, your team, ongoing :: +n/+0 to your team",
+      "creature pumping, your team, ongoing :: +n/+n to your team",
+      "daunt",
+      "gaseous form",
+      "super trample",
+      "switch power/toughness",
+      "warlord"
+    ],
+    "tempo": [
+      "extra attack",
+      "flash",
+      "flicker",
+      "freeze creature",
+      "lockdown (enchanted creature doesn't untap.)",
+      "manipulate time (end the turn.)",
+      "return to hand",
+      "return to library",
+      "tapping creatures",
+      "time walk (take an extra turn after this one.)",
+      "twiddle",
+      "untapping creatures",
+      "untaps itself"
+    ],
+    "theft": [
+      "gain control of target player's turn",
+      "stealing permanents, permanently",
+      "stealing permanents, temporarily"
+    ],
+    "tokens": [
+      "token generation"
+    ],
+    "tutoring": [
+      "tutor for a creature",
+      "tutor for a land",
+      "tutor for a planeswalker",
+      "tutor for an artifact",
+      "tutor for an enchantment",
+      "tutor for an instant or sorcery",
+      "tutor for any card"
+    ],
+    "win_condition": [
+      "can't lose the game and opponent can't win",
+      "can't win the game and opponent can't lose",
+      "you don't lose"
+    ]
+  }
+}

@@ -1,0 +1,874 @@
+{
+  "version": "1.0.0",
+  "atlasVersion": "2.1",
+  "vocabularyVersion": "commander-shortlist-2026-10-18",
+  "auditSha256": "bf8370bc69ba8ea1ea01cbf7a2976ab928f16755bdda33fd53d2cc4e34b76dad",
+  "rows": [
+    {
+      "id": "keyword-index-shortlist-double",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Double",
+      "query": "kw:\"Double\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 131,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-regenerate",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Regenerate",
+      "query": "kw:\"Regenerate\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 271,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-triple",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Triple",
+      "query": "kw:\"Triple\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 5,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-partner-with",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Partner with",
+      "query": "kw:\"Partner with\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 52,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "These cards name specific partners; search results are not all mutually compatible commanders. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-choose-a-background",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Choose a background",
+      "query": "kw:\"Choose a background\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 32,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Pairing requires a legendary Background; this search does not verify a commander pair. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-megamorph",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Megamorph",
+      "query": "kw:\"Megamorph\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 31,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-forestwalk",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Forestwalk",
+      "query": "kw:\"Forestwalk\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 28,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-hexproof-from",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Hexproof from",
+      "query": "kw:\"Hexproof from\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 13,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Each card specifies which qualities it is protected from. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-islandwalk",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Islandwalk",
+      "query": "kw:\"Islandwalk\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 34,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-landcycling",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Landcycling",
+      "query": "kw:\"Landcycling\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 91,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Includes land-type variants such as Plainscycling. Read each card for the type it finds. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-plainscycling",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Plainscycling",
+      "query": "kw:\"Plainscycling\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 13,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-typecycling",
+      "section": "Keyword_Index",
+      "group": "keyword ability variant",
+      "label": "Typecycling",
+      "query": "kw:\"Typecycling\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 94,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Includes cycling variants that search for a type, rather than drawing a card. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-treasure",
+      "section": "Keyword_Index",
+      "group": "token and subtype concept",
+      "label": "Treasure",
+      "query": "kw:\"Treasure\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 350,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-food",
+      "section": "Keyword_Index",
+      "group": "token and subtype concept",
+      "label": "Food",
+      "query": "kw:\"Food\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 150,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-role-token",
+      "section": "Keyword_Index",
+      "group": "token and subtype concept",
+      "label": "Role token",
+      "query": "kw:\"Role token\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 38,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-shortlist-prepared",
+      "section": "Keyword_Index",
+      "group": "designation",
+      "label": "Prepared",
+      "query": "kw:\"Prepared\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 72,
+      "validated": "2026-10-18",
+      "technique": "Scryfall native keyword index; exact-label positive and negative Oracle-ID witnesses",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Includes cards reported as involving the prepared designation; read their preparation conditions. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "The retained live_count is for this Commander baseline combined with the keyword expression. It is not an unrestricted count.",
+      "rules": null,
+      "flags": "commander-shortlist-supplement",
+      "expect_zero": false
+    }
+  ],
+  "records": [
+    {
+      "key": "double",
+      "label": "Double",
+      "atlasRowId": "keyword-index-shortlist-double",
+      "display": true,
+      "querySha256": "09eb119a6060121be4e2d38ca5ec8c841804f2b150bf217c9e3ca5f975839181",
+      "expression": "kw:\"Double\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword action"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:01.842Z",
+        "query": "kw:\"Double\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Deepglow Skate",
+          "Tifa Lockhart"
+        ],
+        "negative": [
+          "Island",
+          "Boros Charm"
+        ]
+      }
+    },
+    {
+      "key": "regenerate",
+      "label": "Regenerate",
+      "atlasRowId": "keyword-index-shortlist-regenerate",
+      "display": true,
+      "querySha256": "36ea96ee7d68a5db18d693053269c840f1d8d7baedf564a7c2fd564eb51e7e9a",
+      "expression": "kw:\"Regenerate\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword action"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:02.582Z",
+        "query": "kw:\"Regenerate\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Skithiryx, the Blight Dragon",
+          "Exterminator Magmarch"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "triple",
+      "label": "Triple",
+      "atlasRowId": "keyword-index-shortlist-triple",
+      "display": true,
+      "querySha256": "d1c3f4b9022522dec49e5d2011db36973633d3045a8cd623820c3b11c04d02ac",
+      "expression": "kw:\"Triple\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword action"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:03.312Z",
+        "query": "kw:\"Triple\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Fiery Emancipation"
+        ],
+        "negative": [
+          "Island",
+          "Deepglow Skate"
+        ]
+      }
+    },
+    {
+      "key": "partner with",
+      "label": "Partner with",
+      "atlasRowId": "keyword-index-shortlist-partner-with",
+      "display": true,
+      "querySha256": "03d7c9516d290a9ce603a640fea1c52bd6c9028cda5587b6fbc43814b9c30c60",
+      "expression": "kw:\"Partner with\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "These cards name specific partners; search results are not all mutually compatible commanders. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:04.065Z",
+        "query": "kw:\"Partner with\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Okaun, Eye of Chaos",
+          "Zndrsplt, Eye of Wisdom"
+        ],
+        "negative": [
+          "Island",
+          "Lae'zel, Vlaakith's Champion"
+        ]
+      }
+    },
+    {
+      "key": "choose a background",
+      "label": "Choose a background",
+      "atlasRowId": "keyword-index-shortlist-choose-a-background",
+      "display": true,
+      "querySha256": "294a280cdab3843a1aa795f6665beeecd71f18564f1d2c13e31a35d18c4c71ac",
+      "expression": "kw:\"Choose a background\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Pairing requires a legendary Background; this search does not verify a commander pair. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:05.028Z",
+        "query": "kw:\"Choose a background\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Lae'zel, Vlaakith's Champion",
+          "Jaheira, Friend of the Forest"
+        ],
+        "negative": [
+          "Island",
+          "Okaun, Eye of Chaos"
+        ]
+      }
+    },
+    {
+      "key": "megamorph",
+      "label": "Megamorph",
+      "atlasRowId": "keyword-index-shortlist-megamorph",
+      "display": true,
+      "querySha256": "421374e25dd333ec89658aef0a5155866524ba5ffccf0b243e431080a8cc7c06",
+      "expression": "kw:\"Megamorph\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:05.852Z",
+        "query": "kw:\"Megamorph\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Stratus Dancer",
+          "Ainok Survivalist"
+        ],
+        "negative": [
+          "Island",
+          "Willbender"
+        ]
+      }
+    },
+    {
+      "key": "forestwalk",
+      "label": "Forestwalk",
+      "atlasRowId": "keyword-index-shortlist-forestwalk",
+      "display": true,
+      "querySha256": "c3728ce2f55be46f1c8c23414214eaa0cd7ca866fa6dba95d677048b14637412",
+      "expression": "kw:\"Forestwalk\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:06.562Z",
+        "query": "kw:\"Forestwalk\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Mirri, Cat Warrior"
+        ],
+        "negative": [
+          "Island",
+          "Cold-Eyed Selkie"
+        ]
+      }
+    },
+    {
+      "key": "hexproof from",
+      "label": "Hexproof from",
+      "atlasRowId": "keyword-index-shortlist-hexproof-from",
+      "display": true,
+      "querySha256": "a0b94f9d4defdbe2b9831dd2c6446c7598658f59f8ba6e809988155586a318b7",
+      "expression": "kw:\"Hexproof from\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Each card specifies which qualities it is protected from. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:07.695Z",
+        "query": "kw:\"Hexproof from\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "General Ferrous Rokiric"
+        ],
+        "negative": [
+          "Island",
+          "Swiftfoot Boots"
+        ]
+      }
+    },
+    {
+      "key": "islandwalk",
+      "label": "Islandwalk",
+      "atlasRowId": "keyword-index-shortlist-islandwalk",
+      "display": true,
+      "querySha256": "469d5437e4e48cd33595ec11b0e9e4c972777be8e57588807817ed42b2af0c7e",
+      "expression": "kw:\"Islandwalk\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:08.548Z",
+        "query": "kw:\"Islandwalk\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Cold-Eyed Selkie"
+        ],
+        "negative": [
+          "Island",
+          "Mirri, Cat Warrior"
+        ]
+      }
+    },
+    {
+      "key": "landcycling",
+      "label": "Landcycling",
+      "atlasRowId": "keyword-index-shortlist-landcycling",
+      "display": true,
+      "querySha256": "8231853b7be8c9732d8ed77e2077019e1f8455c878be0510c47d0884d4f4ed88",
+      "expression": "kw:\"Landcycling\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Includes land-type variants such as Plainscycling. Read each card for the type it finds. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:09.394Z",
+        "query": "kw:\"Landcycling\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Angel of the Ruins"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "plainscycling",
+      "label": "Plainscycling",
+      "atlasRowId": "keyword-index-shortlist-plainscycling",
+      "display": true,
+      "querySha256": "c9fa40ff79ab987ea074bbb61dae7e07917e605a69fe08fa4d2cec65208f8e36",
+      "expression": "kw:\"Plainscycling\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:10.140Z",
+        "query": "kw:\"Plainscycling\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Angel of the Ruins"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "typecycling",
+      "label": "Typecycling",
+      "atlasRowId": "keyword-index-shortlist-typecycling",
+      "display": true,
+      "querySha256": "90550e8b9402e30027615d99450ab28d9186ff8f6894e799dbf2c0b2ed10b974",
+      "expression": "kw:\"Typecycling\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Includes cycling variants that search for a type, rather than drawing a card. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "keyword ability variant"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:10.993Z",
+        "query": "kw:\"Typecycling\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Angel of the Ruins"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "treasure",
+      "label": "Treasure",
+      "atlasRowId": "keyword-index-shortlist-treasure",
+      "display": true,
+      "querySha256": "26da398c49d94411161cdcf0a54185f2a9926a10ff506938025990d4fc29b251",
+      "expression": "kw:\"Treasure\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "token and subtype concept"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:11.731Z",
+        "query": "kw:\"Treasure\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Monument to Endurance",
+          "An Offer You Can't Refuse"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "food",
+      "label": "Food",
+      "atlasRowId": "keyword-index-shortlist-food",
+      "display": true,
+      "querySha256": "9424221c0fe832c9309bcc9cb88b5956c3b588e759dd8fdf40a908da4100ee04",
+      "expression": "kw:\"Food\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "token and subtype concept"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:12.632Z",
+        "query": "kw:\"Food\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Oko, Thief of Crowns",
+          "Tireless Provisioner"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "role token",
+      "label": "Role token",
+      "atlasRowId": "keyword-index-shortlist-role-token",
+      "display": true,
+      "querySha256": "0fafb11fd6550121b9ee229fc24d440d5453f9fcacbcd574cec22976dd975230",
+      "expression": "kw:\"Role token\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "token and subtype concept"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:13.500Z",
+        "query": "kw:\"Role token\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Royal Treatment"
+        ],
+        "negative": [
+          "Island"
+        ]
+      }
+    },
+    {
+      "key": "prepared",
+      "label": "Prepared",
+      "atlasRowId": "keyword-index-shortlist-prepared",
+      "display": true,
+      "querySha256": "4b8905d229d344c1ba9c7bf37d70adf7e1d45aeab4c27087696fd4f8eaef44e1",
+      "expression": "kw:\"Prepared\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Includes cards reported as involving the prepared designation; read their preparation conditions. Finds Scryfall-reported involvement using its keyword index. A match does not establish possession, a particular face, or a usable action. Grants and references without the reported label may be absent.",
+      "classification": {
+        "source": [
+          "designation"
+        ],
+        "provider": [
+          "observed-in-pack"
+        ]
+      },
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-18T22:38:14.403Z",
+        "query": "kw:\"Prepared\"",
+        "evidence": "reports/mechanic-discovery/commander-shortlist/membership.json",
+        "positive": [
+          "Sanar, Unfinished Genius // Wild Idea"
+        ],
+        "negative": [
+          "Island",
+          "Ponder"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-18",
+  "scope": "External Comprehensive Rules reading links only; no parser, mechanics mapping, source, or inline rules changes.",
+  "sourceFilesChanged": [
+    "public/app.mjs",
+    "tests/mechanics-ui.test.mjs"
+  ],
+  "link": {
+    "label": "Official Magic rules ↗",
+    "href": "https://magic.wizards.com/en/rules",
+    "target": "_blank",
+    "rel": "noreferrer"
+  },
+  "tests": {
+    "command": "node --test --test-reporter=spec",
+    "passed": 294,
+    "failed": 0,
+    "note": "Initial sandbox run blocked localhost HTTP requests with EACCES; all tests passed when local connections were allowed."
+  },
+  "browser": {
+    "type": "in-app browser",
+    "fixture": "existing synthetic demo",
+    "checks": [
+      "Flying inline rules render correctly",
+      "Exact external label, URL, target, and rel verified in DOM",
+      "Reach 702.17 cross-reference opens persistent inline dialog",
+      "Clicked external link opens official rules page in new tab",
+      "Official destination presents PDF, TXT, and DOCX links"
+    ],
+    "screenshot": "rules-link.png"
+  },
+  "unchangedFiles": [
+    {
+      "path": "C:\\dev\\mtg-deck-explorer\\public\\rules-data.json",
+      "unchanged": true,
+      "sha256": "A03161572A07D1A20AD1653717349FE998343B2656CA470E4781558329EBB4B2"
+    },
+    {
+      "path": "C:\\dev\\mtg-deck-explorer\\evidence\\MagicCompRules-20260925.txt",
+      "unchanged": true,
+      "sha256": "8D860E451F20F38865B725B42D82FEB714C725373DD8F3B32B8652B3EEB070CA"
+    },
+    {
+      "path": "C:\\dev\\mtg-deck-explorer\\scripts\\extract-rules.mjs",
+      "unchanged": true,
+      "sha256": "6596B306B3448BE04B28E9FBE556184BC3DECB60DDE2172019F2B82FD95F9BF7"
+    },
+    {
+      "path": "C:\\dev\\mtg-deck-explorer\\public\\mechanic-rules.mjs",
+      "unchanged": true,
+      "sha256": "36C9B3BB942D67B1172B56CE34B29906B6CD04E6A59FACAD3B251266811A43F3"
+    },
+    {
+      "path": "C:\\dev\\mtg-deck-explorer\\public\\mechanic-explanations.mjs",
+      "unchanged": true,
+      "sha256": "3E8787A40773C5137F796504EF3908256C79AF6AD85C81D7EAD4B2898A2F0B7A"
+    },
+    {
+      "path": "C:\\dev\\mtg-deck-explorer\\public\\rules-ui.mjs",
+      "unchanged": true,
+      "sha256": "5C5A782B909E1E9B7B8C31981CA4D20384958C2EBEA581FC92227A04D12F46CA"
+    }
+  ]
+}

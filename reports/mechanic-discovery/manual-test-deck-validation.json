@@ -1,0 +1,930 @@
+{
+  "checkedAt": "2026-10-18T20:30:32.407Z",
+  "source": "manual-test-deck.txt",
+  "counts": {
+    "entries": 20,
+    "quantity": 100,
+    "playableEntries": 20,
+    "playableQuantity": 100,
+    "excludedEntries": 0,
+    "excludedQuantity": 0,
+    "resolvedEntries": 20,
+    "unresolvedEntries": 0,
+    "ambiguousEntries": 0,
+    "printingUnknownEntries": 0,
+    "assumedEntries": 20,
+    "suppliedEntries": 0,
+    "chosenEntries": 0,
+    "distinctPrintings": 20,
+    "flavorAbsentEntries": 7,
+    "exactPassages": 0
+  },
+  "commanders": [
+    {
+      "name": "Kenrith, the Returned King",
+      "printingId": "0e259db1-14db-4314-998c-6a076a28d8cb",
+      "identity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ]
+    },
+    {
+      "name": "Kozilek, the Great Distortion",
+      "printingId": "c41554e7-2a07-4cc7-b01b-44deed08e588",
+      "identity": []
+    },
+    {
+      "name": "Isamaru, Hound of Konda",
+      "printingId": "6afead32-3542-44c4-82d6-b6a81beb9f90",
+      "identity": [
+        "W"
+      ]
+    },
+    {
+      "name": "Adric, Mathematical Genius",
+      "printingId": "1f290a17-699e-420d-8322-3e28300a0d2e",
+      "identity": [
+        "U"
+      ]
+    },
+    {
+      "name": "Kess, Dissident Mage",
+      "printingId": "e83e6d7a-3af0-4955-8004-2310f051e306",
+      "identity": [
+        "U",
+        "B",
+        "R"
+      ]
+    }
+  ],
+  "mechanics": [
+    {
+      "label": "Devoid",
+      "cards": [
+        "Benthic Infiltrator"
+      ]
+    },
+    {
+      "label": "Doctor's companion",
+      "cards": [
+        "Adric, Mathematical Genius"
+      ]
+    },
+    {
+      "label": "Double strike",
+      "cards": [
+        "Adorned Pouncer"
+      ]
+    },
+    {
+      "label": "Escape",
+      "cards": [
+        "Alex Wilder, Runaway"
+      ]
+    },
+    {
+      "label": "Eternalize",
+      "cards": [
+        "Adorned Pouncer"
+      ]
+    },
+    {
+      "label": "First strike",
+      "cards": [
+        "Abattoir Ghoul",
+        "Ruff, Underdog Champ"
+      ]
+    },
+    {
+      "label": "Flying",
+      "cards": [
+        "Kess, Dissident Mage",
+        "Ornithopter",
+        "Serra Angel"
+      ]
+    },
+    {
+      "label": "Ingest",
+      "cards": [
+        "Benthic Infiltrator"
+      ]
+    },
+    {
+      "label": "Lifelink",
+      "cards": [
+        "Ruff, Underdog Champ"
+      ]
+    },
+    {
+      "label": "Menace",
+      "cards": [
+        "Kozilek, the Great Distortion"
+      ]
+    },
+    {
+      "label": "Proliferate",
+      "cards": [
+        "Adaptive Sporesinger"
+      ]
+    },
+    {
+      "label": "Surveil",
+      "cards": [
+        "A.I.M. Synthoids"
+      ]
+    },
+    {
+      "label": "Ultimate Sacrifice",
+      "cards": [
+        "Adric, Mathematical Genius"
+      ]
+    },
+    {
+      "label": "Underdog",
+      "cards": [
+        "Ruff, Underdog Champ"
+      ]
+    },
+    {
+      "label": "Vigilance",
+      "cards": [
+        "Serra Angel",
+        "Adaptive Sporesinger"
+      ]
+    },
+    {
+      "label": "Warp",
+      "cards": [
+        "All-Fates Stalker"
+      ]
+    }
+  ],
+  "searches": [
+    {
+      "commander": "Kozilek, the Great Distortion",
+      "atlasRowId": "keyword-index-devoid",
+      "query": "(f:commander id<=c) (kw:Devoid)",
+      "totalCards": 0,
+      "totalPages": 0
+    },
+    {
+      "commander": "Kenrith, the Returned King",
+      "atlasRowId": "keyword-index-underdog-reported",
+      "query": "(f:commander id<=wubrg) (kw:Underdog)",
+      "totalCards": 0,
+      "totalPages": 0
+    },
+    {
+      "commander": "Kenrith, the Returned King",
+      "atlasRowId": "keyword-index-flying",
+      "query": "(f:commander id<=wubrg) (kw:Flying)",
+      "totalCards": 3164,
+      "totalPages": 132
+    }
+  ],
+  "printings": [
+    {
+      "object": "card",
+      "id": "0e259db1-14db-4314-998c-6a076a28d8cb",
+      "name": "Kenrith, the Returned King",
+      "set": "plst",
+      "collector_number": "ELD-303",
+      "lang": "en",
+      "color_identity": [
+        "W",
+        "U",
+        "B",
+        "R",
+        "G"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "d209b948-9afb-4fd1-a961-72c87282878c",
+      "finishes": [
+        "nonfoil"
+      ],
+      "oracle_text": "{R}: All creatures gain trample and haste until end of turn.\n{1}{G}: Put a +1/+1 counter on target creature.\n{2}{W}: Target player gains 5 life.\n{3}{U}: Target player draws a card.\n{4}{B}: Put target creature card from a graveyard onto the battlefield under its owner's control.",
+      "type_line": "Legendary Creature — Human Noble",
+      "layout": "normal",
+      "mana_cost": "{4}{W}",
+      "released_at": "2023-06-23",
+      "set_name": "The List",
+      "artist": "Kieran Yanner",
+      "rarity": "mythic",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113",
+        "normal": "https://cards.scryfall.io/normal/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113",
+        "large": "https://cards.scryfall.io/large/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/plst/ELD-303/kenrith-the-returned-king?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "c41554e7-2a07-4cc7-b01b-44deed08e588",
+      "name": "Kozilek, the Great Distortion",
+      "set": "cmm",
+      "collector_number": "2",
+      "lang": "en",
+      "color_identity": [],
+      "keywords": [
+        "Menace"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "4c1c1537-e519-4e2f-9bc2-d34b289d4487",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "A void as cryptic as reality itself.",
+      "oracle_text": "When you cast this spell, if you have fewer than seven cards in hand, draw cards equal to the difference.\nMenace\nDiscard a card with mana value X: Counter target spell with mana value X.",
+      "type_line": "Legendary Creature — Eldrazi",
+      "layout": "normal",
+      "mana_cost": "{8}{C}{C}",
+      "released_at": "2023-08-04",
+      "set_name": "Commander Masters",
+      "artist": "Aleksi Briclot",
+      "rarity": "mythic",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/c/4/c41554e7-2a07-4cc7-b01b-44deed08e588.jpg?1783915732",
+        "normal": "https://cards.scryfall.io/normal/front/c/4/c41554e7-2a07-4cc7-b01b-44deed08e588.jpg?1783915732",
+        "large": "https://cards.scryfall.io/large/front/c/4/c41554e7-2a07-4cc7-b01b-44deed08e588.jpg?1783915732"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/cmm/2/kozilek-the-great-distortion?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "6afead32-3542-44c4-82d6-b6a81beb9f90",
+      "name": "Isamaru, Hound of Konda",
+      "set": "jmp",
+      "collector_number": "113",
+      "lang": "en",
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+      "finishes": [
+        "nonfoil"
+      ],
+      "flavor_text": "The hound sniffed the air and let slip a low growl. General Takeno looked down at the faithful Isamaru and calmed him with a touch. \"Alert the guard. The kami are coming.\"",
+      "oracle_text": "",
+      "type_line": "Legendary Creature — Dog",
+      "layout": "normal",
+      "mana_cost": "{W}",
+      "released_at": "2020-07-17",
+      "set_name": "Jumpstart",
+      "artist": "Christopher Moeller",
+      "rarity": "rare",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/6/a/6afead32-3542-44c4-82d6-b6a81beb9f90.jpg?1783930470",
+        "normal": "https://cards.scryfall.io/normal/front/6/a/6afead32-3542-44c4-82d6-b6a81beb9f90.jpg?1783930470",
+        "large": "https://cards.scryfall.io/large/front/6/a/6afead32-3542-44c4-82d6-b6a81beb9f90.jpg?1783930470"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/jmp/113/isamaru-hound-of-konda?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "1f290a17-699e-420d-8322-3e28300a0d2e",
+      "name": "Adric, Mathematical Genius",
+      "set": "who",
+      "collector_number": "33",
+      "lang": "en",
+      "color_identity": [
+        "U"
+      ],
+      "keywords": [
+        "Ultimate Sacrifice",
+        "Doctor's companion"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "af566158-23b2-4f91-8d59-a58342a9f576",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oracle_text": "{2}{U}, {T}: Copy target activated or triggered ability you control. You may choose new targets for the copy.\nUltimate Sacrifice — {1}{U}, Sacrifice Adric: Counter target activated or triggered ability.\nDoctor's companion (You can have two commanders if the other is the Doctor.)",
+      "type_line": "Legendary Creature — Human Artificer",
+      "layout": "normal",
+      "mana_cost": "{1}{U}",
+      "released_at": "2023-10-13",
+      "set_name": "Doctor Who",
+      "artist": "Billy Christian",
+      "rarity": "rare",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/1/f/1f290a17-699e-420d-8322-3e28300a0d2e.jpg?1783914673",
+        "normal": "https://cards.scryfall.io/normal/front/1/f/1f290a17-699e-420d-8322-3e28300a0d2e.jpg?1783914673",
+        "large": "https://cards.scryfall.io/large/front/1/f/1f290a17-699e-420d-8322-3e28300a0d2e.jpg?1783914673"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/who/33/adric-mathematical-genius?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "e83e6d7a-3af0-4955-8004-2310f051e306",
+      "name": "Kess, Dissident Mage",
+      "set": "ncc",
+      "collector_number": "344",
+      "lang": "en",
+      "color_identity": [
+        "U",
+        "B",
+        "R"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "f5092c14-eec4-472c-999c-ba96c36b2fbb",
+      "finishes": [
+        "nonfoil"
+      ],
+      "flavor_text": "\"Loss has no meaning here. You cannot take from those who have nothing.\"",
+      "oracle_text": "Flying\nOnce during each of your turns, you may cast an instant or sorcery spell from your graveyard. If a spell cast this way would be put into your graveyard, exile it instead.",
+      "type_line": "Legendary Creature — Human Wizard",
+      "layout": "normal",
+      "mana_cost": "{1}{U}{B}{R}",
+      "released_at": "2022-04-29",
+      "set_name": "New Capenna Commander",
+      "artist": "Izzy",
+      "rarity": "mythic",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/e/8/e83e6d7a-3af0-4955-8004-2310f051e306.jpg?1783923225",
+        "normal": "https://cards.scryfall.io/normal/front/e/8/e83e6d7a-3af0-4955-8004-2310f051e306.jpg?1783923225",
+        "large": "https://cards.scryfall.io/large/front/e/8/e83e6d7a-3af0-4955-8004-2310f051e306.jpg?1783923225"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/ncc/344/kess-dissident-mage?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "305078a5-ac18-4721-bba2-3434eba5b1cf",
+      "name": "Ornithopter",
+      "set": "dmr",
+      "collector_number": "233",
+      "lang": "en",
+      "color_identity": [],
+      "keywords": [
+        "Flying"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"It has been my honor to improve on Thran's original design. Perhaps history will remember me in some small part for my work.\"\n—Urza, in his apprenticeship",
+      "oracle_text": "Flying",
+      "type_line": "Artifact Creature — Thopter",
+      "layout": "normal",
+      "mana_cost": "{0}",
+      "released_at": "2023-01-13",
+      "set_name": "Dominaria Remastered",
+      "artist": "Franz Vohwinkel",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/3/0/305078a5-ac18-4721-bba2-3434eba5b1cf.jpg?1783918410",
+        "normal": "https://cards.scryfall.io/normal/front/3/0/305078a5-ac18-4721-bba2-3434eba5b1cf.jpg?1783918410",
+        "large": "https://cards.scryfall.io/large/front/3/0/305078a5-ac18-4721-bba2-3434eba5b1cf.jpg?1783918410"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "b8c5e74c-96e7-4a1f-93b7-14d776fe4b2d",
+      "name": "Serra Angel",
+      "set": "fdn",
+      "collector_number": "740",
+      "lang": "en",
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [
+        "Flying",
+        "Vigilance"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+      "finishes": [
+        "nonfoil"
+      ],
+      "flavor_text": "Follow the light. In its absence, follow her.",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "type_line": "Creature — Angel",
+      "layout": "normal",
+      "mana_cost": "{3}{W}{W}",
+      "released_at": "2026-04-24",
+      "set_name": "Foundations",
+      "artist": "Greg Staples",
+      "rarity": "uncommon",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/b/8/b8c5e74c-96e7-4a1f-93b7-14d776fe4b2d.jpg?1787563091",
+        "normal": "https://cards.scryfall.io/normal/front/b/8/b8c5e74c-96e7-4a1f-93b7-14d776fe4b2d.jpg?1787563091",
+        "large": "https://cards.scryfall.io/large/front/b/8/b8c5e74c-96e7-4a1f-93b7-14d776fe4b2d.jpg?1787563091"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "3db6d202-9c6f-4485-9224-173b23de7054",
+      "name": "Adaptive Sporesinger",
+      "set": "one",
+      "collector_number": "157",
+      "lang": "en",
+      "color_identity": [
+        "G"
+      ],
+      "keywords": [
+        "Vigilance",
+        "Proliferate"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "f6311b7a-7482-4b13-9f8f-13e80c98e98e",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oracle_text": "Vigilance\nWhen this creature enters, choose one —\n• Target creature gets +2/+2 and gains vigilance until end of turn.\n• Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "type_line": "Creature — Phyrexian Druid",
+      "layout": "normal",
+      "mana_cost": "{2}{G}",
+      "released_at": "2023-02-10",
+      "set_name": "Phyrexia: All Will Be One",
+      "artist": "Dave Kendall",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/3/d/3db6d202-9c6f-4485-9224-173b23de7054.jpg?1783918020",
+        "normal": "https://cards.scryfall.io/normal/front/3/d/3db6d202-9c6f-4485-9224-173b23de7054.jpg?1783918020",
+        "large": "https://cards.scryfall.io/large/front/3/d/3db6d202-9c6f-4485-9224-173b23de7054.jpg?1783918020"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/one/157/adaptive-sporesinger?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "f29dee50-ea7e-4a54-bc91-99928a8405e3",
+      "name": "A.I.M. Synthoids",
+      "set": "msh",
+      "collector_number": "242",
+      "lang": "en",
+      "color_identity": [],
+      "keywords": [
+        "Surveil"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "10916f33-aaa6-43a1-9835-b60fd061161f",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"M.O.D.O.K.—commands—that—you—be—neutralized! Nothing—must—interfere—with—our—programmed—mission!\"",
+      "oracle_text": "When this creature enters, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "type_line": "Artifact Creature — Robot Villain",
+      "layout": "normal",
+      "mana_cost": "{2}",
+      "released_at": "2026-06-26",
+      "set_name": "Marvel Super Heroes",
+      "artist": "Alexander Skripnikov",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/f/2/f29dee50-ea7e-4a54-bc91-99928a8405e3.jpg?1783902892",
+        "normal": "https://cards.scryfall.io/normal/front/f/2/f29dee50-ea7e-4a54-bc91-99928a8405e3.jpg?1783902892",
+        "large": "https://cards.scryfall.io/large/front/f/2/f29dee50-ea7e-4a54-bc91-99928a8405e3.jpg?1783902892"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/msh/242/aim-synthoids?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "82ae4f7b-8122-4af6-8079-888eabf1a11e",
+      "name": "All-Fates Stalker",
+      "set": "eoe",
+      "collector_number": "3",
+      "lang": "en",
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [
+        "Warp"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "da9ec010-8b42-4927-b602-4e96bced4e99",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"You again?\"",
+      "oracle_text": "When this creature enters, exile up to one target non-Assassin creature until this creature leaves the battlefield.\nWarp {1}{W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "type_line": "Creature — Drix Assassin",
+      "layout": "normal",
+      "mana_cost": "{3}{W}",
+      "released_at": "2025-08-01",
+      "set_name": "Edge of Eternities",
+      "artist": "Lius Lasahido",
+      "rarity": "uncommon",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/8/2/82ae4f7b-8122-4af6-8079-888eabf1a11e.jpg?1783906001",
+        "normal": "https://cards.scryfall.io/normal/front/8/2/82ae4f7b-8122-4af6-8079-888eabf1a11e.jpg?1783906001",
+        "large": "https://cards.scryfall.io/large/front/8/2/82ae4f7b-8122-4af6-8079-888eabf1a11e.jpg?1783906001"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/eoe/3/all-fates-stalker?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "43297ddd-276f-4d2d-9d9c-937603d0e376",
+      "name": "Abattoir Ghoul",
+      "set": "ddq",
+      "collector_number": "50",
+      "lang": "en",
+      "color_identity": [
+        "B"
+      ],
+      "keywords": [
+        "First strike"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "2b211adb-de44-4468-b65d-907a09aa7e9d",
+      "finishes": [
+        "nonfoil"
+      ],
+      "flavor_text": "Death took his humanity but not his skill with the knife.",
+      "oracle_text": "First strike\nWhenever a creature dealt damage by this creature this turn dies, you gain life equal to that creature's toughness.",
+      "type_line": "Creature — Zombie",
+      "layout": "normal",
+      "mana_cost": "{3}{B}",
+      "released_at": "2016-02-26",
+      "set_name": "Duel Decks: Blessed vs. Cursed",
+      "artist": "Volkan Baǵa",
+      "rarity": "uncommon",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/4/3/43297ddd-276f-4d2d-9d9c-937603d0e376.jpg?1783937842",
+        "normal": "https://cards.scryfall.io/normal/front/4/3/43297ddd-276f-4d2d-9d9c-937603d0e376.jpg?1783937842",
+        "large": "https://cards.scryfall.io/large/front/4/3/43297ddd-276f-4d2d-9d9c-937603d0e376.jpg?1783937842"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/ddq/50/abattoir-ghoul?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "f380ae58-08cc-42df-ac74-3c6890a62463",
+      "name": "Benthic Infiltrator",
+      "set": "bfz",
+      "collector_number": "55",
+      "lang": "en",
+      "color_identity": [
+        "U"
+      ],
+      "keywords": [
+        "Devoid",
+        "Ingest"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "b2977807-5f46-424a-a6e9-14262f8a723a",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oracle_text": "Devoid (This card has no color.)\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of their library.)\nThis creature can't be blocked.",
+      "type_line": "Creature — Eldrazi Drone",
+      "layout": "normal",
+      "mana_cost": "{2}{U}",
+      "released_at": "2015-10-02",
+      "set_name": "Battle for Zendikar",
+      "artist": "Mathias Kollros",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/f/3/f380ae58-08cc-42df-ac74-3c6890a62463.jpg?1783938214",
+        "normal": "https://cards.scryfall.io/normal/front/f/3/f380ae58-08cc-42df-ac74-3c6890a62463.jpg?1783938214",
+        "large": "https://cards.scryfall.io/large/front/f/3/f380ae58-08cc-42df-ac74-3c6890a62463.jpg?1783938214"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/bfz/55/benthic-infiltrator?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "143052c4-a59a-4bb7-afff-ac38b23d820f",
+      "name": "Ruff, Underdog Champ",
+      "set": "cmb2",
+      "collector_number": "10",
+      "lang": "en",
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [
+        "Lifelink",
+        "Underdog",
+        "First strike"
+      ],
+      "legalities": {
+        "commander": "not_legal"
+      },
+      "oracle_id": "fe4c1292-d68f-46b4-9e96-80f195753656",
+      "finishes": [
+        "nonfoil"
+      ],
+      "oracle_text": "All Hounds are Dogs. (We'll errata this to be true.)\nFirst strike, lifelink\nUnderdog — If you've lost a game this match, Ruff, Underdog Champ and other Dogs you control get +1/+1.",
+      "type_line": "Legendary Creature — Dog Soldier",
+      "layout": "normal",
+      "mana_cost": "{2}{W}{W}",
+      "released_at": "2021-08-20",
+      "set_name": "Mystery Booster Playtest Cards 2021",
+      "artist": "Seth Conley",
+      "rarity": "rare",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/1/4/143052c4-a59a-4bb7-afff-ac38b23d820f.jpg?1783925960",
+        "normal": "https://cards.scryfall.io/normal/front/1/4/143052c4-a59a-4bb7-afff-ac38b23d820f.jpg?1783925960",
+        "large": "https://cards.scryfall.io/large/front/1/4/143052c4-a59a-4bb7-afff-ac38b23d820f.jpg?1783925960"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/cmb2/10/ruff-underdog-champ?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "78ba8bef-5b36-4e63-b708-d77250ebaf62",
+      "name": "Alex Wilder, Runaway",
+      "set": "msc",
+      "collector_number": "677",
+      "lang": "en",
+      "color_identity": [
+        "R"
+      ],
+      "keywords": [
+        "Escape"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "f3031397-c2d5-40c6-8eca-88faed00a5ea",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oracle_text": "Whenever Alex Wilder or another creature you control enters, if you cast it from anywhere other than your hand, it gets +2/+0 and gains haste until end of turn.\nEscape—{2}{R}, Exile three other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)",
+      "type_line": "Legendary Creature — Human Hero Villain",
+      "layout": "normal",
+      "mana_cost": "{1}{R}",
+      "released_at": "2026-06-26",
+      "set_name": "Marvel Super Heroes Commander",
+      "artist": "Tyler Walpole",
+      "rarity": "uncommon",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/7/8/78ba8bef-5b36-4e63-b708-d77250ebaf62.jpg?1783903056",
+        "normal": "https://cards.scryfall.io/normal/front/7/8/78ba8bef-5b36-4e63-b708-d77250ebaf62.jpg?1783903056",
+        "large": "https://cards.scryfall.io/large/front/7/8/78ba8bef-5b36-4e63-b708-d77250ebaf62.jpg?1783903056"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/msc/677/alex-wilder-runaway?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "865e267d-450c-4eeb-b61d-bd0ec5d8534a",
+      "name": "Adorned Pouncer",
+      "set": "hou",
+      "collector_number": "2",
+      "lang": "en",
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [
+        "Double strike",
+        "Eternalize"
+      ],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "80b8ee3d-4174-4f47-a533-a3db1e703382",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "oracle_text": "Double strike\nEternalize {3}{W}{W} ({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a 4/4 black Zombie Cat with no mana cost. Eternalize only as a sorcery.)",
+      "type_line": "Creature — Cat",
+      "layout": "normal",
+      "mana_cost": "{1}{W}",
+      "released_at": "2017-07-14",
+      "set_name": "Hour of Devastation",
+      "artist": "Slawomir Maniak",
+      "rarity": "rare",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/8/6/865e267d-450c-4eeb-b61d-bd0ec5d8534a.jpg?1783936067",
+        "normal": "https://cards.scryfall.io/normal/front/8/6/865e267d-450c-4eeb-b61d-bd0ec5d8534a.jpg?1783936067",
+        "large": "https://cards.scryfall.io/large/front/8/6/865e267d-450c-4eeb-b61d-bd0ec5d8534a.jpg?1783936067"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/hou/2/adorned-pouncer?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "09ac862f-0a51-44dd-b86f-9412b8218b13",
+      "name": "Plains",
+      "set": "mdd",
+      "collector_number": "292",
+      "lang": "en",
+      "color_identity": [
+        "W"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"Asgard is my home, my kingdom, and my pride. Its splendor, like the gods, shall be everlasting.\"\n—Thor",
+      "oracle_text": "({T}: Add {W}.)",
+      "type_line": "Basic Land — Plains",
+      "layout": "normal",
+      "mana_cost": "",
+      "released_at": "2027-04-09",
+      "set_name": "Marvel: Darkhold Destiny",
+      "artist": "Shahab Alizadeh",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/0/9/09ac862f-0a51-44dd-b86f-9412b8218b13.jpg?1791578423",
+        "normal": "https://cards.scryfall.io/normal/front/0/9/09ac862f-0a51-44dd-b86f-9412b8218b13.jpg?1791578423",
+        "large": "https://cards.scryfall.io/large/front/0/9/09ac862f-0a51-44dd-b86f-9412b8218b13.jpg?1791578423"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/mdd/292/plains?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "1335d293-3dd2-4f13-bd2c-22181f4528ee",
+      "name": "Island",
+      "set": "mdd",
+      "collector_number": "294",
+      "lang": "en",
+      "color_identity": [
+        "U"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"The Dream Dimension. A benevolent fountain of ideals, the source of humanity's collective inspiration, and the home of the muses themselves. Its wonder never ceases to amaze me.\"\n—Doctor Strange",
+      "oracle_text": "({T}: Add {U}.)",
+      "type_line": "Basic Land — Island",
+      "layout": "normal",
+      "mana_cost": "",
+      "released_at": "2027-04-09",
+      "set_name": "Marvel: Darkhold Destiny",
+      "artist": "Eren Arik",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/1/3/1335d293-3dd2-4f13-bd2c-22181f4528ee.jpg?1791578424",
+        "normal": "https://cards.scryfall.io/normal/front/1/3/1335d293-3dd2-4f13-bd2c-22181f4528ee.jpg?1791578424",
+        "large": "https://cards.scryfall.io/large/front/1/3/1335d293-3dd2-4f13-bd2c-22181f4528ee.jpg?1791578424"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/mdd/294/island?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "b233b117-9369-45c1-80c5-cc857386b6be",
+      "name": "Swamp",
+      "set": "mdd",
+      "collector_number": "296",
+      "lang": "en",
+      "color_identity": [
+        "B"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"Svartalfheim is the realm of the Dark Elves, so keep your wits about you, heroes. They battle with foul magic and poisoned blades, and they care not if they win. They care only that we lose.\"\n—Sif",
+      "oracle_text": "({T}: Add {B}.)",
+      "type_line": "Basic Land — Swamp",
+      "layout": "normal",
+      "mana_cost": "",
+      "released_at": "2027-04-09",
+      "set_name": "Marvel: Darkhold Destiny",
+      "artist": "Maojin Lee",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/b/2/b233b117-9369-45c1-80c5-cc857386b6be.jpg?1791578437",
+        "normal": "https://cards.scryfall.io/normal/front/b/2/b233b117-9369-45c1-80c5-cc857386b6be.jpg?1791578437",
+        "large": "https://cards.scryfall.io/large/front/b/2/b233b117-9369-45c1-80c5-cc857386b6be.jpg?1791578437"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/mdd/296/swamp?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "85177bd7-6c50-48da-b692-ae5fe7bd357c",
+      "name": "Mountain",
+      "set": "mdd",
+      "collector_number": "298",
+      "lang": "en",
+      "color_identity": [
+        "R"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"No matter how hard I try, I always seem to return to this wicked world of Limbo. But this time will be different. This time, Belasco's soul will be mine to sunder. Come, my friends, for we have a battle to win.\"\n—Magik, Illyana Rasputin",
+      "oracle_text": "({T}: Add {R}.)",
+      "type_line": "Basic Land — Mountain",
+      "layout": "normal",
+      "mana_cost": "",
+      "released_at": "2027-04-09",
+      "set_name": "Marvel: Darkhold Destiny",
+      "artist": "VEN",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/8/5/85177bd7-6c50-48da-b692-ae5fe7bd357c.jpg?1791578439",
+        "normal": "https://cards.scryfall.io/normal/front/8/5/85177bd7-6c50-48da-b692-ae5fe7bd357c.jpg?1791578439",
+        "large": "https://cards.scryfall.io/large/front/8/5/85177bd7-6c50-48da-b692-ae5fe7bd357c.jpg?1791578439"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/mdd/298/mountain?utm_source=api"
+    },
+    {
+      "object": "card",
+      "id": "2e781bfd-f8cb-4d20-b977-4359f3a21311",
+      "name": "Forest",
+      "set": "mdd",
+      "collector_number": "301",
+      "lang": "en",
+      "color_identity": [
+        "G"
+      ],
+      "keywords": [],
+      "legalities": {
+        "commander": "legal"
+      },
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "finishes": [
+        "nonfoil",
+        "foil"
+      ],
+      "flavor_text": "\"You have only one mission, minions: protect me with your lives. In order to do this, you need to wear down Captain Britain's psyche. In order to do *that*, you need to burn down her precious lands. Am I understood?\"\n—Morgan Le Fay",
+      "oracle_text": "({T}: Add {G}.)",
+      "type_line": "Basic Land — Forest",
+      "layout": "normal",
+      "mana_cost": "",
+      "released_at": "2027-04-09",
+      "set_name": "Marvel: Darkhold Destiny",
+      "artist": "Samuele Bandini",
+      "rarity": "common",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/2/e/2e781bfd-f8cb-4d20-b977-4359f3a21311.jpg?1791578317",
+        "normal": "https://cards.scryfall.io/normal/front/2/e/2e781bfd-f8cb-4d20-b977-4359f3a21311.jpg?1791578317",
+        "large": "https://cards.scryfall.io/large/front/2/e/2e781bfd-f8cb-4d20-b977-4359f3a21311.jpg?1791578317"
+      },
+      "keywords_status": "reported",
+      "scryfall_uri": "https://scryfall.com/card/mdd/301/forest?utm_source=api"
+    }
+  ]
+}

@@ -1,0 +1,2047 @@
+{
+  "version": "1.0.0",
+  "atlasVersion": "2.1",
+  "vocabularyVersion": "catalog-gaps-2026-10-19",
+  "auditSha256": "24268db98d5542e8659dbb42e4706e3651c315e88c0b638d6f4e7eac2c639cfc",
+  "rows": [
+    {
+      "id": "keyword-index-catalog-gap-poisonous",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Poisonous",
+      "query": "fo:/\\bpoisonous [0-9X]+\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 2,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "702.70",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-absorb",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Absorb",
+      "query": "fo:/\\babsorb [0-9X]+\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 1,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "702.64",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-augment",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Augment",
+      "query": "kw:\"Augment\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-double-agenda",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Double agenda",
+      "query": "kw:\"Double agenda\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "702.106f",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-friends-forever",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Friends forever",
+      "query": "fo:/\\bfriends forever\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 7,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "702.124i",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-specialize",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Specialize",
+      "query": "kw:\"Specialize\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-intensity",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Intensity",
+      "query": "kw:\"Intensity\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-double-team",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Double team",
+      "query": "kw:\"Double team\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-affinitycycling",
+      "section": "Keyword_Index",
+      "group": "keyword ability",
+      "label": "Affinitycycling",
+      "query": "kw:\"Affinitycycling\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-seek",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Seek",
+      "query": "kw:\"Seek\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-activate",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Activate",
+      "query": "fo:/\\bactivate[ds]?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 1593,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.2",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-attach",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Attach",
+      "query": "fo:/\\battach(?:ed|es|ing)?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 740,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.3",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-cast",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Cast",
+      "query": "fo:/\\bcast(?:s|ing)?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 5950,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.5",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-counter",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Counter",
+      "query": "fo:/\\bcounter (target|that|all|each|any|up to) ([a-z]+ )*(spells?|ability|abilities)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 482,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.6",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-create",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Create",
+      "query": "fo:/\\bcreat(?:e[ds]?|ing)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 3885,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.7",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-destroy",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Destroy",
+      "query": "fo:/\\bdestroy(?:s|ed|ing)?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 2021,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.8",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-discard",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Discard",
+      "query": "fo:/\\bdiscard(?:s|ed|ing)?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 2326,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.9",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-exchange",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Exchange",
+      "query": "fo:/\\bexchang(?:e[ds]?|ing)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 52,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.12",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-exile",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Exile",
+      "query": "fo:/\\bexile (?:target|all|each|a|an|the|it|that|those|this|up to|any)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 3026,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.13",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-play",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Play",
+      "query": "fo:/\\bplay (?:a|an|the|that|those|this|it|cards|lands|up to|any)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 428,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.18",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-reveal",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Reveal",
+      "query": "fo:/\\breveal(?:s|ed|ing)?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 1539,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.20",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-sacrifice",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Sacrifice",
+      "query": "fo:/\\bsacrific(?:e[ds]?|ing)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 4264,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.21",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-shuffle",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Shuffle",
+      "query": "fo:/\\bshuffl(?:e[ds]?|ing)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 1374,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.24",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-tap",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Tap",
+      "query": "fo:/\\btap\\b|\\{T\\}/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 6011,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.26a",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-untap",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Untap",
+      "query": "fo:/\\buntap\\b|\\{Q\\}/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 1128,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.26b",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-vote",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Vote",
+      "query": "fo:/\\b(vote|votes|voted|voting)\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 40,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.38",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-planeswalk",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Planeswalk",
+      "query": "fo:/\\bplaneswalk(?:s|ed|ing)?\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 8,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.31",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-abandon",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Abandon",
+      "query": "fo:/\\babandon (?:this|that|a|the) scheme\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.33",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-set-in-motion",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Set in motion",
+      "query": "fo:/\\bset (?:this scheme |a scheme |schemes |)in motion\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.32",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-conjure",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Conjure",
+      "query": "kw:\"Conjure\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-harness",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Harness",
+      "query": "fo:/\\bharness The Soul Stone\\b/",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 1,
+      "validated": "2026-10-19",
+      "technique": "Full Oracle wording; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": "701.64",
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": false
+    },
+    {
+      "id": "keyword-index-catalog-gap-draft-from-a-spellbook",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Draft from a spellbook",
+      "query": "kw:\"Draft from a spellbook\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-heist",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Heist",
+      "query": "kw:\"Heist\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-incorporate",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Incorporate",
+      "query": "kw:\"Incorporate\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-assimilate",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Assimilate",
+      "query": "kw:\"Assimilate\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-face-a-dilemma",
+      "section": "Keyword_Index",
+      "group": "keyword action",
+      "label": "Face a dilemma",
+      "query": "kw:\"Face a dilemma\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-hero-s-reward",
+      "section": "Keyword_Index",
+      "group": "ability word",
+      "label": "Hero's Reward",
+      "query": "kw:\"Hero's Reward\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-kinfall",
+      "section": "Keyword_Index",
+      "group": "ability word",
+      "label": "Kinfall",
+      "query": "kw:\"Kinfall\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-landship",
+      "section": "Keyword_Index",
+      "group": "ability word",
+      "label": "Landship",
+      "query": "kw:\"Landship\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-legacy",
+      "section": "Keyword_Index",
+      "group": "ability word",
+      "label": "Legacy",
+      "query": "kw:\"Legacy\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-actualize",
+      "section": "Keyword_Index",
+      "group": "ability word",
+      "label": "Actualize",
+      "query": "kw:\"Actualize\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    },
+    {
+      "id": "keyword-index-catalog-gap-covercast",
+      "section": "Keyword_Index",
+      "group": "ability word",
+      "label": "Covercast",
+      "query": "kw:\"Covercast\"",
+      "parameters": [],
+      "tier": "Review",
+      "auto_execute": false,
+      "live_count": 0,
+      "validated": "2026-10-19",
+      "technique": "Scryfall keyword index; verified positive/negative Oracle IDs",
+      "fallback": null,
+      "fallback_count": null,
+      "blind_spot": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "assumption": null,
+      "baseline_case": "f:commander id<=wubrg",
+      "baseline_relation": "Count includes the Commander baseline.",
+      "rules": null,
+      "flags": "catalog-gaps-2026-10-19",
+      "expect_zero": true
+    }
+  ],
+  "records": [
+    {
+      "key": "poisonous",
+      "label": "Poisonous",
+      "atlasRowId": "keyword-index-catalog-gap-poisonous",
+      "display": true,
+      "querySha256": "bb33170ef6283a226cd4fb956e0d5ef28d3ddf20eac38d429dabbe9bf24c5e70",
+      "expression": "fo:/\\bpoisonous [0-9X]+\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:34.245Z",
+        "query": "fo:/\\bpoisonous [0-9X]+\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "767c896d-4ff6-4cd4-b3a4-80179e84e1cd",
+          "0f15dd1b-3d32-4d58-ba46-957f108ae677",
+          "b6a64b19-e312-4e98-91bd-3bedca84eed3"
+        ],
+        "negative": [
+          "afaef788-34d1-460b-b884-9d7ae6ddeb18",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "absorb",
+      "label": "Absorb",
+      "atlasRowId": "keyword-index-catalog-gap-absorb",
+      "display": true,
+      "querySha256": "72966723de35e7905a39280beac97c37314e4ce575f05ab828653e3a940d70f5",
+      "expression": "fo:/\\babsorb [0-9X]+\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:36.473Z",
+        "query": "fo:/\\babsorb [0-9X]+\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "c3469de8-4bdb-42d4-9fc0-75fe31c3f6e5"
+        ],
+        "negative": [
+          "ec8e310f-e871-498f-8d80-c3617c5e1433",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "augment",
+      "label": "Augment",
+      "atlasRowId": "keyword-index-catalog-gap-augment",
+      "display": true,
+      "querySha256": "99406bbe7035522769c1858f31d4e3e104dd697a0aa709b78e24928e38d8b75c",
+      "expression": "kw:\"Augment\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:20.912Z",
+        "query": "kw:\"Augment\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "05c348e3-79f2-4193-863b-a64577839a97",
+          "2a857df5-c3d8-4d95-bb2f-087d8aa6f478",
+          "45f13c9d-cdbe-42c4-9563-cf539fe7e075"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "double agenda",
+      "label": "Double agenda",
+      "atlasRowId": "keyword-index-catalog-gap-double-agenda",
+      "display": true,
+      "querySha256": "65a600e1e9385fee70e7d38974bbaadbbc510e52b05b98d205f7149cc1faaa49",
+      "expression": "kw:\"Double agenda\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:22.925Z",
+        "query": "kw:\"Double agenda\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "07b6326a-b73d-422b-bcb5-c508aa3fc558"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "friends forever",
+      "label": "Friends forever",
+      "atlasRowId": "keyword-index-catalog-gap-friends-forever",
+      "display": true,
+      "querySha256": "53be9deb5e5c269a2785275864cb8929a85a8b27998c1f8718ec0605c029708f",
+      "expression": "fo:/\\bfriends forever\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:39.125Z",
+        "query": "fo:/\\bfriends forever\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "4ee401bf-dc86-41a9-84f9-57aa0a314d08",
+          "095dabda-4570-4764-8d62-4a29eb19d3e6",
+          "5a35201d-e9b1-433a-bb70-3280ceedbcd6"
+        ],
+        "negative": [
+          "d15642e4-e61c-4d29-af48-de837991245e",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "specialize",
+      "label": "Specialize",
+      "atlasRowId": "keyword-index-catalog-gap-specialize",
+      "display": true,
+      "querySha256": "dcb73e89d6a11b2f5c5e57ccfc5045944e8da2bb935723e7c35b908e51d1bd7a",
+      "expression": "kw:\"Specialize\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:28.285Z",
+        "query": "kw:\"Specialize\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "0432a120-be1b-496b-b8cd-36f757e09425",
+          "10ef0ff6-60aa-43f7-9daa-e87aa62b28b6",
+          "1e283fbe-d235-45f9-a69f-1dfab6a5cc57"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "intensity",
+      "label": "Intensity",
+      "atlasRowId": "keyword-index-catalog-gap-intensity",
+      "display": true,
+      "querySha256": "1cc672bc16f2bbcd13a9e11bbe8108db93caf0d4248e2292412567d7df0b4d74",
+      "expression": "kw:\"Intensity\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:30.686Z",
+        "query": "kw:\"Intensity\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "323b642e-d709-4768-a130-30b4389c66e2",
+          "587fb8c0-ba33-4c5e-9ab3-dc75eb30da5f",
+          "65213e52-3f49-42d9-92b2-a97b3943d6c7"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "double team",
+      "label": "Double team",
+      "atlasRowId": "keyword-index-catalog-gap-double-team",
+      "display": true,
+      "querySha256": "8b231794571a4df080d90f91703b07ba6d370fc632b9617fe9009f4a50cfeed7",
+      "expression": "kw:\"Double team\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:33.485Z",
+        "query": "kw:\"Double team\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "207ffafa-f73d-4cc9-af4d-48b0ba6e97fb",
+          "2579d430-e22c-4cb2-b7a6-113e8f2e4519",
+          "4988fd7c-49a7-4022-b0d9-fe1f53dcda75"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "affinitycycling",
+      "label": "Affinitycycling",
+      "atlasRowId": "keyword-index-catalog-gap-affinitycycling",
+      "display": true,
+      "querySha256": "b76bbd6562de858e291263df64d413327f2ef5634986b09be42d8cf7bed54908",
+      "expression": "kw:\"Affinitycycling\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:35.467Z",
+        "query": "kw:\"Affinitycycling\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "b00d4b1a-bd7a-438c-9986-bd02282cb9f0"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "seek",
+      "label": "Seek",
+      "atlasRowId": "keyword-index-catalog-gap-seek",
+      "display": true,
+      "querySha256": "d6b55884e189c5833146134f10002c8c21bdf1175b88936e03c1df29c3afcd2e",
+      "expression": "kw:\"Seek\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:12:38.273Z",
+        "query": "kw:\"Seek\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "01eeb404-4fee-44d8-a00a-a6c34313bddf",
+          "02a283fc-ca38-48fb-b53c-0d863fca4b08",
+          "04ea8ccf-e565-4f4e-b842-56e7fac5679f"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "activate",
+      "label": "Activate",
+      "atlasRowId": "keyword-index-catalog-gap-activate",
+      "display": true,
+      "querySha256": "13a542d2af198af03f9d809cd3cb8f3726d25051a47780c802022d968c9ded0d",
+      "expression": "fo:/\\bactivate[ds]?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:42.105Z",
+        "query": "fo:/\\bactivate[ds]?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "00187de2-bc48-4137-97d8-a9a0fafc76c1",
+          "00173df7-a584-410c-af1d-ada9c791056a",
+          "00284955-0a1b-4939-9567-a7d34cbcee51"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "attach",
+      "label": "Attach",
+      "atlasRowId": "keyword-index-catalog-gap-attach",
+      "display": true,
+      "querySha256": "324cfa75b7ba3d4e13ed06c3fa032756859898a5936accec9548c3df4a866966",
+      "expression": "fo:/\\battach(?:ed|es|ing)?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:45.578Z",
+        "query": "fo:/\\battach(?:ed|es|ing)?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "5a10c3a5-6724-4e5a-ae4f-b27dde12735a",
+          "00317e4f-0228-469a-9789-fb6c39976860",
+          "00807825-88e5-4b88-8527-a49f553a91be"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "cast",
+      "label": "Cast",
+      "atlasRowId": "keyword-index-catalog-gap-cast",
+      "display": true,
+      "querySha256": "a2d51cdce06d8583a24bea21a9141985723627d028d513c076335b0798c800fa",
+      "expression": "fo:/\\bcast(?:s|ing)?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:48.877Z",
+        "query": "fo:/\\bcast(?:s|ing)?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "5fac139a-07d3-4e6c-98e3-d98b199f7a6f",
+          "00037840-6089-42ec-8c5c-281f9f474504",
+          "00268072-af77-40d2-8d2d-c02426575ee1"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "counter",
+      "label": "Counter",
+      "atlasRowId": "keyword-index-catalog-gap-counter",
+      "display": true,
+      "querySha256": "dfc51f36d1d88d5ed9262919536943d4a7ab452a3c927c36ea504b67e2477c54",
+      "expression": "fo:/\\bcounter (target|that|all|each|any|up to) ([a-z]+ )*(spells?|ability|abilities)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:20:11.309Z",
+        "query": "fo:/\\bcounter (target|that|all|each|any|up to) ([a-z]+ )*(spells?|ability|abilities)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "cc187110-1148-4090-bbb8-e205694a39f5",
+          "01003192-8927-4e55-8dd9-e9e088a3fbe4",
+          "0144d9bb-d3cb-4c23-b133-6653d7c3a76d"
+        ],
+        "negative": [
+          "a1f3da21-af6d-450e-bf0b-985d158418e6",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "create",
+      "label": "Create",
+      "atlasRowId": "keyword-index-catalog-gap-create",
+      "display": true,
+      "querySha256": "5589849fd420e443e7bc22e5470b65e0b7366ef75adaa563ab22ede00042f6d2",
+      "expression": "fo:/\\bcreat(?:e[ds]?|ing)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:14:56.911Z",
+        "query": "fo:/\\bcreat(?:e[ds]?|ing)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "5b2364d7-a811-4595-a1b4-224c70555ffa",
+          "00173df7-a584-410c-af1d-ada9c791056a",
+          "00225c40-27ff-410f-a591-5c788c6a2bd6"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "destroy",
+      "label": "Destroy",
+      "atlasRowId": "keyword-index-catalog-gap-destroy",
+      "display": true,
+      "querySha256": "e39d6bca01311d63374b74c2502c8195fe3b21a6a46d372b807870aed8926cc9",
+      "expression": "fo:/\\bdestroy(?:s|ed|ing)?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:02.272Z",
+        "query": "fo:/\\bdestroy(?:s|ed|ing)?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "938b4e2c-88d9-4637-bc00-e228920c9a78",
+          "003bf21f-6815-4098-a186-aa15f5947541",
+          "007f3b20-d58b-4986-8de8-9e419af88628"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "discard",
+      "label": "Discard",
+      "atlasRowId": "keyword-index-catalog-gap-discard",
+      "display": true,
+      "querySha256": "d727ef0bc5d4a3aafc64b33bec28bb08750c43b1f0e17956958486b64392d0fe",
+      "expression": "fo:/\\bdiscard(?:s|ed|ing)?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:05.816Z",
+        "query": "fo:/\\bdiscard(?:s|ed|ing)?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
+          "004f82f0-74cc-4bc7-ab22-ab1a5247bc29",
+          "005c181a-05db-4c15-9893-65103cca338e"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "exchange",
+      "label": "Exchange",
+      "atlasRowId": "keyword-index-catalog-gap-exchange",
+      "display": true,
+      "querySha256": "2238b80a7274722c9d7f283a9e48822f2338f0a3ff91f9a283ef969d6d30021b",
+      "expression": "fo:/\\bexchang(?:e[ds]?|ing)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:09.697Z",
+        "query": "fo:/\\bexchang(?:e[ds]?|ing)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "68227969-39cf-42cf-b3b8-cf8a04647d7e",
+          "06a76355-ed01-4dba-97fd-26451aae78b6",
+          "08d64b16-9221-4532-890c-d5cdbf181e28"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "exile",
+      "label": "Exile",
+      "atlasRowId": "keyword-index-catalog-gap-exile",
+      "display": true,
+      "querySha256": "4f76386c896ac70dd44eab926e82284b013d57c194b764340714e2fd7cb285f2",
+      "expression": "fo:/\\bexile (?:target|all|each|a|an|the|it|that|those|this|up to|any)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:12.233Z",
+        "query": "fo:/\\bexile (?:target|all|each|a|an|the|it|that|those|this|up to|any)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "b1544f21-7e98-461b-aed5-e748b0168c52",
+          "0012bc78-e69d-4a67-a302-e5fe0dfd4407",
+          "002a9cea-8cf7-48ba-83eb-e1c87a7024e5"
+        ],
+        "negative": [
+          "a990e744-bfc4-435d-aef6-6256ac10f5a6",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "play",
+      "label": "Play",
+      "atlasRowId": "keyword-index-catalog-gap-play",
+      "display": true,
+      "querySha256": "2cabefd535c59804e735d13b5706f640ecfedefe4756b5bea9045fdf912a1c85",
+      "expression": "fo:/\\bplay (?:a|an|the|that|those|this|it|cards|lands|up to|any)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:16.494Z",
+        "query": "fo:/\\bplay (?:a|an|the|that|those|this|it|cards|lands|up to|any)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "6c5b02eb-7829-436a-8555-fea200e4b67f",
+          "00cfbea0-e862-468b-90d5-7478eb9847c0",
+          "0179bc62-823e-46b9-b536-342904fedafc"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "reveal",
+      "label": "Reveal",
+      "atlasRowId": "keyword-index-catalog-gap-reveal",
+      "display": true,
+      "querySha256": "e891a671b33fcbfcdf3602150b1ce74a5e5e7192571126efb2ffe3649f1ca247",
+      "expression": "fo:/\\breveal(?:s|ed|ing)?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:20.478Z",
+        "query": "fo:/\\breveal(?:s|ed|ing)?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
+          "003c48d4-0303-4970-8637-47ae060385aa",
+          "004b2032-0d29-4361-b9c8-a3c0c7b63e2c"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "sacrifice",
+      "label": "Sacrifice",
+      "atlasRowId": "keyword-index-catalog-gap-sacrifice",
+      "display": true,
+      "querySha256": "e9b518fbe8f2c8c5215a2e15caeb64b4ca7aca1677bf88ea08b70def58324497",
+      "expression": "fo:/\\bsacrific(?:e[ds]?|ing)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:23.692Z",
+        "query": "fo:/\\bsacrific(?:e[ds]?|ing)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "058917c1-21ab-488a-9f9c-591c55f3c596",
+          "00078ea3-0462-4a6e-b7b1-25fea012b2b7",
+          "00173df7-a584-410c-af1d-ada9c791056a"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "shuffle",
+      "label": "Shuffle",
+      "atlasRowId": "keyword-index-catalog-gap-shuffle",
+      "display": true,
+      "querySha256": "ccf8641ae60926e5f1de920c425b830b67528387e346ae3272e229176b7afd82",
+      "expression": "fo:/\\bshuffl(?:e[ds]?|ing)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:28.062Z",
+        "query": "fo:/\\bshuffl(?:e[ds]?|ing)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "a75445d3-1303-4bb5-89ad-26ea93fecd48",
+          "003c48d4-0303-4970-8637-47ae060385aa",
+          "003d9c17-5d5c-469f-ad87-d78faf55e025"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "tap",
+      "label": "Tap",
+      "atlasRowId": "keyword-index-catalog-gap-tap",
+      "display": true,
+      "querySha256": "46fbe92e8bce6a9d4d9c873390a363859a3a2925b8173057f3ce347db5c068d6",
+      "expression": "fo:/\\btap\\b|\\{T\\}/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:32.143Z",
+        "query": "fo:/\\btap\\b|\\{T\\}/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "68954295-54e3-4303-a6bc-fc4547a4e3a3",
+          "000e5d65-96c3-498b-bd01-72b1a1991850",
+          "00173df7-a584-410c-af1d-ada9c791056a"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0"
+        ]
+      }
+    },
+    {
+      "key": "untap",
+      "label": "Untap",
+      "atlasRowId": "keyword-index-catalog-gap-untap",
+      "display": true,
+      "querySha256": "6d5d6fb9444cf55e77430c980cd881b6cd99b4b94313b90283effef744bd7a2e",
+      "expression": "fo:/\\buntap\\b|\\{Q\\}/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:35.747Z",
+        "query": "fo:/\\buntap\\b|\\{Q\\}/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "773ad2ef-5acc-49ea-8d85-056330e87039",
+          "0004ebd0-dfd6-4276-b4a6-de0003e94237",
+          "002100cd-1ab1-44da-93a0-1269d47a712a"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "vote",
+      "label": "Vote",
+      "atlasRowId": "keyword-index-catalog-gap-vote",
+      "display": true,
+      "querySha256": "d5ea10050a1f9ada3471b320fc5da8676df99af67c83ca34ba29a9050a3be1e5",
+      "expression": "fo:/\\b(vote|votes|voted|voting)\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:39.003Z",
+        "query": "fo:/\\b(vote|votes|voted|voting)\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "acf4d685-a718-42f7-9a7a-dee069ae8db2",
+          "0429d146-332f-4fb0-8273-c73679ca6d47",
+          "063e05b0-554f-4b55-9feb-e11f3927f3a6"
+        ],
+        "negative": [
+          "cb814e16-acf7-41d5-a357-1323dcc369f3",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "planeswalk",
+      "label": "Planeswalk",
+      "atlasRowId": "keyword-index-catalog-gap-planeswalk",
+      "display": true,
+      "querySha256": "6a8b0d9e3988fb439475b1c44bf129db0b7d1fd23bf333598ffaa3673b31d3ab",
+      "expression": "fo:/\\bplaneswalk(?:s|ed|ing)?\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:41.935Z",
+        "query": "fo:/\\bplaneswalk(?:s|ed|ing)?\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "00f00001-bd84-4dbf-a707-f4b1549100d4",
+          "022667d0-60f2-4e37-bc50-53198fc933ab",
+          "04491781-0e6a-4a30-a69f-db226702adfc"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "abandon",
+      "label": "Abandon",
+      "atlasRowId": "keyword-index-catalog-gap-abandon",
+      "display": true,
+      "querySha256": "6f78ef379baecec88653e8cfe2381071be43d7a499eb43650536175473a9f2b9",
+      "expression": "fo:/\\babandon (?:this|that|a|the) scheme\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:44.946Z",
+        "query": "fo:/\\babandon (?:this|that|a|the) scheme\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "0302df0a-0c8e-4b50-8c31-ae37c82a15d5",
+          "040e7562-239c-4186-93d1-d5f448244bab",
+          "09570ff4-32d9-4a60-97d7-883726ad7c14"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "set in motion",
+      "label": "Set in motion",
+      "atlasRowId": "keyword-index-catalog-gap-set-in-motion",
+      "display": true,
+      "querySha256": "b211330d4d4590e954b968094a20d02f1bd7bd4f51676e6d8513cb28c8b2b15b",
+      "expression": "fo:/\\bset (?:this scheme |a scheme |schemes |)in motion\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:47.727Z",
+        "query": "fo:/\\bset (?:this scheme |a scheme |schemes |)in motion\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "01c08e2c-6169-43bf-8388-32ef37f253c9",
+          "041edb3a-e7f3-4118-9974-99b622d18b09",
+          "05f34af0-cb22-45dc-9228-145c5427d6c6"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "conjure",
+      "label": "Conjure",
+      "atlasRowId": "keyword-index-catalog-gap-conjure",
+      "display": true,
+      "querySha256": "c499a7f7c2c6ba876937b0b4172b66e3b633391dd2c0e3971653475177e51c48",
+      "expression": "kw:\"Conjure\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:49.841Z",
+        "query": "kw:\"Conjure\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "000492bf-7eaa-4939-a51c-4eef74e4c1d1",
+          "02a283fc-ca38-48fb-b53c-0d863fca4b08",
+          "042790ef-217e-4f61-aa3b-e5c2fd521a96"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "harness",
+      "label": "Harness",
+      "atlasRowId": "keyword-index-catalog-gap-harness",
+      "display": true,
+      "querySha256": "cc55c9bb15b578b17e6548a17cc7be17cdd193596e710108bc5aaa133e39064e",
+      "expression": "fo:/\\bharness The Soul Stone\\b/",
+      "execution": "manual",
+      "relationship": "oracle-text-mentions",
+      "coverage": "Matches the reviewed wording or symbols in full Oracle text, including reminder text. Grants, restrictions, and references may match. Other wording and implicit actions may be absent. This does not establish possession or a usable action.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:51.997Z",
+        "query": "fo:/\\bharness The Soul Stone\\b/",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "92cfba68-12f6-4f97-9187-0f6a39656a0f"
+        ],
+        "negative": [
+          "d8dd7e7f-0053-44bb-bac0-1a08843d4c49",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "draft from a spellbook",
+      "label": "Draft from a spellbook",
+      "atlasRowId": "keyword-index-catalog-gap-draft-from-a-spellbook",
+      "display": true,
+      "querySha256": "08ced42653c1548415971eabb04a1370b55d7c3202dd1634de333c45ea17ca24",
+      "expression": "kw:\"Draft from a spellbook\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:54.938Z",
+        "query": "kw:\"Draft from a spellbook\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "015dd954-f82f-40e9-9dcc-f9efa8c6ec9a",
+          "16cdfb7f-43af-4561-bfff-1c8477c73990",
+          "195f0d16-691c-4a0c-979b-7c23add615cc"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "heist",
+      "label": "Heist",
+      "atlasRowId": "keyword-index-catalog-gap-heist",
+      "display": true,
+      "querySha256": "ac6fa1769a0e9c76bddcdf35ae059a30df6d7e2864a98190ad52a16291a9afb5",
+      "expression": "kw:\"Heist\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:56.938Z",
+        "query": "kw:\"Heist\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "161c6317-f4b6-45a2-98ac-6340a374eac5",
+          "6676e0c5-ae42-47ae-8cb7-78c30db9fbcb",
+          "84b3464c-412f-473f-b428-4a8bafd8718e"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "incorporate",
+      "label": "Incorporate",
+      "atlasRowId": "keyword-index-catalog-gap-incorporate",
+      "display": true,
+      "querySha256": "00b3effcf17cfbae2ce91b44c83a8461d03596f6a2c321b6fb2fab62f7284cad",
+      "expression": "kw:\"Incorporate\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:15:58.930Z",
+        "query": "kw:\"Incorporate\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "345185bb-acab-4c25-9dfa-97cd59085825",
+          "36187467-1940-483b-a0fb-d5647d6808aa",
+          "522ece61-0cdd-47d8-ba74-2e5e31888f62"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "assimilate",
+      "label": "Assimilate",
+      "atlasRowId": "keyword-index-catalog-gap-assimilate",
+      "display": true,
+      "querySha256": "4b825bfa762e945b36075479ae9f295961c49f576b8a2663fbbbc8cc87d22331",
+      "expression": "kw:\"Assimilate\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:00.907Z",
+        "query": "kw:\"Assimilate\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "f9b46a1a-474f-4fac-8d71-131c1720e4c0"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "face a dilemma",
+      "label": "Face a dilemma",
+      "atlasRowId": "keyword-index-catalog-gap-face-a-dilemma",
+      "display": true,
+      "querySha256": "021e91d48be4a06382479d1400fccc337e5fe8bc584d0dc6e7dab2b359e71acb",
+      "expression": "kw:\"Face a dilemma\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:03.283Z",
+        "query": "kw:\"Face a dilemma\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "3c037865-d38c-48da-aee9-308975e12638"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "hero's reward",
+      "label": "Hero's Reward",
+      "atlasRowId": "keyword-index-catalog-gap-hero-s-reward",
+      "display": true,
+      "querySha256": "27c56bec898d865e7ecacd70085299774950ec60d38c709aec0107a5f01723d8",
+      "expression": "kw:\"Hero's Reward\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:05.674Z",
+        "query": "kw:\"Hero's Reward\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "101fd855-4ba8-4fbd-9ce3-b0f402e00855",
+          "136bce30-d1bf-4e54-93f6-6c74f6fa6567",
+          "7cce1ffb-b813-4729-b2aa-0a4ab05420ee"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "kinfall",
+      "label": "Kinfall",
+      "atlasRowId": "keyword-index-catalog-gap-kinfall",
+      "display": true,
+      "querySha256": "4c5f8d3e50c41d7b37aafb5599d683049032de14b5b92f8b8d81a0b6a913f3f9",
+      "expression": "kw:\"Kinfall\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:07.664Z",
+        "query": "kw:\"Kinfall\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "45f94525-84f6-462d-99da-14735f2c273c"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "landship",
+      "label": "Landship",
+      "atlasRowId": "keyword-index-catalog-gap-landship",
+      "display": true,
+      "querySha256": "7bd88bb62f590ac8145c3827b33a2415b22da947c8f4a85612f07a75b0abd8c7",
+      "expression": "kw:\"Landship\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:10.479Z",
+        "query": "kw:\"Landship\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "45f94525-84f6-462d-99da-14735f2c273c"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "legacy",
+      "label": "Legacy",
+      "atlasRowId": "keyword-index-catalog-gap-legacy",
+      "display": true,
+      "querySha256": "b4dbc8cd249904f46701bfb32aef8ac9328b516faa7b781186770a464371d624",
+      "expression": "kw:\"Legacy\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:12.863Z",
+        "query": "kw:\"Legacy\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "2a6cd22c-9f3a-46ea-867d-5bc01f00f294",
+          "494e6cf9-6824-462e-a737-a320503595ed"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "actualize",
+      "label": "Actualize",
+      "atlasRowId": "keyword-index-catalog-gap-actualize",
+      "display": true,
+      "querySha256": "0eea980aecaa4bed5ebf0c7cc2058a60f20b622fa48348808f69f57f6bc01ee3",
+      "expression": "kw:\"Actualize\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:15.261Z",
+        "query": "kw:\"Actualize\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "7e8e28e4-8df4-45bf-a338-e5a6a30348e7",
+          "9affc6ea-ee6b-46e4-9623-f90e7f5bf451",
+          "d9451fb3-b846-4a19-815b-4f696a627e99"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    },
+    {
+      "key": "covercast",
+      "label": "Covercast",
+      "atlasRowId": "keyword-index-catalog-gap-covercast",
+      "display": true,
+      "querySha256": "5031ecdf06c2f2768eb636f482179f716ed2cf875e1b9391d5e945db8a3ee878",
+      "expression": "kw:\"Covercast\"",
+      "execution": "manual",
+      "relationship": "provider-reported-involvement",
+      "coverage": "Matches this exact Scryfall keyword label. This does not establish possession, a particular face, or a usable action. Cards outside Commander legality are excluded; zero results can be correct.",
+      "validation": {
+        "status": "passed",
+        "checkedAt": "2026-10-19T13:16:17.238Z",
+        "query": "kw:\"Covercast\"",
+        "evidence": "reports/catalog-gaps-20261019/verification.json",
+        "positive": [
+          "dcbe6911-0071-4305-a9f5-3396ce4f5618"
+        ],
+        "negative": [
+          "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+          "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+          "6ad8011d-3471-4369-9d68-b264cc027487"
+        ]
+      }
+    }
+  ]
+}
