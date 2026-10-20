@@ -5,7 +5,7 @@
 [![Validate app](https://github.com/rboles84/mtg-deck-explorer/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/rboles84/mtg-deck-explorer/actions/workflows/validate.yml)
 [User guide](docs/USER_GUIDE.md) · [Verification](#verify-the-project) · [Report a problem](https://github.com/rboles84/mtg-deck-explorer/issues)
 
-![Deck Explorer reading view showing edition-specific flavor passages, a missing-flavor notice, and repeated words linked to their evidence.](evidence/compact-archive.png)
+![Deck Explorer reading view showing edition-specific flavor passages, a missing-flavor notice, and repeated words linked to their evidence.](docs/images/reading-view.png)
 
 *The reading view from a recorded browser check. Each passage stays attached to its printing; an edition with no flavor text is shown as such.*
 
@@ -86,7 +86,7 @@ The tests use retained fixtures and local HTTP servers. They check behavior agai
 | Source verification and generation checks | [`scripts/build-catalog-gaps.mjs`](scripts/build-catalog-gaps.mjs), [retained source records](reports/catalog-gaps-20261019/sources.json) |
 | Browser evidence | [Mechanic rules and card evidence](reports/catalog-gaps-20261019/browser-absorb.png), [playtest reference panel](reports/playtest-links-20261019/kinfall.png) |
 
-The repository includes retained responses, source receipts, and regression fixtures, so it is larger than the app alone. Reports are dated records: an earlier report’s counts or screenshots may precede a later correction. [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) contains the development history.
+The repository includes retained responses, source receipts, and regression fixtures, so it is larger than the app alone. Reports are dated records: an earlier report’s counts or screenshots may precede a later correction. The [validation guide](docs/VALIDATION.md) explains the current checks and evidence layout. Internal plans and unused design/QA artifacts are kept in a local, Git-ignored archive; the [archive receipt](evidence/repository-archive.json) records their hashes.
 
 ## Data and privacy
 

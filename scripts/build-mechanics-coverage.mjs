@@ -20,7 +20,7 @@ for (const source of sources) {
 }
 const runtime = JSON.parse(sourceBytes[0]);
 const master = sourceBytes[1].toString('utf8');
-const crosswalkBytes = await readFile(path.join(root, 'crosswalk.json'));
+const crosswalkBytes = await readFile(path.join(root, 'lib', 'data', 'crosswalk.json'));
 const crosswalk = JSON.parse(crosswalkBytes);
 const existing = new Set(crosswalk.records.map(r => r.master_name));
 assert.equal(existing.size, 8);
@@ -239,7 +239,7 @@ const matrix = {
     'Rule profiles specify work to implement; they are not executable or validated Oracle recognizers.',
     'Exception review includes undefined editorial scopes and opt-in domains; it does not mean each card needs manual mapping.',
     'Inventory category/rules reference is not proof of current card legality. Color ownership never supplies card evidence.'],
-  sources, supporting_evidence: [{ path: 'crosswalk.json', sha256: hash(crosswalkBytes), role: 'existing eight reviewed links only' },...(metadataAudit?[{path:'reports/mechanics-coverage/metadata-validation.json',sha256:metadataAuditHash,role:'full-corpus exact-label observations, counterexamples and sampled live consistency'}]:[])],
+  sources, supporting_evidence: [{ path: 'lib/data/crosswalk.json', sha256: hash(crosswalkBytes), role: 'existing eight reviewed links only' },...(metadataAudit?[{path:'reports/mechanics-coverage/metadata-validation.json',sha256:metadataAuditHash,role:'full-corpus exact-label observations, counterexamples and sampled live consistency'}]:[])],
   metadata_validation:metadataAudit?{totals:metadataAudit.totals,tests:metadataAudit.tests,endpoint_check:metadataAudit.endpoint_check,snapshot:metadataAudit.bulk_updated_at,limits:metadataAudit.limits}:null,
   summary, source_variant_notes: variantNotes, profiles, rows,
 };

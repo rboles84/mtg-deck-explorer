@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-19",
+  "preCleanupCommit": "5b6d84817bb0845173c7bc4da288334e34ac0695",
+  "backup": {
+    "files": 3127,
+    "zipBytes": 89956288,
+    "zipSha256": "36cf8d59c78b9050da4c02b72c4224d62679d73dfd3fcb156d682e714197328e",
+    "allEntriesVerified": true,
+    "commit": "5b6d84817bb0845173c7bc4da288334e34ac0695"
+  },
+  "privateArchive": {
+    "fileCount": 129,
+    "sha256": "11af48870eccad2aab718fb7a4713eca0b04c713314c0316632db7345fd7d2ca",
+    "allEntriesVerified": true
+  },
+  "relocations": [
+    {
+      "from": "crosswalk.json",
+      "to": "lib/data/crosswalk.json",
+      "bytes": 9629,
+      "sha256": "fb8b7fa486db2bbf5793a961864e3c80f0f3ca629e4450fc3254d545f430ad27"
+    },
+    {
+      "from": "evidence/compact-archive.png",
+      "to": "docs/images/reading-view.png",
+      "bytes": 113143,
+      "sha256": "380cc8f450b5880ea18101757016ea29e9e88cb585e224cabaa1be93ac852e66"
+    }
+  ],
+  "changedExistingFiles": [
+    "README.md",
+    "lib/catalog.mjs",
+    "scripts/build-mechanics-coverage.mjs",
+    "tests/acceptance.test.mjs"
+  ],
+  "byteIdenticalFilesAtOriginalPaths": 2992,
+  "allOriginalFilesAccountedFor": true,
+  "browserRuntimeFilesByteIdentical": 47,
+  "serverEntryPointByteIdentical": true,
+  "full374RecordCatalogUnchanged": true,
+  "tests": {
+    "passed": 347,
+    "failed": 0,
+    "skipped": 0
+  },
+  "sourceGenerationCheck": "passed",
+  "backupRestoreTests": {
+    "passed": 347,
+    "failed": 0,
+    "skipped": 0
+  },
+  "publicCheckoutWithoutPrivateArchive": {
+    "sourceGenerationCheck": "passed",
+    "tests": {
+      "passed": 347,
+      "failed": 0,
+      "skipped": 0
+    },
+    "archivedFilesAbsent": 129
+  },
+  "privateArchiveRejectsChangedBytes": true,
+  "gitHistoryBundleSha256": "fec2250f526afc75dac41023f3e9ea2085d26d9f2b9bb41dec11a28c01fbe0b0"
+}

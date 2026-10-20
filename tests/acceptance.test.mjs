@@ -14,14 +14,27 @@ const card = (n, extra = {}) => ({ object: 'card', id: id(n), oracle_id: id(1000
 const catalog = await loadCatalog(ROOT);
 const response = data => new Response(JSON.stringify(data), { status: 200 });
 
-test('all 18 supplied original files remain byte-identical to the pre-implementation audit', async () => {
+test('five original runtime/test inputs stay byte-identical; 13 retired design assets retain their audited hashes', async () => {
   const audit = JSON.parse(await readFile(new URL('../evidence/source-audit.json', import.meta.url), 'utf8'));
+  const archive = JSON.parse(await readFile(new URL('../evidence/repository-archive.json', import.meta.url), 'utf8'));
+  const archived = new Map(archive.files.map(entry => [entry.path, entry]));
   assert.equal(audit.originalFiles.length, 18);
+  let retainedCount = 0, archivedCount = 0;
   for (const original of audit.originalFiles) {
+    if (original.path.startsWith('references/') || original.path === 'inputs/PROBABLY_PARADISE_GDD_VISUAL_ATLAS_V3_1.html') {
+      assert.deepEqual(archived.get(original.path), original, original.path);
+      await assert.rejects(readFile(new URL(`../${original.path}`, import.meta.url)), { code: 'ENOENT' });
+      archivedCount++;
+      continue;
+    }
+    assert.equal(archived.has(original.path), false, original.path);
     const bytes = await readFile(new URL(`../${original.path}`, import.meta.url));
     assert.equal(bytes.length, original.bytes, original.path);
     assert.equal(createHash('sha256').update(bytes).digest('hex'), original.sha256, original.path);
+    retainedCount++;
   }
+  assert.equal(retainedCount, 5);
+  assert.equal(archivedCount, 13);
 });
 
 // Each named crosswalk fixture exercises the real loaded source schema against the
