@@ -1,181 +1,103 @@
 # Deck Explorer
 
-A local field journal for reading exact-printing flavor text, inspecting literal repeated language, and exploring the mechanics reported for imported cards. The imported deck stays immutable. Manually collected discovery results live in a separate Clipboard.
+**A field journal for Commander.** Read the flavor text on your deck’s exact printings, follow its mechanics to their sources, and collect discoveries in a separate Clipboard.
 
-## Public source and reproducibility
+[![Validate app](https://github.com/rboles84/mtg-deck-explorer/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/rboles84/mtg-deck-explorer/actions/workflows/validate.yml)
+[User guide](docs/USER_GUIDE.md) · [Verification](#verify-the-project) · [Report a problem](https://github.com/rboles84/mtg-deck-explorer/issues)
 
-The app does not call a generative-AI model at runtime. Its analysis uses explicit JavaScript rules, literal text matching, fixed scoring and reviewed search recipes. Given the same input and source data, those analysis functions produce the same results. Live Scryfall data can change, so a later online search can return different cards; server context tokens and request timing are operational state, not generated analysis.
+![Deck Explorer reading view showing edition-specific flavor passages, a missing-flavor notice, and repeated words linked to their evidence.](evidence/compact-archive.png)
 
-Card text comes from Scryfall. Rules clauses and reference links retain their source attribution and verification scope. Playtest-card examples and designer references are labeled separately from official rules. The app does not generate card text or mechanic definitions. Development and documentation have used Codex assistance; the runtime claim concerns the app's behavior, not a claim that its source was written without AI assistance.
+*The reading view from a recorded browser check. Each passage stays attached to its printing; an edition with no flavor text is shown as such.*
 
-To inspect that behavior, start with [the analysis functions](public/core.mjs), [mechanic detection](public/catalog-gap-index.mjs), [query construction and Scryfall access](lib/scryfall.mjs), [server routes](server.mjs), and [the regression tests](tests). Retained provider responses, source receipts and validation reports are in [reports](reports); these support reproducible checks and are not all needed to serve the app. Existing third-party notices remain with the bundled assets.
+## What you can do
 
-The validated baseline passed **347 tests** on Node.js **24.14.0**, including a test run from a restored copy. Verify a checkout with:
+- **Read your editions.** Import a deck and browse its flavor passages, card faces, and printing details. Supplied printing coordinates are checked; name-only imports show an explicitly labeled assumed printing.
+- **Follow the evidence.** Inspect repeated words and short phrases alongside the passages that contain them. Explore mechanic labels with their contributing cards and source references.
+- **Find other cards.** Run a mechanic search constrained to your selected commander’s color identity and Scryfall’s Commander legality data.
+- **Keep your discoveries.** Save specific printings to a Clipboard and export their quantities, set codes, and collector numbers. Saving never changes the imported deck.
+
+Deck Explorer is a **local prototype**. This repository contains the runnable app; there is no hosted service yet.
+
+## Try it locally
+
+Install [Node.js](https://nodejs.org/) first; the validated version is **24.14.0**. With Git installed, run:
+
+```sh
+git clone https://github.com/rboles84/mtg-deck-explorer.git
+cd mtg-deck-explorer
+node server.mjs
+```
+
+Open **[http://127.0.0.1:4173](http://127.0.0.1:4173)**. Stop the server with **Ctrl+C**. There is no package-install or build step, account, or API key.
+
+1. Paste a deck list, or choose a supported `.txt` or `.csv` export. Commander plus main deck must total **100 cards**. To try an included real list, select [`fixtures/cosmicspiderman.txt`](fixtures/cosmicspiderman.txt).
+2. Check the import preview, then select **Import deck**. Confirm or choose your commander when needed.
+3. Follow **Read → Understand → Explore**, then use **Collect → Export** for saved discoveries.
+
+Real imports, searches, and card images need an internet connection to Scryfall. **Load fixture demo** offers a separate synthetic reading example with invented cards and sample prose; it does not support live discovery.
+
+The [user guide](docs/USER_GUIDE.md) covers import formats, assumed editions, card faces, search limits, Clipboard storage, and troubleshooting.
+
+## How the experience is curated
+
+| What you see | What supports it |
+| --- | --- |
+| Card text and edition details | Scryfall records tied to the selected printing, with a link back to that edition. |
+| Repeated language | Explicit word and phrase rules, with the original passages available to inspect. Copies and identical passages cannot manufacture independent evidence. |
+| Mechanics in the deck | Scryfall keyword metadata plus reviewed, bounded matches against Oracle wording and symbols. The interface distinguishes those evidence types. |
+| Rules and references | Verbatim Wizards rules or attributed excerpts and links. Card examples, archived articles, designer references, and playtest guidance retain their narrower scope. |
+| Discovery results | Reviewed search recipes, deliberate searches, and Commander/color-identity filters. Empty results remain empty. |
+
+A mechanic match may describe a grant, restriction, or reference; it does not prove that a card itself has that ability. A card example also does not establish a general mechanic definition. Missing source support is left explicit.
+
+**No generative-AI model runs in the app.** Analysis uses explicit JavaScript rules and literal matching. The same input and source data produce the same analysis; live Scryfall data can change. The app does not generate card text or mechanic definitions. Development and documentation have used Codex assistance.
+
+## Coverage and limits
+
+The **October 19, 2026 baseline** reconciles **373 names** from Scryfall’s keyword-ability, keyword-action, and ability-word catalogs. Each has a recorded detection scope, source/reference status, and manual search. There are **374 discovery records**, including the pre-existing Eternity Gate entry.
+
+These are dated catalog checks. They do not guarantee detection of every Magic interaction, implicit action, future mechanic, or unrevealed card. The [full reconciliation](reports/catalog-gaps-20261019/reconciliation-373.json) records the individual names; the [six-reference follow-up](reports/six-reference-update-20261019/REPORT.txt) explains the scoped references that remain distinct from general definitions.
+
+Other boundaries matter in everyday use:
+
+- The importer checks the 100-card total, but does **not** establish full deck legality or commander-pair eligibility.
+- Repeated-language analysis covers English passages and literal repetition. It does not infer story, theme, power level, or deck quality.
+- The Clipboard lasts for the browser tab’s session. Export discoveries you want to keep; the imported deck must be loaded again after a refresh.
+- The server binds to localhost. Public hosting needs separate configuration and validation.
+
+## Verify the project
+
+From the repository directory:
 
 ```sh
 node scripts/build-catalog-gaps.mjs --check
 node --test
 ```
 
-The [validation workflow](.github/workflows/validate.yml) runs these checks on Windows and Linux for pushes and pull requests. The normal test suite uses retained fixtures and local HTTP servers; scripts explicitly named `live` perform separate online verification. Historical preservation scripts may refer to the original workspace and local backup archives; they are records of those audits rather than portable CI requirements.
+The validated baseline passed **347 tests**, with **zero failures or skips**, and passed [GitHub Actions on Windows and Linux](https://github.com/rboles84/mtg-deck-explorer/actions/runs/39312032952). The [workflow](.github/workflows/validate.yml) repeats these checks on pushes and pull requests. The [`validated-baseline-2026-10-19` tag](https://github.com/rboles84/mtg-deck-explorer/tree/validated-baseline-2026-10-19) preserves that version.
 
-Local backup ZIPs and credentials are excluded from Git. The source, tests, required data and retained verification evidence are tracked. The `validated-baseline-2026-10-19` tag identifies the initial published baseline; future work can use branches and pull requests while keeping that restore point.
+The tests use retained fixtures and local HTTP servers. They check behavior against those inputs; live-provider checks and browser checks are separate evidence.
 
-## Hosting status
+| To inspect… | Start here |
+| --- | --- |
+| Literal text analysis | [`public/core.mjs`](public/core.mjs) |
+| Mechanic detection and its regression checks | [`public/catalog-gap-index.mjs`](public/catalog-gap-index.mjs), [catalog-gap tests](tests/catalog-gaps.test.mjs) |
+| Approved search recipes and provider access | [`lib/catalog.mjs`](lib/catalog.mjs), [`lib/scryfall.mjs`](lib/scryfall.mjs) |
+| Source verification and generation checks | [`scripts/build-catalog-gaps.mjs`](scripts/build-catalog-gaps.mjs), [retained source records](reports/catalog-gaps-20261019/sources.json) |
+| Browser evidence | [Mechanic rules and card evidence](reports/catalog-gaps-20261019/browser-absorb.png), [playtest reference panel](reports/playtest-links-20261019/kinfall.png) |
 
-This version runs locally with a Node.js server and Scryfall access. Publishing the repository makes the code inspectable; it does not deploy a hosted app. The current server intentionally binds to localhost and checks local request origins. A future hosted deployment needs its own server/origin configuration and validation.
+The repository includes retained responses, source receipts, and regression fixtures, so it is larger than the app alone. Reports are dated records: an earlier report’s counts or screenshots may precede a later correction. [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) contains the development history.
 
-## Run
+## Data and privacy
 
-From the cloned repository directory:
+Imported text stays in browser memory. Explicit imports and searches send the necessary card identifiers or queries through the local server to Scryfall. Card images load directly from Scryfall. The server’s temporary caches are held in memory; there is no account, backend deck storage, or telemetry. Clipboard coordinates use browser session storage. See [storage details](docs/USER_GUIDE.md#storage-and-network-access).
 
-```powershell
-node server.mjs
-```
+## Help improve it
 
-Open [Deck Explorer on localhost](http://127.0.0.1:4173). Stop the server with Ctrl+C. The default port is 4173; an optional `PORT` environment variable changes it. The server binds to `127.0.0.1`.
+[Open an issue](https://github.com/rboles84/mtg-deck-explorer/issues) with a minimal deck or card example, printing coordinates, expected and observed behavior, and reproduction steps. For a rules or mechanic correction, include the source URL and relevant clause or card. A screenshot helps with layout problems.
 
-Tested with **Node.js v24.14.0**. No installation, package dependencies, build step, account, or API key is required. Run the deterministic test suites with:
+## Credits and reuse
 
-```powershell
-node --test
-```
+Card data and images come from [Scryfall](https://scryfall.com/). Rules and linked official articles come from Wizards of the Coast. Mana and set symbols use Andrew Gioia’s Mana and Keyrune libraries; [pinned versions and third-party notices](public/vendor/SOURCES.md) are retained.
 
-Tests include provider fixtures and local HTTP tests. They do not, by themselves, verify live Scryfall access, browser visuals, clipboard permissions, or image licensing. [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) records verification runs, actual live/browser results, screenshots, and remaining limitations; use each run's recorded scope when interpreting earlier results.
-
-## Import exact printings
-
-Paste plain text with quantities and card names, or choose/drop one `.txt` or `.csv` file. Files are read locally after a byte-size check, populate the same editable preview, and show detected format, card/extra counts and designated commanders. No provider requests run until **Import** is clicked. Set/collector coordinates are optional; supplied coordinates are verified, while name-only cards receive explicitly labeled assumed reference printings. A leading `x` after a quantity is accepted, as are trailing tags. An explicit `[Commander]` or `[Commander{top}]` tag selects the Commander section automatically. `*F*` and `*E*` are finish metadata, not part of the name. Category tags and `^Have,#37d67a^` ownership annotations are preserved. Inline `Maybeboard{noDeck}{noPrice}` tags exclude those quantities from the deck total.
-
-```text
-Commander
-1 Aang, Swift Savior // Aang and La, Ocean's Fury (TLA) 204
-
-Deck
-1 Aang, Swift Savior // Aang and La, Ocean's Fury (TLA) 298
-```
-
-This fragment demonstrates two printing coordinates of one card; it is not a proposed Commander deck. Both printings were observed during this implementation's provider checks; consult the report for the precise verification status.
-
-`Commander`, `Deck`, `Mainboard`, `Main deck`, `Sideboard`, `Maybeboard`, `Considering`, and `Companion` headings are supported. Only Commander and Deck entries enter the archive and analysis. Other sections stay in the import ledger and their quantities are reported separately as extras. Deck + Commander must total exactly 100 cards, counting quantities rather than rows; commanders are included in that total. Invalid lines (including malformed printing coordinates or trailing junk) block import with line numbers and reasons, preserving the loaded deck. Unmatched or mismatched main-deck entries block replacement and produce an explicit incomplete-import result with every problem line available in a disclosure. Failed requests preserve the loaded deck. Required deck rows resolve first. Extras resolve separately and their provider/alias failures are disclosed without preventing a complete required deck from loading. Main editions and the required response’s discovery context remain pinned. If required rows fail, extra lookups are deferred and labeled as not requested. A final unlabeled singleton after Sideboard produces a commander-placement review; the user must confirm it or label the extra section explicitly. Blank lines never automatically select commanders. The supplied read-only `fixtures/cosmicspiderman.txt` contains 84 entries with a total quantity of 100 and a `[Commander{top}]` tag; it is not copied into the public app.
-
-CSV supports the generic columns below and the supplied Helvault-compatible schema (`collector_number,extras,language,name,oracle_id,quantity,scryfall_id,set_code,set_name`). Headers may appear in any order. Recognized TappedOut CSVs (headers containing Board, Printing and Commander) are blocked locally, before provider calls, because TappedOut printing codes can mean different sets in Scryfall. The message directs users to export a plain-text (.txt) deck list from TappedOut or use another deck builder's export. Renaming a CSV file to .txt does not convert it. TXT exports that omit roles and printing details require commander selection and use assumed printing references. Generic CSV main/side/maybe boards and Commander=True carry placement; an ordinary Background or sideboard Jegantha is never promoted by card type or ability. More than two commander flags blocks the import. All supported CSV columns remain in source metadata; duplicate semantic columns, conflicting roles, unsupported meaning-bearing columns, and unsupported nonempty Extras values are flagged. Finish and common boolean Foil values are supported; Foil=foil is explicit foil, while Foil=pre is preserved with an unspecified-finish warning:
-
-```csv
-Quantity,Name,Set,Collector Number,Scryfall ID,Language,Section
-1,"Aang, Swift Savior // Aang and La, Ocean's Fury",TLA,204,,en,Commander
-1,"Aang, Swift Savior // Aang and La, Ocean's Fury",TLA,298,,en,Deck
-```
-
-CSV handles quoted commas, doubled quotes, and multiline quoted fields. All columns may be quoted. Header syntax errors block import. Quantities use decimal digits only, so hexadecimal, exponent and decimal-point notation are rejected. Blank Section defaults to Deck. A Scryfall printing UUID takes precedence over set/collector; supplied name, set, collector, and explicit language disagreements are flagged instead of silently accepted. Name matching accepts returned card names, printed names, flavor names, or a returned face's name. Straight and typographic apostrophes are equivalent without changing the preserved source.
-
-Original text, row order, quantities, sections, tags, collector suffixes, and leading zeros are preserved. Matching accepts equivalent provider numbering such as `001a` and `1a`, including collector letter case, without rewriting the imported coordinate. Distinct rows stay distinct; duplicate identifiers are combined only for the provider request.
-
-Name-only rows resolve by literal card name and use **Assumed printing** reference editions. A name plus set hint (`100 Forest (RNA)`, CSV Set/Printing/set_code without a collector number) also uses an assumed printing: the collector/variant was not supplied. Hints are checked against Scryfall’s set catalog and recognized codes constrain collection and alias lookups. Unknown codes, including the observed 000, MYSTOR, UN3 and MBP, stay in the row and provenance with a visible warning when a name reference is used; no mappings are invented. A recognized code with no matching card remains unresolved. Exact IDs/coordinates never use this fallback. The original name, source line and requested finish stay intact. Supplied printing failures never fall back to name resolution. Split-card lookups use an exact face name for transport and verify the complete supplied name on the returned card. Legacy slash spellings such as `Fire / Ice` and `Fire/Ice` are accepted only when actual face metadata verifies the joined name; literal slashes in other card names remain intact. Names not indexed by collection receive a bounded exact-name search, in groups of up to ten, with at most eight pages / 1,400 printings per group. Larger groups require printing coordinates. Each resolve request also has a 32-operation budget, including collection, set-catalog and alias requests, even on cache hits; a full main-plus-extras import uses at most two such bounded phases. Pagination verifies complete pages, stable totals and distinct printing IDs, using fixed provider URLs. Returned English printed names and flavor names must match literally; this handles alternate names such as Black Panther's Claws without fuzzy substitution. Imported aliases and canonical Oracle names are shown together. Assumed, supplied and user-selected editions remain distinct in the archive, card viewers and flavor coverage. The ledger can change a reference edition using a Scryfall printing UUID; replacement editions must share the original resolved Oracle identity. Other selected editions stay pinned, the original source alias is preserved, and analysis is recomputed. A resolved edition with no flavor is a normal result. Multi-face passages remain separate, verbatim passages.
-
-Coordinate-only imports request English printings. A non-English printing requires an exact Scryfall printing UUID in CSV. Supply Language to require that returned language; if Language is blank alongside a UUID, the UUID determines the language. Non-English flavor stays readable in the archive and is excluded from English lexical analysis.
-
-Input is bounded to 200,000 characters and 500 entries as a resource safeguard across deck and extra sections, separate from the 100-card deck requirement. Quantities must be positive integers from 1 to 999. A collector number without a set, malformed CSV, and unsupported collector formats are disclosed. Parser and API use the same collector-number validator. Each record is capped at 8,000 characters, CSV at 64 columns, and text at 64 metadata markers per line; excessive rows/metadata stop early. Files are capped at 800,000 bytes before decoding, then the 200,000-character limit still applies. Clipboard export compatibility with other deckbuilders has not been tested.
-
-“Clear pasted text” empties only the import text field and returns focus there. It preserves the loaded deck, selected mechanics and Clipboard, and is disabled while an import is pending.
-
-## Read and understand
-
-Choose commander entries explicitly, or use the resolved Commander section. Each declared commander must have quantity one, and at most two distinct card identities can be selected. Different aliases or editions of the same Oracle card cannot occupy both commander slots. Identity comes from their returned `color_identity`, never from the other cards' colors or mana production. W/U is labeled Azorius; single colors and colorless have plain names, and other combinations use WUBRG codes. Multiple selected commanders produce a provisional union with pair eligibility unverified. Discovery supports one or two selected resolved commanders.
-
-The selected commander's actual card image is visible above the reading views. Color identity is shown with mana symbols without repeating a WUBRG label or presenting mana cost as identity. Search the commander chooser by imported alias or canonical name, using the same apostrophe, whitespace and split-name normalization as resolution; select imported entries, and apply the selection; filtering the chooser retains selections. The Import, Read, Understand, Explore, Collect and Export controls navigate the existing session. Changing views, using browser Back/Forward, and returning to the masthead preserve the deck and reading filters.
-
-Hover or keyboard-focus a card name for an exact-printing preview; click, tap or press Enter for its detail dialog. Known double-faced layouts have a circular face button over the art, below the printed title/mana strip, with an accessible next-face name and a visible current-face label. Switching updates the exact face art, rules and flavor together. Adventure, split and same-side flip cards show one exact-printing image and both named text parts together, without a turn-over control. Unrecognized multipart layouts also expose their text without asserting a reverse side. Escape dismisses the preview or dialog, and dialogs return focus to their opener. Mana/cost symbols use locally bundled Mana; exact available set symbols use Keyrune. Unknown symbols remain readable text. Printing UUIDs are available inside contextual details rather than repeated in the reading flow.
-
-Archive rows place edition details beside the exact flavor passages, stacking them on narrow screens. Mana costs are omitted from this reading view. Repeated-language evidence retains the dark reading dialog, with set symbols, the actual passages and highlighted matching words. Plain-language explanations lead; contextual printing details retain the exact coordinates and identifiers for inspection.
-
-Off-identity cards and reported non-legal Commander statuses are observed conditions. They do not remove imported entries. Beyond the 100-card requirement, this prototype does not validate commander eligibility, Partner/Background combinations, other deck construction rules, or full deck legality.
-
-Literal analysis uses English normalized working copies while retaining original passages and exact matching spans. `LEXICAL_RULES` in `public/core.mjs` versions the site-authored word and 2–3-word phrase rules, function-word exclusions, and explicit common auxiliary/quantifier exclusions. A result requires at least two distinct card identities and two independent passage texts. Repeated copies and identical passages cannot manufacture independent evidence. Evidence distinguishes raw hits, physical quantity, printing IDs, and supporting cards.
-
-The summary abstains when no supported repeated terms remain. Generic suppression is a small exact vocabulary list, not a semantic detector of every possible generic phrase. The engine does not infer lore, sentiment, intent, causality, timeline, archetype, or deck quality. There are no theme scores, editorial motif groups, or runtime AI calls.
-
-## Mechanics and discovery
-
-“Mechanics in your deck” is built only from successfully resolved imported cards' actual `keywords[]`. `public/mechanics.mjs` uses lowercase exact equality without aliasing, punctuation changes or Oracle-text parsing. The compact `public/mechanics-vocabulary.mjs` contains the 296 labels observed in the retained October 17 audit; The Commander shortlist supplement explicitly reviews 32 additional exact labels (16 general concepts with searches and 16 card-specific labels). A separate reviewed supplement adds 20 exact labels: Commander ninjutsu, Doctor's companion, Daybound, Nightbound, Multikicker, eight typecycling variants, six landwalk variants, and Descend. Jump is retained as a provider-reported term because its official Cid reference does not apply to every card Scryfall associates with that label. Other reported strings remain visible as unmapped terms. Supplemental review does not rewrite or claim membership in the historical audit. Missing or malformed metadata is distinct from an empty array. Counts deduplicate Oracle IDs while retaining printing IDs, source rows and physical quantities. Multi-face metadata is card-level. This establishes only `provider_reports`, never possession, grants, references or complete mechanical coverage.
-
-Every one of the **296 audited display labels**, plus **16 reviewed shortlist concepts** and **20 reviewed variant labels**, has a manual **Find [mechanic] cards** section below its contributing imported cards. This includes Flying, Proliferate, Surveil, multiword labels, and the newly added Atlas recipes. `inputs/mechanic-discovery.v1.json` explicitly maps the original labels to validated Atlas 2.1 recipes. `inputs/mechanic-discovery.shortlist.json` adds 16 exact native keyword recipes with retained live positive/negative membership evidence; it leaves the historical inputs unchanged. `inputs/mechanic-discovery.variants.json` adds the 20 further exact recipes with complete retained live results and positive/negative Oracle-ID witnesses. `crosswalk.json` retains the original eight rule/historical-placement links; search permission is independent of those links and of whether a rules explanation exists. Selecting a label makes no provider request; only the Search button or a results-page control does. There is no separate discovery mechanic list. Additional provider labels remain visible with their imported evidence, but require an explicit validated registry entry before gaining a search action. No label is interpolated into an executable query.
-
-Observed deck keywords, historical color placements, and search candidates are separate claims. All 332 runtime recipes use verified native keyword-index searches, including provider-indexed actions and ability words. This finds **reported involvement**, not every card that grants or references the mechanic, and does not establish inherent possession or an originating face. Of the mapped recipes, 186 are Production-ready and 146 remain Review; Review coverage explanations appear directly in their Find section. Every search is deliberate. No Semantic or Do-not-emit recipe can execute, and no runtime fallback is configured. Partner includes named/restricted variants and does not establish pairing eligibility. Underdog has a verified playtest witness but can correctly return zero Commander-legal matches.
-
-The server combines each approved recipe with `f:commander id<=[COLORS]`, grouping alternatives within parentheses. For Azorius, the effective query is `(f:commander id<=wu) (kw:Flying)`, including compatible monocolor and colorless cards. An approved recipe with the exact leading baseline can be factored before composition; unexpected or contradictory filters and unbound parameters fail closed. The server derives identity from selected printing IDs in the current resolved import context. It does not accept client-supplied queries, hosts, URLs, or arbitrary identity claims.
-
-WUBRG discovery includes every color subset, including colorless cards. It does not require every candidate to have all five colors. The query provenance identifies the original frozen Atlas baseline and the effective within-identity policy.
-
-Discovery requests `unique=cards` with `prefer:newest`, showing one result per distinct card using the provider's preferred newest matching printing. Results are presented in logical pages of **24 cards**, with Previous, Next and a direct page selector above and below the grid. All matching pages can be browsed; the server fetches only the provider page or pages needed for the requested view. Each candidate is checked for identity subset and reported Commander legality. Provider counts and skipped results are disclosed. An empty result is not silently broadened. A compatible search candidate is not a recommendation or a guarantee that a complete deck is legal.
-
-The compact deck summary leads to one deck-derived mechanic chooser. On narrow screens it is collapsible and closes after selection; all labels remain reachable in a bounded scrolling list. Each label shows contributing editions with printing provenance, with technical fields and audit details under “Source details.” Definitions are independent of discovery permission: `public/mechanic-rules.mjs` now links 234 explicitly checked labels to unchanged local September 25 rules sections, requiring the pinned revision and an exact section-title match. The other 115 references contain no authored mechanic summaries. The original 45 comprise 13 exact-rule references, 15 short verbatim Wizards article excerpts, 16 flavor-word references, and the corrected Jump card reference. The remaining-label pass adds 131 direct rule sections and 50 further references: two sets of exact numbered clauses, 41 official mechanic discussions, and seven named card examples in Wizards release notes. Ability-word panels identify CR 207.2c as general background and link to the mechanic discussion or card example; Parade! and Underdog link to their official card examples without claiming an individual Comprehensive Rules entry. All 349 labels in this scoped set (the 296-label vocabulary, 32 shortlist additions, 20 variant additions, and Eternity Gate) now have official references, including all 142 pack labels. None of the 181 added references remain unverified; the warning path remains available for unresolved sources. Card-example citations verify the named example, not every Scryfall card association. Jump now additionally requires Cid's contributing Oracle identity before displaying that reference, and explicitly names its scope. Direct Current retains its reported Jump label and Jump-start rules/search, without displaying Cid's reference. The 20 new references use 19 exact-rule mappings and one short verbatim Wizards excerpt for Descend 4/8; they do not infer the distinct “descended this turn” event. This is reference coverage, not detection of every Magic mechanic or an official-source audit of the entire historical master inventory. Rules panels link to the pinned official document. Sources were checked on October 18, 2026; the rules download matches the retained SHA-256. Evidence and limits are recorded in reports/mechanic-sourcing/remaining-labels-verification.json and reports/mechanic-sourcing/REPORT.txt. The subsequent 20-label follow-up is recorded in `reports/mechanic-variants-20261018/REPORT.txt`; it adds references and deliberate searches without changing parsing, import, or text detection. Keep future mechanic prose verbatim and attributed; do not introduce generated summaries or infer missing source support. Rule panels start collapsed, render only the requested clauses, and retain cross-reference previews/dialogs. Historical audit membership, supplemental classification, rules support, and search permission remain separate claims. Historical color placement, where reviewed, appears in a disclosure before the contributing cards for the selected mechanic; its supported search action follows the cards. Discovery presents a compact image grid with **Save** below each card. Opening a result's detail dialog also offers **Save to Clipboard**; saving keeps the dialog open, reports the saved quantity and updates the grid's saved indicator. Browsing, opening or switching result pages never collects cards automatically.
-
-The read-only source package stays frozen:
-
-- `inputs/mtg-mechanics-master-list.md`: September 25, 2026 inventory, partly MTG Wiki-derived; 524 listed entries, not 524 distinct official keyword abilities.
-- `inputs/atlas_v2.0.json`: Atlas v2.0, October 5, 2026; 1,086 rows, including 684 Production-ready, 353 Review, 27 Semantic, and 22 Do-not-emit. Its 623-row validity census and `live_count` values are historical.
-- `inputs/mechanical-color-pie.runtime.json`: October 18, 2021 Rosewater placement snapshot, 216 runtime mechanics. Placements describe historical design ownership, not current card legality or an exhaustive present-day mechanics catalog.
-- `inputs/MECHANICS-CONTRACT.md`: frozen source/schema contract.
-
-The original derived discovery inputs are `inputs/atlas_v2.1.json` (1,155 rows: 746 Production-ready, 360 Review, 27 Semantic, 22 Do-not-emit) and `inputs/mechanic-discovery.v1.json`. All original row IDs and Do-not-emit records are preserved. The original Atlas 2.0 file is unchanged. New Keyword_Index rows are inserted alphabetically. Only the 312 recipes covered by the new evidence have refreshed validation dates/counts; the historical validity census remains historical. The 312-candidate ledger is distinct from the 296-label display registry: 16 additional candidates have validated text recipes for research and are not enabled as runtime label aliases.
-
-The local rules reference extracts all **3,322 numbered entries into 1,331 sections** from the official September 25, 2026 Comprehensive Rules, including subrules and examples. Hover or keyboard-focus a CR reference to read its preview; click, tap or activate it to keep the rule open. Recognized rule cross-references can be followed in the same interface. The numbered index excludes the glossary and credits; missing references are disclosed rather than supplied with invented text.
-
-The unchanged downloaded source is retained in `evidence/MagicCompRules-20260925.txt`. `public/rules-data.json` records the official URL, date, SHA-256, byte count and source-line locations. Rebuild it with `node scripts/extract-rules.mjs`; the extractor rejects a source whose pinned hash differs. Rules lookup does not expand the mechanics detector or authorize searches. No recipe runs merely because a mechanic is selected; Review searches require the same explicit Search action as every other recipe and disclose their coverage limits.
-
-Discovery coverage, live evidence, limitations, reproduction commands, and the eight-scenario manual UI checklist are in [reports/mechanic-discovery/REPORT.md](reports/mechanic-discovery/REPORT.md). Offline checks: `node --test`, `node scripts/build-mechanic-witness-plan.mjs --check`, `node scripts/build-mechanic-discovery.mjs --check`, and the existing vocabulary/preservation checks. Live recipe verification is resumable with `node scripts/verify-mechanic-recipes-live.mjs`; use `--refresh` for new provider requests instead of checking retained evidence. Run `node scripts/verify-mechanic-context-live.mjs` separately for live witness/context checks. Rebuild the derived inputs after deliberately refreshing evidence. Restart a running local Node server to load the new catalog.
-
-A successful Devoid search with zero matches and a server-confirmed colorless commander identity shows verbatim excerpts from CR 702.114a and 903.4, with an official rules link and an exact-query Scryfall link. It never broadens the identity filter. Missing identity, provider failures and failed pagination do not produce this explanation. Only a structured first-page Scryfall `not_found` response counts as a normal search 404; malformed 404 responses and missing later pages remain errors. The focused live verification is reproducible with `node scripts/verify-devoid-discovery-live.mjs`; retained results are in [devoid-live.json](reports/mechanic-discovery/devoid-live.json).
-
-Run `node scripts/verify-all-mechanics-live.mjs` for an explicit fresh audit of all 296 mappings through the local HTTP application, using colorless, each single-color and five-color commanders, plus positive/negative witness searches. It saves timestamped raw responses and results under `reports/mechanic-discovery/live-all-mechanics/`, paces requests sequentially, and stops on transport failures, throttling or server errors. Resume an interrupted or failed run with `--resume=<run-directory>`; successful runs remain unchanged. Run `node scripts/verify-all-mechanics-receipts.mjs <run-directory>` to check response hashes and exact color-filtered membership wherever the complete result set was captured. The latest completed audit and scope are recorded in [the discovery report](reports/mechanic-discovery/REPORT.md#fresh-live-audit-of-all-296-mechanics).
-
-The Find panel appears once, above the search action; Review coverage appears once inside “How this search works.” Results use a compact exact-query disclosure and one Scryfall link. All mechanics share a tinted zero-results panel with a short explanation, the server-confirmed commander identity, and an optional “Why imported cards are excluded” disclosure. Card and commander identities have separate labels, symbols and color names. The disclosure uses confirmed legality and color-identity metadata from resolved, playable imported contributors; it does not guess when data is missing or claim to explain every card in the provider's catalog. Devoid retains its color-versus-identity explanation. Errors and pagination controls keep their existing behavior.
-
-Discovery coverage, mechanic explanations, historical placement prose and official rules panels use the same accessible symbol renderer as card previews. Supported mana/game tokens appear as glyphs, including colored/colorless, generic, hybrid, Phyrexian, tap/untap, energy and ticket symbols. Unknown notation and rules placeholders remain readable text rather than being replaced with an invented symbol. Exact query code remains literal text.
-
-## Collect and export
-
-Only a manual **Save** action on an actual discovery result, either below its image or inside its detail dialog, adds a printing to the Clipboard. The same printing increments its quantity; different editions remain separate even when their names match. Imported-card viewers do not offer this discovery action. Search the collection by name, set code or collector number and browse **12 printings per page**. Adjust quantities, remove entries, or clear with native confirmation. Pagination and filtering change the view; **copy/export always includes the entire collection**. Copying produces lines such as `2 Card Name (SET) 123`. The UI offers the print-aware export only.
-
-The real Clipboard API is used when available. A visible selectable text field provides a manual copy fallback. The app makes no promise that another site's importer preserves this format without further verification.
-
-Validated Clipboard entries use the unique session key `mtg-deck-explorer.discovery-printings.v1`. They survive refresh in that browser tab's session. There is no backend Clipboard storage. If session storage is unavailable, the app explains that the Clipboard is kept in memory only. Clipboard actions never mutate the imported deck.
-
-Full card metadata is retained only in memory. A restored Clipboard entry can still export its exact printing coordinates after reload, but its detail view may have no art or rules until that printing is encountered again in the current session. Opening a preview does not perform an extra card lookup or substitute art from another edition.
-
-**Load fixture demo** is a separate, clearly labeled synthetic mode with invented names and authored sample prose. It demonstrates archive reading, absent flavor, multiple faces, and literal repetition. It does not impersonate real Magic printings, perform live discovery, or add synthetic cards to the real Clipboard. Synthetic tests are not live-provider PASS evidence.
-
-## Local data, boundaries, and accessibility
-
-Only `public/` is served as static content. Owner-supplied inputs, the private deck fixture, references, tests, and report are not web-served. The browser holds imported text in memory and loads the derived official rules index locally. Explicit imports send bounded printing identifiers to the local server, which calls `https://api.scryfall.com/cards/collection`; set-hinted imports also use `https://api.scryfall.com/sets`, and exact alias lookups and explicit discovery searches call `https://api.scryfall.com/cards/search`. There are no keystroke requests, runtime bulk-card downloads, telemetry, accounts, deckbuilder integrations, or AI endpoints.
-
-Collection requests deduplicate identifiers and use sequential batches of at most 75, with a minimum 120 ms request gap. Search requests use a minimum 500 ms gap in the shared provider queue. Outbound HTTPS hosts and operations are allowlisted, redirects are rejected, timeouts and body limits apply, and HTTP 429 blocks retries for the entire stated wait interval, including multi-hour numeric or HTTP-date Retry-After values; no automatic retries are scheduled. Network failures remain visible instead of switching to demo content.
-
-The server keeps at most 64 resolved-import contexts, containing printing IDs and identities, with 30-minute expiry. Its bounded in-memory provider response cache holds up to 64 entries and 16 MiB of serialized response data for five minutes (JavaScript object/cloning overhead is additional). Nothing is persisted to backend storage; stopping the process discards these maps. Reimport if the discovery context expires.
-
-Commander art, card galleries and previews load only the displayed exact printing's provider-supplied images directly from `https://cards.scryfall.io`; no card images are bundled or generated. Missing images retain the card text and an explicit unavailable state. The icon fonts and styles are local, pinned assets with source commits, licenses and hashes in [public/vendor/SOURCES.md](public/vendor/SOURCES.md). Scryfall image documentation was inaccessible during this session, so imagery terms were not verified. Scryfall is a third-party card-data provider. Rules, owner taxonomy, historical placements, and site-authored analysis keep separate provenance labels.
-
-The interface uses native buttons, inputs and dialogs, visible focus rings, explicit close controls, focus return, responsive layouts, and reduced-motion CSS. Browser QA outcomes at desktop and mobile widths are reported separately in [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md); the existence of these controls does not substitute for that verification.
-
-This is a standalone bounded prototype. It does not build decks, suggest additions or cuts, evaluate power, prescribe counts, inspect mana curves, or edit imported cards. No commits, pushes, deployments, or changes to other projects are part of this implementation.
-
-
-The bounded dynamic-mechanics candidate and observed validation are recorded in [reports/mechanics-integration/IMPLEMENTATION_REPORT.md](reports/mechanics-integration/IMPLEMENTATION_REPORT.md). Offline checks: `node scripts/build-mechanics-vocabulary.mjs --check` and `node scripts/check-mechanics-preservation.mjs`. Vocabulary rebuild reads the retained audit only; it never refreshes or modifies sources. New imports atomically replace the deck and its index, clear commander/label selections, and invalidate discovery ownership. Request tickets guard stale success, error and cleanup handlers; late searches cannot navigate after the user has moved elsewhere. Clipboard state remains independent.
-
-## Text import verification
-
-The untouched supplied exports are retained under `tests/fixtures/imports/`, alongside the Hakbal list supplied in chat. `tests/import-corpus.test.mjs` covers quantities, annotations, automatic commanders, explicit Obeka confirmation, provenance, split-card aliases and malformed inputs. `tests/import-redteam.test.mjs` adds strict CSV validation, alternate-name corrections, commander identity collisions, pagination boundaries/drift, malformed provider responses and explicit retry behavior. Handler tests cover failed/stale imports, unchanged loaded decks, uppercase printing UUIDs and confirmation after a draft changes. Run `node scripts/verify-import-live.mjs http://127.0.0.1:4174` against a running verification server for an explicit live Scryfall check; it asserts all five exports and saves `reports/import-validation/live.json`. Run `node scripts/verify-import-redteam-live.mjs http://127.0.0.1:4174` for real alternate-name, apostrophe, split spelling, commander and printing-correction checks; it saves `reports/import-validation/redteam-live.json`. These smoke checks are separate from deterministic tests.
-
-
-## Bounded importer verification (October 18, 2026)
-
-Editing the paste draft, opening/choosing a new file, or dropping new input invalidates an older import before its completion can commit, collapse the workbench, or change the new draft’s messages. File reads have their own ownership protection; an older read cannot overwrite later edits. A failed import preserves the loaded deck. Clear pasted text remains disabled during import.
-
-Run `node --test` for deterministic tests, including real fixture parsing, synthetic provider failures, draft ownership, local file preview, alias search, full Retry-After waits, shared collector validation and work/cache limits. Run `node scripts/verify-import-bounded-live.mjs http://127.0.0.1:4175` against a fresh verification server for explicit live checks; this is separate from the offline suite. Restart an existing Node server to load changed provider modules; refreshing a page alone reloads only client modules.
-
-The fixture bytes and source hashes are recorded in `tests/fixtures/imports/uncommon/provenance.json`. The Spanish file is a derived one-row collection excerpt, used only for resolver checks; it does not satisfy the 100-card deck requirement. Its original name is English and its finish is unspecified. Translated-name test variants are labeled synthetic.
-
-See [the bounded importer report](reports/import-validation/BOUNDED_IMPORTER_REPORT.md) for actual test results, live source-hint mismatches, browser evidence and limitations. The existing loopback host/origin checks, strict API payloads, text-node rendering, outbound allowlist, sequential batching, spacing, timeouts and request-body bounds remain in place. These process-local safeguards do not establish public-deployment readiness: authentication, shared quotas across processes, sustained abuse/load behavior and operating-memory sizing would require separate work. This change does not implement a full legality engine, collection manager or deployment infrastructure.
-
-The focused Commander mechanics follow-up is recorded in `reports/mechanic-discovery/commander-shortlist/REPORT.txt`. Its 100 retained card snapshots cover all 142 observed labels in offline regression tests. All 16 supplemental searches passed live positive/negative membership checks and a live HTTP import/discovery/Clipboard smoke test. The supplemental rows retain Commander-filtered counts with an explicit baseline scope; these historical counts never drive result totals.
+Deck Explorer is an independent fan project. A license for the project’s own code has not yet been selected; existing third-party materials retain their own notices.
